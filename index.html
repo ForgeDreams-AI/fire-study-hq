@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Fire Study HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#f4f1ea; --surface:#fdfcf9; --surface2:#efe9dc; --ink:#16140f; --muted:#6d665b;
+  --line:#ddd4c1; --accent:#c53a1d; --accent-soft:rgba(197,58,29,.12); --on-accent:#ffffff;
+  --good:#1f7a3d; --warn:#9a6f14; --bad:#c53a1d; --chip:#e9e3d4;
+  --plate:#101614; --plate-line:#2a3833; --dink:#f0ead9; --dmut:#a8b0a3;
+  --shadow:0 2px 14px rgba(22,20,15,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#100f0d; --surface:#171512; --surface2:#1f1b16; --ink:#f2ece0; --muted:#a79c8a;
+    --line:#2c2822; --accent:#ff5a2e; --accent-soft:rgba(255,90,46,.14); --on-accent:#1a0e08;
+    --good:#4fd07a; --warn:#d9a441; --bad:#ff5a2e; --chip:#242019;
+    --plate:#0b1512; --plate-line:#22302b; --dink:#f0ead9; --dmut:#a8b0a3;
+    --shadow:0 2px 16px rgba(0,0,0,.45);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Barlow",-apple-system,system-ui,Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3,.cond{font-family:"Barlow Condensed","Barlow",system-ui,sans-serif;letter-spacing:.01em}
+.wrap{max-width:620px;margin:0 auto;padding:0 18px 48px}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* ---------- header / hero ---------- */
+.topline{height:6px;background:repeating-linear-gradient(-45deg,var(--accent) 0 14px,#171410 14px 28px)}
+.hero{padding:26px 0 6px}
+.kicker{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.22em;color:var(--accent);text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.02;margin:8px 0 6px;font-weight:700}
+.hero p{color:var(--muted);margin:0 0 4px;font-size:17px}
+.dash{margin:18px 0 6px;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;box-shadow:var(--shadow)}
+.dash-row{display:flex;align-items:center;gap:16px}
+.dash h2{font-size:19px;margin:0;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.dash .nums{display:flex;gap:22px;margin-top:10px}
+.num b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:32px;line-height:1}
+.num span{font-size:13px;color:var(--muted)}
+.num.g b{color:var(--good)} .num.b b{color:var(--bad)} .num.n b{color:var(--muted)}
+.scope{display:flex;gap:8px;align-items:flex-start;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:13.5px;color:var(--muted)}
+.scope .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-top:7px}
+
+/* ---------- topic cards ---------- */
+.sec-title{font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:26px 0 12px;
+  display:flex;align-items:center;gap:10px}
+.sec-title .n{font-size:14px;color:var(--muted);font-weight:600}
+.tcard{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);
+  border-radius:14px;padding:0;margin:0 0 12px;box-shadow:var(--shadow);color:var(--ink);text-decoration:none}
+.tcard:hover{border-color:var(--accent)}
+.tcard-inner{display:flex;gap:14px;align-items:center;padding:16px}
+.tnum{flex:none;width:44px;height:44px;border-radius:10px;background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed",sans-serif;
+  font-weight:700;font-size:22px}
+.tcard h3{margin:0 0 2px;font-size:21px;font-weight:700;line-height:1.15}
+.tcard .sub{font-size:14px;color:var(--muted);margin:0}
+.tprog{margin-left:auto;flex:none;text-align:center}
+.ring{position:relative;width:56px;height:56px}
+.ring svg{transform:rotate(-90deg)}
+.ring .val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px}
+.tprog small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+.tbar{height:5px;background:var(--surface2);border-radius:0 0 14px 14px;overflow:hidden}
+.tbar i{display:block;height:100%;background:linear-gradient(90deg,var(--warn),var(--accent));width:0;transition:width .3s}
+
+.review-cta{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px dashed var(--line);
+  border-radius:14px;padding:16px;margin-top:6px;width:100%;text-align:left;color:var(--ink)}
+.review-cta:not(:disabled):hover{border-color:var(--warn)}
+.review-cta:disabled{opacity:.55;cursor:default}
+.review-cta .pill{flex:none;background:var(--warn);color:#1a1408;font-family:"Barlow Condensed",sans-serif;
+  font-weight:700;font-size:24px;min-width:48px;height:48px;border-radius:12px;display:flex;
+  align-items:center;justify-content:center}
+.review-cta h3{margin:0;font-size:20px;font-weight:700}
+.review-cta p{margin:2px 0 0;font-size:14px;color:var(--muted)}
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+
+/* ---------- topic view ---------- */
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -18px;padding:10px 18px}
+.back{display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:var(--ink);
+  font-weight:600;font-size:16px;padding:8px 4px}
+.back .arr{font-family:"Barlow Condensed",sans-serif;font-size:20px;color:var(--accent)}
+.ttitle{padding:20px 0 4px}
+.ttitle .kicker{margin-bottom:2px}
+.ttitle h1{font-size:38px;line-height:1.04;margin:6px 0 4px}
+.ttitle p{color:var(--muted);margin:0}
+.concepts{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+  box-shadow:var(--shadow);margin:6px 0 0}
+.concepts li{margin:0 0 10px;padding-left:4px}
+.concepts li::marker{color:var(--accent)}
+.concepts ul{margin:0;padding-left:20px;font-size:16.5px}
+.pfdbox{margin:16px 0 0;background:var(--surface);border:2px solid var(--accent);border-radius:14px;
+  overflow:hidden;box-shadow:var(--shadow)}
+.pfdbox .ph{display:block;background:var(--accent);color:var(--on-accent);padding:10px 16px 8px}
+.pfdbox .ph .t{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;
+  letter-spacing:.12em;text-transform:uppercase;line-height:1.1}
+.pfdbox .ph .s{display:block;font-size:12.5px;margin-top:3px;opacity:.94}
+.pfdbox ul{margin:0;padding:14px 18px 4px 38px;font-size:16px}
+.pfdbox li{margin:0 0 12px;padding-left:2px}
+.pfdbox li::marker{color:var(--accent)}
+.pfdbox b{color:var(--ink)}
+.pfdbox .g{color:var(--good)} .pfdbox .y{color:var(--warn)} .pfdbox .r{color:var(--bad)}
+.drill-cta{margin:14px 0 4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;
+  padding:16px 22px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:21px;
+  letter-spacing:.04em;text-transform:uppercase;text-decoration:none;background:var(--accent);color:var(--on-accent);
+  min-height:58px;touch-action:manipulation}
+.btn.block{display:flex;width:100%}
+.btn.ghost{background:var(--chip);color:var(--ink)}
+.btn.ghost:hover{background:var(--surface2)}
+.btn.good{background:var(--good);color:#06280f}
+.btn.bad{background:none;color:var(--bad);border:2px solid var(--bad)}
+.btn:active{transform:scale(.98)}
+@media (prefers-color-scheme: light){.btn.good{color:#fff}.btn{color:#fff}}
+
+/* figures */
+figure{margin:14px 0}
+.plates{border-radius:14px;overflow:hidden}
+.plate{background:var(--plate);border:1px solid var(--plate-line);border-radius:14px;overflow:hidden}
+.plate svg{display:block;width:100%;height:auto}
+.plate figcaption{padding:10px 14px 12px;border-top:1px solid var(--plate-line);color:var(--dmut);
+  font-size:14px;line-height:1.45}
+.plate figcaption b{color:var(--dink);font-weight:600}
+.dlbl{font-family:"Barlow Condensed",sans-serif;font-weight:700;fill:var(--dink)}
+.dlbl--sm{font-family:"Barlow",sans-serif;font-size:11px;fill:var(--dmut)}
+.dlbl--xs{font-family:"Barlow",sans-serif;font-size:10px;fill:var(--dmut)}
+
+/* videos */
+.vid{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);
+  border-radius:14px;padding:15px 16px;margin:0 0 12px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+.vid:hover{border-color:var(--accent)}
+.vid .pic{flex:none;width:52px;height:52px;border-radius:12px;background:var(--accent-soft);display:flex;
+  align-items:center;justify-content:center}
+.vid h3{margin:0 0 4px;font-size:20px;font-weight:700;line-height:1.15}
+.vid p{margin:0;font-size:15px;color:var(--muted)}
+.dur{display:inline-block;font-size:12.5px;font-weight:700;background:var(--chip);border-radius:6px;
+  padding:2px 8px;margin-right:8px;vertical-align:2px}
+.fsrinote{background:var(--surface2);border:1px dashed var(--line);border-radius:12px;padding:12px 15px;
+  font-size:15px;margin:4px 0 8px}
+.fsrinote a{color:var(--accent);font-weight:700}
+.refnote{background:var(--surface2);border:1px dashed var(--line);border-radius:12px;padding:12px 15px;
+  font-size:15px;color:var(--muted)}
+
+/* ---------- drill ---------- */
+.flashcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 20px;
+  box-shadow:var(--shadow);min-height:300px;display:flex;flex-direction:column;margin-top:14px}
+.flashcard .qtag{color:var(--accent);font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.18em;text-transform:uppercase}
+.flashcard .q{font-size:22px;font-weight:500;line-height:1.45;margin:10px 0 0}
+.gradebox{margin-top:8px}
+.answer{margin-top:10px}
+.answer .lab{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:15px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--good)}
+.whybox{margin-top:14px;background:var(--surface2);border-left:4px solid var(--warn);border-radius:0 10px 10px 0;
+  padding:12px 15px;font-size:16px}
+.whybox .lab{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:15px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--warn);display:block;margin-bottom:4px}
+.drill-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.drill-actions.single{grid-template-columns:1fr}
+.progline{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;font-size:14px;
+  color:var(--muted)}
+.progline b{font-family:"Barlow Condensed",sans-serif;font-size:20px;color:var(--ink)}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface2);border-radius:12px;padding:12px 8px;text-align:center}
+.stat b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:28px;line-height:1}
+.stat span{font-size:12.5px;color:var(--muted)}
+.stat.g b{color:var(--good)}.stat.b b{color:var(--bad)}.stat.n b{color:var(--muted)}
+.btn-row{display:grid;gap:10px;margin-top:10px}
+
+/* review list */
+.rrow{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 10px}
+.rrow .topic{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.rrow p{margin:0 0 6px;font-size:16px}
+.rrow .meta{font-size:13px;color:var(--muted)}
+.empty{background:var(--surface2);border:1px dashed var(--line);border-radius:14px;padding:26px 20px;
+  text-align:center;color:var(--muted);margin-top:14px}
+.hidden{display:none!important}
+@media (min-width:640px){
+  .hero h1{font-size:54px}
+  .wrap{max-width:640px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<div class="wrap">
+
+  <!-- ================= HOME ================= -->
+  <section id="view-home" aria-label="Study home">
+    <header class="hero">
+      <span class="kicker">Phase 1 Foundations</span>
+      <h1>Module 1<br/>Study Drills</h1>
+      <p>Scenario reps from Fire's training material — six topics, thirty-seven drills, diagrams, and video.</p>
+    </header>
+
+    <div class="dash" aria-live="polite">
+      <h2>Progress</h2>
+      <div class="dash-row">
+        <div class="nums" style="margin-top:12px">
+          <div class="num g"><b id="dash-mastered">0</b><span>Mastered</span></div>
+          <div class="num b"><b id="dash-needswork">0</b><span>Needs work</span></div>
+          <div class="num n"><b id="dash-new">37</b><span>Not yet drilled</span></div>
+        </div>
+      </div>
+      <div class="scope"><span class="dot"></span>
+        <span>Your progress is <b>saved on this device</b>, so mastered cards and your review queue carry over between sessions.</span>
+      </div>
+    </div>
+
+    <h2 class="sec-title">Topics <span class="n">— 37 drills total</span></h2>
+    <div id="topic-list"></div>
+
+    <h2 class="sec-title">Review queue</h2>
+    <button class="review-cta" id="btn-review" type="button">
+      <span class="pill" id="review-count">0</span>
+      <span><h3>Missed cards come back here</h3>
+      <p id="review-hint">Mark a card "Missed it" and it lands here for extra reps.</p></span>
+    </button>
+
+    <footer class="foot">Module 2 (tactics by occupancy) and Module 3 (company ops) coming next.</footer>
+  </section>
+
+  <!-- ================= TOPIC ================= -->
+  <section id="view-topic" class="hidden" aria-label="Topic">
+    <div class="topbar"><button class="back" data-nav="home" type="button"><span class="arr">&larr;</span>All topics</button></div>
+    <header class="ttitle">
+      <span class="kicker" id="topic-kicker">Topic 1</span>
+      <h1 id="topic-title">—</h1>
+      <p id="topic-sub">—</p>
+    </header>
+
+    <div class="drill-cta">
+      <button class="btn block" id="btn-drill-topic" type="button">Start drill mode</button>
+      <div class="statgrid" aria-live="polite">
+        <div class="stat g"><b id="t-mastered">0</b><span>mastered</span></div>
+        <div class="stat b"><b id="t-needs">0</b><span>needs work</span></div>
+        <div class="stat n"><b id="t-new">5</b><span>not drilled</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec-title">Key concepts</h2>
+    <div class="concepts"><ul id="topic-concepts"></ul></div>
+    <div id="topic-pfd"></div>
+
+    <h2 class="sec-title" id="diagrams-title">Diagrams</h2>
+    <div id="topic-diagrams"></div>
+
+    <h2 class="sec-title" id="videos-title">Videos</h2>
+    <div id="topic-videos"></div>
+    <div id="topic-fsri"></div>
+
+    <div class="btn-row" style="margin-top:22px">
+      <button class="btn block" id="btn-drill-topic-2" type="button">Start drill mode</button>
+      <button class="btn ghost block" data-nav="home" type="button">Back to all topics</button>
+    </div>
+  </section>
+
+  <!-- ================= DRILL ================= -->
+  <section id="view-drill" class="hidden" aria-label="Drill mode">
+    <div class="topbar"><button class="back" id="btn-exit-drill" type="button"><span class="arr">&larr;</span><span id="exit-label">Exit drill</span></button></div>
+    <div id="drill-body"></div>
+  </section>
+
+  <!-- ================= REVIEW ================= -->
+  <section id="view-review" class="hidden" aria-label="Review queue">
+    <div class="topbar"><button class="back" data-nav="home" type="button"><span class="arr">&larr;</span>All topics</button></div>
+    <header class="ttitle">
+      <span class="kicker">Spaced reps</span>
+      <h1>Review queue</h1>
+      <p>Every card you marked "Missed it" waits here. A card leaves the queue when you get it right <b>twice in a row</b>.</p>
+    </header>
+    <div id="review-body"></div>
+  </section>
+
+</div>
+
+<script>
+/* =========================================================
+   MODULE 1 — Phase 1 Foundations (content authored by Fire)
+   ========================================================= */
+var FSRI_SIGNUP_URL = "https://training.fsri.org/signup";
+
+var TOPICS = [
+{
+  n: 1, title: "Fire Dynamics & Fire Behavior",
+  sub: "How fire actually behaves inside a structure — the vocabulary for everything else.",
+  concepts: [
+    "Modern fires become <b>ventilation-limited</b> early: oxygen — not fuel — is the controlling factor.",
+    "<b>Vent-before-water feeds the fire;</b> water first cools and buys time. Air first buys intensity.",
+    "Your opening can <i>be</i> the ventilation event — coordinate water with entry and control doors.",
+    "Hose streams entrain air and move pressure: <b>water on the fire, not air into the room.</b>"
+  ],
+  videos: [
+    {title:"Fundamentals of Fire Science", url:"https://training.fsri.org/course/124/fundamentals-of-fire-science", dur:"16 min", desc:"Fire science basics — the vocabulary everything else builds on."},
+    {title:"Fire Dynamics in Structures", url:"https://training.fsri.org/course/125/fire-dynamics-in-structures", dur:"17 min", desc:"How fire actually behaves inside structures; foundation for this whole topic."}
+  ],
+  cards: [
+    {q:"You're first-due at 0200 on a single-family residential. All windows and doors intact, light smoke pushing from the eaves, no visible flame. Your captain orders a window taken on Side A for ventilation before the line is charged. Based on FSRI research, what happens to interior conditions in the next 60 seconds?",
+     a:"They deteriorate fast — the fire is ventilation-limited (oxygen-starved), and the new opening feeds it: heat release rate spikes, temperatures climb rapidly, and the fire can race toward flashover.",
+     why:"In modern fuel loads the fire becomes ventilation-limited early; oxygen is the controlling factor. Vent-before-water doesn't relieve the fire, it fuels it. Water first cools and buys time; air first buys intensity."},
+    {q:"Your crew advances down a hallway toward the fire room. The entry door is open behind you. What's the danger and what do you do?",
+     a:"The open door behind you makes the hallway the flow path — you are standing between the intake and the fire, directly in the exhaust stream of superheated gases. Control that door (close it or post someone on door control) before advancing.",
+     why:"Fire travels from high pressure to low pressure along the flow path. An uncontrolled door turns your advance route into the chimney."},
+    {q:"You're flowing water from the exterior through a window into the involved room (transitional attack) while the interior crew stages at the door. What does the research say happens inside, and what must the interior crew know?",
+     a:"Interior temperatures drop hundreds of degrees in seconds and the heat release rate collapses — conditions improve dramatically. But it also generates a steam push, so the interior crew must be masked, ready to move in immediately, and aware the thermal picture just changed.",
+     why:"Water absorbs enormous heat energy. Applied before entry it resets the thermal environment — but timing with entry is everything, and steam is the price."},
+    {q:"You're flowing a straight stream through a doorway into a ventilation-limited room. Besides putting water on the fire, what is your stream doing?",
+     a:"It's entraining air and driving it ahead of the stream into the room — feeding oxygen to an oxygen-starved fire and altering the pressure/flow path.",
+     why:"Hose streams move large volumes of air (air entrainment). In a ventilation-limited space, sloppy stream placement can intensify burning. Technique matters: put water on the fire, not air into the room."},
+    {q:"Thick black smoke, high heat at the door, no visible flame, windows intact. What stage is this fire in and what's your biggest concern?",
+     a:"Ventilation-limited (under-ventilated), likely near flashover conditions. Biggest concern: your entry IS the ventilation event — opening that door can trigger rapid fire growth.",
+     why:"Modern fires carry huge energy but little oxygen. Everything is loaded and waiting for air. Coordinate water with entry and control doors, or you become the trigger."}
+  ],
+  diagrams: [
+    {title:"The neutral plane and flow arrows", cap:"Blue air flows <b>low</b> from intake to fire; red gases flow <b>high</b> from fire to exhaust.", svg:"t1d1"},
+    {title:"Ventilation-limited vs. seconds after ventilation", cap:"The same room: oxygen-starved fire, then violent growth the moment air arrives.", svg:"t1d2"},
+    {title:"Air entrainment", cap:"The stream drags air with it. Technique matters: water on the fire, not air into the room.", svg:"t1d3"}
+  ]
+},
+{
+  n: 2, title: "Flow Paths & Ventilation Tactics",
+  sub: "Intake, exhaust, and the deadly ground between them — plus when (not) to vent.",
+  concepts: [
+    "Flow runs from high pressure to low pressure: <b>intake → fire → exhaust</b>.",
+    "Every new opening redraws the map. Between intake and fire, you stand in the exhaust stream.",
+    "<b>Water on the fire first</b> (or truly simultaneous and coordinated), then vent. Ventilation is a tactic, not a reflex.",
+    "<b>Door control is the primary defense</b> — against fire growth and wind-driven blowtorch paths."
+  ],
+  videos: [
+    {title:"Understanding Flow Paths: Low Intake, High Exhaust", url:"https://training.fsri.org/course/162/understanding-flow-paths-low-intake-high-exhaust", dur:"5 min", desc:"Intake/exhaust and what's between them; the single clearest flow-path explainer."},
+    {title:"Impact of Horizontal Ventilation on Fire Behavior", url:"https://training.fsri.org/course/148/impact-of-horizontal-ventilation-on-fire-behavior", dur:"47 min", desc:"What ventilation actually does to fire behavior; the research behind water-first vs vent-first."}
+  ],
+  pfdNote: {
+    title: "PFD ventilation doctrine",
+    src: "From the department's recruit Ventilation deck (Ch. 13)",
+    items: [
+      "<b>Transitional attack.</b> Hit it from the outside <b>first</b>: an exterior offensive indirect handline into the compartment initiates cooling <i>before</i> transitioning to interior direct attack coordinated with ventilation — done prior to entry, search, or suppression. Prevents backdraft and flashover.",
+      "<b>The Three Ws before ventilating: When, Where, Why.</b> Timing rule: keep openings closed until you're ready to apply water — ventilation without water = fire growth. Water absorbs more heat energy than the fire creates.",
+      "<b>Never position between the fire and where it wants to go</b> without a hoseline or the ability to close a door — especially basement fires.",
+      "<b>Vertical ventilation alone</b> usually has no positive effect on a ventilation-limited fire; paired with coordinated exterior water as close to the fire as possible, it improves visibility and reduces temperature.",
+      "<b>Wind:</b> keep it at your back during attack; opening the upwind side feeds unlimited high-pressure O<sub>2</sub> into the fire.",
+      "<b>Flashover signs:</b> high heat, ghosting fingers of flame, sudden lowering of the smoke layer — do <b class=\"r\">NOT</b> enter; cool it transitional first, then vent, then enter.",
+      "<b>Hydraulic ventilation</b> (narrow fog/broken stream to push smoke/heat out): most useful for clearing a room <i>after</i> the fire is under control."
+    ]
+  },
+  cards: [
+    {q:"Single-story home, fire in a rear bedroom. Front door is your entry; the rear sliding glass door is broken out. Where's the intake, where's the exhaust, and where do you NOT want to be?",
+     a:"Intake at the front door (low), exhaust at the rear opening (high). The flow path runs front-to-rear straight through the house — do not position, search, or stage in that hallway without water on the fire and the door controlled.",
+     why:"Flow runs intake → fire → exhaust. Everything between the intake and the fire sits in the exhaust stream of superheated gases heading for the exit."},
+    {q:"Truck company is heading to the roof for vertical ventilation on a single-family with fire in the attic. The engine hasn't put water on the fire yet. Per FSRI research, what's the risk and the correct sequence?",
+     a:"Cutting the roof before water creates a powerful new exhaust that intensifies the fire below and can pull fire toward interior crews and openings. Correct sequence: water on the fire first (or truly simultaneous and coordinated), then vent.",
+     why:"The vertical ventilation studies show vent-before-water increases heat release and worsens conditions for interior crews. Ventilation is a tactic, not a reflex — it must be coordinated with suppression."},
+    {q:"Basement fire, single-family, interior stairwell is the only access. What does the below-grade fire do to your flow path and your escape route?",
+     a:"The stairwell becomes both intake and exhaust — superheated gases and smoke rise up the stairs into the first floor. Your entry path IS the exhaust path, and your escape route is compromised the moment you descend.",
+     why:"Below-grade fires are stack-effect driven: the only opening becomes the chimney. Crews descending walk directly into the fire's exhaust. Consider exterior access/attack and control the basement door."},
+    {q:"You're second-due. First-due is making entry through the front door with a line. You see a neighbor has broken out a rear window \"to help.\" What do you do?",
+     a:"Treat it as a tactical emergency: the flow path just changed. Immediately notify command and the interior crew, and either get that opening covered or adjust the plan — do not assume the original attack plan still holds.",
+     why:"Every new opening redefines intake and exhaust. Uncoordinated ventilation can pull fire and lethal heat toward the new exhaust — possibly onto the crew inside. Ventilation must be coordinated, never random."},
+    {q:"25 mph wind at your back as you advance through the front door, fire in the rear of the house. What's the specific danger and the counter-tactic?",
+     a:"Wind creates a forced blowtorch flow path from your entry (windward) to leeward openings — fire and 1000°+ gases driven down the hallway faster than crews can react. Counter: control the entry door, compartmentalize by closing interior doors, and never advance into a wind-driven exhaust path without water.",
+     why:"Wind overrides natural buoyancy entirely. Door control is the primary defense — a closed door between you and a wind-driven fire is often the only thing that works."},
+    {q:"PFD doctrine: before taking a window or cutting a roof, what are the Three Ws and what's the timing rule?",
+     a:"When, Where, Why — and keep openings closed until you're ready to apply water. Ventilation without water = fire growth.",
+     why:"Water absorbs more heat energy than the fire creates. Once water has slowed the fire, ventilation works for you instead of against you."},
+    {q:"You're assigned vertical ventilation on a ventilation-limited house fire, but the engine hasn't put water on the fire yet. What's the likely effect of cutting the roof right now — and what changes that?",
+     a:"Little to no positive effect — the new exhaust just feeds the oxygen-starved fire. Pair the cut with coordinated exterior water as close to the fire as possible, and it improves visibility and drops temperatures.",
+     why:"PFD/UL-NIST research: venting alone on a ventilation-limited fire grows it. Water first resets the thermal environment; then ventilation helps instead of hurts."}
+  ],
+  diagrams: [
+    {title:"Floor-plan flow path", cap:"Blue intake arrows, red exhaust arrows — and the hallway between them, shaded as danger ground.", svg:"t2d1"},
+    {title:"Basement fire stairwell stack", cap:"Below grade, the stairwell becomes the chimney — your entry path is the fire's exhaust path.", svg:"t2d2"},
+    {title:"Wind-driven flow path", cap:"Wind turns your doorway into a blowtorch. Never advance into the exhaust.", svg:"t2d3"}
+  ]
+},
+{
+  n: 3, title: "Reading Smoke",
+  sub: "Volume, velocity, density, color — the four things smoke is telling the first-due officer.",
+  concepts: [
+    "Read <b>four</b> attributes: volume (extent), velocity (heat/pressure), density (fuel richness), color (fuel type and toxicity).",
+    "<b>Brown banking smoke</b> and pulsing/\"breathing\" doorways are pre-flashover warnings.",
+    "Yellowish, acrid smoke = synthetics and toxins (HCN). Full SCBA, zero skin exposure — search urgency goes <b>up</b>, not down.",
+    "Cleaner smoke after ventilation can mean a <b>bigger</b> fire, not a dying one. Read continuously, never once."
+  ],
+  videos: [
+    {title:"Impact of Ventilation on Fire Patterns", url:"https://training.fsri.org/course/98/impact-of-ventilation-on-fire-patterns", dur:"90 min", desc:"How ventilation changes what you see; the closest FSRI analog to dedicated reading-smoke training."},
+    {title:"Residential Fire Near-Miss Incident in LaGrange, GA", url:"https://training.fsri.org/course/105/residential-fire-near-miss-incident-in-lagrange-ga", dur:"65 min", desc:"A real near-miss where crews misread conditions; practice spotting what they missed before the reveal."}
+  ],
+  cards: [
+    {q:"From the front lawn: high-volume, high-velocity, turbulent BLACK smoke pushing hard from the eaves. Break down what volume, velocity, density, and color each tell you.",
+     a:"Volume = extent of burning (a lot of fuel involved). Velocity = pressure/heat driving it (fast = intense heat). Density (thick) = fuel-rich, incomplete combustion. Black = hydrocarbon/petroleum-based fuels. Combined: a large, hot, ventilation-limited fire — expect violent change the moment it's ventilated.",
+     why:"The four attributes each read a different variable — volume is extent, velocity is pressure and heat, density is fuel richness, color is fuel type and combustion efficiency. Read all four, not just one."},
+    {q:"Thin, wispy white-gray smoke drifting lazily from a soffit vent — versus thick BROWN smoke banking down inside the hallway. Contrast the two.",
+     a:"The exterior smoke says early-stage or smoldering, lower heat. The brown banking smoke inside is the killer: brown means wood pyrolysis products at high temperature, and banking down to floor level means heat is filling the space from the ceiling down — a pre-flashover warning.",
+     why:"Color tracks fuel and temperature; velocity tracks pressure; height tracks heat. Brown + low = the room is about to go."},
+    {q:"Smoke is pulsing — breathing in and out of the front doorway, inhaling then exhaling. What is this and what do you do?",
+     a:"Textbook precursor to flashover or backdraft: the fire is gasping at the edge of its available oxygen. Do NOT enter through that door without water ready — cool the space first (transitional attack through a window if possible) and control the door.",
+     why:"Pulsing means the fire is oxygen-limited and unstable. Your entry provides the air for explosive fire growth. This is the warning shot — heed it."},
+    {q:"Yellowish-gray smoke with a sharp acrid smell at a commercial occupancy. What does the color suggest and how does it change your urgency?",
+     a:"Yellowish tint suggests nitrogenous/toxic products — synthetics, chemicals, or mixed commercial fuels producing hydrogen cyanide and other toxins. Full SCBA discipline, zero skin exposure, and search urgency goes UP: survivability in that atmosphere drops to minutes.",
+     why:"Color hints at fuel chemistry, and chemistry determines toxicity. Reading smoke isn't just about fire behavior — it's a victim-survivability calculation."},
+    {q:"You vent a window and the outside smoke quickly goes from black and turbulent to lighter and faster-moving. Good sign?",
+     a:"Not necessarily — it often means you've relieved pressure and the fire is now getting air and burning MORE completely and intensely. Cleaner-looking smoke after ventilation can mean a bigger fire, not a dying one. Verify with thermal conditions and keep applying water.",
+     why:"Ventilation changes combustion efficiency. Smoke reading is continuous, not a snapshot — never declare victory off one change in appearance."}
+  ],
+  diagrams: [
+    {title:"Smoke-reading reference chart", cap:"Four classics: early smoldering, large ventilation-limited, pre-flashover banking, pulse warning.", svg:"t3d1"},
+    {title:"Banked smoke and the thermal layer", cap:"Smoke banking down = heat filling from ceiling down. Stay below the layer.", svg:"t3d2"}
+  ]
+},
+{
+  n: 4, title: "Building Construction & Collapse",
+  sub: "Construction type is your timeline — plus voids, cocklofts, and the roof that kills.",
+  concepts: [
+    "<b>Construction type is your timeline.</b> Lightweight engineered trusses and I-joists can fail in 5–10 minutes under fire.",
+    "Type V = wood throughout; Type III = masonry exterior, wood interior. Read it off the walls.",
+    "<b>Cocklofts and concealed voids</b> spread fire unseen — pull ceilings and check voids early.",
+    "<b>Collapse indicators are lagging:</b> spongy floors, sagging roof, moving walls = withdraw immediately, collapse zone at 1.5× height."
+  ],
+  videos: [
+    {title:"Building Construction", url:"https://training.fsri.org/course/133/building-construction", dur:"12 min", desc:"Construction types; the taxonomy for everything in this topic."},
+    {title:"Structural Stability of Engineered Lumber in Fire Conditions", url:"https://training.fsri.org/course/76/structural-stability-of-engineered-lumber-in-fire-conditions", dur:"31 min", desc:"Engineered vs dimensional collapse timelines with the actual research data."}
+  ],
+  cards: [
+    {q:"Size-up: 2019-built single-family, fire in the attic, truss roof, lightweight engineered I-joists. What does the construction tell you about your timeline and tactics?",
+     a:"Engineered lightweight components fail catastrophically fast — unprotected lightweight trusses and I-joists can collapse in as little as 5–10 minutes of fire exposure. Tactics: no prolonged interior ops above or below involved lightweight truss; go defensive earlier; establish a collapse zone.",
+     why:"Engineered lumber has less mass and adhesives that fail at lower temperatures — FSRI research shows dramatically shorter collapse times than dimensional lumber. The building's age and construction type IS your timeline."},
+    {q:"Type V wood-frame vs Type III ordinary: you're looking at a 3-story apartment building. How do you tell them apart on size-up and why does it matter?",
+     a:"Type V = wood frame throughout, everything combustible. Type III = masonry/noncombustible exterior walls with wood interior (joists, roof) — read it from the exterior: brick or block walls suggest III. It matters because fire spread and collapse differ: in III the walls stand while interior floors and roof burn and drop; void spaces, parapets, and concealed spaces drive the tactics.",
+     why:"Construction type predicts both fire behavior and collapse mode. It drives the entire strategy — get it wrong and you're fighting the wrong building."},
+    {q:"Cockloft — define it, say where you find it, and explain why it kills firefighters.",
+     a:"The concealed space between the top-floor ceiling and the roof deck, common in taxpayers, strip commercial, and older multi-family. It kills because fire runs undetected horizontally through it across the whole building, then drops down or causes sudden roof collapse on crews working below who never saw it coming.",
+     why:"Concealed spaces defeat direct attack and hide fire spread. By the time a cockloft fire is visible, structural members are already compromised — hence early void inspection and pulling ceilings."},
+    {q:"Interior crew reports spongy floors. From outside you see the roofline sagging and a fresh crack in a load-bearing wall. Your call?",
+     a:"Withdraw everyone immediately, switch to defensive, establish a collapse zone at 1.5x building height. Spongy floors = floor system failing; sagging roofline = truss/roof compromise; wall cracks = structural movement.",
+     why:"Collapse indicators are lagging — by the time they're visible, failure is imminent, not approaching. The only safe action is evacuation. No property is worth a firefighter."},
+    {q:"Bowstring truss roof, commercial building, heavy fire showing. What's special about this roof and your tactics?",
+     a:"Bowstring (arched) trusses are infamous for sudden, total, outward collapse with little warning — when one member fails the whole system unzips and pushes walls out. Tactics: no crews under a burning bowstring truss roof, defensive from the start if the truss is involved, big collapse zone.",
+     why:"A historic firefighter killer with multiple LODD incidents behind it. Unlike other roofs it gives almost no sagging warning — the arch geometry fails all at once."}
+  ],
+  diagrams: [
+    {title:"Dimensional lumber vs. engineered components", cap:"Massive wood chars slowly; thin members and adhesives fail fast — collapse in minutes.", svg:"t4d1"},
+    {title:"The cockloft", cap:"Hidden horizontal highway for fire between ceiling and roof deck. Check voids early.", svg:"t4d2"},
+    {title:"Bowstring truss collapse", cap:"The arch unzips all at once and throws the walls outward. Big collapse zone, defensive early.", svg:"t4d3"}
+  ]
+},
+{
+  n: 5, title: "SCBA & Air Management",
+  sub: "Buddy checks, the rule of thirds, low-air discipline, and the mayday math.",
+  concepts: [
+    "<b>Low-air alarm = begin exit immediately.</b> Reserve is survival margin, not working time.",
+    "Rule of thirds: a third in, a third out, a third reserve. Turn before you burn the margin.",
+    "A downed firefighter gets your <b>Mayday (LUNAR)</b> — but never become the second victim.",
+    "<b>Looks clear ≠ is clear:</b> mask up during overhaul until the atmosphere is metered clean."
+  ],
+  videos: [
+    {title:"FSRI YouTube channel", url:"https://www.youtube.com/firesafetyresearchinstitute", dur:"channel", desc:"Search the channel for SCBA and air-management experiment footage. No SCBA-specific course exists in the FSRI plan, so the channel is the honest source."}
+  ],
+  inHouseRef: 'In-house reference: the department\'s own SCBA doctrine lives in the PFD Training library — <b>Recruit Training &gt; PowerPoints &gt; "SCBA PP Presentation joe bonnell.pptx"</b>.',
+  pfdNote: {
+    src: "From the department's recruit SCBA deck — Scott Air-Pak X3 Pro",
+    items: [
+      "<b>Cylinders.</b> 4500 psi, 45-minute, snap-change threaded fitting. Pressure lights: <b class=\"g\">2 green</b> = 76&ndash;100%, <b class=\"g\">1 green</b> = 51&ndash;75%, <b class=\"y\">1 yellow</b> = 36&ndash;50% (prepare to exit), <b class=\"r\">1 red</b> = 35% or less (leave immediately). Vibralert low-air alarm — audible <i>and</i> tactile — sounds at ~35%.",
+      "<b>PASS.</b> Pre-alarm after 20 seconds motionless, full alarm 12 seconds after that (or hit the red manual button).",
+      "<b>SOP (Vol 2).</b> SCBA SHALL be used in contaminated, may-become-contaminated, O2-deficient, or suspected atmospheres — explicitly including the active fire area, directly above it, gas leaks/fuel spills, visible products of combustion (even vehicle/dumpster fires), and untested confined spaces.",
+      "<b>Malfunction.</b> Red-tag it, report to the Captain, replace immediately; batteries changed only by a certified SCBA tech. Every member checks their SCBA at start of each shift and after each use."
+    ]
+  },
+  cards: [
+    {q:"Your low-air alarm activates while you're searching a second-floor bedroom. Immediate action — and why is \"a few more minutes\" wrong?",
+     a:"Begin exit IMMEDIATELY toward your entry point or hoseline; notify your partner and command. \"A few more minutes\" is wrong because on the Scott X3 Pro your Vibralert sounds at ~35% — that's roughly one-third of your cylinder left, and under exertion that's minutes of working air, not a comfort margin. Exiting through deteriorating conditions always takes longer than you think.",
+     why:"The alarm means you're on reserve, and reserve is survival margin, not working time. Most SCBA emergencies come from delayed exits, not empty cylinders."},
+    {q:"What's the rule of thumb for managing your air on entry, and why that ratio?",
+     a:"The rule of thirds (or the department's air management policy): roughly a third of your air to work your way in, a third to get out, a third in reserve — check pressure at entry and turn when you've used your working portion.",
+     why:"You must be able to exit under worst-case conditions — disoriented, low visibility, dragging a victim. The reserve isn't extra time; it's the margin that gets you home when everything goes wrong."},
+    {q:"Your partner's PASS is sounding and he's not answering the radio. Your own low-air alarm just activated. What takes priority and what's the procedure?",
+     a:"The downed firefighter takes priority — call an immediate Mayday with LUNAR and his last known location so RIT deploys with full cylinders. But you cannot become the second victim: if you can't effect the rescue on your remaining air, withdraw and guide the rescue team in rather than dying next to him.",
+     why:"A downed firefighter with no air is a rescue; a rescuer with no air is a recovery. Air discipline applies even during rescues — call it early."},
+    {q:"Overhaul. The smoke has mostly cleared and the crew wants masks off. Your call?",
+     a:"Masks stay on until the atmosphere is metered and verified clear. \"Looks clear\" means nothing — overhaul atmospheres carry lethal CO and particulates with no visible smoke.",
+     why:"Carbon monoxide and hydrogen cyanide persist at toxic levels long after visible smoke clears. Smoke exposure during overhaul is a leading contributor to firefighter cardiac events and long-term illness. Meter it or mask up."},
+    {q:"Buddy check before entry — what are you actually verifying on your partner's SCBA, and why does each item matter?",
+     a:"Cylinder pressure (full — determines working time), PASS armed (no distress signal if he's downed), facepiece seal and regulator function (bad seal = smoke inhalation), HUD working (air awareness), radio on the right channel (can't call Mayday otherwise).",
+     why:"Each is a failure point that kills. The two-minute check before entry prevents the fatal five minutes inside."}
+  ],
+  diagrams: [
+    {title:"Buddy check", cap:"Verify before every entry: full cylinder, armed PASS, facepiece seal, working HUD, correct channel.", svg:"t5d1"},
+    {title:"Rule of thirds", cap:"A third in, a third out, a third reserve. The alarm means EXIT — not more working time.", svg:"t5d2"},
+    {title:"Overhaul atmosphere", cap:"Looks clear is not is clear. Overhaul produces toxic CO — mask up or meter it.", svg:"t5d3"}
+  ]
+},
+{
+  n: 6, title: "Medical Spanish — First Contact",
+  sub: "High-value questions, instructions, and words you may hear during the first minutes of patient care.",
+  concepts: [
+    "Start simple: <b>Soy bombero. Estoy aquí para ayudarle.</b> — I’m a firefighter. I’m here to help you.",
+    "Ask one short question at a time. <b>¿Qué pasó?</b> (What happened?) and <b>¿Dónde le duele?</b> (Where does it hurt?) open the assessment.",
+    "Listen for urgent phrases: <b>no puedo respirar</b> (I can’t breathe), <b>dolor en el pecho</b> (chest pain), <b>me desmayé</b> (I fainted), and <b>estoy sangrando</b> (I’m bleeding).",
+    "Use these phrases to begin care, then bring in a qualified interpreter as soon as practical. This deck does not replace your medical protocols or a complete assessment."
+  ],
+  videos: [],
+  pfdNote: {
+    title: "Quick phrase card",
+    src: "Plain-language Spanish for initial patient contact",
+    items: [
+      "<b>¿Qué pasó?</b> — What happened? &nbsp; <b>¿Dónde le duele?</b> — Where does it hurt?",
+      "<b>¿Tiene dolor en el pecho?</b> — Do you have chest pain? &nbsp; <b>¿Le falta el aire?</b> — Are you short of breath?",
+      "<b>¿Cuándo empezó?</b> — When did it start? &nbsp; <b>¿Fue de repente?</b> — Was it sudden?",
+      "<b>¿Toma medicamentos?</b> — Do you take medications? &nbsp; <b>¿Tiene alergias?</b> — Do you have allergies?",
+      "<b>No se mueva.</b> — Don’t move. &nbsp; <b>Respire despacio.</b> — Breathe slowly. &nbsp; <b>Apriete mi mano.</b> — Squeeze my hand."
+    ]
+  },
+  cards: [
+    {q:"You make first contact with a Spanish-speaking patient. Say: ‘I’m a firefighter. I’m here to help you. What happened?’",
+     a:"Soy bombero. Estoy aquí para ayudarle. ¿Qué pasó?",
+     why:"A short introduction establishes your role and intent, then opens the assessment without stacking several questions at once."},
+    {q:"A patient says, ‘Me duele el pecho y no puedo respirar.’ What are they telling you?",
+     a:"‘My chest hurts and I can’t breathe.’ The key words are dolor/duele (pain/hurts), pecho (chest), and no puedo respirar (I can’t breathe).",
+     why:"Those two complaints are high-priority cues. Recognizing the phrase should immediately focus your assessment while you follow protocol and arrange interpretation."},
+    {q:"Ask the patient where it hurts. Then name four answers you should recognize: head, chest, abdomen, and back.",
+     a:"¿Dónde le duele? Listen for: la cabeza (head), el pecho (chest), el abdomen or el estómago (abdomen/stomach), and la espalda (back).",
+     why:"The pattern ‘Me duele…’ means ‘My … hurts.’ Body-location words let you understand the first answer even before a full interpreter-assisted history."},
+    {q:"Ask: ‘When did it start? Was it sudden or little by little?’",
+     a:"¿Cuándo empezó? ¿Fue de repente o poco a poco?",
+     why:"Cuándo asks when; empezó means started; de repente means suddenly; poco a poco means gradually."},
+    {q:"You need medication and allergy history. Ask both questions in Spanish.",
+     a:"¿Toma medicamentos? ¿Tiene alergias? If needed: ¿A qué? means ‘To what?’",
+     why:"Medicamentos and alergias are close to their English equivalents, making them useful anchor words in a time-sensitive history."},
+    {q:"A trauma patient says, ‘Me caí, me golpeé la cabeza y me desmayé.’ Translate it.",
+     a:"‘I fell, I hit my head, and I fainted/lost consciousness.’ Me caí = I fell; me golpeé la cabeza = I hit my head; me desmayé = I fainted.",
+     why:"These are common phrases you may hear after a fall and each changes what you need to clarify during the trauma assessment."},
+    {q:"Give three simple neurologic-assessment instructions: ‘Smile. Raise both arms. Squeeze my hands.’",
+     a:"Sonría. Levante los dos brazos. Apriete mis manos.",
+     why:"Short, one-step commands are easier to understand and let you observe facial symmetry, arm drift, and grip while language help is arranged."},
+    {q:"Ask a patient: ‘Do you know where you are? Do you know what day it is?’",
+     a:"¿Sabe dónde está? ¿Sabe qué día es hoy?",
+     why:"These questions help test orientation. Sabe means ‘do you know,’ dónde means ‘where,’ and hoy means ‘today.’"},
+    {q:"Ask: ‘Are you pregnant? How many weeks? Is there bleeding?’",
+     a:"¿Está embarazada? ¿Cuántas semanas? ¿Hay sangrado?",
+     why:"Embarazada means pregnant; semanas means weeks; sangrado means bleeding. Ask clearly and privately when possible."},
+    {q:"You need the patient still and calm. Say: ‘Don’t move. Breathe slowly. I’m going to help you.’",
+     a:"No se mueva. Respire despacio. Voy a ayudarle.",
+     why:"These are respectful formal commands. Mueva means move, respire means breathe, and despacio means slowly."}
+  ],
+  diagrams: [
+    {title:"Body-location word map", cap:"Point and listen: cabeza, cuello, pecho, abdomen, espalda, brazo, and pierna.", svg:"t6d1"}
+  ]
+}
+];
+</script>
+<script>
+/* ---------- SVG diagram library: hand-built instructional plates (Fire's specs) ---------- */
+function mdefs(p){
+  return '<defs>'+
+  '<marker id="'+p+'-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3fb0ff"/></marker>'+
+  '<marker id="'+p+'-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff5a2e"/></marker>'+
+  '<marker id="'+p+'-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8c42"/></marker>'+
+  '<marker id="'+p+'-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9fb3a8"/></marker>'+
+  '<pattern id="'+p+'-h" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="rgba(255,90,46,0.10)"/><line x1="0" y1="0" x2="0" y2="9" stroke="#ff5a2e" stroke-width="2.5"/></pattern>'+
+  '</defs>';
+}
+function FLAME(x,y,s){
+  return '<g transform="translate('+x+' '+y+') scale('+s+')">'
+    +'<path d="M0 0 C -12 -8 -10 -22 0 -34 C 10 -22 12 -8 0 0 Z" fill="#ff7a2e"/>'
+    +'<path d="M0 -2 C -5 -8 -4 -17 0 -23 C 4 -17 5 -8 0 -2 Z" fill="#ffd166"/></g>';
+}
+function FIG(x,y,s,opts){
+  opts = opts||{};
+  var mask = opts.mask?'<rect x="-4.5" y="-61.5" width="9" height="7" rx="2.5" fill="#3a352e"/>':'';
+  var scba = opts.scba?'<rect x="-9.5" y="-52" width="6" height="28" rx="3" fill="#7a6f5c"/><circle cx="-6.5" cy="-46" r="2.6" fill="#9fb3a8"/>':'';
+  return '<g transform="translate('+x+' '+y+') scale('+s+')">'
+    + scba
+    +'<rect x="-5.5" y="-28" width="4.6" height="28" rx="2.2" fill="#cfc3ae"/>'
+    +'<rect x="0.9" y="-28" width="4.6" height="28" rx="2.2" fill="#cfc3ae"/>'
+    +'<rect x="-10.8" y="-52" width="4" height="21" rx="2" fill="#c3b69e"/>'
+    +'<rect x="6.8" y="-52" width="4" height="21" rx="2" fill="#c3b69e"/>'
+    +'<rect x="-6.5" y="-54" width="13" height="29" rx="4.5" fill="#cfc3ae"/>'
+    +'<circle cx="0" cy="-60" r="5.4" fill="#d8cdb8"/>'
+    + mask
+    +'<rect x="-9" y="-67" width="18" height="3" rx="1.5" fill="#e2d9c6"/>'
+    +'<path d="M-5.6 -67 A5.6 5.6 0 0 1 5.6 -67 Z" fill="#e2d9c6"/></g>';
+}
+function wallPath(x1,y1,x2,y2){ return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="#d9cfb8" stroke-width="4"/>'; }
+
+var DIAGS = {
+/*t1d1*/ t1d1:function(){return '<svg viewBox="0 0 460 300" role="img" aria-label="House cross-section showing the neutral plane, intake flow low and exhaust flow high">'+mdefs('d1')
++'<path d="M20 72 L235 28 L450 72" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++wallPath(35,72,35,180)+wallPath(435,72,435,104)+wallPath(435,146,435,250)+wallPath(35,250,435,250)
++wallPath(300,72,300,208)
++'<line x1="35" y1="155" x2="435" y2="155" stroke="#8d8577" stroke-width="2" stroke-dasharray="7 5"/>'
++'<text x="230" y="147" text-anchor="middle" class="dlbl--sm">NEUTRAL PLANE</text>'
++'<ellipse cx="120" cy="92" rx="34" ry="12" fill="#57524a" opacity=".55"/><ellipse cx="180" cy="82" rx="26" ry="10" fill="#57524a" opacity=".45"/>'
++'<line x1="64" y1="224" x2="150" y2="224" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d1-b)"/>'
++'<line x1="160" y1="224" x2="246" y2="224" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d1-b)"/>'
++'<line x1="308" y1="224" x2="352" y2="224" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d1-b)"/>'
++'<text x="66" y="214" class="dlbl--sm" style="fill:#3fb0ff">INTAKE (front door)</text>'
++'<line x1="236" y1="108" x2="312" y2="108" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d1-r)"/>'
++'<line x1="322" y1="108" x2="398" y2="108" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d1-r)"/>'
++'<line x1="406" y1="108" x2="446" y2="108" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d1-r)"/>'
++'<text x="444" y="96" text-anchor="end" class="dlbl--sm" style="fill:#ff5a2e">EXHAUST (rear window)</text>'
++FLAME(368,248,1.35)+'<text x="368" y="268" text-anchor="middle" class="dlbl" style="font-size:13px">FIRE</text>'
++'<text x="66" y="240" class="dlbl--xs">cool air flows LOW</text><text x="404" y="160" text-anchor="end" class="dlbl--xs">hot gases flow HIGH</text></svg>';},
+
+/*t1d2*/ t1d2:function(){return '<svg viewBox="0 0 460 300" role="img" aria-label="Two-panel comparison of a ventilation-limited room and the same room seconds after a window is opened">'+mdefs('d2')
++'<rect x="8" y="8" width="212" height="196" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="14" y="14" width="200" height="86" fill="rgba(52,50,46,0.72)"/>'
++'<rect x="14" y="104" width="200" height="94" fill="#181410"/>'
++ wallPath(14,198,214,198)+FLAME(112,196,1.05)
++'<text x="114" y="230" text-anchor="middle" class="dlbl" style="font-size:14px">VENTILATION-LIMITED</text>'
++'<text x="114" y="248" text-anchor="middle" class="dlbl--xs">oxygen-starved · fuel-rich · high heat</text>'
++'<text x="114" y="264" text-anchor="middle" class="dlbl--xs">airtight — small flames, thick dark smoke</text>'
++'<rect x="240" y="8" width="212" height="196" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<line x1="446" y1="40" x2="446" y2="96" stroke="#d9cfb8" stroke-width="4"/><line x1="446" y1="96" x2="446" y2="128" stroke="#d9cfb8" stroke-width="4" opacity="0"/>'
++'<line x1="446" y1="60" x2="446" y2="100" stroke="#d9cfb8" stroke-width="2" opacity=".35"/>'
++'<line x1="446" y1="40" x2="446" y2="64" stroke="#d9cfb8" stroke-width="4"/>'  +wallPath(14,198,214,198)
++'<rect x="246" y="14" width="196" height="44" fill="rgba(52,50,46,0.45)"/>'
++FLAME(346,196,2.3)
++'<path d="M430 116 C 402 112 386 124 368 142" fill="none" stroke="#ff8c42" stroke-width="3" marker-end="url(#d2-o)"/>'
++'<path d="M430 92 C 398 96 384 110 372 130" fill="none" stroke="#ff8c42" stroke-width="3" marker-end="url(#d2-o)"/>'
++'<path d="M430 142 C 406 140 392 146 378 156" fill="none" stroke="#ff8c42" stroke-width="3" marker-end="url(#d2-o)"/>'
++'<text x="440" y="150" text-anchor="end" class="dlbl--xs" style="fill:#ff8c42">fresh air rushes in</text>'
++'<text x="346" y="230" text-anchor="middle" class="dlbl" style="font-size:14px">SECONDS AFTER VENTILATION</text>'
++'<text x="346" y="248" text-anchor="middle" class="dlbl--xs">window opened — rapid violent fire growth</text></svg>';},
+
+/*t1d3*/ t1d3:function(){return '<svg viewBox="0 0 460 300" role="img" aria-label="Firefighter flowing a straight stream through a doorway with air-entrainment arrows">'+mdefs('d3')
++wallPath(344,24,344,96)+wallPath(344,232,344,276)+'<line x1="344" y1="24" x2="344" y2="276" stroke="#d9cfb8" stroke-width="2" opacity=".25"/>'
++'<text x="368" y="170" class="dlbl--sm" transform="rotate(90 368 170)" text-anchor="middle">DOORWAY</text>'
++FIG(140,258,1.55,{scba:true})
++'<path d="M170 226 Q 190 210 214 212" fill="none" stroke="#cfc3ae" stroke-width="5" stroke-linecap="round"/>'
++'<polygon points="214,204 214,222 342,116 342,100" fill="rgba(63,176,255,0.42)"/>'
++'<circle cx="250" cy="185" r="2.4" fill="#9fd9ff"/><circle cx="270" cy="173" r="3" fill="#9fd9ff"/><circle cx="290" cy="161" r="2.2" fill="#9fd9ff"/><circle cx="312" cy="148" r="2.8" fill="#9fd9ff"/><circle cx="258" cy="196" r="2.2" fill="#9fd9ff"/><circle cx="296" cy="172" r="2.4" fill="#9fd9ff"/>'
++'<path d="M212 196 C 258 172 300 150 342 132" fill="none" stroke="#ffd166" stroke-width="2.6" marker-end="url(#d3-o)"/>'
++'<path d="M212 232 C 260 212 306 190 342 170" fill="none" stroke="#ffd166" stroke-width="2.6" marker-end="url(#d3-o)"/>'
++'<path d="M346 136 C 366 142 378 152 380 168" fill="none" stroke="#ffd166" stroke-width="2.4" marker-end="url(#d3-o)"/>'
++'<text x="230" y="52" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#ffd166">AIR ENTRAINMENT</text>'
++'<text x="230" y="72" text-anchor="middle" class="dlbl--xs">the stream pushes oxygen into the fire</text>'
++'<text x="230" y="294" text-anchor="middle" class="dlbl" style="font-size:13px">Water on the fire, not air into the room.</text></svg>';},
+
+/*t2d1*/ t2d1:function(){return '<svg viewBox="0 0 460 346" role="img" aria-label="Top-down floor plan showing intake arrows through the hallway and exhaust arrows out the rear slider">'+mdefs('d4')
++'<rect x="55" y="30" width="350" height="276" fill="none" stroke="#d9cfb8" stroke-width="5"/>'
++'<line x1="55" y1="30" x2="55" y2="138" stroke="#d9cfb8" stroke-width="6"/><line x1="55" y1="178" x2="55" y2="306" stroke="#d9cfb8" stroke-width="6"/>'
++'<line x1="405" y1="30" x2="405" y2="138" stroke="#d9cfb8" stroke-width="6"/><line x1="405" y1="178" x2="405" y2="306" stroke="#d9cfb8" stroke-width="6"/>'
++'<line x1="285" y1="30" x2="285" y2="130" stroke="#d9cfb8" stroke-width="4"/><line x1="285" y1="200" x2="285" y2="306" stroke="#d9cfb8" stroke-width="4"/>'
++'<text x="345" y="54" text-anchor="middle" class="dlbl--sm">BEDROOM</text>'
++'<rect x="58" y="138" width="224" height="42" fill="url(#d4-h)"/>'
++'<line x1="66" y1="159" x2="140" y2="159" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d4-b)"/>'
++'<line x1="148" y1="159" x2="222" y2="159" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d4-b)"/>'
++'<line x1="230" y1="159" x2="276" y2="159" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d4-b)"/>'
++'<line x1="292" y1="152" x2="326" y2="152" stroke="#3fb0ff" stroke-width="3" marker-end="url(#d4-b)"/>'
++'<text x="70" y="124" class="dlbl--sm" style="fill:#3fb0ff">INTAKE (front door)</text>'
++FLAME(344,196,1.55)+'<text x="344" y="222" text-anchor="middle" class="dlbl" style="font-size:12px">FIRE</text>'
++'<line x1="360" y1="132" x2="398" y2="132" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d4-r)"/>'
++'<line x1="410" y1="132" x2="452" y2="132" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d4-r)"/>'
++'<text x="448" y="116" text-anchor="end" class="dlbl--sm" style="fill:#ff5a2e">EXHAUST (rear slider)</text>'
++'<text x="230" y="98" text-anchor="middle" class="dlbl" style="font-size:13px;fill:#ff5a2e">DANGER — FLOW PATH</text>'
++'<text x="230" y="326" text-anchor="middle" class="dlbl--xs" style="fill:#ff5a2e">do not position crew in the hallway flow path without water</text></svg>';},
+
+/*t2d2*/ t2d2:function(){var stairs='';for(var i=0;i<8;i++){stairs+='<rect x="'+(352-i*8)+'" y="'+(191-i*8)+'" width="8" height="24" fill="#39423c"/>';}
+return '<svg viewBox="0 0 460 335" role="img" aria-label="Cross-section of a two-story house with a basement fire, smoke rising up the interior stairwell">'+mdefs('d5')
++'<path d="M55 58 L240 18 L425 58" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<rect x="70" y="58" width="340" height="76" fill="none" stroke="#d9cfb8" stroke-width="3"/>'
++'<rect x="70" y="134" width="340" height="80" fill="none" stroke="#d9cfb8" stroke-width="3"/>'
++'<rect x="70" y="214" width="340" height="96" fill="none" stroke="#d9cfb8" stroke-width="3"/>'
++stairs+'<line x1="288" y1="191" x2="368" y2="127" stroke="#39423c" stroke-width="3"/>'
++'<text x="392" y="240" class="dlbl--xs" text-anchor="end">STAIRS</text>'
++FLAME(130,300,1.7)+'<text x="130" y="324" text-anchor="middle" class="dlbl--sm">BASEMENT FIRE</text>'
++'<path d="M160 250 C 230 244 268 236 300 214" fill="none" stroke="#ff8c42" stroke-width="3.2" marker-end="url(#d5-o)"/>'
++'<path d="M312 208 C 308 180 296 158 288 140" fill="none" stroke="#ff8c42" stroke-width="3.2" marker-end="url(#d5-o)"/>'
++'<path d="M282 136 C 244 132 210 132 176 140" fill="none" stroke="#ff8c42" stroke-width="3.2" marker-end="url(#d5-o)"/>'
++'<text x="84" y="124" class="dlbl--sm" style="fill:#ff8c42">stairwell becomes the EXHAUST path</text>'
++FIG(252,133,1.15)
++'<line x1="214" y1="54" x2="246" y2="58" stroke="#ff5a2e" stroke-width="1.4"/>'
++'<text x="70" y="50" class="dlbl--sm" style="fill:#ff5a2e">your entry path =</text>'
++'<text x="70" y="66" class="dlbl--sm" style="fill:#ff5a2e">the fire\u2019s exhaust path</text></svg>';},
+
+/*t2d3*/ t2d3:function(){return '<svg viewBox="0 0 460 310" role="img" aria-label="Side view of a house with wind pushing fire through the entry and a flame jet blasting out the rear window">'+mdefs('d6')
++'<path d="M130 110 L260 70 L390 110" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<line x1="150" y1="110" x2="150" y2="168" stroke="#d9cfb8" stroke-width="4"/>'
++'<line x1="370" y1="110" x2="370" y2="128" stroke="#d9cfb8" stroke-width="4"/><line x1="370" y1="166" x2="370" y2="248" stroke="#d9cfb8" stroke-width="4"/>'
++wallPath(150,248,370,248)
++'<line x1="12" y1="98" x2="130" y2="98" stroke="#9fb3a8" stroke-width="3.5" marker-end="url(#d6-g)"/>'
++'<line x1="12" y1="138" x2="130" y2="138" stroke="#9fb3a8" stroke-width="3.5" marker-end="url(#d6-g)"/>'
++'<line x1="12" y1="178" x2="130" y2="178" stroke="#9fb3a8" stroke-width="3.5" marker-end="url(#d6-g)"/>'
++'<text x="14" y="76" class="dlbl" style="font-size:15px;fill:#9fb3a8">25 MPH WIND</text>'
++'<path d="M374 146 C 404 138 424 146 452 136 C 434 150 412 158 374 158 Z" fill="#ff7a2e"/>'
++'<path d="M374 148 C 398 144 414 148 436 142 C 420 152 400 156 374 156 Z" fill="#ffd166"/>'
++'<line x1="382" y1="124" x2="424" y2="112" stroke="#ff5a2e" stroke-width="2.6" stroke-dasharray="6 4"/>'
++'<text x="230" y="288" text-anchor="middle" class="dlbl" style="font-size:14px">WIND-DRIVEN FLOW PATH</text>'
++'<text x="230" y="305" text-anchor="middle" class="dlbl--xs">never advance into the exhaust</text></svg>';},
+
+/*t3d1*/ t3d1:function(){function house(x){return '<rect x="'+x+'" y="86" width="112" height="52" fill="#181410" stroke="#d9cfb8" stroke-width="2.5"/><path d="M'+(x-8)+' 88 L'+(x+56)+' 60 L'+(x+120)+' 88" fill="none" stroke="#d9cfb8" stroke-width="2.5"/>';}
+return '<svg viewBox="0 0 460 392" role="img" aria-label="Four-quadrant smoke reading reference chart">'+mdefs('d7')
++'<rect x="8" y="8" width="216" height="178" fill="none" stroke="#5c564a" stroke-width="2"/>'
++house(58)+'<path d="M108 58 C 102 48 112 42 108 34" fill="none" stroke="#c9c2b2" stroke-width="2.2"/>'
++'<path d="M124 60 C 118 52 126 46 122 40" fill="none" stroke="#c9c2b2" stroke-width="1.8"/>'
++'<text x="116" y="162" text-anchor="middle" class="dlbl" style="font-size:11px">LOW · SLOW · THIN · WHITE/GRAY</text>'
++'<text x="116" y="178" text-anchor="middle" class="dlbl--xs">= early or smoldering</text>'
++'<rect x="236" y="8" width="216" height="178" fill="none" stroke="#5c564a" stroke-width="2"/>'
++house(286)+'<path d="M332 60 C 322 52 336 44 328 34 C 342 40 346 48 344 58 C 360 52 366 64 360 76 L 330 76 C 320 72 322 64 332 60 Z" fill="#26221d" stroke="#100e0b" stroke-width="1.5"/>'
++'<text x="344" y="162" text-anchor="middle" class="dlbl" style="font-size:11px">HIGH · FAST · DENSE · BLACK</text>'
++'<text x="344" y="178" text-anchor="middle" class="dlbl--xs">= large hot ventilation-limited fire</text>'
++'<rect x="8" y="198" width="216" height="186" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="30" y="230" width="160" height="80" fill="none" stroke="#d9cfb8" stroke-width="2.5"/>'
++'<rect x="34" y="236" width="152" height="52" fill="rgba(139,90,43,0.55)"/>'
++FLAME(160,306,0.8)
++'<text x="116" y="342" text-anchor="middle" class="dlbl" style="font-size:11px;fill:#d8974b">BROWN + BANKING DOWN</text>'
++'<text x="116" y="360" text-anchor="middle" class="dlbl--xs">= pre-flashover warning</text>'
++'<rect x="236" y="198" width="216" height="186" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="300" y="236" width="84" height="74" fill="#181410" stroke="#d9cfb8" stroke-width="2.5"/>'
++'<line x1="342" y1="262" x2="312" y2="262" stroke="#3fb0ff" stroke-width="2.6" marker-end="url(#d7-b)"/>'
++'<line x1="312" y1="286" x2="342" y2="286" stroke="#ff5a2e" stroke-width="2.6" marker-end="url(#d7-r)"/>'
++'<text x="344" y="342" text-anchor="middle" class="dlbl" style="font-size:11px">BREATHING / PULSING</text>'
++'<text x="344" y="360" text-anchor="middle" class="dlbl--xs">= flashover / backdraft precursor</text></svg>';},
+
+/*t3d2*/ t3d2:function(){return '<svg viewBox="0 0 460 312" role="img" aria-label="Room cross-section with smoke banked low and a firefighter crouched in the clean air below">'+mdefs('d8')
++'<rect x="40" y="58" width="380" height="192" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<rect x="44" y="62" width="372" height="96" fill="rgba(40,34,28,0.78)"/>'
++'<line x1="44" y1="158" x2="416" y2="158" stroke="#ff8c42" stroke-width="1.6"/>'
++FLAME(362,248,1.35)
++'<g transform="translate(108 250) scale(1.5)">'
++'<rect x="-9" y="-14" width="8" height="14" rx="3" fill="#cfc3ae"/><rect x="2" y="-14" width="8" height="14" rx="3" fill="#cfc3ae"/>'
++'<rect x="-7" y="-34" width="14" height="22" rx="5" fill="#cfc3ae" transform="rotate(-12)"/>'
++'<circle cx="-2" cy="-40" r="5.4" fill="#d8cdb8"/>'
++'<rect x="-11" y="-45.6" width="18" height="3" rx="1.5" fill="#e2d9c6"/>'
++'<path d="M-7.6 -45.6 A5.6 5.6 0 0 1 3.6 -45.6 Z" fill="#e2d9c6"/></g>'
++'<text x="230" y="44" text-anchor="middle" class="dlbl--sm">smoke banking down = heat filling from ceiling down</text>'
++'<text x="230" y="282" text-anchor="middle" class="dlbl" style="font-size:13px">STAY BELOW THE THERMAL LAYER</text>'
++'<text x="230" y="300" text-anchor="middle" class="dlbl--xs">what you can\u2019t see above you can kill you</text></svg>';},
+
+/*t4d1*/ t4d1:function(){return '<svg viewBox="0 0 460 300" role="img" aria-label="Dimensional lumber joists versus engineered I-joists under fire exposure with collapse clocks">'+mdefs('d9')
++'<rect x="8" y="8" width="216" height="200" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="24" y="80" width="120" height="26" fill="#8a6a4a"/><rect x="24" y="124" width="120" height="26" fill="#8a6a4a"/>'
++'<rect x="24" y="100" width="120" height="6" fill="#2b2018"/><rect x="24" y="144" width="120" height="6" fill="#2b2018"/>'
++FLAME(80,196,0.85)
++'<circle cx="188" cy="140" r="19" fill="none" stroke="#d9cfb8" stroke-width="3"/>'
++'<line x1="188" y1="140" x2="188" y2="126" stroke="#d9cfb8" stroke-width="2.6"/><line x1="188" y1="140" x2="198" y2="144" stroke="#d9cfb8" stroke-width="2.6"/>'
++'<text x="188" y="170" text-anchor="middle" class="dlbl--xs">extended time</text>'
++'<text x="116" y="234" text-anchor="middle" class="dlbl" style="font-size:13px">MASSIVE WOOD</text>'
++'<text x="116" y="252" text-anchor="middle" class="dlbl--xs">chars slowly — longer collapse time</text>'
++'<rect x="236" y="8" width="216" height="200" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="252" y="80" width="104" height="8" fill="#8a6a4a"/><rect x="252" y="116" width="104" height="8" fill="#8a6a4a"/><rect x="290" y="88" width="10" height="28" fill="#5d4a35"/>'
++'<path d="M252 150 L372 150 M252 150 L312 178 L372 150 M312 150 L312 178" stroke="#6d5844" stroke-width="3"/>'
++'<circle cx="282" cy="164" r="2.6" fill="#9fb3a8"/><circle cx="342" cy="164" r="2.6" fill="#9fb3a8"/>'
++FLAME(344,196,1.6)
++'<circle cx="416" cy="140" r="19" fill="none" stroke="#ff5a2e" stroke-width="3"/>'
++'<line x1="416" y1="140" x2="416" y2="126" stroke="#ff5a2e" stroke-width="2.6"/><line x1="416" y1="140" x2="422" y2="140" stroke="#ff5a2e" stroke-width="2.6"/>'
++'<text x="416" y="170" text-anchor="middle" class="dlbl--xs" style="fill:#ff5a2e">short time</text>'
++'<text x="344" y="234" text-anchor="middle" class="dlbl" style="font-size:13px;fill:#ff5a2e">THIN MEMBERS + ADHESIVES</text>'
++'<text x="344" y="252" text-anchor="middle" class="dlbl--xs">fail fast — collapse in minutes</text></svg>';},
+
+/*t4d2*/ t4d2:function(){return '<svg viewBox="0 0 460 315" role="img" aria-label="Commercial building cutaway showing fire spreading through the cockloft">'+mdefs('d10')
++'<rect x="60" y="70" width="340" height="212" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<rect x="64" y="114" width="332" height="72" fill="rgba(217,164,65,0.20)" stroke="#d9a441" stroke-width="1.6" stroke-dasharray="6 4"/>'
++'<text x="84" y="132" class="dlbl--sm" style="fill:#d9a441">COCKLOFT — hidden horizontal fire spread</text>'
++'<path d="M60 96 L400 96" stroke="#d9cfb8" stroke-width="4"/>'
++FLAME(150,182,1.2)+FLAME(240,182,1.45)+FLAME(330,182,1.1)
++'<line x1="180" y1="150" x2="212" y2="150" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d10-r)"/>'
++'<line x1="270" y1="150" x2="302" y2="150" stroke="#ff5a2e" stroke-width="3" marker-end="url(#d10-r)"/>'
++'<rect x="80" y="204" width="140" height="62" fill="none" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="240" y="204" width="140" height="62" fill="none" stroke="#5c564a" stroke-width="2"/>'
++FIG(200,280,1.45)
++'<line x1="222" y1="262" x2="262" y2="250" stroke="#ff5a2e" stroke-width="1.4"/>'
++'<text x="270" y="246" class="dlbl--sm" style="fill:#ff5a2e">check voids early</text>'
++'<text x="270" y="262" class="dlbl--sm" style="fill:#ff5a2e">pull ceilings</text>'
++'<text x="230" y="306" text-anchor="middle" class="dlbl--xs">roof deck above · ceiling below — fire runs undetected between them</text></svg>';},
+
+/*t4d3*/ t4d3:function(){return '<svg viewBox="0 0 460 336" role="img" aria-label="Warehouse with bowstring truss roof and arrows showing walls pushed outward">'+mdefs('d11')
++'<rect x="70" y="160" width="320" height="130" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<path d="M70 160 Q230 42 390 160" fill="none" stroke="#d9cfb8" stroke-width="4"/>'
++'<line x1="150" y1="157" x2="150" y2="118" stroke="#8d8577" stroke-width="2.4"/>'
++'<line x1="190" y1="143" x2="190" y2="101" stroke="#8d8577" stroke-width="2.4"/>'
++'<line x1="230" y1="139" x2="230" y2="90" stroke="#8d8577" stroke-width="2.4"/>'
++'<line x1="270" y1="143" x2="270" y2="101" stroke="#8d8577" stroke-width="2.4"/>'
++'<line x1="310" y1="157" x2="310" y2="118" stroke="#8d8577" stroke-width="2.4"/>'
++FLAME(230,157,1.9)
++'<line x1="62" y1="216" x2="14" y2="216" stroke="#ff5a2e" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#d11-r)"/>'
++'<line x1="398" y1="216" x2="446" y2="216" stroke="#ff5a2e" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#d11-r)"/>'
++'<text x="230" y="306" text-anchor="middle" class="dlbl" style="font-size:13.5px;fill:#ff5a2e">BOWSTRING TRUSS — sudden catastrophic collapse</text>'
++'<text x="230" y="321" text-anchor="middle" class="dlbl--xs">walls pushed OUTWARD · large collapse zone required</text>'
++'<text x="230" y="334" text-anchor="middle" class="dlbl--xs">no interior crews under an involved truss</text></svg>';},
+
+/*t5d1*/ t5d1:function(){function lead(x1,y1,x2,y2){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="#8d8577" stroke-width="1.4"/><circle cx="'+x1+'" cy="'+y1+'" r="3" fill="#ffd166"/>';}
+return '<svg viewBox="0 0 460 330" role="img" aria-label="Firefighter with SCBA with callout labels for each buddy-check item">'+mdefs('d12')
++'<text x="230" y="28" text-anchor="middle" class="dlbl" style="font-size:17px">BUDDY CHECK</text>'
++'<text x="230" y="46" text-anchor="middle" class="dlbl--xs">verify before every entry</text>'
++FIG(230,318,2.4,{scba:true,mask:true})
++lead(201,157,198,152)+'<text x="198" y="154" text-anchor="end" class="dlbl--sm">HUD — WORKING</text>'
++lead(214,208,198,204)+'<text x="198" y="206" text-anchor="end" class="dlbl--sm">CYL. PRESSURE — CHECK: FULL</text>'
++lead(223,253,198,254)+'<text x="198" y="256" text-anchor="end" class="dlbl--sm">PASS — ARMED</text>'
++lead(237,217,262,212)+'<text x="268" y="214" class="dlbl--sm">REGULATOR</text>'
++lead(230,172,262,172)+'<text x="268" y="172" class="dlbl--sm">FACEPIECE — SEAL CHECK</text>'
++lead(230,234,262,235)+'<text x="268" y="237" class="dlbl--sm">RADIO — CORRECT CHANNEL</text></svg>';},
+
+/*t5d2*/ t5d2:function(){return '<svg viewBox="0 0 460 236" role="img" aria-label="SCBA pressure gauge divided into thirds: work in, work out, reserve">'+mdefs('d13')
++'<text x="230" y="32" text-anchor="middle" class="dlbl" style="font-size:17px">RULE OF THIRDS</text>'
++'<rect x="25" y="62" width="138" height="62" rx="8" fill="#3fae5a"/>'
++'<rect x="163" y="62" width="138" height="62" rx="0" fill="#d9a441"/>'
++'<rect x="301" y="62" width="138" height="62" rx="8" fill="#d2361f"/>'
++'<line x1="163" y1="66" x2="163" y2="120" stroke="#101614" stroke-width="3"/><line x1="301" y1="66" x2="301" y2="120" stroke="#101614" stroke-width="3"/>'
++'<text x="94" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#0c1a10">WORK YOUR WAY IN</text>'
++'<text x="232" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#211a08">WORK YOUR WAY OUT</text>'
++'<text x="370" y="93" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#fff">RESERVE</text>'
++'<text x="370" y="114" text-anchor="middle" style="font-size:11px;font-family:Barlow,sans-serif;fill:#fff">alarm = EXIT NOW</text>'
++'<text x="230" y="158" text-anchor="middle" class="dlbl--xs">alarm means EXIT NOW — not working time</text>'
++'<text x="230" y="176" text-anchor="middle" class="dlbl--xs">check pressure at entry · turn before you burn the margin</text></svg>';},
+
+/*t5d3*/ t5d3:function(){return '<svg viewBox="0 0 460 320" role="img" aria-label="Overhaul scene with a CO meter showing a dangerous reading while a masked firefighter works">'+mdefs('d14')
++'<rect x="40" y="36" width="380" height="234" fill="none" stroke="#4a443a" stroke-width="2" stroke-dasharray="10 6"/>'
++'<rect x="96" y="118" width="140" height="150" rx="16" fill="#232a26" stroke="#5c564a" stroke-width="2"/>'
++'<rect x="114" y="138" width="104" height="66" rx="6" fill="#0c0f0e"/>'
++'<text x="166" y="166" text-anchor="middle" class="dlbl" style="font-size:26px;fill:#ff5a2e">145</text>'
++'<text x="166" y="186" text-anchor="middle" class="dlbl--xs" style="fill:#ff5a2e">CO ppm — DANGER</text>'
++'<text x="166" y="232" text-anchor="middle" class="dlbl--sm">CO METER</text>'
++'<circle cx="130" cy="248" r="7" fill="#39423c"/><circle cx="166" cy="248" r="7" fill="#ff5a2e"/><circle cx="202" cy="248" r="7" fill="#39423c"/>'
++FIG(350,270,1.9,{mask:true})
++'<text x="230" y="298" text-anchor="middle" class="dlbl" style="font-size:15px">LOOKS CLEAR \u2260 IS CLEAR</text>'
++'<text x="230" y="314" text-anchor="middle" class="dlbl--xs">overhaul produces toxic CO · mask up or meter it</text></svg>';},
+
+/*t6d1*/ t6d1:function(){return '<svg viewBox="0 0 460 380" role="img" aria-label="Front and back body-location diagram labeled in Spanish">'
++'<text x="230" y="28" text-anchor="middle" class="dlbl" style="font-size:17px">¿DÓNDE LE DUELE?</text>'
++'<text x="230" y="47" text-anchor="middle" class="dlbl--xs">Where does it hurt?</text>'
++'<circle cx="230" cy="90" r="26" fill="#d8cdb8"/><rect x="202" y="118" width="56" height="104" rx="24" fill="#cfc3ae"/>'
++'<path d="M206 130 L168 222 M254 130 L292 222 M214 214 L192 316 M246 214 L268 316" fill="none" stroke="#cfc3ae" stroke-width="18" stroke-linecap="round"/>'
++'<line x1="204" y1="78" x2="116" y2="78" stroke="#ff8c42" stroke-width="2"/><circle cx="204" cy="78" r="4" fill="#ff8c42"/>'
++'<text x="106" y="73" text-anchor="end" class="dlbl" style="font-size:15px">la cabeza</text><text x="106" y="89" text-anchor="end" class="dlbl--xs">head</text>'
++'<line x1="204" y1="116" x2="116" y2="116" stroke="#ff8c42" stroke-width="2"/><circle cx="204" cy="116" r="4" fill="#ff8c42"/>'
++'<text x="106" y="111" text-anchor="end" class="dlbl" style="font-size:15px">el cuello</text><text x="106" y="127" text-anchor="end" class="dlbl--xs">neck</text>'
++'<line x1="204" y1="150" x2="116" y2="150" stroke="#ff8c42" stroke-width="2"/><circle cx="204" cy="150" r="4" fill="#ff8c42"/>'
++'<text x="106" y="145" text-anchor="end" class="dlbl" style="font-size:15px">el pecho</text><text x="106" y="161" text-anchor="end" class="dlbl--xs">chest</text>'
++'<line x1="204" y1="194" x2="116" y2="194" stroke="#ff8c42" stroke-width="2"/><circle cx="204" cy="194" r="4" fill="#ff8c42"/>'
++'<text x="106" y="189" text-anchor="end" class="dlbl" style="font-size:15px">el abdomen</text><text x="106" y="205" text-anchor="end" class="dlbl--xs">abdomen</text>'
++'<line x1="270" y1="164" x2="344" y2="164" stroke="#3fb0ff" stroke-width="2"/><circle cx="270" cy="164" r="4" fill="#3fb0ff"/>'
++'<text x="354" y="159" class="dlbl" style="font-size:15px">el brazo</text><text x="354" y="175" class="dlbl--xs">arm</text>'
++'<line x1="260" y1="212" x2="344" y2="212" stroke="#3fb0ff" stroke-width="2"/><circle cx="260" cy="212" r="4" fill="#3fb0ff"/>'
++'<text x="354" y="207" class="dlbl" style="font-size:15px">la espalda</text><text x="354" y="223" class="dlbl--xs">back</text>'
++'<line x1="264" y1="280" x2="344" y2="280" stroke="#3fb0ff" stroke-width="2"/><circle cx="264" cy="280" r="4" fill="#3fb0ff"/>'
++'<text x="354" y="275" class="dlbl" style="font-size:15px">la pierna</text><text x="354" y="291" class="dlbl--xs">leg</text>'
++'<rect x="70" y="336" width="320" height="30" rx="7" fill="#22302b"/><text x="230" y="357" text-anchor="middle" class="dlbl" style="font-size:14px">Me duele… = My … hurts</text></svg>';}
+};
+</script>
+<script>
+/* ---------- persistent progress (localStorage; survives reloads on this device) ---------- */
+var STORE_KEY = 'fireStudy.v1';
+function loadProg(){
+  try{
+    var raw = localStorage.getItem(STORE_KEY);
+    if(raw){
+      var p = JSON.parse(raw);
+      if(p && typeof p === 'object' && !Array.isArray(p)){
+        var clean = {}, k;
+        for(k in p){
+          if(/^t\d+-\d+$/.test(k)){
+            var r = p[k] || {};
+            var got = parseInt(r.got, 10), missed = parseInt(r.missed, 10);
+            clean[k] = { got: isNaN(got) ? 0 : Math.max(0, got), missed: isNaN(missed) ? 0 : Math.max(0, missed) };
+          }
+        }
+        return clean;
+      }
+    }
+  }catch(e){ /* storage unavailable or corrupt — start fresh */ }
+  return {};
+}
+var PROG = loadProg();
+function saveProg(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(PROG)); }catch(e){ /* ignore quota/private-mode errors */ }
+}
+function cardKey(t,i){ return 't'+t+'-'+i; }
+function rec(t,i){ var k=cardKey(t,i); if(!PROG[k]) PROG[k]={got:0,missed:0}; return PROG[k]; }
+function isMastered(t,i){ return rec(t,i).got>=2; }
+function isNeedsWork(t,i){ var r=rec(t,i); return r.missed>0 && r.got<2; }
+function shuffle(a){ for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var s=a[i];a[i]=a[j];a[j]=s;} return a; }
+
+/* ---------- navigation ---------- */
+var VIEWS=['home','topic','drill','review'];
+function show(name){
+  VIEWS.forEach(function(v){ document.getElementById('view-'+v).classList.toggle('hidden', v!==name); });
+  window.scrollTo(0,0);
+}
+
+/* ---------- stats ---------- */
+function topicStats(n){
+  var m=0,w=0,nd=0,i;
+  for(i=0;i<TOPICS[n].cards.length;i++){ if(isMastered(n,i)) m++; else if(isNeedsWork(n,i)) w++; else nd++; }
+  return {mastered:m,needsWork:w,fresh:nd};
+}
+function moduleStats(){
+  var m=0,w=0,nd=0,n;
+  for(n=0;n<TOPICS.length;n++){ var s=topicStats(n); m+=s.mastered; w+=s.needsWork; nd+=s.fresh; }
+  return {mastered:m,needsWork:w,fresh:nd};
+}
+function reviewItems(){
+  var out=[],t,i;
+  for(t=0;t<TOPICS.length;t++) for(i=0;i<TOPICS[t].cards.length;i++) if(isNeedsWork(t,i)) out.push({t:t,i:i,r:rec(t,i)});
+  return out;
+}
+function ringSVG(frac,label){
+  var C=2*Math.PI*22, off=C*(1-frac);
+  return '<svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">'
+    +'<circle cx="28" cy="28" r="22" fill="none" stroke="var(--surface2)" stroke-width="6"/>'
+    +'<circle cx="28" cy="28" r="22" fill="none" stroke="'+(frac>=1?'var(--good)':'var(--accent)')+'" stroke-width="6" stroke-linecap="round" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'"/>'
+    +'</svg><span class="val">'+label+'</span>';
+}
+function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
+
+/* ---------- home ---------- */
+function renderHome(){
+  var s=moduleStats();
+  document.getElementById('dash-mastered').textContent=s.mastered;
+  document.getElementById('dash-needswork').textContent=s.needsWork;
+  document.getElementById('dash-new').textContent=s.fresh;
+  var list=document.getElementById('topic-list'); list.innerHTML='';
+  TOPICS.forEach(function(tp,n){
+    var st=topicStats(n);
+    var b=el('button','tcard'); b.type='button';
+    b.setAttribute('aria-label',tp.title+': '+st.mastered+' of '+tp.cards.length+' mastered');
+    var inner=el('div','tcard-inner');
+    var num=el('div','tnum',String(tp.n));
+    var txt=el('div'); var h=el('h3',null,tp.title); var sub=el('p','sub',tp.sub);
+    txt.appendChild(h); txt.appendChild(sub);
+    var prog=el('div','tprog'); var ring=el('div','ring'); ring.innerHTML=ringSVG(st.mastered/tp.cards.length, st.mastered+'/'+tp.cards.length);
+    var sm=el('small',null,st.needsWork>0 ? 'mastered · '+st.needsWork+' needs work' : 'mastered');
+    prog.appendChild(ring); prog.appendChild(sm);
+    inner.appendChild(num); inner.appendChild(txt); inner.appendChild(prog);
+    var bar=el('div','tbar'); var fill2=document.createElement('i'); fill2.style.width=(st.mastered/tp.cards.length*100)+'%'; bar.appendChild(fill2);
+    b.appendChild(inner); b.appendChild(bar);
+    b.addEventListener('click',function(){ openTopic(n); });
+    list.appendChild(b);
+  });
+  var q=reviewItems();
+  document.getElementById('review-count').textContent=q.length;
+  document.getElementById('review-hint').textContent = q.length
+    ? q.length+' card'+(q.length===1?'':'s')+' waiting — get each one right twice in a row to clear it.'
+    : 'Mark a card "Missed it" and it lands here for extra reps.';
+}
+
+/* ---------- topic ---------- */
+var PLAY_ICON='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4.5v15c0 .9 1 1.5 1.8 1l11.6-7.4a1.2 1.2 0 0 0 0-2L7.8 3.5C7 3 6 3.6 6 4.5z" fill="var(--accent)"/></svg>';
+function openTopic(n){
+  var tp=TOPICS[n];
+  document.getElementById('topic-kicker').textContent='Topic '+tp.n+' of '+TOPICS.length;
+  document.getElementById('topic-title').textContent=tp.title;
+  document.getElementById('topic-sub').textContent=tp.sub;
+  var cl=document.getElementById('topic-concepts'); cl.innerHTML='';
+  tp.concepts.forEach(function(c){ var li=document.createElement('li'); li.innerHTML=c; cl.appendChild(li); });
+  var pf=document.getElementById('topic-pfd'); pf.innerHTML='';
+  if(tp.pfdNote){
+    var box=document.createElement('div'); box.className='pfdbox'; box.setAttribute('role','note');
+    box.setAttribute('aria-label',(tp.pfdNote.title||'PFD specifics')+' — '+tp.pfdNote.src);
+    var hd=document.createElement('div'); hd.className='ph';
+    var tt=document.createElement('span'); tt.className='t'; tt.textContent=tp.pfdNote.title||'PFD specifics';
+    var ss=document.createElement('span'); ss.className='s'; ss.textContent=tp.pfdNote.src;
+    hd.appendChild(tt); hd.appendChild(ss); box.appendChild(hd);
+    var pul=document.createElement('ul');
+    tp.pfdNote.items.forEach(function(c){ var li=document.createElement('li'); li.innerHTML=c; pul.appendChild(li); });
+    box.appendChild(pul); pf.appendChild(box);
+  }
+  var dg=document.getElementById('topic-diagrams'); dg.innerHTML='';
+  document.getElementById('diagrams-title').classList.toggle('hidden',!tp.diagrams.length);
+  tp.diagrams.forEach(function(d){
+    var f=document.createElement('figure'); f.className='plate';
+    var svgWrap=document.createElement('div'); svgWrap.innerHTML=DIAGS[d.svg]&&DIAGS[d.svg]()||'';
+    var cap=document.createElement('figcaption');
+    var bt=document.createElement('b'); bt.textContent=d.title;
+    cap.appendChild(bt); cap.appendChild(document.createTextNode(' — '+d.cap));
+    f.appendChild(svgWrap); f.appendChild(cap); dg.appendChild(f);
+  });
+  var vv=document.getElementById('topic-videos'); vv.innerHTML='';
+  document.getElementById('videos-title').classList.toggle('hidden',!tp.videos.length);
+  tp.videos.forEach(function(v){
+    var a=document.createElement('a'); a.className='vid'; a.href=v.url; a.target='_blank'; a.rel='noopener';
+    a.setAttribute('aria-label',v.title+' (opens in a new tab)');
+    var pic=el('div','pic'); pic.innerHTML=PLAY_ICON;
+    var txt=el('div'); var h=el('h3'); h.innerHTML='<span class="dur">'+v.dur+'</span>';
+    h.appendChild(document.createTextNode(v.title));
+    var p=el('p',null,v.desc);
+    txt.appendChild(h); txt.appendChild(p); a.appendChild(pic); a.appendChild(txt);
+    vv.appendChild(a);
+  });
+  var fs=document.getElementById('topic-fsri'); fs.innerHTML='';
+  var hasFSRI=tp.videos.some(function(v){ return v.url.indexOf('training.fsri.org')!==-1; });
+  if(hasFSRI){
+    var note=el('div','fsrinote');
+    note.appendChild(document.createTextNode('FSRI courses need a free account — '));
+    var a=document.createElement('a'); a.href=FSRI_SIGNUP_URL; a.target='_blank'; a.rel='noopener';
+    a.textContent='sign up at training.fsri.org/signup'; note.appendChild(a); note.appendChild(document.createTextNode('.'));
+    fs.appendChild(note);
+  }
+  if(tp.inHouseRef){ var rn=el('div','refnote'); rn.innerHTML=tp.inHouseRef; fs.appendChild(rn); }
+  var st=topicStats(n);
+  document.getElementById('t-mastered').textContent=st.mastered;
+  document.getElementById('t-needs').textContent=st.needsWork;
+  document.getElementById('t-new').textContent=st.fresh;
+  document.getElementById('btn-drill-topic').onclick=function(){ startDrill({type:'topic',n:n}); };
+  document.getElementById('btn-drill-topic-2').onclick=function(){ startDrill({type:'topic',n:n}); };
+  show('topic');
+}
+
+/* ---------- drill ---------- */
+var RUN=null;
+function startDrill(scope){
+  var queue=[],t,i;
+  if(scope.type==='topic'){
+    for(i=0;i<TOPICS[scope.n].cards.length;i++){ if(!isMastered(scope.n,i)) queue.push({t:scope.n,i:i}); }
+    if(!queue.length){ for(i=0;i<TOPICS[scope.n].cards.length;i++) queue.push({t:scope.n,i:i}); } /* all mastered: run the full set again */
+  }else{
+    reviewItems().forEach(function(it){ queue.push({t:it.t,i:it.i}); });
+    if(!queue.length){ renderReview(); return; }
+  }
+  RUN={scope:scope,queue:shuffle(queue),masteredNow:0,missedNow:0};
+  document.getElementById('exit-label').textContent = scope.type==='topic' ? TOPICS[scope.n].title : 'All topics';
+  document.getElementById('btn-exit-drill').onclick=exitDrill;
+  show('drill'); renderCard();
+}
+function exitDrill(){
+  var s=RUN?RUN.scope:{type:'topic',n:0};
+  renderHome();
+  if(s.type==='topic') openTopic(s.n); else renderReview();
+}
+function scopeLabel(){
+  return RUN.scope.type==='topic' ? ('Topic '+TOPICS[RUN.scope.n].n) : 'Review queue';
+}
+function renderCard(){
+  var body=document.getElementById('drill-body');
+  if(!RUN||!RUN.queue.length){ renderComplete(); return; }
+  var cur=RUN.queue[0], card=TOPICS[cur.t].cards[cur.i];
+  body.innerHTML='<div class="progline"><span><b>'+RUN.queue.length+'</b> left in this run</span><span>'+scopeLabel()+'</span></div>'
+    +'<div class="flashcard"><span class="qtag">Scenario</span><p class="q"></p><div class="gradebox"></div></div>'
+    +'<div class="drill-actions single" id="drill-actions"></div>';
+  body.querySelector('.q').textContent=card.q;
+  var act=document.getElementById('drill-actions');
+  var rev=el('button','btn block', 'Reveal answer'); rev.type='button';
+  rev.addEventListener('click',function(){
+    var g=body.querySelector('.gradebox');
+    var ans=el('div','answer'); ans.appendChild(el('span','lab','Answer'));
+    ans.appendChild(el('p',null,card.a));
+    var why=el('div','whybox'); why.appendChild(el('span','lab','Why'));
+    why.appendChild(document.createTextNode(card.why));
+    g.appendChild(ans); g.appendChild(why);
+    act.className='drill-actions'; act.innerHTML='';
+    var got=el('button','btn good','Got it'); got.type='button';
+    var miss=el('button','btn bad','Missed it'); miss.type='button';
+    got.addEventListener('click',function(){ grade(cur,true); });
+    miss.addEventListener('click',function(){ grade(cur,false); });
+    act.appendChild(got); act.appendChild(miss);
+  });
+  act.appendChild(rev);
+}
+function grade(cur,gotIt){
+  var r=rec(cur.t,cur.i);
+  RUN.queue.shift();
+  var wasMastered=isMastered(cur.t,cur.i);
+  if(gotIt){ r.got++; } else { r.got=0; r.missed++; RUN.missedNow++; }
+  saveProg();
+  var nowMastered=isMastered(cur.t,cur.i);
+  if(!wasMastered&&nowMastered) RUN.masteredNow++;
+  if(!nowMastered){
+    if(gotIt) RUN.queue.splice(Math.min(2,RUN.queue.length),0,cur); /* back for the double-confirm */
+    else RUN.queue.push(cur);                                        /* missed → back of the run */
+  }
+  renderCard();
+}
+function renderComplete(){
+  var body=document.getElementById('drill-body'), scope=RUN?RUN.scope:{type:'topic',n:0}, remaining=0;
+  if(scope.type==='topic'){ remaining=TOPICS[scope.n].cards.length-topicStats(scope.n).mastered; }
+  else { remaining=reviewItems().length; }
+  var title = scope.type==='topic' ? ('Topic '+TOPICS[scope.n].n+' drill') : 'Review queue drill';
+  body.innerHTML='<header class="ttitle"><span class="kicker">'+title+'</span><h1>'+(remaining===0?'All clear':'Run complete')+'</h1>'
+    +'<p>'+(remaining===0 ? 'Nothing left pending — every card is mastered or the queue is empty.' : 'These will come back: missed cards resurface until you get each one right twice in a row.')+'</p></header>'
+    +'<div class="statgrid"><div class="stat g"><b>'+RUN.masteredNow+'</b><span>mastered this run</span></div>'
+    +'<div class="stat b"><b>'+RUN.missedNow+'</b><span>miss marks</span></div>'
+    +'<div class="stat n"><b>'+remaining+'</b><span>still pending</span></div></div>'
+    +'<div class="btn-row" id="done-actions"></div>';
+  var da=document.getElementById('done-actions');
+  if(remaining>0){
+    var again=el('button','btn block','Keep drilling'); again.type='button';
+    again.addEventListener('click',function(){ startDrill(scope); });
+    da.appendChild(again);
+  }
+  var rq=el('button','btn ghost block','Review queue'); rq.type='button';
+  rq.addEventListener('click',function(){ renderHome(); renderReview(); });
+  var home=el('button','btn ghost block','All topics'); home.type='button';
+  home.addEventListener('click',function(){ renderHome(); show('home'); });
+  da.appendChild(rq); da.appendChild(home);
+}
+
+/* ---------- review queue ---------- */
+function renderReview(){
+  var items=reviewItems();
+  var rb=document.getElementById('review-body'); rb.innerHTML='';
+  if(!items.length){
+    var e=el('div','empty','The queue is empty. Mark a card "Missed it" during a drill and it will wait here.');
+    rb.appendChild(e);
+  }else{
+    var d=el('button','btn block','Drill the '+items.length+' queued card'+(items.length===1?'':'s')); d.type='button';
+    d.addEventListener('click',function(){ startDrill({type:'review'}); });
+    rb.appendChild(d);
+    var wrap=el('div'); wrap.style.marginTop='16px';
+    items.forEach(function(it){
+      var r=el('div','rrow');
+      var tag=el('span','topic','Topic '+TOPICS[it.t].n+' · '+TOPICS[it.t].title);
+      var p=el('p',null,TOPICS[it.t].cards[it.i].q);
+      var m=el('div','meta','Missed '+(it.r.missed)+' time'+(it.r.missed===1?'':'s')+' all time');
+      r.appendChild(tag); r.appendChild(p); r.appendChild(m);
+      wrap.appendChild(r);
+    });
+    rb.appendChild(wrap);
+  }
+  show('review');
+}
+
+/* ---------- wire up ---------- */
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('[data-nav="home"]').forEach(function(b){
+    b.addEventListener('click',function(){ renderHome(); show('home'); });
+  });
+  document.getElementById('btn-review').addEventListener('click',function(){ renderReview(); });
+  renderHome(); show('home');
+});
+</script>
+</body>
+</html>
