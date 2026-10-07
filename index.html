@@ -76,6 +76,20 @@ button{font:inherit;cursor:pointer}
 .tbar{height:5px;background:var(--surface2);border-radius:0 0 14px 14px;overflow:hidden}
 .tbar i{display:block;height:100%;background:linear-gradient(90deg,var(--warn),var(--accent));width:0;transition:width .3s}
 
+/* ---------- dashboard sections & coming-soon cards ---------- */
+.sec-head{font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin:30px 0 2px;
+  display:flex;align-items:baseline;gap:10px}
+.sec-head .n{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.sec-sub{font-size:14.5px;color:var(--muted);margin:0 0 12px}
+.tcard.soon{border-style:dashed;opacity:.75;background:var(--surface2);box-shadow:none}
+.tcard.soon:hover{border-color:var(--warn)}
+.tnum.lock{background:var(--chip);color:var(--muted);font-size:20px}
+.soon-badge{display:inline-block;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.14em;background:var(--warn);color:#1a1408;border-radius:6px;padding:3px 9px;margin-left:9px;
+  vertical-align:2px;white-space:nowrap}
+.soon-note{padding:2px 16px 16px 74px;font-size:15px;color:var(--muted)}
+.soon-note b{color:var(--ink)}
+
 .review-cta{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px dashed var(--line);
   border-radius:14px;padding:16px;margin-top:6px;width:100%;text-align:left;color:var(--ink)}
 .review-cta:not(:disabled):hover{border-color:var(--warn)}
@@ -205,9 +219,9 @@ figure{margin:14px 0}
   <!-- ================= HOME ================= -->
   <section id="view-home" aria-label="Study home">
     <header class="hero">
-      <span class="kicker">Phase 1 Foundations</span>
-      <h1>Module 1<br/>Study Drills</h1>
-      <p>Scenario reps from Fire's training material — seven topics, fifty-nine drills, diagrams, and video.</p>
+      <span class="kicker">Phoenix FD · Recruit → Probationary</span>
+      <h1>Fire Study HQ</h1>
+      <p>Academy skills, probation year, medical — scenario drills for PFD recruits and probationaries. Seven topics, fifty-nine drills, and more coming.</p>
     </header>
 
     <div class="dash" aria-live="polite">
@@ -224,7 +238,6 @@ figure{margin:14px 0}
       </div>
     </div>
 
-    <h2 class="sec-title">Topics <span class="n">— 59 drills total</span></h2>
     <div id="topic-list"></div>
 
     <h2 class="sec-title">Review queue</h2>
@@ -234,7 +247,7 @@ figure{margin:14px 0}
       <p id="review-hint">Mark a card "Missed it" and it lands here for extra reps.</p></span>
     </button>
 
-    <footer class="foot">Module 2 (tactics by occupancy) and Module 3 (company ops) coming next.</footer>
+    <footer class="foot">Roadmap: Academy Files → Morning Routine → Certifications → Vitals &amp; Patient Assessment. More coming as the probation year unfolds.</footer>
   </section>
 
   <!-- ================= TOPIC ================= -->
@@ -563,8 +576,8 @@ var TOPICS = [
   ]
 },
 {
-  n: 7, title: "Core 7 Skills",
-  sub: "The Phoenix Fire Department academy fundamentals — the six publicly named recruit skills, drilled the way the academy teaches them. (Source: City of Phoenix Legistar File #24-2678, \u201cPhoenix Fire Department Academy Overview.\u201d)",
+  n: 7, title: "Academy Skills",
+  sub: "The core fireground skills drilled in the academy — SCBA, ventilation, search & rescue, fire behavior, ladders, and live fire — taught the way a PFD recruit learns them.",
   concepts: [
     "<b>SCBA usage.</b> The Scott Air-Pak X3 Pro is your lifeline: 4500 psi, 45-minute cylinders, Vibralert at ~35%. Air discipline is non-negotiable.",
     "<b>Ventilation.</b> The Three Ws — When, Where, Why — and the timing rule: no openings until water is ready.",
@@ -574,12 +587,12 @@ var TOPICS = [
     "<b>Live fire scenarios.</b> The burn building is where the other five skills meet: coordinated attack, honest reads, and the discipline to back out."
   ],
   pfdNote: {
-    title: "The Core 7 — source",
+    title: "Where this comes from",
     src: "City of Phoenix Legistar File #24-2678 \u2014 \u201cPhoenix Fire Department Academy Overview\u201d",
     items: [
-      "The report states academy recruits master the \u201cCore 7 Skills\u201d \u2014 <b>including</b> self-contained breathing apparatus usage, ventilation, search and rescue, advanced training in fire behavior, ladder operations, and live fire scenarios.",
-      "The report says \u201c<b>including</b>\u201d: the 7th skill is not publicly enumerated in the file, so it is not listed or invented here. These drills cover the six named skills.",
-      "Drills lean on the same department doctrine already in this app \u2014 PFD SOP Vol 2 (SCBA) and the recruit Ventilation deck, Ch. 13."
+      "The city\u2019s academy overview lists these same skills among the recruit fundamentals: SCBA usage, ventilation, search and rescue, fire behavior, ladder operations, and live fire.",
+      "These drills aren\u2019t built from the city\u2019s summary document \u2014 they\u2019re built on the department doctrine already in this app: PFD SOP Vol 2 (SCBA) and the recruit Ventilation deck, Ch. 13.",
+      "Drill them until they\u2019re automatic. The academy teaches the skill; the fireground tests it."
     ]
   },
   videos: [],
@@ -635,7 +648,7 @@ var TOPICS = [
     {sec:"Fire behavior",
      q:"Academy classroom: why do modern house fires reach flashover faster than the legacy fires in the old textbooks? Give the two-part answer.",
      a:"One: modern fuel loads \u2014 synthetics, open floor plans, lightweight construction \u2014 release heat far faster than legacy natural-fiber furnishings. Two: tighter, energy-efficient homes make fires ventilation-limited early, so the moment air arrives \u2014 your entry, a window failing \u2014 the stored energy releases violently. Faster to flashover AND more explosive when ventilated.",
-     why:"This is the \u2018advanced\u2019 in advanced fire behavior: not just hotter fires, but a different fire. Legacy tactics assumed fuel-limited fires with time; modern fires are oxygen-limited with a hair trigger. Everything else in the Core 7 assumes you understand this."},
+     why:"This is the \u2018advanced\u2019 in advanced fire behavior: not just hotter fires, but a different fire. Legacy tactics assumed fuel-limited fires with time; modern fires are oxygen-limited with a hair trigger. Everything else in the academy skill set assumes you understand this."},
     {sec:"Fire behavior",
      q:"During a live burn you see smoke pulsing \u2014 breathing in and out of the doorway \u2014 and hear a high-pitched whistling from a cracked window. A classmate wants to push in. What are you seeing, and what\u2019s the order?",
      a:"Backdraft indicators: the pulsing means the fire is gasping at the edge of its oxygen supply, and the whistling is air being drawn through the crack. Order: do NOT open that door \u2014 cool the space first, transitional attack through an opening if possible, and control doors. His entry would be the ignition event.",
@@ -643,7 +656,7 @@ var TOPICS = [
     {sec:"Fire behavior",
      q:"The instructor keeps repeating: \u2018Your entry IS the ventilation event.\u2019 In a ventilation-limited structure, explain exactly what opening the front door does to the fire \u2014 and what must be true before you open it.",
      a:"The open door becomes a new intake: fresh oxygen floods an oxygen-starved, superheated compartment, the heat release rate spikes, and the fire races toward the new exhaust \u2014 possibly to flashover. Before opening it, water must be ready and applied \u2014 transitional or immediate direct attack \u2014 with doors behind you controlled so you aren\u2019t standing in the new flow path.",
-     why:"This ties the Core 7 together: fire behavior explains WHY the ventilation and attack doctrines exist. Every tactic you\u2019ve learned is a different answer to the same fact \u2014 air is the trigger, and you\u2019re the one carrying it in."},
+     why:"This ties the academy skills together: fire behavior explains WHY the ventilation and attack doctrines exist. Every tactic you\u2019ve learned is a different answer to the same fact \u2014 air is the trigger, and you\u2019re the one carrying it in."},
     {sec:"Ladder ops",
      q:"Academy drill: raise a 24-foot extension ladder to a second-floor window for rescue. Walk through the placement \u2014 angle, footing, securing.",
      a:"Butt it on firm, level ground; raise to a 75-degree climbing angle \u2014 the 4:1 rule, butt out one foot for every four feet of working length; heel it or keep it heeled, tie off the halyard, and lock the pawls before anyone climbs.",
@@ -671,7 +684,7 @@ var TOPICS = [
     {sec:"Live fire",
      q:"Live-fire search evolution: charged line at the door, a partner, victim reported in the rear bedroom. How do you move \u2014 and what protects the victim from your own attack?",
      a:"Stay low below the thermal layer, oriented to the wall or line, moving fast and systematically \u2014 search the bedroom while the line protects the hallway and your exit. And coordinate with the nozzle: water goes on the fire, never blindly into the search area \u2014 steam and driven heat kill victims faster than the fire you were trying to beat.",
-     why:"Live-fire search is the whole Core 7 in one evolution: SCBA discipline, fire-behavior reads, ventilation awareness, and the attack protecting the search. The victim\u2019s survivability clock is running \u2014 but a panicked, uncoordinated search just adds bodies to the count."}
+     why:"Live-fire search is the whole academy skill set in one evolution: SCBA discipline, fire-behavior reads, ventilation awareness, and the attack protecting the search. The victim\u2019s survivability clock is running \u2014 but a panicked, uncoordinated search just adds bodies to the count."}
   ],
   diagrams: []
 }
@@ -1032,29 +1045,71 @@ function ringSVG(frac,label){
 }
 function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
 
-/* ---------- home ---------- */
+/* ---------- home: roadmap sections (grouping map over TOPICS indices — array order untouched) ---------- */
+var SECTIONS=[
+  {name:"Academy", blurb:"Academy material — the skills and foundations they teach you before you hit the floor.",
+   topics:[6,0,1,2,3,4], soon:["academy-files"]},
+  {name:"Probation Year", blurb:"First rotation and beyond — the routine and the certs that get you off probation.",
+   topics:[], soon:["morning-routine","certs"]},
+  {name:"Medical", blurb:"From first contact to full patient assessment.",
+   topics:[5], soon:["vitals"]}
+];
+var SOON={
+  "academy-files":{title:"Academy Files",
+    note:"<b>Coming soon.</b> Send your academy files and they become drills here — handouts, decks, notes, all of it. Raw material in, reps out."},
+  "morning-routine":{title:"Morning Routine",
+    note:"<b>Coming soon.</b> A daily morning routine for your first rotation, built from UL FSRI training videos. Same time, same reps, every shift — that\u2019s how skills go automatic."},
+  "certs":{title:"Certifications",
+    note:"<b>Coming soon.</b> Your probation certification checklist, tracked to done. No more wondering what you still owe the department."},
+  "vitals":{title:"Vitals & Patient Assessment",
+    note:"<b>Coming soon.</b> The road ahead: how to take vitals \u2192 what they\u2019re for \u2192 what to look for \u2192 which symptoms point to which problems \u2192 how to fix them. Step by step, no skipping."}
+};
+function topicCard(n){
+  var tp=TOPICS[n], st=topicStats(n);
+  var b=el('button','tcard'); b.type='button';
+  b.setAttribute('aria-label',tp.title+': '+st.mastered+' of '+tp.cards.length+' mastered');
+  var inner=el('div','tcard-inner');
+  var num=el('div','tnum',String(tp.n));
+  var txt=el('div'); var h=el('h3',null,tp.title); var sub=el('p','sub',tp.sub);
+  txt.appendChild(h); txt.appendChild(sub);
+  var prog=el('div','tprog'); var ring=el('div','ring'); ring.innerHTML=ringSVG(st.mastered/tp.cards.length, st.mastered+'/'+tp.cards.length);
+  var sm=el('small',null,st.needsWork>0 ? 'mastered · '+st.needsWork+' needs work' : 'mastered');
+  prog.appendChild(ring); prog.appendChild(sm);
+  inner.appendChild(num); inner.appendChild(txt); inner.appendChild(prog);
+  var bar=el('div','tbar'); var fill2=document.createElement('i'); fill2.style.width=(st.mastered/tp.cards.length*100)+'%'; bar.appendChild(fill2);
+  b.appendChild(inner); b.appendChild(bar);
+  b.addEventListener('click',function(){ openTopic(n); });
+  return b;
+}
+function soonCard(k){
+  var ph=SOON[k];
+  var b=el('button','tcard soon'); b.type='button';
+  b.setAttribute('aria-label',ph.title+': coming soon');
+  var inner=el('div','tcard-inner');
+  var num=el('div','tnum lock','\uD83D\uDD12');
+  var txt=el('div'); var h=el('h3'); h.appendChild(document.createTextNode(ph.title));
+  var badge=el('span','soon-badge','COMING SOON'); h.appendChild(badge);
+  txt.appendChild(h);
+  var note=el('div','soon-note hidden'); note.innerHTML=ph.note;
+  b.addEventListener('click',function(){ note.classList.toggle('hidden'); });
+  inner.appendChild(num); inner.appendChild(txt);
+  b.appendChild(inner); b.appendChild(note);
+  return b;
+}
 function renderHome(){
   var s=moduleStats();
   document.getElementById('dash-mastered').textContent=s.mastered;
   document.getElementById('dash-needswork').textContent=s.needsWork;
   document.getElementById('dash-new').textContent=s.fresh;
   var list=document.getElementById('topic-list'); list.innerHTML='';
-  TOPICS.forEach(function(tp,n){
-    var st=topicStats(n);
-    var b=el('button','tcard'); b.type='button';
-    b.setAttribute('aria-label',tp.title+': '+st.mastered+' of '+tp.cards.length+' mastered');
-    var inner=el('div','tcard-inner');
-    var num=el('div','tnum',String(tp.n));
-    var txt=el('div'); var h=el('h3',null,tp.title); var sub=el('p','sub',tp.sub);
-    txt.appendChild(h); txt.appendChild(sub);
-    var prog=el('div','tprog'); var ring=el('div','ring'); ring.innerHTML=ringSVG(st.mastered/tp.cards.length, st.mastered+'/'+tp.cards.length);
-    var sm=el('small',null,st.needsWork>0 ? 'mastered · '+st.needsWork+' needs work' : 'mastered');
-    prog.appendChild(ring); prog.appendChild(sm);
-    inner.appendChild(num); inner.appendChild(txt); inner.appendChild(prog);
-    var bar=el('div','tbar'); var fill2=document.createElement('i'); fill2.style.width=(st.mastered/tp.cards.length*100)+'%'; bar.appendChild(fill2);
-    b.appendChild(inner); b.appendChild(bar);
-    b.addEventListener('click',function(){ openTopic(n); });
-    list.appendChild(b);
+  SECTIONS.forEach(function(sec){
+    var drills=0; sec.topics.forEach(function(n){ drills+=TOPICS[n].cards.length; });
+    var h=el('h2','sec-head'); h.appendChild(document.createTextNode(sec.name+' '));
+    h.appendChild(el('span','n','\u2014 '+drills+' drill'+(drills===1?'':'s')));
+    list.appendChild(h);
+    if(sec.blurb) list.appendChild(el('p','sec-sub',sec.blurb));
+    sec.topics.forEach(function(n){ list.appendChild(topicCard(n)); });
+    sec.soon.forEach(function(k){ list.appendChild(soonCard(k)); });
   });
   var q=reviewItems();
   document.getElementById('review-count').textContent=q.length;
