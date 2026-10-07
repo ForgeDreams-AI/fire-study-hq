@@ -207,7 +207,7 @@ figure{margin:14px 0}
     <header class="hero">
       <span class="kicker">Phase 1 Foundations</span>
       <h1>Module 1<br/>Study Drills</h1>
-      <p>Scenario reps from Fire's training material — six topics, thirty-seven drills, diagrams, and video.</p>
+      <p>Scenario reps from Fire's training material — seven topics, fifty-nine drills, diagrams, and video.</p>
     </header>
 
     <div class="dash" aria-live="polite">
@@ -216,7 +216,7 @@ figure{margin:14px 0}
         <div class="nums" style="margin-top:12px">
           <div class="num g"><b id="dash-mastered">0</b><span>Mastered</span></div>
           <div class="num b"><b id="dash-needswork">0</b><span>Needs work</span></div>
-          <div class="num n"><b id="dash-new">37</b><span>Not yet drilled</span></div>
+          <div class="num n"><b id="dash-new">59</b><span>Not yet drilled</span></div>
         </div>
       </div>
       <div class="scope"><span class="dot"></span>
@@ -224,7 +224,7 @@ figure{margin:14px 0}
       </div>
     </div>
 
-    <h2 class="sec-title">Topics <span class="n">— 37 drills total</span></h2>
+    <h2 class="sec-title">Topics <span class="n">— 59 drills total</span></h2>
     <div id="topic-list"></div>
 
     <h2 class="sec-title">Review queue</h2>
@@ -561,6 +561,119 @@ var TOPICS = [
   diagrams: [
     {title:"Body-location word map", cap:"Point and listen: cabeza, cuello, pecho, abdomen, espalda, brazo, and pierna.", svg:"t6d1"}
   ]
+},
+{
+  n: 7, title: "Core 7 Skills",
+  sub: "The Phoenix Fire Department academy fundamentals — the six publicly named recruit skills, drilled the way the academy teaches them. (Source: City of Phoenix Legistar File #24-2678, \u201cPhoenix Fire Department Academy Overview.\u201d)",
+  concepts: [
+    "<b>SCBA usage.</b> The Scott Air-Pak X3 Pro is your lifeline: 4500 psi, 45-minute cylinders, Vibralert at ~35%. Air discipline is non-negotiable.",
+    "<b>Ventilation.</b> The Three Ws — When, Where, Why — and the timing rule: no openings until water is ready.",
+    "<b>Search &amp; rescue.</b> Oriented, systematic search; VES with the door closed; the TIC extends your senses, never replaces them.",
+    "<b>Advanced fire behavior.</b> Modern fires go ventilation-limited early and punish air-first tactics. Read backdraft and flashover signs before they read you.",
+    "<b>Ladder operations.</b> 4:1 angle, heeled and locked, placed for the rescue window — never over the fire.",
+    "<b>Live fire scenarios.</b> The burn building is where the other five skills meet: coordinated attack, honest reads, and the discipline to back out."
+  ],
+  pfdNote: {
+    title: "The Core 7 — source",
+    src: "City of Phoenix Legistar File #24-2678 \u2014 \u201cPhoenix Fire Department Academy Overview\u201d",
+    items: [
+      "The report states academy recruits master the \u201cCore 7 Skills\u201d \u2014 <b>including</b> self-contained breathing apparatus usage, ventilation, search and rescue, advanced training in fire behavior, ladder operations, and live fire scenarios.",
+      "The report says \u201c<b>including</b>\u201d: the 7th skill is not publicly enumerated in the file, so it is not listed or invented here. These drills cover the six named skills.",
+      "Drills lean on the same department doctrine already in this app \u2014 PFD SOP Vol 2 (SCBA) and the recruit Ventilation deck, Ch. 13."
+    ]
+  },
+  videos: [],
+  cards: [
+    {sec:"SCBA usage",
+     q:"Academy burn-building evolution. Your HUD shows one yellow pressure light \u2014 36\u201350% \u2014 and your partner says there\u2019s plenty of air left to finish the search. Your call?",
+     a:"He\u2019s wrong \u2014 you start planning your exit now. On the X3 Pro, 1 yellow means 36\u201350% remaining, and under real exertion that disappears fast. The next step down is the red light at 35% with the Vibralert screaming, and that means LEAVE \u2014 not \u2018a few more minutes.\u2019",
+     why:"The HUD is a countdown, not a gauge: 2 green is 76\u2013100%, 1 green 51\u201375%, 1 yellow 36\u201350% (prepare to exit), 1 red 35% or less (leave immediately). Recruits consistently overestimate what half a cylinder buys under work rate \u2014 respect the yellow."},
+    {sec:"SCBA usage",
+     q:"Interior search: your low-air alarm activates \u2014 audible AND tactile Vibralert. Your partner is mid-bedroom and says \u2018almost done.\u2019 What\u2019s the move, and why does the double signal matter?",
+     a:"Exit begins immediately \u2014 both of you head for your entry point or hoseline and notify command. The double signal exists because one sense can fail you: in a roaring IDLH you might not hear the beep, but you will feel the shake. It fires at ~35%, which is reserve air \u2014 survival margin, not working time.",
+     why:"Same discipline as Topic 5: the alarm means you\u2019re on the last third of your air. \u2018Almost done\u2019 has killed firefighters \u2014 exiting through deteriorating conditions always takes longer than the search you\u2019re finishing."},
+    {sec:"SCBA usage",
+     q:"You go motionless about 25 seconds while your partner checks a closet. Your PASS gives its pre-alarm chirp, and he snaps that you\u2019ll set it off if you keep stopping. What do you tell him?",
+     a:"Good \u2014 that\u2019s exactly what it\u2019s supposed to do. Pre-alarm sounds after 20 seconds motionless, full alarm 12 seconds after that, and there\u2019s a manual red button for when you need it now. A PASS that nags you is a PASS that\u2019s working; the one time it matters, you want it loud.",
+     why:"PASS discipline: armed before entry, respected during ops. Firefighters who silence or ignore motion alarms remove the one device that calls for them when they can\u2019t call for themselves."},
+    {sec:"SCBA usage",
+     q:"Knockdown is done on a dumpster fire. The smoke has mostly cleared and the crew wants masks off to pull the pile apart. PFD SOP Vol 2 says what?",
+     a:"Masks stay on. SOP requires SCBA in atmospheres that are contaminated or may become contaminated \u2014 and it names visible products of combustion explicitly, including vehicle and dumpster fires, plus gas leaks, fuel spills, the active fire area and directly above it. Overhaul on a smoldering pile is a contamination event waiting to happen.",
+     why:"Looks clear is not is clear, and SOP Vol 2 doesn\u2019t leave it to judgment \u2014 the listed atmospheres get SCBA, period. Dumpster and vehicle fires are called out by name because crews habitually underrate them."},
+    {sec:"Ventilation",
+     q:"Academy evolution: your crew is assigned to take windows on Side A while the engine is still stretching the line. The instructor asks for the Three Ws first. What are they, and what timing rule do they enforce?",
+     a:"When, Where, Why \u2014 and the rule is: keep openings closed until you\u2019re ready to apply water. Ventilation without water equals fire growth. The Ws force you to justify the opening against a water plan instead of venting on reflex.",
+     why:"Straight from the recruit Vent Ch. 13: water absorbs more heat energy than the fire creates. Once water is applied, ventilation works for you; before that, it works for the fire. Most recruits vent because it feels like doing something \u2014 the Three Ws make it a tactic."},
+    {sec:"Ventilation",
+     q:"Burn building, ventilation-limited room fire. The instructor has you hit it with an exterior offensive indirect handline through the window FIRST, before anyone goes inside. What is this called, and which two killers does it prevent?",
+     a:"Transitional attack \u2014 exterior cooling before transitioning to interior direct attack, coordinated with ventilation, done prior to entry, search, or suppression. It prevents backdraft and flashover by collapsing the heat release rate before crews commit inside.",
+     why:"PFD recruit ventilation doctrine: interior temperatures can drop hundreds of degrees in seconds. Your entry is the ventilation event \u2014 transitional attack makes sure the fire is already losing when you open the door, instead of waiting for you to feed it."},
+    {sec:"Ventilation",
+     q:"Live burn, 20 mph wind hitting the same side as your entry door. The instructor asks: where do you want the wind, and what happens if you open the upwind side?",
+     a:"Keep the wind at your back during attack. Opening the upwind side feeds unlimited high-pressure oxygen into the fire and turns the structure into a blowtorch aimed downwind \u2014 straight at anyone inside or exiting on the lee side.",
+     why:"PFD doctrine. Wind doesn\u2019t nudge the flow path, it owns it \u2014 it overrides natural buoyancy entirely. Windward openings are fuel; door control and wind-aware positioning are the only defenses."},
+    {sec:"Ventilation",
+     q:"A classmate says: \u2018The room is oxygen-starved, so let\u2019s cut the roof \u2014 ventilation can only help.\u2019 Using recruit vent doctrine, why is he wrong, and when does the cut actually help?",
+     a:"He\u2019s wrong because on a ventilation-limited fire, vertical ventilation alone usually has no positive effect \u2014 the new exhaust just feeds the oxygen-starved fire. The cut helps when paired with coordinated exterior water applied as close to the fire as possible: then it improves visibility and drops temperatures.",
+     why:"The research the department teaches: venting alone grows a ventilation-limited fire. The roof cut is a tool for a cooled fire, not a substitute for cooling. Sequence is the doctrine."},
+    {sec:"Search & rescue",
+     q:"Burn-building search, zero visibility. Your partner loses the wall and starts free-searching the middle of the room \u2018to cover more ground.\u2019 What\u2019s wrong, and what\u2019s the fix?",
+     a:"He\u2019s unoriented \u2014 free-searching the middle of a room is how firefighters die in buildings they can\u2019t see. Fix: re-establish contact with the wall or the hoseline, re-orient to your entry point, and search systematically off a known reference. Coverage means nothing without orientation.",
+     why:"Academy search doctrine: stay oriented to something that leads out \u2014 wall, line, rope. An unoriented searcher isn\u2019t searching, they\u2019re wandering, and a wanderer becomes the second victim RIT has to find."},
+    {sec:"Search & rescue",
+     q:"You\u2019re assigned VES on a second-floor bedroom window in a live burn: vent, enter, search. Your partner wants to leave the bedroom door open \u2018for a second way out.\u2019 Correct him.",
+     a:"Wrong \u2014 the door stays closed. VES works because the closed door isolates the room from the fire and the flow path; you vent the window, enter, and search from a tenable space. Opening the door invites the fire and its exhaust straight into your search area \u2014 and turns your window into the exhaust.",
+     why:"VES is a disciplined, isolated tactic: window in, door closed, search, window out. The second way out is the window you came through. An open door doesn\u2019t add an exit, it adds a flow path."},
+    {sec:"Search & rescue",
+     q:"Your crew has a TIC on the search. The camera shows a clear room and your officer waves you ahead faster. What\u2019s the right use of the camera \u2014 and what mistake is the officer making?",
+     a:"The TIC is a scanning tool, not a substitute for contact, orientation, and disciplined technique. Use it to scan and prioritize, but stay low, keep your reference, and search to the standard. The mistake: outrunning your orientation because the picture looks clean \u2014 cameras miss victims, don\u2019t show floor integrity, and die at the worst moment.",
+     why:"The academy lesson: the TIC extends your senses, it doesn\u2019t replace your fundamentals. Every generation finds a new technology to trust more than its training. Don\u2019t be that evolution."},
+    {sec:"Search & rescue",
+     q:"Second-floor search, conditions deteriorating fast, and you realize you don\u2019t know which way the stairs are. Immediate action \u2014 and what should have prevented this?",
+     a:"Stop, call it out, and declare a Mayday with LUNAR early \u2014 while you still have air and composure \u2014 so RIT comes with full cylinders to your last known location. What should have prevented it: continuous orientation \u2014 counting doors, wall and line contact, and a pre-entry plan with an exit reference.",
+     why:"Lost firefighters die from delayed Maydays, not from being lost. Call it while you can still talk and breathe. And the prevention is boring on purpose: orientation is a habit, not a skill you summon once you\u2019re already lost."},
+    {sec:"Fire behavior",
+     q:"Academy classroom: why do modern house fires reach flashover faster than the legacy fires in the old textbooks? Give the two-part answer.",
+     a:"One: modern fuel loads \u2014 synthetics, open floor plans, lightweight construction \u2014 release heat far faster than legacy natural-fiber furnishings. Two: tighter, energy-efficient homes make fires ventilation-limited early, so the moment air arrives \u2014 your entry, a window failing \u2014 the stored energy releases violently. Faster to flashover AND more explosive when ventilated.",
+     why:"This is the \u2018advanced\u2019 in advanced fire behavior: not just hotter fires, but a different fire. Legacy tactics assumed fuel-limited fires with time; modern fires are oxygen-limited with a hair trigger. Everything else in the Core 7 assumes you understand this."},
+    {sec:"Fire behavior",
+     q:"During a live burn you see smoke pulsing \u2014 breathing in and out of the doorway \u2014 and hear a high-pitched whistling from a cracked window. A classmate wants to push in. What are you seeing, and what\u2019s the order?",
+     a:"Backdraft indicators: the pulsing means the fire is gasping at the edge of its oxygen supply, and the whistling is air being drawn through the crack. Order: do NOT open that door \u2014 cool the space first, transitional attack through an opening if possible, and control doors. His entry would be the ignition event.",
+     why:"A ventilation-limited, superheated compartment is a bomb waiting for air. Backdraft doesn\u2019t negotiate and doesn\u2019t warn twice. The recruit who recognizes the signs and stops the crew just earned their place."},
+    {sec:"Fire behavior",
+     q:"The instructor keeps repeating: \u2018Your entry IS the ventilation event.\u2019 In a ventilation-limited structure, explain exactly what opening the front door does to the fire \u2014 and what must be true before you open it.",
+     a:"The open door becomes a new intake: fresh oxygen floods an oxygen-starved, superheated compartment, the heat release rate spikes, and the fire races toward the new exhaust \u2014 possibly to flashover. Before opening it, water must be ready and applied \u2014 transitional or immediate direct attack \u2014 with doors behind you controlled so you aren\u2019t standing in the new flow path.",
+     why:"This ties the Core 7 together: fire behavior explains WHY the ventilation and attack doctrines exist. Every tactic you\u2019ve learned is a different answer to the same fact \u2014 air is the trigger, and you\u2019re the one carrying it in."},
+    {sec:"Ladder ops",
+     q:"Academy drill: raise a 24-foot extension ladder to a second-floor window for rescue. Walk through the placement \u2014 angle, footing, securing.",
+     a:"Butt it on firm, level ground; raise to a 75-degree climbing angle \u2014 the 4:1 rule, butt out one foot for every four feet of working length; heel it or keep it heeled, tie off the halyard, and lock the pawls before anyone climbs.",
+     why:"Ladder fundamentals are pass/fail for a reason: wrong angle means it slides out or tips back, unlocked dogs mean it collapses under load, and an unheeled butt on slick ground is a fall waiting for both the victim and the rescuer."},
+    {sec:"Ladder ops",
+     q:"Fire showing from a second-floor window, victim reported at the adjacent bedroom window. Your partner starts raising the ladder to the fire window \u2018to get water on it faster.\u2019 Why is this wrong \u2014 and where does the ladder go?",
+     a:"Wrong window. Ladders go to the rescue window first \u2014 the victim\u2019s window \u2014 not the fire window. Placing at the fire exposes ladder and climbers to direct flame and heat, puts the rescue in the exhaust path, and delays the actual rescue. The fire window gets the line; the victim window gets the ladder.",
+     why:"Academy priority order: rescue first, and the ladder is a rescue tool before it\u2019s an access tool. Heat-weakened metal fails without warning \u2014 never climb a ladder that\u2019s been in direct flame."},
+    {sec:"Ladder ops",
+     q:"You need to work from the ladder at the roofline, pulling siding to check for extension. What\u2019s the technique that keeps you on the ladder \u2014 and what are your free hands doing?",
+     a:"Leg lock: climb a few rungs above your work point, pass one leg behind the rungs and hook the foot, leaning your weight into the lock \u2014 that frees both hands. With them you\u2019re pulling siding, sounding the roof, or running a tool. Never work one-handed and unsecured at height.",
+     why:"The leg lock is the difference between working from the ladder and falling off it. Recruits rush it; veterans do it every single time, even for \u2018just a second\u2019 \u2014 because \u2018just a second\u2019 is when gravity collects."},
+    {sec:"Live fire",
+     q:"First live-burn evolution: you\u2019re on the nozzle approaching the fire room. Fog or straight stream \u2014 and where does the water go first?",
+     a:"Straight stream for reach and penetration, applied to the seat of the fire from the unburned side \u2014 cool the overhead and the fire in a controlled pattern. Wide fog in the approach just makes steam that cooks your own crew and pushes heat; save fog patterns for hydraulic ventilation after knockdown.",
+     why:"The burn building punishes textbook answers applied blindly. A straight stream reaches the seat through the thermal layer; fog near the nozzle in a hot hallway converts to a steam burn on your crew. Technique follows conditions, not habit."},
+    {sec:"Live fire",
+     q:"Interior crew is at the burn-room door ready to enter. The exterior crew is still setting up their transitional line. Go or wait? What\u2019s the coordinated answer, and why?",
+     a:"Wait. Coordinated attack means exterior water hits first \u2014 collapsing the heat release rate \u2014 and the interior crew enters on the improved conditions, timed with ventilation. Entering early makes the interior crew the ventilation event. Thirty seconds of patience buys survivable conditions.",
+     why:"Live fire rewards coordination and punishes heroics. The crew that waits for the water and enters together on a cooled fire looks slow and goes home. The crew that rushes looks aggressive and gets burned."},
+    {sec:"Live fire",
+     q:"Mid-evolution: heat building fast at the ceiling, the smoke layer dropping, a low roar underneath it all. Your instinct says push a little further. What does the instructor want to hear instead?",
+     a:"\u2018Backing out.\u2019 Those are deteriorating conditions trending toward flashover \u2014 dropping neutral plane, rising heat, audible warning. Withdraw to a safe area, report conditions, and re-attack with water from a tenable position. There is no shame in backing out; there is a line-of-duty death in pushing through.",
+     why:"The burn building is the one place you\u2019re allowed to learn this lesson safely \u2014 the instructors are watching for exactly this decision. Firefighters who can\u2019t back out in training won\u2019t back out on the fireground, and that\u2019s where it turns fatal."},
+    {sec:"Live fire",
+     q:"Live-fire search evolution: charged line at the door, a partner, victim reported in the rear bedroom. How do you move \u2014 and what protects the victim from your own attack?",
+     a:"Stay low below the thermal layer, oriented to the wall or line, moving fast and systematically \u2014 search the bedroom while the line protects the hallway and your exit. And coordinate with the nozzle: water goes on the fire, never blindly into the search area \u2014 steam and driven heat kill victims faster than the fire you were trying to beat.",
+     why:"Live-fire search is the whole Core 7 in one evolution: SCBA discipline, fire-behavior reads, ventilation awareness, and the attack protecting the search. The victim\u2019s survivability clock is running \u2014 but a panicked, uncoordinated search just adds bodies to the count."}
+  ],
+  diagrams: []
 }
 ];
 </script>
@@ -1040,8 +1153,9 @@ function renderCard(){
   var body=document.getElementById('drill-body');
   if(!RUN||!RUN.queue.length){ renderComplete(); return; }
   var cur=RUN.queue[0], card=TOPICS[cur.t].cards[cur.i];
+  var qtag='Scenario'+(card.sec?' — '+card.sec:'');
   body.innerHTML='<div class="progline"><span><b>'+RUN.queue.length+'</b> left in this run</span><span>'+scopeLabel()+'</span></div>'
-    +'<div class="flashcard"><span class="qtag">Scenario</span><p class="q"></p><div class="gradebox"></div></div>'
+    +'<div class="flashcard"><span class="qtag">'+qtag+'</span><p class="q"></p><div class="gradebox"></div></div>'
     +'<div class="drill-actions single" id="drill-actions"></div>';
   body.querySelector('.q').textContent=card.q;
   var act=document.getElementById('drill-actions');
@@ -1114,7 +1228,8 @@ function renderReview(){
     var wrap=el('div'); wrap.style.marginTop='16px';
     items.forEach(function(it){
       var r=el('div','rrow');
-      var tag=el('span','topic','Topic '+TOPICS[it.t].n+' · '+TOPICS[it.t].title);
+      var rcard=TOPICS[it.t].cards[it.i];
+      var tag=el('span','topic','Topic '+TOPICS[it.t].n+' · '+TOPICS[it.t].title+(rcard.sec?' — '+rcard.sec:''));
       var p=el('p',null,TOPICS[it.t].cards[it.i].q);
       var m=el('div','meta','Missed '+(it.r.missed)+' time'+(it.r.missed===1?'':'s')+' all time');
       r.appendChild(tag); r.appendChild(p); r.appendChild(m);
