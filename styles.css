@@ -351,3 +351,25 @@ a { color: var(--th-primary); }
 .call-reveal.bad h3 { color: var(--th-danger); }
 .call-reveal h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--th-ink-3); margin: 16px 0 4px; }
 .call-reveal p { margin: 0 0 6px; font-size: 15.5px; line-height: 1.55; }
+
+/* ---------- multiple choice (paramedic) ---------- */
+.mc-opt { display: flex; align-items: flex-start; gap: 12px; width: 100%; min-height: 54px; border-radius: 12px; border: 2px solid var(--th-line); background: var(--th-surface); color: var(--th-ink); font-size: 16.5px; font-weight: 600; padding: 12px 14px; margin-top: 10px; text-align: left; cursor: pointer; }
+.mc-opt:active { transform: scale(0.98); }
+.mc-opt:disabled { cursor: default; }
+.mc-letter { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: var(--th-line); color: var(--th-ink); display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
+.mc-opt.mc-right { border-color: var(--th-success); background: rgba(30,138,76,.12); }
+.mc-opt.mc-right .mc-letter { background: var(--th-success); color: #fff; }
+.mc-opt.mc-wrong { border-color: var(--th-danger, #c0392b); background: rgba(192,57,43,.10); }
+.mc-opt.mc-wrong .mc-letter { background: #c0392b; color: #fff; }
+.mc-opt.mc-dim { opacity: .55; }
+.mc-feedback { margin-top: 14px; font-size: 16.5px; }
+.mc-feedback.good b { color: var(--th-success); }
+.mc-feedback.bad b { color: #c0392b; }
+.mc-list { margin-top: 12px; display: grid; gap: 8px; }
+.mc-static { border: 1px solid var(--th-line); border-radius: 10px; padding: 9px 12px; font-size: 15.5px; color: var(--th-ink-2); }
+/* ---------- med math ---------- */
+.calc-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.calc-input { flex: 1; font-size: 20px; font-weight: 700; padding: 12px 14px; border-radius: 12px; border: 2px solid var(--th-line); background: var(--th-surface); color: var(--th-ink); }
+.calc-input:focus { outline: none; border-color: var(--th-accent); }
+.calc-input:disabled { opacity: .6; }
+.calc-unit { font-size: 18px; font-weight: 700; color: var(--th-ink-2); }

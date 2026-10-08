@@ -46,11 +46,11 @@ function cleanProg(p) {
   }
   return c;
 }
-function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 } }; }
+function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 } }; }
 function normGames(g) {
   var d = defaultGames();
   if (g && typeof g === 'object') {
-    ['blitz', 'flash', 'weak', 'call'].forEach(function (k) {
+    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc'].forEach(function (k) {
       if (g[k] && typeof g[k] === 'object') {
         Object.keys(d[k]).forEach(function (f) {
           var v = parseInt(g[k][f], 10);
@@ -475,12 +475,24 @@ function renderSessionView(root) {
   if (s.mode === 'blitz') { renderBlitzCard(root, s); return; }
   renderStudyCard(root, s);
 }
+function shuffleIdx(n) {
+  var a = [], i;
+  for (i = 0; i < n; i++) a.push(i);
+  for (i = n - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+  return a;
+}
 function renderStudyCard(root, s) {
   var cur = s.queue[0], card = TOPICS[cur.t].cards[cur.i];
+  if (card.mc && card.opts && s.mode !== 'flash') { renderMCCard(root, s, cur, card); return; }
   sessTop(root, s);
   var dc = el('div', 'dcard animate-pop-in');
   var tag = el('span', 'tag', cardTag(card, cur)); dc.appendChild(tag);
   dc.appendChild(el('p', 'q', card.q));
+  if (card.mc && card.opts) {
+    var ol = el('div', 'mc-list');
+    card.opts.forEach(function (o) { var li = el('div', 'mc-static'); li.textContent = o; ol.appendChild(li); });
+    dc.appendChild(ol);
+  }
   var ansBox = el('div', 'hidden'); dc.appendChild(ansBox);
   root.appendChild(dc);
 
@@ -507,6 +519,44 @@ function renderStudyCard(root, s) {
     var wrap = el('div', 'drill-cta'); wrap.appendChild(rev);
     root.appendChild(wrap);
   }
+}
+function renderMCCard(root, s, cur, card) {
+  sessTop(root, s);
+  var dc = el('div', 'dcard animate-pop-in');
+  dc.appendChild(el('span', 'tag', cardTag(card, cur) + ' \u00b7 multiple choice'));
+  dc.appendChild(el('p', 'q', card.q));
+  var order = shuffleIdx(card.opts.length);
+  var correctPos = -1;
+  var btns = [];
+  order.forEach(function (oi, pos) {
+    var b = el('button', 'mc-opt press'); b.type = 'button';
+    b.innerHTML = '<span class="mc-letter">' + 'ABCD'[pos] + '</span><span></span>';
+    b.querySelector('span:last-child').textContent = card.opts[oi];
+    if (oi === 0) correctPos = pos;
+    b.addEventListener('click', function () {
+      if (s.picked) return;
+      var ok = (pos === correctPos);
+      s.picked = true;
+      btns.forEach(function (bb, p) {
+        bb.disabled = true;
+        if (p === correctPos) bb.classList.add('mc-right');
+        else if (p === pos && !ok) bb.classList.add('mc-wrong');
+        else bb.classList.add('mc-dim');
+      });
+      var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
+      fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong.') + '</b>';
+      dc.appendChild(fb);
+      showAnswer(ansBox, card);
+      var nx = el('button', 'btn block press', 'Next'); nx.type = 'button';
+      nx.addEventListener('click', function () { s.picked = false; gradeStep(s, cur, ok); });
+      var wrap = el('div', 'drill-cta'); wrap.appendChild(nx);
+      root.appendChild(wrap);
+    });
+    btns.push(b);
+    dc.appendChild(b);
+  });
+  var ansBox = el('div', 'hidden'); dc.appendChild(ansBox);
+  root.appendChild(dc);
 }
 function showAnswer(box, card) {
   box.classList.remove('hidden');
@@ -589,6 +639,11 @@ function renderBlitzCard(root, s) {
   var dc = el('div', 'dcard animate-pop-in');
   dc.appendChild(el('span', 'tag', cardTag(card, cur)));
   dc.appendChild(el('p', 'q', card.q));
+  if (card.mc && card.opts) {
+    var ol = el('div', 'mc-list');
+    card.opts.forEach(function (o, i) { var li = el('div', 'mc-static'); li.textContent = 'ABCD'[i] + ') ' + o; ol.appendChild(li); });
+    dc.appendChild(ol);
+  }
   root.appendChild(dc);
   // sync timer text in case of re-render mid-run
   var t = document.getElementById('blitz-timer');
@@ -664,6 +719,8 @@ function scopeOptions(onPick) {
 function renderGames(root) {
   if (state.sess) { renderSessionView(root); return; }
   if (state.callRun) { renderCallView(root); return; }
+  if (state.examRun) { renderExamView(root); return; }
+  if (state.calcRun) { renderCalcView(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Reps, but fun</span><h2>Games</h2>'
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
@@ -693,6 +750,16 @@ function renderGames(root) {
     'Dispatch, vitals, and a patient going south. Read the numbers, make the call.',
     store.games.call.best, 'best score',
     function () { startCallRun(); }));
+
+  root.appendChild(gameCard('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam',
+    'Thirty random questions from the paramedic bank, shuffled like the real test. Misses go to Weak Spots.',
+    store.games.exam.best, 'best score',
+    function () { startExamRun(); }));
+
+  root.appendChild(gameCard('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math',
+    'GCS, Apgar, and rule-of-nines — generated fresh every run. The test loves these.',
+    store.games.calc.best, 'best score',
+    function () { startCalcRun(); }));
 }
 
 /* ============================================================
@@ -812,6 +879,221 @@ function scopeLabel(sc) {
 }
 
 /* ============================================================
+   PRACTICE EXAM — 30-question paramedic test simulation
+   ============================================================ */
+var EXAM_LEN = 30, EXAM_TOPIC = -1;
+function paramedicTopic() {
+  if (EXAM_TOPIC < 0) {
+    for (var i = 0; i < TOPICS.length; i++) if (TOPICS[i].title === 'Paramedic Exam Prep') { EXAM_TOPIC = i; break; }
+  }
+  return EXAM_TOPIC;
+}
+function startExamRun() {
+  var t = paramedicTopic();
+  if (t < 0) return;
+  var idx = [], i;
+  for (i = 0; i < TOPICS[t].cards.length; i++) idx.push(i);
+  idx = shuffle(idx).slice(0, Math.min(EXAM_LEN, idx.length));
+  state.examRun = { order: idx, pos: 0, score: 0, picked: -1, misses: [] };
+  touchDay(); saveStore();
+  render(); window.scrollTo(0, 0);
+}
+function endExamRun() { state.examRun = null; render(); window.scrollTo(0, 0); }
+function renderExamView(root) {
+  var run = state.examRun, t = paramedicTopic();
+  if (run.pos >= run.order.length) { renderExamScore(root); return; }
+  var card = TOPICS[t].cards[run.order[run.pos]];
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Practice exam</span><h2>Question ' + (run.pos + 1) + ' of ' + run.order.length + '</h2>'
+    + '<p>Score: <span class="tabular"><b>' + run.score + '</b></span> &middot; Best: <span class="tabular"><b>' + store.games.exam.best + '</b></span></p>';
+  root.appendChild(head);
+
+  var dc = el('div', 'dcard animate-pop-in');
+  dc.appendChild(el('span', 'tag', 'Paramedic candidate exam'));
+  dc.appendChild(el('p', 'q', card.q));
+  var order = shuffleIdx(card.opts.length), btns = [], correctPos = -1;
+  order.forEach(function (oi, pos) {
+    var b = el('button', 'mc-opt press'); b.type = 'button';
+    b.innerHTML = '<span class="mc-letter">' + 'ABCD'[pos] + '</span><span></span>';
+    b.querySelector('span:last-child').textContent = card.opts[oi];
+    if (oi === 0) correctPos = pos;
+    b.addEventListener('click', function () {
+      if (run.picked >= 0) return;
+      run.picked = pos;
+      var ok = (pos === correctPos);
+      if (ok) run.score++; else run.misses.push(run.order[run.pos]);
+      gradeCard(t, run.order[run.pos], ok);
+      btns.forEach(function (bb, p) {
+        bb.disabled = true;
+        if (p === correctPos) bb.classList.add('mc-right');
+        else if (p === pos && !ok) bb.classList.add('mc-wrong');
+        else bb.classList.add('mc-dim');
+      });
+      var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
+      fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + card.opts[0] + '.') + '</b>';
+      dc.appendChild(fb);
+      if (card.why) { var w = el('p', 'why', null); w.textContent = card.why; dc.appendChild(w); }
+      var nx = el('div', 'drill-cta');
+      var nb = el('button', 'btn block press', (run.pos + 1 >= run.order.length) ? 'See your score' : 'Next question');
+      nb.type = 'button';
+      nb.addEventListener('click', function () { run.pos++; run.picked = -1; render(); window.scrollTo(0, 0); });
+      nx.appendChild(nb);
+      root.appendChild(nx);
+    });
+    btns.push(b); dc.appendChild(b);
+  });
+  root.appendChild(dc);
+
+  var quit = el('div', 'drill-cta');
+  var qb = el('button', 'btn ghost block press', 'Quit exam'); qb.type = 'button';
+  qb.addEventListener('click', endExamRun);
+  quit.appendChild(qb); root.appendChild(quit);
+}
+function renderExamScore(root) {
+  var run = state.examRun, n = run.order.length, s = run.score;
+  var g = store.games.exam;
+  g.plays++;
+  if (s > g.best) g.best = s;
+  saveStore();
+  var pct = Math.round(s / n * 100);
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Practice exam</span><h2>' + s + ' / ' + n + ' (' + pct + '%)</h2>';
+  root.appendChild(head);
+  var msg;
+  if (s === n) msg = 'Perfect. Walk into that test like you own it.';
+  else if (pct >= 85) msg = 'Passing range. Kill the misses in Weak Spots and run it back.';
+  else if (pct >= 70) msg = 'Borderline. The misses went to your review queue — clear it, then retest.';
+  else msg = 'Not ready yet. Drill the topic decks first, then come back and prove it.';
+  var card = el('div', 'card');
+  card.innerHTML = '<p style="margin:0 0 12px"></p><p style="margin:0;color:var(--th-ink-2);font-size:14px">Best: <span class="tabular"><b>' + g.best + '</b></span> &middot; Exams: <span class="tabular"><b>' + g.plays + '</b></span>'
+    + (run.misses.length ? ' &middot; <span class="tabular"><b>' + run.misses.length + '</b></span> sent to Weak Spots' : '') + '</p>';
+  card.querySelector('p').textContent = msg;
+  root.appendChild(card);
+  var cta = el('div', 'drill-cta');
+  var again = el('button', 'btn block press', 'Run it back'); again.type = 'button';
+  again.addEventListener('click', startExamRun);
+  var back = el('button', 'btn ghost block press', 'Back to Games'); back.type = 'button';
+  back.addEventListener('click', endExamRun);
+  cta.appendChild(again); cta.appendChild(back);
+  root.appendChild(cta);
+  state.examRun = null;
+}
+
+/* ============================================================
+   MED MATH — GCS / Apgar / rule-of-nines calculation drills
+   ============================================================ */
+var CALC_LEN = 10;
+var GCS_E = [[4, 'opens eyes spontaneously'], [3, 'opens eyes to voice'], [2, 'opens eyes to pain'], [1, 'no eye opening']];
+var GCS_V = [[5, 'oriented, converses normally'], [4, 'confused, disoriented'], [3, 'inappropriate words'], [2, 'incomprehensible sounds'], [1, 'no verbal response']];
+var GCS_M = [[6, 'obeys commands'], [5, 'localizes pain'], [4, 'withdraws from pain'], [3, 'abnormal flexion (decorticate)'], [2, 'abnormal extension (decerebrate)'], [1, 'no motor response']];
+var APGAR_SIGNS = [
+  ['Appearance', [[2, 'pink all over'], [1, 'pink body, blue extremities'], [0, 'blue-gray all over']]],
+  ['Pulse', [[2, 'over 100 bpm'], [1, 'under 100 bpm'], [0, 'absent']]],
+  ['Grimace', [[2, 'coughs, sneezes, or cries'], [1, 'grimace or weak cry'], [0, 'no response']]],
+  ['Activity', [[2, 'active, good flexion'], [1, 'some flexion'], [0, 'limp, floppy']]],
+  ['Respiration', [[2, 'strong cry'], [1, 'slow, weak, irregular'], [0, 'absent']]]
+];
+var NINES = [['head', 9], ['one arm', 9], ['other arm', 9], ['chest (front torso)', 18], ['back', 18], ['one leg', 18], ['other leg', 18]];
+function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+function genGCS() {
+  var e = pick(GCS_E), v = pick(GCS_V), m = pick(GCS_M);
+  return { kind: 'GCS', prompt: 'Head-injury patient: ' + e[1] + '; ' + v[1] + '; ' + m[1] + '. What is the GCS?', answer: e[0] + v[0] + m[0], unit: '' };
+}
+function genApgar() {
+  var parts = [], total = 0;
+  APGAR_SIGNS.forEach(function (sg) {
+    var r = pick(sg[1]); total += r[0]; parts.push(sg[0] + ': ' + r[1]);
+  });
+  return { kind: 'Apgar', prompt: 'Newborn at 5 minutes — ' + parts.join('; ') + '. What is the Apgar score?', answer: total, unit: '' };
+}
+function genNines() {
+  var n = 1 + Math.floor(Math.random() * 3), pool = shuffleIdx(NINES.length).slice(0, n), total = 0, names = [];
+  pool.forEach(function (i) { total += NINES[i][1]; names.push(NINES[i][0]); });
+  return { kind: 'Rule of nines', prompt: 'Adult with partial/full-thickness burns to ' + names.join(', ') + '. Estimated body surface area burned?', answer: total, unit: '%' };
+}
+function startCalcRun() {
+  var probs = [], i, gens = [genGCS, genApgar, genNines];
+  for (i = 0; i < CALC_LEN; i++) probs.push(gens[i % 3]());
+  probs = shuffle(probs);
+  state.calcRun = { probs: probs, pos: 0, score: 0, checked: false };
+  touchDay(); saveStore();
+  render(); window.scrollTo(0, 0);
+}
+function endCalcRun() { state.calcRun = null; render(); window.scrollTo(0, 0); }
+function renderCalcView(root) {
+  var run = state.calcRun;
+  if (run.pos >= run.probs.length) { renderCalcScore(root); return; }
+  var p = run.probs[run.pos];
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Med math</span><h2>' + p.kind + ' ' + (run.pos + 1) + ' of ' + run.probs.length + '</h2>'
+    + '<p>Score: <span class="tabular"><b>' + run.score + '</b></span> &middot; Best: <span class="tabular"><b>' + store.games.calc.best + '</b></span></p>';
+  root.appendChild(head);
+
+  var dc = el('div', 'dcard animate-pop-in');
+  dc.appendChild(el('span', 'tag', 'Calculation drill'));
+  var pq = el('p', 'q', null); pq.textContent = p.prompt; dc.appendChild(pq);
+  var row = el('div', 'calc-row');
+  var inp = document.createElement('input');
+  inp.type = 'number'; inp.inputMode = 'numeric'; inp.className = 'calc-input';
+  inp.placeholder = 'Your answer'; inp.setAttribute('aria-label', 'Your answer');
+  row.appendChild(inp);
+  if (p.unit) { var u = el('span', 'calc-unit', p.unit); row.appendChild(u); }
+  dc.appendChild(row);
+  var fb = el('div', 'mc-feedback hidden'); dc.appendChild(fb);
+  root.appendChild(dc);
+
+  var cta = el('div', 'drill-cta');
+  var chk = el('button', 'btn block press', 'Check it'); chk.type = 'button';
+  chk.addEventListener('click', function () {
+    if (run.checked) return;
+    var val = parseFloat(inp.value);
+    var ok = !isNaN(val) && Math.abs(val - p.answer) < 0.01;
+    run.checked = true;
+    inp.disabled = true;
+    fb.classList.remove('hidden');
+    fb.classList.add(ok ? 'good' : 'bad');
+    fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + p.answer + (p.unit || '') + '.') + '</b>';
+    if (ok) run.score++;
+    touchDay(); saveStore();
+    chk.textContent = (run.pos + 1 >= run.probs.length) ? 'See your score' : 'Next problem';
+    chk.addEventListener('click', function () { run.pos++; run.checked = false; render(); window.scrollTo(0, 0); }, { once: true });
+  });
+  cta.appendChild(chk);
+  root.appendChild(cta);
+
+  var quit = el('div', 'drill-cta');
+  var qb = el('button', 'btn ghost block press', 'Quit'); qb.type = 'button';
+  qb.addEventListener('click', endCalcRun);
+  quit.appendChild(qb); root.appendChild(quit);
+  setTimeout(function () { try { inp.focus(); } catch (e) {} }, 60);
+}
+function renderCalcScore(root) {
+  var run = state.calcRun, n = run.probs.length, s = run.score;
+  var g = store.games.calc;
+  g.plays++;
+  if (s > g.best) g.best = s;
+  saveStore();
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Med math</span><h2>' + s + ' / ' + n + '</h2>';
+  root.appendChild(head);
+  var msg = s === n ? 'Clean sweep. The math is automatic now.'
+    : s >= n * 0.8 ? 'Strong. The test loves these — lock them in.'
+    : 'Shaky. GCS maxes at 15, Apgar at 10, nines add up fast. Run it back.';
+  var card = el('div', 'card');
+  card.innerHTML = '<p style="margin:0 0 12px"></p><p style="margin:0;color:var(--th-ink-2);font-size:14px">Best: <span class="tabular"><b>' + g.best + '</b></span> &middot; Runs: <span class="tabular"><b>' + g.plays + '</b></span></p>';
+  card.querySelector('p').textContent = msg;
+  root.appendChild(card);
+  var cta = el('div', 'drill-cta');
+  var again = el('button', 'btn block press', 'Run it back'); again.type = 'button';
+  again.addEventListener('click', startCalcRun);
+  var back = el('button', 'btn ghost block press', 'Back to Games'); back.type = 'button';
+  back.addEventListener('click', endCalcRun);
+  cta.appendChild(again); cta.appendChild(back);
+  root.appendChild(cta);
+  state.calcRun = null;
+}
+
+/* ============================================================
    VIDEOS TAB
    ============================================================ */
 function renderVideos(root) {
@@ -894,7 +1176,9 @@ function renderProgress(root) {
   g.innerHTML = '<div class="stat"><b class="tabular">' + store.games.blitz.best + '</b><span>blitz best</span></div>'
     + '<div class="stat"><b class="tabular">' + store.games.flash.sessions + '</b><span>flash sessions</span></div>'
     + '<div class="stat"><b class="tabular">' + store.games.weak.sessions + '</b><span>weak-spot runs</span></div>'
-    + '<div class="stat"><b class="tabular">' + store.games.call.best + '</b><span>run-the-call best</span></div>';
+    + '<div class="stat"><b class="tabular">' + store.games.call.best + '</b><span>run-the-call best</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.exam.best + '</b><span>practice exam best</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.calc.best + '</b><span>med math best</span></div>';
   root.appendChild(g);
 }
 
