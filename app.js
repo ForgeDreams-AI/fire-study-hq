@@ -678,6 +678,15 @@ function startSession(mode, queue, scopeLabel, opts) {
     got: 0, miss: 0, masteredNow: 0, revealed: false, done: false,
     blitz: mode === 'blitz' ? { left: 60, score: 0, timerId: null, scopeObj: (opts.scopeRef && opts.scopeRef.scope) || null } : null
   };
+  if (mode === 'drill' || mode === 'weak') {
+    var h = hubOfScope(state.sess.scopeRef, state.sess.queue);
+    state.sess.hub = h;
+    state.sess.style = opts.style || loadStylePref(h) || (h === 2 ? 'quiz' : 'recall');
+    state.sess.quizAvail = state.sess.queue.some(function (it) {
+      var c = TOPICS[it.t].cards[it.i];
+      return !!(c.mc && c.opts && c.opts.length >= 4);
+    });
+  }
   if (state.tab === 'study') state.study.view = 'session';
   if (mode === 'flash') store.games.flash.sessions++;
   if (mode === 'weak') store.games.weak.sessions++;
@@ -764,10 +773,61 @@ function shuffleIdx(n) {
   for (i = n - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
   return a;
 }
+/* ---------------- drill style (quiz vs recall) ---------------- */
+var STYLE_KEY = 'fshq_drillstyle_v1';
+function loadStylePref(h) {
+  try { var m = JSON.parse(localStorage.getItem(STYLE_KEY) || '{}'); return (h >= 0 && m[h]) || null; }
+  catch (e) { return null; }
+}
+function saveStylePref(h, v) {
+  if (h == null || h < 0) return;
+  try { var m = JSON.parse(localStorage.getItem(STYLE_KEY) || '{}'); m[h] = v; localStorage.setItem(STYLE_KEY, JSON.stringify(m)); }
+  catch (e) {}
+}
+function hubOfTopic(n) {
+  for (var h = 0; h < HUBS.length; h++) {
+    var secs = HUBS[h].sections;
+    for (var k = 0; k < secs.length; k++) {
+      if (SECTIONS[secs[k]].topics.indexOf(n) >= 0) return h;
+    }
+  }
+  return -1;
+}
+function hubOfScope(ref, queue) {
+  if (!ref) return -1;
+  if (ref.type === 'hub') return ref.h;
+  if (ref.type === 'topic') return hubOfTopic(ref.n);
+  if (ref.type === 'weak' && queue && queue.length) return hubOfTopic(queue[0].t);
+  return -1;
+}
+/* segmented Quiz/Recall toggle shown on drill + weak-spot sessions */
+function styleToggle(root, s) {
+  if ((s.mode !== 'drill' && s.mode !== 'weak') || !s.quizAvail) return;
+  var wrap = el('div', 'style-toggle');
+  wrap.setAttribute('role', 'group');
+  wrap.setAttribute('aria-label', 'Drill mode: quiz or recall');
+  [['quiz', 'Quiz'], ['recall', 'Recall']].forEach(function (pair) {
+    var b = el('button', 'style-btn press' + (s.style === pair[0] ? ' active' : ''));
+    b.type = 'button';
+    b.setAttribute('aria-pressed', s.style === pair[0] ? 'true' : 'false');
+    b.textContent = pair[1];
+    b.addEventListener('click', function () {
+      if (s.style === pair[0]) return;
+      s.style = pair[0];
+      s.picked = false; s.revealed = false;
+      saveStylePref(s.hub, s.style);
+      render(); window.scrollTo(0, 0);
+    });
+    wrap.appendChild(b);
+  });
+  root.appendChild(wrap);
+}
 function renderStudyCard(root, s) {
   var cur = s.queue[0], card = TOPICS[cur.t].cards[cur.i];
-  if (card.mc && card.opts && s.mode !== 'flash') { renderMCCard(root, s, cur, card); return; }
+  var canQuiz = !!(card.mc && card.opts && card.opts.length >= 4);
+  if ((s.style || 'recall') === 'quiz' && canQuiz && s.mode !== 'flash') { renderMCCard(root, s, cur, card); return; }
   sessTop(root, s);
+  styleToggle(root, s);
   var dc = el('div', 'dcard animate-pop-in');
   var tag = el('span', 'tag', cardTag(card, cur)); dc.appendChild(tag);
   dc.appendChild(el('p', 'q', card.q));
@@ -805,6 +865,7 @@ function renderStudyCard(root, s) {
 }
 function renderMCCard(root, s, cur, card) {
   sessTop(root, s);
+  styleToggle(root, s);
   var dc = el('div', 'dcard animate-pop-in');
   dc.appendChild(el('span', 'tag', cardTag(card, cur) + ' \u00b7 multiple choice'));
   dc.appendChild(el('p', 'q', card.q));
@@ -891,7 +952,7 @@ function renderSessionDone(root, s) {
   again.addEventListener('click', function () {
     var nq = buildQueueFor(s.scopeRef);
     if (!nq.length) { exitSession(); return; }
-    startSession(s.mode, nq, s.scope, { scopeRef: s.scopeRef });
+    startSession(s.mode, nq, s.scope, { scopeRef: s.scopeRef, style: s.style });
   });
   row.appendChild(again);
   var back = el('button', 'btn ghost press', state.tab === 'games' ? 'Games hub' : state.tab === 'home' ? 'Home' : 'Study'); back.type = 'button';

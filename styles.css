@@ -506,3 +506,10 @@ a { color: var(--th-primary); }
 .calc-input:focus { outline: none; border-color: var(--th-accent); }
 .calc-input:disabled { opacity: .6; }
 .calc-unit { font-size: 18px; font-weight: 700; color: var(--th-ink-2); }
+
+/* ---------- drill style toggle (Quiz / Recall) ---------- */
+.style-toggle { display: flex; gap: 0; margin: 12px 0 4px; border: 2px solid var(--th-line); border-radius: 14px; overflow: hidden; background: var(--th-surface-2); }
+.style-btn { flex: 1; min-height: 48px; border: 0; background: transparent; color: var(--th-ink-2); font-size: 17px; font-weight: 700; cursor: pointer; padding: 12px 8px; }
+.style-btn + .style-btn { border-left: 2px solid var(--th-line); }
+.style-btn.active { background: var(--th-primary); color: #fff; }
+@media (prefers-reduced-motion: no-preference) { .style-btn { transition: background .15s ease, color .15s ease; } }
