@@ -23,7 +23,8 @@ var P = {
   target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>',
   layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
   zap: '<path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/>',
-  refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>'
+  refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>',
+  cross: '<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>'
 };
 function icon(n, s) {
   s = s || 24;
@@ -45,11 +46,11 @@ function cleanProg(p) {
   }
   return c;
 }
-function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 } }; }
+function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 } }; }
 function normGames(g) {
   var d = defaultGames();
   if (g && typeof g === 'object') {
-    ['blitz', 'flash', 'weak'].forEach(function (k) {
+    ['blitz', 'flash', 'weak', 'call'].forEach(function (k) {
       if (g[k] && typeof g[k] === 'object') {
         Object.keys(d[k]).forEach(function (f) {
           var v = parseInt(g[k][f], 10);
@@ -164,6 +165,7 @@ function go(tab) {
   state.tab = tab;
   if (tab === 'study' && state.study.view === 'session') { /* session handles its own exit */ }
   state.sess = null;
+  state.callRun = null;
   render();
   window.scrollTo(0, 0);
 }
@@ -661,6 +663,7 @@ function scopeOptions(onPick) {
 }
 function renderGames(root) {
   if (state.sess) { renderSessionView(root); return; }
+  if (state.callRun) { renderCallView(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Reps, but fun</span><h2>Games</h2>'
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
@@ -685,6 +688,124 @@ function renderGames(root) {
       if (!q.length) { openSheet('Queue\u2019s clear', 'Nothing to attack. Go drill something new and miss a few \u2014 that\u2019s how the queue gets fed.', []); return; }
       startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Weak spots', { scopeRef: { type: 'weak' } });
     }));
+
+  root.appendChild(gameCard('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call',
+    'Dispatch, vitals, and a patient going south. Read the numbers, make the call.',
+    store.games.call.best, 'best score',
+    function () { startCallRun(); }));
+}
+
+/* ============================================================
+   RUN THE CALL — vitals scenario game
+   ============================================================ */
+var CALL_RUN_LEN = 10;
+function startCallRun() {
+  var order = shuffle(MED_SCENARIOS.map(function (_, i) { return i; }));
+  state.callRun = { order: order.slice(0, Math.min(CALL_RUN_LEN, order.length)), pos: 0, score: 0, picked: -1 };
+  touchDay();
+  render();
+  window.scrollTo(0, 0);
+}
+function endCallRun() { state.callRun = null; render(); window.scrollTo(0, 0); }
+function renderCallView(root) {
+  var run = state.callRun;
+  if (run.pos >= run.order.length) { renderCallScore(root); return; }
+  var sc = MED_SCENARIOS[run.order[run.pos]];
+
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Run the Call</span><h2>Call ' + (run.pos + 1) + ' of ' + run.order.length + '</h2>'
+    + '<p>Score this run: <span class="tabular"><b>' + run.score + '</b></span> &middot; Best: <span class="tabular"><b>' + store.games.call.best + '</b></span></p>';
+  root.appendChild(head);
+
+  var disp = el('div', 'call-dispatch');
+  disp.innerHTML = '<span class="call-dispatch-tag">DISPATCH</span><p></p>';
+  disp.querySelector('p').textContent = sc.dispatch;
+  root.appendChild(disp);
+
+  var nar = el('div', 'card call-narr');
+  nar.innerHTML = '<p></p>';
+  nar.querySelector('p').textContent = sc.narrative;
+  root.appendChild(nar);
+
+  var vg = el('div', 'vitals-grid');
+  var v = sc.vitals;
+  [['BP', v.bp], ['Pulse', v.hr], ['Resps', v.rr], ['SpO2', v.spo2], ['Temp', v.temp], ['Glucose', v.glucose], ['Pain', v.pain], ['Mental', v.mental], ['Skin', v.skin], ['Pupils', v.pupils]].forEach(function (pair) {
+    var cell = el('div', 'vital');
+    cell.innerHTML = '<span></span><b></b>';
+    cell.querySelector('span').textContent = pair[0];
+    cell.querySelector('b').textContent = pair[1];
+    vg.appendChild(cell);
+  });
+  root.appendChild(el('h2', 'sec-head', 'Vitals'));
+  root.appendChild(vg);
+
+  if (run.picked < 0) {
+    root.appendChild(el('h2', 'sec-head', "What's happening?"));
+    var opts = el('div', 'call-opts');
+    sc.options.forEach(function (opt, i) {
+      var b = el('button', 'call-opt press'); b.type = 'button';
+      b.textContent = opt;
+      b.addEventListener('click', function () {
+        run.picked = i;
+        if (i === sc.answer) run.score++;
+        touchDay(); saveStore();
+        render(); window.scrollTo(0, 0);
+      });
+      opts.appendChild(b);
+    });
+    root.appendChild(opts);
+  } else {
+    var ok = run.picked === sc.answer;
+    var rev = el('div', 'card call-reveal ' + (ok ? 'good' : 'bad'));
+    var verdict = el('h3', null, ok ? 'Correct. Good read.' : 'Wrong. It was ' + sc.options[sc.answer] + ' \u2014 here\u2019s what you missed.');
+    rev.appendChild(verdict);
+    var secs = [['Why the vitals say so', sc.why], ['If you miss this', sc.miss], ['On scene', sc.actions]];
+    secs.forEach(function (s) {
+      rev.appendChild(el('h4', null, s[0]));
+      var p = el('p', null, null); p.textContent = s[1]; rev.appendChild(p);
+    });
+    root.appendChild(rev);
+    var nx = el('div', 'drill-cta');
+    var nb = el('button', 'btn block press', (run.pos + 1 >= run.order.length) ? 'See your score' : 'Next call');
+    nb.type = 'button';
+    nb.addEventListener('click', function () { run.pos++; run.picked = -1; render(); window.scrollTo(0, 0); });
+    nx.appendChild(nb);
+    root.appendChild(nx);
+  }
+
+  var quit = el('div', 'drill-cta');
+  var qb = el('button', 'btn ghost block press', 'Quit run');
+  qb.type = 'button';
+  qb.addEventListener('click', endCallRun);
+  quit.appendChild(qb);
+  root.appendChild(quit);
+}
+function renderCallScore(root) {
+  var run = state.callRun, n = run.order.length, s = run.score;
+  var g = store.games.call;
+  g.plays++;
+  if (s > g.best) g.best = s;
+  saveStore();
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Run the Call</span><h2>' + s + ' / ' + n + '</h2>';
+  root.appendChild(head);
+  var msg;
+  if (s === n) msg = 'Perfect run. You read every patient right — that\u2019s the standard.';
+  else if (s >= n * 0.8) msg = 'Strong. Tighten up the ones you missed and run it back.';
+  else if (s >= n * 0.6) msg = 'Passing, barely. The misses are the ones that kill patients — go again.';
+  else msg = 'Rough. Hit the Medical decks in Study, then come back and prove it.';
+  var card = el('div', 'card');
+  card.innerHTML = '<p style="margin:0 0 12px"></p><p style="margin:0;color:var(--th-ink-2);font-size:14px">Best: <span class="tabular"><b>' + g.best + '</b></span> &middot; Runs: <span class="tabular"><b>' + g.plays + '</b></span></p>';
+  card.querySelector('p').textContent = msg;
+  root.appendChild(card);
+  var cta = el('div', 'drill-cta');
+  var again = el('button', 'btn block press', 'Run it back'); again.type = 'button';
+  again.addEventListener('click', startCallRun);
+  var back = el('button', 'btn ghost block press', 'Back to Games'); back.type = 'button';
+  back.addEventListener('click', endCallRun);
+  cta.appendChild(again); cta.appendChild(back);
+  root.appendChild(cta);
+  state.callRun = null;
 }
 function scopeLabel(sc) {
   return sc.type === 'all' ? 'All topics' : 'Topic ' + TOPICS[sc.n].n + ' \u00b7 ' + TOPICS[sc.n].title;
@@ -772,7 +893,8 @@ function renderProgress(root) {
   var g = el('div', 'stat-grid');
   g.innerHTML = '<div class="stat"><b class="tabular">' + store.games.blitz.best + '</b><span>blitz best</span></div>'
     + '<div class="stat"><b class="tabular">' + store.games.flash.sessions + '</b><span>flash sessions</span></div>'
-    + '<div class="stat"><b class="tabular">' + store.games.weak.sessions + '</b><span>weak-spot runs</span></div>';
+    + '<div class="stat"><b class="tabular">' + store.games.weak.sessions + '</b><span>weak-spot runs</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.call.best + '</b><span>run-the-call best</span></div>';
   root.appendChild(g);
 }
 
