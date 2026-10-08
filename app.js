@@ -24,7 +24,8 @@ var P = {
   layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
   zap: '<path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/>',
   refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>',
-  cross: '<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>'
+  cross: '<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>',
+  house: '<path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/>'
 };
 function icon(n, s) {
   s = s || 24;
@@ -150,12 +151,18 @@ function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.cl
 
 /* ---------------- router ---------------- */
 var TABS = [
+  { id: 'home', label: 'Home', icon: 'house' },
   { id: 'study', label: 'Study', icon: 'book' },
   { id: 'games', label: 'Games', icon: 'gamepad' },
-  { id: 'videos', label: 'Videos', icon: 'playcircle' },
   { id: 'progress', label: 'Progress', icon: 'chart' }
 ];
-var state = { tab: 'study', study: { view: 'home', topic: -1 }, sess: null };
+/* Hubs: drill-down groups over SECTIONS (data.js untouched). Fire merges Academy + Probation Year. */
+var HUBS = [
+  { title: 'Fire', sub: 'Academy foundations', icon: 'flame', sections: [0, 1] },
+  { title: 'Medical', sub: 'Patient care', icon: 'cross', sections: [2] },
+  { title: 'Paramedic', sub: 'Candidate exam', icon: 'book', sections: [3] }
+];
+var state = { tab: 'home', study: { view: 'home', hub: -1, topic: -1 }, sess: null };
 
 function stopSessionTimer() {
   if (state.sess && state.sess.timerId) { clearInterval(state.sess.timerId); state.sess.timerId = null; }
@@ -192,10 +199,208 @@ function render() {
   renderStreak();
   var root = document.getElementById('view-root');
   root.innerHTML = '';
-  if (state.tab === 'study') renderStudy(root);
+  if (state.tab === 'home') renderHome(root);
+  else if (state.tab === 'study') renderStudy(root);
   else if (state.tab === 'games') renderGames(root);
-  else if (state.tab === 'videos') renderVideos(root);
   else renderProgress(root);
+}
+
+/* ============================================================
+   HUB HELPERS — drill-down grouping over SECTIONS
+   ============================================================ */
+function hubStats(h) {
+  var cards = 0, mastered = 0, needsWork = 0;
+  HUBS[h].sections.forEach(function (si) {
+    SECTIONS[si].topics.forEach(function (n) {
+      var st = topicStats(n);
+      cards += TOPICS[n].cards.length;
+      mastered += st.mastered;
+      needsWork += st.needsWork;
+    });
+  });
+  return { cards: cards, mastered: mastered, needsWork: needsWork };
+}
+function hubVideos(h) {
+  var vs = [];
+  HUBS[h].sections.forEach(function (si) {
+    SECTIONS[si].topics.forEach(function (n) {
+      (TOPICS[n].videos || []).forEach(function (v) { vs.push({ v: v, n: TOPICS[n].n, title: TOPICS[n].title }); });
+    });
+  });
+  return vs;
+}
+function hubQueue(h) {
+  // unmastered cards across the hub, shuffled; falls back to everything
+  var q = [], si, n, i;
+  HUBS[h].sections.forEach(function (sidx) {
+    SECTIONS[sidx].topics.forEach(function (nn) {
+      for (i = 0; i < TOPICS[nn].cards.length; i++) if (!isMastered(nn, i)) q.push({ t: nn, i: i });
+    });
+  });
+  if (!q.length) HUBS[h].sections.forEach(function (sidx) {
+    SECTIONS[sidx].topics.forEach(function (nn) {
+      for (i = 0; i < TOPICS[nn].cards.length; i++) q.push({ t: nn, i: i });
+    });
+  });
+  return shuffle(q);
+}
+function hubMistakes(h) {
+  var q = [];
+  HUBS[h].sections.forEach(function (si) {
+    SECTIONS[si].topics.forEach(function (n) {
+      for (var i = 0; i < TOPICS[n].cards.length; i++) if (isNeedsWork(n, i)) q.push({ t: n, i: i });
+    });
+  });
+  return shuffle(q);
+}
+function hubTile(h, onTap) {
+  var st = hubStats(h), hub = HUBS[h];
+  var pct = st.cards ? Math.round(st.mastered / st.cards * 100) : 0;
+  var b = el('button', 'hub-tile press'); b.type = 'button';
+  b.setAttribute('aria-label', hub.title + ': ' + st.mastered + ' of ' + st.cards + ' drills mastered');
+  b.innerHTML = '<span class="hub-ico">' + icon(hub.icon, 30) + '</span>'
+    + '<span class="hub-t"><b>' + hub.title + '</b><small>' + hub.sub + '</small></span>'
+    + '<span class="hub-meta tabular">' + st.cards + ' drills</span>'
+    + '<span class="hub-bar"><i style="width:' + pct + '%"></i></span>'
+    + '<span class="hub-pct tabular">' + pct + '%</span>';
+  b.addEventListener('click', onTap);
+  return b;
+}
+function goHub(h) {
+  stopSessionTimer();
+  state.sess = null;
+  state.tab = 'study';
+  state.study = { view: 'hub', hub: h, topic: -1 };
+  render();
+  window.scrollTo(0, 0);
+}
+
+/* ============================================================
+   HOME TAB — dashboard
+   ============================================================ */
+function streakBanner() {
+  var streak = dayStreak();
+  var sc = el('div', 'card streak-banner');
+  sc.innerHTML = '<span class="sb-ico">' + icon('flame', 32) + '</span>'
+    + '<span class="sb-t"><b class="tabular">' + streak + '-day streak</b>'
+    + '<small>' + (streak ? 'One graded card a day keeps it alive.' : 'Grade one card today and the streak starts.') + '</small></span>';
+  return sc;
+}
+function reviewCta() {
+  var q = reviewItems();
+  var rc = el('button', 'review-cta press'); rc.type = 'button';
+  rc.setAttribute('aria-label', q.length ? 'Review queue: ' + q.length + ' cards waiting' : 'Review queue is clear');
+  rc.innerHTML = '<span class="pill tabular">' + q.length + '</span><span><h3>Review queue</h3><p>'
+    + (q.length ? q.length + ' card' + (q.length === 1 ? '' : 's') + ' waiting &mdash; get each one right twice in a row to clear it.'
+      : 'Mark a card &ldquo;Missed it&rdquo; and it lands here for extra reps.') + '</p></span>';
+  rc.disabled = !q.length;
+  if (q.length) rc.addEventListener('click', function () { startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Review queue', { scopeRef: { type: 'weak' } }); });
+  return rc;
+}
+function continueCard() {
+  // topic with the most needs-work; else first topic with unmastered cards
+  var best = -1, bestNW = 0, n, i, st;
+  for (n = 0; n < TOPICS.length; n++) {
+    st = topicStats(n);
+    if (st.needsWork > bestNW) { bestNW = st.needsWork; best = n; }
+  }
+  if (best < 0) {
+    for (n = 0; n < TOPICS.length; n++) {
+      st = topicStats(n);
+      if (st.mastered < TOPICS[n].cards.length) { best = n; break; }
+    }
+  }
+  if (best < 0) return null;
+  var tp = TOPICS[best];
+  var card = el('button', 'continue-card press'); card.type = 'button';
+  card.setAttribute('aria-label', 'Continue drilling: ' + tp.title);
+  card.innerHTML = '<span class="cc-ico">' + icon('zap', 28) + '</span>'
+    + '<span class="cc-t"><small>Continue</small><b>' + tp.title + '</b>'
+    + '<span class="cc-sub tabular">' + (bestNW ? bestNW + ' need work' : (TOPICS[best].cards.length - topicStats(best).mastered) + ' left to master') + '</span></span>'
+    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
+  // flip chevron to point right via CSS
+  card.addEventListener('click', function () {
+    var queue = [];
+    for (i = 0; i < tp.cards.length; i++) if (isNeedsWork(best, i)) queue.push({ t: best, i: i });
+    var mode = 'weak', label = tp.title + ' \u00b7 mistakes';
+    if (!queue.length) {
+      for (i = 0; i < tp.cards.length; i++) if (!isMastered(best, i)) queue.push({ t: best, i: i });
+      mode = 'drill'; label = 'Topic ' + tp.n + ' \u00b7 ' + tp.title;
+    }
+    startSession(mode, shuffle(queue), label, { scopeRef: { type: 'topic', n: best } });
+  });
+  return card;
+}
+function gameMini(ico, bg, title, best, bestLabel, onTap) {
+  var b = el('button', 'game-mini press'); b.type = 'button';
+  b.setAttribute('aria-label', title + ' — ' + bestLabel + ' ' + best);
+  b.innerHTML = '<span class="gm-ico" style="background:' + bg + '">' + icon(ico, 24) + '</span>'
+    + '<span class="gm-t"><b>' + title + '</b><small class="tabular">' + bestLabel + ': ' + best + '</small></span>';
+  b.addEventListener('click', onTap);
+  return b;
+}
+function renderHome(root) {
+  if (state.sess) { renderSessionView(root); return; }
+  if (state.callRun) { renderCallView(root); return; }
+  if (state.examRun) { renderExamView(root); return; }
+  if (state.calcRun) { renderCalcView(root); return; }
+
+  var s = moduleStats();
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Fire Study HQ</span><h2>Put in the reps.</h2>'
+    + '<p><span class="tabular"><b>' + s.mastered + '</b></span> mastered &middot; '
+    + '<span class="tabular"><b>' + s.needsWork + '</b></span> need work &middot; '
+    + '<span class="tabular"><b>' + s.fresh + '</b></span> fresh</p>';
+  root.appendChild(head);
+
+  root.appendChild(streakBanner());
+  root.appendChild(reviewCta());
+  var cc = continueCard();
+  if (cc) root.appendChild(cc);
+
+  var hh = el('h2', 'sec-head'); hh.textContent = 'Pick your ground';
+  root.appendChild(hh);
+  var grid = el('div', 'hub-grid');
+  for (var h = 0; h < HUBS.length; h++) {
+    (function (hh2) { grid.appendChild(hubTile(hh2, function () { goHub(hh2); })); })(h);
+  }
+  var vids = el('button', 'hub-tile hub-tile-wide press'); vids.type = 'button';
+  var totalVids = hubVideos(0).length + hubVideos(1).length + hubVideos(2).length;
+  vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
+  vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 30) + '</span>'
+    + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research, with lesson plans</small></span>'
+    + '<span class="hub-meta tabular">' + totalVids + ' videos</span>'
+    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
+  vids.addEventListener('click', function () {
+    state.tab = 'study';
+    state.study = { view: 'videos', hub: -1, topic: -1 };
+    render(); window.scrollTo(0, 0);
+  });
+  grid.appendChild(vids);
+  root.appendChild(grid);
+
+  var gh = el('h2', 'sec-head'); gh.textContent = 'Games';
+  root.appendChild(gh);
+  var gg = el('div', 'game-mini-grid');
+  gg.appendChild(gameMini('layers', 'linear-gradient(135deg,#2E86C1,#1B4F7A)', 'Flashcards', store.games.flash.sessions, 'sessions',
+    function () { scopeOptions(function (sc) { startSession('flash', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'flash', scope: sc } }); }); }));
+  gg.appendChild(gameMini('zap', 'linear-gradient(135deg,#F2A63B,#B3271E)', 'Blitz', store.games.blitz.best, 'best',
+    function () { scopeOptions(function (sc) { startSession('blitz', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'blitz', scope: sc } }); }); }));
+  gg.appendChild(gameMini('target', 'linear-gradient(135deg,#1E8A4C,#0E4A27)', 'Weak Spots', reviewItems().length, 'in queue',
+    function () {
+      var q = reviewItems();
+      if (!q.length) { openSheet('Queue\u2019s clear', 'Nothing to attack. Go drill something new and miss a few \u2014 that\u2019s how the queue gets fed.', []); return; }
+      startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Weak spots', { scopeRef: { type: 'weak' } });
+    }));
+  gg.appendChild(gameMini('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call', store.games.call.best, 'best', function () { startCallRun(); }));
+  gg.appendChild(gameMini('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam', store.games.exam.best, 'best', function () { startExamRun(); }));
+  gg.appendChild(gameMini('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math', store.games.calc.best, 'best', function () { startCalcRun(); }));
+  root.appendChild(gg);
+
+  var foot = el('div', 'foot');
+  foot.innerHTML = 'Roadmap: <b>Fire</b> &rarr; <b>Medical</b> &rarr; <b>Paramedic</b>. '
+    + 'Built for Phoenix firefighters, by one. Wrong answers get corrected &mdash; that&rsquo;s the job.';
+  root.appendChild(foot);
 }
 
 /* ============================================================
@@ -216,7 +421,10 @@ function topicCard(n) {
   var bar = el('div', 'tbar'); var fill = document.createElement('i');
   fill.style.width = (st.mastered / tp.cards.length * 100) + '%'; bar.appendChild(fill);
   b.appendChild(inner); b.appendChild(bar);
-  b.addEventListener('click', function () { state.study = { view: 'topic', topic: n }; render(); window.scrollTo(0, 0); });
+  b.addEventListener('click', function () {
+    state.study = { view: 'topic', hub: (state.tab === 'study' ? state.study.hub : -1), topic: n };
+    render(); window.scrollTo(0, 0);
+  });
   return b;
 }
 function soonCard(k) {
@@ -235,45 +443,115 @@ function soonCard(k) {
   return b;
 }
 function studyHome(root) {
-  var s = moduleStats();
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Phoenix FD &middot; Recruit to Probie</span>'
-    + '<h2>Put in the reps.</h2>'
-    + '<p><span class="tabular"><b>' + s.mastered + '</b></span> mastered &middot; '
-    + '<span class="tabular"><b>' + s.needsWork + '</b></span> need work &middot; '
-    + '<span class="tabular"><b>' + s.fresh + '</b></span> fresh</p>';
+  head.innerHTML = '<span class="kicker">Drill down</span><h2>Study</h2>'
+    + '<p>Pick a section, pick a topic, put in the reps.</p>';
   root.appendChild(head);
 
-  var q = reviewItems();
-  var rc = el('button', 'review-cta press'); rc.type = 'button';
-  rc.innerHTML = '<span class="pill tabular">' + q.length + '</span><span><h3>Review queue</h3><p>'
-    + (q.length ? q.length + ' card' + (q.length === 1 ? '' : 's') + ' waiting &mdash; get each one right twice in a row to clear it.'
-      : 'Mark a card &ldquo;Missed it&rdquo; and it lands here for extra reps.') + '</p></span>';
-  rc.disabled = !q.length;
-  if (q.length) rc.addEventListener('click', function () { startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Review queue', { scopeRef: { type: 'weak' } }); });
-  root.appendChild(rc);
+  for (var h = 0; h < HUBS.length; h++) {
+    (function (hh) {
+      var st = hubStats(hh), hub = HUBS[hh];
+      var b = el('button', 'hub-row press'); b.type = 'button';
+      b.setAttribute('aria-label', hub.title + ': ' + st.mastered + ' of ' + st.cards + ' drills mastered');
+      var pct = st.cards ? Math.round(st.mastered / st.cards * 100) : 0;
+      b.innerHTML = '<span class="hub-ico">' + icon(hub.icon, 28) + '</span>'
+        + '<span class="hub-t"><b>' + hub.title + '</b><small>' + hub.sub + ' &middot; <span class="tabular">' + st.cards + '</span> drills</small></span>'
+        + '<span class="hub-pct tabular">' + pct + '%</span>'
+        + '<span class="hub-bar"><i style="width:' + pct + '%"></i></span>';
+      b.addEventListener('click', function () { goHub(hh); });
+      root.appendChild(b);
+    })(h);
+  }
 
-  SECTIONS.forEach(function (sec) {
-    var drills = 0; sec.topics.forEach(function (n) { drills += TOPICS[n].cards.length; });
-    var h = el('h2', 'sec-head'); h.appendChild(document.createTextNode(sec.name + ' '));
-    h.appendChild(el('span', 'n', '\u2014 ' + drills + ' drill' + (drills === 1 ? '' : 's')));
-    root.appendChild(h);
-    if (sec.blurb) root.appendChild(el('p', 'sec-sub', sec.blurb));
-    sec.topics.forEach(function (n) { root.appendChild(topicCard(n)); });
-    sec.soon.forEach(function (k) { root.appendChild(soonCard(k)); });
+  var vids = el('button', 'hub-row press'); vids.type = 'button';
+  var totalVids = hubVideos(0).length + hubVideos(1).length + hubVideos(2).length;
+  vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
+  vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 28) + '</span>'
+    + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research &middot; <span class="tabular">' + totalVids + '</span> videos</small></span>'
+    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
+  vids.addEventListener('click', function () {
+    state.study = { view: 'videos', hub: -1, topic: -1 };
+    render(); window.scrollTo(0, 0);
+  });
+  root.appendChild(vids);
+}
+function hubView(root, h) {
+  var hub = HUBS[h], st = hubStats(h);
+  var back = el('div', 'backbar');
+  var bb = el('button', 'back press'); bb.type = 'button';
+  bb.innerHTML = icon('chevL', 20) + '<span>Study</span>';
+  bb.setAttribute('aria-label', 'Back to Study');
+  bb.addEventListener('click', function () { state.study = { view: 'home', hub: -1, topic: -1 }; render(); window.scrollTo(0, 0); });
+  back.appendChild(bb); root.appendChild(back);
+
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">' + hub.sub + '</span><h2>' + hub.title + '</h2>'
+    + '<p><span class="tabular"><b>' + st.mastered + '</b>/' + st.cards + '</span> mastered'
+    + (st.needsWork ? ' &middot; <span class="tabular"><b>' + st.needsWork + '</b></span> need work' : '') + '</p>';
+  root.appendChild(head);
+
+  var cta = el('div', 'drill-cta');
+  var start = el('button', 'btn block press', 'Drill ' + hub.title); start.type = 'button';
+  start.addEventListener('click', function () {
+    startSession('drill', hubQueue(h), hub.title + ' \u00b7 all topics', { scopeRef: { type: 'hub', h: h } });
+  });
+  cta.appendChild(start);
+  if (st.needsWork) {
+    var rw = el('button', 'btn ghost block press', 'Review mistakes (' + st.needsWork + ')'); rw.type = 'button';
+    rw.addEventListener('click', function () {
+      startSession('weak', hubMistakes(h), hub.title + ' \u00b7 mistakes', { scopeRef: { type: 'hubweak', h: h } });
+    });
+    cta.appendChild(rw);
+  }
+  root.appendChild(cta);
+
+  var th = el('h2', 'sec-head'); th.textContent = 'Topics';
+  root.appendChild(th);
+  hub.sections.forEach(function (si) {
+    SECTIONS[si].topics.forEach(function (n) { root.appendChild(topicCard(n)); });
+    SECTIONS[si].soon.forEach(function (k) { root.appendChild(soonCard(k)); });
   });
 
-  var foot = el('div', 'foot');
-  foot.innerHTML = 'Roadmap: <b>Academy</b> &rarr; <b>Probation Year</b> &rarr; <b>Medical</b>. '
-    + 'Built for Phoenix firefighters, by one. Wrong answers get corrected &mdash; that&rsquo;s the job.';
-  root.appendChild(foot);
+  var vs = hubVideos(h);
+  if (vs.length) {
+    var vh = el('h2', 'sec-head'); vh.textContent = 'Videos';
+    root.appendChild(vh);
+    vs.forEach(function (it) { root.appendChild(videoRow(it.v, it.n)); });
+  }
+}
+function videosView(root) {
+  var back = el('div', 'backbar');
+  var bb = el('button', 'back press'); bb.type = 'button';
+  bb.innerHTML = icon('chevL', 20) + '<span>Study</span>';
+  bb.setAttribute('aria-label', 'Back to Study');
+  bb.addEventListener('click', function () { state.study = { view: 'home', hub: -1, topic: -1 }; render(); window.scrollTo(0, 0); });
+  back.appendChild(bb); root.appendChild(back);
+
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">UL FSRI training</span><h2>Videos</h2>'
+    + '<p>The research behind the drills. Watch one before your next session.</p>';
+  root.appendChild(head);
+  HUBS.forEach(function (hub, h) {
+    var vs = hubVideos(h);
+    if (!vs.length) return;
+    var hh = el('h2', 'sec-head'); hh.textContent = hub.title;
+    root.appendChild(hh);
+    vs.forEach(function (it) { root.appendChild(videoRow(it.v, it.n)); });
+  });
 }
 function topicView(root, n) {
   var tp = TOPICS[n], st = topicStats(n);
+  var hubIdx = state.study.hub;
   var back = el('div', 'backbar');
   var bb = el('button', 'back press'); bb.type = 'button';
-  bb.innerHTML = icon('chevL', 20) + '<span>All topics</span>';
-  bb.addEventListener('click', function () { state.study = { view: 'home', topic: -1 }; render(); window.scrollTo(0, 0); });
+  var backLabel = hubIdx >= 0 ? HUBS[hubIdx].title : 'Study';
+  bb.innerHTML = icon('chevL', 20) + '<span></span>';
+  bb.querySelector('span').textContent = backLabel;
+  bb.setAttribute('aria-label', 'Back to ' + backLabel);
+  bb.addEventListener('click', function () {
+    state.study = hubIdx >= 0 ? { view: 'hub', hub: hubIdx, topic: -1 } : { view: 'home', hub: -1, topic: -1 };
+    render(); window.scrollTo(0, 0);
+  });
   back.appendChild(bb); root.appendChild(back);
 
   var head = el('div', 'view-head animate-fade-in');
@@ -382,8 +660,10 @@ function renderLesson(root, v, topicN) {
   f.appendChild(el('p', 'lp-fireground', L.fireground)); root.appendChild(f);
 }
 function renderStudy(root) {
+  if (state.sess) { renderSessionView(root); return; }
   if (state.study.view === 'topic' && state.study.topic >= 0) topicView(root, state.study.topic);
-  else if (state.sess) renderSessionView(root);
+  else if (state.study.view === 'hub' && state.study.hub >= 0) hubView(root, state.study.hub);
+  else if (state.study.view === 'videos') videosView(root);
   else studyHome(root);
 }
 
@@ -417,6 +697,8 @@ function buildQueueFor(ref) {
     return shuffle(q);
   }
   if (ref.type === 'weak') return shuffle(reviewItems().map(function (it) { return { t: it.t, i: it.i }; }));
+  if (ref.type === 'hub') return hubQueue(ref.h);
+  if (ref.type === 'hubweak') return hubMistakes(ref.h);
   if (ref.type === 'flash' || ref.type === 'blitz') return scopeCards(ref.scope);
   return [];
 }
@@ -458,7 +740,8 @@ function sessTop(root, s) {
 function exitSession() {
   stopSessionTimer();
   state.sess = null;
-  if (state.tab === 'games') render(); else { state.study = { view: 'home', topic: -1 }; render(); }
+  if (state.tab !== 'games' && state.tab !== 'home') state.study = { view: 'home', hub: -1, topic: -1 };
+  render();
   window.scrollTo(0, 0);
 }
 function cardTag(card, cur) {
@@ -544,6 +827,7 @@ function renderMCCard(root, s, cur, card) {
         else bb.classList.add('mc-dim');
       });
       var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
+      fb.setAttribute('role', 'status');
       fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong.') + '</b>';
       dc.appendChild(fb);
       showAnswer(ansBox, card);
@@ -610,7 +894,7 @@ function renderSessionDone(root, s) {
     startSession(s.mode, nq, s.scope, { scopeRef: s.scopeRef });
   });
   row.appendChild(again);
-  var back = el('button', 'btn ghost press', state.tab === 'games' ? 'Games hub' : 'All topics'); back.type = 'button';
+  var back = el('button', 'btn ghost press', state.tab === 'games' ? 'Games hub' : state.tab === 'home' ? 'Home' : 'Study'); back.type = 'button';
   back.addEventListener('click', exitSession);
   row.appendChild(back);
   wrap.appendChild(row);
@@ -698,15 +982,6 @@ function renderBlitzDone(root, s) {
 /* ============================================================
    GAMES TAB
    ============================================================ */
-function gameCard(ico, bg, title, desc, best, bestLabel, onTap) {
-  var b = el('button', 'game-card press'); b.type = 'button';
-  var gi = el('span', 'game-ico'); gi.style.background = bg; gi.innerHTML = icon(ico, 28);
-  var txt = el('span'); txt.appendChild(el('h3', null, title)); txt.appendChild(el('p', null, desc));
-  var bb = el('span', 'game-best'); bb.innerHTML = '<b class="tabular">' + best + '</b><span>' + bestLabel + '</span>';
-  b.appendChild(gi); b.appendChild(txt); b.appendChild(bb);
-  b.addEventListener('click', onTap);
-  return b;
-}
 function scopeOptions(onPick) {
   var opts = [{ label: 'All topics', sub: TOPICS.reduce(function (a, t) { return a + t.cards.length; }, 0) + ' cards \u2014 the full deck', scope: { type: 'all' } }];
   TOPICS.forEach(function (tp, n) {
@@ -715,6 +990,15 @@ function scopeOptions(onPick) {
   openSheet('Pick your battlefield', 'Where do you want the reps?', opts.map(function (o) {
     return { label: o.label, sub: o.sub, onPick: function () { onPick(o.scope); } };
   }));
+}
+function gameTile(ico, bg, title, desc, best, bestLabel, onTap) {
+  var b = el('button', 'game-tile press'); b.type = 'button';
+  b.setAttribute('aria-label', title + ' — ' + bestLabel + ' ' + best);
+  b.innerHTML = '<span class="gt-ico" style="background:' + bg + '">' + icon(ico, 30) + '</span>'
+    + '<b>' + title + '</b><span class="gt-desc">' + desc + '</span>'
+    + '<span class="gt-best tabular">' + best + ' <small>' + bestLabel + '</small></span>';
+  b.addEventListener('click', onTap);
+  return b;
 }
 function renderGames(root) {
   if (state.sess) { renderSessionView(root); return; }
@@ -726,40 +1010,37 @@ function renderGames(root) {
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
   root.appendChild(head);
 
-  root.appendChild(gameCard('layers', 'linear-gradient(135deg,#2E86C1,#1B4F7A)', 'Flashcards',
-    'Flip through the deck. Be honest \u2014 if you hesitated, you missed it.',
+  var grid = el('div', 'game-grid');
+  grid.appendChild(gameTile('layers', 'linear-gradient(135deg,#2E86C1,#1B4F7A)', 'Flashcards',
+    'Flip the deck. Hesitated? You missed it.',
     store.games.flash.sessions, 'sessions',
     function () { scopeOptions(function (sc) { startSession('flash', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'flash', scope: sc } }); }); }));
-
-  root.appendChild(gameCard('zap', 'linear-gradient(135deg,#F2A63B,#B3271E)', 'Blitz',
-    'Sixty seconds. Scenario up, gut answer, grade yourself. No thinking, no mercy.',
-    store.games.blitz.best, 'best score',
+  grid.appendChild(gameTile('zap', 'linear-gradient(135deg,#F2A63B,#B3271E)', 'Blitz',
+    '60 seconds. Gut answer. No mercy.',
+    store.games.blitz.best, 'best',
     function () { scopeOptions(function (sc) { startSession('blitz', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'blitz', scope: sc } }); }); }));
-
   var qn = reviewItems().length;
-  root.appendChild(gameCard('target', 'linear-gradient(135deg,#1E8A4C,#0E4A27)', 'Weak Spots',
-    'Your misses, on repeat, until they\u2019re not misses anymore.',
+  grid.appendChild(gameTile('target', 'linear-gradient(135deg,#1E8A4C,#0E4A27)', 'Weak Spots',
+    'Your misses, on repeat.',
     qn, 'in queue',
     function () {
       var q = reviewItems();
       if (!q.length) { openSheet('Queue\u2019s clear', 'Nothing to attack. Go drill something new and miss a few \u2014 that\u2019s how the queue gets fed.', []); return; }
       startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Weak spots', { scopeRef: { type: 'weak' } });
     }));
-
-  root.appendChild(gameCard('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call',
-    'Dispatch, vitals, and a patient going south. Read the numbers, make the call.',
-    store.games.call.best, 'best score',
+  grid.appendChild(gameTile('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call',
+    'Dispatch, vitals, make the call.',
+    store.games.call.best, 'best',
     function () { startCallRun(); }));
-
-  root.appendChild(gameCard('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam',
-    'Thirty random questions from the paramedic bank, shuffled like the real test. Misses go to Weak Spots.',
-    store.games.exam.best, 'best score',
+  grid.appendChild(gameTile('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam',
+    '30 paramedic questions, shuffled.',
+    store.games.exam.best, 'best',
     function () { startExamRun(); }));
-
-  root.appendChild(gameCard('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math',
-    'GCS, Apgar, and rule-of-nines — generated fresh every run. The test loves these.',
-    store.games.calc.best, 'best score',
+  grid.appendChild(gameTile('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math',
+    'GCS, Apgar, rule-of-nines.',
+    store.games.calc.best, 'best',
     function () { startCalcRun(); }));
+  root.appendChild(grid);
 }
 
 /* ============================================================
@@ -930,6 +1211,7 @@ function renderExamView(root) {
         else bb.classList.add('mc-dim');
       });
       var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
+      fb.setAttribute('role', 'status');
       fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + card.opts[0] + '.') + '</b>';
       dc.appendChild(fb);
       if (card.why) { var w = el('p', 'why', null); w.textContent = card.why; dc.appendChild(w); }
@@ -1039,7 +1321,7 @@ function renderCalcView(root) {
   row.appendChild(inp);
   if (p.unit) { var u = el('span', 'calc-unit', p.unit); row.appendChild(u); }
   dc.appendChild(row);
-  var fb = el('div', 'mc-feedback hidden'); dc.appendChild(fb);
+  var fb = el('div', 'mc-feedback hidden'); fb.setAttribute('role', 'status'); dc.appendChild(fb);
   root.appendChild(dc);
 
   var cta = el('div', 'drill-cta');
@@ -1096,19 +1378,7 @@ function renderCalcScore(root) {
 /* ============================================================
    VIDEOS TAB
    ============================================================ */
-function renderVideos(root) {
-  var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">UL FSRI training</span><h2>Videos</h2>'
-    + '<p>The research behind the drills. Watch one before your next session.</p>';
-  root.appendChild(head);
-  TOPICS.forEach(function (tp) {
-    if (!tp.videos || !tp.videos.length) return;
-    var h = el('h2', 'sec-head'); h.appendChild(document.createTextNode('Topic ' + tp.n + ' '));
-    h.appendChild(el('span', 'n', '\u2014 ' + tp.title));
-    root.appendChild(h);
-    tp.videos.forEach(function (v) { root.appendChild(videoRow(v, tp.n)); });
-  });
-}
+/* Videos now live under Study (hub view + video library). The old tab renderer is retired. */
 
 /* ============================================================
    PROGRESS TAB
@@ -1133,17 +1403,36 @@ function renderProgress(root) {
     + '<p style="margin:0;color:var(--th-ink-2);font-size:14px">' + (streak ? 'Keep it alive. One graded card a day is all it takes.' : 'Grade one card today and the streak starts.') + '</p></div></div>';
   root.appendChild(sc);
 
-  var th = el('h2', 'sec-head'); th.textContent = 'By topic';
+  var th = el('h2', 'sec-head'); th.textContent = 'By section';
   root.appendChild(th);
-  TOPICS.forEach(function (tp, n) {
-    var st = topicStats(n), pct = Math.round(st.mastered / tp.cards.length * 100);
-    var row = el('div', 'prow');
-    row.innerHTML = '<div class="t"><b>' + tp.title + '</b>'
-      + '<small class="tabular">' + st.mastered + '/' + tp.cards.length + ' mastered'
-      + (st.needsWork ? ' \u00b7 ' + st.needsWork + ' needs work' : '') + '</small>'
-      + '<div class="pbar"><i style="width:' + pct + '%"></i></div></div>'
-      + '<span class="ppct tabular">' + pct + '%</span>';
-    root.appendChild(row);
+  HUBS.forEach(function (hub, h) {
+    var hs = hubStats(h), hpct = hs.cards ? Math.round(hs.mastered / hs.cards * 100) : 0;
+    var hh = el('button', 'prog-hub press'); hh.type = 'button';
+    hh.setAttribute('aria-expanded', 'false');
+    hh.innerHTML = '<span class="hub-ico sm">' + icon(hub.icon, 22) + '</span>'
+      + '<span class="hub-t"><b>' + hub.title + '</b><small class="tabular">' + hs.mastered + '/' + hs.cards + ' mastered</small></span>'
+      + '<span class="hub-pct tabular">' + hpct + '%</span>'
+      + '<span class="prog-chev">' + icon('chevL', 18) + '</span>';
+    var list = el('div', 'prog-topics hidden');
+    hub.sections.forEach(function (si) {
+      SECTIONS[si].topics.forEach(function (n) {
+        var tp = TOPICS[n], st = topicStats(n), pct = Math.round(st.mastered / tp.cards.length * 100);
+        var row = el('div', 'prow');
+        row.innerHTML = '<div class="t"><b>' + tp.title + '</b>'
+          + '<small class="tabular">' + st.mastered + '/' + tp.cards.length + ' mastered'
+          + (st.needsWork ? ' \u00b7 ' + st.needsWork + ' needs work' : '') + '</small>'
+          + '<div class="pbar"><i style="width:' + pct + '%"></i></div></div>'
+          + '<span class="ppct tabular">' + pct + '%</span>';
+        list.appendChild(row);
+      });
+    });
+    hh.addEventListener('click', function () {
+      var open = list.classList.toggle('hidden');
+      hh.setAttribute('aria-expanded', String(!open));
+      hh.classList.toggle('open', !open);
+    });
+    root.appendChild(hh);
+    root.appendChild(list);
   });
 
   var q = reviewItems();
