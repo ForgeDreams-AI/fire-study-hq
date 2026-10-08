@@ -921,16 +921,14 @@ function renderGradeButtons(root, s, cur) {
   row.appendChild(miss); row.appendChild(got);
   root.appendChild(row);
 }
-/* one grading step — identical re-queue semantics to the original build */
+/* one grading step — correct answers move on; misses go to the end of the queue
+   and repeat until answered correctly once */
 function gradeStep(s, cur, ok) {
   s.queue.shift();
   if (ok) { s.got++; } else { s.miss++; }
   var newly = gradeCard(cur.t, cur.i, ok);
   if (newly) s.masteredNow++;
-  if (!isMastered(cur.t, cur.i)) {
-    if (ok) s.queue.splice(Math.min(2, s.queue.length), 0, cur);
-    else s.queue.push(cur);
-  }
+  if (!ok) s.queue.push(cur);
   s.revealed = false;
   if (!s.queue.length) s.done = true;
   render();
@@ -941,7 +939,7 @@ function renderSessionDone(root, s) {
   var allClear = s.miss === 0;
   wrap.innerHTML = '<h2>' + (allClear ? 'All clear.' : 'Run complete.') + '</h2><p>'
     + (allClear ? 'Nothing missed. That\u2019s the standard \u2014 hold it.'
-      : 'Missed cards come back until you get each one right twice in a row. No shortcuts.') + '</p>';
+      : 'Missed cards come back until you get each one right. No shortcuts.') + '</p>';
   var grid = el('div', 'stat-grid');
   grid.innerHTML = '<div class="stat g"><b class="tabular">' + s.masteredNow + '</b><span>mastered</span></div>'
     + '<div class="stat w"><b class="tabular">' + s.miss + '</b><span>miss marks</span></div>'
