@@ -308,7 +308,7 @@ function topicView(root, n) {
   if (tp.videos && tp.videos.length) {
     var vh = el('h2', 'sec-head'); vh.textContent = 'Videos';
     root.appendChild(vh);
-    tp.videos.forEach(function (v) { root.appendChild(videoRow(v)); });
+    tp.videos.forEach(function (v) { root.appendChild(videoRow(v, tp.n)); });
   }
 
   var cta = el('div', 'drill-cta');
@@ -331,14 +331,53 @@ function topicView(root, n) {
   }
   root.appendChild(cta);
 }
-function videoRow(v) {
+function videoRow(v, topicN) {
+  var card = el('div', 'vid-card');
   var a = el('a', 'vid-row press'); a.href = v.url; a.target = '_blank'; a.rel = 'noopener';
   var pl = el('span', 'vid-play'); pl.innerHTML = icon('play', 20);
-  var txt = el('span'); txt.appendChild(el('h4', null, v.title));
+  var txt = el('span', 'vid-txt'); txt.appendChild(el('h4', null, v.title));
   var p = el('p', null, v.desc || ''); txt.appendChild(p);
   a.appendChild(pl); a.appendChild(txt);
   if (v.dur) a.appendChild(el('span', 'dur-chip tabular', v.dur));
-  return a;
+  card.appendChild(a);
+  if (v.lesson) {
+    var tgl = el('button', 'vid-lp-toggle press'); tgl.type = 'button';
+    tgl.setAttribute('aria-expanded', 'false');
+    tgl.innerHTML = '<span class="vid-chev">' + icon('chevL', 16) + '</span><span>Lesson plan</span>';
+    var body = el('div', 'vid-lesson'); body.hidden = true;
+    renderLesson(body, v, topicN);
+    tgl.addEventListener('click', function () {
+      var open = body.hidden;
+      body.hidden = !open;
+      tgl.setAttribute('aria-expanded', String(open));
+      tgl.classList.toggle('open', open);
+    });
+    card.appendChild(tgl);
+    card.appendChild(body);
+  }
+  return card;
+}
+function renderLesson(root, v, topicN) {
+  var L = v.lesson;
+  function sec(title) { var s = el('div', 'lp-sec'); s.appendChild(el('h5', null, title)); return s; }
+  function bullets(items) { var u = el('ul'); items.forEach(function (t) { u.appendChild(el('li', null, t)); }); return u; }
+  var o = sec('Objectives'); o.appendChild(bullets(L.objectives)); root.appendChild(o);
+  var k = sec('Key takeaways'); k.appendChild(bullets(L.takeaways)); root.appendChild(k);
+  var d = sec('Drill questions');
+  L.drills.forEach(function (dr) {
+    var dc = el('div', 'dcard');
+    dc.appendChild(el('p', 'q', dr.q));
+    dc.appendChild(el('div', 'a-label', 'Correct action'));
+    dc.appendChild(el('p', 'a', dr.a));
+    dc.appendChild(el('div', 'why-label', 'Why'));
+    dc.appendChild(el('p', 'why', dr.why));
+    d.appendChild(dc);
+  });
+  var note = el('p', 'lp-note',
+    'These drill questions are also in the Topic ' + topicN + ' Study deck \u2014 the Progress tab tracks them.');
+  d.appendChild(note); root.appendChild(d);
+  var f = sec('On the fireground');
+  f.appendChild(el('p', 'lp-fireground', L.fireground)); root.appendChild(f);
 }
 function renderStudy(root) {
   if (state.study.view === 'topic' && state.study.topic >= 0) topicView(root, state.study.topic);
@@ -664,7 +703,7 @@ function renderVideos(root) {
     var h = el('h2', 'sec-head'); h.appendChild(document.createTextNode('Topic ' + tp.n + ' '));
     h.appendChild(el('span', 'n', '\u2014 ' + tp.title));
     root.appendChild(h);
-    tp.videos.forEach(function (v) { root.appendChild(videoRow(v)); });
+    tp.videos.forEach(function (v) { root.appendChild(videoRow(v, tp.n)); });
   });
 }
 

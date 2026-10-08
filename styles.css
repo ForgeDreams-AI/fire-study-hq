@@ -252,6 +252,22 @@ a { color: var(--th-primary); }
 
 /* ── Videos ───────────────────────────────────────────────────────── */
 .vid-row { display: flex; gap: 14px; align-items: center; width: 100%; text-align: left; color: var(--th-ink); background: var(--th-surface); border: 1px solid var(--th-line); border-radius: 14px; padding: 14px 16px; margin: 0 0 10px; text-decoration: none; box-shadow: var(--th-shadow); }
+.vid-card { margin: 0 0 10px; }
+.vid-card .vid-row { margin: 0; border-radius: 14px 14px 0 0; border-bottom: none; }
+.vid-lp-toggle { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 16px; background: var(--th-surface); border: 1px solid var(--th-line); border-top: none; border-radius: 0 0 14px 14px; color: var(--th-primary); font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; box-shadow: var(--th-shadow); }
+.vid-lp-toggle .vid-chev { display: inline-flex; transform: rotate(-90deg); transition: transform .18s ease; }
+.vid-lp-toggle.open { border-radius: 0; }
+.vid-lp-toggle.open .vid-chev { transform: rotate(90deg); }
+.vid-lesson { border: 1px solid var(--th-line); border-top: none; border-radius: 0 0 14px 14px; background: var(--th-surface-2); padding: 16px; box-shadow: var(--th-shadow); }
+.lp-sec { margin: 0 0 18px; }
+.lp-sec:last-child { margin-bottom: 0; }
+.lp-sec > h5 { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--th-ink-3); margin: 0 0 8px; }
+.lp-sec ul { margin: 0; padding-left: 20px; }
+.lp-sec li { margin: 0 0 6px; font-size: 15px; line-height: 1.5; }
+.lp-sec .dcard { margin-bottom: 10px; }
+.lp-sec .dcard:last-of-type { margin-bottom: 8px; }
+.lp-note { font-size: 13px; color: var(--th-ink-2); margin: 10px 0 0; }
+.lp-fireground { font-size: 15.5px; line-height: 1.6; margin: 0; }
 .vid-play { flex: none; width: 46px; height: 46px; border-radius: 50%; background: color-mix(in srgb, var(--th-primary) 12%, transparent); color: var(--th-primary); display: flex; align-items: center; justify-content: center; }
 .vid-row h4 { margin: 0 0 2px; font-size: 16.5px; font-weight: 700; }
 .vid-row p { margin: 0; font-size: 13.5px; color: var(--th-ink-2); }
