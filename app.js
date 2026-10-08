@@ -681,7 +681,7 @@ function startSession(mode, queue, scopeLabel, opts) {
   if (mode === 'drill' || mode === 'weak') {
     var h = hubOfScope(state.sess.scopeRef, state.sess.queue);
     state.sess.hub = h;
-    state.sess.style = opts.style || loadStylePref(h) || (h === 2 ? 'quiz' : 'recall');
+    state.sess.style = opts.style || loadStylePref(h) || (h === 2 || (state.sess.scopeRef && state.sess.scopeRef.type === 'topic' && state.sess.scopeRef.n === 12) ? 'quiz' : 'recall');
     state.sess.quizAvail = state.sess.queue.some(function (it) {
       var c = TOPICS[it.t].cards[it.i];
       return !!(c.mc && c.opts && c.opts.length >= 4);
