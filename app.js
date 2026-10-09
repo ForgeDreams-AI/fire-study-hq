@@ -427,8 +427,21 @@ function topicCard(n) {
   });
   return b;
 }
-function soonCard(k) {
-  var ph = SOON[k];
+function examPrepCard() {
+  var a = el('a', 'tcard press');
+  a.href = 'paramedic-exam-prep.html';
+  a.style.textDecoration = 'none';
+  a.setAttribute('aria-label', 'Paramedic Candidate Exam Prep: study guide, flashcards, and practice exams');
+  var inner = el('div', 'tcard-inner');
+  inner.appendChild(el('div', 'tnum', '\u2605'));
+  var txt = el('div');
+  txt.appendChild(el('h3', null, 'Paramedic Candidate Exam Prep'));
+  txt.appendChild(el('p', 'sub', 'Study guide \u00b7 Flashcards \u00b7 Practice exams'));
+  inner.appendChild(txt);
+  a.appendChild(inner);
+  return a;
+}
+function soonCard(k) {  var ph = SOON[k];
   var b = el('button', 'tcard soon press'); b.type = 'button';
   b.setAttribute('aria-label', ph.title + ': coming soon');
   var inner = el('div', 'tcard-inner');
@@ -507,6 +520,7 @@ function hubView(root, h) {
 
   var th = el('h2', 'sec-head'); th.textContent = 'Topics';
   root.appendChild(th);
+  if (h === 2) root.appendChild(examPrepCard());
   hub.sections.forEach(function (si) {
     SECTIONS[si].topics.forEach(function (n) { root.appendChild(topicCard(n)); });
     SECTIONS[si].soon.forEach(function (k) { root.appendChild(soonCard(k)); });
