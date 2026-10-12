@@ -25,7 +25,8 @@ var P = {
   zap: '<path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/>',
   refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>',
   cross: '<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>',
-  house: '<path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/>'
+  house: '<path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/>',
+  ext: '<path d="M14 4h6v6M20 4L11 13"/><path d="M19 13.5V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5.5"/>'
 };
 function icon(n, s) {
   s = s || 24;
@@ -154,7 +155,9 @@ var TABS = [
   { id: 'home', label: 'Home', icon: 'house' },
   { id: 'study', label: 'Study', icon: 'book' },
   { id: 'games', label: 'Games', icon: 'gamepad' },
-  { id: 'progress', label: 'Progress', icon: 'chart' }
+  { id: 'progress', label: 'Progress', icon: 'chart' },
+  { id: 'nfpa1700', label: 'NFPA 1700', icon: 'layers' },
+  { id: 'ulfsri', label: 'UL FSRI', icon: 'playcircle' }
 ];
 /* Hubs: drill-down groups over SECTIONS (data.js untouched). Fire merges Academy + Probation Year. */
 var HUBS = [
@@ -202,6 +205,8 @@ function render() {
   if (state.tab === 'home') renderHome(root);
   else if (state.tab === 'study') renderStudy(root);
   else if (state.tab === 'games') renderGames(root);
+  else if (state.tab === 'nfpa1700') renderNFPA1700(root);
+  else if (state.tab === 'ulfsri') renderULFSRI(root);
   else renderProgress(root);
 }
 
@@ -545,6 +550,10 @@ function videosView(root) {
   head.innerHTML = '<span class="kicker">UL FSRI training</span><h2>Videos</h2>'
     + '<p>The research behind the drills. Watch one before your next session.</p>';
   root.appendChild(head);
+  videoGroups(root);
+}
+/* Shared: all UL FSRI videos grouped by hub (used by Study > Videos and the UL FSRI tab). */
+function videoGroups(root) {
   HUBS.forEach(function (hub, h) {
     var vs = hubVideos(h);
     if (!vs.length) return;
@@ -552,6 +561,42 @@ function videosView(root) {
     root.appendChild(hh);
     vs.forEach(function (it) { root.appendChild(videoRow(it.v, it.n)); });
   });
+}
+/* ---------------- NFPA 1700 + UL FSRI tabs ---------------- */
+function extCard(title, desc, url, meta) {
+  var card = el('div', 'vid-card');
+  var a = el('a', 'vid-row press'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
+  var pl = el('span', 'vid-play'); pl.innerHTML = icon('ext', 20);
+  var txt = el('span', 'vid-txt'); txt.appendChild(el('h4', null, title));
+  txt.appendChild(el('p', null, desc)); a.appendChild(pl); a.appendChild(txt);
+  if (meta) a.appendChild(el('span', 'dur-chip tabular', meta));
+  card.appendChild(a);
+  return card;
+}
+function renderNFPA1700(root) {
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Science-based tactics</span><h2>NFPA 1700</h2>'
+    + '<p>Guide for Structural Fire Fighting \u2014 the first NFPA document connecting fire dynamics research to strategy, tactics, and best practices.</p>';
+  root.appendChild(head);
+
+  var th = el('h2', 'sec-head'); th.textContent = 'Free training'; root.appendChild(th);
+  root.appendChild(extCard(
+    'NFPA 1700 Online Training',
+    'Free 14-module course: 360\u00b0 3D fireground scenarios covering fire dynamics, strategy, tactics, and contamination reduction, ending with an exam.',
+    'https://www.nfpa.org/1700', 'Free'));
+
+  var sh = el('h2', 'sec-head'); sh.textContent = 'The standard'; root.appendChild(sh);
+  root.appendChild(extCard(
+    'Read NFPA 1700 (2026 edition)',
+    'Full text free on NFPA Link with a free account. 13 chapters: strategy, search, ventilation, suppression, and contamination control.',
+    'https://link.nfpa.org/free-access/publications/1700/2026', 'Free'));
+}
+function renderULFSRI(root) {
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Fire Safety Research Institute</span><h2>UL FSRI</h2>'
+    + '<p>The research behind the drills. Watch one before your next session.</p>';
+  root.appendChild(head);
+  videoGroups(root);
 }
 function topicView(root, n) {
   var tp = TOPICS[n], st = topicStats(n);
