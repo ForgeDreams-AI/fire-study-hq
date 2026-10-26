@@ -48,11 +48,11 @@ function cleanProg(p) {
   }
   return c;
 }
-function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 } }; }
+function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 }, scen: { plays: 0 } }; }
 function normGames(g) {
   var d = defaultGames();
   if (g && typeof g === 'object') {
-    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc'].forEach(function (k) {
+    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc', 'scen'].forEach(function (k) {
       if (g[k] && typeof g[k] === 'object') {
         Object.keys(d[k]).forEach(function (f) {
           var v = parseInt(g[k][f], 10);
@@ -155,6 +155,7 @@ var TABS = [
   { id: 'home', label: 'Home', icon: 'house' },
   { id: 'study', label: 'Study', icon: 'book' },
   { id: 'games', label: 'Games', icon: 'gamepad' },
+  { id: 'scenarios', label: 'Scenarios', icon: 'target' },
   { id: 'progress', label: 'Progress', icon: 'chart' },
   { id: 'nfpa1700', label: 'NFPA 1700', icon: 'layers' },
   { id: 'ulfsri', label: 'UL FSRI', icon: 'playcircle' }
@@ -176,6 +177,7 @@ function go(tab) {
   if (tab === 'study' && state.study.view === 'session') { /* session handles its own exit */ }
   state.sess = null;
   state.callRun = null;
+  state.scenRun = null;
   render();
   window.scrollTo(0, 0);
 }
@@ -205,6 +207,7 @@ function render() {
   if (state.tab === 'home') renderHome(root);
   else if (state.tab === 'study') renderStudy(root);
   else if (state.tab === 'games') renderGames(root);
+  else if (state.tab === 'scenarios') renderScenarios(root);
   else if (state.tab === 'nfpa1700') renderNFPA1700(root);
   else if (state.tab === 'ulfsri') renderULFSRI(root);
   else renderProgress(root);
@@ -347,6 +350,7 @@ function gameMini(ico, bg, title, best, bestLabel, onTap) {
 function renderHome(root) {
   if (state.sess) { renderSessionView(root); return; }
   if (state.callRun) { renderCallView(root); return; }
+  if (state.scenRun) { renderScenarioRun(root); return; }
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
 
@@ -382,6 +386,14 @@ function renderHome(root) {
     render(); window.scrollTo(0, 0);
   });
   grid.appendChild(vids);
+  var scen = el('button', 'hub-tile hub-tile-wide press'); scen.type = 'button';
+  scen.setAttribute('aria-label', 'Scenarios: ' + SCENARIOS.length + ' scenario');
+  scen.innerHTML = '<span class="hub-ico">' + icon('target', 30) + '</span>'
+    + '<span class="hub-t"><b>Scenarios</b><small>First-arriving size-ups from Sets &amp; Reps</small></span>'
+    + '<span class="hub-meta tabular">' + SCENARIOS.length + ' scenario</span>'
+    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
+  scen.addEventListener('click', function () { go('scenarios'); });
+  grid.appendChild(scen);
   root.appendChild(grid);
 
   var gh = el('h2', 'sec-head'); gh.textContent = 'Games';
@@ -1272,6 +1284,282 @@ function renderCallScore(root) {
   cta.appendChild(again); cta.appendChild(back);
   root.appendChild(cta);
   state.callRun = null;
+}
+/* ============================================================
+   SCENARIOS — first-arriving size-up game from Sets & Reps
+   No grading: every pick is just logged, and the run ends in a
+   debrief report that mirrors the player's own choices back in the
+   On Scene Report deck's framework. No scores, no pass/fail.
+   ============================================================ */
+function scenOptText(o) { return (typeof o === 'string') ? o : o.t; }
+function scenOptClears(o) { return (typeof o === 'string' || !o.c) ? [] : o.c; }
+function startScenRun(i) {
+  state.scenRun = { scen: i, pos: 0, log: [], reported: false };
+  touchDay();
+  render();
+  window.scrollTo(0, 0);
+}
+function endScenRun() { state.scenRun = null; render(); window.scrollTo(0, 0); }
+function scenLog(run, label, pick, clears, unit) {
+  run.log.push({ label: label, pick: pick, clears: clears || [], unit: unit || null });
+}
+function renderScenarios(root) {
+  if (state.scenRun) { renderScenarioRun(root); return; }
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">The game</span><h2>Scenarios</h2>'
+    + '<p>Pick a scene, make the calls, move on the picture. No grading &mdash; the debrief at the end mirrors your run back to you.</p>';
+  root.appendChild(head);
+  var legend = el('div', 'card');
+  legend.innerHTML = '<p style="margin:0 0 6px;font-size:14px"><b>How to read the game:</b></p>'
+    + '<p style="margin:0 0 4px;font-size:14px"><span style="color:#1E8A4C">\u25cf</span> Green arrows move you &nbsp; '
+    + '<span style="color:#2E86C1">\u25a0</span> Blue boxes aim water &nbsp; '
+    + '<span style="color:#6C3483">\u25cf</span> Purple options place units &nbsp; '
+    + '<span style="color:#B7791F">\u25cf</span> Amber options are size-up questions</p>';
+  root.appendChild(legend);
+  SCENARIOS.forEach(function (sc, i) {
+    var b = el('button', 'tcard press'); b.type = 'button';
+    b.setAttribute('aria-label', sc.title);
+    var inner = el('div', 'tcard-inner');
+    inner.appendChild(el('div', 'tnum', String(i + 1)));
+    var txt = el('div');
+    txt.appendChild(el('h3', null, sc.title));
+    txt.appendChild(el('p', 'sub', sc.sub + ' \u00b7 ' + sc.steps.length + ' beats'));
+    inner.appendChild(txt);
+    var prog = el('div', 'tprog');
+    prog.appendChild(el('small', null, 'Played ' + store.games.scen.plays + ' time' + (store.games.scen.plays === 1 ? '' : 's')));
+    inner.appendChild(prog);
+    b.appendChild(inner);
+    b.addEventListener('click', function () { startScenRun(i); });
+    root.appendChild(b);
+  });
+}
+function scenStepVisible(step, run) {
+  if (!step.showIf) return true;
+  var e = scenFindLog(run, step.showIf.label);
+  return !!e && e.pick.toLowerCase().indexOf(step.showIf.match.toLowerCase()) >= 0;
+}
+function renderScenarioRun(root) {
+  var run = state.scenRun;
+  var sc = SCENARIOS[run.scen];
+  while (run.pos < sc.steps.length && !scenStepVisible(sc.steps[run.pos], run)) { run.pos++; }
+  if (run.pos >= sc.steps.length) { renderScenarioReport(root); return; }
+  var step = sc.steps[run.pos];
+
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Scenarios</span><h2>' + sc.title + '</h2>'
+    + '<p>Beat ' + (run.pos + 1) + ' of ' + sc.steps.length + '</p>';
+  root.appendChild(head);
+
+  var disp = el('div', 'call-dispatch');
+  disp.innerHTML = '<span class="call-dispatch-tag">DISPATCH</span><p></p>';
+  disp.querySelector('p').textContent = sc.dispatch;
+  root.appendChild(disp);
+
+  var stage = el('div', 'scen-stage');
+  var img = document.createElement('img');
+  img.className = 'scen-img';
+  img.src = sc.image;
+  img.alt = sc.imageAlt;
+  stage.appendChild(img);
+  if (step.hotspots) {
+    sc.hotspots.forEach(function (h) {
+      if (h.kind === 'spray') {
+        var box = el('button', 'scen-spray press'); box.type = 'button';
+        box.style.left = (h.x - h.w / 2) + '%';
+        box.style.top = (h.y - h.h / 2) + '%';
+        box.style.width = h.w + '%';
+        box.style.height = h.h + '%';
+        box.setAttribute('aria-label', h.label + (h.note ? ': ' + h.note : ''));
+        var lab = el('span', null, h.label);
+        box.appendChild(lab);
+        box.addEventListener('click', function () {
+          scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
+          run.pos++;
+          render(); window.scrollTo(0, 0);
+        });
+        stage.appendChild(box);
+      } else {
+        var b = el('button', 'scen-hotspot scen-move press'); b.type = 'button';
+        b.style.left = h.x + '%';
+        b.style.top = h.y + '%';
+        b.textContent = '\u27a4 ' + h.label;
+        b.setAttribute('aria-label', h.label + (h.note ? ': ' + h.note : ''));
+        b.addEventListener('click', function () {
+          scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
+          run.pos++;
+          render(); window.scrollTo(0, 0);
+        });
+        stage.appendChild(b);
+      }
+    });
+  }
+  root.appendChild(stage);
+
+  if (run.pos === 0) {
+    var nar = el('div', 'card call-narr');
+    nar.innerHTML = '<p></p>';
+    nar.querySelector('p').textContent = sc.arrival;
+    root.appendChild(nar);
+  }
+
+  root.appendChild(el('h2', 'sec-head', step.label));
+  var qcard = el('div', 'card');
+  qcard.innerHTML = '<p style="margin:0"></p>';
+  qcard.querySelector('p').textContent = step.q;
+  root.appendChild(qcard);
+
+  if (step.hotspots) {
+    var hint = el('p', null, 'Tap a marker on the picture \u2014 green arrows move you, blue boxes aim water.');
+    hint.style.color = 'var(--th-ink-2)';
+    hint.style.fontSize = '14px';
+    root.appendChild(hint);
+  } else {
+    var opts = el('div', 'call-opts');
+    step.opts.forEach(function (opt) {
+      var b = el('button', 'call-opt press' + (step.cat ? ' opt-' + step.cat : '')); b.type = 'button';
+      b.textContent = scenOptText(opt);
+      b.addEventListener('click', function () {
+        scenLog(run, step.label, scenOptText(opt), scenOptClears(opt), step.unit || null);
+        run.pos++;
+        render(); window.scrollTo(0, 0);
+      });
+      opts.appendChild(b);
+    });
+    root.appendChild(opts);
+  }
+
+  if (run.log.length) {
+    root.appendChild(el('h2', 'sec-head', 'Your log so far'));
+    var logCard = el('div', 'card');
+    run.log.forEach(function (entry, li) {
+      var p = el('p', null, null);
+      p.style.margin = '0 0 6px';
+      p.style.fontSize = '14px';
+      p.textContent = (li + 1) + '. ' + entry.label + ' \u2014 ' + entry.pick;
+      logCard.appendChild(p);
+    });
+    root.appendChild(logCard);
+  }
+
+  var quit = el('div', 'drill-cta');
+  var qb = el('button', 'btn ghost block press', 'Quit run');
+  qb.type = 'button';
+  qb.addEventListener('click', endScenRun);
+  quit.appendChild(qb);
+  root.appendChild(quit);
+}
+function scenFindLog(run, label) {
+  for (var i = 0; i < run.log.length; i++) if (run.log[i].label === label) return run.log[i];
+  return null;
+}
+function scenSection(root, title, bodyText) {
+  root.appendChild(el('h2', 'sec-head', title));
+  var card = el('div', 'card');
+  var p = el('p', null, null);
+  p.style.margin = '0';
+  p.textContent = bodyText;
+  card.appendChild(p);
+  root.appendChild(card);
+}
+function renderScenarioReport(root) {
+  var run = state.scenRun, sc = SCENARIOS[run.scen];
+  if (!run.reported) { store.games.scen.plays++; saveStore(); run.reported = true; }
+
+  var head = el('div', 'view-head animate-fade-in');
+  head.innerHTML = '<span class="kicker">Debrief</span><h2>' + sc.title + ' \u2014 debrief</h2>'
+    + '<p>Review, not a grade. This is what you did, organized the way the On Scene Report deck teaches it.</p>';
+  root.appendChild(head);
+
+  function pickText(label) {
+    var e = scenFindLog(run, label);
+    return e ? e.pick : 'Not picked.';
+  }
+  scenSection(root, 'Fireground factors', pickText('Fireground factors'));
+  scenSection(root, 'Risk profile', pickText('Risk profile'));
+  scenSection(root, 'Strategy', pickText('Strategy'));
+  scenSection(root, 'Incident action plan', pickText('Incident action plan'));
+  scenSection(root, 'Tactical priorities', pickText('Tactical priorities'));
+  scenSection(root, 'On-scene report', pickText('On-scene report'));
+  scenSection(root, 'Initial 3 & 1', pickText('Initial 3 & 1'));
+
+  function pickLatest(labels) {
+    var found = null;
+    run.log.forEach(function (e) { if (labels.indexOf(e.label) >= 0) found = e; });
+    return found ? found.pick : 'Not picked.';
+  }
+  scenSection(root, 'Victim status', pickLatest(['Victim status', 'Victim status (update)']));
+  scenSection(root, 'What\u2019s happening inside?', pickLatest(['What\u2019s happening inside?', 'What\u2019s happening inside? (update)']));
+
+  root.appendChild(el('h2', 'sec-head', 'The 3 clears'));
+  ['All Clear', 'Fire Control', 'Loss Stopped'].forEach(function (clear) {
+    var card = el('div', 'card');
+    var h = el('h4', null, clear);
+    h.style.margin = '0 0 8px';
+    card.appendChild(h);
+    var found = false;
+    run.log.forEach(function (entry) {
+      if (entry.clears.indexOf(clear) >= 0) {
+        found = true;
+        var p = el('p', null, null);
+        p.style.margin = '0 0 6px';
+        p.style.fontSize = '14px';
+        p.textContent = (entry.unit || entry.label) + ' \u2014 ' + entry.pick;
+        card.appendChild(p);
+      }
+    });
+    if (!found) {
+      var none = el('p', null, null);
+      none.style.margin = '0';
+      none.style.fontSize = '14px';
+      none.style.color = 'var(--th-ink-2)';
+      none.textContent = 'Nothing assigned to this.';
+      card.appendChild(none);
+    }
+    root.appendChild(card);
+  });
+
+  scenSection(root, 'Crew of 4', pickText('Crew of 4'));
+
+  root.appendChild(el('h2', 'sec-head', 'Other units'));
+  var unitsCard = el('div', 'card');
+  var anyUnit = false;
+  run.log.forEach(function (entry) {
+    if (entry.unit) {
+      anyUnit = true;
+      var p = el('p', null, null);
+      p.style.margin = '0 0 6px';
+      p.style.fontSize = '14px';
+      p.textContent = entry.unit + ' \u2014 ' + entry.pick;
+      unitsCard.appendChild(p);
+    }
+  });
+  if (!anyUnit) {
+    var nu = el('p', null, null);
+    nu.style.margin = '0';
+    nu.style.fontSize = '14px';
+    nu.textContent = 'No other units assigned.';
+    unitsCard.appendChild(nu);
+  }
+  root.appendChild(unitsCard);
+
+  root.appendChild(el('h2', 'sec-head', 'Everything, in order'));
+  var allCard = el('div', 'card');
+  run.log.forEach(function (entry, li) {
+    var p = el('p', null, null);
+    p.style.margin = '0 0 6px';
+    p.style.fontSize = '14px';
+    p.textContent = (li + 1) + '. ' + entry.label + ' \u2014 ' + entry.pick;
+    allCard.appendChild(p);
+  });
+  root.appendChild(allCard);
+
+  var cta = el('div', 'drill-cta');
+  var again = el('button', 'btn block press', 'Run it again'); again.type = 'button';
+  again.addEventListener('click', function () { startScenRun(run.scen); });
+  var back = el('button', 'btn ghost block press', 'Back to Scenarios'); back.type = 'button';
+  back.addEventListener('click', endScenRun);
+  cta.appendChild(again); cta.appendChild(back);
+  root.appendChild(cta);
 }
 function scopeLabel(sc) {
   return sc.type === 'all' ? 'All topics' : 'Topic ' + TOPICS[sc.n].n + ' \u00b7 ' + TOPICS[sc.n].title;
