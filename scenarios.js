@@ -59,7 +59,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture \u2014 green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -331,7 +331,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -353,7 +353,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -651,7 +651,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -673,7 +673,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -972,7 +972,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -995,7 +995,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -1305,7 +1305,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -1328,7 +1328,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -1637,7 +1637,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -1660,7 +1660,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -1970,7 +1970,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -1992,7 +1992,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -2303,7 +2303,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]
@@ -2326,7 +2326,7 @@ var SCENARIOS = [
     steps: [
       {
         label: 'Approach',
-        q: 'You pull up. Where do you go first? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'You pull up. Where do you go first? Tap a number on the picture or pick from the list.',
         hotspots: true
       },
       {
@@ -2636,7 +2636,7 @@ var SCENARIOS = [
       },
       {
         label: 'Reposition',
-        q: 'Conditions have changed. Where do you go now? Tap a marker on the picture — green arrows move you, blue boxes aim water.',
+        q: 'Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.',
         hotspots: true
       }
     ]

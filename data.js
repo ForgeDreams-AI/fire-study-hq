@@ -88,7 +88,7 @@ var DIAGS = {
 + wallPath(14,198,214,198)+FLAME(112,196,1.05)
 +'<text x="114" y="230" text-anchor="middle" class="dlbl" style="font-size:14px">VENTILATION-LIMITED</text>'
 +'<text x="114" y="248" text-anchor="middle" class="dlbl--xs">oxygen-starved · fuel-rich · high heat</text>'
-+'<text x="114" y="264" text-anchor="middle" class="dlbl--xs">airtight — small flames, thick dark smoke</text>'
++'<text x="114" y="264" text-anchor="middle" class="dlbl--xs">small flames · thick dark smoke</text>'
 +'<rect x="240" y="8" width="212" height="196" fill="none" stroke="#5c564a" stroke-width="2"/>'
 +'<line x1="446" y1="40" x2="446" y2="96" stroke="#d9cfb8" stroke-width="4"/><line x1="446" y1="96" x2="446" y2="128" stroke="#d9cfb8" stroke-width="4" opacity="0"/>'
 +'<line x1="446" y1="60" x2="446" y2="100" stroke="#d9cfb8" stroke-width="2" opacity=".35"/>'
@@ -100,7 +100,7 @@ var DIAGS = {
 +'<path d="M430 142 C 406 140 392 146 378 156" fill="none" stroke="#ff8c42" stroke-width="3" marker-end="url(#d2-o)"/>'
 +'<text x="440" y="150" text-anchor="end" class="dlbl--xs" style="fill:#ff8c42">fresh air rushes in</text>'
 +'<text x="346" y="230" text-anchor="middle" class="dlbl" style="font-size:14px">SECONDS AFTER VENTILATION</text>'
-+'<text x="346" y="248" text-anchor="middle" class="dlbl--xs">window opened — rapid violent fire growth</text></svg>';},
++'<text x="346" y="248" text-anchor="middle" class="dlbl--xs">rapid, violent fire growth</text></svg>';},
 
 /*t1d3*/ t1d3:function(){return '<svg viewBox="0 0 460 300" role="img" aria-label="Firefighter flowing a straight stream through a doorway with air-entrainment arrows">'+mdefs('d3')
 +wallPath(344,24,344,96)+wallPath(344,232,344,276)+'<line x1="344" y1="24" x2="344" y2="276" stroke="#d9cfb8" stroke-width="2" opacity=".25"/>'
@@ -265,7 +265,7 @@ return '<svg viewBox="0 0 460 330" role="img" aria-label="Firefighter with SCBA 
 +'<text x="230" y="46" text-anchor="middle" class="dlbl--xs">verify before every entry</text>'
 +FIG(230,318,2.4,{scba:true,mask:true})
 +lead(201,157,198,152)+'<text x="198" y="154" text-anchor="end" class="dlbl--sm">HUD — WORKING</text>'
-+lead(214,208,198,204)+'<text x="198" y="206" text-anchor="end" class="dlbl--sm">CYL. PRESSURE — CHECK: FULL</text>'
++lead(214,208,198,204)+'<text x="198" y="206" text-anchor="end" class="dlbl--sm">CYLINDER — FULL</text>'
 +lead(223,253,198,254)+'<text x="198" y="256" text-anchor="end" class="dlbl--sm">PASS — ARMED</text>'
 +lead(237,217,262,212)+'<text x="268" y="214" class="dlbl--sm">REGULATOR</text>'
 +lead(230,172,262,172)+'<text x="268" y="172" class="dlbl--sm">FACEPIECE — SEAL CHECK</text>'
@@ -277,8 +277,8 @@ return '<svg viewBox="0 0 460 330" role="img" aria-label="Firefighter with SCBA 
 +'<rect x="163" y="62" width="138" height="62" rx="0" fill="#d9a441"/>'
 +'<rect x="301" y="62" width="138" height="62" rx="8" fill="#d2361f"/>'
 +'<line x1="163" y1="66" x2="163" y2="120" stroke="#101614" stroke-width="3"/><line x1="301" y1="66" x2="301" y2="120" stroke="#101614" stroke-width="3"/>'
-+'<text x="94" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#0c1a10">WORK YOUR WAY IN</text>'
-+'<text x="232" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#211a08">WORK YOUR WAY OUT</text>'
++'<text x="94" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#0c1a10">WORK IN</text>'
++'<text x="232" y="99" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#211a08">WORK OUT</text>'
 +'<text x="370" y="93" text-anchor="middle" class="dlbl" style="font-size:15px;fill:#fff">RESERVE</text>'
 +'<text x="370" y="114" text-anchor="middle" style="font-size:11px;font-family:Barlow,sans-serif;fill:#fff">alarm = EXIT NOW</text>'
 +'<text x="230" y="158" text-anchor="middle" class="dlbl--xs">alarm means EXIT NOW — not working time</text>'

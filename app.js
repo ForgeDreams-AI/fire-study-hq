@@ -158,16 +158,24 @@ var TABS = [
   { id: 'study', label: 'Study', icon: 'book' },
   { id: 'games', label: 'Games', icon: 'gamepad' },
   { id: 'scenarios', label: 'Scenarios', icon: 'target' },
-  { id: 'progress', label: 'Progress', icon: 'chart' },
-  { id: 'nfpa1700', label: 'NFPA 1700', icon: 'layers' },
-  { id: 'ulfsri', label: 'UL FSRI', icon: 'playcircle' }
+  { id: 'progress', label: 'Progress', icon: 'chart' }
 ];
+/* NFPA 1700 and UL FSRI live inside Study now; their pages still use these tab ids. */
+var SUBTAB_PARENT = { nfpa1700: 'study', ulfsri: 'study' };
 /* Hubs: drill-down groups over SECTIONS (data.js untouched). Fire merges Academy + Probation Year. */
 var HUBS = [
   { title: 'Fire', sub: 'Academy foundations', icon: 'flame', sections: [0, 1] },
   { title: 'Medical', sub: 'Patient care', icon: 'cross', sections: [2] },
   { title: 'Paramedic', sub: 'Candidate exam', icon: 'book', sections: [3] }
 ];
+/* Display numbers follow reading order: Fire 1..n, then Medical, then Paramedic.
+   tp.n is display-only; progress and scopes use the TOPICS array index. */
+var TOPIC_COUNT = 0;
+HUBS.forEach(function (hub) {
+  hub.sections.forEach(function (si) {
+    SECTIONS[si].topics.forEach(function (n) { TOPICS[n].n = ++TOPIC_COUNT; });
+  });
+});
 var state = { tab: 'home', study: { view: 'home', hub: -1, topic: -1 }, sess: null };
 
 function stopSessionTimer() {
@@ -187,10 +195,11 @@ function renderTabbar() {
   var bar = document.getElementById('tabbar');
   bar.innerHTML = '';
   TABS.forEach(function (t) {
-    var b = el('button', 'tab press' + (state.tab === t.id ? ' active' : ''));
+    var cur = SUBTAB_PARENT[state.tab] || state.tab;
+    var b = el('button', 'tab press' + (cur === t.id ? ' active' : ''));
     b.type = 'button';
     b.setAttribute('aria-label', t.label);
-    b.setAttribute('aria-current', state.tab === t.id ? 'page' : 'false');
+    b.setAttribute('aria-current', cur === t.id ? 'page' : 'false');
     b.innerHTML = icon(t.icon, 25) + '<span>' + t.label + '</span><span class="dot"></span>';
     b.addEventListener('click', function () { go(t.id); });
     bar.appendChild(b);
@@ -390,10 +399,10 @@ function renderHome(root) {
   });
   grid.appendChild(vids);
   var scen = el('button', 'hub-tile hub-tile-wide press'); scen.type = 'button';
-  scen.setAttribute('aria-label', 'Scenarios: ' + SCENARIOS.length + ' scenario');
+  scen.setAttribute('aria-label', 'Scenarios: ' + SCENARIOS.length + ' scenarios');
   scen.innerHTML = '<span class="hub-ico">' + icon('target', 30) + '</span>'
     + '<span class="hub-t"><b>Scenarios</b><small>First-arriving size-ups from Sets &amp; Reps</small></span>'
-    + '<span class="hub-meta tabular">' + SCENARIOS.length + ' scenario</span>'
+    + '<span class="hub-meta tabular">' + SCENARIOS.length + (SCENARIOS.length === 1 ? ' scenario' : ' scenarios') + '</span>'
     + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
   scen.addEventListener('click', function () { go('scenarios'); });
   grid.appendChild(scen);
@@ -507,6 +516,11 @@ function studyHome(root) {
     render(); window.scrollTo(0, 0);
   });
   root.appendChild(vids);
+
+  var rh = el('h2', 'sec-head'); rh.textContent = 'Reference';
+  root.appendChild(rh);
+  root.appendChild(studyLinkRow('layers', 'NFPA 1700', 'Science-based structural firefighting guide', function () { go('nfpa1700'); }));
+  root.appendChild(studyLinkRow('playcircle', 'UL FSRI', 'The research behind the drills', function () { go('ulfsri'); }));
 }
 function hubView(root, h) {
   var hub = HUBS[h], st = hubStats(h);
@@ -550,8 +564,30 @@ function hubView(root, h) {
   if (vs.length) {
     var vh = el('h2', 'sec-head'); vh.textContent = 'Videos';
     root.appendChild(vh);
-    vs.forEach(function (it) { root.appendChild(videoRow(it.v, it.n)); });
+    root.appendChild(studyLinkRow('playcircle', 'Training videos', vs.length + ' videos with lesson plans', function () {
+      state.study = { view: 'videos', hub: -1, topic: -1 };
+      render(); window.scrollTo(0, 0);
+    }));
   }
+}
+function studyLinkRow(ic, title, sub, onTap) {
+  var b = el('button', 'hub-row press'); b.type = 'button';
+  b.setAttribute('aria-label', title);
+  b.innerHTML = '<span class="hub-ico">' + icon(ic, 28) + '</span>'
+    + '<span class="hub-t"><b></b><small></small></span>'
+    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
+  b.querySelector('b').textContent = title;
+  b.querySelector('small').textContent = sub;
+  b.addEventListener('click', onTap);
+  return b;
+}
+function subtabBack(root) {
+  var back = el('div', 'backbar');
+  var bb = el('button', 'back press'); bb.type = 'button';
+  bb.innerHTML = icon('chevL', 20) + '<span>Study</span>';
+  bb.setAttribute('aria-label', 'Back to Study');
+  bb.addEventListener('click', function () { state.study = { view: 'home', hub: -1, topic: -1 }; go('study'); });
+  back.appendChild(bb); root.appendChild(back);
 }
 function videosView(root) {
   var back = el('div', 'backbar');
@@ -589,6 +625,7 @@ function extCard(title, desc, url, meta) {
   return card;
 }
 function renderNFPA1700(root) {
+  subtabBack(root);
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Science-based tactics</span><h2>NFPA 1700</h2>'
     + '<p>Guide for Structural Fire Fighting \u2014 the first NFPA document connecting fire dynamics research to strategy, tactics, and best practices.</p>';
@@ -607,6 +644,7 @@ function renderNFPA1700(root) {
     'https://link.nfpa.org/free-access/publications/1700/2026', 'Free'));
 }
 function renderULFSRI(root) {
+  subtabBack(root);
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Fire Safety Research Institute</span><h2>UL FSRI</h2>'
     + '<p>The research behind the drills. Watch one before your next session.</p>';
@@ -629,7 +667,7 @@ function topicView(root, n) {
   back.appendChild(bb); root.appendChild(back);
 
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Topic ' + tp.n + ' of ' + TOPICS.length + '</span>'
+  head.innerHTML = '<span class="kicker">Topic ' + tp.n + ' of ' + TOPIC_COUNT + '</span>'
     + '<h2>' + tp.title + '</h2><p>' + tp.sub + '</p>'
     + '<p style="margin-top:8px"><span class="tabular"><b>' + st.mastered + '</b>/' + tp.cards.length + '</span> mastered'
     + (st.needsWork ? ' &middot; <span class="tabular"><b>' + st.needsWork + '</b></span> need work' : '') + '</p>';
@@ -907,7 +945,7 @@ function renderStudyCard(root, s) {
   dc.appendChild(el('p', 'q', card.q));
   if (card.mc && card.opts) {
     var ol = el('div', 'mc-list');
-    card.opts.forEach(function (o) { var li = el('div', 'mc-static'); li.textContent = o; ol.appendChild(li); });
+    shuffleIdx(card.opts.length).forEach(function (oi) { var li = el('div', 'mc-static'); li.textContent = card.opts[oi]; ol.appendChild(li); });
     dc.appendChild(ol);
   }
   var ansBox = el('div', 'hidden'); dc.appendChild(ansBox);
@@ -1314,7 +1352,7 @@ function renderScenarios(root) {
   root.appendChild(head);
   var legend = el('div', 'card');
   legend.innerHTML = '<p style="margin:0 0 6px;font-size:14px"><b>How to read the game:</b></p>'
-    + '<p style="margin:0 0 4px;font-size:14px"><span style="color:#1E8A4C">\u25cf</span> Green arrows move you &nbsp; '
+    + '<p style="margin:0 0 4px;font-size:14px"><span style="color:#1E8A4C">\u25cf</span> Green pins move you &nbsp; '
     + '<span style="color:#2E86C1">\u25a0</span> Blue boxes aim water &nbsp; '
     + '<span style="color:#6C3483">\u25cf</span> Purple options place units &nbsp; '
     + '<span style="color:#B7791F">\u25cf</span> Amber options are size-up questions</p>';
@@ -1364,36 +1402,43 @@ function renderScenarioRun(root) {
   img.src = sc.image;
   img.alt = sc.imageAlt;
   stage.appendChild(img);
+  var choiceList = null;
   if (step.hotspots) {
-    sc.hotspots.forEach(function (h) {
+    // Numbered pins on the picture + full-width labeled choices below.
+    // Labels never sit on the photo, so they can't pile on top of each other.
+    choiceList = el('div', 'scen-choices');
+    sc.hotspots.forEach(function (h, hi) {
+      var num = String(hi + 1);
+      var pick = function () {
+        scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
+        run.pos++;
+        render(); window.scrollTo(0, 0);
+      };
+      var aria = num + '. ' + h.label + (h.note ? ': ' + h.note : '');
+      var pin;
       if (h.kind === 'spray') {
-        var box = el('button', 'scen-spray press'); box.type = 'button';
-        box.style.left = (h.x - h.w / 2) + '%';
-        box.style.top = (h.y - h.h / 2) + '%';
-        box.style.width = h.w + '%';
-        box.style.height = h.h + '%';
-        box.setAttribute('aria-label', h.label + (h.note ? ': ' + h.note : ''));
-        var lab = el('span', null, h.label);
-        box.appendChild(lab);
-        box.addEventListener('click', function () {
-          scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
-          run.pos++;
-          render(); window.scrollTo(0, 0);
-        });
-        stage.appendChild(box);
+        pin = el('button', 'scen-spray press'); pin.type = 'button';
+        pin.style.left = (h.x - h.w / 2) + '%';
+        pin.style.top = (h.y - h.h / 2) + '%';
+        pin.style.width = h.w + '%';
+        pin.style.height = h.h + '%';
+        pin.appendChild(el('span', 'scen-pin-num', num));
       } else {
-        var b = el('button', 'scen-hotspot scen-move press'); b.type = 'button';
-        b.style.left = h.x + '%';
-        b.style.top = h.y + '%';
-        b.textContent = '\u27a4 ' + h.label;
-        b.setAttribute('aria-label', h.label + (h.note ? ': ' + h.note : ''));
-        b.addEventListener('click', function () {
-          scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
-          run.pos++;
-          render(); window.scrollTo(0, 0);
-        });
-        stage.appendChild(b);
+        pin = el('button', 'scen-pin press', num); pin.type = 'button';
+        pin.style.left = h.x + '%';
+        pin.style.top = h.y + '%';
       }
+      pin.setAttribute('aria-label', aria);
+      pin.addEventListener('click', pick);
+      stage.appendChild(pin);
+
+      var row = el('button', 'scen-choice press ' + (h.kind === 'spray' ? 'spray' : 'move')); row.type = 'button';
+      row.innerHTML = '<span class="scen-choice-num"></span><span class="scen-choice-t"><b></b></span>';
+      row.querySelector('.scen-choice-num').textContent = num;
+      row.querySelector('b').textContent = (h.kind === 'spray' ? 'Aim water: ' : '') + h.label;
+      row.setAttribute('aria-label', aria);
+      row.addEventListener('click', pick);
+      choiceList.appendChild(row);
     });
   }
   root.appendChild(stage);
@@ -1412,10 +1457,7 @@ function renderScenarioRun(root) {
   root.appendChild(qcard);
 
   if (step.hotspots) {
-    var hint = el('p', null, 'Tap a marker on the picture \u2014 green arrows move you, blue boxes aim water.');
-    hint.style.color = 'var(--th-ink-2)';
-    hint.style.fontSize = '14px';
-    root.appendChild(hint);
+    root.appendChild(choiceList);
   } else {
     var opts = el('div', 'call-opts');
     step.opts.forEach(function (opt) {
