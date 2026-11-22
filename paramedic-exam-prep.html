@@ -128,6 +128,12 @@ nav.bottom button .ico{font-size:1.3rem;}
 nav.bottom button.on{color:var(--red);}
 .hidden{display:none !important;}
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fire Study">
+<script>if('serviceWorker' in navigator&&/^https:|^http:\/\/(localhost|127\.)/.test(location.href)){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
 </head>
 <body>
 <header class="top">
