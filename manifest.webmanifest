@@ -2,9 +2,9 @@
   "name": "Fire Study HQ",
   "short_name": "Fire Study",
   "description": "Phoenix FD study app: recruit to probie. Flashcards, games, scenarios and exam prep that work offline.",
-  "id": "/",
-  "start_url": "/?source=pwa",
-  "scope": "/",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#8E1D16",
@@ -16,6 +16,6 @@
     { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "Paramedic Exam Prep", "url": "/paramedic-exam-prep.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+    { "name": "Paramedic Exam Prep", "url": "./paramedic-exam-prep.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

@@ -1,7 +1,7 @@
 /* Fire Study HQ service worker.
    Makes the app open with no signal. Every app file is cached on first visit;
    after that the cached copy loads instantly while a fresh copy is fetched in
-   the background, so a new deploy shows up on the next launch.
+   the background, so a new push to GitHub shows up on the next launch.
    Bump VERSION when this file's PRECACHE list changes. */
 var VERSION = 'fshq-v1';
 var PRECACHE = [
@@ -29,6 +29,7 @@ var PRECACHE = [
 var FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
 self.addEventListener('install', function (e) {
+  self.skipWaiting();
   e.waitUntil(caches.open(VERSION).then(function (c) {
     // cache: 'reload' skips the HTTP cache so a new install gets fresh files.
     return c.addAll(PRECACHE.map(function (u) { return new Request(u, { cache: 'reload' }); }));
@@ -41,9 +42,6 @@ self.addEventListener('activate', function (e) {
   }).then(function () { return self.clients.claim(); }));
 });
 
-self.addEventListener('message', function (e) {
-  if (e.data === 'SKIP_WAITING') self.skipWaiting();
-});
 
 function staleWhileRevalidate(req, e) {
   return caches.open(VERSION).then(function (c) {

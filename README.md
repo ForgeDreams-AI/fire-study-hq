@@ -1,15 +1,22 @@
 # Fire Study HQ
 
-Phoenix FD study app (recruit to probie). Plain HTML/CSS/JS with no build step.
+Phoenix FD study app (recruit to probie). Plain HTML/CSS/JS, no build step, hosted on GitHub Pages.
 
-## Installable app
+## Install it
 
-- `manifest.webmanifest` + `icons/`: home-screen install on iPhone (Safari → Share → Add to Home Screen) and Android/desktop (Install prompt).
-- `sw.js`: caches every app file so it opens with no signal. Cached files load instantly and refresh in the background, so a new deploy shows up on the next launch, and a "New version ready" toast appears when `sw.js` itself changes.
-- `pwa.js`: install banner on Home, plus an **App** section in Progress with Install, Daily study reminder (adds a repeating calendar event with an alert), and Back up / Restore progress.
+- **iPhone:** open the site in Safari → Share → Add to Home Screen.
+- **Android / desktop:** tap Install on the banner, or use the browser menu.
 
-**When you add a new file the app needs offline** (e.g. a new scenario image), add it to `PRECACHE` in `sw.js` and bump `VERSION`.
+Once opened, it works with no signal. Daily reminder: Progress → App → Daily study reminder (adds a repeating calendar alert).
 
-## Hosting
+## How it's put together
 
-Any static host over HTTPS works (service workers need HTTPS). Serve the repo root as-is. Locally: `python3 -m http.server` then open http://localhost:8000.
+- `manifest.webmanifest` + `icons/`: home-screen install.
+- `sw.js`: saves every app file for offline use. New pushes show up the next time the app is opened.
+- `pwa.js`: install banner and the App section in Progress.
+
+Adding a new file the app needs offline (like a scenario image)? Add it to `PRECACHE` in `sw.js` and bump `VERSION`.
+
+## Hosting (GitHub Pages)
+
+Repo Settings → Pages → Source: **Deploy from a branch** → `master` / `(root)` → Save. Every push to `master` goes live in about a minute.

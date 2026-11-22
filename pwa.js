@@ -1,7 +1,6 @@
 /* ============================================================
    Installed-app layer: install prompt, offline service worker,
-   daily study reminder (calendar), progress backup/restore,
-   and the "update ready" toast. Loaded before app.js; it only
+   and a daily study reminder (calendar). Loaded before app.js; it only
    calls app.js helpers (el, icon, store, render...) at render time.
    ============================================================ */
 (function () {
@@ -57,9 +56,6 @@
         'Scroll down and tap “Add to Home Screen”, then “Add”.',
         'Open Fire Study from the new home-screen icon.'
       ]));
-      var note = el('p', 'sub');
-      note.textContent = 'Heads up: the home-screen app keeps its own progress, separate from Safari. Back up here first, then restore inside the app.';
-      body.appendChild(note);
     });
   }
   function stepsList(items) {
@@ -166,41 +162,6 @@
     });
   }
 
-  /* ---------- backup / restore ---------- */
-  var BACKUP_KEYS = ['fireStudyHQ.v1', 'fshq_drillstyle_v1', REMINDER_KEY];
-  function exportBackup() {
-    if (typeof saveStore === 'function') saveStore();
-    var data = { app: 'fire-study-hq', version: 1, exported: new Date().toISOString(), keys: {} };
-    BACKUP_KEYS.forEach(function (k) { var v = lsGet(k); if (v != null) data.keys[k] = v; });
-    var d = new Date();
-    saveFile('fire-study-hq-backup-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json',
-      'application/json', JSON.stringify(data, null, 2), false);
-  }
-  function importBackup() {
-    var inp = document.createElement('input');
-    inp.type = 'file';
-    inp.accept = '.json,application/json';
-    inp.addEventListener('change', function () {
-      var f = inp.files && inp.files[0];
-      if (!f) return;
-      var r = new FileReader();
-      r.onload = function () {
-        var data;
-        try { data = JSON.parse(r.result); } catch (e) { data = null; }
-        if (!data || data.app !== 'fire-study-hq' || !data.keys || typeof data.keys['fireStudyHQ.v1'] !== 'string') {
-          alert('That file isn’t a Fire Study HQ backup.');
-          return;
-        }
-        try { JSON.parse(data.keys['fireStudyHQ.v1']); } catch (e) { alert('That backup is damaged and can’t be restored.'); return; }
-        if (!confirm('Replace the progress on this device with the backup from ' + (data.exported ? data.exported.slice(0, 10) : 'that file') + '?')) return;
-        BACKUP_KEYS.forEach(function (k) { if (typeof data.keys[k] === 'string') lsSet(k, data.keys[k]); });
-        location.reload();
-      };
-      r.readAsText(f);
-    });
-    inp.click();
-  }
-
   /* ---------- Progress tab: App section ---------- */
   function appRow(ic, title, sub, right, onTap) {
     var b = el('button', 'app-row press'); b.type = 'button';
@@ -223,42 +184,11 @@
     var rem = lsGet(REMINDER_KEY);
     root.appendChild(appRow('bell', 'Daily study reminder',
       rem ? 'Set for ' + fmtTime(rem) + ' in your calendar' : 'A daily calendar alert so the streak doesn’t die', rem ? 'Set' : null, showReminder));
-    root.appendChild(appRow('download', 'Back up progress', 'Save a file you can restore on a new phone', null, exportBackup));
-    root.appendChild(appRow('upload', 'Restore from backup', 'Replaces the progress on this device', null, importBackup));
   }
 
-  /* ---------- service worker + update toast ---------- */
-  var userAskedReload = false;
-  function showUpdateToast(worker) {
-    if (document.querySelector('.update-toast')) return;
-    var t = el('div', 'update-toast animate-fade-in');
-    t.setAttribute('role', 'status');
-    t.appendChild(el('span', null, 'New version ready.'));
-    var b = el('button', 'press', 'Reload'); b.type = 'button';
-    b.addEventListener('click', function () { userAskedReload = true; worker.postMessage('SKIP_WAITING'); });
-    t.appendChild(b);
-    document.body.appendChild(t);
-  }
+  /* ---------- offline support ---------- */
   if ('serviceWorker' in navigator && /^https:|^http:\/\/(localhost|127\.)/.test(location.href)) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').then(function (reg) {
-        if (reg.waiting && navigator.serviceWorker.controller) showUpdateToast(reg.waiting);
-        reg.addEventListener('updatefound', function () {
-          var w = reg.installing;
-          if (!w) return;
-          w.addEventListener('statechange', function () {
-            if (w.state === 'installed' && navigator.serviceWorker.controller) showUpdateToast(w);
-          });
-        });
-      }).catch(function () { /* offline support unavailable; app still works */ });
-      // Reload only when the user tapped Reload. The first install also fires
-      // controllerchange, and reloading then would yank the page mid-use.
-      navigator.serviceWorker.addEventListener('controllerchange', function () {
-        if (!userAskedReload) return;
-        userAskedReload = false;
-        location.reload();
-      });
-    });
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
   }
   // Ask the browser not to clear saved progress when storage runs low.
   if (navigator.storage && navigator.storage.persist) { navigator.storage.persist().catch(function () {}); }
