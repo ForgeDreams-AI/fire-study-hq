@@ -1333,9 +1333,48 @@ function renderCallScore(root) {
    On Scene Report deck's framework. No scores, no pass/fail.
    ============================================================ */
 function scenOptText(o) { return (typeof o === 'string') ? o : o.t; }
+/* A pick: log it, then either show the MP check (if the beat has one) or move on. */
+function scenPick(run, step, text, clears, unit, matched) {
+  if (run.feedback) return;
+  scenLog(run, step.label, text, clears, unit);
+  if (step.mp) {
+    var e = run.log[run.log.length - 1];
+    e.hasBest = (typeof step.best === 'number');
+    e.matched = e.hasBest && !!matched;
+    e.mp = step.mp;
+    e.bestText = e.hasBest ? (step.hotspots ? SCENARIOS[run.scen].hotspots[step.best].label : scenOptText(step.opts[step.best])) : null;
+    run.feedback = e;
+    render();
+    var fb = document.querySelector('.mp-check');
+    if (fb && fb.scrollIntoView) fb.scrollIntoView({ block: 'center' });
+    return;
+  }
+  run.pos++;
+  render(); window.scrollTo(0, 0);
+}
+function scenFeedbackCard(run, step) {
+  var e = run.feedback;
+  var card = el('div', 'mp-check animate-pop-in ' + (e.hasBest ? (e.matched ? 'match' : 'miss') : 'note'));
+  card.setAttribute('role', 'status');
+  var verdict = el('div', 'mp-verdict');
+  verdict.innerHTML = e.hasBest ? (icon(e.matched ? 'check' : 'x', 18) + '<span>' + (e.matched ? 'Matches the MP' : 'The MP points another way') + '</span>')
+    : (icon('book', 18) + '<span>What the MP says</span>');
+  card.appendChild(verdict);
+  var you = el('p', 'mp-you'); you.innerHTML = '<b>Your call:</b> '; you.appendChild(document.createTextNode(e.pick));
+  card.appendChild(you);
+  if (e.hasBest && !e.matched) {
+    var best = el('p', 'mp-best'); best.innerHTML = '<b>MP call:</b> '; best.appendChild(document.createTextNode(e.bestText));
+    card.appendChild(best);
+  }
+  card.appendChild(el('p', 'mp-text', e.mp));
+  var next = el('button', 'btn block press', 'Next'); next.type = 'button';
+  next.addEventListener('click', function () { run.feedback = null; run.pos++; render(); window.scrollTo(0, 0); });
+  card.appendChild(next);
+  return card;
+}
 function scenOptClears(o) { return (typeof o === 'string' || !o.c) ? [] : o.c; }
 function startScenRun(i) {
-  state.scenRun = { scen: i, pos: 0, log: [], reported: false };
+  state.scenRun = { scen: i, pos: 0, log: [], reported: false, feedback: null, orders: {} };
   touchDay();
   render();
   window.scrollTo(0, 0);
@@ -1348,7 +1387,7 @@ function renderScenarios(root) {
   if (state.scenRun) { renderScenarioRun(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">The game</span><h2>Scenarios</h2>'
-    + '<p>Pick a scene, make the calls, move on the picture. No grading &mdash; the debrief at the end mirrors your run back to you.</p>';
+    + '<p>Pick a scene, make the calls, move on the picture. Every call gets checked against the Phoenix MPs, and the debrief puts your whole run side by side with them.</p>';
   root.appendChild(head);
   var legend = el('div', 'card');
   legend.innerHTML = '<p style="margin:0 0 6px;font-size:14px"><b>How to read the game:</b></p>'
@@ -1410,9 +1449,7 @@ function renderScenarioRun(root) {
     sc.hotspots.forEach(function (h, hi) {
       var num = String(hi + 1);
       var pick = function () {
-        scenLog(run, step.label, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || []);
-        run.pos++;
-        render(); window.scrollTo(0, 0);
+        scenPick(run, step, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || [], null, hi === step.best);
       };
       var aria = num + '. ' + h.label + (h.note ? ': ' + h.note : '');
       var pin;
@@ -1456,17 +1493,21 @@ function renderScenarioRun(root) {
   qcard.querySelector('p').textContent = step.q;
   root.appendChild(qcard);
 
-  if (step.hotspots) {
+  if (run.feedback) {
+    root.appendChild(scenFeedbackCard(run, step));
+  } else if (step.hotspots) {
     root.appendChild(choiceList);
   } else {
     var opts = el('div', 'call-opts');
-    step.opts.forEach(function (opt) {
+    // Shuffle once per beat so the MP-backed option isn't always on top.
+    run.orders = run.orders || {};
+    if (!run.orders[run.pos]) run.orders[run.pos] = shuffleIdx(step.opts.length);
+    run.orders[run.pos].forEach(function (oi) {
+      var opt = step.opts[oi];
       var b = el('button', 'call-opt press' + (step.cat ? ' opt-' + step.cat : '')); b.type = 'button';
       b.textContent = scenOptText(opt);
       b.addEventListener('click', function () {
-        scenLog(run, step.label, scenOptText(opt), scenOptClears(opt), step.unit || null);
-        run.pos++;
-        render(); window.scrollTo(0, 0);
+        scenPick(run, step, scenOptText(opt), scenOptClears(opt), step.unit || null, oi === step.best);
       });
       opts.appendChild(b);
     });
@@ -1512,8 +1553,25 @@ function renderScenarioReport(root) {
 
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Debrief</span><h2>' + sc.title + ' \u2014 debrief</h2>'
-    + '<p>Review, not a grade. This is what you did, organized the way the On Scene Report deck teaches it.</p>';
+    + '<p>What you did, organized the way the On Scene Report deck teaches it, checked against the Phoenix MPs.</p>';
   root.appendChild(head);
+
+  var checked = run.log.filter(function (e) { return e.hasBest; });
+  if (checked.length) {
+    var hits = checked.filter(function (e) { return e.matched; }).length;
+    root.appendChild(el('h2', 'sec-head', 'MP check'));
+    var sum = el('div', 'card mp-summary');
+    sum.innerHTML = '<b class="tabular">' + hits + ' of ' + checked.length + '</b><span>calls matched the MP</span>';
+    root.appendChild(sum);
+    checked.filter(function (e) { return !e.matched; }).forEach(function (e) {
+      var c = el('div', 'card mp-miss');
+      c.appendChild(el('h4', null, e.label));
+      var y = el('p'); y.innerHTML = '<b>You:</b> '; y.appendChild(document.createTextNode(e.pick)); c.appendChild(y);
+      var b = el('p'); b.innerHTML = '<b>MP:</b> '; b.appendChild(document.createTextNode(e.bestText)); c.appendChild(b);
+      c.appendChild(el('p', 'mp-text', e.mp));
+      root.appendChild(c);
+    });
+  }
 
   function pickText(label) {
     var e = scenFindLog(run, label);
@@ -1525,6 +1583,7 @@ function renderScenarioReport(root) {
   scenSection(root, 'Incident action plan', pickText('Incident action plan'));
   scenSection(root, 'Tactical priorities', pickText('Tactical priorities'));
   scenSection(root, 'On-scene report', pickText('On-scene report'));
+  if (scenFindLog(run, 'Follow-up report')) scenSection(root, 'Follow-up report', pickText('Follow-up report'));
   scenSection(root, 'Initial 3 & 1', pickText('Initial 3 & 1'));
 
   function pickLatest(labels) {

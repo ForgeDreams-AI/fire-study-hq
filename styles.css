@@ -563,3 +563,21 @@ svg text.dlbl--xs { font-size: 12px; font-weight: 500; }
 svg text.dlbl:not([fill]) { fill: #f2ece1; }
 svg text.dlbl--sm:not([fill]) { fill: #d8cfbf; }
 svg text.dlbl--xs:not([fill]) { fill: #b8ae9f; }
+
+/* ── Scenario MP check ── */
+.mp-check { border-radius: 16px; padding: 14px 16px 16px; margin: 6px 0 14px; background: var(--th-surface); border: 1px solid var(--th-line); border-left-width: 5px; }
+.mp-check.match { border-left-color: var(--th-success); }
+.mp-check.miss { border-left-color: var(--th-danger); }
+.mp-check.note { border-left-color: var(--th-info); }
+.mp-verdict { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; margin-bottom: 8px; }
+.mp-check.match .mp-verdict { color: var(--th-success); }
+.mp-check.miss .mp-verdict { color: var(--th-danger); }
+.mp-check.note .mp-verdict { color: var(--th-info); }
+.mp-check p { margin: 0 0 8px; font-size: 15px; line-height: 1.5; }
+.mp-text { color: var(--th-ink-2); border-left: 3px solid var(--th-accent); padding-left: 10px; }
+.mp-check .btn { margin-top: 6px; }
+.mp-summary { display: flex; align-items: baseline; gap: 10px; }
+.mp-summary b { font-family: "Barlow Condensed", sans-serif; font-size: 34px; color: var(--th-primary); }
+.mp-summary span { color: var(--th-ink-2); font-weight: 600; }
+.mp-miss h4 { margin: 0 0 6px; font-size: 16px; }
+.mp-miss p { margin: 0 0 6px; font-size: 14px; }
