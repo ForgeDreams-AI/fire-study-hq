@@ -17,6 +17,7 @@
    Garage apartments (202.16), Ranch first-due command (202.04/201.01),
    Tile roof 2-story (202.06), Parking garage (202.16/202.04B),
    Pizza restaurant strip mall (202.04/202.06).
+   Scenarios 14-17: probie seat — nozzle, hydrant & supply, primary search, backup line & standpipe.
    ============================================================ */
 'use strict';
 
@@ -7001,6 +7002,1411 @@ var SCENARIOS = [
     "label": "Reposition",
     "q": "Conditions have changed. Where do you go now? Tap a number on the picture or pick from the list.",
     "hotspots": true
+   }
+  ]
+ },
+ {
+  "id": "probie-nozzle",
+  "title": "Probie: Nozzle — Ranch fire",
+  "sub": "Probie seat · Nozzle FF on E1 · M.P. 202.04 Fire Control · 202.02B · 202.05C Air Management",
+  "dispatch": "FD Haz Chan A1 · Inc #000412 · House Fire · 3016 W. Mariposa St, Phoenix · CODE 3 · 14:08 · Units: E1, L1, E2, E3, R3, BC1. Neighbor reports black smoke from the front of the house; does not know if anyone is home.",
+  "arrival": "You're the nozzle firefighter on E1, six months out of the academy. Your captain gives the on-scene report: small 1-story ranch, fire and heavy black smoke from a front window just left of the front door, offensive, E1 going fast attack. He turns to you: \"Pull the line. Front door. You're with me.\" The engineer is on the pump; the other firefighter and the engineer are your IRIC. Occupants unknown.",
+  "image": "assets/scenarios/ranch-arrival.jpg",
+  "imageAlt": "Arrival view: 1-story ranch house with a pitched shingle roof, fire glowing in a front window left of the front door with a heavy black smoke column, front lawn, carport and driveway on the right, wood gate on the left.",
+  "hotspots": [
+   {
+    "kind": "move",
+    "x": 51,
+    "y": 55,
+    "label": "Front door",
+    "note": "Stretch to the front door and flake out the line"
+   },
+   {
+    "kind": "spray",
+    "x": 39,
+    "y": 49,
+    "w": 9,
+    "h": 11,
+    "label": "Fire window",
+    "note": "Straight stream off the fire-room ceiling through the window",
+    "c": [
+     "Fire Control"
+    ]
+   },
+   {
+    "kind": "move",
+    "x": 19,
+    "y": 50,
+    "label": "Bedroom window",
+    "note": "Take the line to the bedroom window on the far left"
+   },
+   {
+    "kind": "move",
+    "x": 63,
+    "y": 51,
+    "label": "Picture window",
+    "note": "Break the big picture window right of the door and go in there"
+   },
+   {
+    "kind": "move",
+    "x": 86,
+    "y": 70,
+    "label": "Carport",
+    "note": "Stretch up the driveway and around to the back door"
+   }
+  ],
+  "steps": [
+   {
+    "label": "Gear up",
+    "q": "Dispatch upgrades it to a working fire. What do you have done before your boots hit the street?",
+    "opts": [
+     "Full PPE, SCBA on and bottle checked full, radio on the tactical channel",
+     "Full PPE and SCBA on; you'll check the bottle and radio at the front door",
+     "Coat and helmet on; finish suiting up while the engineer charges the line",
+     "Full PPE, SCBA on, and your mask on now so you're breathing air on arrival"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.05C: know your air level before you enter the hazard zone — the \"round trip ticket.\" M.P. 205.21: carry your assigned radio on every incident. Going on air in the cab just burns bottle you'll want inside."
+   },
+   {
+    "label": "Crew of 4",
+    "kind": "crew",
+    "q": "Captain is going fast attack. Who does what on E1's crew of 4?",
+    "opts": [
+     {
+      "t": "Captain and you on the line for search and attack; engineer and FF2 as IRIC.",
+      "c": [
+       "All Clear",
+       "Fire Control"
+      ]
+     },
+     {
+      "t": "All four go in — more hands inside means a faster search and knockdown.",
+      "c": [
+       "All Clear",
+       "Fire Control"
+      ]
+     },
+     {
+      "t": "You take the line in alone while the captain searches the bedrooms.",
+      "c": [
+       "All Clear",
+       "Fire Control"
+      ]
+     },
+     {
+      "t": "Captain and you go in with no line to search fast; FF2 pulls it later.",
+      "c": [
+       "All Clear"
+      ]
+     }
+    ],
+    "best": 0,
+    "mp": "M.P. 201.04: with the fast-attack captain inside with one firefighter, \"the plug person assumes the primary 2 in / 2 out position and the engineer assumes the secondary.\" M.P. 206.03: a probie is directly supervised the moment they enter a building with smoke or fire."
+   },
+   {
+    "label": "Which line",
+    "q": "Captain: \"Pull a line.\" Which one does M.P. 202.04 put on a house fire?",
+    "opts": [
+     "2-inch with the smooth bore — 250 GPM for a fast knock",
+     "2½-inch smooth bore — the biggest water you carry",
+     "1¾-inch crosslay with the automatic nozzle — 150 GPM",
+     "Booster reel — it's one room and it pulls the fastest"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.04: residential — \"150 GPM – (2.5 gallons per second) (1.75\" hose lines with automatic nozzles).\" Engines carry two 1¾-inch lines minimum: 150-foot and 200-foot crosslays plus a bumper line."
+   },
+   {
+    "label": "Stretch check (hose)",
+    "q": "Rig at the curb, about 60 feet to the door, fire room right inside. 150-foot or 200-foot crosslay?",
+    "opts": [
+     "200-foot — always grab the longest line so you never come up short",
+     "150-foot — curb to door to fire room, plus enough to work and turn",
+     "Bumper line — shortest pull, and the house is small anyway",
+     "150-foot — it's the default; no reason to think about distance"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.04: lines must be \"of adequate length and size for the desired water flow\" — size up the distances and obstacles. Sixty feet to the door plus the room plus slack to work: the 150 makes it with hose to spare. Too long means a pile of kinks in the yard."
+   },
+   {
+    "label": "Approach",
+    "hotspots": true,
+    "q": "Line's on your shoulder. Where do you stretch it? Tap a number on the picture or pick from the list.",
+    "best": 0,
+    "mp": "M.P. 202.02B: \"Make every effort to enter the structure at the air intake side of the flow path. You want the air at your back.\" The fire window is the exhaust; the front door is your intake and your captain's call. M.P. 202.04: the closest door shouldn't dictate line placement — here it happens to be the right one."
+   },
+   {
+    "label": "Flaking",
+    "q": "You hit the front door with 80 feet of extra hose behind you. What do you do with it before it's charged?",
+    "opts": [
+     "Leave it piled at the curb — the line straightens out once it's charged",
+     "Drag it all up to the porch in a pile so it's right at the door",
+     "Flake it in loops on the lawn near the door so it feeds in clean",
+     "Stretch it straight back to the rig so it lies flat along the street"
+    ],
+    "best": 2,
+    "mp": "IFSTA: flake excess hose out near the entry point — not in a pile — so it pays out without kinks once charged and as you advance. A kink at the curb starves your nozzle; 150 GPM on paper means nothing if it never reaches the tip."
+   },
+   {
+    "label": "Bleed the line",
+    "q": "The engineer charges the line. Before you go to the door, what do you do at the nozzle?",
+    "opts": [
+     "Keep the bail shut — flowing outside wastes your 500-gallon tank",
+     "Open it away from the door: bleed the air, check pattern and pressure",
+     "Open it on full fog at the front door to pre-cool before entry",
+     "Crack it into the smoke at the eaves so the air comes out up high"
+    ],
+    "best": 1,
+    "mp": "IFSTA: bleed the air out of a newly charged line and confirm the pattern and pressure before entry — you don't want to discover air, a kink or a fog setting at the fire-room doorway. M.P. 202.04: the automatic nozzle runs 70–200 GPM; make sure yours is really flowing."
+   },
+   {
+    "label": "Door control",
+    "q": "Captain checks the front door — unlocked, it swings in. Before you're ready to go, what happens with that door?",
+    "opts": [
+     "Prop it wide open so the smoke starts venting out ahead of you",
+     "Pull it off the hinges so it can't swing shut behind your line",
+     "Open it, back off, and wait for the smoke to lift before entry",
+     "Keep it closed or controlled until the charged line is ready to go"
+    ],
+    "best": 3,
+    "mp": "M.P. 202.02B: \"Keep the building openings closed if possible to reduce ventilation of the fire until you have a charged hose line in place and are prepared to make entry.\" M.P. 202.04: \"Access and egress openings must be considered as ventilation.\" An open door is an air intake feeding the fire."
+   },
+   {
+    "label": "Reading smoke",
+    "q": "Door cracked: thick black smoke pushing hard out the top half, a little clear air down low. What is it telling you?",
+    "opts": [
+     "Fire's mostly out — dark smoke is just smoldering contents",
+     "High heat, air-starved fire close by — water on it, stay low",
+     "Fast smoke at the door means the fire moved to the back rooms",
+     "Normal house-fire smoke — nothing changes about how you go in"
+    ],
+    "best": 1,
+    "mp": "IFSTA reads smoke by volume, velocity, density and color: thick, dark, pressurized smoke means high heat and a ventilation-limited fire that grows when it gets air. M.P. 202.04: when ventilation-limited conditions are found, \"an interior fire attack is typically the best option\" — with the door controlled."
+   },
+   {
+    "label": "Reset point",
+    "hotspots": true,
+    "q": "Captain: \"Reset it before we go in.\" Where does your first water go? Tap a number or pick from the list.",
+    "best": 1,
+    "mp": "M.P. 202.02B: \"*Before making entry* When possible reset or darken down the fire using a straight stream applied to the ceiling of the fire compartment.\" M.P. 202.04: a transitional attack fits when \"conditions need to be changed from the exterior prior to making entry.\""
+   },
+   {
+    "label": "Reset",
+    "q": "How do you flow the reset through the fire window?",
+    "opts": [
+     "Wide fog into the window until the smoke turns white and lazy",
+     "Straight stream into the black smoke at the top of the window",
+     "Straight stream off the fire-room ceiling for 15–30 seconds",
+     "Narrow fog at the window frame for a full minute to cool it"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.02B: \"15-30 seconds of water applied in this manner will dramatically reduce temperatures and improve tenability throughout the occupancy.\" Ceiling, straight stream, short — then shut down and go."
+   },
+   {
+    "label": "Go interior",
+    "q": "Reset's done and the window darkens. Captain: \"Let's go.\" What now?",
+    "opts": [
+     "Keep flowing from the yard — it's dark, no reason to go inside now",
+     "Wait at the door until the smoke clears enough to see the room",
+     "Advance through the front door now and finish it from inside",
+     "Shut down and hold at the door until L1 cuts the roof open"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.02B: the reset \"must be followed by an aggressive interior attack to complete fire extinguishment and evacuate any victims.\" The window hit buys time; it doesn't put the fire out or search the house."
+   },
+   {
+    "label": "Fire attack",
+    "q": "On your knees at the fire-room doorway, fire rolling across the ceiling. How do you put it out?",
+    "opts": [
+     "Go straight for the base of the fire on the floor; skip the ceiling",
+     "Cool the ceiling and walls first, then hit the burning contents",
+     "Whip wide fog around the room to push the heat out the window",
+     "Hold the bail shut until you can see the fire through the smoke"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.04: \"Interior surface cooling with water, then followed by water application to the burning fuels/contents is the most effective extinguishing tactic.\" Straight stream or narrow pattern; hitting with wide fog in a closed room steams you and pushes fire into the house."
+   },
+   {
+    "label": "Stay on the line",
+    "q": "Your captain moves off to check a bedroom and you lose sight of him in the smoke. What do you do?",
+    "opts": [
+     "Keep pushing toward the fire — he knows where the line is going",
+     "Stop, stay on the line, and call him by voice or radio until you reconnect",
+     "Drop the nozzle and crawl back toward the door to wait for him",
+     "Go look for him in the next room, then come back for the line"
+    ],
+    "best": 1,
+    "mp": "M.P. 206.03: a probie in a smoke-filled building must be directly supervised. M.P. 201.01B: company officers instill \"the standard that firefighters should always stay on a hoseline.\" The line is your way out and how RIC finds you."
+   },
+   {
+    "label": "Victim status",
+    "cat": "sizeup",
+    "q": "Are people hurt? What do you know right now?",
+    "opts": [
+     "Unknown — captain is searching off the line as you advance",
+     "Captain found a victim in the hallway — removing now",
+     "Neighbor now says the owner is at work",
+     "Unknown — and nobody's checking until the fire is out"
+    ],
+    "mp": "M.P. 202.04: \"When possible, search and rescue efforts should be performed simultaneously with fire attack.\" M.P. 202.02C: companies \"cannot depend solely upon reports from residents and spectators.\""
+   },
+   {
+    "label": "What’s happening inside?",
+    "cat": "sizeup",
+    "q": "What’s happening inside? Your read from the nozzle:",
+    "opts": [
+     "Fire in the front room darkening down, heat lifting",
+     "Fire rolling over your head into the hallway",
+     "Smoke only — you can't find the seat of the fire",
+     "Heat dropping but visibility still near zero"
+    ]
+   },
+   {
+    "label": "Knockdown report",
+    "q": "Fire's dark. Who puts \"under control\" on the radio?",
+    "opts": [
+     "You — the nozzle saw it go out, so you key up and report it",
+     "The engineer — he can see the smoke change color from the pump",
+     "Nobody — BC1 will call it when he sees the smoke stop",
+     "Your captain as IC — you tell him face to face what you see"
+    ],
+    "best": 3,
+    "mp": "M.P. 202.02A: \"Under control\" is the Fire Control benchmark, announced to Command — and on a fast attack your captain is Command. Your job is to tell him exactly what you see; he owns the report."
+   },
+   {
+    "label": "Air check",
+    "q": "Ten minutes in, the captain asks for your air. Your gauge reads about half. What do you tell him?",
+    "opts": [
+     "Round it up — \"plenty left\" — so he doesn't pull you off the nozzle",
+     "Nothing yet — you'll speak up when your low-air alarm goes off",
+     "Give him the real number — \"half\" — so he can plan the exit",
+     "Tell him later during overhaul — the fire's already knocked down"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.05C: \"It is the individual firefighter's responsibility to continually assess and report his/her air consumption to his/her company officer.\" Captains use triggers — benchmarks, elapsed time, 50% alarms — and can only manage what you tell them."
+   },
+   {
+    "label": "Low-air rule",
+    "q": "M.P. 202.05C: when do you leave the hazard zone?",
+    "opts": [
+     "When the low-air alarm goes off — that's what the alarm is for",
+     "When the job is done — it's a small house and the door is close",
+     "Before the low-air alarm — the last third is emergency reserve",
+     "At half a bottle — anything below that is the reserve air"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.05C: \"the last 33% of the air supply in an SCBA is the emergency reserve,\" and \"it is unacceptable to leave the hazard zone with low air alarms activated during normal operations.\" Small house or big box, same rule."
+   },
+   {
+    "label": "Mayday",
+    "q": "Overhaul, back bedroom: a ceiling comes down and you're pinned and turned around. You can't fix it in 30 seconds. What now?",
+    "opts": [
+     "Work free on your own first — Mayday is for when you're out of air",
+     "Hit your PASS and wait quietly so you don't clog the channel",
+     "Pull your mask off to hear better and yell for your captain",
+     "\"Mayday, Mayday, Mayday\" on the radio now, then GRAB LIVES"
+    ],
+    "best": 3,
+    "mp": "M.P. 201.01B: a Mayday is any situation where you can't safely exit the hazard zone or \"an event that cannot be resolved by that individual within 30 seconds.\" Call it early: \"The longer it takes to declare a Mayday situation the less likely a successful resolution is possible.\""
+   },
+   {
+    "label": "Exit plan",
+    "q": "Time to back out with your captain. How do you get out?",
+    "opts": [
+     "Take the nearest window — faster than backing the line out",
+     "Follow your hose line back out the way you came in, together",
+     "Walk out the back door — the smoke's lifted enough to see",
+     "Leave the line where it is and head for daylight any way you can"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.05C: \"The best plan includes leaving the hazard zone following the hose line out that you came in on.\" M.P. 201.03: crews leaving by a different point must immediately notify their accountability officer."
+   },
+   {
+    "label": "Overhaul air",
+    "q": "Fire's out, smoke is thin and white. L1 is pulling ceiling over the fire room. Your mask?",
+    "opts": [
+     "Off — the smoke is white now, so the dangerous part is over",
+     "On — overhaul smoke is toxic until the air is tested safe",
+     "Off, but stay low near the floor where the air is cleaner",
+     "Off once the windows are open and a fan is moving air"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.05B: \"Premature removal of SCBA must be avoided at all times. This is particularly significant during overhaul when smoldering materials produce increased quantities of toxic substances including carcinogens.\" Keep it on until the atmosphere is established safe by testing."
+   },
+   {
+    "label": "PAR",
+    "q": "BC1 asks E1 for a PAR after \"under control.\" What is your captain confirming?",
+    "opts": [
+     "Every crew member is accounted for and has adequate exit air",
+     "Conditions, actions and needs — a progress report on the fire",
+     "Each member's exact gauge reading, read out to Command",
+     "The primary search is finished and the house is All Clear"
+    ],
+    "best": 0,
+    "mp": "M.P. 201.03: \"The PAR is a confirmation that all members are accounted for and have an adequate exit air supply.\" PARs are required as companies report All Clear and under control, after any sudden hazardous event, and every 30 minutes."
+   },
+   {
+    "label": "Ready state",
+    "q": "Back at the rig. Before E1 goes back in service, what about your SCBA?",
+    "opts": [
+     "Hang it back up as-is — you'll check it at the next shift change",
+     "Leave it for the engineer — he handles the crew's bottles",
+     "Swap to a full bottle and check the pack — ready for the next one",
+     "Top off the bottle only if it reads under the low-air mark"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.05B: each member checks their SCBA \"at the beginning of each shift, after each use, and at any other time it may be necessary to render the equipment in a ready state.\" It's your pack — you're accountable for it."
+   },
+   {
+    "label": "MP reference",
+    "q": "Nozzle FF checklist — M.P. 202.04: 1¾-inch at 150 GPM for residential; lines of adequate length; surface cooling then fuels. M.P. 202.02B: doors closed until the charged line is ready; reset with a straight stream to the ceiling for 15–30 seconds, then an aggressive interior attack from the air-intake side. M.P. 206.03: probies are directly supervised in smoke and fire — stay on the line. M.P. 202.05C: report your air; leave before the low-air alarm; follow your line out. M.P. 201.01B: can't fix it in 30 seconds — Mayday. M.P. 202.05B: mask stays on in overhaul.",
+    "opts": [
+     "Understood — show my debrief"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "probie-hydrant",
+  "title": "Probie: Hydrant & supply — Garage apartments",
+  "sub": "Probie seat · Plug FF on E1 · M.P. 202.12E Water Supply · 202.16 Car Fires · 201.04 2 In / 2 Out",
+  "dispatch": "FD Haz Chan A1 · Inc #000588 · Vehicle Fire Into Structure · 3518 W. Palo Verde Dr, Phoenix · CODE 3 · 21:42 · Units: E1, L1, E2, E3, R3, BC1. Caller says a pickup is burning in the garages under the apartments, flames up the front of the building, tenants upstairs.",
+  "arrival": "You're the plug firefighter on E1. A block out, your captain sees the glow and the column: \"Working fire — we're laying in. Hydrant at the corner.\" The engineer stops at the plug and you step off with the hydrant bag. Up the street: a 2-story stucco apartment building over a row of garages, a pickup burning in the open bay on the far left, fire rolling up the opening toward the units above. Tenant status unknown.",
+  "image": "assets/scenarios/garage-apt-arrival.jpg",
+  "imageAlt": "Arrival view: 2-story stucco apartment building, pickup truck burning at an open garage bay on the left with fire and smoke rolling up toward the apartments above, four closed garage doors, wood fence in the foreground, balcony unit on the right.",
+  "hotspots": [
+   {
+    "kind": "spray",
+    "x": 19,
+    "y": 55,
+    "w": 16,
+    "h": 34,
+    "label": "Burning pickup / open bay",
+    "note": "First water from a 45 — passenger compartment, then the bay",
+    "c": [
+     "Fire Control"
+    ]
+   },
+   {
+    "kind": "move",
+    "x": 41,
+    "y": 10,
+    "label": "Apartments above",
+    "note": "Units over the fire — the search goes up there"
+   },
+   {
+    "kind": "move",
+    "x": 47,
+    "y": 65,
+    "label": "Closed garage bays",
+    "note": "Force the bay next door and check for extension"
+   },
+   {
+    "kind": "move",
+    "x": 22,
+    "y": 77,
+    "label": "Rear bumper",
+    "note": "Feed hose standing right behind the truck's bumper"
+   },
+   {
+    "kind": "move",
+    "x": 8,
+    "y": 82,
+    "label": "Fence line",
+    "note": "Walk the 360 around the fence"
+   }
+  ],
+  "steps": [
+   {
+    "label": "Lay in",
+    "q": "Why does your captain lay in from the hydrant instead of driving straight up on tank water?",
+    "opts": [
+     "Department rule — the first engine lays a line on every call",
+     "Working fire — it needs an uninterrupted supply, not 500 gallons",
+     "So the engineer can park closer and block the street with the rig",
+     "Vehicle fires can only be knocked down with hydrant pressure"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.12E: \"First due engine companies approaching the scene with any evidence of a working fire should secure a water supply.\" \"An uninterrupted water supply is necessary to sustain effective water volumes during a fire attack.\" The engine carries about 500 gallons."
+   },
+   {
+    "label": "Lay exceptions",
+    "q": "When would the first-due engine skip the lay, per M.P. 202.12E?",
+    "opts": [
+     "Known rescue needing the full crew, fire location unknown in a complex, or a high-rise",
+     "Any vehicle fire, any building under 3 stories, or a hydrant more than 300 feet from the fire",
+     "Night fires, rain, or any time the second engine is less than 3 minutes out",
+     "Never — the first engine lays in on every working fire, with no exceptions"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.12E exceptions: \"Known or highly suspected rescue requiring a full crew,\" \"Unsure of actual fire location in multi-unit residential or commercial building complex,\" and \"Fire in a high-rise building.\""
+   },
+   {
+    "label": "Wrap the plug",
+    "q": "Engineer stops at the hydrant. What do you do first?",
+    "opts": [
+     "Hook the supply line to the hydrant and open it, then wave him on",
+     "Ride to the fire, help pull hose, and walk back for the hydrant",
+     "Stand in the street holding the hose and wave the engineer forward",
+     "Step off curbside, anchor the hose at the hydrant, signal him to go"
+    ],
+    "best": 3,
+    "mp": "IFSTA forward lay: the hydrant firefighter steps off on the curb side, anchors the supply line at the hydrant, signals the engineer to proceed, and stays clear while the hose pays out. No water until the line is connected at the engine and the engineer calls for it."
+   },
+   {
+    "label": "Lay side",
+    "q": "The supply line pays out behind E1 as it heads for the building. Where should it lie?",
+    "opts": [
+     "Down the center of the street so cars can pass on both sides",
+     "Along the hydrant side, crossing over at the fire if needed",
+     "In the far gutter, as far from the hydrant as the street allows",
+     "Zigzagged across the lanes so there's slack to move the rig later"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.12E: \"When possible, lay the supply hose along the hydrant-side of the roadway and cross over at the fire if necessary. Slow down when laying lines\" — it keeps hose off the road, protects people, and gives the captain time to size up."
+   },
+   {
+    "label": "Prep the plug",
+    "q": "While E1 lays in, how do you get the hydrant ready?",
+    "opts": [
+     "Cap off, flush briefly to clear debris, then connect the supply line",
+     "Connect straight to the outlet — flushing wastes time and water",
+     "Open it fully with the caps on so it's pressurized for the engineer",
+     "Pull every cap and leave them off so the engineer can pick one"
+    ],
+    "best": 0,
+    "mp": "IFSTA: remove the cap, flush the hydrant briefly to clear rocks and debris and confirm it flows, shut it, then connect. Debris in the supply line ends up in the pump or the nozzle screen."
+   },
+   {
+    "label": "Charge it",
+    "q": "Engineer on the radio: \"Pump to hydrant, charge it.\" What do you do and say?",
+    "opts": [
+     "Spin it open fast and say nothing — he'll see the line fill",
+     "Open it halfway to protect the hose, then report \"water on\"",
+     "Open it slowly all the way, then: \"Hydrant to Pump, water on the way\"",
+     "Open it fully, then run up to the fire to tell the captain in person"
+    ],
+    "best": 2,
+    "mp": "IFSTA: open the hydrant slowly to avoid water hammer, then all the way so the engineer gets full flow. M.P. 205.01 order model: acknowledge with a brief restatement — he knows water is coming and can plan his tank."
+   },
+   {
+    "label": "Tank water",
+    "q": "The attack line is flowing off the tank before your supply arrives. 500 gallons at 150 GPM lasts about how long?",
+    "opts": [
+     "About 3 minutes",
+     "About 10 minutes",
+     "About 1 minute",
+     "About 6 minutes"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.04: a 1¾-inch line flows 150 GPM (2.5 gallons per second). 500 ÷ 150 ≈ 3.3 minutes. That's why the plug firefighter moves with purpose — the tank is a bridge, not a water supply."
+   },
+   {
+    "label": "Stuck cap",
+    "q": "The cap won't break loose. Engineer: \"How's my water? Tank's at a quarter.\" What do you do?",
+    "opts": [
+     "Tell him straight — \"Cap's stuck, working it\" — and keep at it",
+     "Say nothing until it's fixed so you don't tie up the channel",
+     "Leave the hydrant and run up to the rig to help pull hose",
+     "Tell him \"water on the way\" so he doesn't worry about it"
+    ],
+    "mp": "No MP script for a stuck cap — but the engineer is managing a few minutes of tank water for a crew on the nozzle. He needs the truth so he can tell the captain, gate down, or get help. A false \"water on the way\" can leave a crew inside with nothing."
+   },
+   {
+    "label": "Walk the line",
+    "q": "Water's on and the supply line is hard. What do you do on your way up to the engine?",
+    "opts": [
+     "Walk the supply line to the rig, clearing kinks and checking for leaks",
+     "Jog straight up the sidewalk — the engineer will spot any problem from the pump",
+     "Stay at the hydrant for the rest of the fire in case it shuts off",
+     "Shut the hydrant halfway so the hose isn't under so much pressure"
+    ],
+    "best": 0,
+    "mp": "IFSTA: check the supply line on the way to the engine — kinks and bad couplings rob flow. M.P. 202.12E: an unsupported 500-foot lay of 4-inch can flow about 800 GPM, but only if the line is clear."
+   },
+   {
+    "label": "Your next job",
+    "q": "You reach E1. Captain and FF2 are taking the line to the truck, then up to the units. Where are you?",
+    "opts": [
+     "Back at the hydrant — someone has to guard it the whole fire",
+     "Primary IRIC with the engineer — PPE on, radio up, tracking the crew",
+     "Inside on the line with them — three hands make a faster knockdown",
+     "Off on your own to walk the 360 around the back of the building"
+    ],
+    "best": 1,
+    "mp": "M.P. 201.04: on a four-person crew with the captain in fast attack, \"the plug person assumes the primary 2 in / 2 out position and the engineer assumes the secondary.\" The primary member \"must be solely dedicated to tracking interior personnel.\""
+   },
+   {
+    "label": "Passport",
+    "q": "Where does E1's passport go once the attack line is charged?",
+    "opts": [
+     "In the captain's pocket — it goes inside with the crew",
+     "On the dash, where it stays for the entire incident",
+     "On the discharge gate for that line, at the pump panel",
+     "With BC1 at the command post, handed over in person"
+    ],
+    "best": 2,
+    "mp": "M.P. 201.03: the engineer is the accountability officer for crews off his rig and \"places passport/pouch on discharge gate when hoseline is charged.\" \"Passports never enter the hot zone.\""
+   },
+   {
+    "label": "Mask up",
+    "q": "You're outside at the rig, 40 feet from the burning truck, smoke drifting across the drive. SCBA?",
+    "opts": [
+     "Not needed — vehicle fires outdoors don't call for a mask",
+     "Only if the smoke turns black and drifts over the engine",
+     "On air — visible products of combustion, vehicle fire or not",
+     "Only for the crew on the nozzle; IRIC stays off air until going in"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.05B: SCBA is required \"where products of combustion are visible in the atmosphere, including vehicle fires and dumpster fires.\" M.P. 202.16: \"The minimum level of protection for firefighters is full protective clothing breathing air from their SCBA.\""
+   },
+   {
+    "label": "Approach",
+    "hotspots": true,
+    "q": "Before you settle in as IRIC you help the crew flake out. Where does the first water go? Tap a number on the picture or pick from the list.",
+    "best": 0,
+    "mp": "M.P. 202.16: \"initiate the fire attack from a 45-degree angle, utilizing the reach of the fire stream.\" \"First water should be applied to extinguish or protect the passenger compartment and an all clear should be obtained.\" Then the bay and the fire climbing toward the units."
+   },
+   {
+    "label": "Vehicle type",
+    "q": "M.P. 202.16 lists three steps for every vehicle fire. What's step 1?",
+    "opts": [
+     "Pop the hood and cut both battery cables right away",
+     "Identify the vehicle type and address life safety",
+     "Chock the wheels and turn off the ignition",
+     "Pull the truck out of the bay with the engine"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.16: \"1. Identify the vehicle type and address life safety. 2. Address scene safety, apparatus placement... chock wheels. 3. Disable the vehicle.\" EV, hybrid, LPG or CNG changes everything that follows."
+   },
+   {
+    "label": "Line size",
+    "q": "What's the minimum attack line for a vehicle fire, per M.P. 202.16?",
+    "opts": [
+     "1-inch booster line",
+     "2½-inch line only",
+     "1¾-inch handline",
+     "Any size, with foam"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.16: \"The minimum size of hose line to initiate an attack on a vehicle fire is the 1 ¾ inch handline.\" This one is in a garage under occupied units — it gets treated like the structure fire it's about to be."
+   },
+   {
+    "label": "Approach angle",
+    "q": "How does the crew you're supporting approach the burning pickup?",
+    "opts": [
+     "Straight at the front bumper so the stream hits the engine bay",
+     "Straight in from the side to get water on the cab the fastest",
+     "From the rear at the tailgate, aiming at the fuel fill to cool the tank",
+     "From a 45-degree angle, full PPE, on air, using the stream's reach"
+    ],
+    "best": 3,
+    "mp": "M.P. 202.16: \"Approach the vehicle with full PPE and SCBA with facepiece, initiate the fire attack from a 45-degree angle, utilizing the reach of the fire stream.\" Bumpers launch, rims blow out sideways — the corner keeps you out of both lines of fire."
+   },
+   {
+    "label": "Bumper hazard",
+    "q": "Why does your captain keep you off the pickup's bumpers while you feed hose?",
+    "opts": [
+     "Heated energy-absorbing bumpers can let go and travel 25 feet",
+     "Plastic bumpers melt and drip burning fuel onto the garage floor",
+     "Bumpers hide the fuel tank; a stream hitting them can rupture it",
+     "Chrome bumpers conduct battery current when they get wet"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.16: energy-absorbing bumpers \"will develop high pressures which may result in the sudden release of the bumper assembly... Bumper assemblies have been known to travel 25 feet.\""
+   },
+   {
+    "label": "Fuel tank",
+    "q": "Fire is working near the fuel fill. What's the rule on the tank?",
+    "opts": [
+     "Pop the gas cap so the pressure bleeds off before it ruptures",
+     "Don't pull the cap or put a stream into the tank — it's pressurized",
+     "Fill the tank with water through the fill neck to cool it from inside",
+     "Cover the fill with foam before anyone works near the cab"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.16: \"Do not remove gas cap, as tank may have become pressurized. Do not direct hose stream into tank, as this will cause pressurization of tank, with a possible result of burning fuel spewing from the tank fill opening.\""
+   },
+   {
+    "label": "Hood and hatch",
+    "q": "The crew wants the hood open to get water on the engine fire. What's the hazard?",
+    "opts": [
+     "Heated lift struts can fail — the hood can fly open with force",
+     "The hood is the battery ground; touching it can shock you",
+     "Opening the hood always flashes the fire back into the cab",
+     "Hoods lock when heated and can only be cut open with a saw"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.16: when gas cylinders in hold-open devices are heated, \"excessive pressure may develop in lift assists causing a trunk, hatch, or hood to fly open with explosive force when the latch mechanism is released.\" Give it room when you pop the latch."
+   },
+   {
+    "label": "Victim status",
+    "cat": "sizeup",
+    "q": "Are people hurt? What do you know right now?",
+    "opts": [
+     "Unknown — tenants above, nobody has checked the units yet",
+     "A neighbor says the truck's owner got out and is in the lot",
+     "Tenant on the balcony yelling that smoke is in her unit",
+     "Injuries reported — someone burned trying to move the truck"
+    ],
+    "mp": "M.P. 202.02C: on residential fires, Command directs \"a primary search in all involved and exposed occupancies.\" The units above the bay are exposed — somebody is going up there."
+   },
+   {
+    "label": "What’s happening inside?",
+    "cat": "sizeup",
+    "q": "What’s happening inside? Your read from the pump panel:",
+    "opts": [
+     "Truck darkening down, smoke pushing into the units above",
+     "Fire through the garage ceiling into the apartment over it",
+     "Fire spreading into the closed bays next door",
+     "Unknown — no report from the crew yet"
+    ]
+   },
+   {
+    "label": "IRIC Mayday",
+    "q": "As IRIC you hear your captain upstairs: \"Mayday, Mayday, Mayday.\" What do you do?",
+    "opts": [
+     "Run in alone right away — every second counts, the engineer has to pump",
+     "Stay put — IRIC only watches the door, it never goes in for anyone",
+     "Shut down the pump so the crew inside knows something is wrong",
+     "Tell Command what you're doing, then go in as a team, not alone"
+    ],
+    "best": 3,
+    "mp": "M.P. 201.04: \"any rescue efforts be initiated as a team (2 members) and well communicated prior to action,\" and 2 in / 2 out members \"must communicate their actions with Command or AHQ.\" A solo rescuer becomes the second Mayday."
+   },
+   {
+    "label": "Shut down",
+    "q": "Fire's out. Engineer: \"Shut down the hydrant.\" How?",
+    "opts": [
+     "Slam it shut fast so the line drains before you break it down",
+     "Close it slowly to avoid water hammer, then drain the line",
+     "Leave it open and just break the coupling at the engine",
+     "Close it halfway and let the rest bleed off on its own"
+    ],
+    "best": 1,
+    "mp": "IFSTA: close hydrants slowly — snapping one shut sends a water hammer back through the main and the hose. Then bleed and drain the supply line before you break couplings."
+   },
+   {
+    "label": "PAR",
+    "q": "Command calls \"under control\" and asks for a PAR. What is it?",
+    "opts": [
+     "A progress report: conditions, actions and needs",
+     "Every member accounted for, with adequate exit air",
+     "Each member's exact air pressure, read on the radio",
+     "Primary search in the units is done and clear"
+    ],
+    "best": 1,
+    "mp": "M.P. 201.03: \"The PAR is a confirmation that all members are accounted for and have an adequate exit air supply,\" required as companies report under control and All Clear, after any sudden hazardous event, and every 30 minutes."
+   },
+   {
+    "label": "MP reference",
+    "q": "Plug FF checklist — M.P. 202.12E: any sign of a working fire, secure a water supply; lay on the hydrant side and slow down. IFSTA: anchor, flush, connect, open slowly and fully, close slowly. M.P. 202.04: 500 gallons at 150 GPM is about 3 minutes. M.P. 201.04: the plug person is primary 2 in / 2 out — rescue as a team, communicated. M.P. 201.03: passport on the discharge gate. M.P. 202.16: identify the vehicle, 1¾-inch minimum, 45-degree approach, passenger compartment first, never into the fuel tank, bumpers and struts can launch. M.P. 202.05B: SCBA on at vehicle fires.",
+    "opts": [
+     "Understood — show my debrief"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "probie-search",
+  "title": "Probie: Search — Tile roof 2nd floor",
+  "sub": "Probie seat · L1 search FF · M.P. 202.02C Rescue · 206.03 Supervision · 201.01B Mayday",
+  "dispatch": "FD Haz Chan A1 · Inc #000452 · House Fire · 4127 E. Quail Canyon Rd, Phoenix · CODE 3 · 16:51 · Units: E1, L1, E2, E3, R3, BC1. Caller is the mother, outside: flames from an upstairs window, her 14-year-old son was asleep in his bedroom upstairs.",
+  "arrival": "You're the probie on L1, four months on the job. E1 is stretching a line to the front door. Command: \"L1, Search & Rescue, second floor.\" The mother grabs your captain's arm — her son's room is upstairs on the right. 2-story stucco house, concrete tile roof, fire venting from a 2nd-floor window, heavy black smoke over the whole roof.",
+  "image": "assets/scenarios/tileroof-arrival.jpg",
+  "imageAlt": "Arrival view: 2-story stucco Southwest-style house with a concrete tile roof, fire venting from a 2nd-floor window, heavy black smoke over the roof, arched front entry, garage on the right with a silver pickup parked in front, desert hillside in the background.",
+  "hotspots": [
+   {
+    "kind": "move",
+    "x": 30,
+    "y": 63,
+    "label": "Front door",
+    "note": "Go in behind E1's line and up the interior stairs"
+   },
+   {
+    "kind": "spray",
+    "x": 59,
+    "y": 26,
+    "w": 10,
+    "h": 14,
+    "label": "2nd-floor fire window",
+    "note": "Hit the upstairs fire window from the yard",
+    "c": [
+     "Fire Control"
+    ]
+   },
+   {
+    "kind": "move",
+    "x": 77,
+    "y": 36,
+    "label": "Upstairs bedroom windows",
+    "note": "Ladder the son's bedroom window — vent, enter, isolate, search"
+   },
+   {
+    "kind": "move",
+    "x": 87,
+    "y": 42,
+    "label": "Tile roof",
+    "note": "Get up on the roof and open it up"
+   },
+   {
+    "kind": "move",
+    "x": 51,
+    "y": 55,
+    "label": "Barred front windows",
+    "note": "Search the first floor through the barred windows"
+   },
+   {
+    "kind": "move",
+    "x": 88,
+    "y": 58,
+    "label": "Garage",
+    "note": "Force the garage and go in through the house door"
+   }
+  ],
+  "steps": [
+   {
+    "label": "Supervision",
+    "q": "Captain: \"You stay on me. Hand on my boot or on my coat.\" Why isn't that optional for you?",
+    "opts": [
+     "Probies share the captain's radio, so you can't be out of reach",
+     "M.P. 206.03: probies get direct supervision in smoke or fire",
+     "Only until the fire is knocked down — then you search alone",
+     "Ladder company rule; engine probies can work on their own"
+    ],
+    "best": 1,
+    "mp": "M.P. 206.03: \"Direct supervision will be required at the moment the fire fighter enters an area that exposes the fire fighter to potential injury or death,\" starting with \"Entering a building involved with smoke or fire.\" Inexperienced people in zero visibility \"can easily take inappropriate action.\""
+   },
+   {
+    "label": "Less experienced",
+    "q": "Under M.P. 206.03, who counts as a \"less experienced\" firefighter?",
+    "opts": [
+     "Only probies — once you pass probation you're on your own",
+     "Anyone under five years, or anyone new to the station",
+     "Only recruits still in the academy, not field probies",
+     "A probie, or anyone under two years on firefighting duty"
+    ],
+    "best": 3,
+    "mp": "M.P. 206.03: \"A. Probationary fire fighter. B. Any member with less than two years total experience assigned to fire fighting duties.\" They're supervised by the company officer or a firefighter with more than two years — and two years doesn't automatically make you experienced."
+   },
+   {
+    "label": "Radio terms",
+    "q": "\"Search & Rescue\" versus \"All Clear\" on the radio — what's the difference?",
+    "opts": [
+     "Search & Rescue is the assignment; All Clear is only the completion report",
+     "They're interchangeable — either one means the search is underway",
+     "All Clear is the assignment; Search & Rescue means a victim was found",
+     "Search & Rescue means a victim was found; All Clear means nobody lives there"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.02C: \"The term 'SEARCH & RESCUE' should be used when assigning companies to a primary search over the radio; 'ALL CLEAR' should be used only as a completion report.\""
+   },
+   {
+    "label": "Approach",
+    "hotspots": true,
+    "q": "Where do you and your captain go to start the search? Tap a number on the picture or pick from the list.",
+    "best": 2,
+    "mp": "M.P. 202.02C: extend rescue efforts to the \"most severely threatened\" first — a reported victim upstairs, above the fire. IFSTA vent-enter-isolate-search puts you in that room fastest from a ladder, and the first move inside is closing the bedroom door. The interior stairs stay with E1's line."
+   },
+   {
+    "label": "Coordinate the window",
+    "q": "Before you take out the bedroom window, your captain radios Command. Why?",
+    "opts": [
+     "So Alarm can log the exact time the search was started",
+     "A broken window is ventilation — it must match E1's attack",
+     "So E1 shuts down its line while you climb in the window",
+     "Only to ask permission before breaking a homeowner's window"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.02B: \"Co-ordinate all ventilation of the structure.\" M.P. 202.04: \"Access and egress openings must be considered as ventilation,\" and \"uncoordinated ventilation will make fire control more difficult.\" Your entry point is a vent point."
+   },
+   {
+    "label": "Ladder",
+    "q": "You throw a ground ladder to the bedroom window. Where does the tip go?",
+    "opts": [
+     "Just below the sill, so you can step in and bring a victim out",
+     "2–3 feet above the sill so it shows up through the smoke",
+     "At the top of the window frame to clear the glass with the beam",
+     "On the wall beside the window, out of the smoke coming out"
+    ],
+    "best": 0,
+    "mp": "IFSTA: for entry and rescue, set the tip at or just below the sill so you can get in and out and carry a victim onto the ladder. The 2–3 feet above rule is for roof access (M.P. 202.05), not a window."
+   },
+   {
+    "label": "Sound the floor",
+    "q": "Glass cleared. Before you go in, what do you do?",
+    "opts": [
+     "Dive in headfirst — speed matters more than anything now",
+     "Wait on the ladder for the smoke to clear out the window",
+     "Sound the floor inside with a tool, then go in low",
+     "Step down onto whatever is under the window — it's solid"
+    ],
+    "best": 2,
+    "mp": "IFSTA: sound the floor below the window with a tool before you commit your weight — fire under you or a hole in the floor kills firefighters. Sweeping the sill area also finds a victim who collapsed trying to get out the window."
+   },
+   {
+    "label": "Isolate",
+    "q": "You're in the bedroom. First thing you do?",
+    "opts": [
+     "Search the closet first — kids hide in there",
+     "Open the bedroom door to clear smoke out the window",
+     "Shout for the boy and wait by the window for an answer",
+     "Find the bedroom door and close it — isolate the room"
+    ],
+    "best": 3,
+    "mp": "IFSTA VEIS: isolate the room by closing the door before you search, or the window you just opened pulls the fire down the hall at you. M.P. 202.02C: a closed interior door protects victims from smoke and heat."
+   },
+   {
+    "label": "Search pattern",
+    "q": "How do you search the room with your captain?",
+    "opts": [
+     "Crawl straight to the middle of the room and sweep in circles",
+     "Stand up and walk it fast — it's just one small bedroom",
+     "Stay on one wall around the room, sweeping beds and floor",
+     "Search only the bed — that's where a sleeper will be"
+    ],
+    "best": 2,
+    "mp": "IFSTA: oriented, systematic search — keep contact with a wall, work one direction around the room, sweep out with a tool or your leg, under and on the bed, and keep your captain informed. You end up back at your exit without getting lost."
+   },
+   {
+    "label": "Where kids are",
+    "q": "A 14-year-old. Where do you make sure you check?",
+    "opts": [
+     "Only the bed and the open floor — teens don't hide",
+     "In the hallway only — kids always try to run for the front door",
+     "Under the bed, in the closet, behind the door, by the window",
+     "Under the window only — everyone heads for the light"
+    ],
+    "best": 2,
+    "mp": "IFSTA: victims are often found near exits (doors and windows), and kids hide — under beds, in closets, behind doors. M.P. 202.02C: elevated victims above the fire face the worst toxic and thermal exposure."
+   },
+   {
+    "label": "TIC",
+    "q": "Your captain is running the TIC. How should you treat it?",
+    "opts": [
+     "If the TIC shows nothing, the room is clear — move on",
+     "It speeds the search — it doesn't replace the wall and the sweep",
+     "It sees through walls, so search only where it shows heat",
+     "It's for finding the fire, not for finding victims"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.05A: \"The primary use of the TIC for the fire department is for conducting search/rescue and crew accountability tasks\" — but \"sole reliance on the camera is not prudent fire fighting,\" and it can malfunction."
+   },
+   {
+    "label": "Victim found",
+    "q": "Your hand hits a leg beside the bed: the boy, unresponsive. Now what?",
+    "opts": [
+     "Tell your captain, then remove him together by the safest path",
+     "Pass him out the window to whoever's there, then keep searching",
+     "Carry him down the ladder yourself while the captain finishes",
+     "Leave him for now, finish the room, and come back with help"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.02C: \"Normal means of interior access (e.g., stairs, halls...) should be utilized to remove victims whenever possible. Secondary means of rescue (e.g., ... ground ladders...) must be utilized in their order of effectiveness.\" M.P. 206.03: you stay with your captain."
+   },
+   {
+    "label": "Victim status",
+    "cat": "sizeup",
+    "q": "Are people hurt? What do you know right now?",
+    "opts": [
+     "Son found in the right-side bedroom, unresponsive — being removed",
+     "Unknown — still searching the second floor",
+     "Mother now says he may have gone out the back",
+     "Two victims now — a friend was sleeping over"
+    ],
+    "mp": "M.P. 202.02C: \"Command and operating companies cannot depend solely upon reports from residents and spectators\" — use them to aim the search, then search everything you can reach."
+   },
+   {
+    "label": "Victim report",
+    "q": "Who tells Command about the victim, and when?",
+    "opts": [
+     "You call \"All Clear\" — the reported victim has been found",
+     "Your captain, right away: \"L1, one victim, second floor, removing\"",
+     "Nobody until he's outside, so you don't clog the radio",
+     "R3 — the rescue company is the one that reports every victim on scene"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.02C: \"When primary search companies encounter and remove victims, Command must assign other companies to continue to cover the interior positions vacated by those companies.\" Command can't backfill your area if it doesn't know you left it."
+   },
+   {
+    "label": "Not clear yet",
+    "q": "The boy is out. Is the second floor \"All Clear\"?",
+    "opts": [
+     "Yes — the reported victim is out, so the primary search is complete",
+     "Yes, as long as the mother confirms nobody else lives there",
+     "No — the rest still needs a primary; another company covers it",
+     "No — but nobody searches until the fire is completely out"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.02C: a primary search means companies \"have quickly gone through all affected areas and verified the removal and/or safety of all occupants.\" One victim out is not every room searched."
+   },
+   {
+    "label": "Treatment",
+    "q": "Where does the boy go once he's out of the house?",
+    "opts": [
+     "To R3 and the treatment area set up outside",
+     "Hand him to his mother in the street and go back in",
+     "Lay him on the lawn by the door and go back up",
+     "Into the back of E1's cab until an ambulance shows"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.02C: \"Command must structure treatment of victims after removal.\" M.P. 202.01: rescue companies do search, rescue, treatment and transport — and keep a retrievable status for exactly this."
+   },
+   {
+    "label": "All Clear",
+    "q": "You and your captain finish the rest of the 2nd floor — nobody else. What goes on the radio?",
+    "opts": [
+     "You: \"Search complete, nothing else found\"",
+     "Captain: \"L1 to Command, All Clear, second floor\"",
+     "Captain: \"Under control, second floor\"",
+     "Captain: \"Secondary complete, second floor\""
+    ],
+    "best": 1,
+    "mp": "M.P. 202.02C: \"The completion of the primary search is reported utilizing the standard radio reporting term 'All Clear.'\" Command records it as the benchmark. \"Under control\" is fire control, and a secondary comes later."
+   },
+   {
+    "label": "PAR",
+    "q": "Command acknowledges the All Clear. What does M.P. 201.03 require at that point?",
+    "opts": [
+     "A PAR — your captain confirms the crew is together with exit air",
+     "Nothing — PARs are only for Maydays and collapses",
+     "A secondary search by your own crew before you leave",
+     "Your passport handed to Command in person, right away"
+    ],
+    "best": 0,
+    "mp": "M.P. 201.03: a PAR is required \"as companies report an all clear\" — \"a confirmation that all members are accounted for and have an adequate exit air supply.\""
+   },
+   {
+    "label": "Secondary",
+    "q": "Who does the secondary search, and when?",
+    "opts": [
+     "Your crew, right now, while you know the layout",
+     "A different company, after fire control and venting",
+     "Nobody — a secondary only happens on commercial fires",
+     "The same crew, after the passports are retrieved"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.02C: a secondary search comes after initial fire control and ventilation and \"should preferably be completed by different companies than those involved in the primary.\" Thoroughness, not time, is the critical factor."
+   },
+   {
+    "label": "Air trigger",
+    "q": "Right after the All Clear, your captain asks for your air. Why then?",
+    "opts": [
+     "Benchmarks are air-check triggers — he plans the exit off your number",
+     "He has to read every gauge to Command with the All Clear",
+     "It's only a habit; air checks matter only on commercial fires",
+     "Because the low-air alarms should be going off by about now"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.05C: captains use triggers to check crew air — \"the announcement of the completion of tactical benchmarks, elapsed time notifications or built in 50% notification alarms.\" Then he plans your exit before the low-air alarm."
+   },
+   {
+    "label": "Mayday",
+    "q": "Back in the hallway, you get separated and your SCBA is snagged on wires. 30 seconds, still stuck. What first?",
+    "opts": [
+     "Keep working at it quietly — you'll call once your air gets low",
+     "Pull your mask off to see the wires better and work free",
+     "\"Mayday, Mayday, Mayday\" on the radio, then work GRAB LIVES",
+     "Hit your PASS and wait — radio traffic just slows the rescue"
+    ],
+    "best": 2,
+    "mp": "M.P. 201.01B: a Mayday is \"an event that cannot be resolved by that individual within 30 seconds,\" initiated by \"Mayday, Mayday, Mayday\" on the portable. Then B.O.A. — Breathe, Organize, Act — and disentanglement from your survival training."
+   },
+   {
+    "label": "LUNAR",
+    "q": "Command answers your Mayday. What do you give them?",
+    "opts": [
+     "Your air pressure only — they'll find you by your PASS",
+     "LUNAR: Location, Unit, Name, Assignment, Resources needed",
+     "Your name and \"I'm okay for now\" so nobody panics",
+     "The fire conditions in the hallway and your crew's search progress"
+    ],
+    "best": 1,
+    "mp": "LUNAR (taught in IFSTA and fireground survival training): Location, Unit, Name, Assignment/air, Resources needed. M.P. 201.01B: early, clear communication and \"controlling an emotional response\" give RIC what it needs to find you."
+   },
+   {
+    "label": "GRAB LIVES",
+    "q": "M.P. 201.01B GRAB LIVES — what are G, R and A?",
+    "opts": [
+     "Get out, Retreat, Abandon the hoseline",
+     "Grab the hoseline, Reverse direction, Advance to a window",
+     "Gauge, Rescue yourself, Ask your partner",
+     "Check air Gauge, Radio for help, Activate PASS"
+    ],
+    "best": 3,
+    "mp": "M.P. 201.01B GRAB LIVES: Gauge, Radio, Activate PASS, control Breathing, stay Low, Illuminate, Volume (make noise), find an Exit, Shield your airway (last ditch)."
+   },
+   {
+    "label": "What’s happening inside?",
+    "cat": "sizeup",
+    "q": "What’s happening inside? Your read from the 2nd floor:",
+    "opts": [
+     "Fire room darkening down, heat lifting in the hallway",
+     "Fire extending into the attic over the bedrooms",
+     "Heavy heat at the top of the stairs, conditions worsening",
+     "Smoke clearing out the bedroom window you opened"
+    ]
+   },
+   {
+    "label": "MP reference",
+    "q": "Search FF checklist — M.P. 206.03: probies (or under two years) are directly supervised the moment they enter smoke or fire. M.P. 202.02C: \"Search & Rescue\" assigns, \"All Clear\" completes; most threatened first; victims out by normal routes when possible; report removals so Command backfills; secondary by a different company. IFSTA: tip below the sill, sound the floor, close the door, oriented search. M.P. 202.05A: the TIC helps, never replaces the search. M.P. 201.03: PAR with every All Clear. M.P. 201.01B: can't fix it in 30 seconds — Mayday; GRAB LIVES. LUNAR for the report.",
+    "opts": [
+     "Understood — show my debrief"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "probie-backup",
+  "title": "Probie: Backup line & RIC — Mid-rise",
+  "sub": "Probie seat · FF on E2 · M.P. 202.20 Mid Rise · 202.12E Backup lines · 201.03 Accountability · 202.05C Air",
+  "dispatch": "FD Haz Chan A1 · Inc #000902 · Apartment Fire · 4-story mid-rise apartment building, smoke showing from the 3rd floor · CODE 3 · Units: E1, L1, E2, E3, L2, R3, BC1. Multiple callers, occupants unknown.",
+  "arrival": "You're the probie on E2, second-due. E1's crew is already headed up the west stairwell with the standpipe pack; smoke is pushing from the 3rd-floor balcony band of a sealed-up 4-story building. Command: \"E2, backup line for E1, third floor, west stairwell. Passports to the lobby.\" E3 is ordered On-Deck as RIC. Your captain: \"Grab the standpipe bag and stay on my hip.\"",
+  "image": "assets/scenarios/midrise-arrival.jpg",
+  "imageAlt": "Arrival view: 4-story mid-rise apartment building, smoke from the 3rd-floor balcony band, white stair tower on the left end, ground-floor entrance with yellow doors, hydrant at the right edge of the parking lot, aerial map inset at lower left.",
+  "hotspots": [
+   {
+    "kind": "move",
+    "x": 32,
+    "y": 42,
+    "label": "West stair tower",
+    "note": "E1's attack stairwell — standpipe outlets on the landings"
+   },
+   {
+    "kind": "move",
+    "x": 60,
+    "y": 63,
+    "label": "Main entrance",
+    "note": "Alarm panel and lobby — passports go here"
+   },
+   {
+    "kind": "move",
+    "x": 51,
+    "y": 61,
+    "label": "Side door",
+    "note": "Closest door to the rig — take any stairs you find"
+   },
+   {
+    "kind": "spray",
+    "x": 50,
+    "y": 37,
+    "w": 14,
+    "h": 9,
+    "label": "Fire floor balconies",
+    "note": "Hit the 3rd floor from the parking lot",
+    "c": [
+     "Fire Control"
+    ]
+   },
+   {
+    "kind": "move",
+    "x": 89,
+    "y": 66,
+    "label": "Hydrant",
+    "note": "Supply the FDC so the standpipe has real pressure"
+   }
+  ],
+  "steps": [
+   {
+    "label": "Passports",
+    "q": "Mid-rise. Where does E2's passport go?",
+    "opts": [
+     "On E1's pump panel, like at a house fire",
+     "In your captain's pocket, up the stairs with you",
+     "To the building lobby for Lobby to track",
+     "On E2's dash for the whole incident"
+    ],
+    "best": 2,
+    "mp": "M.P. 201.03 multi-story: \"All crews reporting to the building will deliver their passports to the building lobby.\" Each crew takes its hoseline ID tag to mark its line at the standpipe. \"Passports never enter the hot zone.\""
+   },
+   {
+    "label": "On-Deck",
+    "q": "Command puts E3 On-Deck as RIC. Where is E3?",
+    "opts": [
+     "Just outside the immediate hazard zone, ready to go",
+     "In Level 1 staging a block away, waiting for orders",
+     "On the fire floor right behind E1, sharing the line",
+     "At the command post, helping track accountability"
+    ],
+    "best": 0,
+    "mp": "M.P. 201.01A: On-Deck companies are \"located just outside the immediate hazard zone, safely distanced from the entrance of a tactical position,\" and the most likely On-Deck assignment is Rapid Intervention Crew."
+   },
+   {
+    "label": "RIC",
+    "q": "What is a RIC under M.P. 201.05A?",
+    "opts": [
+     "Any two firefighters left outside while a crew goes in",
+     "A four-person crew, fully equipped, ready to rescue firefighters",
+     "The engineer and plug firefighter of the first-due engine",
+     "A crew sent in to help any company that needs more hands"
+    ],
+    "best": 1,
+    "mp": "M.P. 201.05A: Rapid Intervention Crew — \"Four-person crew fully equipped on site, in a ready state, to immediately react and respond to rescue firefighters.\" The two-person IRIC is the first-due's temporary version."
+   },
+   {
+    "label": "Approach",
+    "hotspots": true,
+    "q": "You step off E2 with the standpipe bag. Where do you head? Tap a number on the picture or pick from the list.",
+    "best": 0,
+    "mp": "M.P. 202.20: \"Determine and monitor the fire attack stairwell,\" and \"clearly identify attack and evacuation stairwells from each floor.\" Standpipes may not be in every stairwell — go where E1 is."
+   },
+   {
+    "label": "Which stairwell",
+    "q": "The building has two stair towers. Which one do you use?",
+    "opts": [
+     "Whichever is closest to the rig — save the walk",
+     "The east one, so you don't crowd E1's hose on the stairs",
+     "The attack stairwell E1 is in; the other is for residents",
+     "Both — split the crew up so you can cover more floors faster"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.20: \"Clearly identify attack and evacuation stairwells from each floor.\" The attack stairwell holds the standpipe and the lines; the evacuation stairwell stays clean for residents getting out."
+   },
+   {
+    "label": "Residents",
+    "q": "Residents are coming down your attack stairwell, past the hose. What do you do?",
+    "opts": [
+     "Tell your captain so Command knows — keep them moving down",
+     "Send them back up to their units to shelter in place",
+     "Stop and walk them out yourself, then come back up",
+     "Ignore them — the hose is your only job right now"
+    ],
+    "mp": "M.P. 202.20: occupants \"may not shelter in place\" and \"may attempt to exit the building floor via most familiar routes\" — even your attack stairwell. No MP script for the probie here: stay with your captain and get the word to Command."
+   },
+   {
+    "label": "Missing standpipe",
+    "q": "Second-floor landing, west stairwell: no standpipe outlet. Most likely reason?",
+    "opts": [
+     "Mid-rises never have standpipes — you stretch from the engine",
+     "Standpipes may not be in every stairwell or on every landing",
+     "It's behind the fire control room door, like in a high-rise",
+     "It's only on the fire floor — that's all the code requires"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.20: \"Standpipes may not be present in every stairwell,\" connections \"may be present in interior hallways,\" and \"some standpipe connections can be up to 200' apart.\" Mid-rises typically have no fire control room."
+   },
+   {
+    "label": "Hookup floor",
+    "q": "E1 hooked up on the 2nd-floor landing for its 3rd-floor attack. Where does your backup line connect?",
+    "opts": [
+     "The floor below E1's connection, with extra hose to reach",
+     "The same outlet as E1, with a gated wye on the valve",
+     "The fire-floor outlet, right at the hallway door so it's close",
+     "The floor above the fire, to stop extension upward"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.11 (the department's standpipe model, written for high-rise): \"The back up line and stairwell protection line should both be connected the floor below the initial line attachment,\" so the backup needs an extra 50–75 feet to reach as far."
+   },
+   {
+    "label": "Locked cap",
+    "q": "The outlet has a strange locked cap on it. What is it?",
+    "opts": [
+     "A KNOX locking cap — it takes the \"dog bone\" key",
+     "A dry-system cap — it pops off once the FDC is charged",
+     "An out-of-service cap — go find another outlet",
+     "A pressure-reducing cap — leave it on and connect over it"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.20: \"Fire department connections (FDC) and interior standpipe connections may have KNOX locking caps in place and require the 'dog bone' keys for access.\" Standpipe cap lock removal is a listed task-level skill."
+   },
+   {
+    "label": "Flush the outlet",
+    "q": "Cap's off. Before you connect your hose?",
+    "opts": [
+     "Connect right away — the valve is clean inside the wall",
+     "Crack the valve to flush debris and check for water, then connect",
+     "Open it fully into the stairwell first to bleed all the air out of it",
+     "Connect, then hammer the valve to knock out any scale"
+    ],
+    "best": 1,
+    "mp": "IFSTA: briefly flush a standpipe outlet into the stairwell before connecting to clear debris and confirm water, then shut it and hook up. Junk in the riser ends up in your nozzle."
+   },
+   {
+    "label": "Weak standpipe",
+    "q": "You open the valve and the line comes up soft. Why, per M.P. 202.20?",
+    "opts": [
+     "Your hose is too big — standpipes only feed 1½-inch lines",
+     "Fire pumps take 5 minutes to spin up after the alarm",
+     "Someone left the FDC caps off, so the water's leaking out",
+     "No fire pump — city-pressure wet standpipes can run short"
+    ],
+    "best": 3,
+    "mp": "M.P. 202.20: mid-rises \"do not typically have fire pumps,\" and \"wet standpipe systems with city water pressure above ground level may have inadequate water volume and pressure to mount an effective fire attack.\""
+   },
+   {
+    "label": "Fix the pressure",
+    "q": "What fixes the soft standpipe?",
+    "opts": [
+     "An engine supplied from a hydrant pumping the FDC",
+     "Opening the outlet valve on the fire floor to bleed air",
+     "Switching to a fog nozzle so it uses less water",
+     "Moving your hookup up to the 3rd-floor outlet"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.16: these buildings \"often have no fire pump, and the system is charged with municipal pressure. Pumping the FDC increases the GPM flow and pressure for both the sprinklers and the attack line.\" M.P. 202.20 lists standpipe pumping as a fundamental task."
+   },
+   {
+    "label": "Backup line size",
+    "q": "E1 is on a 1¾-inch. What should the backup line be?",
+    "opts": [
+     "Smaller than E1's — it's only a backup, so it should move faster",
+     "Same or greater flow — a 2-inch works at standpipe pressure",
+     "The same 1¾-inch as E1, just flowing at a lower pressure",
+     "A portable master stream device set up in the hallway"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.12E: \"Back up lines should be of the same or greater water volumes when possible.\" M.P. 202.11: 2-inch lines \"operate effectively at lower psi's typically seen in standpipe operations and provide greater gpm of 250+.\""
+   },
+   {
+    "label": "Backup job",
+    "q": "What is your backup line there to do?",
+    "opts": [
+     "Attack a second unit on its own, away from E1",
+     "Protect E1's way out and be ready to reinforce the attack",
+     "Hit the floor above the fire so the fire can't extend up there",
+     "Wet down the stairwell so residents can get out"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.12E: \"Back up hose lines should be deployed to protect a means of egress when necessary (always bear in mind the presence of Fire personnel operating in opposing positions).\""
+   },
+   {
+    "label": "Flake in the stairwell",
+    "q": "You've got extra hose at the outlet. Where do you flake it?",
+    "opts": [
+     "Down the stairs below the outlet, out of everyone's way going up",
+     "Piled on the landing so it's easy to grab from",
+     "Up the stairs toward the floor above, so it feeds down clean",
+     "Out into the fire-floor hallway before it's charged"
+    ],
+    "best": 2,
+    "mp": "IFSTA standpipe operations: flake excess hose up the stairs toward the floor above so gravity feeds it down and onto the fire floor without kinks. Piles on a landing kink when charged."
+   },
+   {
+    "label": "Stairwell door",
+    "q": "Your line runs through the fire-floor stairwell door. What about the door?",
+    "opts": [
+     "Prop it wide open — you need to be able to see E1 down the hall",
+     "Take it off its closer so it can't pinch the hose",
+     "Leave it however it ends up — the hose decides",
+     "Keep it as closed as the hose allows — it's your refuge"
+    ],
+    "best": 3,
+    "mp": "M.P. 202.04: \"Areas of safe refuge are considered stair wells, stair landings, or any area that can be protected by doors.\" A door chocked wide open turns your refuge and the residents' way out into a chimney."
+   },
+   {
+    "label": "Long stretch",
+    "q": "The fire unit is at the far end of a long hall — your stretch will run past 150 feet from the stairwell. What happens?",
+    "opts": [
+     "Nothing — 150 feet is a commercial-fire rule only",
+     "Add another length and keep going — the line will lead you back out",
+     "Tell your captain now — past 150 feet needs a risk call first",
+     "Drop the backup and go help E1 on its line instead"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.20: \"It is possible the building layout could require hose stretches of more than 150 feet. When this occurs a clear assessment of the required action and the position in the risk management plan is critical.\" \"Firefighters running out of air in contaminated atmosphere is not an option.\""
+   },
+   {
+    "label": "150 feet from where",
+    "q": "In a mid-rise, where is the 150 feet measured from?",
+    "opts": [
+     "From the engine at the curb to the nozzle at the fire",
+     "From the stairwell — the safe refuge — to the end of the line",
+     "From the front door of the building to the fire unit",
+     "From the fire-floor hallway door to the seat of the fire itself"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.04: for mid-rise and high-rise, \"this is measured from any area of safe refuge to the end of the hoseline length stretched into the building.\" Stairwells and landings protected by doors are areas of safe refuge."
+   },
+   {
+    "label": "Bottle change",
+    "q": "Your air is getting into the work you planned. Where do you plan the bottle change?",
+    "opts": [
+     "Out at the rig — always go all the way outside",
+     "Right where you are in the hallway, as fast as you can",
+     "Inside the building, in an area of safe refuge",
+     "Whenever the low-air alarm sounds, wherever you are"
+    ],
+    "best": 2,
+    "mp": "M.P. 202.20 task-level air management: \"Plan for an exit of the contaminated hazard zone prior to low air alarm sounding\" and \"plan for bottle change-out inside the building in an area of safe refuge.\" Communicate air status with your captain."
+   },
+   {
+    "label": "Structure on fire",
+    "q": "Opening up a wall in the fire unit, you see the wood studs burning. What do you do?",
+    "opts": [
+     "Tell your captain now — it gets reported to Command right away",
+     "Hit it and keep going — studs burn in every apartment fire",
+     "Keep it to yourself until the fire's out, then mention it",
+     "Leave the building on your own — it's coming down"
+    ],
+    "best": 0,
+    "mp": "M.P. 202.20: \"When fire has spread into the structural members of a wood framed mid-rise building, this is a very dangerous situation... Recognition of fire involving the structure should be reported to Command immediately.\" Command decides whether to stay offensive."
+   },
+   {
+    "label": "Radio inside",
+    "q": "Your radio keeps cutting out on the 3rd floor. What does M.P. 202.20 expect?",
+    "opts": [
+     "Switch to a quieter channel where you can get through",
+     "Stay on the hazard-zone channel; relay radio-to-radio if needed",
+     "Turn the radio off to save battery until you're outside",
+     "Go back outside every time you need to talk to Command"
+    ],
+    "best": 1,
+    "mp": "M.P. 202.20: mid-rise radio problems \"may require similar communication work arounds such as in high rise buildings including radio to radio relaying,\" and \"all mid-rise fire operations always be conducted on hazard zone radio channels.\""
+   },
+   {
+    "label": "PAR",
+    "q": "E1 reports a flashover in the fire unit. Command calls for PARs. What does your captain report?",
+    "opts": [
+     "Conditions, actions and needs on the 3rd floor",
+     "Every E2 member accounted for, with exit air",
+     "Each member's exact air reading, one at a time",
+     "That E2 is ready to be the RIC if needed"
+    ],
+    "best": 1,
+    "mp": "M.P. 201.03: a PAR is required after \"any sudden hazardous event at the incident — flash over, back draft, collapse, May Day,\" and confirms \"all members are accounted for and have an adequate exit air supply.\" Face to face within the company when possible."
+   },
+   {
+    "label": "PAR triggers",
+    "q": "Besides a sudden hazard, when else does M.P. 201.03 require a PAR?",
+    "opts": [
+     "Missing firefighter, offensive to defensive, All Clear, under control, every 30 minutes",
+     "Only when a Mayday is called and when the fire is declared under control",
+     "Every 10 minutes of elapsed time and whenever a new company arrives",
+     "Every time a crew changes bottles and every time a crew enters the building"
+    ],
+    "best": 0,
+    "mp": "M.P. 201.03 PAR triggers: any report of a missing or trapped firefighter, any change from offensive to defensive, any sudden hazardous event, as companies report an All Clear or under control, every 30 minutes of elapsed time, and any time Command feels it's necessary."
+   },
+   {
+    "label": "Victim status",
+    "cat": "sizeup",
+    "q": "Are people hurt? What do you know right now?",
+    "opts": [
+     "Unknown — high-density building, searches still underway",
+     "Residents coming down the stairs, none reported hurt yet",
+     "L1 reports a rescue from a 3rd-floor balcony",
+     "Manager says the fire unit's tenant is at work"
+    ],
+    "mp": "M.P. 202.20: residential mid-rises \"can have high density occupancy,\" and rescues \"may be required from exterior positions.\" M.P. 202.02C: don't depend on reports from residents and spectators."
+   },
+   {
+    "label": "What’s happening inside?",
+    "cat": "sizeup",
+    "q": "What’s happening inside? Your read from the 3rd-floor landing:",
+    "opts": [
+     "Fire unit darkening down, hallway smoke lifting",
+     "Smoke banking down the stairwell below the fire floor",
+     "Fire into the walls and the floor above",
+     "Unknown — no report from E1 yet"
+    ],
+    "mp": "M.P. 202.20: watch for stack effect \"with smoke well below the fire impacting life safety and egress,\" and fire in spaces between floors. Nothing showing outside meant nothing — the building is sealed tight."
+   },
+   {
+    "label": "MP reference",
+    "q": "Backup FF checklist — M.P. 201.03: passports to the lobby; PAR after sudden hazards, All Clear, under control and every 30 minutes. M.P. 201.01A / 201.05A: On-Deck is just outside the hazard zone; RIC is a ready four-person crew. M.P. 202.20: attack vs evacuation stairwells; standpipes not in every stairwell; KNOX caps; city-pressure standpipes can run short — pump the FDC; over 150 feet needs a risk call; change bottles in safe refuge; report structural fire immediately; stay on hazard-zone channels. M.P. 202.12E: backup protects egress with same or greater flow. M.P. 202.04: 150 feet measured from safe refuge.",
+    "opts": [
+     "Understood — show my debrief"
+    ]
    }
   ]
  }

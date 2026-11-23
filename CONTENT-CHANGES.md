@@ -262,3 +262,29 @@ These are Phoenix-specific and were left as they were. Send the source documents
 - Stick City — High-Piled Storage Fire: Master stream 750 GPM confirmed in 202.02B (not 202.18) and cited there.
 - Stick City — High-Piled Storage Fire: E3 best = water supply/key pumper (202.12E big water); R3 left without best.
 - Stick City — High-Piled Storage Fire: New steps: Sectors (2&1, 2 geographic sectors), Primary search notice (202.02B), Exposure first (202.02B).
+
+## Recruit-to-paramedic upgrade (Nov 2026)
+
+### How the app teaches now
+- **Spaced repetition.** Each card moves up a box when you get it right on its due day; reviews come back after 1, 3, 7, 14, 30, 60 and 120 days. A miss sends it back to the start. Cramming, Blitz and a retry right after a miss count as reps but never move a card up.
+- **"Solid"** means right three times across at least four days. **"Retained"** means it survived a two-week gap. These replace the old "mastered" (two correct answers ever).
+- **Stages:** Academy, Probation, Paramedic prep. The Today card shows what's due plus the next topic on your stage's path. Drills are capped at 20 cards.
+- **Exams:** timed paramedic candidate simulation (150 questions, 3 hours, 70%, all 54 competencies), plus academy, probation and EMT exams. Each shows a breakdown and keeps your history.
+- **Skills & checklists:** 22 skill sheets, station routines and probation sign-offs, with a step-order quiz (80% line) and an officer sign-off.
+- **Math:** drug calculations with worked steps. **ECG:** 14 rhythms on drawn strips.
+- **Scenarios:** 4 probie-seat scenarios (nozzle, hydrant, search, backup line), so year one isn't all command decisions.
+- **Backup/restore** and a plain-text progress summary for your captain.
+
+### New content (803 cards)
+- Academy: PFD Mission, Values & the PFD Way; Safety & Survival Guide; Recruit Academy duties, expectations & conduct; Recruit Math (from the 2026 Recruit Exam Study Packet); Academy MPs (202.14/A/B, 206.03/A, 206.19, 110.17, 102.01).
+- Probation: Radio & Communications (205.01/205.21); four Fire MP topics (structure, vehicles/lithium-ion/aircraft, wildland/outside, flammable liquids & natural gas). SOP Vol 2 moved here.
+- Paramedic: Candidate Exam Bank for competencies 1–27 and 28–55 (412 questions, at least 6 per competency, built from the MCCCD competency list the prep page uses); Anatomy & Physiology by System; Medical Terminology. The old deck is now "Paramedic School Prep (mixed)".
+
+### Conflicts found in the sources (left off the cards; please confirm)
+- **Academy length:** the 2026 Recruit Packet says 14 weeks in §6 and 15 weeks in §7.
+- **Radio emergency button:** M.P. 205.01 says red; M.P. 205.21 says orange.
+- **Training fire water supply:** M.P. 202.14's checklist says 1,500 gpm; its body text and 202.14A say 500 gpm. The cards use 500.
+- **Choking (AHA 2025):** newer guidance adds back blows for adults and children. The candidate syllabus says abdominal thrusts. The sequence isn't tested until it's confirmed which one the exam expects.
+- **Paramedic candidate exam:** assumed to be the MCCCD Paramedic Candidate Entrance Exam (150 questions, 3 hours, 70%, EMT scope). Confirm with PFD EMS training.
+- **Skill sheet steps:** the packet names the 9 functional skills but not their steps. Steps follow IFSTA/NFPA and are marked "verify against your academy skill sheet".
+- **Probie scenarios:** the backup line goes on the floor below the fire (wording from 202.11, a high-rise MP), and the tile-roof search starts at the bedroom window (202.02C plus IFSTA). Instructor review is welcome.
