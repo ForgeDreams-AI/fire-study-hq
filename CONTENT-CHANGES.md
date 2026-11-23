@@ -206,3 +206,59 @@ These are Phoenix-specific and were left as they were. Send the source documents
 - The PFD drug list (dopamine, phenylephrine, thiamine, methylprednisolone, diltiazem, etc.) and which drugs EMTs give on standing orders.
 - Heat stroke: cards now teach cold-water immersion (current national guidance). Confirm against the PFD protocol.
 - Whether the Paramedic candidate exam is EMT-level or full paramedic level (ECG, drugs, ACLS).
+
+## Scenarios
+
+- **MP check after every call.** 306 of 422 beats now say whether your call matches the Phoenix M.P. and quote what the M.P. says. Judgment reads (what is happening inside, victim status) are logged without a check. The debrief shows how many calls matched and lists each miss with the MP note.
+- **Answer giveaway removed.** The M.P.-backed option used to be listed first and was usually the longest. Options now shuffle, and lengths are balanced.
+- **Source:** every MP note comes from the Phoenix Regional SOP Volume II book (Jan 2025). Text is in build/fire-mps/ and build/sop-vol2/.
+- **5 new scenarios** from the department command-process deck photos: Garage Apartments (vehicle fire below units, 202.16), Ranch (first-due command process, 201.01/202.04), Tile Roof 2-story (202.06), Parking Garage (dispatched as a one-engine car fire; 202.16 requires upgrading to a 3 & 1), and Pizza Restaurant strip-mall kitchen fire (202.04/202.06).
+- New **Follow-up report** beats use the deck format: safety concerns, accountability location, disposition of resources (hold/add/return), IRIC in place.
+
+### Fixes to existing scenarios
+
+- Ocotillo — Apartment Fire: Fireground factors q said "three" factors; MP 202.02B lists six — reworded q.
+- Ocotillo — Apartment Fire: On-scene report: old best lacked a named command and stuffed IAP/3&1 in; rebuilt to MP 201.01 order (building/size/height, conditions, action, strategy, "E1 will be 19th Avenue Command").
+- Ocotillo — Apartment Fire: Strategy: replaced "Offensive, shifting to defensive" with simultaneous offensive+master stream (MP 202.02B forbids mixing).
+- Ocotillo — Apartment Fire: Assign E3: old 'line to the floor above' made no sense on a 2-story fire floor; E3 best = tactical reserve per 3&1/MP 201.06.
+- Ocotillo — Apartment Fire: Approach best = fire-unit window reset (202.02B). L1 and R3 left without best (MP does not settle); mp notes added.
+- House — Single-Family Fire: Fireground factors q reworded (MP 202.02B has six factors).
+- House — Single-Family Fire: On-scene report rebuilt to MP 201.01 (named command; resources/accountability moved out as follow-up items).
+- House — Single-Family Fire: MP reference: 'Never ventilate without coordination' softened to MP wording; added low-air retreat line and simultaneous search.
+- House — Single-Family Fire: Construction size-up step: image looks like painted block, but opt 'wood frame with stucco' listed first — no best set (not MP); consider re-checking.
+- House — Single-Family Fire: Approach best = fire window reset; E3 best = tactical reserve; L1/R3 no best.
+- Gilbert — 2-Story House Fire: MP reference: 'enter at the air intake side' was credited to 202.04 — it is 202.02B; loft advice flagged as size-up, not MP; added 202.06 tile-roof rule.
+- Gilbert — 2-Story House Fire: Tile roof: MP 202.06 bars roof ventilation on single-family tile — L1 best = primary search (vertical vent option is wrong); mp notes on Roof type and Ladder placement.
+- Gilbert — 2-Story House Fire: Fireground factors q reworded; on-scene report rebuilt to MP 201.01.
+- Gilbert — 2-Story House Fire: Approach best = side yard 360 (202.02B) — balcony not visibly burning from the street; E3 best = tactical reserve.
+- Mid-Rise — Apartment Fire: Flow step q credited the 2-inch standpipe line to MP 202.20 — 202.20 doesn't say it; re-cited to MP 202.11 (2" at standpipe pressures, 250+ GPM) and 202.04 (crew size).
+- Mid-Rise — Apartment Fire: Floor above: old best implied no primary search above until fire control; MP 202.20 says floor-above actions follow the rescue profile — reworded q to define the large-area targeted search (after fire control, not a primary search).
+- Mid-Rise — Apartment Fire: Attack flow: added an interior-off-standpipe option (best) — smoke only showing, MP 202.04/202.20; transitional/exterior is for delayed interior access.
+- Mid-Rise — Apartment Fire: Fireground factors/on-scene report: fire location changed from 'fire on 3rd floor' to smoke showing, unit unknown (locate the fire); command named.
+- Mid-Rise — Apartment Fire: Approach best = main entrance (alarm panel, locate fire). E2 best = supply FDC (wet standpipe on city pressure). Ladder placement best = front aerial. L1/E3/R3 no best.
+- Mid-Rise — Apartment Fire: Added 4 steps: Critical positions, Long stretch (>150 ft), Air management, Sector officer.
+- High-Rise — Tower Fire: Crew of 4: first company is IC + Building Systems in the Fire Control Room (202.11); FDC moved off E1 (it is the 2nd engine's job).
+- High-Rise — Tower Fire: Alarm/MP reference: "minimum 3rd alarm" softened to "consider a minimum 3rd alarm" per 202.11 wording.
+- High-Rise — Tower Fire: On-scene report options rebuilt to 201.01 format (strategy + named command; resource requests belong in follow-up); IC goes to the Fire Control Room, not up the stairs.
+- High-Rise — Tower Fire: L1 best = spot aerial for rescue/defensive use + bring 2½ high-rise packs to FCR (202.11); vent option now flags opening the roof door (must be closed for attack).
+- High-Rise — Tower Fire: E3 best = Attack Team leader (3rd company per 202.11); BC1 best = Fire Floor Sector from on-deck (202.11). R3 left without best (RIC on-deck vs treatment both in 202.11).
+- High-Rise — Tower Fire: Strategy distractor "offensive shifting to defensive" relabeled Marginal and corrected (202.02B: marginal = defensive conditions with a known rescue).
+- High-Rise — Tower Fire: New steps: Command position, Elevator recall, Stair team.
+- Strip Mall — Large-Space Fire: Risk profile best changed to "Risk a little": 202.04A says with no report of people trapped in a sprinklered large-space building, risk management focuses on property protection.
+- Strip Mall — Large-Space Fire: Attack flow: replaced "transitional attack" (fire location unknown) with interior/stay on the line/TIC/150 ft; showIf "interior" still matches.
+- Strip Mall — Large-Space Fire: Crew of 4: original best split officer+1 off the line to scout with the TIC — contradicts 202.04A "stay on the hose line"; new best keeps the crew on one 2-inch line.
+- Strip Mall — Large-Space Fire: E2 best = FDC (202.04: support suppression systems as early as possible); E3 best = backup line (202.12E). BC1 best = assume command (201.01).
+- Strip Mall — Large-Space Fire: On-scene report rebuilt to 201.01 format; "nothing showing" distractor added.
+- Strip Mall — Large-Space Fire: New steps: Seven sides, Plan B (pull out, pump FDC, ventilate), Past 150 feet (Shift Commander approval, BC + BSO).
+- Church — Basement Fire: Stretch check best changed from 1¾-inch/150 GPM to 2-inch/250 GPM: a church is commercial and 202.04 says residential flows are not used on commercial fires; 150 GPM stays as the 202.04B basement minimum.
+- Church — Basement Fire: Crew of 4: original best sent 2 members to the 1st floor; new best keeps the crew on the basement line (202.04B).
+- Church — Basement Fire: L1 best reworded to coordinated ventilation (minimize before extinguishment, 202.04B). E2 best = backup line to basement level.
+- Church — Basement Fire: Approach best = Rear/360 (202.04B: identify basement access in the 360).
+- Church — Basement Fire: On-scene report rebuilt to 201.01 format.
+- Church — Basement Fire: New steps: Follow-up report (202.04B requires basement in follow-up; uses debrief label), Basement signs, Defensive trigger.
+- Stick City — High-Piled Storage Fire: Risk profile best changed to "Risk nothing": 202.18 "We will not risk our lives at all for property that is already lost"; exposures protected from defensive positions.
+- Stick City — High-Piled Storage Fire: IAP rebuilt from the 202.18 defensive IAP; removed near-duplicate distractor.
+- Stick City — High-Piled Storage Fire: Tactical priorities mp: defensive from onset = no primary search of fire building (202.02B); all clears are in exposures.
+- Stick City — High-Piled Storage Fire: Master stream 750 GPM confirmed in 202.02B (not 202.18) and cited there.
+- Stick City — High-Piled Storage Fire: E3 best = water supply/key pumper (202.12E big water); R3 left without best.
+- Stick City — High-Piled Storage Fire: New steps: Sectors (2&1, 2 geographic sectors), Primary search notice (202.02B), Exposure first (202.02B).
