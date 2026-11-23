@@ -1843,14 +1843,14 @@ function scopeLabel(sc) {
 var EXAM_LEN = 30, EXAM_TOPIC = -1;
 function paramedicTopic() {
   if (EXAM_TOPIC < 0) {
-    for (var i = 0; i < TOPICS.length; i++) if (TOPICS[i].title === 'Paramedic Exam Prep') { EXAM_TOPIC = i; break; }
+    for (var i = 0; i < TOPICS.length; i++) if (/^Paramedic (Exam|School) Prep/.test(TOPICS[i].title)) { EXAM_TOPIC = i; break; }
   }
   return EXAM_TOPIC;
 }
 /* ---------- exams: practice (feedback each item) or timed simulation ---------- */
 var EXAM_KINDS = {
-  candidate: { title: 'Paramedic candidate simulation', sub: '150 questions · 3 hours · 70% to pass · EMT scope', n: 150, mins: 180, pass: 70, hubs: [3, 2], emtOnly: true, timed: true },
-  quick: { title: 'Paramedic quick 30', sub: '30 questions, feedback after each', n: 30, pass: 70, hubs: [3] },
+  candidate: { title: 'Paramedic candidate simulation', sub: '150 questions · 3 hours · 70% to pass · all 54 competencies', n: 150, mins: 180, pass: 70, hubs: [3], compOnly: true, timed: true },
+  quick: { title: 'Candidate quick 30', sub: '30 competency questions, feedback after each', n: 30, pass: 70, hubs: [3], compOnly: true },
   academy: { title: 'Academy written exam', sub: '50 questions across Academy + EMT topics', n: 50, mins: 60, pass: 70, hubs: [0, 2], timed: true },
   probation: { title: 'Probation MP exam', sub: '50 questions on MPs, SOPs and radio', n: 50, mins: 60, pass: 80, hubs: [1], timed: true },
   medical: { title: 'EMT / medical exam', sub: '50 questions across the Medical topics', n: 50, mins: 60, pass: 70, hubs: [2], timed: true }
@@ -1859,7 +1859,7 @@ function examPool(k) {
   var K = EXAM_KINDS[k], pool = [];
   K.hubs.forEach(function (h) {
     hubTopicIdx(h).forEach(function (t) {
-      TOPICS[t].cards.forEach(function (c, i) { if (!(K.emtOnly && c.lvl === 'medic')) pool.push({ t: t, i: i }); });
+      TOPICS[t].cards.forEach(function (c, i) { if (!(K.emtOnly && c.lvl === 'medic') && !(K.compOnly && !c.comp)) pool.push({ t: t, i: i }); });
     });
   });
   return pool;
