@@ -65,11 +65,11 @@ function cleanProg(p) {
   }
   return c;
 }
-function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 }, scen: { plays: 0 } }; }
+function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 }, scen: { plays: 0 }, ecg: { best: 0, plays: 0 } }; }
 function normGames(g) {
   var d = defaultGames();
   if (g && typeof g === 'object') {
-    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc', 'scen'].forEach(function (k) {
+    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc', 'scen', 'ecg'].forEach(function (k) {
       if (g[k] && typeof g[k] === 'object') {
         Object.keys(d[k]).forEach(function (f) {
           var v = parseInt(g[k][f], 10);
@@ -273,6 +273,7 @@ function go(tab) {
   stopSessionTimer();
   state.tab = tab;
   state.checkRun = null;
+  state.ecgRun = null;
   if (tab === 'study' && state.study.view === 'session') { /* session handles its own exit */ }
   state.sess = null;
   state.callRun = null;
@@ -304,7 +305,7 @@ function render() {
   renderStreak();
   var root = document.getElementById('view-root');
   root.innerHTML = '';
-  var focused = !!state.sess || !!state.examRun || !!state.calcRun || !!state.checkRun || !!state.callRun || !!state.scenRun;
+  var focused = !!state.ecgRun || !!state.sess || !!state.examRun || !!state.calcRun || !!state.checkRun || !!state.callRun || !!state.scenRun;
   document.body.classList.toggle('in-session', focused);
   if (state.tab === 'home') renderHome(root);
   else if (state.tab === 'study') renderStudy(root);
@@ -501,6 +502,7 @@ function renderHome(root) {
   if (state.scenRun) { renderScenarioRun(root); return; }
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
+  if (state.ecgRun) { renderEcgView(root); return; }
 
   var s = moduleStats(), due = dueCount();
   var head = el('div', 'view-head animate-fade-in');
@@ -560,6 +562,7 @@ function renderHome(root) {
   gg.appendChild(gameMini('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call', store.games.call.best, 'best', function () { startCallRun(); }));
   gg.appendChild(gameMini('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Exams', store.games.exam.best, 'best', function () { startExamRun(); }));
   gg.appendChild(gameMini('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Math', store.games.calc.best, 'best', function () { startCalcRun(); }));
+  gg.appendChild(gameMini('zap', 'linear-gradient(135deg,#1F2937,#B3271E)', 'ECG Rhythms', store.games.ecg.best, 'best', function () { startEcgRun(); }));
   root.appendChild(gg);
 
   var foot = el('div', 'foot');
@@ -1327,6 +1330,7 @@ function renderGames(root) {
   if (state.callRun) { renderCallView(root); return; }
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
+  if (state.ecgRun) { renderEcgView(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Reps, but fun</span><h2>Games</h2>'
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
@@ -1362,6 +1366,10 @@ function renderGames(root) {
     'Drug math, drips, conversions, GCS, Apgar, rule of nines.',
     store.games.calc.best, 'best',
     function () { startCalcRun(); }));
+  grid.appendChild(gameTile('zap', 'linear-gradient(135deg,#1F2937,#B3271E)', 'ECG Rhythms',
+    '14 rhythms on real 6-second strips. Paramedic school prep.',
+    store.games.ecg.best, 'best',
+    function () { startEcgRun(); }));
   root.appendChild(grid);
 }
 

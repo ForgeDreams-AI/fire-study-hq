@@ -640,3 +640,11 @@ body.in-session .btn-row, body.in-session .drill-cta.action-bar, body.in-session
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 /* Programmatic focus target for screen readers: no visible ring (it isn't keyboard-focusable). */
 h2[tabindex="-1"]:focus, h2[tabindex="-1"]:focus-visible { outline: none; }
+
+/* ── ECG strips: paper stays light in both themes, like real strips ── */
+.ecg-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--th-line); margin: 4px 0 14px; }
+.ecg-strip { display: block; width: 100%; height: 170px; }
+.ecg-bg { fill: #FFF7F5; }
+.ecg-gs { stroke: #F6C9C2; stroke-width: 1; }
+.ecg-gb { stroke: #E99A8F; stroke-width: 2.2; }
+.ecg-line { fill: none; stroke: #111; stroke-width: 3.2; stroke-linejoin: round; }
