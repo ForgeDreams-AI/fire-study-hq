@@ -581,3 +581,62 @@ svg text.dlbl--xs:not([fill]) { fill: #b8ae9f; }
 .mp-summary span { color: var(--th-ink-2); font-weight: 600; }
 .mp-miss h4 { margin: 0 0 6px; font-size: 16px; }
 .mp-miss p { margin: 0 0 6px; font-size: 14px; }
+
+/* ── Contrast fixes (WCAG AA) ── */
+:root { --th-ink-3: #78716C; --th-btn: var(--th-primary); }
+@media (prefers-color-scheme: dark) { :root { --th-ink-3: #A39B8E; --th-btn: #C2410C; } }
+.btn { background: var(--th-btn); }
+.btn.ghost { background: var(--th-surface-2); color: var(--th-ink); }
+.btn.good { background: var(--th-success); color: #fff; }
+@media (prefers-color-scheme: dark) { .btn.good { background: #1E8A4C; } .tab.active { color: var(--th-primary); } }
+
+/* ── Session mode: header hides, answer buttons stay reachable ── */
+body.in-session .topbar { display: none; }
+body.in-session .btn-row, body.in-session .drill-cta.action-bar, body.in-session .drill-cta:has(> .btn:not(.ghost)) {
+  position: sticky; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 20;
+  background: color-mix(in srgb, var(--th-bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 10px 0; margin-top: 10px;
+}
+.quit-btn { margin-top: 8px; }
+
+/* ── Today + stage picker ── */
+.stage-picker h3 { font-size: 24px; margin: 0 0 4px; }
+.stage-picker p { color: var(--th-ink-2); margin: 0 0 14px; font-size: 15px; }
+.today-card { background: var(--th-surface); border: 1px solid var(--th-line); border-radius: 18px; padding: 14px; margin: 0 0 14px; box-shadow: var(--th-shadow); }
+.today-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 10px; margin-top: 8px; }
+.today-btn { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; text-align: left; border: 0; border-radius: 14px; padding: 12px 14px; min-height: 84px; background: var(--th-surface-2); color: var(--th-ink); font: inherit; }
+.today-btn b { font-family: "Barlow Condensed", sans-serif; font-size: 30px; line-height: 1; }
+.today-btn span, .today-btn small { font-size: 13.5px; color: var(--th-ink-2); font-weight: 600; }
+.today-btn.hot { background: var(--th-btn); color: #fff; }
+.today-btn.hot span { color: #fff; }
+.today-btn.next b { font-family: "Inter", sans-serif; font-size: 17px; line-height: 1.25; }
+.today-btn:disabled { opacity: 0.7; }
+.today-tip { margin: 10px 2px 0; font-size: 13.5px; color: var(--th-ink-2); }
+
+/* ── Checklists ── */
+.check-list { padding: 6px 8px; }
+.check-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 6px; border-bottom: 1px solid var(--th-line); font-size: 15.5px; line-height: 1.4; cursor: pointer; }
+.check-row:last-child { border-bottom: 0; }
+.check-row input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--th-success); flex: none; }
+.check-num { flex: none; width: 22px; color: var(--th-ink-3); font-weight: 700; }
+.check-t { flex: 1; }
+.check-crit { flex: none; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--th-danger); border: 1px solid var(--th-danger); border-radius: 6px; padding: 1px 6px; }
+.text-input { font-size: 17px; font-weight: 600; }
+.src-note { font-size: 12.5px; color: var(--th-ink-3); margin: 14px 2px; }
+.order-done p { margin: 0 0 6px; font-size: 14px; color: var(--th-ink-2); }
+.call-opt.order-wrong { border-color: var(--th-danger); box-shadow: inset 6px 0 0 var(--th-danger); }
+.summary-box { font-size: 13px; font-weight: 500; font-family: ui-monospace, monospace; height: 220px; }
+
+/* ── Exams ── */
+.exam-bar { margin: -6px 0 12px; }
+.mc-opt.mc-picked { border-color: var(--th-primary); background: color-mix(in srgb, var(--th-primary) 10%, var(--th-surface)); }
+.view-head p.pass b { color: var(--th-success); }
+.view-head p.fail b { color: var(--th-danger); }
+.miss-card .q-sm { font-weight: 700; margin: 0 0 6px; font-size: 15px; }
+.miss-card .a-sm { margin: 0 0 6px; font-size: 14.5px; }
+.hist-row { margin: 0 0 6px; font-size: 14.5px; }
+
+/* ── Respect reduced motion ── */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+/* Programmatic focus target for screen readers: no visible ring (it isn't keyboard-focusable). */
+h2[tabindex="-1"]:focus, h2[tabindex="-1"]:focus-visible { outline: none; }

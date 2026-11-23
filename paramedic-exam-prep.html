@@ -136,6 +136,7 @@ nav.bottom button.on{color:var(--red);}
 <script>if('serviceWorker' in navigator&&/^https:|^http:\/\/(localhost|127\.)/.test(location.href)){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
 </head>
 <body>
+<a href="./" class="hq-back" style="display:flex;align-items:center;gap:6px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;font:600 15px/1.2 Inter,system-ui,sans-serif;color:inherit;text-decoration:none;background:rgba(179,39,30,.08);border-bottom:1px solid rgba(0,0,0,.08)">&#8592; Back to Fire Study HQ</a>
 <header class="top">
   <h1>Paramedic Exam Prep<span class="sub">Phoenix FD &middot; Candidate Study Guide</span></h1>
   <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">&#9790;</button>
@@ -721,7 +722,7 @@ function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(
 /* theme */
 function setTheme(t){document.documentElement.setAttribute("data-theme",t);$("themeBtn").innerHTML=t==="dark"?"&#9788;":"&#9790;";try{localStorage.setItem("pep.theme",t);}catch(e){}}
 $("themeBtn").onclick=()=>setTheme(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark");
-try{if(localStorage.getItem("pep.theme")==="dark")setTheme("dark");}catch(e){}
+try{var pt=localStorage.getItem("pep.theme");if(pt==="dark"||(!pt&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches))setTheme("dark");}catch(e){}
 /* nav */
 document.querySelectorAll("nav.bottom button").forEach(b=>b.onclick=()=>{
   document.querySelectorAll("nav.bottom button").forEach(x=>x.classList.remove("on"));

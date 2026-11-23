@@ -23,6 +23,8 @@ var P = {
   target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>',
   layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
   bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
+  download: '<path d="M12 4v11M7 10.5l5 5 5-5"/><path d="M4.5 19.5h15"/>',
+  upload: '<path d="M12 15.5v-11M7 9l5-5 5 5"/><path d="M4.5 19.5h15"/>',
   phone: '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
   zap: '<path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/>',
   refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>',
@@ -37,15 +39,28 @@ function icon(n, s) {
 
 /* ---------------- storage + legacy migration ---------------- */
 var HQ_KEY = 'fireStudyHQ.v1';
+var SR_DAYS = [0, 1, 3, 7, 14, 30, 60, 120];
+/* Where the recruit is in the journey. Drives Home order and what "Next up" picks.
+   path = hub indexes in study order (HUBS below: 0 Academy, 1 Probation, 2 Medical, 3 Paramedic). */
+var STAGES = {
+  academy: { label: 'Academy', sub: 'Recruit academy: fire, EMT, PFD culture', path: [0, 2, 1, 3] },
+  probation: { label: 'Probation', sub: 'First year on the line: MPs, radio, rotations', path: [1, 0, 2, 3] },
+  medic: { label: 'Paramedic prep', sub: 'Candidate exam: EMT-level competencies, A&P, math', path: [3, 2, 0, 1] }
+};
 var LEGACY_KEY = 'fireStudy.v1';
 
 function cleanProg(p) {
   var c = {}, k;
+  function num(v) { v = parseInt(v, 10); return isNaN(v) ? 0 : Math.max(0, v); }
   for (k in p) {
-    if (/^t\d+-\d+$/.test(k)) {
+    if (/^[A-Za-z0-9_-]{1,40}$/.test(k)) {
       var r = p[k] || {};
-      var g = parseInt(r.got, 10), m = parseInt(r.missed, 10);
-      c[k] = { got: isNaN(g) ? 0 : Math.max(0, g), missed: isNaN(m) ? 0 : Math.max(0, m) };
+      var o = { got: num(r.got), missed: num(r.missed), box: num(r.box), due: num(r.due), last: num(r.last) };
+      // Records saved before spaced repetition have no box: bring them in as
+      // early boxes that are due now, so "mastered" cards get re-checked.
+      if (r.box === undefined) { o.box = o.got >= 2 ? 2 : (o.got >= 1 ? 1 : 0); o.due = o.box ? Date.now() : 0; }
+      o.box = Math.min(o.box, SR_DAYS.length - 1);
+      c[k] = o;
     }
   }
   return c;
@@ -80,6 +95,9 @@ function loadStore() {
           });
         }
         s.migrated = !!p.migrated;
+        if (STAGES[p.stage]) { s.stage = p.stage; s.stageSince = parseInt(p.stageSince, 10) || Date.now(); }
+        if (p.exams && Array.isArray(p.exams)) s.exams = p.exams.slice(-50);
+        if (p.checks && typeof p.checks === 'object') s.checks = p.checks;
       }
     }
   } catch (e) { /* start clean */ }
@@ -112,11 +130,54 @@ function dayStreak() {
   return s;
 }
 
-/* ---------------- progress (original semantics, verbatim) ---------------- */
-function cardKey(t, i) { return 't' + t + '-' + i; }
-function rec(t, i) { var k = cardKey(t, i); if (!store.prog[k]) store.prog[k] = { got: 0, missed: 0 }; return store.prog[k]; }
-function isMastered(t, i) { return rec(t, i).got >= 2; }
-function isNeedsWork(t, i) { var r = rec(t, i); return r.missed > 0 && r.got < 2; }
+/* ---------------- progress: spaced repetition (Leitner boxes) ----------------
+   box 0 = new or just missed. Each correct answer on a card that is DUE moves it
+   up one box; the next review comes SR_DAYS[box] days later. A miss sends it to 0.
+   Correct answers on cards that aren't due yet (cramming, Blitz reshuffles, a
+   retry right after a miss) count as reps but don't move the card up.
+   "Solid" (isMastered) = box 3+ and not yet due again: right three times across
+   at least four days. "Retained" = box 4+: it survived a two-week gap. */
+var DAY_MS = 864e5;
+function cardKey(t, i) { var c = TOPICS[t].cards[i]; return (c && c.id) || ('t' + t + '-' + i); }
+function rec(t, i) {
+  var k = cardKey(t, i), r = store.prog[k];
+  if (!r) r = store.prog[k] = { got: 0, missed: 0, box: 0, due: 0, last: 0 };
+  return r;
+}
+function isDue(t, i) { var r = rec(t, i); return r.box > 0 && r.due <= Date.now(); }
+function isMastered(t, i) { var r = rec(t, i); return r.box >= 3 && r.due > Date.now(); }
+function isRetained(t, i) { return rec(t, i).box >= 4; }
+function isNeedsWork(t, i) { var r = rec(t, i); return r.missed > 0 && r.box < 2; }
+/* Drill queue for a set of topic indexes: due reviews first, then misses, then
+   new / still-learning cards. Capped so a session ends; solid cards rest. */
+var DRILL_CAP = 20;
+function drillQueue(topics, cap) {
+  var due = [], weak = [], fresh = [], t, i;
+  topics.forEach(function (n) {
+    for (i = 0; i < TOPICS[n].cards.length; i++) {
+      var it = { t: n, i: i };
+      if (isDue(n, i)) due.push(it);
+      else if (isNeedsWork(n, i)) weak.push(it);
+      else if (!isMastered(n, i)) fresh.push(it);
+    }
+  });
+  var q = shuffle(due).concat(shuffle(weak), shuffle(fresh));
+  if (!q.length) { // everything is solid: offer a mixed refresher instead of nothing
+    topics.forEach(function (n) { for (i = 0; i < TOPICS[n].cards.length; i++) q.push({ t: n, i: i }); });
+    q = shuffle(q);
+  }
+  return q.slice(0, cap || DRILL_CAP);
+}
+function hubTopicIdx(h) {
+  var out = [];
+  HUBS[h].sections.forEach(function (si) { SECTIONS[si].topics.forEach(function (n) { out.push(n); }); });
+  return out;
+}
+function dueCount() {
+  var c = 0, t, i;
+  for (t = 0; t < TOPICS.length; t++) for (i = 0; i < TOPICS[t].cards.length; i++) if (isDue(t, i)) c++;
+  return c;
+}
 function topicStats(n) {
   var m = 0, w = 0, nd = 0, i;
   for (i = 0; i < TOPICS[n].cards.length; i++) { if (isMastered(n, i)) m++; else if (isNeedsWork(n, i)) w++; else nd++; }
@@ -127,17 +188,31 @@ function moduleStats() {
   for (n = 0; n < TOPICS.length; n++) { var s = topicStats(n); m += s.mastered; w += s.needsWork; nd += s.fresh; }
   return { mastered: m, needsWork: w, fresh: nd };
 }
+/* Everything waiting: cards due for spaced review plus recent misses. */
 function reviewItems() {
   var out = [], t, i;
   for (t = 0; t < TOPICS.length; t++) for (i = 0; i < TOPICS[t].cards.length; i++)
-    if (isNeedsWork(t, i)) out.push({ t: t, i: i, r: rec(t, i) });
+    if (isDue(t, i) || isNeedsWork(t, i)) out.push({ t: t, i: i, r: rec(t, i) });
+  out.sort(function (a, b) { return (a.r.due || 0) - (b.r.due || 0); });
   return out;
 }
-/* grade: "Got it" -> got++, "Missed it" -> got reset to 0, missed++. Returns newly-mastered flag. */
-function gradeCard(t, i, ok) {
-  var r = rec(t, i);
+/* grade a card. opts.noAdvance: count the rep but never move the card up a box
+   (used for a retry right after a miss, and for Blitz). Returns newly-solid flag. */
+function gradeCard(t, i, ok, opts) {
+  var r = rec(t, i), now = Date.now();
   var was = isMastered(t, i);
-  if (ok) { r.got++; } else { r.got = 0; r.missed++; }
+  if (ok) {
+    r.got++;
+    var eligible = r.box === 0 || r.due <= now;
+    if (eligible && !(opts && opts.noAdvance)) {
+      r.box = Math.min(r.box + 1, SR_DAYS.length - 1);
+      // due a little before the same time of day, so "tomorrow" means tomorrow
+      r.due = now + SR_DAYS[r.box] * DAY_MS - 4 * 36e5;
+    }
+  } else {
+    r.got = 0; r.missed++; r.box = 0; r.due = 0;
+  }
+  r.last = now;
   touchDay();
   saveStore();
   return !was && isMastered(t, i);
@@ -164,10 +239,12 @@ var TABS = [
 var SUBTAB_PARENT = { nfpa1700: 'study', ulfsri: 'study' };
 /* Hubs: drill-down groups over SECTIONS (data.js untouched). Fire merges Academy + Probation Year. */
 var HUBS = [
-  { title: 'Fire', sub: 'Academy foundations', icon: 'flame', sections: [0, 1] },
-  { title: 'Medical', sub: 'Patient care', icon: 'cross', sections: [2] },
+  { title: 'Academy', sub: 'Fire foundations & PFD culture', icon: 'flame', sections: [0] },
+  { title: 'Probation', sub: 'MPs, radio, rotations', icon: 'layers', sections: [1] },
+  { title: 'Medical', sub: 'EMT patient care', icon: 'cross', sections: [2] },
   { title: 'Paramedic', sub: 'Candidate exam', icon: 'book', sections: [3] }
 ];
+var PARAMEDIC_HUB = 3;
 /* Display numbers follow reading order: Fire 1..n, then Medical, then Paramedic.
    tp.n is display-only; progress and scopes use the TOPICS array index. */
 var TOPIC_COUNT = 0;
@@ -181,9 +258,21 @@ var state = { tab: 'home', study: { view: 'home', hub: -1, topic: -1 }, sess: nu
 function stopSessionTimer() {
   if (state.sess && state.sess.timerId) { clearInterval(state.sess.timerId); state.sess.timerId = null; }
 }
+function activeWork() {
+  if (state.sess && !state.sess.done && (state.sess.got + state.sess.miss) > 0) return 'this drill (graded cards are already saved)';
+  if (state.scenRun && state.scenRun.log && state.scenRun.log.length) return 'this scenario run';
+  if (state.callRun && state.callRun.pos > 0) return 'this Run the Call round';
+  if (state.checkRun && state.checkRun.next > 0) return 'this step-order quiz';
+  return null;
+}
 function go(tab) {
+  if (tab !== state.tab || state.sess || state.scenRun || state.callRun || state.checkRun) {
+    var w = activeWork();
+    if (w && !confirm('Leave ' + w + '?')) return;
+  }
   stopSessionTimer();
   state.tab = tab;
+  state.checkRun = null;
   if (tab === 'study' && state.study.view === 'session') { /* session handles its own exit */ }
   state.sess = null;
   state.callRun = null;
@@ -215,6 +304,8 @@ function render() {
   renderStreak();
   var root = document.getElementById('view-root');
   root.innerHTML = '';
+  var focused = !!state.sess || !!state.examRun || !!state.calcRun || !!state.checkRun || !!state.callRun || !!state.scenRun;
+  document.body.classList.toggle('in-session', focused);
   if (state.tab === 'home') renderHome(root);
   else if (state.tab === 'study') renderStudy(root);
   else if (state.tab === 'games') renderGames(root);
@@ -222,6 +313,9 @@ function render() {
   else if (state.tab === 'nfpa1700') renderNFPA1700(root);
   else if (state.tab === 'ulfsri') renderULFSRI(root);
   else renderProgress(root);
+  // Put screen-reader focus at the top of the new view without scrolling.
+  var h2 = root.querySelector('h2');
+  if (h2) { h2.setAttribute('tabindex', '-1'); try { h2.focus({ preventScroll: true }); } catch (e) {} }
 }
 
 /* ============================================================
@@ -248,21 +342,7 @@ function hubVideos(h) {
   });
   return vs;
 }
-function hubQueue(h) {
-  // unmastered cards across the hub, shuffled; falls back to everything
-  var q = [], si, n, i;
-  HUBS[h].sections.forEach(function (sidx) {
-    SECTIONS[sidx].topics.forEach(function (nn) {
-      for (i = 0; i < TOPICS[nn].cards.length; i++) if (!isMastered(nn, i)) q.push({ t: nn, i: i });
-    });
-  });
-  if (!q.length) HUBS[h].sections.forEach(function (sidx) {
-    SECTIONS[sidx].topics.forEach(function (nn) {
-      for (i = 0; i < TOPICS[nn].cards.length; i++) q.push({ t: nn, i: i });
-    });
-  });
-  return shuffle(q);
-}
+function hubQueue(h) { return drillQueue(hubTopicIdx(h)); }
 function hubMistakes(h) {
   var q = [];
   HUBS[h].sections.forEach(function (si) {
@@ -350,6 +430,63 @@ function continueCard() {
   });
   return card;
 }
+/* ---------- stage + today ---------- */
+function stagePath() { return store.stage ? STAGES[store.stage].path : [0, 1, 2, 3]; }
+function setStage(k) { store.stage = k; store.stageSince = Date.now(); saveStore(); render(); window.scrollTo(0, 0); }
+function stagePicker() {
+  var c = el('div', 'card stage-picker animate-fade-in');
+  c.innerHTML = '<h3>Where are you right now?</h3><p>Pick one. It sets what Home puts in front of you. Change it any time in Progress.</p>';
+  Object.keys(STAGES).forEach(function (k) {
+    var b = el('button', 'opt-row press'); b.type = 'button';
+    b.innerHTML = '<span><span></span><small></small></span>';
+    b.querySelector('span > span').textContent = STAGES[k].label;
+    b.querySelector('small').textContent = STAGES[k].sub;
+    b.addEventListener('click', function () { setStage(k); });
+    c.appendChild(b);
+  });
+  return c;
+}
+/* Next topic on this stage's path that still has new or learning cards. */
+function nextTopic() {
+  var path = stagePath(), h, k, n, st;
+  for (h = 0; h < path.length; h++) {
+    var tops = hubTopicIdx(path[h]);
+    for (k = 0; k < tops.length; k++) {
+      n = tops[k]; st = topicStats(n);
+      if (st.fresh + st.needsWork > 0) return n;
+    }
+  }
+  return -1;
+}
+function todayCard() {
+  var q = reviewItems(), due = q.length, nt = nextTopic();
+  var c = el('div', 'today-card animate-fade-in');
+  c.innerHTML = '<span class="kicker">Today</span>';
+  var row = el('div', 'today-row');
+  var rv = el('button', 'today-btn press' + (due ? ' hot' : '')); rv.type = 'button';
+  rv.innerHTML = '<b class="tabular">' + due + '</b><span>' + (due ? 'due for review' : 'nothing due') + '</span>';
+  rv.disabled = !due;
+  rv.addEventListener('click', function () {
+    startSession('weak', reviewItems().slice(0, DRILL_CAP).map(function (it) { return { t: it.t, i: it.i }; }), 'Due for review', { scopeRef: { type: 'weak' } });
+  });
+  row.appendChild(rv);
+  if (nt >= 0) {
+    var tp = TOPICS[nt], st = topicStats(nt);
+    var nx = el('button', 'today-btn next press'); nx.type = 'button';
+    nx.innerHTML = '<small>Next up \u00b7 Topic ' + tp.n + '</small><b></b><span class="tabular">' + (st.fresh + st.needsWork) + ' to learn</span>';
+    nx.querySelector('b').textContent = tp.title;
+    nx.addEventListener('click', function () {
+      startSession('drill', drillQueue([nt]), 'Topic ' + tp.n + ' \u00b7 ' + tp.title, { scopeRef: { type: 'topic', n: nt } });
+    });
+    row.appendChild(nx);
+  }
+  c.appendChild(row);
+  var tip = el('p', 'today-tip');
+  tip.textContent = due ? 'Clear what\u2019s due first \u2014 that\u2019s what keeps it from leaking out by month six. Then learn new.'
+    : 'Nothing due. Learn something new; it comes back tomorrow, then in 3 days, a week, two weeks.';
+  c.appendChild(tip);
+  return c;
+}
 function gameMini(ico, bg, title, best, bestLabel, onTap) {
   var b = el('button', 'game-mini press'); b.type = 'button';
   b.setAttribute('aria-label', title + ' — ' + bestLabel + ' ' + best);
@@ -365,28 +502,27 @@ function renderHome(root) {
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
 
-  var s = moduleStats();
+  var s = moduleStats(), due = dueCount();
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Fire Study HQ</span><h2>Put in the reps.</h2>'
-    + '<p><span class="tabular"><b>' + s.mastered + '</b></span> mastered &middot; '
-    + '<span class="tabular"><b>' + s.needsWork + '</b></span> need work &middot; '
-    + '<span class="tabular"><b>' + s.fresh + '</b></span> fresh</p>';
+  head.innerHTML = '<span class="kicker">' + (store.stage ? STAGES[store.stage].label : 'Welcome') + '</span><h2>Put in the reps.</h2>'
+    + '<p><span class="tabular"><b>' + s.mastered + '</b></span> solid &middot; '
+    + '<span class="tabular"><b>' + due + '</b></span> due &middot; '
+    + '<span class="tabular"><b>' + s.needsWork + '</b></span> need work</p>';
   root.appendChild(head);
 
-  if (window.FSHQ_PWA) FSHQ_PWA.renderInstallBanner(root);
-  root.appendChild(streakBanner());
-  root.appendChild(reviewCta());
-  var cc = continueCard();
-  if (cc) root.appendChild(cc);
+  if (!store.stage) { root.appendChild(stagePicker()); }
+  else {
+    root.appendChild(todayCard());
+    if (window.FSHQ_PWA) FSHQ_PWA.renderInstallBanner(root);
+    root.appendChild(streakBanner());
+  }
 
   var hh = el('h2', 'sec-head'); hh.textContent = 'Pick your ground';
   root.appendChild(hh);
   var grid = el('div', 'hub-grid');
-  for (var h = 0; h < HUBS.length; h++) {
-    (function (hh2) { grid.appendChild(hubTile(hh2, function () { goHub(hh2); })); })(h);
-  }
+  stagePath().forEach(function (hh2) { grid.appendChild(hubTile(hh2, function () { goHub(hh2); })); });
   var vids = el('button', 'hub-tile hub-tile-wide press'); vids.type = 'button';
-  var totalVids = hubVideos(0).length + hubVideos(1).length + hubVideos(2).length;
+  var totalVids = HUBS.reduce(function (a, _, hi) { return a + hubVideos(hi).length; }, 0);
   vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
   vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 30) + '</span>'
     + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research, with lesson plans</small></span>'
@@ -422,8 +558,8 @@ function renderHome(root) {
       startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Weak spots', { scopeRef: { type: 'weak' } });
     }));
   gg.appendChild(gameMini('cross', 'linear-gradient(135deg,#C0392B,#7B1F14)', 'Run the Call', store.games.call.best, 'best', function () { startCallRun(); }));
-  gg.appendChild(gameMini('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam', store.games.exam.best, 'best', function () { startExamRun(); }));
-  gg.appendChild(gameMini('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math', store.games.calc.best, 'best', function () { startCalcRun(); }));
+  gg.appendChild(gameMini('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Exams', store.games.exam.best, 'best', function () { startExamRun(); }));
+  gg.appendChild(gameMini('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Math', store.games.calc.best, 'best', function () { startCalcRun(); }));
   root.appendChild(gg);
 
   var foot = el('div', 'foot');
@@ -506,7 +642,7 @@ function studyHome(root) {
   }
 
   var vids = el('button', 'hub-row press'); vids.type = 'button';
-  var totalVids = hubVideos(0).length + hubVideos(1).length + hubVideos(2).length;
+  var totalVids = HUBS.reduce(function (a, _, hi) { return a + hubVideos(hi).length; }, 0);
   vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
   vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 28) + '</span>'
     + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research &middot; <span class="tabular">' + totalVids + '</span> videos</small></span>'
@@ -516,6 +652,10 @@ function studyHome(root) {
     render(); window.scrollTo(0, 0);
   });
   root.appendChild(vids);
+
+  root.appendChild(studyLinkRow('target', 'Skills & checklists', CHECKLISTS.length + ' skill sheets, station routines and probation sign-offs', function () {
+    state.study = { view: 'checklists', hub: -1, topic: -1 }; render(); window.scrollTo(0, 0);
+  }));
 
   var rh = el('h2', 'sec-head'); rh.textContent = 'Reference';
   root.appendChild(rh);
@@ -554,7 +694,14 @@ function hubView(root, h) {
 
   var th = el('h2', 'sec-head'); th.textContent = 'Topics';
   root.appendChild(th);
-  if (h === 2) root.appendChild(examPrepCard());
+  if (h === PARAMEDIC_HUB) root.appendChild(examPrepCard());
+  var stg = h === 0 ? 'academy' : (h === 1 ? 'probation' : null);
+  if (stg) {
+    var cn = CHECKLISTS.filter(function (c) { return c.stage === stg; }).length;
+    root.appendChild(studyLinkRow('target', h === 0 ? 'Skill sheets' : 'Routines & sign-offs', cn + ' checklists you can drill and get signed', function () {
+      state.study = { view: 'checklists', stage: stg, hub: -1, topic: -1 }; render(); window.scrollTo(0, 0);
+    }));
+  }
   hub.sections.forEach(function (si) {
     SECTIONS[si].topics.forEach(function (n) { root.appendChild(topicCard(n)); });
     SECTIONS[si].soon.forEach(function (k) { root.appendChild(soonCard(k)); });
@@ -706,10 +853,7 @@ function topicView(root, n) {
   var cta = el('div', 'drill-cta');
   var start = el('button', 'btn block press', 'Start drill'); start.type = 'button';
   start.addEventListener('click', function () {
-    var queue = [];
-    for (var i = 0; i < tp.cards.length; i++) if (!isMastered(n, i)) queue.push({ t: n, i: i });
-    if (!queue.length) for (var j = 0; j < tp.cards.length; j++) queue.push({ t: n, i: j });
-    startSession('drill', shuffle(queue), 'Topic ' + tp.n + ' \u00b7 ' + tp.title, { scopeRef: { type: 'topic', n: n } });
+    startSession('drill', drillQueue([n]), 'Topic ' + tp.n + ' \u00b7 ' + tp.title, { scopeRef: { type: 'topic', n: n } });
   });
   cta.appendChild(start);
   if (st.needsWork) {
@@ -773,6 +917,9 @@ function renderLesson(root, v, topicN) {
 }
 function renderStudy(root) {
   if (state.sess) { renderSessionView(root); return; }
+  if (state.checkRun) { renderOrderQuiz(root); return; }
+  if (state.study.view === 'checklists') { checklistsView(root, state.study.stage); return; }
+  if (state.study.view === 'checklist') { checklistView(root, state.study.id); return; }
   if (state.study.view === 'topic' && state.study.topic >= 0) topicView(root, state.study.topic);
   else if (state.study.view === 'hub' && state.study.hub >= 0) hubView(root, state.study.hub);
   else if (state.study.view === 'videos') videosView(root);
@@ -793,7 +940,7 @@ function startSession(mode, queue, scopeLabel, opts) {
   if (mode === 'drill' || mode === 'weak') {
     var h = hubOfScope(state.sess.scopeRef, state.sess.queue);
     state.sess.hub = h;
-    state.sess.style = opts.style || loadStylePref(h) || (h === 2 || (state.sess.scopeRef && state.sess.scopeRef.type === 'topic' && state.sess.scopeRef.n === 12) ? 'quiz' : 'recall');
+    state.sess.style = opts.style || loadStylePref(h) || (h === PARAMEDIC_HUB || h === 2 || (state.sess.scopeRef && state.sess.scopeRef.type === 'topic' && state.sess.scopeRef.n === 12) ? 'quiz' : 'recall');
     state.sess.quizAvail = state.sess.queue.some(function (it) {
       var c = TOPICS[it.t].cards[it.i];
       return !!(c.mc && c.opts && c.opts.length >= 4);
@@ -812,12 +959,9 @@ function buildQueueFor(ref) {
   if (!ref) return [];
   var q = [], n, i;
   if (ref.type === 'topic') {
-    n = ref.n;
-    for (i = 0; i < TOPICS[n].cards.length; i++) if (!isMastered(n, i)) q.push({ t: n, i: i });
-    if (!q.length) for (i = 0; i < TOPICS[n].cards.length; i++) q.push({ t: n, i: i });
-    return shuffle(q);
+    return drillQueue([ref.n]);
   }
-  if (ref.type === 'weak') return shuffle(reviewItems().map(function (it) { return { t: it.t, i: it.i }; }));
+  if (ref.type === 'weak') return reviewItems().slice(0, DRILL_CAP).map(function (it) { return { t: it.t, i: it.i }; });
   if (ref.type === 'hub') return hubQueue(ref.h);
   if (ref.type === 'hubweak') return hubMistakes(ref.h);
   if (ref.type === 'flash' || ref.type === 'blitz') return scopeCards(ref.scope);
@@ -954,6 +1098,10 @@ function renderStudyCard(root, s) {
   if (s.mode === 'flash') {
     var hint = el('div', 'flip-hint'); hint.innerHTML = icon('layers', 16) + '<span>Tap the card to flip it</span>';
     dc.style.cursor = 'pointer';
+    dc.setAttribute('role', 'button');
+    dc.setAttribute('tabindex', '0');
+    dc.setAttribute('aria-label', 'Flip card to see the answer');
+    dc.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); dc.click(); } });
     dc.addEventListener('click', function flip() {
       if (s.revealed) return;
       s.revealed = true;
@@ -1038,7 +1186,10 @@ function renderGradeButtons(root, s, cur) {
 function gradeStep(s, cur, ok) {
   s.queue.shift();
   if (ok) { s.got++; } else { s.miss++; }
-  var newly = gradeCard(cur.t, cur.i, ok);
+  s.missedKeys = s.missedKeys || {};
+  var key = cardKey(cur.t, cur.i);
+  var newly = gradeCard(cur.t, cur.i, ok, { noAdvance: ok && !!s.missedKeys[key] });
+  if (!ok) s.missedKeys[key] = true;
   if (newly) s.masteredNow++;
   if (!ok) s.queue.push(cur);
   s.revealed = false;
@@ -1117,7 +1268,7 @@ function renderBlitzCard(root, s) {
 function blitzGrade(s, cur, ok) {
   s.queue.shift();
   if (ok) { s.blitz.score++; } 
-  gradeCard(cur.t, cur.i, ok); // feeds the same mastery + review system
+  gradeCard(cur.t, cur.i, ok, { noAdvance: true }); // misses feed review; speed answers never advance a card
   render();
 }
 function endBlitz() {
@@ -1203,12 +1354,12 @@ function renderGames(root) {
     'Dispatch, vitals, make the call.',
     store.games.call.best, 'best',
     function () { startCallRun(); }));
-  grid.appendChild(gameTile('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Practice Exam',
-    '30 paramedic questions, shuffled.',
+  grid.appendChild(gameTile('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Exams',
+    'Timed candidate simulation (150 Q, 3 hr), academy, probation and EMT exams.',
     store.games.exam.best, 'best',
     function () { startExamRun(); }));
-  grid.appendChild(gameTile('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Med Math',
-    'GCS, Apgar, rule-of-nines.',
+  grid.appendChild(gameTile('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Math',
+    'Drug math, drips, conversions, GCS, Apgar, rule of nines.',
     store.games.calc.best, 'best',
     function () { startCalcRun(); }));
   root.appendChild(grid);
@@ -1679,96 +1830,210 @@ function paramedicTopic() {
   }
   return EXAM_TOPIC;
 }
-function startExamRun() {
-  var t = paramedicTopic();
-  if (t < 0) return;
-  var idx = [], i;
-  for (i = 0; i < TOPICS[t].cards.length; i++) idx.push(i);
-  idx = shuffle(idx).slice(0, Math.min(EXAM_LEN, idx.length));
-  state.examRun = { order: idx, pos: 0, score: 0, picked: -1, misses: [] };
-  touchDay(); saveStore();
+/* ---------- exams: practice (feedback each item) or timed simulation ---------- */
+var EXAM_KINDS = {
+  candidate: { title: 'Paramedic candidate simulation', sub: '150 questions · 3 hours · 70% to pass · EMT scope', n: 150, mins: 180, pass: 70, hubs: [3, 2], emtOnly: true, timed: true },
+  quick: { title: 'Paramedic quick 30', sub: '30 questions, feedback after each', n: 30, pass: 70, hubs: [3] },
+  academy: { title: 'Academy written exam', sub: '50 questions across Academy + EMT topics', n: 50, mins: 60, pass: 70, hubs: [0, 2], timed: true },
+  probation: { title: 'Probation MP exam', sub: '50 questions on MPs, SOPs and radio', n: 50, mins: 60, pass: 80, hubs: [1], timed: true },
+  medical: { title: 'EMT / medical exam', sub: '50 questions across the Medical topics', n: 50, mins: 60, pass: 70, hubs: [2], timed: true }
+};
+function examPool(k) {
+  var K = EXAM_KINDS[k], pool = [];
+  K.hubs.forEach(function (h) {
+    hubTopicIdx(h).forEach(function (t) {
+      TOPICS[t].cards.forEach(function (c, i) { if (!(K.emtOnly && c.lvl === 'medic')) pool.push({ t: t, i: i }); });
+    });
+  });
+  return pool;
+}
+/* Spread picks across topics and (when tagged) competencies so a short exam isn't all one deck. */
+function examPick(pool, n) {
+  var groups = {}, keys = [];
+  pool.forEach(function (it) {
+    var c = TOPICS[it.t].cards[it.i], g = c.comp ? 'c' + c.comp : 't' + it.t;
+    if (!groups[g]) { groups[g] = []; keys.push(g); }
+    groups[g].push(it);
+  });
+  keys.forEach(function (g) { shuffle(groups[g]); });
+  shuffle(keys);
+  var out = [];
+  while (out.length < n) {
+    var added = false;
+    for (var j = 0; j < keys.length && out.length < n; j++) { var it = groups[keys[j]].pop(); if (it) { out.push(it); added = true; } }
+    if (!added) break;
+  }
+  return shuffle(out);
+}
+function chooseExam() {
+  openSheet('Exams', 'Timed exams hold all feedback until the end, like the real thing. Practice gives feedback after every question.',
+    Object.keys(EXAM_KINDS).map(function (k) {
+      var K = EXAM_KINDS[k], pool = examPool(k).length;
+      return { label: K.title, sub: K.sub + ' · ' + pool + ' in the bank', onPick: function () { startExamRun(k); } };
+    }));
+}
+function startExamRun(kind) {
+  if (!kind) { chooseExam(); return; }
+  var K = EXAM_KINDS[kind], pool = examPool(kind);
+  if (!pool.length) return;
+  var items = examPick(pool, Math.min(K.n, pool.length));
+  state.examRun = { kind: kind, items: items, pos: 0, answers: [], orders: {}, start: Date.now(), timed: !!K.timed, limit: K.timed ? K.mins * 60000 : 0 };
+  if (state.examRun.timed) startExamClock();
   render(); window.scrollTo(0, 0);
 }
-function endExamRun() { state.examRun = null; render(); window.scrollTo(0, 0); }
+var examClock = null;
+function startExamClock() {
+  stopExamClock();
+  examClock = setInterval(function () {
+    var run = state.examRun;
+    if (!run || !run.timed) { stopExamClock(); return; }
+    var el2 = document.getElementById('exam-clock');
+    var left = run.limit - (Date.now() - run.start);
+    if (left <= 0) { run.pos = run.items.length; run.timeUp = true; stopExamClock(); render(); return; }
+    if (el2) el2.textContent = fmtClock(left);
+  }, 1000);
+}
+function stopExamClock() { if (examClock) { clearInterval(examClock); examClock = null; } }
+function fmtClock(ms) { var s2 = Math.max(0, Math.round(ms / 1000)), h = Math.floor(s2 / 3600), m = Math.floor(s2 % 3600 / 60), x = s2 % 60; return (h ? h + ':' : '') + ('0' + m).slice(-2) + ':' + ('0' + x).slice(-2); }
+function endExamRun() {
+  if (state.examRun && state.examRun.pos < state.examRun.items.length && state.examRun.answers.length &&
+      !confirm('Quit this exam? Your answers so far won’t be scored.')) return;
+  stopExamClock(); state.examRun = null; render(); window.scrollTo(0, 0);
+}
 function renderExamView(root) {
-  var run = state.examRun, t = paramedicTopic();
-  if (run.pos >= run.order.length) { renderExamScore(root); return; }
-  var card = TOPICS[t].cards[run.order[run.pos]];
-  var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Practice exam</span><h2>Question ' + (run.pos + 1) + ' of ' + run.order.length + '</h2>'
-    + '<p>Score: <span class="tabular"><b>' + run.score + '</b></span> &middot; Best: <span class="tabular"><b>' + store.games.exam.best + '</b></span></p>';
+  var run = state.examRun, K = EXAM_KINDS[run.kind];
+  if (run.pos >= run.items.length) { renderExamScore(root); return; }
+  var it = run.items[run.pos], card = TOPICS[it.t].cards[it.i], ans = run.answers[run.pos];
+  if (!run.orders[run.pos]) run.orders[run.pos] = shuffleIdx(card.opts.length);
+  var head = el('div', 'view-head');
+  head.innerHTML = '<span class="kicker">' + K.title + '</span><h2>Question ' + (run.pos + 1) + ' of ' + run.items.length + '</h2>'
+    + (run.timed ? '<p>Time left: <b class="tabular" id="exam-clock">' + fmtClock(run.limit - (Date.now() - run.start)) + '</b> &middot; answered <span class="tabular">' + run.answers.filter(Boolean).length + '</span></p>'
+      : '<p>Score: <span class="tabular"><b>' + run.answers.filter(function (a) { return a && a.ok; }).length + '</b></span></p>');
   root.appendChild(head);
+  var bar = el('div', 'pbar exam-bar'); bar.innerHTML = '<i style="width:' + Math.round(run.pos / run.items.length * 100) + '%"></i>';
+  root.appendChild(bar);
 
-  var dc = el('div', 'dcard animate-pop-in');
-  dc.appendChild(el('span', 'tag', 'Paramedic candidate exam'));
+  var dc = el('div', 'dcard');
+  dc.appendChild(el('span', 'tag', TOPICS[it.t].title + (card.comp ? ' · competency ' + card.comp : '')));
   dc.appendChild(el('p', 'q', card.q));
-  var order = shuffleIdx(card.opts.length), btns = [], correctPos = -1;
-  order.forEach(function (oi, pos) {
+  var showFb = ans && !run.timed;
+  run.orders[run.pos].forEach(function (oi, pos) {
     var b = el('button', 'mc-opt press'); b.type = 'button';
     b.innerHTML = '<span class="mc-letter">' + 'ABCD'[pos] + '</span><span></span>';
     b.querySelector('span:last-child').textContent = card.opts[oi];
-    if (oi === 0) correctPos = pos;
+    if (ans) {
+      if (run.timed) { b.classList.add(ans.pick === oi ? 'mc-picked' : 'mc-dim'); }
+      else { b.disabled = true; b.classList.add(oi === 0 ? 'mc-right' : (oi === ans.pick ? 'mc-wrong' : 'mc-dim')); }
+    }
     b.addEventListener('click', function () {
-      if (run.picked >= 0) return;
-      run.picked = pos;
-      var ok = (pos === correctPos);
-      if (ok) run.score++; else run.misses.push(run.order[run.pos]);
-      gradeCard(t, run.order[run.pos], ok);
-      btns.forEach(function (bb, p) {
-        bb.disabled = true;
-        if (p === correctPos) bb.classList.add('mc-right');
-        else if (p === pos && !ok) bb.classList.add('mc-wrong');
-        else bb.classList.add('mc-dim');
-      });
-      var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
-      fb.setAttribute('role', 'status');
-      fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + card.opts[0] + '.') + '</b>';
-      dc.appendChild(fb);
-      if (card.why) { var w = el('p', 'why', null); w.textContent = card.why; dc.appendChild(w); }
-      var nx = el('div', 'drill-cta');
-      var nb = el('button', 'btn block press', (run.pos + 1 >= run.order.length) ? 'See your score' : 'Next question');
-      nb.type = 'button';
-      nb.addEventListener('click', function () { run.pos++; run.picked = -1; render(); window.scrollTo(0, 0); });
-      nx.appendChild(nb);
-      root.appendChild(nx);
+      if (ans && !run.timed) return;
+      run.answers[run.pos] = { pick: oi, ok: oi === 0 };
+      if (!run.timed) gradeCard(it.t, it.i, oi === 0);
+      if (run.timed) { run.pos++; render(); window.scrollTo(0, 0); }
+      else { render(); var a2 = document.querySelector('.exam-next'); if (a2 && a2.scrollIntoView) a2.scrollIntoView({ block: 'center' }); }
     });
-    btns.push(b); dc.appendChild(b);
+    dc.appendChild(b);
   });
+  if (showFb) {
+    var fb = el('div', 'mc-feedback ' + (ans.ok ? 'good' : 'bad')); fb.setAttribute('role', 'status');
+    var fbb = el('b', null, ans.ok ? 'Correct.' : 'Wrong. The answer: ' + card.opts[0]); fb.appendChild(fbb);
+    dc.appendChild(fb);
+    if (card.why) dc.appendChild(el('p', 'why', card.why));
+  }
   root.appendChild(dc);
 
-  var quit = el('div', 'drill-cta');
-  var qb = el('button', 'btn ghost block press', 'Quit exam'); qb.type = 'button';
+  var cta = el('div', 'drill-cta action-bar');
+  if (showFb || (run.timed && run.pos > 0)) {
+    if (showFb) {
+      var nb = el('button', 'btn block press exam-next', run.pos + 1 >= run.items.length ? 'See your score' : 'Next question'); nb.type = 'button';
+      nb.addEventListener('click', function () { run.pos++; render(); window.scrollTo(0, 0); });
+      cta.appendChild(nb);
+    }
+  }
+  if (run.timed) {
+    var row = el('div', 'btn-row');
+    var pv = el('button', 'btn ghost press', 'Back'); pv.type = 'button'; pv.disabled = run.pos === 0;
+    pv.addEventListener('click', function () { run.pos--; render(); window.scrollTo(0, 0); });
+    var sk = el('button', 'btn ghost press', run.pos + 1 >= run.items.length ? 'Finish' : 'Skip'); sk.type = 'button';
+    sk.addEventListener('click', function () {
+      if (run.pos + 1 >= run.items.length) {
+        var left = run.items.length - run.answers.filter(Boolean).length;
+        if (left && !confirm(left + ' unanswered. Finish and score it anyway?')) return;
+      }
+      run.pos++; render(); window.scrollTo(0, 0);
+    });
+    row.appendChild(pv); row.appendChild(sk); cta.appendChild(row);
+  }
+  var qb = el('button', 'btn ghost block press quit-btn', 'Quit exam'); qb.type = 'button';
   qb.addEventListener('click', endExamRun);
-  quit.appendChild(qb); root.appendChild(quit);
+  cta.appendChild(qb);
+  root.appendChild(cta);
 }
 function renderExamScore(root) {
-  var run = state.examRun, n = run.order.length, s = run.score;
-  var g = store.games.exam;
-  g.plays++;
-  if (s > g.best) g.best = s;
-  saveStore();
-  var pct = Math.round(s / n * 100);
+  var run = state.examRun, K = EXAM_KINDS[run.kind], n = run.items.length;
+  stopExamClock();
+  if (!run.scored) {
+    run.scored = true;
+    if (run.timed) run.items.forEach(function (it, j) { var a = run.answers[j]; gradeCard(it.t, it.i, !!(a && a.ok)); });
+    run.score = run.answers.filter(function (a) { return a && a.ok; }).length;
+    var g = store.games.exam; g.plays++; if (run.kind === 'quick' && run.score > g.best) g.best = run.score;
+    store.exams = store.exams || [];
+    store.exams.push({ kind: run.kind, date: Date.now(), n: n, score: run.score, mins: Math.round((Date.now() - run.start) / 60000) });
+    store.exams = store.exams.slice(-50);
+    touchDay(); saveStore();
+  }
+  var s2 = run.score, pct = Math.round(s2 / n * 100), passed = pct >= K.pass;
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Practice exam</span><h2>' + s + ' / ' + n + ' (' + pct + '%)</h2>';
+  head.innerHTML = '<span class="kicker">' + K.title + (run.timeUp ? ' · time’s up' : '') + '</span><h2>' + s2 + ' / ' + n + ' (' + pct + '%)</h2>'
+    + '<p class="' + (passed ? 'pass' : 'fail') + '"><b>' + (passed ? 'Pass' : 'Below the ' + K.pass + '% line') + '</b></p>';
   root.appendChild(head);
-  var msg;
-  if (s === n) msg = 'Perfect. Walk into that test like you own it.';
-  else if (pct >= 85) msg = 'Passing range. Kill the misses in Weak Spots and run it back.';
-  else if (pct >= 70) msg = 'Borderline. The misses went to your review queue — clear it, then retest.';
-  else msg = 'Not ready yet. Drill the topic decks first, then come back and prove it.';
-  var card = el('div', 'card');
-  card.innerHTML = '<p style="margin:0 0 12px"></p><p style="margin:0;color:var(--th-ink-2);font-size:14px">Best: <span class="tabular"><b>' + g.best + '</b></span> &middot; Exams: <span class="tabular"><b>' + g.plays + '</b></span>'
-    + (run.misses.length ? ' &middot; <span class="tabular"><b>' + run.misses.length + '</b></span> sent to Weak Spots' : '') + '</p>';
-  card.querySelector('p').textContent = msg;
-  root.appendChild(card);
+  // breakdown by competency (when tagged) else by topic
+  var groups = {}, order = [];
+  run.items.forEach(function (it, j) {
+    var c = TOPICS[it.t].cards[it.i], key = c.comp ? 'Competency ' + c.comp : TOPICS[it.t].title;
+    if (!groups[key]) { groups[key] = { n: 0, ok: 0 }; order.push(key); }
+    groups[key].n++; if (run.answers[j] && run.answers[j].ok) groups[key].ok++;
+  });
+  order.sort(function (a, b) { return groups[a].ok / groups[a].n - groups[b].ok / groups[b].n; });
+  root.appendChild(el('h2', 'sec-head', 'Weakest areas first'));
+  var bd = el('div', 'card');
+  order.slice(0, 15).forEach(function (k) {
+    var g2 = groups[k], p2 = Math.round(g2.ok / g2.n * 100);
+    var row = el('div', 'prow');
+    row.innerHTML = '<div class="t"><b></b><small class="tabular">' + g2.ok + '/' + g2.n + '</small><div class="pbar"><i style="width:' + p2 + '%"></i></div></div><span class="ppct tabular">' + p2 + '%</span>';
+    row.querySelector('b').textContent = k;
+    bd.appendChild(row);
+  });
+  root.appendChild(bd);
+  var hist = (store.exams || []).filter(function (e) { return e.kind === run.kind; }).slice(-6);
+  if (hist.length > 1) {
+    root.appendChild(el('h2', 'sec-head', 'Your last attempts'));
+    var hc = el('div', 'card');
+    hist.forEach(function (e) {
+      var d = new Date(e.date);
+      hc.appendChild(el('p', 'hist-row', (d.getMonth() + 1) + '/' + d.getDate() + ' — ' + Math.round(e.score / e.n * 100) + '% (' + e.score + '/' + e.n + ')' + (e.mins ? ', ' + e.mins + ' min' : '')));
+    });
+    root.appendChild(hc);
+  }
+  var misses = run.items.filter(function (it, j) { return !(run.answers[j] && run.answers[j].ok); });
+  if (misses.length) {
+    root.appendChild(el('h2', 'sec-head', 'Misses (' + misses.length + ') — now in your review queue'));
+    misses.slice(0, 40).forEach(function (it) {
+      var c = TOPICS[it.t].cards[it.i], m = el('div', 'card miss-card');
+      m.appendChild(el('p', 'q-sm', c.q));
+      var a = el('p', 'a-sm'); a.innerHTML = '<b>Answer:</b> '; a.appendChild(document.createTextNode(c.opts[0])); m.appendChild(a);
+      if (c.why) m.appendChild(el('p', 'why', c.why));
+      root.appendChild(m);
+    });
+  }
   var cta = el('div', 'drill-cta');
   var again = el('button', 'btn block press', 'Run it back'); again.type = 'button';
-  again.addEventListener('click', startExamRun);
-  var back = el('button', 'btn ghost block press', 'Back to Games'); back.type = 'button';
-  back.addEventListener('click', endExamRun);
+  var kind = run.kind;
+  again.addEventListener('click', function () { startExamRun(kind); });
+  var back = el('button', 'btn ghost block press', 'Done'); back.type = 'button';
+  back.addEventListener('click', function () { state.examRun = null; render(); window.scrollTo(0, 0); });
   cta.appendChild(again); cta.appendChild(back);
   root.appendChild(cta);
-  state.examRun = null;
 }
 
 /* ============================================================
@@ -1803,12 +2068,68 @@ function genNines() {
   pool.forEach(function (i) { total += NINES[i][1]; names.push(NINES[i][0]); });
   return { kind: 'Rule of nines', prompt: 'Adult with partial/full-thickness burns to ' + names.join(', ') + '. Estimated body surface area burned?', answer: total, unit: '%' };
 }
-function startCalcRun() {
-  var probs = [], i, gens = [genGCS, genApgar, genNines];
-  for (i = 0; i < CALC_LEN; i++) probs.push(gens[i % 3]());
-  probs = shuffle(probs);
-  state.calcRun = { probs: probs, pos: 0, score: 0, checked: false };
-  touchDay(); saveStore();
+/* ---------- drug math: numbers are practice values for "Drug A/B/C", not dosing guidance ---------- */
+function rnd(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
+function r1(x) { return Math.round(x * 10) / 10; }
+function r2(x) { return Math.round(x * 100) / 100; }
+function genLbKg() {
+  var lb = rnd(18, 260), kg = r1(lb / 2.2);
+  return { kind: 'Weight conversion', prompt: 'Patient weighs ' + lb + ' lb. Weight in kg? (round to 0.1)', answer: kg, unit: 'kg', tol: 0.15,
+    steps: lb + ' lb ÷ 2.2 = ' + kg + ' kg' };
+}
+function genMgKg() {
+  var kg = rnd(8, 110), per = pick([0.01, 0.02, 0.1, 0.5, 1, 1.5, 2, 5]), dose = r2(kg * per);
+  return { kind: 'Weight-based dose', prompt: 'Drug A is ordered at ' + per + ' mg/kg. Patient weighs ' + kg + ' kg. Dose in mg?', answer: dose, unit: 'mg', tol: Math.max(0.01, dose * 0.01),
+    steps: kg + ' kg × ' + per + ' mg/kg = ' + dose + ' mg' };
+}
+function genVolume() {
+  var conc = pick([[1, 1], [10, 1], [50, 1], [100, 10], [1, 10], [4, 2], [25, 1]]); // [mg, mL]
+  var mgPerMl = conc[0] / conc[1], ml = pick([0.5, 1, 1.5, 2, 2.5, 3, 4, 5]), dose = r2(ml * mgPerMl);
+  return { kind: 'Volume to give', prompt: 'Order: ' + dose + ' mg of Drug B. On hand: ' + conc[0] + ' mg in ' + conc[1] + ' mL. How many mL do you give?', answer: ml, unit: 'mL', tol: 0.05,
+    steps: 'Concentration = ' + conc[0] + ' mg ÷ ' + conc[1] + ' mL = ' + r2(mgPerMl) + ' mg/mL. ' + dose + ' mg ÷ ' + r2(mgPerMl) + ' mg/mL = ' + ml + ' mL' };
+}
+function genDrip() {
+  var set = pick([10, 15, 60]), vol = pick([100, 250, 500, 1000]), mins = pick([30, 60, 120, 240]);
+  var gtt = Math.round(vol * set / mins);
+  return { kind: 'Drip rate', prompt: 'Run ' + vol + ' mL over ' + mins + ' minutes with a ' + set + ' gtt/mL set. Drops per minute? (round to whole)', answer: gtt, unit: 'gtt/min', tol: 1,
+    steps: '(' + vol + ' mL × ' + set + ' gtt/mL) ÷ ' + mins + ' min = ' + gtt + ' gtt/min' };
+}
+function genMlHr() {
+  var vol = pick([250, 500, 1000]), hrs = pick([2, 4, 6, 8, 12]), rate = r1(vol / hrs);
+  return { kind: 'Infusion rate', prompt: 'Infuse ' + vol + ' mL over ' + hrs + ' hours. Rate in mL/hr?', answer: rate, unit: 'mL/hr', tol: 0.5,
+    steps: vol + ' mL ÷ ' + hrs + ' hr = ' + rate + ' mL/hr' };
+}
+function genMcgKgMin() {
+  var kg = rnd(50, 100), dose = pick([2, 5, 10]), mg = pick([400, 800]), bag = 250;
+  var mcgPerMl = mg * 1000 / bag, rate = r1(dose * kg * 60 / mcgPerMl);
+  return { kind: 'mcg/kg/min drip', prompt: 'Drug C at ' + dose + ' mcg/kg/min for a ' + kg + ' kg patient. Bag: ' + mg + ' mg in ' + bag + ' mL. Pump rate in mL/hr? (0.1)', answer: rate, unit: 'mL/hr', tol: Math.max(0.2, rate * 0.02),
+    steps: 'Concentration = ' + mg + ' mg × 1000 ÷ ' + bag + ' mL = ' + mcgPerMl + ' mcg/mL. ' + dose + ' × ' + kg + ' kg = ' + (dose * kg) + ' mcg/min, × 60 = ' + (dose * kg * 60) + ' mcg/hr, ÷ ' + mcgPerMl + ' = ' + rate + ' mL/hr' };
+}
+function genPercent() {
+  var pct = pick([5, 10, 25, 50]), ml = pick([50, 100, 250, 500]), g = r1(pct * ml / 100);
+  return { kind: 'Percent solution', prompt: 'How many grams of dextrose are in ' + ml + ' mL of D' + pct + ' (' + pct + '%)?', answer: g, unit: 'g', tol: 0.1,
+    steps: pct + '% = ' + pct + ' g per 100 mL. ' + pct + ' × ' + ml + ' ÷ 100 = ' + g + ' g' };
+}
+function genPedsWt() {
+  var age = rnd(1, 10), kg = age * 2 + 8;
+  return { kind: 'Pediatric weight estimate', prompt: 'A ' + age + '-year-old, no scale or tape. Estimated weight with (age × 2) + 8?', answer: kg, unit: 'kg', tol: 0.1,
+    steps: '(' + age + ' × 2) + 8 = ' + kg + ' kg. Use a length-based tape when you have one.' };
+}
+var CALC_SETS = {
+  mixed: { label: 'Mixed', sub: 'Drug math + scores', gens: [genMgKg, genVolume, genDrip, genMlHr, genLbKg, genGCS, genApgar, genNines, genPercent, genPedsWt] },
+  drug: { label: 'Drug math', sub: 'mg/kg, mL to give, drips, mL/hr, mcg/kg/min, %, conversions', gens: [genMgKg, genVolume, genDrip, genMlHr, genMcgKgMin, genLbKg, genPercent, genPedsWt] },
+  scores: { label: 'Scores', sub: 'GCS, Apgar, rule of nines', gens: [genGCS, genApgar, genNines] }
+};
+function startCalcRun(set) {
+  if (!set) {
+    openSheet('Math drills', 'Practice numbers use generic drugs — this trains the math, not doses.', Object.keys(CALC_SETS).map(function (k) {
+      return { label: CALC_SETS[k].label, sub: CALC_SETS[k].sub, onPick: function () { startCalcRun(k); } };
+    }));
+    return;
+  }
+  var probs = [], i, gens = shuffle(CALC_SETS[set].gens.slice());
+  for (i = 0; i < CALC_LEN; i++) probs.push(gens[i % gens.length]());
+  state.calcRun = { probs: shuffle(probs), pos: 0, score: 0, checked: false, set: set };
   render(); window.scrollTo(0, 0);
 }
 function endCalcRun() { state.calcRun = null; render(); window.scrollTo(0, 0); }
@@ -1817,7 +2138,7 @@ function renderCalcView(root) {
   if (run.pos >= run.probs.length) { renderCalcScore(root); return; }
   var p = run.probs[run.pos];
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Med math</span><h2>' + p.kind + ' ' + (run.pos + 1) + ' of ' + run.probs.length + '</h2>'
+  head.innerHTML = '<span class="kicker">Math</span><h2>' + p.kind + ' ' + (run.pos + 1) + ' of ' + run.probs.length + '</h2>'
     + '<p>Score: <span class="tabular"><b>' + run.score + '</b></span> &middot; Best: <span class="tabular"><b>' + store.games.calc.best + '</b></span></p>';
   root.appendChild(head);
 
@@ -1826,7 +2147,7 @@ function renderCalcView(root) {
   var pq = el('p', 'q', null); pq.textContent = p.prompt; dc.appendChild(pq);
   var row = el('div', 'calc-row');
   var inp = document.createElement('input');
-  inp.type = 'number'; inp.inputMode = 'numeric'; inp.className = 'calc-input';
+  inp.type = 'number'; inp.inputMode = 'decimal'; inp.step = 'any'; inp.className = 'calc-input';
   inp.placeholder = 'Your answer'; inp.setAttribute('aria-label', 'Your answer');
   row.appendChild(inp);
   if (p.unit) { var u = el('span', 'calc-unit', p.unit); row.appendChild(u); }
@@ -1839,12 +2160,13 @@ function renderCalcView(root) {
   chk.addEventListener('click', function () {
     if (run.checked) return;
     var val = parseFloat(inp.value);
-    var ok = !isNaN(val) && Math.abs(val - p.answer) < 0.01;
+    var ok = !isNaN(val) && Math.abs(val - p.answer) <= (p.tol || 0.01);
     run.checked = true;
     inp.disabled = true;
     fb.classList.remove('hidden');
     fb.classList.add(ok ? 'good' : 'bad');
-    fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + p.answer + (p.unit || '') + '.') + '</b>';
+    fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong — the answer is ' + p.answer + ' ' + (p.unit || '') + '.') + '</b>';
+    if (p.steps) fb.appendChild(el('p', 'why', 'Work it: ' + p.steps));
     if (ok) run.score++;
     touchDay(); saveStore();
     chk.textContent = (run.pos + 1 >= run.probs.length) ? 'See your score' : 'Next problem';
@@ -1866,7 +2188,7 @@ function renderCalcScore(root) {
   if (s > g.best) g.best = s;
   saveStore();
   var head = el('div', 'view-head animate-fade-in');
-  head.innerHTML = '<span class="kicker">Med math</span><h2>' + s + ' / ' + n + '</h2>';
+  head.innerHTML = '<span class="kicker">Math</span><h2>' + s + ' / ' + n + '</h2>';
   root.appendChild(head);
   var msg = s === n ? 'Clean sweep. The math is automatic now.'
     : s >= n * 0.8 ? 'Strong. The test loves these — lock them in.'
@@ -1897,11 +2219,14 @@ function renderProgress(root) {
   var s = moduleStats(), streak = dayStreak();
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">The scoreboard</span><h2>Progress</h2>'
-    + '<p>Saved on this device. Nobody masters anything by accident.</p>';
+    + '<p>Saved on this phone. Back it up in the App section below before you switch phones.</p>';
   root.appendChild(head);
 
   var grid = el('div', 'stat-grid');
-  grid.innerHTML = '<div class="stat g"><b class="tabular">' + s.mastered + '</b><span>mastered</span></div>'
+  var retained = 0; TOPICS.forEach(function (tp, t) { tp.cards.forEach(function (_, i) { if (isRetained(t, i)) retained++; }); });
+  grid.innerHTML = '<div class="stat g"><b class="tabular">' + retained + '</b><span>retained 2 wk+</span></div>'
+    + '<div class="stat"><b class="tabular">' + dueCount() + '</b><span>due now</span></div>'
+    + '<div class="stat g"><b class="tabular">' + s.mastered + '</b><span>solid</span></div>'
     + '<div class="stat w"><b class="tabular">' + s.needsWork + '</b><span>needs work</span></div>'
     + '<div class="stat n"><b class="tabular">' + s.fresh + '</b><span>fresh</span></div>';
   root.appendChild(grid);
@@ -1992,6 +2317,7 @@ function openSheet(title, sub, options) {
   var scrim = el('div', 'scrim animate-fade-in');
   var sheet = el('div', 'sheet animate-sheet-up');
   sheet.setAttribute('role', 'dialog');
+  sheet.setAttribute('aria-modal', 'true');
   sheet.setAttribute('aria-label', title);
   sheet.innerHTML = '<div class="sheet-grab"></div><h3></h3><p class="sub"></p>';
   sheet.querySelector('h3').textContent = title;
@@ -2010,10 +2336,17 @@ function openSheet(title, sub, options) {
   sheet.appendChild(cancel);
   scrim.addEventListener('click', closeSheet);
   root.appendChild(scrim); root.appendChild(sheet);
+  sheetOpener = document.activeElement;
+  var first = sheet.querySelector('button'); if (first) first.focus();
 }
+var sheetOpener = null;
 function closeSheet() {
+  var had = document.getElementById('sheet-root').innerHTML !== '';
   document.getElementById('sheet-root').innerHTML = '';
+  if (had && sheetOpener && sheetOpener.focus) { try { sheetOpener.focus({ preventScroll: true }); } catch (e) {} }
+  sheetOpener = null;
 }
+document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') closeSheet(); });
 
 /* ---------------- boot ---------------- */
 document.getElementById('brand-icon').innerHTML = icon('flame', 22);

@@ -184,7 +184,89 @@
     var rem = lsGet(REMINDER_KEY);
     root.appendChild(appRow('bell', 'Daily study reminder',
       rem ? 'Set for ' + fmtTime(rem) + ' in your calendar' : 'A daily calendar alert so the streak doesn’t die', rem ? 'Set' : null, showReminder));
+    root.appendChild(appRow('flame', 'Stage: ' + (store.stage ? STAGES[store.stage].label : 'not set'), 'Academy, probation or paramedic prep \u2014 sets what Home shows', null, pickStage));
+    root.appendChild(appRow('chart', 'Share progress with your captain', 'A plain-text summary you can text or email', null, shareSummary));
+    var last = lsGet(BACKUP_AT_KEY);
+    root.appendChild(appRow('download', 'Back up progress', last ? 'Last backup ' + new Date(+last).toLocaleDateString() : 'Never backed up \u2014 do this before you change phones', null, exportBackup));
+    root.appendChild(appRow('upload', 'Restore from a backup', 'Replaces the progress on this phone', null, importBackup));
   }
+
+  /* ---------- stage ---------- */
+  function pickStage() {
+    openSheet('Where are you right now?', 'Sets what Home puts in front of you.', Object.keys(STAGES).map(function (k) {
+      return { label: STAGES[k].label, sub: STAGES[k].sub, onPick: function () { setStage(k); } };
+    }));
+  }
+
+  /* ---------- backup / restore / captain summary ---------- */
+  var BACKUP_AT_KEY = 'fshq_backup_at_v1';
+  var BACKUP_KEYS = ['fireStudyHQ.v1', 'fshq_drillstyle_v1', REMINDER_KEY, 'pep.known.v1', 'pep.missed.v1', 'pep.best.v1'];
+  function backupBlobText() {
+    if (typeof saveStore === 'function') saveStore();
+    var data = { app: 'fire-study-hq', version: 2, exported: new Date().toISOString(), keys: {} };
+    BACKUP_KEYS.forEach(function (k) { var v = lsGet(k); if (v != null) data.keys[k] = v; });
+    return JSON.stringify(data);
+  }
+  function exportBackup() {
+    var d = new Date(), name = 'fire-study-hq-backup-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json';
+    var text = backupBlobText();
+    lsSet(BACKUP_AT_KEY, String(Date.now()));
+    try {
+      var file = new File([text], name, { type: 'application/json' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({ files: [file], title: 'Fire Study HQ backup' }).catch(function () {});
+        rerender(); return;
+      }
+    } catch (e) { /* fall through to download */ }
+    saveFile(name, 'application/json', text, false);
+    rerender();
+  }
+  function importBackup() {
+    var inp = document.createElement('input');
+    inp.type = 'file'; inp.accept = '.json,application/json';
+    inp.addEventListener('change', function () {
+      var f = inp.files && inp.files[0]; if (!f) return;
+      var r = new FileReader();
+      r.onload = function () {
+        var data; try { data = JSON.parse(r.result); } catch (e) { data = null; }
+        if (!data || data.app !== 'fire-study-hq' || !data.keys || typeof data.keys['fireStudyHQ.v1'] !== 'string') { alert('That file isn\u2019t a Fire Study HQ backup.'); return; }
+        try { JSON.parse(data.keys['fireStudyHQ.v1']); } catch (e) { alert('That backup is damaged and can\u2019t be restored.'); return; }
+        if (!confirm('Replace the progress on this phone with the backup from ' + (data.exported ? data.exported.slice(0, 10) : 'that file') + '?')) return;
+        Object.keys(data.keys).forEach(function (k) { if (BACKUP_KEYS.indexOf(k) >= 0 && typeof data.keys[k] === 'string') lsSet(k, data.keys[k]); });
+        location.reload();
+      };
+      r.readAsText(f);
+    });
+    inp.click();
+  }
+  function shareSummary() {
+    var lines = [], now = new Date();
+    lines.push('Fire Study HQ progress \u2014 ' + now.toLocaleDateString());
+    if (store.stage) lines.push('Stage: ' + STAGES[store.stage].label);
+    lines.push('Study streak: ' + dayStreak() + ' days');
+    var retained = 0, solid = 0, total = 0;
+    TOPICS.forEach(function (tp, t) { tp.cards.forEach(function (_, i) { total++; if (isRetained(t, i)) retained++; if (isMastered(t, i)) solid++; }); });
+    lines.push('Cards retained 2+ weeks: ' + retained + ' of ' + total + ' \u00b7 solid now: ' + solid + ' \u00b7 due: ' + dueCount());
+    HUBS.forEach(function (hub, h) {
+      var n = 0, r2 = 0; hubTopicIdx(h).forEach(function (t) { TOPICS[t].cards.forEach(function (_, i) { n++; if (isRetained(t, i) || isMastered(t, i)) r2++; }); });
+      lines.push('  ' + hub.title + ': ' + Math.round(r2 / Math.max(1, n) * 100) + '% solid');
+    });
+    var ex = (store.exams || []).slice(-5);
+    if (ex.length) { lines.push('Recent exams:'); ex.forEach(function (e) { lines.push('  ' + new Date(e.date).toLocaleDateString() + ' ' + (EXAM_KINDS[e.kind] ? EXAM_KINDS[e.kind].title : e.kind) + ': ' + Math.round(e.score / e.n * 100) + '% (' + e.score + '/' + e.n + ')'); }); }
+    var signed = CHECKLISTS.filter(function (c) { return store.checks && store.checks[c.id] && store.checks[c.id].signedAt; });
+    lines.push('Checklists signed off: ' + signed.length + ' of ' + CHECKLISTS.length);
+    signed.forEach(function (c) { var r = store.checks[c.id]; lines.push('  ' + c.title + ' \u2014 ' + r.signedBy + ', ' + new Date(r.signedAt).toLocaleDateString()); });
+    var text = lines.join('\n');
+    if (navigator.share) { navigator.share({ title: 'Fire Study HQ progress', text: text }).catch(function () {}); return; }
+    showSheet('Progress summary', 'Copy this and send it to your captain.', function (body) {
+      var ta = document.createElement('textarea'); ta.className = 'time-input summary-box'; ta.value = text; ta.rows = 12; ta.readOnly = true;
+      body.appendChild(ta);
+      var cp = el('button', 'btn block press', 'Copy'); cp.type = 'button';
+      cp.addEventListener('click', function () { ta.select(); try { navigator.clipboard.writeText(text); } catch (e) { document.execCommand('copy'); } cp.textContent = 'Copied'; });
+      body.appendChild(cp);
+    });
+  }
+  function rerender() { if (typeof render === 'function') render(); }
 
   /* ---------- offline support ---------- */
   if ('serviceWorker' in navigator && /^https:|^http:\/\/(localhost|127\.)/.test(location.href)) {
