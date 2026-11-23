@@ -3,7 +3,7 @@
    after that the cached copy loads instantly while a fresh copy is fetched in
    the background, so a new push to GitHub shows up on the next launch.
    Bump VERSION when this file's PRECACHE list changes. */
-var VERSION = 'fshq-v1';
+var VERSION = 'fshq-v3';
 var PRECACHE = [
   './',
   'index.html',
@@ -24,7 +24,12 @@ var PRECACHE = [
   'assets/scenarios/midrise-arrival.jpg',
   'assets/scenarios/ocotillo-arrival.jpg',
   'assets/scenarios/stickcity-arrival.jpg',
-  'assets/scenarios/stripmall-arrival.jpg'
+  'assets/scenarios/stripmall-arrival.jpg',
+  'assets/scenarios/garage-apt-arrival.jpg',
+  'assets/scenarios/ranch-arrival.jpg',
+  'assets/scenarios/tileroof-arrival.jpg',
+  'assets/scenarios/parkinggarage-arrival.jpg',
+  'assets/scenarios/pizza-arrival.jpg'
 ];
 var FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
