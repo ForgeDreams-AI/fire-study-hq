@@ -98,6 +98,7 @@ function loadStore() {
         if (STAGES[p.stage]) { s.stage = p.stage; s.stageSince = parseInt(p.stageSince, 10) || Date.now(); }
         if (p.exams && Array.isArray(p.exams)) s.exams = p.exams.slice(-50);
         if (p.checks && typeof p.checks === 'object') s.checks = p.checks;
+        if (p.scenBest && typeof p.scenBest === 'object') s.scenBest = p.scenBest;
       }
     }
   } catch (e) { /* start clean */ }
@@ -1565,7 +1566,8 @@ function renderScenarios(root) {
     txt.appendChild(el('p', 'sub', sc.sub + ' \u00b7 ' + sc.steps.length + ' beats'));
     inner.appendChild(txt);
     var prog = el('div', 'tprog');
-    prog.appendChild(el('small', null, 'Played ' + store.games.scen.plays + ' time' + (store.games.scen.plays === 1 ? '' : 's')));
+    var bestS = store.scenBest && store.scenBest[sc.id || String(i)];
+    prog.appendChild(el('small', null, bestS != null ? 'Best MP match ' + bestS + '%' : 'Not played yet'));
     inner.appendChild(prog);
     b.appendChild(inner);
     b.addEventListener('click', function () { startScenRun(i); });
@@ -1718,6 +1720,13 @@ function renderScenarioReport(root) {
   var checked = run.log.filter(function (e) { return e.hasBest; });
   if (checked.length) {
     var hits = checked.filter(function (e) { return e.matched; }).length;
+    if (!run.bestSaved) {
+      run.bestSaved = true;
+      store.scenBest = store.scenBest || {};
+      var pctS = Math.round(hits / checked.length * 100), sid = sc.id || String(run.scen);
+      if (!(store.scenBest[sid] >= pctS)) store.scenBest[sid] = pctS;
+      saveStore();
+    }
     root.appendChild(el('h2', 'sec-head', 'MP check'));
     var sum = el('div', 'card mp-summary');
     sum.innerHTML = '<b class="tabular">' + hits + ' of ' + checked.length + '</b><span>calls matched the MP</span>';
