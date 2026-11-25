@@ -1500,7 +1500,7 @@ function renderGames(root) {
     store.games.exam.best, 'best',
     function () { startExamRun(); }));
   grid.appendChild(gameTile('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Math',
-    'Drug math, drips, conversions, GCS, Apgar, rule of nines.',
+    'Pump & hose math, drug math, drips, GCS, Apgar, rule of nines.',
     store.games.calc.best, 'best',
     function () { startCalcRun(); }));
   grid.appendChild(gameTile('mic', 'linear-gradient(135deg,#B7791F,#7A1812)', 'Radio Reports',
@@ -2373,14 +2373,62 @@ function genPedsWt() {
   return { kind: 'Pediatric weight estimate', prompt: 'A ' + age + '-year-old, no scale or tape. Estimated weight with (age × 2) + 8?', answer: kg, unit: 'kg', tol: 0.1,
     steps: '(' + age + ' × 2) + 8 = ' + kg + ' kg. Use a length-based tape when you have one.' };
 }
+/* ---------- pump & hose math: textbook (IFSTA-style) coefficients and rules of thumb.
+   Departments set their own pump charts and nozzle pressures — the sheet says so. ---------- */
+var HOSE_C = [['1½-inch', 24], ['1¾-inch', 15.5], ['2½-inch', 2], ['3-inch', 0.8], ['5-inch LDH', 0.08]];
+var HOSE_GPM = { '1½-inch': [95, 125, 150], '1¾-inch': [125, 150, 160, 185], '2½-inch': [200, 250, 265, 300], '3-inch': [250, 300, 500], '5-inch LDH': [500, 750, 1000, 1250] };
+function flPsi(c, gpm, ft) { return c * Math.pow(gpm / 100, 2) * (ft / 100); }
+function genFL() {
+  var h = pick(HOSE_C), gpm = pick(HOSE_GPM[h[0]]), ft = pick(h[0] === '5-inch LDH' ? [300, 500, 800, 1000] : [100, 150, 200, 250, 300]);
+  var fl = Math.round(flPsi(h[1], gpm, ft)), q = gpm / 100;
+  return { kind: 'Friction loss', prompt: ft + ' ft of ' + h[0] + ' hose flowing ' + gpm + ' gpm. Friction loss in psi? (FL = C × Q² × L, round to whole)', answer: fl, unit: 'psi', tol: 1,
+    steps: 'C for ' + h[0] + ' = ' + h[1] + '. Q = ' + gpm + ' ÷ 100 = ' + q + '. L = ' + ft + ' ÷ 100 = ' + (ft / 100) + '. ' + h[1] + ' × ' + r2(q * q) + ' × ' + (ft / 100) + ' = ' + fl + ' psi' };
+}
+var TIPS = [['⅞', 0.875, 50], ['15⁄16', 0.9375, 50], ['1', 1, 50], ['1⅛', 1.125, 50], ['1¼', 1.25, 50], ['1⅜', 1.375, 80], ['1½', 1.5, 80], ['1¾', 1.75, 80]];
+function genSmoothBore() {
+  var t = pick(TIPS), gpm = Math.round(29.7 * t[1] * t[1] * Math.sqrt(t[2]));
+  return { kind: 'Smooth bore flow', prompt: 'A ' + t[0] + '-inch smooth bore tip at ' + t[2] + ' psi (' + (t[2] === 50 ? 'handline' : 'master stream') + '). Flow in gpm? (GPM = 29.7 × d² × √NP, round to whole)', answer: gpm, unit: 'gpm', tol: Math.max(2, gpm * 0.02),
+    steps: '29.7 × ' + t[1] + '² (' + r2(t[1] * t[1]) + ') × √' + t[2] + ' (' + r2(Math.sqrt(t[2])) + ') = ' + gpm + ' gpm' };
+}
+function genElevation() {
+  if (Math.random() < 0.5) {
+    var fl = rnd(2, 12), psi = (fl - 1) * 5;
+    return { kind: 'Elevation pressure', prompt: 'Nozzle is on floor ' + fl + ' of a building. Elevation pressure to add, using 5 psi per floor above the first?', answer: psi, unit: 'psi', tol: 0.1,
+      steps: '(' + fl + ' − 1) floors × 5 psi = ' + psi + ' psi' };
+  }
+  var ft = pick([10, 20, 30, 40, 50, 60, 80, 100]), up = Math.random() < 0.7, p2 = ft * 0.5;
+  return { kind: 'Elevation pressure', prompt: 'Nozzle is ' + ft + ' ft ' + (up ? 'above' : 'below') + ' the pump. Using 0.5 psi per foot, how many psi do you ' + (up ? 'add to' : 'subtract from') + ' the PDP?', answer: p2, unit: 'psi', tol: 0.1,
+    steps: ft + ' ft × 0.5 psi/ft = ' + p2 + ' psi, ' + (up ? 'added (pumping uphill)' : 'subtracted (gravity helps)') };
+}
+function genPDP() {
+  var line = pick([
+    { h: '1¾-inch', c: 15.5, gpm: pick([150, 160, 185]), noz: pick([['fog nozzle', 100], ['fog nozzle', 75], ['15⁄16-inch smooth bore', 50]]) },
+    { h: '2½-inch', c: 2, gpm: pick([250, 265, 300]), noz: pick([['fog nozzle', 100], ['1⅛-inch smooth bore', 50], ['1¼-inch smooth bore', 50]]) }
+  ]);
+  var ft = pick([150, 200, 250, 300]), floors = pick([1, 1, 2, 3, 4]), elev = (floors - 1) * 5;
+  var fl = Math.round(flPsi(line.c, line.gpm, ft)), pdp = line.noz[1] + fl + elev;
+  return { kind: 'Pump discharge pressure', prompt: ft + ' ft of ' + line.h + ' line flowing ' + line.gpm + ' gpm to a ' + line.noz[0] + ' at ' + line.noz[1] + ' psi' + (floors > 1 ? ', nozzle on floor ' + floors : ', at grade') + '. PDP? (PDP = NP + FL + elevation; round FL to whole first)', answer: pdp, unit: 'psi', tol: 2,
+    steps: 'FL = ' + line.c + ' × ' + r2(Math.pow(line.gpm / 100, 2)) + ' × ' + (ft / 100) + ' = ' + fl + ' psi. Elevation = ' + elev + ' psi. ' + line.noz[1] + ' + ' + fl + ' + ' + elev + ' = ' + pdp + ' psi' };
+}
+function genSupply() {
+  var gpm = pick([500, 750, 1000, 1250, 1500]), ft = pick([300, 400, 500, 600, 800, 1000]), fl = Math.round(flPsi(0.08, gpm, ft)), intake = 20, pp = fl + intake;
+  return { kind: 'Supply line', prompt: 'Forward lay: ' + ft + ' ft of 5-inch LDH, the attack pumper needs ' + gpm + ' gpm with ' + intake + ' psi at its intake. Supply pumper discharge pressure? (C = 0.08)', answer: pp, unit: 'psi', tol: 2,
+    steps: 'FL = 0.08 × ' + Math.pow(gpm / 100, 2) + ' × ' + (ft / 100) + ' = ' + fl + ' psi. ' + fl + ' + ' + intake + ' psi residual = ' + pp + ' psi' };
+}
+function genTank() {
+  var tank = pick([300, 500, 750, 1000]), gpm = pick([95, 125, 150, 185, 250, 300]), min = r1(tank / gpm);
+  return { kind: 'Tank time', prompt: 'A ' + tank + '-gallon booster tank, flowing ' + gpm + ' gpm. How many minutes of water? (0.1)', answer: min, unit: 'min', tol: 0.15,
+    steps: tank + ' gal ÷ ' + gpm + ' gpm = ' + min + ' min. Secure a water supply before it runs out.' };
+}
 var CALC_SETS = {
   mixed: { label: 'Mixed', sub: 'Drug math + scores', gens: [genMgKg, genVolume, genDrip, genMlHr, genLbKg, genGCS, genApgar, genNines, genPercent, genPedsWt] },
   drug: { label: 'Drug math', sub: 'mg/kg, mL to give, drips, mL/hr, mcg/kg/min, %, conversions', gens: [genMgKg, genVolume, genDrip, genMlHr, genMcgKgMin, genLbKg, genPercent, genPedsWt] },
-  scores: { label: 'Scores', sub: 'GCS, Apgar, rule of nines', gens: [genGCS, genApgar, genNines] }
+  scores: { label: 'Scores', sub: 'GCS, Apgar, rule of nines', gens: [genGCS, genApgar, genNines] },
+  pump: { label: 'Pump & hose math', sub: 'Friction loss, PDP, smooth bore flow, elevation, supply, tank time \u2014 textbook values; your pump chart rules', gens: [genFL, genFL, genPDP, genPDP, genSmoothBore, genElevation, genSupply, genTank] }
 };
 function startCalcRun(set) {
   if (!set) {
-    openSheet('Math drills', 'Practice numbers use generic drugs — this trains the math, not doses.', Object.keys(CALC_SETS).map(function (k) {
+    openSheet('Math drills', 'This trains the math. Drug problems use generic drugs, not doses; pump problems use textbook coefficients, not your engine\u2019s pump chart.', Object.keys(CALC_SETS).map(function (k) {
       return { label: CALC_SETS[k].label, sub: CALC_SETS[k].sub, onPick: function () { startCalcRun(k); } };
     }));
     return;
