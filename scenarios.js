@@ -61,11 +61,11 @@ var SCENARIOS = [
    },
    {
     "kind": "spray",
-    "x": 50,
-    "y": 40,
+    "x": 51,
+    "y": 32,
     "w": 14,
     "h": 13,
-    "label": "Fire-unit window",
+    "label": "Fire unit, 2nd floor (flame showing)",
     "note": "Reset the fire from outside (exterior attack)",
     "c": [
      "Fire Control"
@@ -77,8 +77,8 @@ var SCENARIOS = [
     "y": 18,
     "w": 12,
     "h": 14,
-    "label": "2nd-floor window",
-    "note": "Reset the fire from outside (exterior attack)",
+    "label": "Left building, 2nd-floor balcony",
+    "note": "Water on the building next door (no fire showing there)",
     "c": [
      "Fire Control"
     ]
