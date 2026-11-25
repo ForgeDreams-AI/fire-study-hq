@@ -237,6 +237,8 @@
       rem ? 'Set for ' + fmtTime(rem) + ' in your calendar' : 'A daily calendar alert so the streak doesn’t die', rem ? 'Set' : null, showReminder));
     root.appendChild(appRow('flame', 'Stage: ' + (store.stage ? STAGES[store.stage].label : 'not set'), 'Academy, probation or paramedic prep \u2014 sets what Home shows', null, pickStage));
     root.appendChild(appRow('chart', 'Share progress with your captain', 'A plain-text summary you can text or email', null, shareSummary));
+    var nrep = (store.reports || []).length;
+    if (nrep) root.appendChild(appRow('upload', 'Send card reports (' + nrep + ')', 'Problems you flagged on cards, for the content reviewers', null, sendReports));
     var last = lsGet(BACKUP_AT_KEY);
     root.appendChild(appRow('download', 'Back up progress', last ? 'Last backup ' + new Date(+last).toLocaleDateString() : 'Never backed up \u2014 do this before you change phones', null, exportBackup));
     root.appendChild(appRow('upload', 'Restore from a backup', 'Replaces the progress on this phone', null, importBackup));
@@ -331,9 +333,39 @@
       var ta = document.createElement('textarea'); ta.className = 'time-input summary-box'; ta.value = text; ta.rows = 12; ta.readOnly = true;
       body.appendChild(ta);
       var cp = el('button', 'btn block press', 'Copy'); cp.type = 'button';
-      cp.addEventListener('click', function () { ta.select(); try { navigator.clipboard.writeText(text); } catch (e) { document.execCommand('copy'); } cp.textContent = 'Copied'; });
+      cp.addEventListener('click', function () { ta.select(); copyText(text); cp.textContent = 'Copied'; });
       body.appendChild(cp);
     });
+  }
+  function sendReports() {
+    var reps = store.reports || [];
+    if (!reps.length) return;
+    var lines = ['Fire Study HQ card reports \u2014 ' + new Date().toLocaleDateString(), ''];
+    reps.forEach(function (r, i) {
+      lines.push((i + 1) + '. [' + r.id + '] ' + r.topic);
+      lines.push('   Q: ' + r.q);
+      lines.push('   Problem: ' + r.reason + (r.note ? ' \u2014 ' + r.note : ''));
+      lines.push('   Reported ' + new Date(r.date).toLocaleDateString());
+    });
+    var text = lines.join('\n');
+    var done = function () {
+      if (confirm('Sent? Clear these ' + reps.length + ' reports from this phone?')) { store.reports = []; saveStore(); rerender(); }
+    };
+    if (navigator.share) { navigator.share({ title: 'Fire Study HQ card reports', text: text }).then(done).catch(function () {}); return; }
+    showSheet('Card reports', 'Copy this and send it to your content reviewer.', function (body) {
+      var ta = document.createElement('textarea'); ta.className = 'time-input summary-box'; ta.value = text; ta.rows = 12; ta.readOnly = true;
+      body.appendChild(ta);
+      var cp = el('button', 'btn block press', 'Copy'); cp.type = 'button';
+      cp.addEventListener('click', function () { ta.select(); copyText(text); cp.textContent = 'Copied'; setTimeout(done, 300); });
+      body.appendChild(cp);
+    });
+  }
+  // Clipboard can be refused (permissions, http); fall back to the selected text box.
+  function copyText(text) {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).catch(function () { try { document.execCommand('copy'); } catch (e) { /* select-all is still there */ } }); return; }
+    } catch (e) { /* fall through */ }
+    try { document.execCommand('copy'); } catch (e) { /* the text stays selected for a manual copy */ }
   }
   function rerender() { if (typeof render === 'function') render(); }
 

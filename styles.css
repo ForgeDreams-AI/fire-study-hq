@@ -720,3 +720,7 @@ html { -webkit-tap-highlight-color: transparent; }
 .rd-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--th-btn); }
 .rd-bar em { position: absolute; top: -3px; width: 2px; height: 10px; background: var(--th-ink); }
 .guess-btn { margin-top: 8px; }
+
+/* ── Report a problem ── */
+.report-link { display: inline-block; margin-top: 10px; padding: 10px 0; min-height: 44px; background: none; border: 0; color: var(--th-ink-2); font: inherit; font-size: 13.5px; text-decoration: underline; text-underline-offset: 3px; }
+.app-toast { pointer-events: none; }

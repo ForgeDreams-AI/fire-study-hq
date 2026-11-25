@@ -139,6 +139,7 @@ function loadStore() {
         s.exams = cleanExams(p.exams);
         s.checks = cleanChecks(p.checks);
         s.scenBest = cleanScenBest(p.scenBest);
+        s.reports = cleanReports(p.reports);
       }
     }
   } catch (e) { storageProblem = 'This browser is blocking storage, so progress won\u2019t be saved. Use a normal (not private) window or install the app.'; }
@@ -185,6 +186,9 @@ function mergeFrom(raw) {
   var ob = cleanScenBest(p.scenBest);
   store.scenBest = store.scenBest || {};
   Object.keys(ob).forEach(function (k) { store.scenBest[k] = Math.max(store.scenBest[k] || 0, ob[k]); });
+  var have = {};
+  (store.reports || []).forEach(function (r) { have[r.id + ':' + r.date] = true; });
+  store.reports = (store.reports || []).concat(cleanReports(p.reports).filter(function (r) { return !have[r.id + ':' + r.date]; })).slice(-200);
   if (!store.stage && STAGES[p.stage]) store.stage = p.stage;
 }
 function saveStore(s) {
@@ -1265,6 +1269,43 @@ function showAnswer(box, card) {
   box.appendChild(el('p', 'a', card.a));
   box.appendChild(el('div', 'why-label', 'Why'));
   box.appendChild(el('p', 'why', card.why));
+  if (card.src) box.appendChild(el('p', 'src-note', 'Source: ' + card.src));
+  var rp = el('button', 'report-link press', 'Report a problem with this card'); rp.type = 'button';
+  rp.addEventListener('click', function () { reportCard(card); });
+  box.appendChild(rp);
+}
+
+/* ---------- report a problem ----------
+   Saved on the phone (and in backups) until there's a server; Progress \u2192 App
+   sends them as text to whoever reviews content. */
+var REPORT_REASONS = ['The answer is wrong', 'It doesn\u2019t match the current MP or protocol', 'The question is unclear', 'More than one answer is right', 'Typo or wording'];
+function reportCard(card) {
+  var topic = '';
+  TOPICS.some(function (t) { if (t.cards.indexOf(card) >= 0) { topic = t.title; return true; } return false; });
+  openSheet('What\u2019s wrong with this card?', 'Your report goes to the content reviewers. Thank you \u2014 this is how the cards get better.', REPORT_REASONS.map(function (reason) {
+    return { label: reason, onPick: function () {
+      var note = prompt('Anything to add? (optional \u2014 e.g. the MP section or what it should say)') || '';
+      store.reports = store.reports || [];
+      store.reports.push({ id: card.id || '', topic: topic, q: String(card.q).slice(0, 200), reason: reason, note: String(note).slice(0, 500), date: Date.now() });
+      store.reports = store.reports.slice(-200);
+      saveStore();
+      showToast('Reported. Send your reports from Progress \u2192 App.');
+    } };
+  }));
+}
+function showToast(msg) {
+  var t = document.getElementById('app-toast');
+  if (t) t.remove();
+  t = el('div', 'update-toast app-toast', null); t.id = 'app-toast'; t.setAttribute('role', 'status');
+  t.appendChild(el('span', null, msg));
+  document.body.appendChild(t);
+  setTimeout(function () { if (t.parentNode) t.remove(); }, 3500);
+}
+function cleanReports(a) {
+  if (!Array.isArray(a)) return [];
+  return a.filter(isObj).map(function (r) {
+    return { id: String(r.id || '').slice(0, 40), topic: String(r.topic || '').slice(0, 120), q: String(r.q || '').slice(0, 200), reason: String(r.reason || '').slice(0, 120), note: String(r.note || '').slice(0, 500), date: posInt(r.date) };
+  }).slice(-200);
 }
 function renderGradeButtons(root, s, cur) {
   var row = el('div', 'btn-row grade-row');
