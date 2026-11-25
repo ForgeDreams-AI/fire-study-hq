@@ -1669,7 +1669,7 @@ function scenPick(run, step, text, clears, unit, matched) {
     e.matched = e.hasBest && !!matched;
     e.listen = !!step.listen;
     e.mp = step.mp;
-    e.bestText = e.hasBest ? (step.hotspots ? SCENARIOS[run.scen].hotspots[step.best].label : scenOptText(step.opts[step.best])) : null;
+    e.bestText = e.hasBest ? (step.hotspots ? scenHotspots(step, SCENARIOS[run.scen])[step.best].label : scenOptText(step.opts[step.best])) : null;
     run.feedback = e;
     render();
     var fb = document.querySelector('.mp-check');
@@ -1698,6 +1698,12 @@ function scenFeedbackCard(run, step) {
   next.addEventListener('click', function () { run.feedback = null; run.pos++; render(); window.scrollTo(0, 0); });
   card.appendChild(next);
   return card;
+}
+/* A beat with `view` shows a drawn interior (scenes.js) with its own tap targets. */
+function scenHotspots(step, sc) { return (step.view && step.view.hotspots) || sc.hotspots; }
+function scenViewImage(step, sc) {
+  if (step.view && typeof sceneDataURI === 'function') return { src: sceneDataURI(step.view), alt: step.view.alt || 'Drawn interior view', inside: true };
+  return { src: sc.image, alt: sc.imageAlt, inside: false };
 }
 function scenOptClears(o) { return (typeof o === 'string' || !o.c) ? [] : o.c; }
 function startScenRun(i) {
@@ -1822,17 +1828,19 @@ function renderScenarioRun(root) {
   root.appendChild(disp);
 
   var stage = el('div', 'scen-stage');
+  var vi = scenViewImage(step, sc);
   var img = document.createElement('img');
   img.className = 'scen-img';
-  img.src = sc.image;
-  img.alt = sc.imageAlt;
+  img.src = vi.src;
+  img.alt = vi.alt;
   stage.appendChild(img);
+  if (vi.inside) stage.appendChild(el('span', 'scen-inside-tag', 'Inside \u00b7 training drawing'));
   var choiceList = null;
   if (step.hotspots) {
     // Numbered pins on the picture + full-width labeled choices below.
     // Labels never sit on the photo, so they can't pile on top of each other.
     choiceList = el('div', 'scen-choices');
-    sc.hotspots.forEach(function (h, hi) {
+    scenHotspots(step, sc).forEach(function (h, hi) {
       var num = String(hi + 1);
       var pick = function () {
         scenPick(run, step, h.label + (h.note ? ' \u2014 ' + h.note : ''), h.c || [], null, hi === step.best);
@@ -1859,7 +1867,7 @@ function renderScenarioRun(root) {
       row.innerHTML = '<span class="scen-choice-num"></span><span class="scen-choice-t"><b></b></span>';
       row.querySelector('.scen-choice-num').textContent = num;
       row.querySelector('b').textContent = (h.kind === 'spray' ? 'Aim water: ' : '') + h.label;
-      row.setAttribute('aria-label', aria);
+      if (h.note) row.querySelector('.scen-choice-t').appendChild(el('span', 'sr-only', ' \u2014 ' + h.note));
       row.addEventListener('click', pick);
       choiceList.appendChild(row);
     });

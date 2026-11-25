@@ -36,6 +36,7 @@ Live: https://forgedreams-ai.github.io/fire-study-hq/
 | `build/` | Source texts the content was written from (Phoenix SOPs and M.P.s, the 2026 recruit study packet). Not loaded by the app. |
 | `CONTENT-CHANGES.md` | Every factual content change, for instructor review, plus open questions for PFD. |
 | `tools/check.js` | Pre-deploy checks (also run by GitHub Actions on every push). |
+| `scenes.js` | Drawn interior views for scenarios (door, hallway, fire room, bedroom, stairs) — SVG, no image files. |
 | `tools/mp-watch.js`, `build/mp-index.json` | Weekly M.P. watcher: compares Phoenix's policies page with the saved revision dates and lists the cards that cite any revised M.P. |
 
 ## Editing content

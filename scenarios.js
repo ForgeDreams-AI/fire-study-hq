@@ -8715,3 +8715,103 @@ var SCENARIOS = [
     });
   });
 })();
+
+/* ============================================================
+   INSIDE — drawn interior beats (Nov 2026)
+   When the crew goes interior, these beats put you inside with a drawn view
+   (scenes.js) and tap targets on it. They show only if your Attack flow took you
+   inside (same rule as the "Go interior" beat). Probie interior beats get the
+   drawings as pictures too. MP text from build/ (202.02B, 202.02C, 202.04).
+   ============================================================ */
+(function () {
+  var MP_DOOR = 'M.P. 202.02B: "Keep the building openings closed if possible to reduce ventilation of the fire until you have a charged hose line in place and are prepared to make entry." M.P. 202.04: "Access and egress openings must be considered as ventilation," and uncoordinated ventilation makes fire control harder. Control the door on the hose — chocking it wide or breaking the window feeds the fire air before your water is on it.';
+  var MP_HALL = 'M.P. 202.04: "Interior surface cooling with water, then followed by water application to the burning fuels/contents is the most effective extinguishing tactic." The fire rolling across the ceiling is what hurts you — cool it with short straight-stream bursts before you move under it. M.P. 202.02C: a closed interior door protects victims from smoke and heat, so leave it closed for the search crew. (IFSTA: a wide fog pushed down a smoky hall upsets the thermal layer and brings the heat down on you.)';
+  var MP_ROOM = 'M.P. 202.04: "Interior surface cooling with water, then followed by water application to the burning fuels/contents is the most effective extinguishing tactic." Ceiling and upper walls first, then the couch. Breaking the window from inside is ventilation (M.P. 202.04) — it changes the flow path while you are in it. Never crawl under rolling fire without water on it.';
+  var MP_ISOLATE = 'IFSTA: isolate the room by closing the door before you search, or the heat and smoke in the hall come in with you. M.P. 202.02C: a closed interior door protects victims from smoke and heat. M.P. 202.04: "Access and egress openings must be considered as ventilation" — breaking the window now pulls the fire toward you and your victim.';
+  var MP_VICTIM = 'M.P. 202.02C: "Normal means of interior access (e.g., stairs, halls...) should be utilized to remove victims whenever possible. Secondary means of rescue (e.g., ... ground ladders...) must be utilized in their order of effectiveness." And tell Command right away: "When primary search companies encounter and remove victims, Command must assign other companies to continue to cover the interior positions vacated."';
+  var MP_STAIRS = 'M.P. 202.04: initiate the attack on the same level as the fire — it is upstairs, so the line goes up, with enough hose flaked at the bottom to make the climb and reach the fire room. Searching the 1st floor is the search crew’s job, done alongside the attack (M.P. 202.04: search and rescue "performed simultaneously with fire attack" when possible).';
+
+  function door(where) {
+    return { label: 'Inside: the door', cat: 'sizeup', hotspots: true, best: 0, mp: MP_DOOR,
+      q: 'You’re at the ' + where + ' with a charged line. Thick smoke is pushing from the top of the door, a little clear air down low. Tap what you do.',
+      view: { kind: 'door', alt: 'Drawn view: a front door partly open, thick black smoke pushing from the top of the gap, a charged hose line at the threshold, a wedge on the porch, a window to the right.', hotspots: [
+        { kind: 'move', x: 47, y: 55, label: 'Door — control it', note: 'Keep it nearly closed on the hose until you’re ready, then go in low' },
+        { kind: 'move', x: 62, y: 78, label: 'Door wedge', note: 'Chock the door wide open so the smoke can clear out' },
+        { kind: 'spray', x: 36, y: 30, w: 9, h: 20, label: 'The gap at the top of the door', note: 'Fog into the gap from the porch for a minute first' },
+        { kind: 'move', x: 79, y: 40, label: 'Front window', note: 'Break the window first to vent, then go in' }] } };
+  }
+  function stairs() {
+    return { label: 'Inside: the stairs', cat: 'sizeup', hotspots: true, best: 0, mp: MP_STAIRS,
+      q: 'You’re inside at the bottom of the stairs on the line. The glow is upstairs and the smoke is heavy above you. Tap where you go.',
+      view: { kind: 'stairs', smoke: 0.45, fire: 2, alt: 'Drawn view: a staircase going up into heavy smoke with an orange glow at the top, an open room to the left and a closed door to the right, hose line on the floor.', hotspots: [
+        { kind: 'move', x: 58, y: 62, label: 'Up the stairs with the line', note: 'Advance to the fire floor — flake enough hose at the bottom to make the climb' },
+        { kind: 'spray', x: 50, y: 18, w: 40, h: 18, label: 'Top of the stairs', note: 'Fog up the stairwell from the bottom before you climb' },
+        { kind: 'move', x: 16, y: 62, label: 'Living room (1st floor)', note: 'Search the 1st floor before you go up' },
+        { kind: 'move', x: 28, y: 85, label: 'Back outside', note: 'Wait outside for a second line before going up' }] } };
+  }
+  function hall() {
+    return { label: 'Inside: the hallway', cat: 'sizeup', hotspots: true, best: 0, mp: MP_HALL,
+      q: 'You’re 10 feet down the hall on the line, on your knees. Smoke is down to about 3 feet, fire is rolling across the ceiling out of the doorway on the right, and a bedroom door on the left is closed. Where does your first water go?',
+      view: { kind: 'hall', smoke: 0.5, fire: 3, alt: 'Drawn view: a smoky hallway. On the right an open doorway with fire and flame rolling across the ceiling; on the left a closed bedroom door; a door at the end of the hall; hose line on the floor.', hotspots: [
+        { kind: 'spray', x: 72, y: 13, w: 34, h: 16, label: 'Ceiling at the fire-room doorway', note: 'Short straight-stream bursts at the fire rolling across the ceiling' },
+        { kind: 'spray', x: 50, y: 46, w: 14, h: 20, label: 'Down the hallway', note: 'Wide fog down the hall to push the smoke out ahead of you' },
+        { kind: 'move', x: 19, y: 62, label: 'Closed bedroom door', note: 'Open it and look for victims before any water' },
+        { kind: 'move', x: 22, y: 85, label: 'Front door behind you', note: 'Back out and hit it through the window instead' }] } };
+  }
+  function room(what) {
+    return { label: 'Inside: the fire room', cat: 'sizeup', hotspots: true, best: 0, mp: MP_ROOM,
+      q: 'At the fire-room doorway. ' + what + ' is burning and fire is rolling across the ceiling toward you. Where do you hit it first?',
+      view: { kind: 'fireroom', smoke: 0.42, fire: 3, alt: 'Drawn view: a living room seen from the doorway. A couch on fire on the right, flame rolling across the ceiling, a window on the back wall, a coffee table, the nozzle in the foreground.', hotspots: [
+        { kind: 'spray', x: 50, y: 13, w: 62, h: 16, label: 'Ceiling and upper walls', note: 'Cool the ceiling and walls first' },
+        { kind: 'spray', x: 66, y: 62, w: 20, h: 18, label: 'Burning couch', note: 'Go straight for the burning couch first' },
+        { kind: 'spray', x: 43, y: 40, w: 16, h: 18, label: 'Window', note: 'Knock the window out with the stream to vent' },
+        { kind: 'move', x: 40, y: 84, label: 'Into the room', note: 'Crawl to the couch before you open the nozzle' }] } };
+  }
+  function search(who) {
+    return { label: 'Inside: search', cat: 'sizeup', hotspots: true, best: 0, mp: MP_ISOLATE,
+      q: 'You’re with ' + who + ' on the search. You crawl into the bedroom next to the fire room; the hall behind you is getting hotter. Tap your first move.',
+      view: { kind: 'bedroom', smoke: 0.5, fire: 1, alt: 'Drawn view: a smoky bedroom. The open bedroom door on the left with orange glow from the hall, a bed, a window on the back wall, a closet on the right.', hotspots: [
+        { kind: 'move', x: 18, y: 58, label: 'Bedroom door (behind you)', note: 'Close it — isolate the room while you search' },
+        { kind: 'move', x: 52, y: 35, label: 'Window', note: 'Break it out to let the smoke go' },
+        { kind: 'move', x: 34, y: 70, label: 'Bed', note: 'Start the search on the bed' },
+        { kind: 'move', x: 81, y: 60, label: 'Closet', note: 'Check the closet first' }] } };
+  }
+  function victim(where, found) {
+    return { label: 'Inside: victim', cat: 'sizeup', hotspots: true, best: 0, mp: MP_VICTIM,
+      q: found + ' E1 has knocked the fire down in the hall. Which way do you take them out?',
+      view: { kind: 'bedroom', smoke: 0.35, fire: 1, victim: where, alt: 'Drawn view: a smoky bedroom with a victim lying on the floor' + (where === 'door' ? ' just inside the door' : ' under the window') + '; the bedroom door on the left, window on the back wall, closet on the right.', hotspots: [
+        { kind: 'move', x: 18, y: 50, label: 'Bedroom door → hallway', note: 'Out the way you came — the hall is knocked down' },
+        { kind: 'move', x: 52, y: 35, label: 'Window', note: 'Out the window to a ground ladder' },
+        { kind: 'move', x: 76, y: 76, label: 'Stay with them', note: 'Stay in the room and wait for R3 to come in' },
+        { kind: 'move', x: 81, y: 60, label: 'Closet', note: 'Finish searching the room before you move them' }] } };
+  }
+
+  var INSIDE = {
+    ocotillo: [door('door of 214'), hall(), room('The couch'), search('L1'), victim('window', 'Your sweep finds an adult on the floor under the bedroom window, unresponsive.')],
+    house: [door('front door'), hall(), room('The couch'), search('L1')],
+    gilbert: [door('front door'), stairs(), hall(), room('A couch by the balcony door')],
+    ranch: [door('front door'), hall(), room('The couch'), search('L1'), victim('window', 'In the bedroom next to the fire room you find an adult on the floor by the window, unresponsive.')],
+    tileroof: [door('front door'), stairs(), search('L1'), victim('door', 'You push the bedroom door and it stops on something — the boy, on the floor right behind it, unresponsive.')]
+  };
+  SCENARIOS.forEach(function (sc) {
+    var beats = INSIDE[sc.id];
+    if (!beats) return;
+    var labels = sc.steps.map(function (s) { return s.label; }), at = labels.indexOf('Go interior');
+    if (at < 0) throw new Error('inside: no Go interior in ' + sc.id);
+    var cond = sc.steps[at].showIf;
+    beats.forEach(function (b, k) { if (cond) b.showIf = cond; sc.steps.splice(at + 1 + k, 0, b); });
+  });
+
+  // Pictures for the probie seat's interior beats (no tap targets — the question stays a pick).
+  var PICS = {
+    'probie-nozzle': { 'Door control': { kind: 'door' }, 'Reading smoke': { kind: 'door' }, 'Fire attack': { kind: 'fireroom', smoke: 0.45, fire: 3 },
+      'Stay on the line': { kind: 'hall', smoke: 0.72, fire: 1 }, 'Exit plan': { kind: 'hall', smoke: 0.35, fire: 0 } },
+    'probie-search': { 'Isolate': { kind: 'bedroom', smoke: 0.5, fire: 1 }, 'Search pattern': { kind: 'bedroom', smoke: 0.62, fire: 1 },
+      'Where kids are': { kind: 'bedroom', smoke: 0.4, fire: 1 }, 'Victim found': { kind: 'bedroom', smoke: 0.5, fire: 1, victim: 'window' } }
+  };
+  SCENARIOS.forEach(function (sc) {
+    var p = PICS[sc.id];
+    if (!p) return;
+    sc.steps.forEach(function (st) { if (p[st.label] && !st.view) { st.view = p[st.label]; st.view.alt = 'Drawn interior view for this beat.'; } });
+  });
+})();
