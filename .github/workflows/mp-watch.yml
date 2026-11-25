@@ -1,0 +1,29 @@
+name: MP watch
+
+# Every Monday, compares the City of Phoenix Fire policies page with
+# build/mp-index.json. A red X means an M.P. the app cites was revised:
+# open the run summary for the list of cards and scenario beats to re-check.
+# After the content is reviewed, run `node tools/mp-watch.js --update` and commit.
+on:
+  schedule:
+    - cron: '17 15 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Compare M.P. revision dates
+        run: |
+          set +e
+          node tools/mp-watch.js
+          code=$?
+          if [ -f mp-watch-report.md ]; then cat mp-watch-report.md >> "$GITHUB_STEP_SUMMARY"; fi
+          exit $code

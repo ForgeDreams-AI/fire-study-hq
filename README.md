@@ -36,6 +36,7 @@ Live: https://forgedreams-ai.github.io/fire-study-hq/
 | `build/` | Source texts the content was written from (Phoenix SOPs and M.P.s, the 2026 recruit study packet). Not loaded by the app. |
 | `CONTENT-CHANGES.md` | Every factual content change, for instructor review, plus open questions for PFD. |
 | `tools/check.js` | Pre-deploy checks (also run by GitHub Actions on every push). |
+| `tools/mp-watch.js`, `build/mp-index.json` | Weekly M.P. watcher: compares Phoenix's policies page with the saved revision dates and lists the cards that cite any revised M.P. |
 
 ## Editing content
 
@@ -52,6 +53,10 @@ Cards live in `data.js` as one JSON array, `TOPICS`. Each card is `{ id, q, a, w
 3. A new file the app loads (a script, a scenario photo) goes in `PRECACHE` in `sw.js`.
 
 Every push to `master` goes live on GitHub Pages within about a minute.
+
+## When an M.P. is revised
+
+The **MP watch** job runs every Monday (Actions tab → MP watch, or run it by hand). A red X means an M.P. the app cites has a new revision date; the run summary lists every card, scenario beat and checklist that cites it. Read the new PDF, fix those items, then run `node tools/mp-watch.js --update` and commit the new `build/mp-index.json`.
 
 ## Storage
 
