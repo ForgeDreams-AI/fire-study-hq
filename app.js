@@ -1378,22 +1378,50 @@ function renderBlitzCard(root, s) {
   exit.addEventListener('click', exitSession);
   hz.appendChild(exit);
   root.appendChild(hz);
-  var sc = el('div', 'sess-scope'); sc.textContent = s.scope + ' \u2014 if you had to think about it, you missed it';
+  var sc = el('div', 'sess-scope'); sc.textContent = s.scope + ' \u2014 tap the answer, fast';
   root.appendChild(sc);
 
   var dc = el('div', 'dcard animate-pop-in');
   dc.appendChild(el('span', 'tag', cardTag(card, cur)));
   dc.appendChild(el('p', 'q', card.q));
-  if (card.mc && card.opts) {
-    var ol = el('div', 'mc-list');
-    card.opts.forEach(function (o, i) { var li = el('div', 'mc-static'); li.textContent = 'ABCD'[i] + ') ' + o; ol.appendChild(li); });
-    dc.appendChild(ol);
-  }
-  root.appendChild(dc);
   // sync timer text in case of re-render mid-run
   var t = document.getElementById('blitz-timer');
   if (t) { t.textContent = '0:' + ('0' + Math.max(0, s.blitz.left)).slice(-2); if (s.blitz.left <= 10) t.classList.add('urgent'); }
 
+  if (card.opts && card.opts.length >= 2) {
+    // Tap an answer: green/red right away, the right answer shown on a miss, then on to the next card.
+    var order = shuffleIdx(card.opts.length), btns = [], answered = false;
+    order.forEach(function (oi, pos) {
+      var b = el('button', 'mc-opt press'); b.type = 'button';
+      b.innerHTML = '<span class="mc-letter">' + 'ABCD'[pos] + '</span><span></span>';
+      b.querySelector('span:last-child').textContent = card.opts[oi];
+      b.addEventListener('click', function () {
+        if (answered) return;
+        answered = true;
+        var ok = oi === 0;
+        btns.forEach(function (bb, p) {
+          bb.disabled = true;
+          if (order[p] === 0) bb.classList.add('mc-right');
+          else if (p === pos) bb.classList.add('mc-wrong');
+          else bb.classList.add('mc-dim');
+        });
+        var fb = el('div', 'mc-feedback ' + (ok ? 'good' : 'bad'));
+        fb.setAttribute('role', 'status');
+        fb.innerHTML = '<b>' + (ok ? 'Correct! +1' : 'Wrong.') + '</b>';
+        if (!ok) fb.appendChild(document.createTextNode(' Answer: ' + card.opts[0]));
+        dc.appendChild(fb);
+        setTimeout(function () {
+          if (state.sess !== s || s.done) return;
+          blitzGrade(s, cur, ok);
+        }, ok ? 700 : 1800);
+      });
+      btns.push(b);
+      dc.appendChild(b);
+    });
+    root.appendChild(dc);
+    return;
+  }
+  root.appendChild(dc);
   var row = el('div', 'btn-row');
   var miss = el('button', 'btn danger-line press'); miss.type = 'button';
   miss.innerHTML = icon('x', 20) + '<span>Blew it</span>';
@@ -1479,7 +1507,7 @@ function renderGames(root) {
     store.games.flash.sessions, 'sessions',
     function () { scopeOptions(function (sc) { startSession('flash', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'flash', scope: sc } }); }); }));
   grid.appendChild(gameTile('zap', 'linear-gradient(135deg,#F2A63B,#B3271E)', 'Blitz',
-    '60 seconds. Gut answer. No mercy.',
+    '60 seconds. Tap the answer \u2014 instant right or wrong.',
     store.games.blitz.best, 'best',
     function () { scopeOptions(function (sc) { startSession('blitz', scopeCards(sc), scopeLabel(sc), { scopeRef: { type: 'blitz', scope: sc } }); }); }));
   var qn = reviewItems().length;
