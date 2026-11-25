@@ -200,7 +200,18 @@
 
   /* ---------- backup / restore / captain summary ---------- */
   var BACKUP_AT_KEY = 'fshq_backup_at_v1';
-  var BACKUP_KEYS = ['fireStudyHQ.v1', 'fshq_drillstyle_v1', REMINDER_KEY, 'pep.known.v1', 'pep.missed.v1', 'pep.best.v1'];
+  // The reminder lives in the phone's calendar, so it isn't backed up (it would show "Set" on a new phone).
+  var BACKUP_KEYS = ['fireStudyHQ.v1', 'fshq_drillstyle_v1', 'pep.known.v1', 'pep.missed.v1', 'pep.best.v1', 'pep.theme'];
+  function validBackupValue(k, v) {
+    if (typeof v !== 'string' || v.length > 5e6) return false;
+    if (k === 'pep.theme') return v === 'dark' || v === 'light';
+    var j; try { j = JSON.parse(v); } catch (e) { return false; }
+    if (k === 'fireStudyHQ.v1') return !!parseStore(v);
+    if (k === 'fshq_drillstyle_v1' || k === 'pep.known.v1') return !!j && typeof j === 'object' && !Array.isArray(j);
+    if (k === 'pep.missed.v1') return Array.isArray(j);
+    if (k === 'pep.best.v1') return typeof j === 'number' && j >= 0 && j <= 100;
+    return false;
+  }
   function backupBlobText() {
     if (typeof saveStore === 'function') saveStore();
     var data = { app: 'fire-study-hq', version: 2, exported: new Date().toISOString(), keys: {} };
@@ -210,15 +221,17 @@
   function exportBackup() {
     var d = new Date(), name = 'fire-study-hq-backup-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json';
     var text = backupBlobText();
-    lsSet(BACKUP_AT_KEY, String(Date.now()));
     try {
       var file = new File([text], name, { type: 'application/json' });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        navigator.share({ files: [file], title: 'Fire Study HQ backup' }).catch(function () {});
-        rerender(); return;
+        navigator.share({ files: [file], title: 'Fire Study HQ backup' })
+          .then(function () { lsSet(BACKUP_AT_KEY, String(Date.now())); rerender(); })
+          .catch(function () { /* cancelled: not a backup */ });
+        return;
       }
     } catch (e) { /* fall through to download */ }
     saveFile(name, 'application/json', text, false);
+    lsSet(BACKUP_AT_KEY, String(Date.now()));
     rerender();
   }
   function importBackup() {
@@ -229,10 +242,15 @@
       var r = new FileReader();
       r.onload = function () {
         var data; try { data = JSON.parse(r.result); } catch (e) { data = null; }
-        if (!data || data.app !== 'fire-study-hq' || !data.keys || typeof data.keys['fireStudyHQ.v1'] !== 'string') { alert('That file isn\u2019t a Fire Study HQ backup.'); return; }
-        try { JSON.parse(data.keys['fireStudyHQ.v1']); } catch (e) { alert('That backup is damaged and can\u2019t be restored.'); return; }
-        if (!confirm('Replace the progress on this phone with the backup from ' + (data.exported ? data.exported.slice(0, 10) : 'that file') + '?')) return;
-        Object.keys(data.keys).forEach(function (k) { if (BACKUP_KEYS.indexOf(k) >= 0 && typeof data.keys[k] === 'string') lsSet(k, data.keys[k]); });
+        if (!data || data.app !== 'fire-study-hq' || !data.keys || typeof data.keys !== 'object' || typeof data.keys['fireStudyHQ.v1'] !== 'string') { alert('That file isn\u2019t a Fire Study HQ backup.'); return; }
+        var bad = BACKUP_KEYS.filter(function (k) { return data.keys[k] != null && !validBackupValue(k, data.keys[k]); });
+        if (bad.length || !validBackupValue('fireStudyHQ.v1', data.keys['fireStudyHQ.v1'])) { alert('That backup is damaged and can\u2019t be restored. Nothing was changed.'); return; }
+        var when = typeof data.exported === 'string' ? data.exported.slice(0, 10) : 'that file';
+        if (!confirm('Replace the progress on this phone with the backup from ' + when + '?')) return;
+        // Clear first so nothing from the old progress mixes with the backup.
+        BACKUP_KEYS.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) { /* ignore */ } });
+        BACKUP_KEYS.forEach(function (k) { if (typeof data.keys[k] === 'string') lsSet(k, data.keys[k]); });
+        try { localStorage.setItem('fshq_restored_at', String(Date.now())); } catch (e) { /* ignore */ }
         location.reload();
       };
       r.readAsText(f);
@@ -270,7 +288,41 @@
 
   /* ---------- offline support ---------- */
   if ('serviceWorker' in navigator && /^https:|^http:\/\/(localhost|127\.)/.test(location.href)) {
-    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+    var reloading = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      // Fires when the user accepted an update (or on the very first install, when nothing was controlling).
+      if (reloading || !hadController) return;
+      reloading = true; location.reload();
+    });
+    var hadController = !!navigator.serviceWorker.controller;
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').then(function (reg) {
+        function watch(w) {
+          if (!w) return;
+          if (w.state === 'installed' && navigator.serviceWorker.controller) { showUpdateToast(w); return; }
+          w.addEventListener('statechange', function () { if (w.state === 'installed' && navigator.serviceWorker.controller) showUpdateToast(w); });
+        }
+        watch(reg.waiting); watch(reg.installing);
+        reg.addEventListener('updatefound', function () { watch(reg.installing); });
+        // Installed apps can stay open for days: look for a new version whenever the app comes back.
+        document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') reg.update().catch(function () {}); });
+      }).catch(function () {});
+    });
+  }
+  function showUpdateToast(worker) {
+    if (document.getElementById('update-toast')) return;
+    var t = el('div', 'update-toast'); t.id = 'update-toast'; t.setAttribute('role', 'status');
+    t.appendChild(el('span', null, 'New version ready.'));
+    var later = el('button', 'later press', 'Later'); later.type = 'button';
+    later.addEventListener('click', function () { t.remove(); });
+    var b = el('button', 'press', 'Reload'); b.type = 'button';
+    b.addEventListener('click', function () {
+      if (typeof activeWork === 'function' && activeWork() && !confirm('Reload now? You\u2019ll leave ' + activeWork() + '.')) return;
+      if (typeof saveStore === 'function') saveStore();
+      worker.postMessage('SKIP_WAITING');
+    });
+    t.appendChild(later); t.appendChild(b);
+    document.body.appendChild(t);
   }
   // Ask the browser not to clear saved progress when storage runs low.
   if (navigator.storage && navigator.storage.persist) { navigator.storage.persist().catch(function () {}); }

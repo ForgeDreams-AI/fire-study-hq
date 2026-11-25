@@ -80,13 +80,52 @@ function normGames(g) {
   }
   return d;
 }
+function isObj(o) { return !!o && typeof o === 'object' && !Array.isArray(o); }
+function posInt(v) { v = parseInt(v, 10); return isNaN(v) ? 0 : Math.max(0, v); }
+function cleanExams(a) {
+  if (!Array.isArray(a)) return [];
+  return a.filter(function (e) { return isObj(e) && typeof e.kind === 'string' && posInt(e.n) > 0; })
+    .map(function (e) { return { kind: e.kind.slice(0, 20), date: posInt(e.date), n: posInt(e.n), score: Math.min(posInt(e.score), posInt(e.n)), mins: posInt(e.mins) }; })
+    .slice(-50);
+}
+function cleanChecks(o) {
+  var out = {};
+  if (!isObj(o)) return out;
+  Object.keys(o).forEach(function (id) {
+    var r = o[id];
+    if (!/^[a-z0-9-]{1,60}$/.test(id) || !isObj(r)) return;
+    var done = {};
+    if (isObj(r.done)) Object.keys(r.done).forEach(function (i) { if (/^\d{1,3}$/.test(i)) done[i] = posInt(r.done[i]); });
+    out[id] = { done: done, signedBy: typeof r.signedBy === 'string' ? r.signedBy.slice(0, 60) : '', signedAt: posInt(r.signedAt), best: Math.min(100, posInt(r.best)) };
+  });
+  return out;
+}
+function cleanScenBest(o) {
+  var out = {};
+  if (!isObj(o)) return out;
+  Object.keys(o).forEach(function (k) { if (k.length <= 60) out[k] = Math.min(100, posInt(o[k])); });
+  return out;
+}
+/* Parse a saved store; returns null when it isn't one (wrong shape or bad JSON). */
+function parseStore(raw) {
+  var p;
+  try { p = JSON.parse(raw); } catch (e) { return null; }
+  if (!isObj(p) || (p.prog !== undefined && !isObj(p.prog))) return null;
+  return p;
+}
+var storageProblem = null; // shown as a banner when progress can't be saved
 function loadStore() {
   var s = { prog: {}, games: defaultGames(), days: {}, migrated: false };
   try {
     var raw = localStorage.getItem(HQ_KEY);
     if (raw) {
-      var p = JSON.parse(raw);
-      if (p && typeof p === 'object' && !Array.isArray(p)) {
+      var p = parseStore(raw);
+      if (!p) {
+        // Keep the unreadable record instead of overwriting it, so it can be recovered.
+        try { localStorage.setItem(HQ_KEY + '.corrupt-' + Date.now(), raw); } catch (e) { /* no room */ }
+        storageProblem = 'Your saved progress couldn\u2019t be read, so this phone started fresh. A copy was kept; restore a backup from Progress \u2192 App if you have one.';
+      }
+      if (p) {
         if (p.prog && typeof p.prog === 'object') s.prog = cleanProg(p.prog);
         s.games = normGames(p.games);
         if (p.days && typeof p.days === 'object') {
@@ -96,12 +135,12 @@ function loadStore() {
         }
         s.migrated = !!p.migrated;
         if (STAGES[p.stage]) { s.stage = p.stage; s.stageSince = parseInt(p.stageSince, 10) || Date.now(); }
-        if (p.exams && Array.isArray(p.exams)) s.exams = p.exams.slice(-50);
-        if (p.checks && typeof p.checks === 'object') s.checks = p.checks;
-        if (p.scenBest && typeof p.scenBest === 'object') s.scenBest = p.scenBest;
+        s.exams = cleanExams(p.exams);
+        s.checks = cleanChecks(p.checks);
+        s.scenBest = cleanScenBest(p.scenBest);
       }
     }
-  } catch (e) { /* start clean */ }
+  } catch (e) { storageProblem = 'This browser is blocking storage, so progress won\u2019t be saved. Use a normal (not private) window or install the app.'; }
   if (!s.migrated) {
     try {
       var leg = localStorage.getItem(LEGACY_KEY);
@@ -112,10 +151,76 @@ function loadStore() {
   }
   return s;
 }
+/* Two tabs (or the app and a browser tab) can be open at once. Each keeps progress
+   in memory, so before writing we fold in anything another tab saved since our
+   last write; per card, the more recently reviewed record wins. */
+var lastWritten = null;
+function mergeFrom(raw) {
+  var p = parseStore(raw);
+  if (!p || typeof store === 'undefined') return;
+  var other = cleanProg(p.prog || {});
+  Object.keys(other).forEach(function (k) {
+    var mine = store.prog[k];
+    if (!mine || other[k].last > mine.last) store.prog[k] = other[k];
+  });
+  if (isObj(p.days)) Object.keys(p.days).forEach(function (d) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(d)) store.days[d] = Math.max(store.days[d] || 0, posInt(p.days[d]));
+  });
+  var g = normGames(p.games);
+  Object.keys(g).forEach(function (k) { Object.keys(g[k]).forEach(function (f) { store.games[k][f] = Math.max(store.games[k][f] || 0, g[k][f]); }); });
+  var seen = {};
+  store.exams = cleanExams((store.exams || []).concat(cleanExams(p.exams))).filter(function (e) {
+    var key = e.kind + ':' + e.date; if (seen[key]) return false; seen[key] = true; return true;
+  }).sort(function (a, b) { return a.date - b.date; }).slice(-50);
+  var oc = cleanChecks(p.checks);
+  store.checks = store.checks || {};
+  Object.keys(oc).forEach(function (id) {
+    var m = store.checks[id], o = oc[id];
+    if (!m) { store.checks[id] = o; return; }
+    Object.keys(o.done).forEach(function (i) { if (!m.done[i]) m.done[i] = o.done[i]; });
+    if (o.signedAt > m.signedAt) { m.signedAt = o.signedAt; m.signedBy = o.signedBy; }
+    m.best = Math.max(m.best, o.best);
+  });
+  var ob = cleanScenBest(p.scenBest);
+  store.scenBest = store.scenBest || {};
+  Object.keys(ob).forEach(function (k) { store.scenBest[k] = Math.max(store.scenBest[k] || 0, ob[k]); });
+  if (!store.stage && STAGES[p.stage]) store.stage = p.stage;
+}
 function saveStore(s) {
-  try { localStorage.setItem(HQ_KEY, JSON.stringify(s || store)); } catch (e) { /* quota/private mode */ }
+  try {
+    if (!s) {
+      var cur = localStorage.getItem(HQ_KEY);
+      if (cur && lastWritten !== null && cur !== lastWritten) mergeFrom(cur);
+    }
+    var str = JSON.stringify(s || store);
+    localStorage.setItem(HQ_KEY, str);
+    lastWritten = str;
+    if (storageProblem && storageProblem.indexOf('couldn') < 0) { storageProblem = null; renderStorageBanner(); }
+  } catch (e) {
+    var msg = 'Progress isn\u2019t being saved \u2014 this phone\u2019s storage is full or blocked. Free some space, then back up from Progress \u2192 App.';
+    if (storageProblem !== msg) { storageProblem = msg; renderStorageBanner(); }
+  }
+}
+function renderStorageBanner() {
+  if (typeof document === 'undefined' || !document.body) return;
+  var b = document.getElementById('storage-banner');
+  if (!storageProblem) { if (b) b.remove(); return; }
+  if (!b) {
+    b = document.createElement('div'); b.id = 'storage-banner'; b.className = 'storage-banner'; b.setAttribute('role', 'alert');
+    var app = document.querySelector('.app'); (app || document.body).insertBefore(b, app ? app.firstChild : null);
+  }
+  b.textContent = storageProblem;
 }
 var store = loadStore();
+try { lastWritten = localStorage.getItem(HQ_KEY); } catch (e) { /* storage blocked */ }
+window.addEventListener('storage', function (e) {
+  if (e.key === 'fshq_restored_at') { location.reload(); return; } // another tab restored a backup
+  if (e.key !== HQ_KEY || !e.newValue) return;
+  mergeFrom(e.newValue);
+  lastWritten = e.newValue;
+  // Refresh counts on idle screens; never yank someone out of a session.
+  if (!state.sess && !state.examRun && !state.calcRun && !state.scenRun && !state.callRun && !state.checkRun && !state.ecgRun) render();
+});
 
 function dateKey(d) {
   return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
@@ -140,7 +245,10 @@ function dayStreak() {
    at least four days. "Retained" = box 4+: it survived a two-week gap. */
 var DAY_MS = 864e5;
 function cardKey(t, i) { var c = TOPICS[t].cards[i]; return (c && c.id) || ('t' + t + '-' + i); }
-function rec(t, i) {
+var EMPTY_REC = Object.freeze({ got: 0, missed: 0, box: 0, due: 0, last: 0 });
+/* Read-only view of a card's progress; use recW() when you are about to change it. */
+function rec(t, i) { return store.prog[cardKey(t, i)] || EMPTY_REC; }
+function recW(t, i) {
   var k = cardKey(t, i), r = store.prog[k];
   if (!r) r = store.prog[k] = { got: 0, missed: 0, box: 0, due: 0, last: 0 };
   return r;
@@ -200,7 +308,7 @@ function reviewItems() {
 /* grade a card. opts.noAdvance: count the rep but never move the card up a box
    (used for a retry right after a miss, and for Blitz). Returns newly-solid flag. */
 function gradeCard(t, i, ok, opts) {
-  var r = rec(t, i), now = Date.now();
+  var r = recW(t, i), now = Date.now();
   var was = isMastered(t, i);
   if (ok) {
     r.got++;
@@ -215,7 +323,7 @@ function gradeCard(t, i, ok, opts) {
   }
   r.last = now;
   touchDay();
-  saveStore();
+  if (!(opts && opts.noSave)) saveStore();
   return !was && isMastered(t, i);
 }
 function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var s = a[i]; a[i] = a[j]; a[j] = s; } return a; }
@@ -257,28 +365,34 @@ HUBS.forEach(function (hub) {
 var state = { tab: 'home', study: { view: 'home', hub: -1, topic: -1 }, sess: null };
 
 function stopSessionTimer() {
-  if (state.sess && state.sess.timerId) { clearInterval(state.sess.timerId); state.sess.timerId = null; }
+  var s = state.sess;
+  if (s && s.timerId) { clearInterval(s.timerId); s.timerId = null; }
+  if (s && s.blitz && s.blitz.timerId) { clearInterval(s.blitz.timerId); s.blitz.timerId = null; }
+}
+/* End every in-progress run and stop every timer. Call before switching view. */
+function clearRuns() {
+  stopSessionTimer();
+  if (typeof stopExamClock === 'function') stopExamClock();
+  state.sess = null; state.callRun = null; state.scenRun = null; state.checkRun = null;
+  if (state.examRun && !state.examRun.scored) discardSavedExam(); // leaving was confirmed
+  state.ecgRun = null; state.examRun = null; state.calcRun = null;
 }
 function activeWork() {
+  if (state.examRun && state.examRun.pos < state.examRun.items.length && !state.examRun.scored) return 'this exam (it won\u2019t be scored)';
+  if (state.sess && state.sess.blitz && !state.sess.done) return 'this Blitz round';
+  if (state.calcRun && state.calcRun.pos > 0 && state.calcRun.pos < state.calcRun.probs.length) return 'this math drill';
+  if (state.ecgRun && state.ecgRun.pos > 0 && !state.ecgRun.done) return 'this ECG round';
   if (state.sess && !state.sess.done && (state.sess.got + state.sess.miss) > 0) return 'this drill (graded cards are already saved)';
   if (state.scenRun && state.scenRun.log && state.scenRun.log.length) return 'this scenario run';
-  if (state.callRun && state.callRun.pos > 0) return 'this Run the Call round';
+  if (state.callRun && state.callRun.pos > 0 && !state.callRun.scored) return 'this Run the Call round';
   if (state.checkRun && state.checkRun.next > 0) return 'this step-order quiz';
   return null;
 }
 function go(tab) {
-  if (tab !== state.tab || state.sess || state.scenRun || state.callRun || state.checkRun) {
-    var w = activeWork();
-    if (w && !confirm('Leave ' + w + '?')) return;
-  }
-  stopSessionTimer();
+  var w = activeWork();
+  if (w && !confirm('Leave ' + w + '?')) return;
+  clearRuns();
   state.tab = tab;
-  state.checkRun = null;
-  state.ecgRun = null;
-  if (tab === 'study' && state.study.view === 'session') { /* session handles its own exit */ }
-  state.sess = null;
-  state.callRun = null;
-  state.scenRun = null;
   render();
   window.scrollTo(0, 0);
 }
@@ -306,7 +420,10 @@ function render() {
   renderStreak();
   var root = document.getElementById('view-root');
   root.innerHTML = '';
-  var focused = !!state.ecgRun || !!state.sess || !!state.examRun || !!state.calcRun || !!state.checkRun || !!state.callRun || !!state.scenRun;
+  var focused = !!state.ecgRun || !!state.sess || !!state.checkRun || !!state.scenRun ||
+    (state.examRun && state.examRun.pos < state.examRun.items.length) ||
+    (state.calcRun && state.calcRun.pos < state.calcRun.probs.length) ||
+    (state.callRun && !state.callRun.scored && state.callRun.pos < state.callRun.order.length);
   document.body.classList.toggle('in-session', focused);
   if (state.tab === 'home') renderHome(root);
   else if (state.tab === 'study') renderStudy(root);
@@ -315,6 +432,7 @@ function render() {
   else if (state.tab === 'nfpa1700') renderNFPA1700(root);
   else if (state.tab === 'ulfsri') renderULFSRI(root);
   else renderProgress(root);
+  syncHash();
   // Put screen-reader focus at the top of the new view without scrolling.
   var h2 = root.querySelector('h2');
   if (h2) { h2.setAttribute('tabindex', '-1'); try { h2.focus({ preventScroll: true }); } catch (e) {} }
@@ -368,8 +486,9 @@ function hubTile(h, onTap) {
   return b;
 }
 function goHub(h) {
-  stopSessionTimer();
-  state.sess = null;
+  var w = activeWork();
+  if (w && !confirm('Leave ' + w + '?')) return;
+  clearRuns();
   state.tab = 'study';
   state.study = { view: 'hub', hub: h, topic: -1 };
   render();
@@ -513,6 +632,7 @@ function renderHome(root) {
     + '<span class="tabular"><b>' + s.needsWork + '</b></span> need work</p>';
   root.appendChild(head);
 
+  var rc = resumeExamCard(); if (rc) root.appendChild(rc);
   if (!store.stage) { root.appendChild(stagePicker()); }
   else {
     root.appendChild(todayCard());
@@ -973,9 +1093,10 @@ function buildQueueFor(ref) {
 }
 function startBlitzTimer() {
   var s = state.sess; if (!s || !s.blitz) return;
+  s.blitz.endsAt = Date.now() + s.blitz.left * 1000;
   s.blitz.timerId = setInterval(function () {
     if (!state.sess || state.sess !== s) { clearInterval(s.blitz.timerId); return; }
-    s.blitz.left--;
+    s.blitz.left = Math.max(0, Math.ceil((s.blitz.endsAt - Date.now()) / 1000));
     var t = document.getElementById('blitz-timer');
     if (t) {
       t.textContent = '0:' + ('0' + Math.max(0, s.blitz.left)).slice(-2);
@@ -1336,6 +1457,7 @@ function renderGames(root) {
   head.innerHTML = '<span class="kicker">Reps, but fun</span><h2>Games</h2>'
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
   root.appendChild(head);
+  var rcg = resumeExamCard(); if (rcg) root.appendChild(rcg);
 
   var grid = el('div', 'game-grid');
   grid.appendChild(gameTile('layers', 'linear-gradient(135deg,#2E86C1,#1B4F7A)', 'Flashcards',
@@ -1462,9 +1584,7 @@ function renderCallView(root) {
 function renderCallScore(root) {
   var run = state.callRun, n = run.order.length, s = run.score;
   var g = store.games.call;
-  g.plays++;
-  if (s > g.best) g.best = s;
-  saveStore();
+  if (!run.scored) { run.scored = true; g.plays++; if (s > g.best) g.best = s; saveStore(); }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Run the Call</span><h2>' + s + ' / ' + n + '</h2>';
   root.appendChild(head);
@@ -1484,7 +1604,7 @@ function renderCallScore(root) {
   back.addEventListener('click', endCallRun);
   cta.appendChild(again); cta.appendChild(back);
   root.appendChild(cta);
-  state.callRun = null;
+  // the run stays set (marked scored) until the user leaves this screen
 }
 /* ============================================================
    SCENARIOS — first-arriving size-up game from Sets & Reps
@@ -1882,6 +2002,48 @@ function examPick(pool, n) {
   }
   return shuffle(out);
 }
+/* An exam in progress is saved after every answer, so a reload or iOS killing
+   the app in the middle of a 3-hour simulation doesn't lose it. */
+var EXAM_SAVE_KEY = 'fshq_exam_v1';
+function saveExamProgress() {
+  var run = state.examRun;
+  try {
+    if (run && !run.scored) localStorage.setItem(EXAM_SAVE_KEY, JSON.stringify({ kind: run.kind, items: run.items, pos: run.pos, answers: run.answers, orders: run.orders, start: run.start, timed: run.timed, limit: run.limit }));
+    else localStorage.removeItem(EXAM_SAVE_KEY);
+  } catch (e) { /* storage full: the run still works in memory */ }
+}
+function savedExam() {
+  try {
+    var r = JSON.parse(localStorage.getItem(EXAM_SAVE_KEY) || 'null');
+    if (!r || !EXAM_KINDS[r.kind] || !Array.isArray(r.items) || !r.items.length) return null;
+    var ok = r.items.every(function (it) { return it && TOPICS[it.t] && TOPICS[it.t].cards[it.i]; });
+    return ok ? r : null;
+  } catch (e) { return null; }
+}
+function discardSavedExam() { try { localStorage.removeItem(EXAM_SAVE_KEY); } catch (e) { /* ignore */ } }
+function resumeExam(r) {
+  state.examRun = { kind: r.kind, items: r.items, pos: Math.min(r.pos || 0, r.items.length - 1), answers: Array.isArray(r.answers) ? r.answers : [], orders: r.orders || {}, start: r.start, timed: !!r.timed, limit: r.limit || 0 };
+  if (state.examRun.timed && Date.now() - state.examRun.start >= state.examRun.limit) { state.examRun.pos = state.examRun.items.length; state.examRun.timeUp = true; }
+  else if (state.examRun.timed) startExamClock();
+  state.tab = 'games';
+  render(); window.scrollTo(0, 0);
+}
+function resumeExamCard() {
+  var r = savedExam();
+  if (!r || state.examRun) return null;
+  var K = EXAM_KINDS[r.kind], answered = (r.answers || []).filter(Boolean).length;
+  var left = r.timed ? r.limit - (Date.now() - r.start) : 0;
+  var c = el('div', 'card resume-card animate-fade-in');
+  c.appendChild(el('h3', null, 'Unfinished: ' + K.title));
+  c.appendChild(el('p', null, answered + ' of ' + r.items.length + ' answered' + (r.timed ? (left > 0 ? ' \u00b7 ' + fmtClock(left) + ' left on the clock' : ' \u00b7 time ran out \u2014 it will be scored as it stands') : '')));
+  var row = el('div', 'btn-row');
+  var d = el('button', 'btn ghost press', 'Discard'); d.type = 'button';
+  d.addEventListener('click', function () { if (confirm('Throw away this exam? It won\u2019t be scored.')) { discardSavedExam(); render(); } });
+  var go2 = el('button', 'btn press', left > 0 || !r.timed ? 'Resume' : 'See score'); go2.type = 'button';
+  go2.addEventListener('click', function () { resumeExam(r); });
+  row.appendChild(d); row.appendChild(go2); c.appendChild(row);
+  return c;
+}
 function chooseExam() {
   openSheet('Exams', 'Timed exams hold all feedback until the end, like the real thing. Practice gives feedback after every question.',
     Object.keys(EXAM_KINDS).map(function (k) {
@@ -1915,11 +2077,12 @@ function fmtClock(ms) { var s2 = Math.max(0, Math.round(ms / 1000)), h = Math.fl
 function endExamRun() {
   if (state.examRun && state.examRun.pos < state.examRun.items.length && state.examRun.answers.length &&
       !confirm('Quit this exam? Your answers so far won’t be scored.')) return;
-  stopExamClock(); state.examRun = null; render(); window.scrollTo(0, 0);
+  stopExamClock(); state.examRun = null; discardSavedExam(); render(); window.scrollTo(0, 0);
 }
 function renderExamView(root) {
   var run = state.examRun, K = EXAM_KINDS[run.kind];
   if (run.pos >= run.items.length) { renderExamScore(root); return; }
+  saveExamProgress();
   var it = run.items[run.pos], card = TOPICS[it.t].cards[it.i], ans = run.answers[run.pos];
   if (!run.orders[run.pos]) run.orders[run.pos] = shuffleIdx(card.opts.length);
   var head = el('div', 'view-head');
@@ -1991,7 +2154,10 @@ function renderExamScore(root) {
   stopExamClock();
   if (!run.scored) {
     run.scored = true;
-    if (run.timed) run.items.forEach(function (it, j) { var a = run.answers[j]; gradeCard(it.t, it.i, !!(a && a.ok)); });
+    discardSavedExam();
+    // Only answered questions feed spaced repetition; a skipped or timed-out
+    // question says nothing about whether the recruit knows the card.
+    if (run.timed) run.items.forEach(function (it, j) { var a = run.answers[j]; if (a) gradeCard(it.t, it.i, a.ok, { noSave: true }); });
     run.score = run.answers.filter(function (a) { return a && a.ok; }).length;
     var g = store.games.exam; g.plays++; if (run.kind === 'quick' && run.score > g.best) g.best = run.score;
     store.exams = store.exams || [];
@@ -2199,11 +2365,9 @@ function renderCalcView(root) {
   setTimeout(function () { try { inp.focus(); } catch (e) {} }, 60);
 }
 function renderCalcScore(root) {
-  var run = state.calcRun, n = run.probs.length, s = run.score;
+  var run = state.calcRun, n = run.probs.length, s = run.score, set = run.set;
   var g = store.games.calc;
-  g.plays++;
-  if (s > g.best) g.best = s;
-  saveStore();
+  if (!run.scored) { run.scored = true; g.plays++; if (s > g.best) g.best = s; saveStore(); }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Math</span><h2>' + s + ' / ' + n + '</h2>';
   root.appendChild(head);
@@ -2216,12 +2380,12 @@ function renderCalcScore(root) {
   root.appendChild(card);
   var cta = el('div', 'drill-cta');
   var again = el('button', 'btn block press', 'Run it back'); again.type = 'button';
-  again.addEventListener('click', startCalcRun);
+  again.addEventListener('click', function () { startCalcRun(set); });
   var back = el('button', 'btn ghost block press', 'Back to Games'); back.type = 'button';
   back.addEventListener('click', endCalcRun);
   cta.appendChild(again); cta.appendChild(back);
   root.appendChild(cta);
-  state.calcRun = null;
+  // the run stays set (marked scored) until the user leaves this screen
 }
 
 /* ============================================================
@@ -2365,6 +2529,65 @@ function closeSheet() {
 }
 document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') closeSheet(); });
 
+/* ---------------- history routing ----------------
+   Each screen has a hash (#/study/topic/5/h0), so Back, swipe-back and reload work
+   and the installed app no longer closes on Back. A running drill, exam or game adds
+   "/run": Back leaves it (with the usual confirm) instead of leaving the app. */
+var TABS_OK = { home: 1, study: 1, games: 1, scenarios: 1, progress: 1, nfpa1700: 1, ulfsri: 1 };
+function anyRun() { return !!(state.sess || state.examRun || state.calcRun || state.scenRun || state.callRun || state.checkRun || state.ecgRun); }
+function navHash() {
+  var h = '#/' + state.tab, st = state.study;
+  if (state.tab === 'study') {
+    if (st.view === 'hub' && st.hub >= 0) h += '/hub/' + st.hub;
+    else if (st.view === 'topic' && st.topic >= 0) h += '/topic/' + st.topic + (st.hub >= 0 ? '/h' + st.hub : '');
+    else if (st.view === 'videos') h += '/videos';
+    else if (st.view === 'checklists') h += '/checklists' + (st.stage ? '/' + st.stage : '');
+    else if (st.view === 'checklist' && st.id) h += '/checklist/' + st.id;
+  }
+  return anyRun() ? h + '/run' : h;
+}
+function applyHash(hash) {
+  var parts = String(hash || '').replace(/^#\/?/, '').split('/').filter(Boolean);
+  if (parts[parts.length - 1] === 'run') parts.pop();
+  var tab = TABS_OK[parts[0]] ? parts[0] : 'home';
+  state.tab = tab;
+  state.study = { view: 'home', hub: -1, topic: -1 };
+  if (tab !== 'study') return;
+  var v = parts[1], a = parts[2];
+  if (v === 'hub' && HUBS[+a]) state.study = { view: 'hub', hub: +a, topic: -1 };
+  else if (v === 'topic' && TOPICS[+a]) {
+    var hb = parts[3] && /^h\d+$/.test(parts[3]) ? +parts[3].slice(1) : -1;
+    state.study = { view: 'topic', hub: HUBS[hb] ? hb : -1, topic: +a };
+  }
+  else if (v === 'videos') state.study = { view: 'videos', hub: -1, topic: -1 };
+  else if (v === 'checklists') state.study = { view: 'checklists', stage: (a === 'academy' || a === 'probation') ? a : undefined, hub: -1, topic: -1 };
+  else if (v === 'checklist' && typeof checkById === 'function' && checkById(a)) state.study = { view: 'checklist', id: a, hub: -1, topic: -1 };
+}
+var routing = false;
+function syncHash() {
+  if (routing || !window.history || !history.pushState) return;
+  var h = navHash();
+  if (h === location.hash) return;
+  try { history.pushState(null, '', h); } catch (e) { /* file:// or sandboxed */ }
+}
+window.addEventListener('popstate', function () {
+  var w = activeWork();
+  if (w && !/\/run$/.test(location.hash) && !confirm('Leave ' + w + '?')) {
+    try { history.pushState(null, '', navHash()); } catch (e) { /* ignore */ }
+    return;
+  }
+  routing = true;
+  closeSheet();
+  if (!/\/run$/.test(location.hash) || !anyRun()) clearRuns();
+  applyHash(location.hash);
+  render(); window.scrollTo(0, 0);
+  routing = false;
+  try { history.replaceState(null, '', navHash()); } catch (e) { /* ignore */ }
+});
+
 /* ---------------- boot ---------------- */
+applyHash(location.hash);
+try { history.replaceState(null, '', navHash()); } catch (e) { /* ignore */ }
 document.getElementById('brand-icon').innerHTML = icon('flame', 22);
 render();
+renderStorageBanner();

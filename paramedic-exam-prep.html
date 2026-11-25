@@ -716,7 +716,10 @@ const $=id=>document.getElementById(id);
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;};
 const rint=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
 const pick=a=>a[rint(0,a.length-1)];
-const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+/* A missed-bank entry restored from a backup is untrusted: keep only well-formed ones. */
+const validQ=b=>b&&typeof b==="object"&&typeof b.q==="string"&&typeof b.c==="string"&&Array.isArray(b.w)&&b.w.every(x=>typeof x==="string")&&(b.e==null||typeof b.e==="string")&&(b.k==null||Number.isFinite(+b.k));
+const missedBank=()=>{const b=store("pep.missed.v1");return Array.isArray(b)?b.filter(validQ):[];};
 const fp=v=>String(Math.round(v*100)/100);
 function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v));}catch(e){return v===undefined?null:undefined;}}
 /* theme */
@@ -870,7 +873,7 @@ function startTest(mode){
   if(mode==="quick"){qs=shuffle(QUESTIONS).slice(0,25);for(let i=0;i<5;i++)qs.push(genCalc());qs=shuffle(qs);}
   else if(mode==="full"){qs=shuffle(QUESTIONS).slice();for(let i=0;i<15;i++)qs.push(genCalc());qs=shuffle(qs);}
   else if(mode==="calc"){for(let i=0;i<20;i++)qs.push(genCalc());}
-  else if(mode==="missed"){qs=store("pep.missed.v1")||[];if(!qs.length){alert("No missed questions yet \u2014 take a test first.");return;}qs=shuffle(qs);}
+  else if(mode==="missed"){qs=missedBank();if(!qs.length){alert("No missed questions yet \u2014 take a test first.");return;}qs=shuffle(qs);}
   T={qs:qs,idx:0,score:0,missed:[],mode:mode,lock:false,catScore:{},catTotal:{}};
   qs.forEach(q=>{const c=catOf(q);T.catTotal[c]=(T.catTotal[c]||0)+1;});
   $("modePick").classList.add("hidden");$("results").classList.add("hidden");$("quiz").classList.remove("hidden");
@@ -896,15 +899,15 @@ function answer(i){
     b.disabled=true;
     if(T.curOpts[bi].ok)b.classList.add("correct");
   });
-  if(o.ok){T.score++;T.catScore[cat]++;}
+  if(o.ok){T.score++;T.catScore[cat]++;if(T.mode==="missed"){store("pep.missed.v1",missedBank().filter(b=>b.q!==q.q));}}
   else{
     document.querySelectorAll(".opt")[i].classList.add("wrong");
     T.missed.push({q:q,mine:o.t});
-    const bank=store("pep.missed.v1")||[];
+    const bank=missedBank();
     if(!bank.some(b=>b.q===q.q)){bank.push({q:q.q,c:q.c,w:q.w,e:q.e,k:q.k,cat:cat});store("pep.missed.v1",bank);}
   }
   $("qscore").textContent="Score: "+T.score;
-  $("explain").innerHTML='<span class="comp-tag">Competency #'+q.k+"</span><br>"+esc(q.e);
+  $("explain").innerHTML='<span class="comp-tag">Competency #'+esc(q.k)+"</span><br>"+esc(q.e);
   $("explain").classList.remove("hidden");
   const last=T.idx>=T.qs.length-1;
   $("nextBtn").textContent=last?"See results":"Next";
@@ -927,7 +930,7 @@ function showResults(){
   if(T.missed.length){
     h+="<h3 class='cond'>Missed questions ("+T.missed.length+")</h3>";
     T.missed.forEach(m=>{
-      h+='<div class="missed"><p class="mq">'+esc(m.q.q)+'</p><p class="ma">Your answer: <b>'+esc(m.mine)+'</b></p><p class="ma ok">Correct: <b>'+esc(m.q.c)+'</b></p><p class="ma">'+esc(m.q.e)+' <span class="comp-tag" style="display:inline-block;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;border-radius:8px;padding:2px 8px;">#'+m.q.k+"</span></p></div>";
+      h+='<div class="missed"><p class="mq">'+esc(m.q.q)+'</p><p class="ma">Your answer: <b>'+esc(m.mine)+'</b></p><p class="ma ok">Correct: <b>'+esc(m.q.c)+'</b></p><p class="ma">'+esc(m.q.e)+' <span class="comp-tag" style="display:inline-block;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;border-radius:8px;padding:2px 8px;">#'+esc(m.q.k)+"</span></p></div>";
     });
   }else h+="<p class='bestline'>Flawless. Nothing missed.</p>";
   h+='<div class="qnav"><button class="btn primary" onclick="backToModes()">Back to test menu</button></div>';
