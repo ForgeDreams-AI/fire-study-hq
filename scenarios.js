@@ -8411,3 +8411,307 @@ var SCENARIOS = [
   ]
  }
 ];
+
+/* ============================================================
+   RADIO TRAFFIC — the call keeps going (Nov 2026)
+   Each fire scenario gets radio traffic in front of its update beats and new
+   decision beats driven by what the crews report. Update beats become "radio
+   checks" (listen:true): did you read the radio right? Lines with `if` answer
+   your earlier calls (e.g. a missed strategy brings BC1 on the radio; a missed
+   PAR comes back later). Sources: M.P. 201.01B, 201.03, 202.02B, 202.04,
+   202.04A, 202.04B, 202.06, 202.11, 202.16, 202.20, 205.01 (build/).
+   ============================================================ */
+(function () {
+  function R(t, from, to, msg, x) { var r = { t: t, from: from, to: to, msg: msg }; if (x) Object.keys(x).forEach(function (k) { r[k] = x[k]; }); return r; }
+  var MP_PROGRESS = 'M.P. 205.01: once it is a Working Fire, Alarm gives elapsed time notifications every 5 minutes until Under Control, and Command gives Alarm regular progress reports — after initial action, and whenever significant tactical plans change or unusual situations come up. Say what you have, what you are doing and what you need. M.P. 202.04: Command must keep confirming the strategy, the benchmarks and the elapsed time notifications. A PAR is due at every 30 minutes (M.P. 201.03), not at every notification.';
+  var MP_ALLCLEAR = 'M.P. 201.03: a PAR is required as companies report an All Clear (and under control, at any change to defensive, after any sudden hazardous event, at every 30 minutes, and for any missing or trapped firefighter). M.P. 205.01: Primary All Clear means the primary search is complete; Alarm records it as a benchmark. M.P. 202.02C: "All Clear" is used only as a completion report.';
+  var MP_UC = 'M.P. 202.02B: "FIRE UNDER CONTROL" means the forward progress of the fire has been stopped and the remaining fire can be put out with the resources on scene — it does not mean the fire is out. Command notifies Alarm with the standard radio report, Alarm records the time, and Command must initiate a PAR from all sectors and crews. Elapsed time notifications stop at Under Control (M.P. 205.01). Loss Stopped comes after salvage is complete.';
+  var MP_DEF = 'M.P. 202.02B: the change to a defensive strategy is announced as Emergency Traffic, and all personnel withdraw from the structure and keep a safe distance. Crews retreat with their lines if it is safe; if the lines are slowing the retreat, leave them. A PAR is obtained after any switch from offensive to defensive. "It is better to go from an offensive to a defensive strategy too soon rather than too late" — the Incident Commander picks the strategy, not the building.';
+  var MP_MAYDAY = 'M.P. 201.01B: on "Mayday, Mayday, Mayday" Alarm sounds the Emergency Traffic tone, announces "We have a Mayday on the scene, all units hold your traffic," and the incident is upgraded on the Mayday nature code (a 3-1 is balanced to a 1st Alarm Mayday). The Mayday stays on the same tactical channel as the incident. Help comes in order: self-rescue, the member’s own crew, crews in the same sector, then the on-deck or staged tactical reserve. Surrounding sectors keep fighting the fire in support of the rescue and account for their people. The member works GRAB LIVES.';
+  var MP_MAYDAY_RES = 'M.P. 201.01B: before the benchmark "Mayday resolved," the member is out of the hazard zone, every member involved in the rescue is accounted for and out, all members in every other sector are accounted for, and the Incident Commander can give a PAR for the entire hazard zone. The sector officer reports the rescue complete; Command completes the accountability and gives the benchmark.';
+
+  function progress(t, mins, lines, good, wrong) {
+    return { label: 'Progress report', cat: 'radio', radio: [R(t, 'Alarm', 'Command', 'Command, Alarm — ' + mins + ' minutes elapsed.')].concat(lines || []),
+      q: 'Alarm just gave you the elapsed time. Using what the crews just told you, what do you put out?',
+      opts: [good, wrong, 'Copy, Alarm. Nothing more for now — the crews are working and will tell Alarm directly if they need anything.', 'Alarm, Command — request a PAR from every crew on this time notification; progress report at Under Control.'], best: 0, mp: MP_PROGRESS };
+  }
+  function allClear(t, lines, who) {
+    return { label: 'Primary All Clear', cat: 'radio', radio: lines,
+      q: who + ' just finished the primary. What do you transmit, and what comes with it?',
+      opts: [{ t: 'Command to Alarm: Primary All Clear. Then a PAR from ' + who + ' and the crews that searched.', c: ['All Clear'] },
+        { t: 'Copy, ' + who + '. Send them right into the next job — a PAR can wait for the end of the call.', c: ['All Clear'] },
+        'Command to Alarm: Fire Under Control.',
+        'Nothing yet — Alarm only needs to hear All Clear after the secondary search.'], best: 0, mp: MP_ALLCLEAR };
+  }
+  function underControl(t, lines) {
+    return { label: 'Fire Under Control', cat: 'radio',
+      radio: lines.concat([R(t, 'BC1', 'Command', 'Command, BC1 — I never heard a PAR on the search crews after the All Clear. I’m getting it now.', { if: { label: 'Primary All Clear', missed: true } })]),
+      q: 'The interior says the fire is knocked down and nothing is extending. What do you transmit?',
+      opts: [{ t: 'Command to Alarm: Fire Under Control. PAR from every sector and crew, then salvage and overhaul toward Loss Stopped.', c: ['Fire Control', 'Loss Stopped'] },
+        { t: 'Command to Alarm: the fire is out. Start releasing companies.', c: ['Fire Control'] },
+        { t: 'Command to Alarm: Fire Under Control. Release the first two companies now; PAR at the end of overhaul.', c: ['Fire Control'] },
+        'Hold the benchmark until overhaul finds every hot spot — Under Control means completely out.'], best: 0, mp: MP_UC };
+  }
+  function goDefensive(t, lines, q) {
+    return { label: 'Change of strategy', cat: 'radio', radio: lines, q: q || 'Conditions just changed. What do you do?',
+      opts: ['Emergency Traffic: everyone out, we are going defensive. Bring your lines if it is safe, leave them if not. PAR from every crew.',
+        'Get the roof crew off right away; the interior crew stays, since they are 80 feet in and making some progress.',
+        'Ask the interior crew for another conditions report in two minutes, then make the strategy call.',
+        'Announce defensive on the next progress report to Alarm, so the interior crew can finish knocking down what they can.'], best: 0, mp: MP_DEF };
+  }
+  function mayday(t, lines, who) {
+    return { label: 'Mayday', cat: 'radio', radio: lines,
+      q: 'You are Command. What happens now?',
+      opts: ['Tone it and upgrade it, get ' + who + '’s location. His crew and the on-deck crew go get him under one sector officer; the attack keeps going, all on this channel.',
+        'Move the Mayday to its own channel so the firefight traffic doesn’t step on it, and have ' + who + ' switch over and call again.',
+        'Pull every crew off the fire and put them all on the search for ' + who + ' — nothing else matters until he is found.',
+        'Keep his crew outside, request a RIC company, and send the RIC in alone once it arrives so nobody else is put at risk.'], best: 0, mp: MP_MAYDAY };
+  }
+  function maydayResolved(t, lines) {
+    return { label: 'Mayday resolved', cat: 'radio', radio: lines,
+      q: 'The member is out. What has to be true before you transmit "Mayday resolved"?',
+      opts: ['He’s out, every rescuer is out and accounted for, every other sector is accounted for, and you can give a PAR for the whole hazard zone.',
+        'He is out of the building, so the Mayday is resolved — get it on the air right away so the channel opens up.',
+        'He is with R3 and on the way to the hospital; the hospital handoff is the end point of a Mayday.',
+        'His crew reports all members out; the PAR for everyone else can wait until Fire Under Control.'], best: 0, mp: MP_MAYDAY_RES };
+  }
+  function bcStrategy(t, strat) {
+    return R(t, 'BC1', 'Command', 'BC1 — I’m at the command post. From what I see, this is ' + strat + '. Everybody works off that plan.', { if: { label: 'Strategy', missed: true } });
+  }
+
+  var STORY = {
+    ocotillo: { strat: 'an offensive fire — interior attack and search', feed: {
+      'Stretch check (hose)': [R('04:40', 'E1', 'Command', 'E1, line charged, making entry into 214 on the 2nd floor.')],
+      'What’s happening inside? (update)': { listen: 0, why: 'E1 said the fire is held to 214 with no extension into the hallway, and L1 found no fire in the attic. That is contained to the unit of origin — the smoke is still heavy, so it is not clearing yet.', radio: [
+        R('07:50', 'E1', 'Command', 'Interior to Command — fire is in the living room and kitchen of 214, we have a knock on the main body. Still heavy smoke. No extension into the hallway.'),
+        R('08:05', 'L1', 'Command', 'L1, opened the attic access in the 2nd-floor hall — no fire in the attic.')] },
+      'Victim status (update)': { listen: 2, why: 'L1 found one adult in the back bedroom and is bringing them out — victim found, rescue underway. Nobody has told you about injuries yet.', radio: [
+        R('08:40', 'L1', 'Command', 'L1 — one adult found in the back bedroom of 214. We’re bringing them out down the interior stairs to the courtyard now.')] } },
+      beats: [
+        progress('10:00', 10, [R('09:40', 'R3', 'Command', 'R3 has the patient from L1 in the courtyard — conscious, smoke inhalation. We’ll transport.')],
+          'Command to Alarm, progress report: main body knocked down in 214, checking for extension. One occupant removed, R3 treating and transporting. Primary search continuing. No more resources needed.',
+          'Command to Alarm, progress report: fire extending into the attic over 214, crews pulling ceiling. One occupant removed, R3 treating. Primary continuing. Give me a 1st Alarm.'),
+        allClear('12:30', [R('12:20', 'L1', 'Command', 'L1 — primary search complete: 214, 213 and 215 on the fire floor, and E3 checked 114 below. Primary All Clear.')], 'L1'),
+        underControl('15:00', [R('14:40', 'E1', 'Command', 'E1 — fire is out in 214. E3 pulled the ceiling in the hall: no extension. Water is coming through into 114 below — we need salvage covers down there.')])
+      ] },
+    house: { strat: 'an offensive fire — interior attack and search', feed: {
+      'What’s happening inside? (update)': { listen: 0, why: 'E1 has the fire held to the back bedroom and a knock coming. That is contained to the room of origin.', radio: [
+        R('06:30', 'E1', 'Command', 'Interior — fire is in the back bedroom. We’re holding it to that room, knock coming.')] },
+      'Victim status (update)': { listen: 0, why: 'L1 has not found anyone and still has two rooms to search — the status is still unknown. Never call it until the primary is done.', radio: [
+        R('07:10', 'L1', 'Command', 'L1 — primary search of the bedrooms in progress. Nothing found yet, two rooms left.')] } },
+      beats: [
+        mayday('09:40', [R('09:35', 'E3 FF Ortiz', 'Command', 'Mayday, Mayday, Mayday. E3, Firefighter Ortiz. I’m separated from my crew in the hallway by the garage door. Low air. I’m staying low, PASS is on.', { emer: true }),
+          R('09:36', 'Alarm', 'All units', 'Emergency Traffic. We have a Mayday on the scene — all units hold your traffic.', { emer: true })], 'Ortiz'),
+        maydayResolved('13:00', [R('12:50', 'E3', 'Command', 'E3 — we have Ortiz out the front door. All E3 members are out. R3 is checking him now.'),
+          R('12:55', 'E1', 'Command', 'E1 — fire knocked down in the bedroom, crew of four with us.')]),
+        allClear('14:30', [R('14:20', 'L1', 'Command', 'L1 — primary search complete, all rooms and the garage. Primary All Clear.')], 'L1'),
+        underControl('17:00', [R('16:40', 'E1', 'Command', 'E1 — fire is out in the back bedroom, ceiling pulled, no attic extension.')])
+      ] },
+    gilbert: { strat: 'an offensive fire — interior attack and search', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 has heat and smoke coming out of the upstairs hall ceiling and L1’s thermal imager shows heat in the attic. That is fire extending into the attic.', radio: [
+        R('07:20', 'E1', 'Command', 'Interior — balcony and the front bedroom are knocked down, but heat and smoke are pushing out of the ceiling in the upstairs hall.'),
+        R('07:35', 'L1', 'Command', 'L1 — thermal imager shows heat in the attic above the front bedroom.')] },
+      'Victim status (update)': { listen: 0, why: 'E2 has all four family members at the curb and accounted for, no injuries.', radio: [
+        R('08:00', 'E2', 'Command', 'E2 — I have the family at the curb. Two adults and two kids, all four accounted for, no injuries.')] } },
+      beats: [
+        { label: 'Attic extension', cat: 'radio', radio: [R('08:30', 'E1', 'Command', 'Interior — we need help with the attic. We’re holding the hall but it’s getting hot up here.')],
+          q: 'The interior crew wants help with the attic. What do you send?',
+          opts: [{ t: 'E3 with a second line to the 2nd floor: open the ceiling ahead of the fire and hit the attic, coordinated with E1.', c: ['Fire Control'] },
+            'L1 cuts a vent hole in the roof over the attic right now, before anyone opens a ceiling inside.',
+            'Go defensive and pull E1 out — once the fire is in the attic of a two-story, the house is lost.',
+            'Nothing yet. E1 can open the ceiling themselves once the bedroom is fully out.'], best: 0,
+          mp: 'M.P. 202.04 Basic Offensive Plan: "Support fire attack from the next most advantageous position with appropriate water volume," "Provide coordinated support activities (e.g., ventilation, forcible entry)," and "Evaluate actions and revise strategy and tactics as necessary." Ventilation that isn’t coordinated with the attack feeds the fire and pulls it toward the crews.' },
+        progress('10:00', 10, [R('09:45', 'E3', 'Command', 'E3 — we’re on the 2nd floor with E1, ceiling is open, we have water on the attic fire.')],
+          'Command to Alarm, progress report: front bedroom knocked down, fire extended into the attic, two lines working it from the 2nd floor. Family is out and accounted for. Holding the balance of the assignment.',
+          'Command to Alarm, progress report: front bedroom and balcony fire is out, no extension found. Family is out and accounted for. Return the balance of the assignment.'),
+        underControl('14:00', [R('13:40', 'E3', 'Command', 'E3 — attic fire is knocked down, we opened the ceilings past it, no more extension.'),
+          R('13:45', 'L1', 'Command', 'L1 — primary search complete, Primary All Clear.')])
+      ] },
+    midrise: { strat: 'an offensive fire — interior attack and search', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 knocked down 312 but has fire in the wall to 313 and smoke on the 4th floor. That is the wood frame getting involved.', radio: [
+        R('08:00', 'E1', 'Command', 'Fire Sector — fire in 312 is knocked down, but we have fire in the wall between 312 and 313 and smoke showing on 4.')] },
+      'Victim status (update)': { listen: 0, why: 'L1 hasn’t found anyone and is still forcing 313. The status is still unknown.', radio: [
+        R('08:20', 'L1', 'Command', 'L1 — primary search of the 3rd floor in progress. We’re forcing 313. Nothing found yet.')] } },
+      beats: [
+        { label: 'Extension above', cat: 'radio', radio: [R('08:45', 'E3', 'Command', 'E3 on 4, above the fire — heavy smoke in the hall, the wall in 412 is hot, and we have occupants sheltering in 414 and 416.')],
+          q: 'The floor above is getting worse. What do you do?',
+          opts: ['Put a crew with a line on 4 for rescue and extension, make the floor above its own sector, and send the next company up behind them.',
+            'Keep every crew on 3 until 312 and 313 are out — the floor above can wait for the knockdown.',
+            'Tell the occupants of 414 and 416 to come down the attack stairwell now while the hall is still passable.',
+            'Go defensive — fire on two floors of a wood-frame mid-rise is more than this assignment can handle.'], best: 0,
+          mp: 'M.P. 202.20: support the fire floor for fire attack and rescue, the floor above for rescue and fire extension, and the critical exposures for loss control. Stage resources close to the building and access points so they get there fast.' },
+        progress('10:00', 10, [R('09:40', 'E3', 'Command', 'E3 — line in place on 4, we opened the wall in 412 and have water on it. Occupants of 414 and 416 are sheltering in place, doors closed.')],
+          'Command to Alarm, progress report: fire knocked down in 312, extension into the wall to 313 and the 4th floor, lines working both floors. Occupants on 4 sheltering in place. Primary search continuing. Need one more engine for the floor above.',
+          'Command to Alarm, progress report: fire knocked down in 312 and held to the unit, no extension found. Floor 4 occupants evacuated. Primary continuing. Holding the rest of the assignment.'),
+        allClear('12:30', [R('12:15', 'L1', 'Command', 'L1 — primary search complete on 3 and 4. We walked the 414 and 416 occupants down the evacuation stairwell. Primary All Clear.')], 'L1'),
+        underControl('15:30', [R('15:10', 'E1', 'Command', 'Fire Sector — fire out in 312 and the wall to 313, the 4th floor is opened up with no more extension.')])
+      ] },
+    highrise: { strat: 'an offensive standpipe fire', feed: {
+      'What’s happening inside? (update)': { listen: 0, why: 'Fire Attack has the fire held to the 12th floor, and the stair team found no extension on 13. That is contained to the floor of origin.', radio: [
+        R('14:10', 'Fire Attack', 'Command', 'Fire Attack on 12 — fire knocked down in the east office suite. Holding it to 12.'),
+        R('14:25', 'Stair Team A', 'Command', 'Stair Team A — 13 has light smoke, no fire, no extension.')] },
+      'Victim status (update)': { listen: 3, why: 'The stair team has a man on 15 with chest pain. That is an injury that needs medical — not a rescue from the fire.', radio: [
+        R('15:00', 'Stair Team A', 'Command', 'Stair Team A on 15 — occupants are sheltering in place. One man about 60 with chest pain. We need a medical crew up here.')] } },
+      beats: [
+        { label: 'Stairwells', cat: 'radio', before: 'What’s happening inside? (update)', radio: [R('08:30', 'Stair Team A', 'Command', 'Stair Team A — occupants from 13 and 14 are coming down Stair A, the stair with the standpipe and roof access. Stair B is clear of smoke.')],
+          q: 'Occupants are filling the stairwell your attack has to use. What do you do?',
+          opts: ['Declare Stair A for the attack and Stair B for evacuation; the stair team turns evacuees to Stair B before Fire Attack goes up.',
+            'Let occupants use both stairs and have the attack crews squeeze past them on the way up to 12.',
+            'Recall the elevators and bring the occupants down in them — it is faster than walking 14 floors.',
+            'Hold Fire Attack in the lobby until every occupant above the fire is out of the building.'], best: 0,
+          mp: 'M.P. 202.11: secure and keep viable evacuation and fire attack stairwells, each declared to Command before anyone heads to the fire floor. The evacuation stairwell is for getting occupants out; the fire attack stairwell has the standpipe connections and roof access. The stair team redirects evacuees to the evacuation stairwell. Elevators are not used for rescue in smoke or fire conditions.' },
+        underControl('22:00', [R('21:40', 'Fire Attack', 'Command', 'Fire Attack — fire is out on 12, no extension to 13. We’re starting overhaul.'),
+          R('21:45', 'Stair Team A', 'Command', 'Stair Team A — floors 13 through 16 searched. Primary All Clear above the fire.')])
+      ] },
+    stripmall: { strat: 'an offensive fire with the sprinklers supported', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 has fire rolling overhead in the rack storage even with the sprinklers flowing. The sprinklers are not controlling it, and the fire is growing.', radio: [
+        R('08:10', 'E1', 'Command', 'Interior — we’re about 80 feet in. Sprinklers are flowing, but fire is rolling over our heads in the rack storage and the heat is building.')] },
+      'Victim status (update)': { listen: 1, why: 'The manager accounted for all six employees, and nobody is hurt.', radio: [
+        R('08:30', 'E2', 'Command', 'E2 — store manager says all six employees are out and accounted for. No injuries.')] } },
+      beats: [
+        goDefensive('09:10', [R('09:00', 'L1 (Roof)', 'Command', 'Roof to Command — the roof is spongy over the C side and smoke is pushing hard out of the seams. We’re coming off the roof.', { emer: true }),
+          R('09:05', 'E1', 'Command', 'Interior — we’re losing ground, the heat is down to the floor.')]),
+        { label: 'Defensive plan', cat: 'radio', radio: [R('11:30', 'BC1', 'Command', 'BC1 — PAR on all crews, everyone is out. The nail salon on Bravo has smoke in it; the firewall is holding so far.')],
+          q: 'Everyone is out. How do you fight it now?',
+          opts: [{ t: 'Write off the store, protect Bravo and Delta, and put 750+ GPM master streams on it from outside the collapse zone.', c: ['Fire Control'] },
+            'Send a crew back in the front door with a 2½ now that the roof crew is off — a big line can still knock it.',
+            'Flow the master streams down through the roof hole L1 already cut, to get water onto the seat of the fire.',
+            'Put every stream on the main body of fire; once it is knocked down the exposures will be fine.'], best: 0,
+          mp: 'M.P. 202.04 Basic Defensive Plan: write off what is lost, identify and protect savable exposures, attack from the most advantageous positions with large-volume devices, and support the high-volume attack with water supply. M.P. 202.02B: a standard master stream flow of at least 750 GPM. M.P. 202.04A: when the sprinklers fail, expect defensive operations with master streams from outside the collapse zone.' }
+      ] },
+    basement: { strat: 'an offensive fire, attacking from the basement level', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 has fire in the joists above them. The floor joists are involved, so the floor above is not safe yet.', radio: [
+        R('07:30', 'E1', 'Command', 'Basement — we’re at the bottom of the exterior stairs. Fire is in the joists above us. We’re hitting it.')] },
+      'Victim status (update)': { listen: 1, why: 'The pastor accounted for everyone, and no one is hurt.', radio: [
+        R('07:50', 'E2', 'Command', 'E2 — the pastor says everyone from the evening class is out and accounted for. No injuries.')] } },
+      beats: [
+        { label: 'Floor over the fire', cat: 'radio', radio: [R('08:20', 'L1', 'Command', 'L1 on the first floor — the floor is soft and hot by the altar, and smoke is coming up through the floor registers. We’re using the thermal imager to find the solid spots.')],
+          q: 'L1 is working on top of the fire. What do you do?',
+          opts: ['Get L1 off that floor now. The attack stays on the basement level, and nobody goes back up there until fire control and a joist check.',
+            'L1 can stay — the thermal imager will show them where the floor is still solid enough to work on.',
+            'Have L1 cut a hole in the first floor near the altar and flow water down into the basement through it.',
+            'Have L1 sound the floor ahead of every step and keep searching the first floor until it is clear.'], best: 0,
+          mp: 'M.P. 202.04B: assigning crews to the first floor, above the fire, should not be done until fire control has been achieved and the smoke has been ventilated to check the floor sheeting and joists. Thermal imagers and sounding the floor are not reliable ways to judge the floor, especially with lightweight construction. A defensive strategy should be considered when crews cannot apply water from the same level as the basement or cannot assess the joists.' },
+        progress('10:00', 10, [R('09:40', 'E1', 'Command', 'Basement — we’re making progress on the joists, still hot down here. We’ll need relief in about 5 minutes.')],
+          'Command to Alarm, progress report: fire in the basement extending into the floor joists, attacking from the basement level, crews off the floor above. Occupants out. Need one engine as relief for the basement crew.',
+          'Command to Alarm, progress report: fire in the basement, attack lines working from the basement and from the first floor above it. Occupants out and accounted for. No additional needs.'),
+        underControl('16:00', [R('15:40', 'E1', 'Command', 'Basement — fire is knocked down in the basement and the joists. Ventilation is clearing it out.'),
+          R('15:45', 'E3', 'Command', 'E3 — primary search of the basement and first floor complete. Primary All Clear.')])
+      ] },
+    stickcity: { strat: 'a defensive fire — master streams and exposures', feed: {
+      'What’s happening inside? (update)': { listen: 0, why: 'L1 watched the framing come down and the trusses fail. The structure is collapsing — stay outside the collapse zone.', radio: [
+        R('08:00', 'L1', 'Command', 'L1 — the 3rd-floor framing on the Alpha side just came down. Trusses are failing all along that side.', { emer: true })] },
+      'Victim status (update)': { listen: 1, why: 'The site superintendent has all 14 workers at the gate, and no one is hurt.', radio: [
+        R('08:20', 'E2', 'Command', 'E2 — the site superintendent has all 14 workers accounted for at the gate. No injuries.')] } },
+      beats: [
+        { label: 'No primary search', cat: 'radio', radio: [R('08:40', 'Alarm', 'Command', 'Command, Alarm — will there be a primary search on the fire building?')],
+          q: 'Alarm wants to know about the primary search. What do you answer?',
+          opts: ['Command to Alarm: we have been defensive from the start — there will be no primary search of the fire building.',
+            'Command to Alarm: Primary All Clear — the superintendent has all 14 workers accounted for at the gate.',
+            'Command to Alarm: stand by — a crew will search the frame once the fire knocks down and it is safe.',
+            'Don’t answer — Alarm doesn’t need search information on a fire that is defensive.'], best: 0,
+          mp: 'M.P. 202.02B: "If defensive operations are conducted from the onset of the incident, Command will notify Alarm that there will not be a primary search completed for the affected structure(s)." Workers being accounted for is not a search of the building.' },
+        { label: 'Exposure', cat: 'radio', radio: [R('11:00', 'E2', 'Command', 'E2 on Bravo — the siding on the occupied apartment building across the alley is smoking and windows are cracking. We have one master stream; water is limited until the second supply is in.')],
+          q: 'The exposure is starting to go and water is limited. Where does the water go?',
+          opts: [{ t: 'On the Bravo exposure first. Once it is protected, work the main body of fire and cool the thermal column.', c: ['Loss Stopped'] },
+            'On the main body of fire — knocking down the fire is the best way to protect the exposure.',
+            'Pull everything back and let Bravo go; with this much fire it is already a write-off.',
+            'Stretch handlines between the frame and Bravo and push into the frame to cut the fire off.'], best: 0,
+          mp: 'M.P. 202.02B: "When the exposure is severe, and water is limited, the most effective tactic is to put water on the exposure. Once exposure protection is established, attention may be directed to knocking down the main body of fire and thermal column cooling." All exposures, immediate and anticipated, must be identified and protected.' },
+        { label: '30 minutes', cat: 'radio', radio: [R('30:00', 'Alarm', 'Command', 'Command, Alarm — 30 minutes elapsed.')],
+          q: 'Alarm calls 30 minutes. What does that require of you?',
+          opts: ['A PAR from every sector and crew, plus a progress report.', 'Just a progress report; PARs are only for emergencies.', 'Release the first-due companies for rehab.', 'Change strategy — 30 minutes on a defensive fire means it’s time to go in.'], best: 0,
+          mp: 'M.P. 201.03: a Personnel Accountability Report is required at every 30 minutes of elapsed time, and also for a missing or trapped firefighter, a change from offensive to defensive, any sudden hazardous event, and as companies report All Clear and under control.' }
+      ] },
+    garageapt: { strat: 'an offensive fire — search above and attack the fire', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 knocked down the truck but found fire in the garage ceiling right under the unit above bay 3.', radio: [
+        R('06:40', 'E1', 'Command', 'E1 — truck is knocked down, but we have fire in the garage ceiling under the unit over bay 3.')] },
+      'Victim status (update)': { listen: 1, why: 'L1 pulled one tenant out of the unit over the bay, with smoke inhalation, and handed them to R3.', radio: [
+        R('07:20', 'L1', 'Command', 'L1 — we pulled one tenant out of the unit over bay 3. Coughing, smoke inhalation. Handing off to R3 at the stairs.')] } },
+      beats: [
+        allClear('10:30', [R('10:20', 'L1', 'Command', 'L1 — primary search complete on every unit over the garages. Primary All Clear.')], 'L1'),
+        underControl('13:00', [R('12:40', 'E1', 'Command', 'E1 — garage ceiling is opened up and knocked down. The floor of the unit above is checked, no extension.')])
+      ] },
+    ranch: { strat: 'an offensive fire — search and attack from the inside', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 knocked down the front room, but fire is in the attic over it. Fire is extending into the attic.', radio: [
+        R('06:50', 'E1', 'Command', 'E1 — front room knocked down, but we have fire in the attic over the front room.')] },
+      'Victim status (update)': { listen: 1, why: 'L1 found and removed a victim from the bedroom next to the fire room.', radio: [
+        R('07:30', 'L1', 'Command', 'L1 — found an adult in the bedroom next to the fire room. Removed out the front, R3 has them.')] } },
+      beats: [
+        progress('10:00', 10, [R('09:30', 'E2', 'Command', 'E2 — second line in place, we’re pulling the ceiling in the front room and hitting the attic.')],
+          'Command to Alarm, progress report: front room knocked down, fire in the attic over it, two lines working it. One victim removed, R3 treating. Primary search continuing.',
+          'Command to Alarm, progress report: front room fire knocked down, no extension. Primary search complete, nobody found. Holding the balance of the assignment for overhaul.'),
+        underControl('14:00', [R('13:40', 'E2', 'Command', 'E2 — attic fire is knocked down, ceilings open past it, no more extension.')])
+      ] },
+    tileroof: { strat: 'an offensive fire — search and attack from the inside', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 has the room knocked but fire coming through the ceiling from the attic above them.', radio: [
+        R('07:10', 'E1', 'Command', 'Interior, 2nd floor — the fire room is knocked down, but fire is in the attic above us and it’s coming through the ceiling.')] },
+      'Victim status (update)': { listen: 0, why: 'L1 found the boy behind his bedroom door and is bringing him down the interior stairs.', radio: [
+        R('07:30', 'L1', 'Command', 'L1 — we found the boy behind his bedroom door. Bringing him down the interior stairs now.')] } },
+      beats: [
+        { label: 'Roof request', cat: 'radio', radio: [R('08:30', 'E3', 'Command', 'E3 — do you want us on the roof to cut a vent hole over the attic fire?')],
+          q: 'E3 wants to go to the roof of this tile-roof house. What do you tell them?',
+          opts: ['Negative — no one on a tile roof on a house. Coordinate horizontal or PPV ventilation with the attack, and pull ceilings to hit the attic from below.',
+            'Affirmative — ladder the C side, cut a vent hole over the attic fire, and work from the ridge for footing.',
+            'Affirmative, but send only one firefighter up to keep the weight down on the tiles while they cut.',
+            'Hold E3 at the base of the ladder until the interior crew asks for vertical ventilation.'], best: 0,
+          mp: 'M.P. 202.06: "No firefighters will operate on the roof to ventilate a single-family or duplex structure fire covered with concrete or clay roof tiles. It will be necessary to develop a plan for horizontal or positive pressure ventilation with the fire attack companies and/or command."' },
+        underControl('13:00', [R('12:40', 'E1', 'Command', 'E1 — attic knocked down from below, ceilings pulled, no more extension.'),
+          R('12:45', 'L1', 'Command', 'L1 — primary search complete. Primary All Clear.')])
+      ] },
+    parkinggarage: { strat: 'an offensive fire — water on the cars from the best position', feed: {
+      'What’s happening inside? (update)': { listen: 0, why: 'E1 knocked down the burning cars and the sprinklers are holding.', radio: [
+        R('08:10', 'E1', 'Command', 'E1 on P1 — knockdown on the burning cars. Sprinklers are holding it.')] },
+      'Victim status (update)': { listen: 1, why: 'E2 has the residents out and the garage clear, with no injuries.', radio: [
+        R('08:30', 'E2', 'Command', 'E2 — residents of the floors above are evacuated, the garage is clear, no injuries.')] } },
+      beats: [
+        { label: 'EV reignites', cat: 'radio', radio: [R('11:00', 'E1', 'Command', 'E1 — the EV in the next stall is hissing, white smoke from under the floor pan, and now fire jetting out from under it.')],
+          q: 'The EV battery is in thermal runaway. What is your plan?',
+          opts: [{ t: 'Big water on the battery with an uninterrupted supply — it can take 3,000+ gallons — full PPE and facepiece, and no one touches the battery.', c: ['Fire Control'] },
+            'Switch to dry chemical — water on a burning EV battery reacts with it and makes the fire worse.',
+            'Knock the flames down, and as soon as they are out release the car to the tow company.',
+            'Cut into the battery pack so the crew can get water directly onto the burning cells.'], best: 0,
+          mp: 'M.P. 202.16: if an EV is on fire, large amounts of water are needed to cool the batteries — it can take 3,000 gallons or more to put out AND cool them, which needs an uninterrupted water supply. Wear full PPE with SCBA and facepiece, and avoid contact with battery components (explosion, flammability, toxicity, shock). Once in thermal runaway the vehicle is likely a total loss.' },
+        underControl('18:00', [R('17:40', 'E1', 'Command', 'E1 — EV battery is cooled, temps are dropping and stable. No more fire on P1.')])
+      ] },
+    pizza: { strat: 'an offensive fire — attack the kitchen and get into the ceiling', feed: {
+      'What’s happening inside? (update)': { listen: 1, why: 'E1 has fire in the common attic heading both ways, and L1 sees smoke pushing out over both neighbors. Fire is running the attic into both exposures.', radio: [
+        R('07:30', 'E1', 'Command', 'Interior — kitchen is knocked down, but we have fire in the attic heading both ways.'),
+        R('07:40', 'L1 (Roof)', 'Command', 'Roof — common attic, smoke pushing out of the parapet over both neighbors. Truss roof, firm for now.')] },
+      'Victim status (update)': { listen: 1, why: 'E3 searched both neighbors — all clear, no injuries.', radio: [
+        R('08:00', 'E3', 'Command', 'E3 — searched the nail salon and the dry cleaner. All clear, no injuries.')] } },
+      beats: [
+        { label: 'Cut it off', cat: 'radio', radio: [R('09:00', 'E1', 'Command', 'Interior — the fire is getting ahead of us in the attic toward both exposures.')],
+          q: 'Fire is running the common attic. What do you do?',
+          opts: [{ t: 'Get lines into both exposures ahead of the fire, pull ceilings to find the edge and stop it, and keep the roof reports coming.', c: ['Fire Control', 'Loss Stopped'] },
+            'Keep both lines in the restaurant — once the kitchen and its ceiling are out, the attic fire will follow.',
+            'Go defensive right away — a fire in a common attic always takes the whole strip mall.',
+            'Have L1 cut the roof over the restaurant and let the attic vent itself before anyone goes next door.'], best: 0,
+          mp: 'M.P. 202.04: "Water volume and aggressive exposure protection are critical. Exposure protection may require interior and roof positions or exterior operations depending on the building’s conditions and structural integrity." Basic Offensive Plan: support the attack from the next most advantageous position. M.P. 202.02B: in marginal situations, assign a Roof Sector early and get frequent, detailed reports.' },
+        underControl('15:00', [R('14:40', 'E2', 'Command', 'E2 — we stopped it at the nail salon ceiling. E3 has it stopped in the dry cleaner. Attic is knocked down.')])
+      ] }
+  };
+
+  SCENARIOS.forEach(function (sc) {
+    var st = STORY[sc.id];
+    if (!st) return;
+    sc.radioStory = true;
+    var first = true;
+    Object.keys(st.feed).forEach(function (label) {
+      var step = sc.steps.filter(function (s) { return s.label === label; })[0], f = st.feed[label];
+      if (!step) throw new Error('radio story: no beat "' + label + '" in ' + sc.id);
+      var radio = Array.isArray(f) ? f : f.radio;
+      if (label === 'What’s happening inside? (update)') radio = [bcStrategy(radio[0].t, st.strat)].concat(radio);
+      step.radio = radio;
+      if (!Array.isArray(f) && typeof f.listen === 'number') { step.listen = true; step.best = f.listen; step.mp = 'Radio check: ' + f.why; }
+    });
+    var anchor = sc.steps.map(function (s) { return s.label; }).indexOf('Victim status (update)');
+    st.beats.forEach(function (b) {
+      var at;
+      if (b.before) { at = sc.steps.map(function (s) { return s.label; }).indexOf(b.before); delete b.before; }
+      else { anchor++; at = anchor; }
+      sc.steps.splice(at, 0, b);
+      if (at <= anchor && b.label === 'Stairwells') anchor++;
+    });
+  });
+})();

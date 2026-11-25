@@ -288,3 +288,12 @@ These are Phoenix-specific and were left as they were. Send the source documents
 - **Paramedic candidate exam:** assumed to be the MCCCD Paramedic Candidate Entrance Exam (150 questions, 3 hours, 70%, EMT scope). Confirm with PFD EMS training.
 - **Skill sheet steps:** the packet names the 9 functional skills but not their steps. Steps follow IFSTA/NFPA and are marked "verify against your academy skill sheet".
 - **Probie scenarios:** the backup line goes on the floor below the fire (wording from 202.11, a high-rise MP), and the tile-roof search starts at the bedroom window (202.02C plus IFSTA). Instructor review is welcome.
+
+## Scenario radio traffic (Nov 2026)
+
+The 13 fire scenarios keep going after the first-due calls. Radio traffic from the crews, Alarm and BC1 comes in before each update, and you make the next call from what you hear.
+
+- **Radio checks:** "What's happening inside? (update)" and "Victim status (update)" are now graded on whether you read the radio right (scored separately from the MP check).
+- **New radio beats** (each checked against the MP quoted): progress reports at elapsed time (205.01), Primary All Clear + PAR (201.03), Fire Under Control + PAR (202.02B), change to defensive by Emergency Traffic (202.02B), Mayday and Mayday resolved (201.01B, House), floor above (202.20, Mid-Rise), attack/evacuation stairwells (202.11, High-Rise), floor over a basement fire (202.04B, Church), no primary search and exposure first (202.02B, Stick City), 30-minute PAR (201.03), tile roof (202.06), EV thermal runaway (202.16), common attic cut-off (202.04, Pizza).
+- **The radio answers your calls:** missing the strategy brings BC1 on to set it; holding the strategy gets Alarm asking for it; skipping the PAR at the All Clear has BC1 asking for it later.
+- Unit names, times and radio wording are generic practice traffic, not a recording of a real incident. **Instructor review wanted** on radio wording and order before PFD use.

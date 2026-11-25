@@ -724,3 +724,19 @@ html { -webkit-tap-highlight-color: transparent; }
 /* ── Report a problem ── */
 .report-link { display: inline-block; margin-top: 10px; padding: 10px 0; min-height: 44px; background: none; border: 0; color: var(--th-ink-2); font: inherit; font-size: 13.5px; text-decoration: underline; text-underline-offset: 3px; }
 .app-toast { pointer-events: none; }
+
+/* scenario radio traffic */
+.radio-feed { background: #12161b; color: #e9eef2; border-radius: 14px; padding: 12px 16px 6px; margin: 6px 0 14px; border-left: 5px solid #2E86C1; }
+.radio-feed.emer { border-left-color: #E03A3A; }
+.radio-feed-tag { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; color: #8fc7ef; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.radio-feed.emer .radio-feed-tag { color: #ff9b9b; }
+.radio-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: radio-pulse 1.4s ease-in-out infinite; }
+@keyframes radio-pulse { 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) { .radio-dot { animation: none; } }
+.radio-feed .radio-line { margin: 0 0 8px; font-size: 16px; line-height: 1.45; }
+.radio-feed .radio-line b { color: #ffd08a; }
+.radio-feed .radio-line.emer b { color: #ff9b9b; }
+.radio-log summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.radio-log .radio-line { margin: 0 0 6px; font-size: 14px; }
+.radio-log .radio-line.emer { color: var(--th-danger); }
+.call-opt.opt-radio { box-shadow: inset 6px 0 0 #2E86C1; }

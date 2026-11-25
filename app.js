@@ -1639,6 +1639,7 @@ function scenPick(run, step, text, clears, unit, matched) {
     var e = run.log[run.log.length - 1];
     e.hasBest = (typeof step.best === 'number');
     e.matched = e.hasBest && !!matched;
+    e.listen = !!step.listen;
     e.mp = step.mp;
     e.bestText = e.hasBest ? (step.hotspots ? SCENARIOS[run.scen].hotspots[step.best].label : scenOptText(step.opts[step.best])) : null;
     run.feedback = e;
@@ -1655,13 +1656,13 @@ function scenFeedbackCard(run, step) {
   var card = el('div', 'mp-check animate-pop-in ' + (e.hasBest ? (e.matched ? 'match' : 'miss') : 'note'));
   card.setAttribute('role', 'status');
   var verdict = el('div', 'mp-verdict');
-  verdict.innerHTML = e.hasBest ? (icon(e.matched ? 'check' : 'x', 18) + '<span>' + (e.matched ? 'Matches the MP' : 'The MP points another way') + '</span>')
+  verdict.innerHTML = e.hasBest ? (icon(e.matched ? 'check' : 'x', 18) + '<span>' + (e.listen ? (e.matched ? 'You heard it right' : 'Listen again \u2014 the radio said otherwise') : (e.matched ? 'Matches the MP' : 'The MP points another way')) + '</span>')
     : (icon('book', 18) + '<span>What the MP says</span>');
   card.appendChild(verdict);
   var you = el('p', 'mp-you'); you.innerHTML = '<b>Your call:</b> '; you.appendChild(document.createTextNode(e.pick));
   card.appendChild(you);
   if (e.hasBest && !e.matched) {
-    var best = el('p', 'mp-best'); best.innerHTML = '<b>MP call:</b> '; best.appendChild(document.createTextNode(e.bestText));
+    var best = el('p', 'mp-best'); best.innerHTML = e.listen ? '<b>What the radio said:</b> ' : '<b>MP call:</b> '; best.appendChild(document.createTextNode(e.bestText));
     card.appendChild(best);
   }
   card.appendChild(el('p', 'mp-text', e.mp));
@@ -1728,6 +1729,47 @@ function renderScenarios(root) {
     b.addEventListener('click', function () { startScenRun(i); });
     root.appendChild(b);
   });
+}
+/* ---------- radio traffic ----------
+   A beat's `radio` is the traffic you hear before you make the call:
+   [{t:'08:30', from:'L1', to:'Command', msg:'...', emer?:true, if?:{label, match?|missed?, not?}}].
+   `if` lets the story answer your earlier calls: match = your pick on that beat contains the text,
+   missed = that beat had an MP call and you missed it, no key = you made that call at all.
+   Unit-assignment beats with no radio get the unit's on-scene transmission automatically. */
+function scenCond(run, c) {
+  if (!c) return true;
+  var e = scenFindLog(run, c.label), ok;
+  if (c.missed) ok = !!e && e.hasBest && !e.matched;
+  else if (c.match != null) ok = !!e && e.pick.toLowerCase().indexOf(String(c.match).toLowerCase()) >= 0;
+  else ok = !!e;
+  return c.not ? !ok : ok;
+}
+
+function scenRadioFor(step, run) {
+  var list = step.radio;
+  if (!list && step.unit && /^Assign /.test(step.label)) {
+    list = [{ t: '', from: step.unit, to: 'Command', msg: step.unit === 'BC1' ? 'BC1 on scene. Meet me at the command post for transfer.' : step.unit + ' on scene, ready for an assignment.' }];
+  }
+  if (!list && step.label === 'Incident action plan') {
+    list = [{ t: '01:30', from: 'Alarm', to: 'Command', msg: 'Command, Alarm \u2014 incoming units are asking for your strategy.', if: { label: 'Strategy', match: 'hold' } },
+      { t: '01:30', from: 'Alarm', to: 'Command', msg: 'Command, Alarm \u2014 incoming units are asking for your strategy.', if: { label: 'Strategy', match: 'no declaration' } }];
+  }
+  return (list || []).filter(function (r) { return scenCond(run, r.if); });
+}
+function scenRadioCard(lines, live) {
+  var card = el('div', 'radio-feed' + (lines.some(function (r) { return r.emer; }) ? ' emer' : ''));
+  var t = lines[0].t;
+  var tag = el('div', 'radio-feed-tag', null);
+  tag.innerHTML = '<span class="radio-dot" aria-hidden="true"></span>RADIO TRAFFIC' + (t ? ' <span class="tabular">\u00b7 ' + t + '</span>' : '');
+  card.appendChild(tag);
+  lines.forEach(function (r) {
+    var p = el('p', 'radio-line' + (r.emer ? ' emer' : ''));
+    var who = el('b', null, r.from + (r.to ? ' \u2192 ' + r.to : '') + ': ');
+    p.appendChild(who); p.appendChild(document.createTextNode(r.msg));
+    card.appendChild(p);
+  });
+  if (live) card.setAttribute('role', 'log');
+  return card;
 }
 function scenStepVisible(step, run) {
   if (!step.showIf) return true;
@@ -1803,6 +1845,12 @@ function renderScenarioRun(root) {
     root.appendChild(nar);
   }
 
+  var radio = scenRadioFor(step, run);
+  if (radio.length) {
+    run.heard = run.heard || {};
+    if (!run.heard[run.pos]) run.heard[run.pos] = radio;
+    root.appendChild(scenRadioCard(radio, true));
+  }
   root.appendChild(el('h2', 'sec-head', step.label));
   var qcard = el('div', 'card');
   qcard.innerHTML = '<p style="margin:0"></p>';
@@ -1842,6 +1890,18 @@ function renderScenarioRun(root) {
     });
     root.appendChild(logCard);
   }
+  var heard = scenHeardLines(run, run.pos);
+  if (heard.length) {
+    var det = document.createElement('details'); det.className = 'card radio-log';
+    det.appendChild(el('summary', null, 'Radio log (' + heard.length + ' transmissions)'));
+    heard.forEach(function (r) {
+      var p = el('p', 'radio-line' + (r.emer ? ' emer' : ''));
+      p.appendChild(el('b', null, (r.t ? r.t + '  ' : '') + r.from + (r.to ? ' \u2192 ' + r.to : '') + ': '));
+      p.appendChild(document.createTextNode(r.msg));
+      det.appendChild(p);
+    });
+    root.appendChild(det);
+  }
 
   var quit = el('div', 'drill-cta');
   var qb = el('button', 'btn ghost block press', 'Quit run');
@@ -1849,6 +1909,13 @@ function renderScenarioRun(root) {
   qb.addEventListener('click', endScenRun);
   quit.appendChild(qb);
   root.appendChild(quit);
+}
+function scenHeardLines(run, beforePos) {
+  var out = [];
+  Object.keys(run.heard || {}).map(Number).sort(function (a, b) { return a - b; }).forEach(function (k) {
+    if (beforePos == null || k < beforePos) out = out.concat(run.heard[k]);
+  });
+  return out;
 }
 function scenFindLog(run, label) {
   for (var i = 0; i < run.log.length; i++) if (run.log[i].label === label) return run.log[i];
@@ -1872,7 +1939,8 @@ function renderScenarioReport(root) {
     + '<p>What you did, organized the way the On Scene Report deck teaches it, checked against the Phoenix MPs.</p>';
   root.appendChild(head);
 
-  var checked = run.log.filter(function (e) { return e.hasBest; });
+  var checked = run.log.filter(function (e) { return e.hasBest && !e.listen; });
+  var listened = run.log.filter(function (e) { return e.listen; });
   if (checked.length) {
     var hits = checked.filter(function (e) { return e.matched; }).length;
     if (!run.bestSaved) {
@@ -1896,6 +1964,13 @@ function renderScenarioReport(root) {
     });
   }
 
+  if (listened.length) {
+    var lh = listened.filter(function (e) { return e.matched; }).length;
+    root.appendChild(el('h2', 'sec-head', 'Radio check'));
+    var ls = el('div', 'card mp-summary');
+    ls.innerHTML = '<b class="tabular">' + lh + ' of ' + listened.length + '</b><span>updates you read right from the radio</span>';
+    root.appendChild(ls);
+  }
   function pickText(label) {
     var e = scenFindLog(run, label);
     return e ? e.pick : 'Not picked.';
@@ -1969,6 +2044,18 @@ function renderScenarioReport(root) {
   }
   root.appendChild(unitsCard);
 
+  var allRadio = scenHeardLines(run, null);
+  if (allRadio.length) {
+    root.appendChild(el('h2', 'sec-head', 'Radio traffic you worked from'));
+    var rc = el('div', 'card radio-log');
+    allRadio.forEach(function (r) {
+      var p = el('p', 'radio-line' + (r.emer ? ' emer' : ''));
+      p.appendChild(el('b', null, (r.t ? r.t + '  ' : '') + r.from + (r.to ? ' \u2192 ' + r.to : '') + ': '));
+      p.appendChild(document.createTextNode(r.msg));
+      rc.appendChild(p);
+    });
+    root.appendChild(rc);
+  }
   root.appendChild(el('h2', 'sec-head', 'Everything, in order'));
   var allCard = el('div', 'card');
   run.log.forEach(function (entry, li) {
