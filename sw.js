@@ -5,7 +5,7 @@
    VERSION must change on every deploy that touches an app file, or installed
    apps never see the update. Run `node tools/check.js` before pushing: it fails
    when app files changed without a bump. */
-var VERSION = 'fshq-v8';
+var VERSION = 'fshq-v10';
 var PRECACHE = [
   './',
   'index.html',
@@ -17,6 +17,7 @@ var PRECACHE = [
   'checklists.js',
   'checklists-ui.js',
   'ecg.js',
+  'radio.js',
   'paramedic-exam-prep.html',
   'manifest.webmanifest',
   'fonts/fonts.css',

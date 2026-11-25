@@ -156,7 +156,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene, medium 2-story apartment building, working fire on the 2nd floor, heavy smoke and flame showing. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be 19th Avenue Command.",
+     "E1 to Alarm, on scene, medium 2-story apartment building, working fire on the 2nd floor, heavy smoke and flame showing. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be 19th Avenue Command.",
      "E1 on scene, medium 2-story apartment building, working fire on the 2nd floor, heavy smoke and flame showing. E1 is laying a line and going in for search and fire attack. E1 will be 19th Avenue Command. Give me the balance of a 1st Alarm.",
      "E1 on scene, medium 2-story apartment building, working fire on the 2nd floor, heavy smoke and flame showing. Offensive strategy, search and fire attack, first 3 companies to IAP tasks and 1 in reserve. E1 has command.",
      "E1 on scene at 6635 N. 19th Ave. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be 19th Avenue Command. E1 will be north side accountability."
@@ -616,7 +616,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene, small single-story house, working fire in a front room, flame out the window and heavy black smoke. E1 is pulling a line for search and fire attack. This is an offensive fire. E1 will be Maple Street Command.",
+     "E1 to Alarm, on scene, small single-story house, working fire in a front room, flame out the window and heavy black smoke. E1 is pulling a line for search and fire attack. This is an offensive fire. E1 will be Maple Street Command.",
      "E1 on scene, small single-story house, working fire in a front room, flame out the window and heavy black smoke. E1 is pulling a line for search and fire attack. E1 will be Maple Street Command. Give me the balance of a 1st Alarm.",
      "E1 on scene, small single-story house, working fire in a front room, flame out the window and heavy black smoke. Offensive strategy, search and fire attack, 3 companies to IAP tasks and 1 in reserve. E1 has command.",
      "E1 on scene, house fire. E1 is pulling a line for search and fire attack. This is an offensive fire. E1 will be Maple Street Command. E1 will be the front side accountability location."
@@ -1107,7 +1107,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene, medium 2-story house, fire on the upstairs balcony with heavy black smoke from the roof, family evacuating. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be Wyatt Command.",
+     "E1 to Alarm, on scene, medium 2-story house, fire on the upstairs balcony with heavy black smoke from the roof, family evacuating. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be Wyatt Command.",
      "E1 on scene, medium 2-story house, fire on the upstairs balcony with heavy black smoke from the roof, family evacuating. E1 is laying a line and going in for search and fire attack. E1 will be Wyatt Command. Give me the balance of a 1st Alarm.",
      "E1 on scene, medium 2-story house, fire on the upstairs balcony with heavy black smoke from the roof, family evacuating. Offensive strategy, search and fire attack, 3 companies to IAP tasks, 1 in reserve. E1 has command.",
      "E1 on scene at 2644 E. Wyatt Way. E1 is laying a line and going in for search and fire attack. This is an offensive fire. E1 will be Wyatt Command. E1 will be the north side accountability location."
@@ -1608,7 +1608,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene, large 4-story mid-rise apartment building, smoke showing from the 3rd floor. E1 is going in with standpipe packs to locate the fire for search and fire attack. This is an offensive fire. E1 will be Parkway Command.",
+     "E1 to Alarm, on scene, large 4-story mid-rise apartment building, smoke showing from the 3rd floor. E1 is going in with standpipe packs to locate the fire for search and fire attack. This is an offensive fire. E1 will be Parkway Command.",
      "E1 on scene, large 4-story mid-rise apartment building, smoke showing from the 3rd floor. E1 is going in with standpipe packs to locate the fire for search and fire attack. E1 will be Parkway Command. Give me the balance of a 1st Alarm.",
      "E1 on scene, large 4-story mid-rise apartment building, smoke showing from the 3rd floor. Offensive strategy, search and fire attack, first 3 companies to IAP tasks and 1 in reserve. E1 has command.",
      "E1 on scene, apartment fire. E1 is going in with standpipe packs to locate the fire for search and fire attack. This is an offensive fire. E1 will be Parkway Command. E1 will be east side accountability."
@@ -2175,7 +2175,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene: large high-rise office tower, fire showing from three windows on an upper floor, heavy black smoke. E1 assuming command, going to the Fire Control Room. Offensive strategy. E1 will be Van Buren Command.",
+     "E1 to Alarm, on scene: large high-rise office tower, fire showing from three windows on an upper floor, heavy black smoke. E1 assuming command, going to the Fire Control Room. Offensive strategy. E1 will be Van Buren Command.",
      "E1 on scene: large high-rise office tower, fire showing from three windows on an upper floor, heavy black smoke. E1 is heading up the attack stairwell with high-rise packs to find the fire floor. This is an offensive fire.",
      "E1 on scene: large high-rise office tower, fire showing from three windows on an upper floor, heavy black smoke. E1 assuming command in the Fire Control Room. E1 will be Van Buren Command.",
      "E1 on scene with a working fire in a high-rise. Give me a 3rd alarm. E1 is going up to the fire floor for search and fire attack. Offensive strategy. E1 will be Van Buren Command."
@@ -2728,7 +2728,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene: large one-story strip mall, light smoke from the laundromat and thrift store, bell ringing. E1 assuming command, investigating with a line. Offensive strategy. E1 will be Strip Mall Command.",
+     "E1 to Alarm, on scene: large one-story strip mall, light smoke from the laundromat and thrift store, bell ringing. E1 assuming command, investigating with a line. Offensive strategy. E1 will be Strip Mall Command.",
      "E1 on scene: large one-story strip mall, light smoke from the laundromat and thrift store, sprinkler bell ringing. E1 is assuming command and investigating with a line inside. E1 will be Strip Mall Command.",
      "E1 on scene: strip mall, nothing showing, sprinklers are handling it. E1 investigating. Offensive strategy. Give me the balance of a 1st alarm. E1 will be Strip Mall Command.",
      "E1 on scene: large one-story strip mall, light smoke from the laundromat and thrift store, sprinkler bell ringing. E1 is taking a line in to find the fire. This is an offensive fire."
@@ -3280,7 +3280,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene: medium brick church with a basement, smoke showing, fire reported in the basement. E1 assuming command, taking a line to the basement level. Offensive strategy. E1 will be Church Command.",
+     "E1 to Alarm, on scene: medium brick church with a basement, smoke showing, fire reported in the basement. E1 assuming command, taking a line to the basement level. Offensive strategy. E1 will be Church Command.",
      "E1 on scene: medium brick church with a basement, smoke showing, fire reported in the basement. E1 is taking a handline in through the main entrance to attack it from the floor above. Offensive strategy.",
      "E1 on scene: medium brick church with a basement, smoke showing, fire reported in the basement. E1 assuming command, taking a line to the basement level. E1 will be Church Command.",
      "E1 on scene: church, smoke showing. Give me the balance of a 1st alarm. E1 is going in the front for search and attack. Offensive strategy. E1 will be Church Command."
@@ -3839,7 +3839,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene: large unfinished wood-frame apartment project, fully involved, exposures downwind. E1 laying a supply line and setting up master streams on the exposures. Defensive strategy. E1 will be Construction Command.",
+     "E1 to Alarm, on scene: large unfinished wood-frame apartment project, fully involved, exposures downwind. E1 laying a supply line and setting up master streams on the exposures. Defensive strategy. E1 will be Construction Command.",
      "E1 on scene: large unfinished wood-frame apartment project, fully involved, exposures downwind. E1 laying a supply line and pulling a handline into the frame for a quick knock. Offensive strategy. E1 will be Construction Command.",
      "E1 on scene: large unfinished wood-frame apartment project, fully involved, exposures downwind. E1 laying a supply line and setting up master streams on the exposures. E1 will be Construction Command.",
      "E1 on scene: large unfinished wood-frame apartment project, fully involved, exposures downwind. E1 laying a supply line and setting up master streams on the exposures. This is a defensive fire."
@@ -4393,7 +4393,7 @@ var SCENARIOS = [
     "label": "On-scene report",
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
-     "E1 on scene, 3518 W. Palo Verde. Medium 2-story apartment building, working vehicle fire in a ground-floor garage extending up toward the units above. E1 is attacking with a 1¾-inch line and starting search. This is an offensive fire. E1 will be Palo Verde Command.",
+     "E1 to Alarm, on scene, 3518 W. Palo Verde. Medium 2-story apartment building, working vehicle fire in a ground-floor garage extending up toward the units above. E1 is attacking with a 1¾-inch line and starting search. This is an offensive fire. E1 will be Palo Verde Command.",
      "E1 on scene, 3518 W. Palo Verde. Medium 2-story apartment building, working vehicle fire in a ground-floor garage extending up toward the units above. E1 is attacking with a 1¾-inch line and starting search. E1 will be Palo Verde Command.",
      "E1 on scene, 3518 W. Palo Verde. Working vehicle fire in a garage. E1 is attacking with a 1¾-inch line and starting search. This is an offensive fire. Give me the balance of a 1st Alarm, E1 will be North side accountability.",
      "E1 on scene, 3518 W. Palo Verde. Medium 2-story apartment building, working vehicle fire in a ground-floor garage extending up toward the units above. E1 is attacking with a 1¾-inch line and starting search. This is an offensive fire."
@@ -4945,7 +4945,7 @@ var SCENARIOS = [
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
      "E1 on scene, 3016 W. Mariposa. Small 1-story house, working fire in a front room with heavy black smoke. E1 is pulling a 1¾-inch line for search and fire attack. Give me the balance of a 1st Alarm. E1 will be Mariposa Command.",
-     "E1 on scene, 3016 W. Mariposa. Small 1-story house, working fire in a front room with heavy black smoke. E1 is pulling a 1¾-inch line for search and fire attack. This is an offensive fire. E1 will be Mariposa Command.",
+     "E1 to Alarm, on scene, 3016 W. Mariposa. Small 1-story house, working fire in a front room with heavy black smoke. E1 is pulling a 1¾-inch line for search and fire attack. This is an offensive fire. E1 will be Mariposa Command.",
      "E1 on scene, 3016 W. Mariposa. Working fire, heavy black smoke. E1 is pulling a 1¾-inch line for search and fire attack. This is an offensive fire. E1 will be Front side accountability. E1 will be Mariposa Command.",
      "E1 on scene, 3016 W. Mariposa. Small 1-story house, working fire in a front room with heavy black smoke. This is an offensive fire. E1 has an IRIC in place. E1 will be Mariposa Command."
     ],
@@ -5478,7 +5478,7 @@ var SCENARIOS = [
     "q": "Give your on-scene report — which version do you send?",
     "opts": [
      "E1 on scene, 4127 E. Quail Canyon. Medium 2-story house, fire showing from a 2nd-floor window, one reported trapped upstairs. E1 is taking a 1¾-inch line to the 2nd floor for search & rescue and fire attack. E1 will be Quail Canyon Command.",
-     "E1 on scene, 4127 E. Quail Canyon. Medium 2-story house, fire showing from a 2nd-floor window, one reported trapped upstairs. E1 is taking a 1¾-inch line to the 2nd floor for search & rescue and fire attack. This is an offensive fire. E1 will be Quail Canyon Command.",
+     "E1 to Alarm, on scene, 4127 E. Quail Canyon. Medium 2-story house, fire showing from a 2nd-floor window, one reported trapped upstairs. E1 is taking a 1¾-inch line to the 2nd floor for search & rescue and fire attack. This is an offensive fire. E1 will be Quail Canyon Command.",
      "E1 on scene, 4127 E. Quail Canyon. Medium house, fire showing, one reported trapped. E1 is going in for search & rescue and fire attack. This is an offensive fire. E1 will be Quail Canyon Command. Give me the balance of a 1st Alarm.",
      "E1 on scene, 4127 E. Quail Canyon. Medium 2-story house, fire showing from a 2nd-floor window, one reported trapped upstairs, mother in the street. This is an offensive fire. E1 will be Quail Canyon Command."
     ],

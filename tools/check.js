@@ -30,7 +30,7 @@ try {
 } catch (e) { fail('data.js failed to load: ' + e.message); }
 
 // 2. Every JS file parses
-['app.js', 'pwa.js', 'checklists.js', 'checklists-ui.js', 'ecg.js', 'sw.js', 'scenarios.js', 'data.js'].forEach(f => {
+['app.js', 'pwa.js', 'checklists.js', 'checklists-ui.js', 'ecg.js', 'radio.js', 'sw.js', 'scenarios.js', 'data.js'].forEach(f => {
   try { new Function(read(f)); } catch (e) { fail(`${f} does not parse: ${e.message}`); }
 });
 

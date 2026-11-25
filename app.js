@@ -25,6 +25,7 @@ var P = {
   bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
   download: '<path d="M12 4v11M7 10.5l5 5 5-5"/><path d="M4.5 19.5h15"/>',
   upload: '<path d="M12 15.5v-11M7 9l5-5 5 5"/><path d="M4.5 19.5h15"/>',
+  mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>',
   phone: '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
   zap: '<path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12z"/>',
   refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.6M20 3v4h-4"/>',
@@ -65,11 +66,11 @@ function cleanProg(p) {
   }
   return c;
 }
-function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 }, scen: { plays: 0 }, ecg: { best: 0, plays: 0 } }; }
+function defaultGames() { return { blitz: { best: 0, plays: 0 }, flash: { sessions: 0 }, weak: { sessions: 0 }, call: { best: 0, plays: 0 }, exam: { best: 0, plays: 0 }, calc: { best: 0, plays: 0 }, scen: { plays: 0 }, ecg: { best: 0, plays: 0 }, radio: { best: 0, plays: 0 } }; }
 function normGames(g) {
   var d = defaultGames();
   if (g && typeof g === 'object') {
-    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc', 'scen', 'ecg'].forEach(function (k) {
+    ['blitz', 'flash', 'weak', 'call', 'exam', 'calc', 'scen', 'ecg', 'radio'].forEach(function (k) {
       if (g[k] && typeof g[k] === 'object') {
         Object.keys(d[k]).forEach(function (f) {
           var v = parseInt(g[k][f], 10);
@@ -376,12 +377,15 @@ function clearRuns() {
   state.sess = null; state.callRun = null; state.scenRun = null; state.checkRun = null;
   if (state.examRun && !state.examRun.scored) discardSavedExam(); // leaving was confirmed
   state.ecgRun = null; state.examRun = null; state.calcRun = null;
+  if (state.radioRun && typeof stopRadioMic === 'function') stopRadioMic();
+  state.radioRun = null;
 }
 function activeWork() {
   if (state.examRun && state.examRun.pos < state.examRun.items.length && !state.examRun.scored) return 'this exam (it won\u2019t be scored)';
   if (state.sess && state.sess.blitz && !state.sess.done) return 'this Blitz round';
   if (state.calcRun && state.calcRun.pos > 0 && state.calcRun.pos < state.calcRun.probs.length) return 'this math drill';
   if (state.ecgRun && state.ecgRun.pos > 0 && !state.ecgRun.done) return 'this ECG round';
+  if (state.radioRun && !state.radioRun.graded && state.radioRun.text.trim()) return 'this radio report';
   if (state.sess && !state.sess.done && (state.sess.got + state.sess.miss) > 0) return 'this drill (graded cards are already saved)';
   if (state.scenRun && state.scenRun.log && state.scenRun.log.length) return 'this scenario run';
   if (state.callRun && state.callRun.pos > 0 && !state.callRun.scored) return 'this Run the Call round';
@@ -420,7 +424,7 @@ function render() {
   renderStreak();
   var root = document.getElementById('view-root');
   root.innerHTML = '';
-  var focused = !!state.ecgRun || !!state.sess || !!state.checkRun || !!state.scenRun ||
+  var focused = !!state.ecgRun || !!state.sess || !!state.checkRun || !!state.scenRun || (state.radioRun && !state.radioRun.graded) ||
     (state.examRun && state.examRun.pos < state.examRun.items.length) ||
     (state.calcRun && state.calcRun.pos < state.calcRun.probs.length) ||
     (state.callRun && !state.callRun.scored && state.callRun.pos < state.callRun.order.length);
@@ -556,6 +560,7 @@ function todayCard() {
     row.appendChild(nx);
   }
   c.appendChild(row);
+  var rr = readinessRow(); if (rr) c.appendChild(rr);
   var tip = el('p', 'today-tip');
   tip.textContent = due ? 'Clear what\u2019s due first \u2014 that\u2019s what keeps it from leaking out by month six. Then learn new.'
     : 'Nothing due. Learn something new; it comes back tomorrow, then in 3 days, a week, two weeks.';
@@ -576,6 +581,7 @@ function renderHome(root) {
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
   if (state.ecgRun) { renderEcgView(root); return; }
+  if (state.radioRun) { renderRadioView(root); return; }
 
   var s = moduleStats(), due = dueCount();
   var head = el('div', 'view-head animate-fade-in');
@@ -635,6 +641,7 @@ function renderHome(root) {
   gg.appendChild(gameMini('book', 'linear-gradient(135deg,#6C3483,#2E1A47)', 'Exams', store.games.exam.best, 'best', function () { startExamRun(); }));
   gg.appendChild(gameMini('timer', 'linear-gradient(135deg,#117A65,#0B3D33)', 'Math', store.games.calc.best, 'best', function () { startCalcRun(); }));
   gg.appendChild(gameMini('zap', 'linear-gradient(135deg,#1F2937,#B3271E)', 'ECG Rhythms', store.games.ecg.best, 'best', function () { startEcgRun(); }));
+  gg.appendChild(gameMini('mic', 'linear-gradient(135deg,#B7791F,#7A1812)', 'Radio Reports', store.games.radio.best + '%', 'best', function () { startRadioRun(); }));
   root.appendChild(gg);
 
   var foot = el('div', 'foot');
@@ -1201,7 +1208,10 @@ function renderMCCard(root, s, cur, card) {
   var dc = el('div', 'dcard animate-pop-in');
   dc.appendChild(el('span', 'tag', cardTag(card, cur) + ' \u00b7 multiple choice'));
   dc.appendChild(el('p', 'q', card.q));
-  var order = shuffleIdx(card.opts.length);
+  s.orders = s.orders || {};
+  var okey = cur.t + '-' + cur.i;
+  if (!s.orders[okey]) s.orders[okey] = shuffleIdx(card.opts.length);
+  var order = s.orders[okey];
   var correctPos = -1;
   var btns = [];
   order.forEach(function (oi, pos) {
@@ -1224,9 +1234,15 @@ function renderMCCard(root, s, cur, card) {
       fb.innerHTML = '<b>' + (ok ? 'Correct.' : 'Wrong.') + '</b>';
       dc.appendChild(fb);
       showAnswer(ansBox, card);
-      var nx = el('button', 'btn block press', 'Next'); nx.type = 'button';
+      var nx = el('button', 'btn block press', ok ? 'Next \u2014 I knew it' : 'Next'); nx.type = 'button';
       nx.addEventListener('click', function () { s.picked = false; gradeStep(s, cur, ok); });
       var wrap = el('div', 'drill-cta'); wrap.appendChild(nx);
+      if (ok) {
+        // A lucky guess shouldn't count as knowing the card: it comes back this session and doesn't move up.
+        var gs = el('button', 'btn ghost block press guess-btn', 'I guessed'); gs.type = 'button';
+        gs.addEventListener('click', function () { s.picked = false; gradeStep(s, cur, true, { guess: true }); });
+        wrap.appendChild(gs);
+      }
       root.appendChild(wrap);
     });
     btns.push(b);
@@ -1263,13 +1279,15 @@ function renderGradeButtons(root, s, cur) {
 }
 /* one grading step — correct answers move on; misses go to the end of the queue
    and repeat until answered correctly once */
-function gradeStep(s, cur, ok) {
+function gradeStep(s, cur, ok, how) {
+  var guess = !!(how && how.guess);
   s.queue.shift();
-  if (ok) { s.got++; } else { s.miss++; }
+  if (ok && !guess) { s.got++; } else if (!ok) { s.miss++; } else { s.guessed = (s.guessed || 0) + 1; }
   s.missedKeys = s.missedKeys || {};
   var key = cardKey(cur.t, cur.i);
-  var newly = gradeCard(cur.t, cur.i, ok, { noAdvance: ok && !!s.missedKeys[key] });
-  if (!ok) s.missedKeys[key] = true;
+  var newly = gradeCard(cur.t, cur.i, ok, { noAdvance: guess || (ok && !!s.missedKeys[key]) });
+  if (!ok || guess) s.missedKeys[key] = true;
+  if (guess) s.queue.push(cur);
   if (newly) s.masteredNow++;
   if (!ok) s.queue.push(cur);
   s.revealed = false;
@@ -1407,6 +1425,7 @@ function renderGames(root) {
   if (state.examRun) { renderExamView(root); return; }
   if (state.calcRun) { renderCalcView(root); return; }
   if (state.ecgRun) { renderEcgView(root); return; }
+  if (state.radioRun) { renderRadioView(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">Reps, but fun</span><h2>Games</h2>'
     + '<p>Same drill bank, different pressure. Scores and streaks live on this device.</p>';
@@ -1443,6 +1462,10 @@ function renderGames(root) {
     'Drug math, drips, conversions, GCS, Apgar, rule of nines.',
     store.games.calc.best, 'best',
     function () { startCalcRun(); }));
+  grid.appendChild(gameTile('mic', 'linear-gradient(135deg,#B7791F,#7A1812)', 'Radio Reports',
+    'Say your on-scene or follow-up report; get checked against the PFD format.',
+    store.games.radio.best + '%', 'best',
+    function () { startRadioRun(); }));
   grid.appendChild(gameTile('zap', 'linear-gradient(135deg,#1F2937,#B3271E)', 'ECG Rhythms',
     '14 rhythms on real 6-second strips. Paramedic school prep.',
     store.games.ecg.best, 'best',
@@ -2008,11 +2031,59 @@ function resumeExamCard() {
   row.appendChild(d); row.appendChild(go2); c.appendChild(row);
   return c;
 }
+/* Readiness: an estimate of today's score on an exam, 0-100.
+   Each card in the exam's pool counts by how well it's known (chance for unseen
+   cards, rising with each spaced-repetition box); recent timed attempts of the
+   same exam pull the estimate toward what actually happened. Hidden until enough
+   of the pool has been studied to mean something. */
+var KNOW_BY_BOX = [0.3, 0.55, 0.7, 0.82, 0.9, 0.94, 0.96, 0.97];
+function readiness(kind) {
+  var pool = examPool(kind), n = pool.length, seen = 0, sum = 0, now = Date.now();
+  if (!n) return null;
+  pool.forEach(function (it) {
+    var r = rec(it.t, it.i), k;
+    if (!r.last) k = 0.25;
+    else {
+      seen++;
+      k = KNOW_BY_BOX[Math.min(r.box, KNOW_BY_BOX.length - 1)];
+      if (r.box > 0 && r.due && now > r.due) k -= Math.min(0.15, (now - r.due) / DAY_MS * 0.01); // overdue: fading
+    }
+    sum += k;
+  });
+  var est = sum / n * 100, coverage = seen / n;
+  var recent = (store.exams || []).filter(function (e) { return e.kind === kind && e.n >= 20; }).slice(-2);
+  if (recent.length) {
+    var actual = recent.reduce(function (a, e) { return a + e.score / e.n * 100; }, 0) / recent.length;
+    est = est * 0.5 + actual * 0.5;
+  }
+  return { score: Math.round(est), coverage: coverage, ready: coverage >= 0.15 || recent.length > 0, pass: EXAM_KINDS[kind].pass };
+}
+var STAGE_EXAM = { academy: 'academy', probation: 'probation', medic: 'candidate' };
+function readinessRow() {
+  var kind = STAGE_EXAM[store.stage]; if (!kind) return null;
+  var R = readiness(kind); if (!R) return null;
+  var b = el('button', 'readiness press'); b.type = 'button';
+  var K = EXAM_KINDS[kind];
+  if (!R.ready) {
+    b.innerHTML = '<span class="rd-t"><b></b><small></small></span>';
+    b.querySelector('b').textContent = K.title + ' readiness';
+    b.querySelector('small').textContent = 'Study ' + Math.ceil(0.15 * examPool(kind).length) + '+ cards from this exam to unlock your readiness score.';
+  } else {
+    var pct = R.score, ok = pct >= R.pass;
+    b.innerHTML = '<span class="rd-num tabular ' + (ok ? 'ok' : 'low') + '">' + pct + '%</span><span class="rd-t"><b></b><small></small></span>'
+      + '<span class="rd-bar"><i style="width:' + Math.min(100, pct) + '%"></i><em style="left:' + R.pass + '%"></em></span>';
+    b.querySelector('b').textContent = K.title + ' readiness';
+    b.querySelector('small').textContent = (ok ? 'At or above' : 'Below') + ' the ' + R.pass + '% line \u00b7 ' + Math.round(R.coverage * 100) + '% of the bank studied. Tap to take it.';
+  }
+  b.addEventListener('click', function () { startExamRun(kind); });
+  return b;
+}
 function chooseExam() {
   openSheet('Exams', 'Timed exams hold all feedback until the end, like the real thing. Practice gives feedback after every question.',
     Object.keys(EXAM_KINDS).map(function (k) {
-      var K = EXAM_KINDS[k], pool = examPool(k).length;
-      return { label: K.title, sub: K.sub + ' · ' + pool + ' in the bank', onPick: function () { startExamRun(k); } };
+      var K = EXAM_KINDS[k], pool = examPool(k).length, R = readiness(k);
+      var rd = R && R.ready ? ' · readiness ' + R.score + '%' : '';
+      return { label: K.title, sub: K.sub + ' · ' + pool + ' in the bank' + rd, onPick: function () { startExamRun(k); } };
     }));
 }
 function startExamRun(kind) {
@@ -2447,8 +2518,10 @@ function renderProgress(root) {
     + '<div class="stat"><b class="tabular">' + store.games.flash.sessions + '</b><span>flash sessions</span></div>'
     + '<div class="stat"><b class="tabular">' + store.games.weak.sessions + '</b><span>weak-spot runs</span></div>'
     + '<div class="stat"><b class="tabular">' + store.games.call.best + '</b><span>run-the-call best</span></div>'
-    + '<div class="stat"><b class="tabular">' + store.games.exam.best + '</b><span>practice exam best</span></div>'
-    + '<div class="stat"><b class="tabular">' + store.games.calc.best + '</b><span>med math best</span></div>';
+    + '<div class="stat"><b class="tabular">' + store.games.exam.best + '</b><span>candidate quick 30 best</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.calc.best + '</b><span>math best</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.ecg.best + '</b><span>ECG best</span></div>'
+    + '<div class="stat"><b class="tabular">' + store.games.radio.best + '%</b><span>radio report best</span></div>';
   root.appendChild(g);
 
   if (window.FSHQ_PWA) FSHQ_PWA.renderAppSection(root);
@@ -2512,7 +2585,7 @@ document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') cl
    and the installed app no longer closes on Back. A running drill, exam or game adds
    "/run": Back leaves it (with the usual confirm) instead of leaving the app. */
 var TABS_OK = { home: 1, study: 1, games: 1, scenarios: 1, progress: 1, nfpa1700: 1, ulfsri: 1 };
-function anyRun() { return !!(state.sess || state.examRun || state.calcRun || state.scenRun || state.callRun || state.checkRun || state.ecgRun); }
+function anyRun() { return !!(state.sess || state.examRun || state.calcRun || state.scenRun || state.callRun || state.checkRun || state.ecgRun || state.radioRun); }
 function navHash() {
   var h = '#/' + state.tab, st = state.study;
   if (state.tab === 'study') {
