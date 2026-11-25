@@ -660,3 +660,39 @@ h2[tabindex="-1"]:focus, h2[tabindex="-1"]:focus-visible { outline: none; }
 .update-toast span { flex: 1; }
 .update-toast button { flex: none; background: var(--th-btn); color: #fff; border: 0; border-radius: 10px; padding: 10px 14px; font: inherit; font-weight: 700; min-height: 44px; }
 .update-toast button.later { background: transparent; color: var(--th-bg); }
+
+/* ── Review steps 10–11: compact sticky bars, answers in view, contrast, targets ── */
+/* Only the primary action sticks: the grade row and a single primary button (Reveal, Next). */
+body.in-session .btn-row, body.in-session .drill-cta.action-bar { position: static; background: none; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 0; }
+body.in-session .btn-row.grade-row { position: sticky; bottom: calc(72px + env(safe-area-inset-bottom)); z-index: 20; background: color-mix(in srgb, var(--th-bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 10px 0; }
+.exam-controls { margin-top: 10px; }
+.exam-controls .btn-row { margin-top: 0; }
+/* Phone landscape: nothing sticks, so the question is never hidden. */
+@media (max-height: 500px) {
+  body.in-session .btn-row.grade-row, body.in-session .drill-cta:has(> .btn:not(.ghost)) { position: static; background: none; backdrop-filter: none; padding: 0; }
+}
+/* iOS: in session mode the header hides, so keep content clear of the notch. */
+body.in-session #view-root { padding-top: env(safe-area-inset-top); }
+/* Screen-reader page title while the visible header is hidden in sessions. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+body:not(.in-session) .sr-h1 { display: none; }
+/* Contrast: every text token at 4.5:1 or better on its usual background. */
+:root { --th-ink-3: #67605A; --th-success: #17733F; --th-danger: #B83232; }
+@media (prefers-color-scheme: dark) { :root { --th-ink-3: #A39B8E; --th-success: #4FD07A; --th-danger: #FF7B6B; } }
+.style-btn.active { background: var(--th-btn); }
+.mc-opt.mc-wrong { border-color: var(--th-danger); }
+.mc-opt.mc-wrong .mc-letter { background: var(--th-danger); }
+.mc-feedback.bad b { color: var(--th-danger); }
+@media (prefers-color-scheme: dark) { .mc-opt.mc-wrong .mc-letter { color: #1E1B18; } }
+/* Tap targets: 44px minimum. */
+.sess-top .back { min-width: 44px; min-height: 44px; }
+.scen-pin { width: 44px; height: 44px; font-size: 17px; }
+.scen-spray { min-width: 44px; min-height: 44px; }
+.install-banner .x { width: 44px; height: 44px; }
+/* Math input can shrink instead of pushing the page sideways. */
+.calc-input { min-width: 0; flex: 1 1 auto; width: 100%; }
+.calc-row { min-width: 0; }
+/* Small polish from the review */
+html { -webkit-tap-highlight-color: transparent; }
+.scen-img { -webkit-touch-callout: none; }
+.summary-box { font-size: 16px; }

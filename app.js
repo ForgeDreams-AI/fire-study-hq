@@ -434,8 +434,8 @@ function render() {
   else renderProgress(root);
   syncHash();
   // Put screen-reader focus at the top of the new view without scrolling.
-  var h2 = root.querySelector('h2');
-  if (h2) { h2.setAttribute('tabindex', '-1'); try { h2.focus({ preventScroll: true }); } catch (e) {} }
+  var h2 = root.querySelector('h2') || root.querySelector('.q, h3');
+  if (h2 && !document.querySelector('#sheet-root .sheet')) { h2.setAttribute('tabindex', '-1'); try { h2.focus({ preventScroll: true }); } catch (e) {} }
 }
 
 /* ============================================================
@@ -476,7 +476,6 @@ function hubTile(h, onTap) {
   var st = hubStats(h), hub = HUBS[h];
   var pct = st.cards ? Math.round(st.mastered / st.cards * 100) : 0;
   var b = el('button', 'hub-tile press'); b.type = 'button';
-  b.setAttribute('aria-label', hub.title + ': ' + st.mastered + ' of ' + st.cards + ' drills mastered');
   b.innerHTML = '<span class="hub-ico">' + icon(hub.icon, 30) + '</span>'
     + '<span class="hub-t"><b>' + hub.title + '</b><small>' + hub.sub + '</small></span>'
     + '<span class="hub-meta tabular">' + st.cards + ' drills</span>'
@@ -505,51 +504,6 @@ function streakBanner() {
     + '<span class="sb-t"><b class="tabular">' + streak + '-day streak</b>'
     + '<small>' + (streak ? 'One graded card a day keeps it alive.' : 'Grade one card today and the streak starts.') + '</small></span>';
   return sc;
-}
-function reviewCta() {
-  var q = reviewItems();
-  var rc = el('button', 'review-cta press'); rc.type = 'button';
-  rc.setAttribute('aria-label', q.length ? 'Review queue: ' + q.length + ' cards waiting' : 'Review queue is clear');
-  rc.innerHTML = '<span class="pill tabular">' + q.length + '</span><span><h3>Review queue</h3><p>'
-    + (q.length ? q.length + ' card' + (q.length === 1 ? '' : 's') + ' waiting &mdash; get each one right twice in a row to clear it.'
-      : 'Mark a card &ldquo;Missed it&rdquo; and it lands here for extra reps.') + '</p></span>';
-  rc.disabled = !q.length;
-  if (q.length) rc.addEventListener('click', function () { startSession('weak', shuffle(q.map(function (it) { return { t: it.t, i: it.i }; })), 'Review queue', { scopeRef: { type: 'weak' } }); });
-  return rc;
-}
-function continueCard() {
-  // topic with the most needs-work; else first topic with unmastered cards
-  var best = -1, bestNW = 0, n, i, st;
-  for (n = 0; n < TOPICS.length; n++) {
-    st = topicStats(n);
-    if (st.needsWork > bestNW) { bestNW = st.needsWork; best = n; }
-  }
-  if (best < 0) {
-    for (n = 0; n < TOPICS.length; n++) {
-      st = topicStats(n);
-      if (st.mastered < TOPICS[n].cards.length) { best = n; break; }
-    }
-  }
-  if (best < 0) return null;
-  var tp = TOPICS[best];
-  var card = el('button', 'continue-card press'); card.type = 'button';
-  card.setAttribute('aria-label', 'Continue drilling: ' + tp.title);
-  card.innerHTML = '<span class="cc-ico">' + icon('zap', 28) + '</span>'
-    + '<span class="cc-t"><small>Continue</small><b>' + tp.title + '</b>'
-    + '<span class="cc-sub tabular">' + (bestNW ? bestNW + ' need work' : (TOPICS[best].cards.length - topicStats(best).mastered) + ' left to master') + '</span></span>'
-    + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
-  // flip chevron to point right via CSS
-  card.addEventListener('click', function () {
-    var queue = [];
-    for (i = 0; i < tp.cards.length; i++) if (isNeedsWork(best, i)) queue.push({ t: best, i: i });
-    var mode = 'weak', label = tp.title + ' \u00b7 mistakes';
-    if (!queue.length) {
-      for (i = 0; i < tp.cards.length; i++) if (!isMastered(best, i)) queue.push({ t: best, i: i });
-      mode = 'drill'; label = 'Topic ' + tp.n + ' \u00b7 ' + tp.title;
-    }
-    startSession(mode, shuffle(queue), label, { scopeRef: { type: 'topic', n: best } });
-  });
-  return card;
 }
 /* ---------- stage + today ---------- */
 function stagePath() { return store.stage ? STAGES[store.stage].path : [0, 1, 2, 3]; }
@@ -610,7 +564,6 @@ function todayCard() {
 }
 function gameMini(ico, bg, title, best, bestLabel, onTap) {
   var b = el('button', 'game-mini press'); b.type = 'button';
-  b.setAttribute('aria-label', title + ' — ' + bestLabel + ' ' + best);
   b.innerHTML = '<span class="gm-ico" style="background:' + bg + '">' + icon(ico, 24) + '</span>'
     + '<span class="gm-t"><b>' + title + '</b><small class="tabular">' + bestLabel + ': ' + best + '</small></span>';
   b.addEventListener('click', onTap);
@@ -646,7 +599,6 @@ function renderHome(root) {
   stagePath().forEach(function (hh2) { grid.appendChild(hubTile(hh2, function () { goHub(hh2); })); });
   var vids = el('button', 'hub-tile hub-tile-wide press'); vids.type = 'button';
   var totalVids = HUBS.reduce(function (a, _, hi) { return a + hubVideos(hi).length; }, 0);
-  vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
   vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 30) + '</span>'
     + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research, with lesson plans</small></span>'
     + '<span class="hub-meta tabular">' + totalVids + ' videos</span>'
@@ -658,10 +610,9 @@ function renderHome(root) {
   });
   grid.appendChild(vids);
   var scen = el('button', 'hub-tile hub-tile-wide press'); scen.type = 'button';
-  scen.setAttribute('aria-label', 'Scenarios: ' + SCENARIOS.length + ' scenarios');
   scen.innerHTML = '<span class="hub-ico">' + icon('target', 30) + '</span>'
     + '<span class="hub-t"><b>Scenarios</b><small>First-arriving size-ups from Sets &amp; Reps</small></span>'
-    + '<span class="hub-meta tabular">' + SCENARIOS.length + (SCENARIOS.length === 1 ? ' scenario' : ' scenarios') + '</span>'
+    + (typeof SCENARIOS !== 'undefined' ? '<span class="hub-meta tabular">' + SCENARIOS.length + ' scenarios</span>' : '')
     + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
   scen.addEventListener('click', function () { go('scenarios'); });
   grid.appendChild(scen);
@@ -698,7 +649,6 @@ function renderHome(root) {
 function topicCard(n) {
   var tp = TOPICS[n], st = topicStats(n);
   var b = el('button', 'tcard press'); b.type = 'button';
-  b.setAttribute('aria-label', tp.title + ': ' + st.mastered + ' of ' + tp.cards.length + ' mastered');
   var inner = el('div', 'tcard-inner');
   inner.appendChild(el('div', 'tnum', String(tp.n)));
   var txt = el('div'); txt.appendChild(el('h3', null, tp.title)); txt.appendChild(el('p', 'sub', tp.sub));
@@ -720,7 +670,6 @@ function examPrepCard() {
   var a = el('a', 'tcard press');
   a.href = 'paramedic-exam-prep.html';
   a.style.textDecoration = 'none';
-  a.setAttribute('aria-label', 'Paramedic Candidate Exam Prep: study guide, flashcards, and practice exams');
   var inner = el('div', 'tcard-inner');
   inner.appendChild(el('div', 'tnum', '\u2605'));
   var txt = el('div');
@@ -732,7 +681,6 @@ function examPrepCard() {
 }
 function soonCard(k) {  var ph = SOON[k];
   var b = el('button', 'tcard soon press'); b.type = 'button';
-  b.setAttribute('aria-label', ph.title + ': coming soon');
   var inner = el('div', 'tcard-inner');
   var lock = el('div', 'tnum lock'); lock.innerHTML = icon('lock', 20);
   var txt = el('div'); var h = el('h3', null, ph.title);
@@ -754,7 +702,6 @@ function studyHome(root) {
     (function (hh) {
       var st = hubStats(hh), hub = HUBS[hh];
       var b = el('button', 'hub-row press'); b.type = 'button';
-      b.setAttribute('aria-label', hub.title + ': ' + st.mastered + ' of ' + st.cards + ' drills mastered');
       var pct = st.cards ? Math.round(st.mastered / st.cards * 100) : 0;
       b.innerHTML = '<span class="hub-ico">' + icon(hub.icon, 28) + '</span>'
         + '<span class="hub-t"><b>' + hub.title + '</b><small>' + hub.sub + ' &middot; <span class="tabular">' + st.cards + '</span> drills</small></span>'
@@ -767,7 +714,6 @@ function studyHome(root) {
 
   var vids = el('button', 'hub-row press'); vids.type = 'button';
   var totalVids = HUBS.reduce(function (a, _, hi) { return a + hubVideos(hi).length; }, 0);
-  vids.setAttribute('aria-label', 'Training videos: ' + totalVids + ' videos');
   vids.innerHTML = '<span class="hub-ico">' + icon('playcircle', 28) + '</span>'
     + '<span class="hub-t"><b>Training videos</b><small>UL FSRI research &middot; <span class="tabular">' + totalVids + '</span> videos</small></span>'
     + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
@@ -843,7 +789,6 @@ function hubView(root, h) {
 }
 function studyLinkRow(ic, title, sub, onTap) {
   var b = el('button', 'hub-row press'); b.type = 'button';
-  b.setAttribute('aria-label', title);
   b.innerHTML = '<span class="hub-ico">' + icon(ic, 28) + '</span>'
     + '<span class="hub-t"><b></b><small></small></span>'
     + '<span class="cc-go">' + icon('chevL', 22) + '</span>';
@@ -889,7 +834,7 @@ function extCard(title, desc, url, meta) {
   var card = el('div', 'vid-card');
   var a = el('a', 'vid-row press'); a.href = url; a.target = '_blank'; a.rel = 'noopener';
   var pl = el('span', 'vid-play'); pl.innerHTML = icon('ext', 20);
-  var txt = el('span', 'vid-txt'); txt.appendChild(el('h4', null, title));
+  var txt = el('span', 'vid-txt'); txt.appendChild(el('h3', null, title));
   txt.appendChild(el('p', null, desc)); a.appendChild(pl); a.appendChild(txt);
   if (meta) a.appendChild(el('span', 'dur-chip tabular', meta));
   card.appendChild(a);
@@ -995,7 +940,7 @@ function videoRow(v, topicN) {
   var card = el('div', 'vid-card');
   var a = el('a', 'vid-row press'); a.href = v.url; a.target = '_blank'; a.rel = 'noopener';
   var pl = el('span', 'vid-play'); pl.innerHTML = icon('play', 20);
-  var txt = el('span', 'vid-txt'); txt.appendChild(el('h4', null, v.title));
+  var txt = el('span', 'vid-txt'); txt.appendChild(el('h3', null, v.title));
   var p = el('p', null, v.desc || ''); txt.appendChild(p);
   a.appendChild(pl); a.appendChild(txt);
   if (v.dur) a.appendChild(el('span', 'dur-chip tabular', v.dur));
@@ -1233,6 +1178,7 @@ function renderStudyCard(root, s) {
       showAnswer(ansBox, card);
       renderGradeButtons(root, s, cur);
       hint.classList.add('hidden');
+      revealIntoView(ansBox);
     }, { once: true });
     root.appendChild(hint);
   } else {
@@ -1243,6 +1189,7 @@ function renderStudyCard(root, s) {
       showAnswer(ansBox, card);
       renderGradeButtons(root, s, cur);
       rev.remove();
+      revealIntoView(ansBox);
     });
     var wrap = el('div', 'drill-cta'); wrap.appendChild(rev);
     root.appendChild(wrap);
@@ -1288,6 +1235,14 @@ function renderMCCard(root, s, cur, card) {
   var ansBox = el('div', 'hidden'); dc.appendChild(ansBox);
   root.appendChild(dc);
 }
+function revealIntoView(box) {
+  setTimeout(function () {
+    var h = box.querySelector('.a-label') || box;
+    if (!h.hasAttribute('tabindex')) h.setAttribute('tabindex', '-1');
+    try { h.focus({ preventScroll: true }); } catch (e) { /* old browsers */ }
+    if (box.scrollIntoView) box.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }, 30);
+}
 function showAnswer(box, card) {
   box.classList.remove('hidden');
   box.appendChild(el('div', 'a-label', 'Answer'));
@@ -1296,7 +1251,7 @@ function showAnswer(box, card) {
   box.appendChild(el('p', 'why', card.why));
 }
 function renderGradeButtons(root, s, cur) {
-  var row = el('div', 'btn-row');
+  var row = el('div', 'btn-row grade-row');
   var miss = el('button', 'btn danger-line press'); miss.type = 'button';
   miss.innerHTML = icon('x', 20) + '<span>Missed it</span>';
   var got = el('button', 'btn good press'); got.type = 'button';
@@ -1440,7 +1395,6 @@ function scopeOptions(onPick) {
 }
 function gameTile(ico, bg, title, desc, best, bestLabel, onTap) {
   var b = el('button', 'game-tile press'); b.type = 'button';
-  b.setAttribute('aria-label', title + ' — ' + bestLabel + ' ' + best);
   b.innerHTML = '<span class="gt-ico" style="background:' + bg + '">' + icon(ico, 30) + '</span>'
     + '<b>' + title + '</b><span class="gt-desc">' + desc + '</span>'
     + '<span class="gt-best tabular">' + best + ' <small>' + bestLabel + '</small></span>';
@@ -1663,7 +1617,25 @@ function endScenRun() { state.scenRun = null; render(); window.scrollTo(0, 0); }
 function scenLog(run, label, pick, clears, unit) {
   run.log.push({ label: label, pick: pick, clears: clears || [], unit: unit || null });
 }
+var scenariosLoading = false;
+function loadScenarios(cb) {
+  if (typeof SCENARIOS !== 'undefined') { if (cb) cb(); return; }
+  var waiters = loadScenarios.waiters = loadScenarios.waiters || [];
+  if (cb) waiters.push(cb);
+  if (scenariosLoading) return;
+  scenariosLoading = true;
+  var sc = document.createElement('script');
+  sc.src = 'scenarios.js';
+  sc.onload = function () { scenariosLoading = false; var w = waiters.splice(0); w.forEach(function (f) { f(); }); };
+  sc.onerror = function () { scenariosLoading = false; };
+  document.head.appendChild(sc);
+}
 function renderScenarios(root) {
+  if (typeof SCENARIOS === 'undefined') {
+    root.appendChild(el('p', 'sec-sub', 'Loading scenarios\u2026'));
+    loadScenarios(function () { if (state.tab === 'scenarios') render(); });
+    return;
+  }
   if (state.scenRun) { renderScenarioRun(root); return; }
   var head = el('div', 'view-head animate-fade-in');
   head.innerHTML = '<span class="kicker">The game</span><h2>Scenarios</h2>'
@@ -1678,7 +1650,6 @@ function renderScenarios(root) {
   root.appendChild(legend);
   SCENARIOS.forEach(function (sc, i) {
     var b = el('button', 'tcard press'); b.type = 'button';
-    b.setAttribute('aria-label', sc.title);
     var inner = el('div', 'tcard-inner');
     inner.appendChild(el('div', 'tnum', String(i + 1)));
     var txt = el('div');
@@ -1960,13 +1931,6 @@ function scopeLabel(sc) {
 /* ============================================================
    PRACTICE EXAM — 30-question paramedic test simulation
    ============================================================ */
-var EXAM_LEN = 30, EXAM_TOPIC = -1;
-function paramedicTopic() {
-  if (EXAM_TOPIC < 0) {
-    for (var i = 0; i < TOPICS.length; i++) if (/^Paramedic (Exam|School) Prep/.test(TOPICS[i].title)) { EXAM_TOPIC = i; break; }
-  }
-  return EXAM_TOPIC;
-}
 /* ---------- exams: practice (feedback each item) or timed simulation ---------- */
 var EXAM_KINDS = {
   candidate: { title: 'Paramedic candidate simulation', sub: '150 questions · 3 hours · 70% to pass · all 54 competencies', n: 150, mins: 180, pass: 70, hubs: [3], compOnly: true, timed: true },
@@ -2122,14 +2086,13 @@ function renderExamView(root) {
   }
   root.appendChild(dc);
 
-  var cta = el('div', 'drill-cta action-bar');
-  if (showFb || (run.timed && run.pos > 0)) {
-    if (showFb) {
-      var nb = el('button', 'btn block press exam-next', run.pos + 1 >= run.items.length ? 'See your score' : 'Next question'); nb.type = 'button';
-      nb.addEventListener('click', function () { run.pos++; render(); window.scrollTo(0, 0); });
-      cta.appendChild(nb);
-    }
+  if (showFb) {
+    var nxw = el('div', 'drill-cta');
+    var nb = el('button', 'btn block press exam-next', run.pos + 1 >= run.items.length ? 'See your score' : 'Next question'); nb.type = 'button';
+    nb.addEventListener('click', function () { run.pos++; render(); window.scrollTo(0, 0); });
+    nxw.appendChild(nb); root.appendChild(nxw);
   }
+  var cta = el('div', 'exam-controls');
   if (run.timed) {
     var row = el('div', 'btn-row');
     var pv = el('button', 'btn ghost press', 'Back'); pv.type = 'button'; pv.disabled = run.pos === 0;
@@ -2332,6 +2295,8 @@ function renderCalcView(root) {
   var inp = document.createElement('input');
   inp.type = 'number'; inp.inputMode = 'decimal'; inp.step = 'any'; inp.className = 'calc-input';
   inp.placeholder = 'Your answer'; inp.setAttribute('aria-label', 'Your answer');
+  inp.setAttribute('enterkeyhint', 'done');
+  inp.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); var c = document.querySelector('.calc-check'); if (c) c.click(); } });
   row.appendChild(inp);
   if (p.unit) { var u = el('span', 'calc-unit', p.unit); row.appendChild(u); }
   dc.appendChild(row);
@@ -2339,7 +2304,7 @@ function renderCalcView(root) {
   root.appendChild(dc);
 
   var cta = el('div', 'drill-cta');
-  var chk = el('button', 'btn block press', 'Check it'); chk.type = 'button';
+  var chk = el('button', 'btn block press calc-check', 'Check it'); chk.type = 'button';
   chk.addEventListener('click', function () {
     if (run.checked) return;
     var val = parseFloat(inp.value);
@@ -2517,10 +2482,23 @@ function openSheet(title, sub, options) {
   sheet.appendChild(cancel);
   scrim.addEventListener('click', closeSheet);
   root.appendChild(scrim); root.appendChild(sheet);
-  sheetOpener = document.activeElement;
-  var first = sheet.querySelector('button'); if (first) first.focus();
+  sheetOpened(sheet);
 }
 var sheetOpener = null;
+function sheetOpened(sheet) {
+  sheet.setAttribute('aria-modal', 'true');
+  if (!sheetOpener) sheetOpener = document.activeElement;
+  var first = sheet.querySelector('button, input, textarea, [tabindex]'); if (first) first.focus();
+}
+document.addEventListener('keydown', function (ev) {
+  if (ev.key !== 'Tab') return;
+  var sheet = document.querySelector('#sheet-root .sheet'); if (!sheet) return;
+  var f = [].slice.call(sheet.querySelectorAll('button, input, textarea, select, a[href], [tabindex]:not([tabindex="-1"])')).filter(function (x) { return !x.disabled; });
+  if (!f.length) return;
+  var first = f[0], last = f[f.length - 1];
+  if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+  else if (!ev.shiftKey && (document.activeElement === last || !sheet.contains(document.activeElement))) { ev.preventDefault(); first.focus(); }
+});
 function closeSheet() {
   var had = document.getElementById('sheet-root').innerHTML !== '';
   document.getElementById('sheet-root').innerHTML = '';
@@ -2591,3 +2569,5 @@ try { history.replaceState(null, '', navHash()); } catch (e) { /* ignore */ }
 document.getElementById('brand-icon').innerHTML = icon('flame', 22);
 render();
 renderStorageBanner();
+// Fetch the scenario data in the background once the first screen is showing.
+setTimeout(function () { loadScenarios(function () { if (state.tab === 'home' && !anyRun()) render(); }); }, 400);

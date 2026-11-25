@@ -39,7 +39,10 @@ const sw = read('sw.js');
 const pre = (sw.match(/var PRECACHE = \[([\s\S]*?)\];/) || [])[1] || '';
 const precached = new Set([...pre.matchAll(/'([^']+)'/g)].map(m => m[1]));
 const html = read('index.html');
-const loaded = [...html.matchAll(/<script src="([^"]+)"/g), ...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m => m[1]).filter(u => !/^https?:/.test(u));
+const scripts = [...html.matchAll(/<script (?:defer )?src="([^"]+)"/g)].map(m => m[1]);
+const sheets = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(m => m[1]);
+// scenarios.js is loaded by app.js after the first screen, so it must be precached too.
+const loaded = ['scenarios.js', ...scripts, ...sheets].filter(u => !/^https?:/.test(u));
 loaded.forEach(u => { if (!precached.has(u)) fail(`index.html loads ${u} but sw.js PRECACHE doesn't list it (it won't work offline)`); });
 try {
   eval(read('scenarios.js') + ';global.SCENARIOS=SCENARIOS;');

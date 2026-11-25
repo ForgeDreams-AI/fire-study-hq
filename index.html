@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#B3271E" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23B3271E' d='M12 2c1 4-3 5-3 9a5 5 0 0 0 10 .5C20.5 8 16 6 14 2c-3 2-5 5-5 8-1-1-1.5-2.5-1.5-4C5.7 7.6 5 10 5 12a7 7 0 0 0 14 0c0-4.5-4-7.5-7-10z'/%3E%3C/svg%3E" />
@@ -11,13 +12,11 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Fire Study" />
 <meta name="description" content="Phoenix FD study app: recruit to probie. Flashcards, games, scenarios and exam prep that work offline." />
 <title>Fire Study HQ</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts/fonts.css" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -34,6 +33,7 @@
     </div>
   </header>
 
+  <h1 class="sr-only sr-h1">Fire Study HQ</h1>
   <main id="view-root" tabindex="-1" aria-label="Main content"></main>
 
   <nav class="tabbar" aria-label="Primary">
@@ -43,12 +43,11 @@
 
 <div id="sheet-root"></div>
 
-<script src="data.js"></script>
-<script src="scenarios.js"></script>
-<script src="checklists.js"></script>
-<script src="checklists-ui.js"></script>
-<script src="ecg.js"></script>
-<script src="pwa.js"></script>
-<script src="app.js"></script>
+<script defer src="data.js"></script>
+<script defer src="checklists.js"></script>
+<script defer src="checklists-ui.js"></script>
+<script defer src="ecg.js"></script>
+<script defer src="pwa.js"></script>
+<script defer src="app.js"></script>
 </body>
 </html>

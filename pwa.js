@@ -56,6 +56,9 @@
         'Scroll down and tap “Add to Home Screen”, then “Add”.',
         'Open Fire Study from the new home-screen icon.'
       ]));
+      var note = el('p', 'sub');
+      note.textContent = 'Already studied here in Safari? The home-screen app starts with its own empty progress. Back up first (Progress \u2192 App \u2192 Back up), then restore inside the app.';
+      body.appendChild(note);
     });
   }
   function stepsList(items) {
@@ -97,6 +100,7 @@
     sheet.appendChild(cancel);
     scrim.addEventListener('click', closeSheet);
     root.appendChild(scrim); root.appendChild(sheet);
+    if (typeof sheetOpened === 'function') sheetOpened(sheet);
   }
 
   /* ---------- daily reminder via calendar ----------
@@ -124,7 +128,43 @@
       'URL:' + url,
       'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Fire Study HQ — study time', 'TRIGGER:PT0M', 'END:VALARM',
       'END:VEVENT', 'END:VCALENDAR', ''
-    ].join('\r\n');
+    ].map(foldIcs).join('\r\n');
+  }
+  // RFC 5545: lines longer than 75 octets continue on the next line after a space.
+  function foldIcs(line) {
+    var out = [], cur = '', n = 0;
+    for (var ch of line) {
+      var len = unescape(encodeURIComponent(ch)).length;
+      if (n + len > (out.length ? 74 : 75)) { out.push(cur); cur = ''; n = 0; }
+      cur += ch; n += len;
+    }
+    out.push(cur);
+    return out.join('\r\n ');
+  }
+  function isAndroid() { return /Android/i.test(navigator.userAgent || ''); }
+  function googleCalendarUrl(hhmm) {
+    var parts = hhmm.split(':'), now = new Date();
+    var start = new Date(now.getFullYear(), now.getMonth(), now.getDate(), +parts[0], +parts[1]);
+    if (start < now) start.setDate(start.getDate() + 1);
+    var end = new Date(start.getTime() + 15 * 60000);
+    function g(d) { return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00'; }
+    var url = location.origin + location.pathname.replace(/[^/]*$/, '');
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+      + '&text=' + encodeURIComponent('Fire Study HQ \u2014 put in the reps')
+      + '&dates=' + g(start) + '/' + g(end)
+      + '&recur=' + encodeURIComponent('RRULE:FREQ=DAILY')
+      + '&details=' + encodeURIComponent('Clear what\u2019s due. ' + url);
+  }
+  function deliverIcs(text) {
+    var name = 'fire-study-reminder.ics';
+    try {
+      var file = new File([text], name, { type: 'text/calendar' });
+      if (isIOS() && navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({ files: [file], title: 'Fire Study reminder' }).catch(function () { /* cancelled */ });
+        return;
+      }
+    } catch (e) { /* fall back */ }
+    saveFile(name, 'text/calendar', text, false);
   }
   function saveFile(name, mime, text, openInPlace) {
     var blob = new Blob([text], { type: mime });
@@ -146,11 +186,22 @@
       var inp = el('input', 'time-input'); inp.type = 'time'; inp.value = cur;
       inp.setAttribute('aria-label', 'Reminder time');
       body.appendChild(inp);
-      var add = el('button', 'btn block press', 'Add to calendar'); add.type = 'button';
+      if (isAndroid()) {
+        // Google Calendar on Android can't import .ics files, so open its own add-event page.
+        var gc = el('button', 'btn block press', 'Add to Google Calendar'); gc.type = 'button';
+        gc.addEventListener('click', function () {
+          var t = inp.value || '19:00';
+          lsSet(REMINDER_KEY, t);
+          window.open(googleCalendarUrl(t), '_blank', 'noopener');
+          closeSheet(); rerenderIf('progress');
+        });
+        body.appendChild(gc);
+      }
+      var add = el('button', 'btn block press' + (isAndroid() ? ' ghost' : ''), isAndroid() ? 'Other calendar app (.ics file)' : 'Add to calendar'); add.type = 'button';
       add.addEventListener('click', function () {
         var t = inp.value || '19:00';
         lsSet(REMINDER_KEY, t);
-        saveFile('fire-study-reminder.ics', 'text/calendar', buildICS(t), isIOS());
+        deliverIcs(buildICS(t));
         closeSheet();
         rerenderIf('progress');
       });

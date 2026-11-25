@@ -5,7 +5,7 @@
    VERSION must change on every deploy that touches an app file, or installed
    apps never see the update. Run `node tools/check.js` before pushing: it fails
    when app files changed without a bump. */
-var VERSION = 'fshq-v7';
+var VERSION = 'fshq-v8';
 var PRECACHE = [
   './',
   'index.html',
@@ -19,6 +19,19 @@ var PRECACHE = [
   'ecg.js',
   'paramedic-exam-prep.html',
   'manifest.webmanifest',
+  'fonts/fonts.css',
+  'fonts/inter-latin-400-normal.woff2',
+  'fonts/inter-latin-500-normal.woff2',
+  'fonts/inter-latin-600-normal.woff2',
+  'fonts/inter-latin-700-normal.woff2',
+  'fonts/inter-latin-800-normal.woff2',
+  'fonts/barlow-condensed-latin-500-normal.woff2',
+  'fonts/barlow-condensed-latin-600-normal.woff2',
+  'fonts/barlow-condensed-latin-700-normal.woff2',
+  'fonts/barlow-latin-400-normal.woff2',
+  'fonts/barlow-latin-500-normal.woff2',
+  'fonts/barlow-latin-600-normal.woff2',
+  'fonts/barlow-latin-700-normal.woff2',
   'icons/icon-192.png',
   'icons/icon-512.png',
   'icons/maskable-512.png',
@@ -38,8 +51,6 @@ var PRECACHE = [
   'assets/scenarios/parkinggarage-arrival.jpg',
   'assets/scenarios/pizza-arrival.jpg'
 ];
-var FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
-
 self.addEventListener('install', function (e) {
   // No skipWaiting here: the page asks for it when the user taps Reload.
   e.waitUntil(caches.open(VERSION).then(function (c) {
@@ -58,7 +69,6 @@ self.addEventListener('message', function (e) {
   if (e.data === 'SKIP_WAITING') self.skipWaiting();
 });
 
-var FONT_CACHE = 'fshq-fonts';
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET') return;
@@ -75,13 +85,6 @@ self.addEventListener('fetch', function (e) {
         }).catch(function () {
           return req.mode === 'navigate' ? c.match('index.html') : Response.error();
         });
-      });
-    }));
-  } else if (FONT_HOSTS.indexOf(url.hostname) !== -1) {
-    // Fonts never change: cache-first, kept across versions.
-    e.respondWith(caches.open(FONT_CACHE).then(function (c) {
-      return c.match(req).then(function (hit) {
-        return hit || fetch(req).then(function (res) { if (res && (res.ok || res.type === 'opaque')) c.put(req, res.clone()); return res; });
       });
     }));
   }
