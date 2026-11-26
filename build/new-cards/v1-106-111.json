@@ -1,0 +1,1179 @@
+{
+ "topics": [
+  {
+   "title": "Vol I: Media, Stations & Public Contact (106–107)",
+   "sub": "Interview requests and subpoenas, media requests, station tours and apparatus use, ride-alongs, and charitable contributions.",
+   "concepts": [
+    "<b>106.05</b>: Civil interview requests (City not a party) are not granted except extraordinary circumstances with City Attorney approval; criminal witness interviews are always granted.",
+    "<b>106.05</b>: Criminal interviews scheduled 0800–1800 Mon–Fri; call the subpoena contact number the afternoon before court; use defendant's name and case number.",
+    "<b>106.05</b>: Witness fee checks are endorsed to the Public Records Supervisor; process servers for PFD/Fire Chief go to the City Clerk.",
+    "<b>106.09</b>: Media requests on form 95-102, approved by the Assistant Fire Chief over Public Affairs; non-commercial city-business use is free.",
+    "<b>107.01</b>: Tours limited to common areas; civilians never use tools/equipment; no tours at elevated threat levels. Extended out-of-service: notify BC and AHQ.",
+    "<b>107.02A</b>: Ride-alongs: 18+ (or qualifying cadet/family), paperwork on file with Fire Investigations Unit, general public not within 6 months; Company Officer has final say.",
+    "<b>107.03</b>: Solicitations: $100 and lower = first-line supervisor; $101–$499 = Deputy Chief/Section Administrator; $500+ = Committee and Fire Chief. Council approval over $1,000; no cash."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 106.05, an attorney in a civil lawsuit that does not involve the City asks to interview you about a call. What is PFD policy?",
+     "a": "Civil interview requests are not granted, except under extraordinary circumstances approved by the City Attorney.",
+     "why": "M.P. 106.05: Interview requests in civil cases where the City is not a party \"will not be granted, except under extraordinary circumstances,\" and then only with City Attorney approval.",
+     "opts": [
+      "Not granted, except in extraordinary circumstances approved by the City Attorney",
+      "Granted, as long as the interview is held during work hours with a supervisor present",
+      "Granted only if the Public Records Supervisor attends and records the interview",
+      "Left to the employee's choice, since civil cases do not involve on-duty conduct"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, a defense attorney in a criminal case requests a witness interview with you about an on-duty call. What is PFD policy?",
+     "a": "Employees will grant witness interview requests in all criminal cases.",
+     "why": "M.P. 106.05: \"Employees will grant witness interview requests in all criminal cases,\" whether requested by the prosecutor or defense counsel.",
+     "opts": [
+      "Employees grant witness interview requests in all criminal cases",
+      "Only interviews requested by the prosecutor's office are granted",
+      "Defense interviews require approval from the City Attorney first",
+      "Criminal interviews are refused unless the employee is subpoenaed"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, when should a criminal case witness interview normally be scheduled?",
+     "a": "During the employee's work hours, 0800 to 1800 hours, Monday through Friday.",
+     "why": "M.P. 106.05: \"The interview should be scheduled during the employee's work hours from 0800 to 1800 hours, Monday through Friday.\"",
+     "opts": [
+      "During work hours, 0800–1800, Monday through Friday",
+      "On the employee's next day off, paid at the Call Out rate",
+      "Any time 0700–1900, seven days a week, at the attorney's office",
+      "Only at the start of shift, 0700–0900, at the employee's station"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, in a Maricopa County criminal case the prosecutor tells you they won't attend your defense interview. What should you do?",
+     "a": "Notify the Public Records Supervisor, who notifies the Assistant City Attorney for the Fire Department.",
+     "why": "M.P. 106.05: If the prosecutor does not plan to attend, the employee notifies the Public Records Supervisor, who notifies the Assistant City Attorney, who \"may arrange for an Assistant City Attorney to be present.\"",
+     "opts": [
+      "Notify the Public Records Supervisor, who tells the Assistant City Attorney",
+      "Cancel the interview, since one cannot be held without the prosecutor there",
+      "Notify your Battalion Chief, who will attend the interview with you instead",
+      "Hold the interview alone and send a written summary to Human Resources afterward"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, you've been served a criminal subpoena to testify. When must you call the contact number on it to verify you need to appear?",
+     "a": "On the afternoon before the required court appearance.",
+     "why": "M.P. 106.05: The employee must call \"the contact number on the subpoena on the afternoon before the required court appearance to verify the need to appear.\"",
+     "opts": [
+      "The afternoon before the appearance",
+      "The morning of the court appearance",
+      "Within 24 hours of receiving the subpoena",
+      "One week before the court appearance"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, when calling the court to ask about a trial or hearing you were subpoenaed for, what information should you use?",
+     "a": "The defendant's name and the case number, not the EMS/Fire incident report number.",
+     "why": "M.P. 106.05: \"To inquire about a trial or hearing, use the defendant's name and the case number. DO NOT use the EMS/FIRE incident report number.\"",
+     "opts": [
+      "The defendant's name and case number",
+      "The EMS/Fire incident report number",
+      "Your employee ID and the incident date",
+      "The patient's name and the run number on the ePCR"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, you get a witness fee check after testifying about an on-duty call. What do you do with it?",
+     "a": "Endorse the check and forward it to the Public Records Supervisor.",
+     "why": "M.P. 106.05: A member who receives a witness fee for official-duty testimony \"must endorse the check and forward it to the Public Records Supervisor.\"",
+     "opts": [
+      "Endorse it and forward it to the Public Records Supervisor",
+      "Keep it, since witness fees belong to the subpoenaed member",
+      "Return it uncashed to the attorney who issued the subpoena",
+      "Turn it in to Fiscal Management with your overtime slip"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.05, a process server comes to the station to serve a lawsuit on the Fire Chief. What do you do?",
+     "a": "Refer the process server to the City Clerk's office.",
+     "why": "M.P. 106.05: Process servers attempting to serve lawsuits, notices of claim or deposition subpoenas on the City, PFD or the Fire Chief are referred \"to the City Clerk's office.\"",
+     "opts": [
+      "Refer the process server to the City Clerk's office",
+      "Accept the papers and fax them to the Fire Chief's office",
+      "Refer them to the Public Records Supervisor for acceptance",
+      "Have the Company Officer sign for them as the PFD agent"
+     ],
+     "src": "M.P. 106.05"
+    },
+    {
+     "q": "Per M.P. 106.09, who must review and approve requests for Phoenix Fire Department audio, video or written media?",
+     "a": "The Assistant Fire Chief responsible for the Public Affairs Section.",
+     "why": "M.P. 106.09: \"All requests must be reviewed and approved by the Assistant Fire Chief responsible for the Public Affairs Section,\" submitted on the Media/Information Request Form.",
+     "opts": [
+      "The Assistant Fire Chief over Public Affairs",
+      "The Public Records Supervisor in Human Resources",
+      "The requesting member's Battalion Chief or Section Head",
+      "The City Attorney assigned to the Fire Department"
+     ],
+     "src": "M.P. 106.09"
+    },
+    {
+     "q": "Per M.P. 106.09, a City employee requests PFD training video for a non-commercial use on approved city business time. What is the cost?",
+     "a": "No charge to the requesting employee.",
+     "why": "M.P. 106.09: Material used for non-commercial purposes on approved city business time \"shall be provided at no charge\"; commercial use requires the employee to pay all costs.",
+     "opts": [
+      "No charge to the employee",
+      "Half the production cost",
+      "The full copying cost only",
+      "Full cost, paid in advance"
+     ],
+     "src": "M.P. 106.09"
+    },
+    {
+     "q": "Per M.P. 106.09, which outside requesters can be exempted from the media-request stipulations (such as paying full cost), and with whose approval?",
+     "a": "Automatic/Mutual Aid System participants seeking media of incidents in their jurisdiction or for training, with Fire Chief approval.",
+     "why": "M.P. 106.09: Requests from Phoenix Regional Automatic/Mutual Aid participants for documentation of their incidents or for training \"can be exempted from these stipulations with the approval of the Fire Chief.\"",
+     "opts": [
+      "Auto/Mutual Aid partners, for their incidents or training, with Fire Chief OK",
+      "News media outlets covering a working incident, with Public Affairs approval",
+      "Families of patients seeking incident video, with City Attorney approval",
+      "Nonprofit groups making safety videos, with Battalion Chief approval"
+     ],
+     "src": "M.P. 106.09"
+    },
+    {
+     "q": "Per M.P. 107.01, you're giving a public station tour. Which areas may the tour include?",
+     "a": "Common areas such as the apparatus bays, day room, dining room and associated corridors.",
+     "why": "M.P. 107.01: \"Tours shall be limited to common areas such as apparatus bays, day room, dining room, and associated corridors.\"",
+     "opts": [
+      "Common areas: bays, day room, dining room, corridors",
+      "Any area of the station the Company Officer chooses to show",
+      "Apparatus bays and dorms, but not the kitchen or offices",
+      "Only the apparatus bay and the front lobby or community room"
+     ],
+     "src": "M.P. 107.01"
+    },
+    {
+     "q": "Per M.P. 107.01, a child on a station tour asks to slide down the pole and try the spreaders. What does the MP say?",
+     "a": "Civilians are prohibited from using tools or equipment, including the fire pole, under any circumstances; staff may demonstrate.",
+     "why": "M.P. 107.01: Staff may demonstrate equipment and how to slide down a fire pole, but \"civilians are prohibited from using these types of tools and/or equipment under any circumstances.\"",
+     "opts": [
+      "Not allowed; civilians may only watch staff demonstrate tools and the pole",
+      "The pole is allowed with a firefighter spotting, but tools are not allowed",
+      "Both are allowed if a parent signs a liability waiver at the station",
+      "Allowed at the Company Officer's discretion for groups under ten people"
+     ],
+     "src": "M.P. 107.01"
+    },
+    {
+     "q": "Per M.P. 107.01, what applies to station tours during times of elevated security threat levels?",
+     "a": "No station tours should be permitted and the facility must be in \"lock down\" mode.",
+     "why": "M.P. 107.01: \"During times of elevated security threat levels, no station tours should be permitted, and the facility must be in a 'lock down' mode.\"",
+     "opts": [
+      "No tours; the station goes into lock down mode",
+      "Tours continue but are limited to the apparatus bay",
+      "Tours require Battalion Chief approval and ID checks",
+      "Only pre-scheduled tours from the website may proceed"
+     ],
+     "src": "M.P. 107.01"
+    },
+    {
+     "q": "Per M.P. 107.01, your crew plans a non-emergency community event that will keep the engine out of service for an extended time. Who must be notified?",
+     "a": "The assigned Battalion Chief and the alarm room (AHQ).",
+     "why": "M.P. 107.01: \"For non-emergency activities that require an extended out of service time notification shall be made to the assigned Battalion Chief and alarm room (AHQ).\"",
+     "opts": [
+      "The assigned Battalion Chief and the alarm room (AHQ)",
+      "The Public Affairs Section and the District Commander",
+      "The Shift Commander and the Fire Chief's office",
+      "No one; daily activities are at the Captain's discretion"
+     ],
+     "src": "M.P. 107.01"
+    },
+    {
+     "q": "Per M.P. 107.01, can a fire apparatus go to a private or political event?",
+     "a": "Only if approved by the unit's Battalion Chief or direct supervisor and the event is directly related to fire safety or public education.",
+     "why": "M.P. 107.01: Apparatus \"will not be used for private, personal, or political events unless they are approved by the unit's Battalion Chief or direct supervisor,\" and only if the event is directly related to fire safety or public education.",
+     "opts": [
+      "Only with BC or supervisor approval, and only if tied to fire safety/education",
+      "Yes, if the Company Officer approves and the crew stays in service for calls",
+      "No; apparatus may never attend private, personal or political events at all",
+      "Yes, with Public Affairs approval and a cover company arranged in advance"
+     ],
+     "src": "M.P. 107.01"
+    },
+    {
+     "q": "Per M.P. 107.02A, a member of the general public asks to ride along. Which is a basic qualification?",
+     "a": "They must not have done a department ride-along in any of the preceding six months.",
+     "why": "M.P. 107.02A: A general public observer \"must not have participated in a department ride along in any one of the preceding six months prior to the scheduled date.\"",
+     "opts": [
+      "No PFD ride-along in the preceding six months",
+      "No PFD ride-along in the preceding twelve months",
+      "At least 21 years of age with a valid driver license",
+      "Sponsored in writing by a current PFD member"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.02A, where must a ride-along participant's background check, liability waiver and HIPAA Observer Agreement be on file?",
+     "a": "With the Fire Investigations Unit.",
+     "why": "M.P. 107.02A: Participants must \"have a completed and current background check, liability waiver and HIPAA Observer Agreement on file with Fire Investigations Unit.\"",
+     "opts": [
+      "With the Fire Investigations Unit",
+      "With the station's Company Officer",
+      "With the Public Affairs Section",
+      "With the Human Resources Division"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.02A, an interested citizen with no prior contact with PFD wants a ride-along. Through whom is it arranged?",
+     "a": "The PFD Recruitment Officer.",
+     "why": "M.P. 107.02A: \"Interested citizens with no prior point of contact with the PFD shall arrange a ride-along thru the PFD Recruitment Officer.\"",
+     "opts": [
+      "The PFD Recruitment Officer",
+      "The shift Battalion Chief",
+      "The Public Affairs Section",
+      "The station's Company Officer"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.02A, which of these is a ride-along participant restricted from doing?",
+     "a": "Riding in the front or back of a rescue apparatus.",
+     "why": "M.P. 107.02A: Participants are restricted from \"riding in the front or back of a rescue apparatus, utility vehicle, etc.,\" entering hazard zones, wearing a PFD uniform other than a safety vest, and patient contact.",
+     "opts": [
+      "Riding in a rescue apparatus, front or back",
+      "Wearing a Fire Department safety vest on scene",
+      "Riding in a seat-belted position on the engine",
+      "Observing an incident from near the apparatus"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.02A, a ride-along shows up in shorts and sandals and won't change. What happens?",
+     "a": "The Company Officer asks them to leave, they are excluded from future ride-alongs, and the CO notifies the Fire Investigations Unit.",
+     "why": "M.P. 107.02A: A participant failing dress requirements \"will be asked to leave the station by the Company Officer and be excluded from any future ride along programs,\" and the CO notifies Fire Investigations Unit for the database.",
+     "opts": [
+      "Asked to leave, barred from future ride-alongs, and FIU notified by the CO",
+      "Allowed to stay at the station but not ride on the apparatus for that shift",
+      "Sent home and allowed to reschedule once they get BC approval for the new date",
+      "Allowed to ride if issued turnout pants, with the incident logged by the BC"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.02A, who has the final say on whether a ride-along participant rides on an apparatus during the shift?",
+     "a": "The Company Officer.",
+     "why": "M.P. 107.02A: \"Company Officers have the final say on whether a Ride-Along participant will ride on his/her apparatus during the scheduled shift.\"",
+     "opts": [
+      "The Company Officer",
+      "The Battalion Chief",
+      "The Recruitment Officer",
+      "The Fire Investigations Unit"
+     ],
+     "src": "M.P. 107.02A"
+    },
+    {
+     "q": "Per M.P. 107.03, you want to solicit about $75 in food from a local store for a neighborhood event. What notification is required first?",
+     "a": "Notify your first-line supervisor before contacting the business; the supervisor approves and signs the Donation/Contribution Record.",
+     "why": "M.P. 107.03: For $100 and lower, \"Employees will notify their first-line supervisor of the need for donations prior to contacting citizens and/or businesses.\"",
+     "opts": [
+      "Notify your first-line supervisor before contacting the business",
+      "Get Deputy Chief/Section Administrator approval before any contact",
+      "Submit a memo to the Contribution/Solicitation Review Committee",
+      "None; solicitations under $100 need no notification at all"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, who must approve soliciting goods or services valued at $101 to $499, before contact with the donor?",
+     "a": "The Deputy Chief / Section Administrator (a Division Chief in their absence).",
+     "why": "M.P. 107.03: For $101 to $499, \"The Deputy Chief / Section Administrator will be notified and must approve the solicitation\" before contact; a Division Chief may approve in their absence.",
+     "opts": [
+      "The Deputy Chief/Section Administrator",
+      "The employee's first-line supervisor",
+      "The Review Committee and the Fire Chief",
+      "City Council through a Council Report"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, what approval is needed to solicit goods or services valued at $500 or higher?",
+     "a": "Prior review by the Contribution/Solicitation Review Committee and approval from the Fire Chief or designee.",
+     "why": "M.P. 107.03: \"Any solicitation for goods or services valued at $500 or higher requires prior review by the Contribution/Solicitation Review Committee and approval from the Fire Chief or designee.\"",
+     "opts": [
+      "Committee review plus Fire Chief or designee approval",
+      "Deputy Chief / Section Administrator approval only",
+      "First-line supervisor approval and a signed record",
+      "City Council approval through a Request for Council Action"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, above what amount does a donation require City Council approval in the form of an approved Council Report?",
+     "a": "Donations over $1,000.",
+     "why": "M.P. 107.03: \"City Council approval in the form of an approved Council Report is required for all donations over $1,000.\"",
+     "opts": [
+      "Over $1,000",
+      "Over $500",
+      "Over $5,000",
+      "Over $10,000"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, a citizen at a station offers your crew a cash donation. What do you do?",
+     "a": "Decline it; cash is not accepted, and refer the person to the Committee Chair.",
+     "why": "M.P. 107.03: \"Donations of cash or any form of money will not be accepted; employees will refer individuals who desire to do this to the Committee Chair.\"",
+     "opts": [
+      "Decline and refer them to the Committee Chair",
+      "Accept it and turn it in to Fiscal Management",
+      "Accept it if under $100 and log it on a record form",
+      "Have them write a check payable to the station crew"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, which donated items require a City inventory number?",
+     "a": "Items valued at $5,000 or more and all computer equipment.",
+     "why": "M.P. 107.03: \"Any items valued at $5,000 or more and all computer equipment\" obtained through solicitations or donations require a City inventory number.",
+     "opts": [
+      "Items worth $5,000 or more and all computer equipment",
+      "Items worth $1,000 or more, plus all vehicles and tools",
+      "Only items worth $500 or more that need Committee review",
+      "Only computer equipment, whatever its dollar value is"
+     ],
+     "src": "M.P. 107.03"
+    },
+    {
+     "q": "Per M.P. 107.03, can members solicit businesses for raffle prizes that will go to department members for personal use?",
+     "a": "No. It is prohibited; soliciting is allowed only if the item or 100% of proceeds goes to a recognized non-profit or outside agency.",
+     "why": "M.P. 107.03: Soliciting items \"when the item would benefit or be received solely for personal use by department members is prohibited\"; it's permitted when 100% of proceeds go to a 501(c)(3) or outside agency.",
+     "opts": [
+      "No; allowed only when items or 100% of proceeds go to a non-profit",
+      "Yes, with Deputy Chief approval when the prizes are worth under $500",
+      "Yes, if the event is department-sponsored and logged on a record form",
+      "Yes, as long as each prize is under $100 and the supervisor is notified"
+     ],
+     "src": "M.P. 107.03"
+    }
+   ]
+  },
+  {
+   "title": "Vol I: Safety Programs, Reporting & Records (110–111, 208) (Part 1)",
+   "sub": "Collision and injury reporting, firearms, hazard communication, the safety management system and hearing conservation.",
+   "concepts": [
+    "<b>110.01</b>: Report collisions to Alarm Headquarters immediately; don't move the vehicle unless a traffic hazard (mark tires first); stay until Police and BC finish.",
+    "<b>110.01</b>: Investigating BC ensures the collision report is submitted before end of shift; Safety Officer causes a fact-finding review.",
+    "<b>110.02</b>: Hazmat exposure to Banner University; burns to Maricopa Medical Center Burn Unit; non-emergency to HWC; after hours ER or Concentra Airport.",
+    "<b>110.02</b>: Industrial leave follow-up every 7 days (HWC); out-of-state 15+ days needs Industrial Commission OK; out 6+ months means Re-Entry program.",
+    "<b>110.03</b>: No deadly weapons on FD property; a firearm in a private vehicle must be locked inside and not visible. Notify the Company Officer/Section Head of violations.",
+    "<b>110.07</b>: HazCom: flammable liquid flash point below 100°F; \"Danger\" more severe than \"Warning\"; SDS has 16 sections; label all transferred containers.",
+    "<b>110.15</b>: Safety Section can cause immediate corrective action; Operations Safety Work Group reviews emergency-scene injuries and near misses.",
+    "<b>110.16</b>: Hearing: action level 85 dBA (8-hr TWA), PEL 90 dBA; STS = 10 dB avg at 2/3/4 kHz; retest within 30 days, written notice within 21 days."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 110.01, your engine is involved in a collision. Who must you report it to immediately?",
+     "a": "Alarm Headquarters.",
+     "why": "M.P. 110.01: \"All vehicle collisions involving Fire Department vehicles must be reported to Alarm Headquarters immediately,\" including unit, location, medical needs, cover needs and whether the vehicle is drivable.",
+     "opts": [
+      "Alarm Headquarters",
+      "Your Battalion Chief",
+      "The Police Department",
+      "The Department Safety Officer"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.01, after a collision your apparatus is blocking traffic and must be moved. What must you do first?",
+     "a": "Mark the position of the vehicle's tires before moving it.",
+     "why": "M.P. 110.01: \"Do not move the vehicle unless it is creating a traffic hazard. If you must move the vehicle mark the position of the vehicles tires prior to moving.\"",
+     "opts": [
+      "Mark the position of the tires before moving it",
+      "Wait for the Battalion Chief's approval to move it",
+      "Photograph it, then move it after Police arrive",
+      "Move it at once and draw a diagram afterward"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.01, how long must the crew remain at the collision scene?",
+     "a": "Until Police and the Battalion Chief have completed their investigations.",
+     "why": "M.P. 110.01: \"Remain at the collision scene until Police and the Battalion Chief have completed their investigations.\"",
+     "opts": [
+      "Until Police and the BC finish investigating",
+      "Until Police clear the scene and traffic is flowing",
+      "Until the vehicle is towed or driven from the scene",
+      "Until a cover company arrives to take your district"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.01, who is responsible for ensuring the collision report is completed, and by when?",
+     "a": "The investigating Battalion Chief, before the end of shift.",
+     "why": "M.P. 110.01: \"The investigating Battalion Chief shall ensure the collision accident report is completed and submitted prior to the end of shift.\"",
+     "opts": [
+      "The investigating Battalion Chief, by end of shift",
+      "The driver/engineer, within 24 hours of the collision",
+      "The Company Officer, within 72 hours of the collision",
+      "The Safety Officer, by the next business day"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.01, after a serious collision, how should the involved Fire Department employees be handled on scene?",
+     "a": "Isolated and taken to the command van (if on site) or a nearby station; they talk only to Police and Fire officials.",
+     "why": "M.P. 110.01: In a serious collision employees \"should be taken to the command van (if onsite) or to a nearby fire station\" and \"must not be permitted to talk to anyone about the collision except to Police and Fire officials.\"",
+     "opts": [
+      "Isolated in the command van or a nearby station; talk only to Police and Fire",
+      "Kept with their apparatus so they can give statements to all involved parties",
+      "Sent to the Health Center at once for drug screening before any interviews",
+      "Returned to service after giving the other driver their name and unit number"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.01, who must cause every collision involving FD apparatus and fleet vehicles to have a fact-finding review?",
+     "a": "The Safety Officer (who may delegate the investigation to the appropriate Battalion Chief).",
+     "why": "M.P. 110.01: \"The Safety Officer shall cause all vehicle collisions involving Fire Department apparatus and fleet vehicles to have a fact-finding review\" and may delegate it to the Battalion Chief.",
+     "opts": [
+      "The Safety Officer",
+      "The Apparatus Officer (RM14)",
+      "The Fleet Management Division Chief",
+      "City Risk Management"
+     ],
+     "src": "M.P. 110.01"
+    },
+    {
+     "q": "Per M.P. 110.02, a member has a possible hazardous materials exposure needing transport. Where should they go?",
+     "a": "The closest toxicological emergency center (Banner University).",
+     "why": "M.P. 110.02: \"If the injury involves possible poison or hazardous materials exposure, the member should be transported to the closest toxicological emergency center (Banner University).\"",
+     "opts": [
+      "The toxicology center at Banner University",
+      "The Maricopa Medical Center Burn Unit",
+      "The Fire Department Health and Wellness Center",
+      "Concentra Airport for occupational treatment"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, a member's burn injuries require medical attention. Where should they be transported?",
+     "a": "Maricopa Medical Center Burn Unit.",
+     "why": "M.P. 110.02: \"If burn injuries require medical attention, the member should be transported to Maricopa Medical Center Burn Unit.\"",
+     "opts": [
+      "Maricopa Medical Center Burn Unit",
+      "Banner University toxicology center",
+      "The Health and Wellness Center",
+      "The nearest urgent care facility"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, you're injured on duty at night when the HWC is closed and need treatment. Which is correct?",
+     "a": "Go to the ER or Concentra Airport; your supervisor has the Alarm Room notify C-959 and an on-call HWC clinician.",
+     "why": "M.P. 110.02: When the HWC is closed, go to the emergency room or Concentra Airport; the supervisor contacts the Alarm Room \"and have them notify C-959 and an on-call HWC clinician.\"",
+     "opts": [
+      "ER or Concentra Airport; Alarm Room notifies C-959 and on-call clinician",
+      "Wait until the HWC opens; only true emergencies go to the ER overnight",
+      "Go to any urgent care; then call the HWC yourself the next business day",
+      "ER only; the Battalion Chief then notifies Human Resources and payroll the next day"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, you are released from duty for a non-emergent on-duty injury after hours. What must you do next, or industrial leave won't be approved?",
+     "a": "Go to the HWC the next business day to be seen and confirm your work status.",
+     "why": "M.P. 110.02: \"The next business day, the member must go to the HWC to be seen and confirm their work status\"; if not seen then, \"industrial leave will not be approved.\"",
+     "opts": [
+      "Be seen at the HWC the next business day",
+      "Be seen at the HWC within 72 hours",
+      "Call South Shift Command before your next shift",
+      "File an injury report within 7 calendar days"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, how often must a member on industrial leave under HWC care report for a follow-up evaluation?",
+     "a": "Every 7 days.",
+     "why": "M.P. 110.02: Members on industrial leave under HWC care \"must report for a follow-up evaluation every 7 days\"; those under an outside provider for more than 30 days check in every 30 days.",
+     "opts": [
+      "Every 7 days",
+      "Every 14 days",
+      "Every 30 days",
+      "Every 3 days"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, a member on industrial leave wants to travel out of state. When is Industrial Commission of Arizona permission required?",
+     "a": "For travel out of state for 15 days or more.",
+     "why": "M.P. 110.02: \"Members who are on industrial leave and need to travel out of state for 15 days or more require permission from the Industrial Commission of Arizona.\"",
+     "opts": [
+      "Out of state for 15 days or more",
+      "Out of state for 7 days or more",
+      "Any out-of-state travel, for any length",
+      "Out of state for 30 days or more"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.02, a member is released to full duty after an injury. When must they complete the Re-Entry program?",
+     "a": "If they have been out of the field/assignment 6 months or more.",
+     "why": "M.P. 110.02: \"If the member has been out of the field/assignment 6 months or more, the member will be required to participate in the Re-Entry program.\"",
+     "opts": [
+      "If out of the field 6 months or more",
+      "If out of the field 30 days or more",
+      "If out of the field 3 months or more",
+      "If out of the field 1 year or longer"
+     ],
+     "src": "M.P. 110.02"
+    },
+    {
+     "q": "Per M.P. 110.03, under what conditions may a firearm be kept in your privately owned vehicle at a fire station?",
+     "a": "It must be securely locked inside the vehicle and not visible from outside.",
+     "why": "M.P. 110.03: State law allows a firearm in a privately owned vehicle when it is \"securely locked inside the vehicle AND... cannot be visible from outside the vehicle.\"",
+     "opts": [
+      "Locked inside the vehicle and not visible from outside",
+      "Unloaded and in the glove box, with the vehicle unlocked",
+      "In plain view on the seat but with a trigger lock on it",
+      "Only with written approval from the Battalion Chief"
+     ],
+     "src": "M.P. 110.03"
+    },
+    {
+     "q": "Per M.P. 110.03, you notice a crewmember's handgun on the seat of their truck in the station lot, visible through the window. Who must be notified?",
+     "a": "The Company Officer/Section Head.",
+     "why": "M.P. 110.03: \"The Company Officer/Section Head shall be notified\" when a firearm is brought into a facility in violation of the policy or a firearm in a private vehicle doesn't meet the requirements.",
+     "opts": [
+      "The Company Officer/Section Head",
+      "The Phoenix Police Department",
+      "The Office of Special Investigations",
+      "Alarm Headquarters"
+     ],
+     "src": "M.P. 110.03"
+    },
+    {
+     "q": "Per M.P. 110.03, who is exempt from the prohibition on carrying firearms on Fire Department property?",
+     "a": "Law enforcement officers and certified peace officers.",
+     "why": "M.P. 110.03: \"Law enforcement officers and certified peace officers are exempt from this procedure.\"",
+     "opts": [
+      "Law enforcement and certified peace officers",
+      "Fire investigators and Battalion Chiefs",
+      "Members with a valid concealed carry permit",
+      "No one; the ban applies to all persons"
+     ],
+     "src": "M.P. 110.03"
+    },
+    {
+     "q": "Per M.P. 110.07, what is the definition of a flammable liquid?",
+     "a": "Any liquid having a flash point below 100°F (37.8°C).",
+     "why": "M.P. 110.07: \"Flammable Liquid: Any liquid having a flash point below 100⁰F (37.8⁰C).\"",
+     "opts": [
+      "A liquid with a flash point below 100°F",
+      "A liquid with a flash point below 140°F",
+      "A liquid with a flash point below 200°F",
+      "A liquid with a boiling point below 100°F"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.07, on a GHS label, what do the signal words \"Danger\" and \"Warning\" indicate?",
+     "a": "\"Danger\" is used for the more severe hazards; \"Warning\" for the less severe hazards.",
+     "why": "M.P. 110.07: Signal words indicate relative severity: \"'Danger' is used for the more severe hazards, while 'warning' is used for the less severe hazards.\"",
+     "opts": [
+      "Danger marks more severe hazards; Warning marks less severe",
+      "Warning marks more severe hazards; Danger marks less severe",
+      "Danger marks health hazards; Warning marks physical hazards",
+      "Danger marks flammables; Warning marks corrosives and toxics"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.07, a Safety Data Sheet uses a 16-section format. What do Sections 1 through 8 contain?",
+     "a": "General information: identification, hazards, composition, safe handling and emergency control measures.",
+     "why": "M.P. 110.07: \"Sections 1 through 8 contain general information about the chemical, identification, hazards, composition, safe handling practices, and emergency control measures.\" Sections 9–16 hold technical data.",
+     "opts": [
+      "ID, hazards, composition, safe handling and emergency measures",
+      "Physical/chemical properties, stability, reactivity and toxicology",
+      "Regulatory, transport, disposal and ecological information only",
+      "Exposure limits, toxicology and manufacturer revision history"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.07, you need SDS information but have no access to a City of Phoenix terminal. What do you do?",
+     "a": "Call the 24/7 SDS emergency hotline.",
+     "why": "M.P. 110.07: \"If access to a City of Phoenix terminal is not available, SDS information can be retrieved by calling the SDS emergency hotline... This hotline is available 24/7.\"",
+     "opts": [
+      "Call the 24/7 SDS emergency hotline",
+      "Call the Health and Safety Section",
+      "Ask Alarm Headquarters to read the SDS to you",
+      "Check the ERG on the apparatus"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.07, before employees perform a non-routine task involving hazardous chemicals, what must be completed?",
+     "a": "A Job Hazard Analysis by the Health and Safety Section, and the employees must receive appropriate training.",
+     "why": "M.P. 110.07: Supervisors ensure employees do not perform non-routine tasks \"until a Job Hazard Analysis has been completed by the Fire Health and Safety Section and the employee has received appropriate training.\"",
+     "opts": [
+      "A Job Hazard Analysis by Health and Safety, and training",
+      "A signed waiver from each employee and the supervisor",
+      "A Battalion Chief walk-through and a written work permit",
+      "An updated annual chemical inventory for the site"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.07, you pour a cleaning chemical from its original drum into a spray bottle. Whose responsibility is it to label the new container?",
+     "a": "All Fire Department members: the identity and hazard warnings must be placed on all transferred containers.",
+     "why": "M.P. 110.07: \"It is the responsibility of all Fire Department Members to assure that the identity and the hazard warnings are placed on all containers that have been transferred from the original drum or container.\"",
+     "opts": [
+      "Every member must mark transferred containers with identity and hazards",
+      "Only the station's designated chemical inventory representative",
+      "The Safety and Prevention Section during its annual inventory",
+      "The chemical manufacturer, through its original shipping label and SDS"
+     ],
+     "src": "M.P. 110.07"
+    },
+    {
+     "q": "Per M.P. 110.15, the Safety Section discovers a hazardous practice during a review. What authority does it have?",
+     "a": "Authority to cause immediate corrective action.",
+     "why": "M.P. 110.15: The Safety Section \"acts as a fact-finding and review agency with the authority to cause immediate corrective action when any hazardous condition or practice is detected.\"",
+     "opts": [
+      "To cause immediate corrective action",
+      "To recommend action to the Fire Chief only",
+      "To issue discipline directly to members",
+      "To refer the issue to HR within 30 days"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.15, which work group reviews \"Near Miss\" reports and accident/injury reports from emergency scene operations?",
+     "a": "The Operations Safety Work Group.",
+     "why": "M.P. 110.15: The Operations Safety work group reviews \"accident and injury reports from emergency scene operations\" and \"Near Miss\" reports, making recommendations.",
+     "opts": [
+      "Operations Safety Work Group",
+      "Work Place Safety Work Group",
+      "Health and Medical Work Group",
+      "Vehicular Safety/Collision Review"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.15, a member is injured during on-duty physical fitness training. Which work group reviews that injury report?",
+     "a": "The Work Place Safety Work Group.",
+     "why": "M.P. 110.15: The Work Place Safety work group reviews \"accident and injury reports from all non-emergency scene operations (including physical fitness injuries).\"",
+     "opts": [
+      "Work Place Safety Work Group",
+      "Operations Safety Work Group",
+      "Protective Clothing and Equipment",
+      "Professional Standards Subcommittee"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.15, which work group manages OSHA SCBA fit testing requirements, standards and data?",
+     "a": "The Health and Medical Work Group.",
+     "why": "M.P. 110.15: The Health and Medical work group responsibilities include to \"Manage OSHA SCBA FIT Testing requirements/standards/data.\"",
+     "opts": [
+      "Health and Medical Work Group",
+      "Protective Clothing and Equipment",
+      "Operations Safety Work Group",
+      "Work Place Safety Work Group"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.15, what is the Professional Standards/Significant Injury Subcommittee and who convenes it?",
+     "a": "An ad hoc committee for severe or unusual accidents and injuries, convened at the request of the Fire Chief.",
+     "why": "M.P. 110.15: It is \"an ad hoc committee formed for the purpose of reviewing and reporting on severe or unusual accidents and injuries,\" convened at the Fire Chief's request and reporting to the Fire Chief.",
+     "opts": [
+      "Ad hoc, for severe or unusual injuries; convened by the Fire Chief",
+      "Standing, meets monthly on all injuries; chaired by the Safety Officer",
+      "Ad hoc, for vehicle collisions only; convened by the Fleet Division Chief",
+      "Standing, for discipline referrals; convened by the HR Deputy Chief"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.15, a significant on-duty accident occurs. Who ensures a fact-finding effort is made to collect information about it?",
+     "a": "The on-duty Safety Officer.",
+     "why": "M.P. 110.15: \"When significant on-duty accident, injury or exposure happens, the on-duty Safety Officer will ensure that a fact-finding effort is made to collect pertinent information.\"",
+     "opts": [
+      "The on-duty Safety Officer",
+      "The Company Officer on scene",
+      "The Performance Auditors",
+      "The District Commander"
+     ],
+     "src": "M.P. 110.15"
+    },
+    {
+     "q": "Per M.P. 110.16, what noise level is the Action Level that requires inclusion in the Hearing Conservation Program?",
+     "a": "An 8-hour time-weighted average at or above 85 dBA.",
+     "why": "M.P. 110.16: \"8-hour TWA noise levels at or above 85 dBA constitute an Action Level, which require inclusion in the Hearing Conservation Program.\" The permissible exposure level is 90 dBA.",
+     "opts": [
+      "85 dBA as an 8-hour TWA",
+      "90 dBA as an 8-hour TWA",
+      "80 dBA as an 8-hour TWA",
+      "100 dBA as a peak exposure"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, how is a Standard Threshold Shift (STS) defined?",
+     "a": "An average change of 10 dB or more from the baseline audiogram at 2000, 3000 and 4000 Hz in either ear.",
+     "why": "M.P. 110.16: An STS is \"a change in hearing threshold relative to the baseline audiogram of an average of 10 dB or more at 2000, 3000 and 4000 Hz in either ear.\"",
+     "opts": [
+      "Average 10 dB or more change at 2000, 3000 and 4000 Hz, either ear",
+      "Average 25 dB or more change at 500, 1000 and 2000 Hz, both ears",
+      "Any 5 dB change at 4000 Hz in both ears compared to the last test",
+      "Average 15 dB or more change at 1000, 2000 and 3000 Hz, either ear"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, your annual audiogram shows an STS. Within what time must you be retested to confirm it?",
+     "a": "Within 30 days.",
+     "why": "M.P. 110.16: \"Members with audiometric results that indicate an STS must be retested within 30 days to confirm that a standard threshold shift exists.\"",
+     "opts": [
+      "Within 30 days",
+      "Within 14 days",
+      "Within 21 days",
+      "Within 6 months"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, a retest confirms an STS. Within how many days must the member be notified in writing?",
+     "a": "Within 21 days of the determination, and scheduled to see an audiologist.",
+     "why": "M.P. 110.16: If the second exam confirms an STS, \"the affected member must be notified in writing within 21 days of this determination, and scheduled to see an audiologist.\"",
+     "opts": [
+      "21 days",
+      "30 days",
+      "14 days",
+      "7 calendar days"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, how long before an audiometric exam should a member avoid exposure to loud noise?",
+     "a": "At least 14 hours (or wear hearing protection if exposure is unavoidable).",
+     "why": "M.P. 110.16: Members \"are not to be exposed to loud levels of noise for at least 14 hours prior to the audiometric exam\"; if unavoidable, they wear hearing protection.",
+     "opts": [
+      "At least 14 hours",
+      "At least 8 hours",
+      "At least 24 full hours",
+      "At least 48 hours"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, a newly exposed member's noise levels average 85 dBA or above. When must they have a baseline audiometric exam?",
+     "a": "Within 30 working days of the exposure.",
+     "why": "M.P. 110.16: \"Members exposed to average noise levels of 85 dBA or above must have a baseline audiometric exam within 30 working days of the exposure.\"",
+     "opts": [
+      "Within 30 working days",
+      "Within 6 months",
+      "Within 90 calendar days",
+      "Before their next shift"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, a member in the program does not want to take the annual hearing test. What is required?",
+     "a": "Complete an Audiometric Hearing Test Declination Statement each calendar year a test is not performed.",
+     "why": "M.P. 110.16: Members may decline, but \"must complete an 'Audiometric hearing Test Declination Statement' each calendar year that a test is not performed.\"",
+     "opts": [
+      "A Declination Statement each calendar year no test is done",
+      "A one-time Declination Statement kept on file for their career",
+      "Nothing; the annual hearing test is completely optional",
+      "Written approval from the Safety Officer every two years"
+     ],
+     "src": "M.P. 110.16"
+    },
+    {
+     "q": "Per M.P. 110.16, how long must records of audiometric test results be kept?",
+     "a": "For the duration of the member's employment plus 30 years.",
+     "why": "M.P. 110.16: \"Records of audiometric test results must be maintained for the duration of the affected member's employment plus 30 years.\" Noise exposure records are kept two years.",
+     "opts": [
+      "Length of employment plus 30 years",
+      "Two years from the date of the test",
+      "Length of employment plus 5 years",
+      "Until the member's next audiogram"
+     ],
+     "src": "M.P. 110.16"
+    }
+   ]
+  },
+  {
+   "title": "Vol I: Safety Programs, Reporting & Records (110–111, 208) (Part 2)",
+   "sub": "Reporting violent acts, respirator fit testing, random drug and alcohol screening, peer review, PHXYou training records and the PRSOP review cycle.",
+   "concepts": [
+    "<b>110.18</b>: Assault: call PD immediately; CO → BC → Ops Deputy Chief → District Commander/Ops Assistant Chief; Violent Incident Report whether injured or not.",
+    "<b>110.18</b>: Member Services Chief and Special Investigators contact the victim firefighter within 24 hours.",
+    "<b>110.19</b>: Fit test before first use, annually, after transitional work, after facial/weight changes, or if leakage; non-compliant = pulled from Operations on own leave.",
+    "<b>110.20</b>: Random screening: alcohol 0.02+ is positive; no work within 4 hours of drinking; refusal = positive; no routine marijuana testing.",
+    "<b>110.20</b>: Positive alcohol: relieved that day, no driving home, at-home work assignment. No time to confer with a union rep before testing.",
+    "<b>111.03</b>: Peer Review: Director of Training, training Division Chief, Personnel Chief, L493 rep; no consensus goes to Fire Chief and Union President.",
+    "<b>111.04</b>: PHXYou is the primary training records system; each functional section maintains its own records; members monitor their own records.",
+    "<b>208.01</b>: PRSOPs reviewed on a five-year cycle; review begins 3–6 months before the Scheduled Review Date."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 110.18, a patient on scene becomes unstable and you suspect an assault could happen. What is the first step the MP requires?",
+     "a": "Contact Phoenix PD immediately for assistance.",
+     "why": "M.P. 110.18: \"When a firefighter(s) suspects or encounters an unstable incident that can lead to, or leads to an assault, Phoenix PD must be contacted immediately for assist.\"",
+     "opts": [
+      "Contact Phoenix PD immediately",
+      "Notify the Battalion Chief to respond",
+      "Withdraw and request a second company",
+      "Start a Violent Incident Report at once"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.18, after an on-duty assault is controlled and the firefighter evaluated, what is the notification chain?",
+     "a": "Company Officer notifies the BC, who notifies the Operations Deputy Chief, who notifies the District Commander and Operations Assistant Chief.",
+     "why": "M.P. 110.18: \"The Company Officer will notify the on-duty Battalion Chief. The Battalion Chief will then notify the Operation's Deputy Chief who will notify the District Commander and Operation's Assistant Chief.\"",
+     "opts": [
+      "CO → BC → Ops Deputy Chief → District Commander and Ops Assistant Chief",
+      "CO → Alarm Room → Shift Commander → Fire Chief and Public Affairs",
+      "Firefighter → Safety Officer → Health Center → Member Services Chief",
+      "CO → District Commander → Ops Assistant Chief → Office of Special Investigations"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.18, an assaulted firefighter says they don't want medical treatment. What applies?",
+     "a": "They cannot be forced to seek treatment but must be evaluated to determine fitness for duty.",
+     "why": "M.P. 110.18: \"A firefighter cannot be forced to seek medical treatment but must be evaluated to determine fitness for duty.\"",
+     "opts": [
+      "Can't be forced to treatment, but must be evaluated for fitness for duty",
+      "Must be transported to a hospital for treatment regardless of their wishes",
+      "May refuse both treatment and evaluation if they sign a refusal form",
+      "Must go to the Health Center that day or be placed on personal leave"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.18, when does the Company Officer complete the Violent Incident Report after an assault?",
+     "a": "Whether an injury occurs or not.",
+     "why": "M.P. 110.18: \"The Company Officer will complete the 'Violent Incident Report' form whether an injury occurs or not.\"",
+     "opts": [
+      "Whether or not an injury occurs",
+      "Only if the firefighter is injured",
+      "Only if Police make an arrest",
+      "Only if the assault was aggravated"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.18, who contacts the assaulted firefighter within 24 hours to help with EAP services and check on their wellbeing?",
+     "a": "The Member Services Chief.",
+     "why": "M.P. 110.18: \"The Member Services Chief will contact the victim firefighter(s) within 24-hours after the incident to assist with EAP services and check on the wellbeing\" of the firefighter.",
+     "opts": [
+      "The Member Services Chief",
+      "The Department Safety Officer",
+      "The on-duty Battalion Chief",
+      "A County Victim Advocate"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.18, a patient intentionally spits on an on-duty firefighter. How does the MP describe the charge?",
+     "a": "Assault (knowingly touching with intent to injure, insult or provoke), elevated to Aggravated Assault because the firefighter was on duty.",
+     "why": "M.P. 110.18: Spitting counts as touching under the Assault statute, and \"the charge is then elevated to an Aggravated Assault\" because the firefighter was on duty executing official duties.",
+     "opts": [
+      "Aggravated assault, since an on-duty firefighter was targeted",
+      "Simple assault only, since there was no physical injury at all",
+      "Disorderly conduct, since spitting isn't considered touching",
+      "No crime unless the patient is known to carry a bloodborne disease"
+     ],
+     "src": "M.P. 110.18"
+    },
+    {
+     "q": "Per M.P. 110.19, which of these situations requires a respirator fit test?",
+     "a": "Returning from a transitional work assignment.",
+     "why": "M.P. 110.19: Fit testing is required before first use, at least annually, \"when returning from transitional work assignment,\" after changes affecting fit, if leakage is noticed, and any time a member has concerns.",
+     "opts": [
+      "Returning from transitional work",
+      "After each structure fire with SCBA use",
+      "After any shift trade to another station",
+      "Every six months for all field members"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.19, who is the Department Safety Officer that directs the respiratory protection program?",
+     "a": "The Deputy Chief of Safety and Prevention.",
+     "why": "M.P. 110.19: \"The Department Safety Officer (DSO) is the Deputy Chief of Safety and Prevention and acts as the director of the respiratory protection program.\"",
+     "opts": [
+      "The Deputy Chief of Safety and Prevention",
+      "The Health Center Deputy Chief",
+      "The Resource Management Deputy Chief",
+      "An on-duty Safety Officer captain"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.19, what happens to a member who is out of compliance with fit testing?",
+     "a": "They are pulled from Operations and placed on their own leave until compliant and cleared by the Safety Section.",
+     "why": "M.P. 110.19: \"Members will be pulled from Operations and placed on their own leave until back in compliance and cleared through the Safety Section.\"",
+     "opts": [
+      "Pulled from Operations and put on their own leave",
+      "Placed on transitional work with pay until tested",
+      "Allowed to work but barred from all IDLH atmospheres",
+      "Given a written reprimand and 30 days to comply"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.19, a crewmember shows up with facial hair where the SCBA facepiece seals. What is the Company Officer required to do?",
+     "a": "Ensure the member does not use any tight-fitting respirator.",
+     "why": "M.P. 110.19: The Company Officer must \"ensure no member utilizes any tight-fitting respirator if they have facial hair that comes between the sealing surface of the facepiece and the face.\"",
+     "opts": [
+      "Ensure they don't use any tight-fitting respirator",
+      "Allow SCBA use if they pass a negative-pressure check",
+      "Schedule a new quantitative fit test before next shift",
+      "Note it on the daily report and notify the Safety Section"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.19, what must happen before a member is fit tested for tight-fitting respiratory protection?",
+     "a": "The member must be medically evaluated.",
+     "why": "M.P. 110.19: \"Any member requiring the use of tight-fitting respiratory protection will be required to be medically evaluated prior to face-piece fit testing.\"",
+     "opts": [
+      "A medical evaluation",
+      "A PAT re-certification",
+      "A hearing test",
+      "A signed waiver"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.19, you notice you can smell smoke inside your SCBA mask during training. What does the MP require?",
+     "a": "Get fit tested; smelling vapor or fumes or detecting leakage requires a fit test.",
+     "why": "M.P. 110.19: Members must be fit tested \"if member identifies leakage in mask or can smell vapor or fumes while wearing respiratory protection.\"",
+     "opts": [
+      "Get a new fit test from the Safety Section",
+      "Tighten the straps and recheck at the next drill",
+      "Wait for the annual fit test cycle to address it",
+      "Switch to a different crew member's spare mask"
+     ],
+     "src": "M.P. 110.19"
+    },
+    {
+     "q": "Per M.P. 110.20, what breath alcohol concentration is considered a positive test during random screening?",
+     "a": "0.02 or higher.",
+     "why": "M.P. 110.20: \"When a breath alcohol test is administered during random screening, an alcohol concentration level of 0.02 or higher will be considered positive.\"",
+     "opts": [
+      "0.02 or higher",
+      "0.04 or higher",
+      "0.08 or higher",
+      "Any detectable level"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, how soon after consuming alcohol is a member prohibited from reporting to work?",
+     "a": "Within four hours.",
+     "why": "M.P. 110.20: Prohibited conduct includes to \"Report to work within four hours of consuming alcohol.\"",
+     "opts": [
+      "Within four hours",
+      "Within eight hours",
+      "Within twelve hours",
+      "Within two hours"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, a member is notified of a random test and refuses to submit. How is the refusal treated?",
+     "a": "The same as a positive test result.",
+     "why": "M.P. 110.20: \"A refusal will be considered a refusal to test and is treated the same as a positive test result.\"",
+     "opts": [
+      "The same as a positive test",
+      "As a negative with a reprimand",
+      "As a missed test, rescheduled",
+      "As a reasonable-cause trigger only"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, is marijuana included in routine random drug testing?",
+     "a": "No; it's tested only in a Reasonable Cause test when a member shows signs of impairment on duty.",
+     "why": "M.P. 110.20: The department \"will not conduct routine random drug testing for marijuana,\" but a Reasonable Cause test including marijuana is given if a member shows impairment on duty.",
+     "opts": [
+      "No; only in a Reasonable Cause test for impairment",
+      "Yes; it is part of every random panel for sworn members",
+      "Yes, but only for CDL holders in the DOT-regulated pool",
+      "No; marijuana is never tested under any PFD program"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, a member tests positive for alcohol during random screening. What happens?",
+     "a": "They are relieved from duty that day, may not drive home from the testing site, and are placed on an at-home work assignment.",
+     "why": "M.P. 110.20: The member is \"immediately relieved from duty that day,\" \"will not be allowed to drive home from the testing site,\" and is placed on an at-home work assignment pending confirmed results.",
+     "opts": [
+      "Relieved that day, can't drive home, put on at-home assignment",
+      "Retested in one hour, and relieved only if the second test is positive",
+      "Allowed to finish shift off the apparatus, then referred to the EAP",
+      "Terminated immediately and escorted off the property by the BC"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, your crew is notified of a random test time. You ask for time to call your union rep first. What does the MP say?",
+     "a": "Time will not be allotted to confer with a union representative or attorney prior to testing.",
+     "why": "M.P. 110.20: \"Time will not be allotted for the employee to confer with a union representative or attorney prior to testing.\"",
+     "opts": [
+      "No time is allotted to confer with a union rep or attorney",
+      "Up to 30 minutes is allowed to reach a union representative",
+      "Testing waits until a union representative can be present",
+      "Only an attorney call is allowed, not a union representative"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 110.20, how many random drug tests do probationary firefighters undergo as a required part of probation?",
+     "a": "One during the academy and one during the probationary period, in addition to Non-DOT testing.",
+     "why": "M.P. 110.20: \"Probationary firefighters will undergo one random drug test during the academy and one random drug test during their probationary period,\" in addition to Non-DOT pool testing.",
+     "opts": [
+      "One in the academy and one during probation",
+      "One at hire and one at the end of probation",
+      "One per quarter for the full probation year",
+      "None beyond the regular Non-DOT random pool testing"
+     ],
+     "src": "M.P. 110.20"
+    },
+    {
+     "q": "Per M.P. 111.03, which of these is a standing member of the Peer Review Committee?",
+     "a": "The Phoenix Fire Department Director of Training.",
+     "why": "M.P. 111.03: Standing members are the Director of Training, the Division Chief of the respective training section, the Deputy or Division Chief of Personnel, and the Local 493 representative.",
+     "opts": [
+      "The Director of Training",
+      "The Department Safety Officer",
+      "The recruit's Field Training Captain",
+      "The Health Center Deputy Chief"
+     ],
+     "src": "M.P. 111.03"
+    },
+    {
+     "q": "Per M.P. 111.03, the Peer Review Committee can't reach consensus on a recruit's case. What happens?",
+     "a": "It goes to the Fire Chief and Union President for review; the Fire Chief makes the final determination.",
+     "why": "M.P. 111.03: Without consensus, \"the matter will be forwarded to the Fire Chief and Union President for review. The Fire Chief reserves the right to make the final determination.\"",
+     "opts": [
+      "Fire Chief and Union President review; Chief decides",
+      "The Director of Training casts the deciding vote",
+      "A majority vote of the standing members decides it",
+      "Personnel Section decides after a formal hearing"
+     ],
+     "src": "M.P. 111.03"
+    },
+    {
+     "q": "Per M.P. 111.03, who may remove a member from a training program at any time for gross safety or professional concerns?",
+     "a": "The Director of Training, in collaboration with L493.",
+     "why": "M.P. 111.03: \"The Director of Training, in collaboration with L493, has the authority to remove a member from training programs at any time due to gross safety or professional concerns.\"",
+     "opts": [
+      "The Director of Training, with L493",
+      "Any lead instructor at the academy",
+      "The Personnel Deputy Chief alone",
+      "Only the Fire Chief, after a formal hearing"
+     ],
+     "src": "M.P. 111.03"
+    },
+    {
+     "q": "Per M.P. 111.03, after a member is removed from a training program, where are they referred?",
+     "a": "To the Fire Department Personnel Section for further direction.",
+     "why": "M.P. 111.03: \"Upon removal, members will be referred to the Fire Department Personnel Section for further direction.\"",
+     "opts": [
+      "The Personnel Section",
+      "The Health Center",
+      "The Training Division",
+      "Their assigned Battalion Chief"
+     ],
+     "src": "M.P. 111.03"
+    },
+    {
+     "q": "Per M.P. 111.04, who is responsible for maintaining training and certification records in PHXYou?",
+     "a": "Each functional section (EMS, ARFF, HMT, TRT, etc.) for its own program; there is no single central records section.",
+     "why": "M.P. 111.04: \"Use of PHXYou does not establish a single centralized section responsible for maintaining all Department training records. Each functional section remains responsible\" for its own records and audits.",
+     "opts": [
+      "Each functional section, for its own records",
+      "A single central Training Records Section for all",
+      "The City PHXYou team at Human Resources citywide",
+      "Each member's Company Officer at the station level"
+     ],
+     "src": "M.P. 111.04"
+    },
+    {
+     "q": "Per M.P. 111.04, you find a CE class missing from your PHXYou record. What is your responsibility?",
+     "a": "Notify the appropriate functional section of the missing record; members must monitor their own PHXYou record.",
+     "why": "M.P. 111.04: Members are responsible for \"monitoring their PHXYou training record for accuracy\" and \"notifying the appropriate functional section of missing, inaccurate, or incomplete PHXYou records.\"",
+     "opts": [
+      "Notify the functional section that runs the program",
+      "Nothing; PHXYou errors are found in section audits",
+      "Enter the missing course into PHXYou yourself",
+      "Report it to your Battalion Chief on the next shift"
+     ],
+     "src": "M.P. 111.04"
+    },
+    {
+     "q": "Per M.P. 111.04, does using PHXYou relieve a member of responsibility for keeping their certifications current?",
+     "a": "No; members remain responsible for maintaining required certifications, qualifications and CE.",
+     "why": "M.P. 111.04: \"Use of PHXYou does not relieve individual members of responsibility for maintaining the certifications, qualifications, CE requirements, or other conditions required for their assignment.\"",
+     "opts": [
+      "No; members remain responsible for their own certs",
+      "Yes; the functional section tracks expirations for them",
+      "Yes, once Phase 3 automated notifications are in place",
+      "Only for EMS certifications tracked by the EMS Section"
+     ],
+     "src": "M.P. 111.04"
+    },
+    {
+     "q": "Per M.P. 208.01, on what cycle are Phoenix Regional SOPs scheduled for review?",
+     "a": "A five-year cycle (earlier if training, studies or operations require).",
+     "why": "M.P. 208.01: \"Procedures are scheduled for review on a five-year cycle,\" and may need review or revision earlier secondary to training, studies or operations.",
+     "opts": [
+      "Every five years",
+      "Every three years",
+      "Every two years",
+      "Every year"
+     ],
+     "src": "M.P. 208.01"
+    },
+    {
+     "q": "Per M.P. 208.01, when should the review of a Phoenix Regional SOP begin?",
+     "a": "3–6 months prior to the Scheduled Review Date.",
+     "why": "M.P. 208.01: \"The review of PRSOP's should begin 3-6 months prior to the Scheduled Review Date,\" which is the deadline for completing the review.",
+     "opts": [
+      "3–6 months before the Scheduled Review Date",
+      "1–2 months before the Scheduled Review Date",
+      "6–12 months before the Scheduled Review Date",
+      "On the Scheduled Review Date itself"
+     ],
+     "src": "M.P. 208.01"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "107.02A: file is named 107.02A but the MP header reads 'M.P. 107.02' (revised 07/24); cards use src 'M.P. 107.02A' to match the file list, question and why text use 107.02A too.",
+  "110.01: file title is 'Vehicle Accident Reporting' but the MP is titled 'Vehicle Collision Reporting' (rev. 03/2025).",
+  "110.02: source filename misspelled 'Inury Reporting'; text is fine.",
+  "110.07 and 110.16 are dated 5/22 and 107.03 / 111.03 are dated 09/18, past the 5-year review cycle in 208.01; 208.01 itself is dated 12/18.",
+  "110.16: the third mandatory hearing-protection condition reads oddly ('STS of 10 dB or greater... when the 2, 3, 4K average is above 25 dB from baseline'); not carded.",
+  "110.18: cites 'ARS 13-1204.8.C' for elevation to aggravated assault, which looks like a typo; card avoids the statute number. MP has no revision date beyond 6/2020.",
+  "110.19 tells members to see 'MP 102.02 Uniforms, Insignias and Hair Regulations'; not verified against the index.",
+  "110.20 (rev. 08/2026) and 111.04 (rev. 10/2026) are very recent revisions.",
+  "106.09 says requests are approved by the Assistant Fire Chief over Public Affairs, but the attached form 95-102 shows 'Division Head Approval'.",
+  "Part 2 of the 110–111/208 topic was split because the combined topic had 64 cards."
+ ]
+}

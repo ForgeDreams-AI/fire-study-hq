@@ -46,7 +46,7 @@
       "The fire captain at Sky Harbor Fire Station 19",
       "The FAA Control Tower supervisor on duty",
       "The on-duty Phoenix shift commander",
-      "The first-arriving battalion chief"
+      "The first-arriving battalion chief after a size-up with the tower"
      ],
      "src": "M.P. 205.13"
     },
@@ -68,7 +68,7 @@
      "why": "M.P. 205.13: Assist evacuation \"by discharging Class B foam only\" to create a path from the escape door to a safe area; if foam is unavailable, use large volumes of water.",
      "opts": [
       "Discharge Class B foam to cut a path from the exit door to a safe area",
-      "Use straight streams of water to push the fire away from the fuselage",
+      "Use straight streams of water to push the burning fuel away from the fuselage",
       "Apply dry chemical only, holding foam back for the fuselage",
       "Wait for all foam units to arrive before applying any agent"
      ],
@@ -104,7 +104,7 @@
      "why": "M.P. 205.13: \"Do not allow any overhaul operations to take place until all investigative agencies are finished or unless needed to suppress fire.\"",
      "opts": [
       "Once investigative agencies are finished, unless needed to suppress fire",
-      "As soon as the fire is knocked down and all clears are given",
+      "As soon as the fire is knocked down and primary and secondary all clears are given",
       "After the airline representative approves it at the Command Post",
       "Once the foam blanket has been maintained for 30 minutes"
      ],
@@ -140,21 +140,21 @@
      "why": "M.P. 205.13A: On Alert 1s and 2s, \"all fire department units shall respond to the base of the Goodyear Control Tower and stage until the aircraft has landed.\"",
      "opts": [
       "At the base of the Goodyear Control Tower until the aircraft lands",
-      "At the airport main entrance gate",
+      "At the airport main entrance gate until the tower clears you onto the field",
       "At the end of the active runway",
       "At Gate #9 next to the fuel farm"
      ],
      "src": "M.P. 205.13A"
     },
     {
-     "q": "Per M.P. 205.13A, which outside agency also responds to an Goodyear Airport Alert 2, and with what?",
+     "q": "Per M.P. 205.13A, which outside agency also responds to a Goodyear Airport Alert 2, and with what?",
      "a": "The Goodyear Fire Department, with one engine company and one chief.",
      "why": "M.P. 205.13A: On an Alert 2, \"the Goodyear Fire Department will respond with one (1) engine company and one (1) chief.\"",
      "opts": [
       "Goodyear Fire, with one engine company and one chief",
       "Avondale Fire, with one engine and one ladder",
       "Luke AFB Fire, with one crash truck",
-      "Goodyear Fire, with Foam 34 and a utility truck"
+      "Goodyear Fire, with one ladder company and a brush truck"
      ],
      "src": "M.P. 205.13A"
     },
@@ -166,7 +166,7 @@
       "Just inside gate #2 at the main entrance, 7th Ave and Deer Valley Rd",
       "At the base of the Deer Valley Control Tower",
       "At gate #9, which has a Knox box lock",
-      "Midfield, at least 500 feet off the runway"
+      "Midfield beside the active runway, at least 500 feet off the runway edge"
      ],
      "src": "M.P. 205.13B"
     },
@@ -226,7 +226,7 @@
       "Passengers on board, fuel on board, and aircraft type",
       "Pilot's name, flight number, and origin airport",
       "Runway in use, wind speed, and visibility",
-      "Cargo manifest, airline contact, and tail number"
+      "Cargo manifest, airline contact phone number, and aircraft tail number"
      ],
      "src": "M.P. 205.13C"
     },
@@ -272,7 +272,7 @@
      "why": "M.P. 205.14: ARFF requested for any other incident \"will require coordination with Sky 1 (or her/his designee) to assure that FAA Index D is maintained.\"",
      "opts": [
       "Coordination with Sky 1 so FAA Index D is kept with the remaining foam units",
-      "Approval from the Phoenix shift commander and the FAA tower",
+      "Approval from both the Phoenix shift commander and the FAA Control Tower supervisor",
       "Nothing extra; ARFF units respond on any special call",
       "A request through the Airport Duty Manager's office"
      ],
@@ -285,7 +285,7 @@
      "opts": [
       "As a 2-piece company with an assigned engine company",
       "By its own dedicated 2-person ARFF crew",
-      "By a crew from Station 19 with BC19",
+      "By a crew from Station 19, with BC19 assigning an ARFF captain",
       "By the first-due ladder company's crew"
      ],
      "src": "M.P. 205.14"
@@ -297,7 +297,7 @@
      "opts": [
       "Code 2, though alternating headlights and rear flashers may be used",
       "Code 3 with full lights and siren the whole way",
-      "Code 3 until within one mile, then Code 2",
+      "Code 3 until within one mile of the scene, then Code 2 with flashers only",
       "Code 2 with no warning lights of any kind"
      ],
      "src": "M.P. 205.15"
@@ -308,7 +308,7 @@
      "why": "M.P. 205.15: Proceed against normal flow \"only at the specific request of D.P.S. when it is assured that all traffic has been stopped.\" Fire units should confirm traffic is stopped.",
      "opts": [
       "Only at DPS's specific request, after confirming all traffic is stopped",
-      "Any time the officer judges it faster than the frontage road",
+      "Any time the company officer judges it faster than using the access frontage road",
       "Only when Command approves it over the radio",
       "Only with a ladder company blocking for you"
      ],
@@ -333,7 +333,7 @@
      "opts": [
       "Don't proceed into the scene unless re-dispatched",
       "Continue in Code 2 to confirm no patients",
-      "Proceed to the scene but stay on the shoulder",
+      "Proceed to the scene anyway, but park on the shoulder out of traffic",
       "Stage on the nearest on-ramp for 10 minutes"
      ],
      "src": "M.P. 205.15"
@@ -345,7 +345,7 @@
      "opts": [
       "One crew member, usually the Engineer",
       "The company officer",
-      "The two firefighters together",
+      "The two firefighters together, one at each end of the scene",
       "The first-arriving DPS cadet"
      ],
      "src": "M.P. 205.15"
@@ -358,7 +358,7 @@
       "Fire, DPS, ADOT, plus city police if traffic is diverted to streets",
       "Fire, DPS and the county sheriff only",
       "Fire, ADOT and the tow company dispatcher",
-      "Fire, city police, and the Water Department"
+      "Fire, city police, the Water Department, and the Streets Department"
      ],
      "src": "M.P. 205.15"
     },
@@ -394,7 +394,7 @@
       "About every 300 feet on alternating sides (600 ft same side)",
       "About every 150 feet on both sides",
       "About every 500 feet on the north wall only",
-      "About every 1/4 mile, one per vent room"
+      "About every quarter mile, one cabinet in each vent room's section"
      ],
      "src": "M.P. 205.15A"
     },
@@ -406,7 +406,7 @@
       "Humat valves won't fit; a direct hose connection is required",
       "The cabinets are dry and must be charged first",
       "Humats are only allowed on the 2 1/2\" fitting",
-      "The hydrants are fed by 4\" mains and won't supply it"
+      "The hydrants are fed by 4\" mains and can't supply a Humat-fed supply line"
      ],
      "src": "M.P. 205.15A"
     },
@@ -442,7 +442,7 @@
       "Enter the Bus Transit Tunnel from the opposite direction",
       "Enter against traffic from Seventh Street",
       "Stage at Culver Street and wait for DPS",
-      "Access the tunnel through Hance Park vent rooms"
+      "Access the tunnel from above through the Hance Park vent room stairwells"
      ],
      "src": "M.P. 205.15A"
     },
@@ -488,7 +488,7 @@
      "why": "M.P. 205.16: \"The District Van can only be dispatched following the request of a fire department member, who is on the scene.\" It responds Code 2.",
      "opts": [
       "Only at the request of an on-scene fire department member",
-      "By any citizen calling the Dispatch Center",
+      "By any citizen who calls the Dispatch Center asking for a non-emergency ride",
       "Automatically on every injury accident",
       "By the hospital charge nurse"
      ],
@@ -501,7 +501,7 @@
      "opts": [
       "A family member with no injuries who needs a ride to the hospital",
       "An intoxicated driver refusing ambulance transport",
-      "A patient with minor neck pain who declines an ambulance",
+      "A patient with minor neck pain who refuses an ambulance but wants a hospital ride",
       "A disorderly passenger who wants to go home"
      ],
      "src": "M.P. 205.16"
@@ -538,7 +538,7 @@
       "Help given on formal request where no automatic aid agreement exists",
       "Automatic dispatch of the closest unit regardless of city lines",
       "Help sent to a set area without prior approval",
-      "Statewide deployment under the Rapid Response Task Force"
+      "Statewide deployment of resources through the Rapid Response Task Force"
      ],
      "src": "M.P. 205.17"
     },
@@ -586,7 +586,7 @@
       "Deferred to the requested agency's shift commander for approval",
       "Dispatched automatically as an imminent threat",
       "Refused, since RMFD is not an AHJ",
-      "Sent as a full 3&1 without approval"
+      "Sent as a full 3&1 assignment without approval, since RMFD requested it"
      ],
      "src": "M.P. 205.17"
     },
@@ -597,7 +597,7 @@
      "opts": [
       "Support the AHJ from outside the hazard zone only",
       "Work in the hot zone using the AHJ's radios",
-      "Work in the hot zone with a two-in/two-out team",
+      "Work in the hot zone with a two-in/two-out team using the AHJ's radios",
       "Enter the hot zone after Command approves it"
      ],
      "src": "M.P. 205.17"
@@ -661,7 +661,7 @@
      "opts": [
       "After law enforcement deems the site secured and safe",
       "As soon as the hazmat team is on scene",
-      "Once the Fire Prevention Specialist arrives",
+      "Once the on-duty Fire Prevention Specialist arrives and documents the site",
       "After the suspects have left the property"
      ],
      "src": "M.P. 205.18"
@@ -782,7 +782,7 @@
       "Jump clear without touching car and ground, then shuffle in small steps",
       "Step out holding the door frame, then run",
       "Have firefighters pull them out with a dry rope",
-      "Slide out slowly, keeping one hand on the car"
+      "Slide out slowly while keeping one hand on the car so they stay grounded"
      ],
      "src": "M.P. 205.20"
     },
@@ -792,7 +792,7 @@
      "why": "M.P. 205.20: \"Do not make any fire attack until the utility representative has verified that the electrical equipment has been de-energized.\"",
      "opts": [
       "After the utility rep verifies it's de-energized",
-      "Right away, using a fog at the base of the pole",
+      "Right away, using a fog pattern at the base of the pole from a safe distance",
       "Once the pole has burned through and fallen",
       "After breaker trips are confirmed by Dispatch"
      ],
@@ -841,7 +841,7 @@
      "opts": [
       "Introducing fresh air may cause a deflagration",
       "It may trip the fire suppression system",
-      "The doors are energized with DC current",
+      "The doors and panels may be energized with stranded DC current",
       "It voids the vendor's warranty"
      ],
      "src": "M.P. 205.20A"
@@ -864,7 +864,7 @@
      "why": "M.P. 205.20A: \"Response crews should allow the battery to burn out. Water should be applied to adjacent battery enclosures and exposures.\" Lithium-ion is not water reactive.",
      "opts": [
       "Defensive: let it burn out and cool adjacent units and exposures",
-      "Offensive: flood the burning unit with foam",
+      "Offensive: flood the burning unit with foam from the nearest handline",
       "Smother it with dry chemical from 20 feet",
       "Open the enclosure and cool the cells directly"
      ],
@@ -937,7 +937,7 @@
      "opts": [
       "Fog at least a 10-degree pattern from at least 20 feet",
       "Straight stream from at least 40 feet",
-      "Fog at least a 30-degree pattern from 10 feet",
+      "Fog at least a 30-degree pattern from no closer than 10 feet away",
       "Solid stream from an aerial only"
      ],
      "src": "M.P. 205.20B"
@@ -948,7 +948,7 @@
      "why": "M.P. 205.20B: \"It is mandatory to operate the disconnects prior to the application of water\" on parking-lot PV installations.",
      "opts": [
       "Operate the electrical disconnects that feed the system",
-      "Cover the panels with opaque tarps",
+      "Cover all of the overhead panels with opaque tarps to stop generation",
       "Get approval from the utility representative",
       "Confirm the voltage is under 600 volts"
      ],
@@ -960,7 +960,7 @@
      "why": "M.P. 205.20B: BIPV tiles are an electrical hazard and \"extremely slippery.\" \"Roof operations shall not be conducted\" on them.",
      "opts": [
       "No, roof operations shall not be done on BIPV roofs",
-      "Yes, after the rapid shutdown switch is operated",
+      "Yes, after the rapid shutdown switch is operated to isolate DC power",
       "Yes, if crews stay on the ridge line",
       "Only with a roof ladder and fall protection"
      ],
@@ -974,7 +974,7 @@
       "Announce it on the tactical channel; Command acknowledges",
       "Notify Dispatch by phone only",
       "Tell the first-in company officer face-to-face",
-      "Mark it on the tactical worksheet only"
+      "Note it on the tactical worksheet and tell the next-arriving officer"
      ],
      "src": "M.P. 205.20B"
     },
@@ -997,7 +997,7 @@
      "opts": [
       "Stay outside the fence, isolate, and protect exposures",
       "Attack from 20 feet with a 10-degree fog",
-      "Enter once the utility opens the main breaker",
+      "Enter once the utility opens the main breaker, then attack defensively",
       "Apply foam to the inverters from an aerial"
      ],
      "src": "M.P. 205.20B"
@@ -1022,7 +1022,7 @@
       "A patient needs life/limb-saving procedures and can't be extricated in time",
       "Any multi-patient incident with more than 10 patients",
       "Whenever a trauma patient's transport exceeds 30 minutes",
-      "Any amputation, to save scene time"
+      "Any trapped patient needing amputation, to shorten extrication time on scene"
      ],
      "src": "M.P. 205.22"
     },
@@ -1046,7 +1046,7 @@
       "The closest available Battalion Chief",
       "The closest ALS rescue",
       "A police escort vehicle",
-      "The trauma center's own transport"
+      "The trauma center's own transport, met at the scene by the IC"
      ],
      "src": "M.P. 205.22"
     },
@@ -1093,7 +1093,7 @@
      "opts": [
       "4: two firefighters, an engineer, and a captain",
       "2 trained firefighters of any rank",
-      "3: a captain, an engineer, and a paramedic",
+      "3: a captain, an engineer, and a firefighter-paramedic",
       "4 paramedics with no company officer"
      ],
      "src": "M.P. 205.23"
@@ -1105,7 +1105,7 @@
      "opts": [
       "No, it can only supplement firefighting as assigned",
       "Yes, if it is staffed ALS",
-      "Yes, when no engine is within 4 minutes",
+      "Yes, when no engine company can arrive within four minutes",
       "Only for the first-due assignment"
      ],
      "src": "M.P. 205.23"
@@ -1128,7 +1128,7 @@
      "why": "M.P. 205.23: LA units are deployed across municipal boundaries on imminent-threat calls when closest; \"they shall not be deployed in replacement of other units.\"",
      "opts": [
       "It responds to supplement, not replace, other units",
-      "It is not sent, since LA units are BLS-only",
+      "It is not sent, since LA units only fulfill low acuity BLS calls",
       "It replaces the engine as the assigned unit",
       "It responds only if the other city approves"
      ],
@@ -1140,7 +1140,7 @@
      "why": "M.P. 205.23: LA units \"should only be assigned by command to support an appropriately staffed, NFPA 1710 compliant, 4-person fire company,\" like a 2-person rescue.",
      "opts": [
       "Only to support a 4-person NFPA 1710 compliant company",
-      "As the first-due fire attack company",
+      "As the first-due fire attack company if it arrives first",
       "As the RIC team on any fire",
       "Never; LA units cannot be at fires"
      ],
@@ -1165,7 +1165,7 @@
      "opts": [
       "400 ft AGL, or within 400 ft of a structure if higher",
       "200 ft AGL anywhere in the city",
-      "500 ft AGL, or 100 ft above any structure",
+      "500 ft AGL, or no more than 100 ft above the tallest structure",
       "400 ft above mean sea level"
      ],
      "src": "M.P. 205.24"
@@ -1225,7 +1225,7 @@
      "opts": [
       "Put the drone in hover while both try to regain sight",
       "Immediately start Return to Home",
-      "Land the drone at its current position",
+      "Land the drone immediately at its current position in the operating area",
       "Climb to 400 feet to get it in view"
      ],
      "src": "M.P. 205.24"
@@ -1257,5 +1257,16 @@
    ]
   }
  ],
- "notes": []
+ "notes": [
+  "205.13 text has garbled gate numbers ('Gate 118 117', 'Gate 200 F') and page 7 is blank; no cards written on gate numbers.",
+  "205.13 Alert 1/Alert 2 definitions for twin-engine general aviation aircraft (under/over 12,500 lbs) read awkwardly; cards avoid that detail.",
+  "205.13C (rev 12/12) names a specific airport manager and personal phone numbers, which are likely outdated; not carded.",
+  "205.15 is dated 12/98 and uses old names (e.g., 'Squaw Peak' for SR-51, 'Mini-Stack' discouraged); glossary cards stick to the Stack/lane numbering.",
+  "205.15A says the Bus Transit Tunnel 'will not be in service for some time'; cards still test its use as the MP directs.",
+  "205.16 (09/00) is old (references MAST suits, 'District Van-5' radio ID); the program may no longer exist.",
+  "205.19 (03/00) lists the Water Dept number as 261-8000 with no area code; not carded.",
+  "205.20A file name misspells 'Energy' ('Evergy'). 205.20A and 205.20B repeat the same residential BESS steps (40 ft isolation, 12-hr monitoring, 10-min temp readings); cards split between them to avoid duplicates.",
+  "205.22 says the SERT 'shall be compromised of' (should read 'comprised of').",
+  "205.24 appendices B and D (Contingency Plan Checklist, SGI form, NOTAM filing) are blank in the extracted text; page 13's VO description says 'equally responsible' and leaves the team-communications line unfinished ('(team? Pilot?)')."
+ ]
 }
