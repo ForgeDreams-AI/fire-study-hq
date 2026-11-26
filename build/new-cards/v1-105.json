@@ -34,7 +34,7 @@
       "You're rescheduled and your chain of command is notified",
       "You're immediately not medically cleared for duty",
       "You must use a private clinician within 30 days",
-      "You're rescheduled with no other action taken"
+      "You're rescheduled and must meet with your BC before the next one"
      ],
      "src": "M.P. 105.01"
     },
@@ -46,7 +46,7 @@
       "They may be considered not medically cleared for operational duty",
       "They receive a written reprimand from the Health Center",
       "They're rescheduled and the Fire Chief is notified",
-      "They lose their Tier status until the next annual cycle"
+      "They're placed on Tier 4 status until a full physical is completed"
      ],
      "src": "M.P. 105.01"
     },
@@ -56,7 +56,7 @@
      "why": "M.P. 105.01: \"Same day cancellation of a scheduled physical must be made by the member's Battalion Chief/Section Chief.\"",
      "opts": [
       "The member's Battalion Chief/Section Chief",
-      "The member, by calling the Health Center",
+      "The member, by calling the Health Center directly",
       "The member's Company Officer",
       "The on-duty Shift Commander"
      ],
@@ -83,18 +83,6 @@
       "Every year at the annual physical",
       "Pre-employment, then every 2 years",
       "Only after a reported exposure"
-     ],
-     "src": "M.P. 105.01"
-    },
-    {
-     "q": "Per M.P. 105.01, which firefighters should get an annual low-dose CT lung cancer screening?",
-     "a": "Firefighters over 55 with a 30 pack-year history who smoke or quit in the last 15 years.",
-     "why": "M.P. 105.01: Low dose CT \"should be performed annually on firefighters over the age of 55 who have a 30-pack/year smoking history and currently smoke or have quit in the last 15 years.\"",
-     "opts": [
-      "Over 55, 30 pack-year history, smoking now or quit within 15 years",
-      "Over 45 with any smoking history in the past 10 years",
-      "All members over 50, regardless of smoking history",
-      "Over 40 with a 20 pack-year history who still smoke"
      ],
      "src": "M.P. 105.01"
     },
@@ -129,7 +117,7 @@
      "opts": [
       "Mandatory wellness referral, but removal from duty not yet required",
       "Removal from duty plus mandatory wellness referral",
-      "Change is recommended and support is available if wanted",
+      "Change is recommended and support is available if the member wants it",
       "Minimum health level members should keep for the field"
      ],
      "src": "M.P. 105.01"
@@ -140,7 +128,7 @@
      "why": "M.P. 105.01: On transitional work, fitness and wellness participation is \"mandatory\" (voluntary if on personal leave). Return is at \"the discretion of the clinician and Health & Wellness Center Deputy Chief.\"",
      "opts": [
       "It's mandatory, and the clinician and H&W Deputy Chief decide return",
-      "It's voluntary, and the member's BC decides when they return",
+      "It's voluntary, and the member's Battalion Chief decides when they return",
       "It's mandatory, and the member returns after 90 days",
       "It's voluntary, and the member returns at their next physical"
      ],
@@ -153,7 +141,7 @@
      "opts": [
       "The alarm room, to request the on-duty infection control officer",
       "The Health Center front desk the next business day",
-      "Your Battalion Chief, who calls the receiving hospital",
+      "Your Battalion Chief, who then calls the receiving hospital's charge nurse",
       "Airport Concentra, for HIV prophylaxis evaluation"
      ],
      "src": "M.P. 105.01"
@@ -224,7 +212,7 @@
      "why": "M.P. 105.01A: \"When recommendations are made, the supervisor is not informed of the employee's attendance, course of treatment, or discharge date.\" A remanded employee signs a release covering those items.",
      "opts": [
       "Nothing about attendance, treatment or discharge date",
-      "Attendance and progress on the treatment plan",
+      "Attendance and progress on the treatment plan, but nothing else",
       "Only the date counseling services are completed",
       "Attendance, drug screens and cooperation level"
      ],
@@ -236,7 +224,7 @@
      "why": "M.P. 105.01A: It is \"completely confidential and separate from the department or union and available 24 hours a day,\" and can send a crisis team in unmarked vehicles.",
      "opts": [
       "It's confidential, separate from dept and union, and runs 24/7",
-      "It's run by Local 493 Member Services during business hours",
+      "It's run by Local 493 Member Services, during business hours only",
       "It's staffed by the Peer Support Team from Car 20",
       "It's a Health Center line for industrial injury questions"
      ],
@@ -248,7 +236,7 @@
      "why": "M.P. 105.01A: \"Peers will not break confidentiality unless the person is a danger to himself/herself or to others.\"",
      "opts": [
       "When the person is a danger to themselves or others",
-      "When the member's supervisor asks for an update",
+      "When the member's supervisor or Battalion Chief asks for an update",
       "When the Peer Support Coordinator requests details",
       "When the issue involves a policy violation"
      ],
@@ -272,7 +260,7 @@
      "why": "M.P. 105.01C: Option One \"can be initiated by anyone in the workgroup affected by the problem.\" It is not necessary for the supervisor to start it.",
      "opts": [
       "Anyone in the affected workgroup",
-      "Only the workplace supervisor",
+      "Only the workplace supervisor or Captain",
       "Only the Personnel Section",
       "Only a union representative"
      ],
@@ -280,10 +268,10 @@
     },
     {
      "q": "Per M.P. 105.01C, who decides whether ADR mediation uses an internal or an outside professional mediator?",
-     "a": "The parties in the dispute decide on an internal or external mediator.",
+     "a": "The disputing parties decide whether to use an internal or external mediator.",
      "why": "M.P. 105.01C: \"The decision on whether to use an internal or external mediator is up to the parties involved in the dispute.\" The Personnel Section or union rep can arrange it.",
      "opts": [
-      "The parties involved in the dispute",
+      "The disputing parties",
       "The Personnel Section",
       "The Battalion Chief",
       "The union representative"
@@ -297,7 +285,7 @@
      "opts": [
       "It stays confidential and can't be used against the parties",
       "It's forwarded to the Personnel Section for the complaint",
-      "The mediator may testify about it if a complaint is filed",
+      "The mediator may be called to testify about it if a complaint is filed",
       "It goes in each party's supervisor file for one year"
      ],
      "src": "M.P. 105.01C"
@@ -344,7 +332,7 @@
      "why": "M.P. 105.02: A LODD may require three IMT/ICS organizations for \"1) Resolving the original incident ... 2) The death investigation. 3) The memorial-related services.\"",
      "opts": [
       "The original incident, the death investigation, memorial services",
-      "Fire operations, police operations, hospital operations",
+      "Fireground operations, police operations, and hospital operations",
       "Notification, honor watch, the procession",
       "Family liaison, honor guard, media relations"
      ],
@@ -404,7 +392,7 @@
      "why": "M.P. 105.02A: Documentation must show \"date, time and location of disposition\" and \"the name and the relationship of the individual accepting the property,\" then goes in the personnel file.",
      "opts": [
       "Date, time, place, and the receiver's name and relationship",
-      "Only the receiver's signature and the item count",
+      "Only the receiver's signature and a count of the items handed over",
       "The Battalion Chief's approval and the inventory",
       "The next of kin's address and the funeral date"
      ],
@@ -429,7 +417,7 @@
      "opts": [
       "Find causal factors and recommend ways to prevent a repeat",
       "Determine fault and recommend discipline",
-      "Secure evidence for litigation and regulators",
+      "Secure evidence for any regulatory action or litigation that follows",
       "Determine the fire's cause and origin"
      ],
      "src": "M.P. 105.02B"
@@ -440,7 +428,7 @@
      "why": "M.P. 105.02B: The team \"shall include the Fire Department Safety Officer, a Performance Auditor and such additional personnel as may be required.\" The union is invited to appoint a member when represented employees are involved.",
      "opts": [
       "The FD Safety Officer and a Performance Auditor",
-      "The Fire Investigator and the Shift Commander",
+      "The Fire Investigator assigned to the incident and the Shift Commander",
       "The Fire Chief and the Local 493 President",
       "A City Attorney and a Risk Management analyst"
      ],
@@ -451,8 +439,8 @@
      "a": "The Division of Occupational Safety and Health of the Arizona Industrial Commission.",
      "why": "M.P. 105.02B: \"The Division of Occupational Safety and Health of the Arizona Industrial Commission will conduct an investigation.\" The team provides liaison with the OSHA investigators.",
      "opts": [
-      "Arizona Industrial Commission's Div. of Occupational Safety & Health",
-      "Arizona Department of Public Safety",
+      "Arizona Industrial Commission (Occupational Safety & Health)",
+      "Arizona Department of Public Safety, Criminal Investigations",
       "State Fire Marshal's Office",
       "Arizona Department of Health Services"
      ],
@@ -477,7 +465,7 @@
      "opts": [
       "The Chief of Personnel Services or the Shift Commander",
       "The Battalion Chief or the Company Officer",
-      "The Health Center Deputy Chief or a clinician",
+      "The Health Center Deputy Chief or the on-duty Health Center clinician",
       "The Public Affairs Section or the PIO"
      ],
      "src": "M.P. 105.02C"
@@ -490,7 +478,7 @@
       "In person, in uniform, in a marked FD vehicle when possible",
       "By phone first, then in person if the family wants",
       "By e-mail through the Fire/Help Desk",
-      "In person, in civilian clothes, in a personal vehicle"
+      "In person, in civilian clothes and a personal vehicle, to keep it low-key"
      ],
      "src": "M.P. 105.02C"
     },
@@ -514,7 +502,7 @@
       "Follow up with the Health Center Case Manager on leave",
       "Personally notify the member's family at home",
       "Send the e-mail patient updates every shift",
-      "Get the emergency contact from personnel records"
+      "Get the emergency notification contact from the personnel records"
      ],
      "src": "M.P. 105.02C"
     },
@@ -536,7 +524,7 @@
      "why": "M.P. 105.02D: The Chaplain is \"appointed by the Fire Chief after consultation with the Firefighters' Union President\" and \"will report to Chief of Member Services.\"",
      "opts": [
       "Fire Chief after consulting Union President; reports to Chief of Member Services",
-      "Union President after consulting Fire Chief; reports to the Fire Chief",
+      "Union President after consulting the Fire Chief; reports directly to the Fire Chief",
       "Fire Chief alone; reports to the Health Center Deputy Chief",
       "Executive Team vote; reports to the Local 493 VP of Member Services"
      ],
@@ -573,7 +561,7 @@
      "opts": [
       "Full Class A, Class B with tie, or fatigues with collar",
       "Full Class A only, or civilian clothes",
-      "Class B with tie or station uniform only",
+      "Class B with tie or the station work uniform only, no fatigues",
       "Any clean uniform with a badge shroud"
      ],
      "src": "M.P. 105.02E"
@@ -585,7 +573,7 @@
      "opts": [
       "3/8\" plain black elastic, horizontal across the badge",
       "1/2\" black band, diagonal across the badge",
-      "3/8\" black band with a blue stripe, vertical",
+      "3/8\" black band with a thin blue stripe, worn vertically",
       "1\" black ribbon pinned below the badge"
      ],
      "src": "M.P. 105.02E"
@@ -610,7 +598,7 @@
       "1+ hour shifts from death until the funeral starts",
       "4-hour shifts by Honor Guard members only",
       "12-hour shifts from death until burial",
-      "1+ hour shifts, but only during viewings"
+      "1+ hour shifts, but only during viewings and the church service"
      ],
      "src": "M.P. 105.02E"
     },
@@ -680,7 +668,7 @@
      "why": "M.P. 105.03: PSPRS \"is a state retirement system, NOT a city retirement system\" and \"it is the sworn members responsibility to contact PSPRS.\" Civilians are in COPERS.",
      "opts": [
       "It's a state system, and the member must contact PSPRS",
-      "It's a city system run by the City Retirement Office",
+      "It's a city system, and the City Retirement Office files for the member",
       "It's run by Local 493, which files for the member",
       "It's the same system as COPERS for civilians"
      ],
@@ -691,10 +679,10 @@
      "a": "Notify the Deputy Chief of Fire HR and the Human Resource Officer of their exit date.",
      "why": "M.P. 105.03: Step 1 is \"Notify the Deputy Chief of Fire HR AND the Human Resource Officer of their exit date,\" then supervisors, PSPRS/COPERS and Local 493.",
      "opts": [
-      "Notify the Deputy Chief of Fire HR and the HR Officer of the exit date",
+      "Notify the Deputy Chief of Fire HR and the HR Officer",
       "Schedule the Last Check Meeting with Local 493",
       "Contact Nationwide to roll over personal leave",
-      "Turn in all City equipment to Resource Management"
+      "Turn in all City equipment to Resource Management first"
      ],
      "src": "M.P. 105.03"
     },
@@ -771,7 +759,7 @@
       "Elected by secret ballot to 4-year staggered terms",
       "Appointed by the Fire Chief to 2-year terms",
       "Elected by open vote to 4-year concurrent terms",
-      "Appointed by the Union President to 3-year terms"
+      "Appointed by the Union President to 3-year staggered terms"
      ],
      "src": "M.P. 105.04"
     },
@@ -782,7 +770,7 @@
      "opts": [
       "LODD survivor benefits and disability benefits",
       "Retirement dates and DROP eligibility",
-      "Pension contribution rates for members",
+      "Pension contribution rates for sworn and civilian members",
       "Promotional list rankings"
      ],
      "src": "M.P. 105.04"
@@ -829,7 +817,7 @@
      "why": "M.P. 105.05: The Medal of Valor is for \"a conspicuous act of valor and heroism ... in which the person is placed in a life threatening position to save the life of another.\" The Medal of Honor is for outstanding service.",
      "opts": [
       "Heroism in a life-threatening position to save another's life",
-      "Outstanding service to the department or community safety",
+      "Outstanding service to the department or to the community's public safety",
       "Outstanding performance of duties worthy of recognition",
       "Considerable time donated to bettering the community"
      ],
@@ -842,7 +830,7 @@
      "opts": [
       "Fire Chief; a cross section of members and a Local 493 rep",
       "Local 493 President; a panel of Captains and BCs",
-      "Public Affairs; Executive Staff and the Shift Commanders",
+      "Public Affairs; Executive Staff and all three Shift Commanders",
       "Fire Chief; prior Medal of Valor recipients only"
      ],
      "src": "M.P. 105.05"
@@ -854,7 +842,7 @@
      "opts": [
       "The Awards Committee, Public Affairs Section",
       "Your Battalion Chief, who forwards it on",
-      "The Personnel Section for the member's file",
+      "The Personnel Section, for the member's personnel file",
       "The Fire Chief's office directly"
      ],
      "src": "M.P. 105.05"
@@ -877,7 +865,7 @@
      "why": "M.P. 105.05: Pins \"will be worn on the right breast pocket on the dress shirt or directly under the name/rank tag of the Department jacket.\"",
      "opts": [
       "Right breast pocket of dress shirt, or under the jacket name tag",
-      "Left breast pocket of dress shirt, above the badge",
+      "Left breast pocket of the dress shirt, directly above the breast badge",
       "Right collar of the dress shirt",
       "Left sleeve of the jacket, below the patch"
      ],
@@ -891,7 +879,7 @@
       "Certificates of Commendation and Citizen Lifesaving Awards",
       "The Medal of Valor and the Medal of Honor",
       "Firefighter of the Year and the Award of Merit",
-      "Community Service Awards and the Medal of Honor"
+      "Community Service Awards and the Medal of Honor, at any station event"
      ],
      "src": "M.P. 105.05"
     },
@@ -915,7 +903,7 @@
       "Immediate supervisor; original to the personnel file",
       "Battalion Chief; original to the member",
       "Fire Chief; original to Public Affairs",
-      "Immediate supervisor; original to the Fire Chief"
+      "Immediate supervisor; original goes straight to the Fire Chief"
      ],
      "src": "M.P. 105.05A"
     },
@@ -961,7 +949,7 @@
      "why": "M.P. 105.06: The log entry lists \"date, file name and rank, requestors name and rank.\"",
      "opts": [
       "Date, file name and rank, requestor's name and rank",
-      "Date, reason for review, and the BC's approval",
+      "Date, reason for the review, and the Battalion Chief's approval",
       "Requestor's name, time in and time out",
       "File name, documents copied, and a witness"
      ],
@@ -974,7 +962,7 @@
      "opts": [
       "Verbal authorization from the Fire Chief or a listed officer",
       "Written approval from the member and the BC",
-      "A memo to the Office of Special Investigations",
+      "A memo to the Office of Special Investigations stating the reason",
       "A log entry by any full-access member"
      ],
      "src": "M.P. 105.06"
@@ -1153,7 +1141,7 @@
      "why": "M.P. 105.10: An applicant \"rehired within 90 days of resignation must repay all funds withdrawn from the pension system, plus any interest due within six months.\"",
      "opts": [
       "Repay them with interest within 6 months of return",
-      "Repay them with interest before the rehire date",
+      "Repay them with interest before the rehire date is confirmed",
       "They're forfeited; no repayment is required",
       "Repay them without interest within 1 year"
      ],
@@ -1179,7 +1167,7 @@
       "One-year probation and loss of prior seniority credits",
       "Six-month probation; prior seniority is restored",
       "No probation; prior seniority is restored",
-      "One-year probation; promotional lists are cancelled"
+      "One-year probation; all promotional list standings are cancelled"
      ],
      "src": "M.P. 105.10"
     },
@@ -1251,7 +1239,7 @@
       "A repeat of any offense within a three-year period",
       "Any offense that happened while off duty",
       "A Letter of Counseling for being late",
-      "A first written reprimand for a minor issue"
+      "A first written reprimand for a minor issue, if it was on duty"
      ],
      "src": "M.P. 105.11"
     },
@@ -1273,7 +1261,7 @@
      "why": "M.P. 105.16: \"The management co-chair shall be appointed by the Fire Chief or designee and the labor co-chair shall be appointed by the Union President or designee.\"",
      "opts": [
       "Mgmt by the Fire Chief; labor by the Union President",
-      "Both by the Fire Chief, with union consent",
+      "Both by the Fire Chief, after getting the Union President's consent",
       "Both elected by committee members",
       "Both by the Correlating Team"
      ],
@@ -1309,7 +1297,7 @@
      "why": "M.P. 105.16: Minutes are published \"within two weeks\" and \"should be watermarked as a draft until approved by the labor and management Co-Chairs.\"",
      "opts": [
       "Published within 2 weeks; draft until both co-chairs approve",
-      "Published within 7 days; final when the secretary signs",
+      "Published within 7 days; becomes final when the committee secretary signs",
       "Published within 30 days; draft until the XO/VP approves",
       "Published at the next meeting; final when members vote"
      ],
@@ -1345,7 +1333,7 @@
      "why": "M.P. 105.18: Ask: \"Would I be comfortable seeing this on the news, in a municipal council meeting, shared with my supervisor, or posted in a department meeting?\" If no, do not post it.",
      "opts": [
       "Ask if you'd be fine seeing the post on the news or in a meeting",
-      "Run the post's headline past Public Affairs before posting",
+      "Run the post's headline past Public Affairs before you publish it",
       "Make sure every post has a clear and accurate headline",
       "Check that the post doesn't name the Department"
      ],
@@ -1359,7 +1347,7 @@
       "Honest criticism of a Department policy",
       "A meme mocking a group by religion",
       "A joke stereotyping a neighborhood",
-      "A post calling a group untrustworthy"
+      "A post calling a group untrustworthy as a whole"
      ],
      "src": "M.P. 105.18"
     },
@@ -1371,7 +1359,7 @@
       "No, emergency scene content needs authorization",
       "Yes, if you blur the patients' faces",
       "Yes, if you don't name the station",
-      "Yes, if the account is set to private"
+      "Yes, if the account's privacy is set to friends only"
      ],
      "src": "M.P. 105.18"
     },
@@ -1381,7 +1369,7 @@
      "why": "M.P. 105.18: Commercial filming requests \"must be routed through the City of Phoenix Film Office and the PFD Public Affairs Section.\" Members may not negotiate such access themselves.",
      "opts": [
       "Route it through the City Film Office and PFD Public Affairs",
-      "The Captain can approve it with the BC's OK",
+      "The Captain can approve it with the Battalion Chief's OK in writing",
       "Members may negotiate it if filmed off duty",
       "Local 493 approves it for its members"
      ],
@@ -1393,7 +1381,7 @@
      "why": "M.P. 105.18: Monetized activity while identifying as PFD is subject to Outside Employment policies \"and thus should be approved through the 'Notice of Outside Employment' process in A.R. 2.62.\"",
      "opts": [
       "Approval through the Notice of Outside Employment process",
-      "Nothing, as long as it's done off duty",
+      "Nothing extra, as long as the posting is done off duty and not in uniform",
       "A Film Office permit for each video",
       "Written approval from Local 493"
      ],
@@ -1406,7 +1394,7 @@
      "opts": [
       "Approval by the Fire Chief and Public Affairs",
       "Approval by your Battalion Chief",
-      "Nothing if it's run off duty",
+      "Nothing, as long as it's run off duty on personal phones",
       "Approval by the Union President"
      ],
      "src": "M.P. 105.18"
@@ -1419,7 +1407,7 @@
       "Only if it clearly violates City Terms of Use",
       "Any time it draws negative comments",
       "Only with the Fire Chief's written OK",
-      "Within 24 hours of posting, for any reason"
+      "Within 24 hours of posting, for any reason the poster chooses"
      ],
      "src": "M.P. 105.18"
     }

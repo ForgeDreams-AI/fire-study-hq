@@ -1,0 +1,1487 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Hazmat, Radiological & WMD (204, 207) (Part 1)",
+   "sub": "Hazmat size-up and zones, evacuation, decontamination, special considerations and mercury releases (M.P. 204.01–204.02).",
+   "concepts": [
+    "<b>204.01</b>: First-in: pessimistic approach; never spot downhill, downwind, over a storm drain or near a blast zone; use the DOT ERG for spotting.",
+    "<b>204.01</b>: Talk to the first Hazmat crew or C957 before committing to the Hot Zone; two initial zones are Hot Zone and LAZ (police enforce LAZ).",
+    "<b>204.01A</b>: Site, Intermediate (under 100 people, 2–4 hrs) and Large-Scale evacuation; Red Cross needs up to 3 hours.",
+    "<b>204.01A</b>: Siren alert = 3 five-second YELP blasts, PA every block and each 50 yards; refusals are documented, not forced.",
+    "<b>204.01B</b>: Decon Area inside the Hot Zone next to Lobby Control; when in doubt, decon everything; no helicopters for contaminated patients.",
+    "<b>204.01C</b>: Cool the vapor space with unmanned streams; no water on chlorine containers; loads up to 1,000 lbs may carry no placard.",
+    "<b>204.02</b>: FD never cleans up or transports mercury; RP hires the contractor; plastic bags, never biohazard bags."
+   ],
+   "cards": [
+    {
+     "q": "You're first-in to a reported chemical spill. Per M.P. 204.01, which apparatus position must you avoid?",
+     "a": "Never spot downhill of the release or over a storm drain.",
+     "why": "M.P. 204.01: \"Never spot the apparatus near a potential blast zone, over a storm drain, downwind, or downhill of a hazardous material incident.\"",
+     "opts": [
+      "Downhill of the release, over a storm drain",
+      "Uphill and upwind, outside the blast zone",
+      "Upwind at the distance listed in the ERG",
+      "Uphill, with a crosswind and clear of drains"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "Per M.P. 204.01, what reference SHALL first-arriving companies use to spot apparatus a safe distance from a hazmat incident?",
+     "a": "The DOT Emergency Response Guide (ERG).",
+     "why": "M.P. 204.01: \"The DOT ERG shall be used by the first arriving companies as a resource for spotting apparatus safe distance from the incident.\"",
+     "opts": [
+      "The DOT Emergency Response Guide",
+      "The NFPA 704 marking chart",
+      "The Hazmat Field Operations Guide",
+      "The CAD premise information file"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "You're Command at a hazmat leak. Per M.P. 204.01, who must you talk to BEFORE committing resources into the hot zone?",
+     "a": "The first-arriving Hazmat crew, or C957.",
+     "why": "M.P. 204.01: communication between the first arriving crews and \"the first arriving Hazmat crew, or C957, must be made prior to committing resources into the hot zone.\"",
+     "opts": [
+      "The first-arriving Hazmat crew or C957",
+      "The on-site RP and the police supervisor",
+      "Dispatch and the Poison Control Center",
+      "The Battalion Chief and Car 99"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "On an NFPA 704 diamond, the red (flammability) quadrant shows a 2. Per M.P. 204.01, what flash point does that mean?",
+     "a": "A flash point of 100°F to 200°F.",
+     "why": "M.P. 204.01 NFPA 704 chart: red 4 = below 73°F, 3 = below 100°F, 2 = 100°F to 200°F, 1 = above 200°F, 0 = will not burn.",
+     "opts": [
+      "100°F to 200°F",
+      "Below 100°F",
+      "Below 73°F",
+      "Above 200°F"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "Engine 1 reports an NFPA 704 diamond with \"OX\" in the white quadrant. Per M.P. 204.01, what does that indicate?",
+     "a": "The material is an oxidizer.",
+     "why": "M.P. 204.01: in the white (specific hazard) quadrant, OX = oxidizer; W = use no water; COR = corrosive; ALK = alkali.",
+     "opts": [
+      "The material is an oxidizer",
+      "The space is oxygen deficient",
+      "The material is a corrosive",
+      "Use no water on the material"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "Per M.P. 204.01, what are the two INITIAL zones at a hazmat incident, and who enforces the limits of the outer one?",
+     "a": "The Hot Zone and the Limited Access Zone; police enforce the LAZ limits.",
+     "why": "M.P. 204.01: a hazmat incident has two initial zones, the Hot Zone and the Limited Access Zone. LAZ limits \"will be enforced by the Police Department\" based on distances set with Command and Hazard Sector.",
+     "opts": [
+      "Hot Zone and LAZ; police enforce the LAZ",
+      "Hot and Warm Zones; Lobby enforces the Warm",
+      "Hot Zone and LAZ; Hazard Sector enforces the LAZ",
+      "Hot and Cold Zones; Evacuation Sector enforces"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "Per M.P. 204.01, how is entry to and exit from the hazmat Hot Zone controlled?",
+     "a": "A Lobby Control Sector or Team monitors entry/exit and collects and returns company passports.",
+     "why": "M.P. 204.01: \"A Lobby Control Sector or Team will be assigned to monitor entry and exit of all personnel\" and collects/returns accountability PASSPORTS of companies entering and leaving.",
+     "opts": [
+      "Lobby Control collects and returns company passports",
+      "Hazard Sector logs each member on a tactical sheet",
+      "Each company officer radios Command on entry and exit",
+      "The Safety Officer checks helmet shields at the tape"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "Toxic vapors are drifting downwind over a neighborhood and Command chooses shelter in place. Per M.P. 204.01, what are companies assigned to do?",
+     "a": "Patrol the area, help citizens shut down ventilation, and evacuate people susceptible to respiratory problems.",
+     "why": "M.P. 204.01: when sheltering in place, \"companies will be assigned to patrol the area assisting citizens in shutting down ventilation systems and evacuating persons with susceptibility to respiratory problems.\"",
+     "opts": [
+      "Help shut down ventilation; move out those with breathing problems",
+      "Go door to door and order every resident to leave the area at once",
+      "Set up a water curtain between the plume and the nearest homes",
+      "Stage upwind and wait for police to make notifications"
+     ],
+     "src": "M.P. 204.01"
+    },
+    {
+     "q": "A hazmat release forces evacuation of nearby off-site homes, about 60 people, who'll be out 2 to 4 hours. Per M.P. 204.01A, what level of evacuation is this?",
+     "a": "An Intermediate Level Evacuation.",
+     "why": "M.P. 204.01A: the intermediate level affects off-site homes and businesses, \"normally affects fewer than 100 persons,\" and people may be out \"two to four hours or more.\"",
+     "opts": [
+      "Intermediate Level Evacuation",
+      "Site Evacuation",
+      "Large-Scale Evacuation",
+      "Limited Access Zone Evacuation"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, a Site Evacuation typically involves workers and adjacent occupancies. How long are holding times generally?",
+     "a": "Generally less than an hour or two.",
+     "why": "M.P. 204.01A: for site evacuations, \"Evacuation holding times are typically short, generally less than an hour or two.\"",
+     "opts": [
+      "Less than an hour or two",
+      "Two to four hours or more",
+      "Up to 30 minutes at most",
+      "Many hours, if not days"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, once long-term sheltering is identified, how long may the Red Cross need to get personnel and supplies to shelter sites?",
+     "a": "Up to three hours, so early notification is required.",
+     "why": "M.P. 204.01A: \"The Red Cross will need up to three hours to get adequate personnel, equipment and supplies to the shelter sites.\"",
+     "opts": [
+      "Up to three hours",
+      "Up to one hour",
+      "Up to six hours",
+      "Up to 30 minutes"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "A rapid evacuation makes door-to-door notification impossible. Per M.P. 204.01A, what siren signal do you use before the PA announcement?",
+     "a": "Three five-second blasts of the siren on the YELP setting.",
+     "why": "M.P. 204.01A: \"Use 3 five-second blasts of the siren while on the 'YELP' setting,\" followed by the evacuation instructions over the PA at maximum volume.",
+     "opts": [
+      "3 five-second blasts on YELP",
+      "2 ten-second blasts on WAIL",
+      "3 five-second blasts on HI-LO",
+      "5 three-second blasts on YELP"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, when driving a street making PA evacuation notifications, where do you start the announcement?",
+     "a": "At the beginning of each block and every 50 yards after that, driving slowly.",
+     "why": "M.P. 204.01A: \"Proceed slowly to maximize notification. Initiate notification at the beginning of each block and each 50 yards after that.\"",
+     "opts": [
+      "Each block start, then every 50 yards",
+      "Each block start, then every 100 yards",
+      "Only at each intersection you pass",
+      "Every 50 feet, at the posted speed"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "During a hazmat evacuation, a homeowner refuses to leave. Per M.P. 204.01A, what do you do?",
+     "a": "Get next of kin info, document the address for the Evacuation officer, and move on.",
+     "why": "M.P. 204.01A: \"Individual refusals will be left to fend for themselves\"; ask for next of kin and a phone number, write it down, and document or radio the address to the Evacuation Branch/Sector officer.",
+     "opts": [
+      "Document the address and next of kin, then move on",
+      "Request police to remove the person by force",
+      "Stay with the person until a chief officer can arrive",
+      "Place the person in your rig and transport them"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, how should a Transportation Branch/Sector set up buses for an intermediate or large evacuation?",
+     "a": "Start with a minimum of two buses, stage them, and put a firefighter or police officer with a radio on each.",
+     "why": "M.P. 204.01A: \"Obtain buses (start with minimum of two)\", stage all transportation resources, and \"put one firefighter (or police officer) with a radio on each vehicle.\"",
+     "opts": [
+      "Two buses minimum, a radio-equipped member on each",
+      "Four buses minimum, drivers report to Staging only",
+      "One bus for every 50 evacuees, with a police escort",
+      "Two buses minimum, the Red Cross staffs each one"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, how often does the EOC Liaison Officer give progress reports to the EOC unless told otherwise?",
+     "a": "Every 30 minutes.",
+     "why": "M.P. 204.01A: the EOC Liaison Officer will \"Provide progress reports every 30 minutes unless the EOC requires more frequent or less frequent reports.\"",
+     "opts": [
+      "Every 30 minutes",
+      "Every 15 minutes",
+      "Every 60 minutes",
+      "Only when the plan changes"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01A, who decides when evacuees may return home if the EOC is NOT operating?",
+     "a": "The Fire Department Incident Commander, solely.",
+     "why": "M.P. 204.01A: the return decision is \"the sole responsibility of the Fire Department Incident Commander. If the EOC is operating, the decision ... will be made by the EOC staff.\"",
+     "opts": [
+      "The Fire Dept. Incident Commander",
+      "The ranking police officer at the CP",
+      "The Evacuation Branch officer",
+      "The Hazard Sector officer"
+     ],
+     "src": "M.P. 204.01A"
+    },
+    {
+     "q": "Per M.P. 204.01B, who should be assigned the Decontamination Sector at a hazmat incident?",
+     "a": "Personnel from the Hazardous Materials Team.",
+     "why": "M.P. 204.01B: Command assures a Decontamination Sector is implemented, and \"This sector should be assigned to personnel from the Hazardous Materials Team.\"",
+     "opts": [
+      "Personnel from the Hazardous Materials Team",
+      "The first-arriving engine company",
+      "The first ALS rescue company to arrive on scene",
+      "A Lobby Control team from the 2nd alarm"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "Per M.P. 204.01B, where should the Decontamination Area be set up?",
+     "a": "Inside the Hot Zone perimeter, next to the Entrance/Exit (Lobby Control).",
+     "why": "M.P. 204.01B: \"The Decontamination Area should be established within the Hot Zone perimeter adjacent to the Entrance/Exit (Lobby Control).\"",
+     "opts": [
+      "Inside the Hot Zone, next to Lobby Control",
+      "Outside the Hot Zone, next to Treatment",
+      "In the Cold Zone, right beside the Command Post",
+      "At the Level II staging area, upwind"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "You're unsure whether crews leaving the Hot Zone are contaminated. Per M.P. 204.01B, what do you do?",
+     "a": "Decontaminate all affected personnel, equipment and apparatus.",
+     "why": "M.P. 204.01B: \"When in doubt about contamination, decontaminate all affected personnel, equipment, and apparatus.\" Assume everything leaving the Hot Zone is contaminated.",
+     "opts": [
+      "Decontaminate all of them",
+      "Release them and recheck later",
+      "Have them shower at quarters",
+      "Release those without symptoms"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "A Level I patient at a hazmat scene needs transport. Per M.P. 204.01B, how is decon handled?",
+     "a": "Don't delay transport for complete decon; treat with decon, cover the patient, and load at the Warm Zone perimeter.",
+     "why": "M.P. 204.01B: \"Transporting of Level I patients should not be delayed for complete decontamination.\" Treat life threats during decon, cover the patient, and bring the rescue \"to the Warm Zone perimeter for loading.\"",
+     "opts": [
+      "No full decon delay; cover and load at Warm Zone edge",
+      "Complete full decon first, then load at the Cold Zone",
+      "Transport by helicopter to shorten everyone's exposure",
+      "Load in the Hot Zone, decon the patient at the ER"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "Per M.P. 204.01B, why are helicopters not used to transport contaminated patients?",
+     "a": "Off-gassing could affect the pilot and flight crew.",
+     "why": "M.P. 204.01B: \"Helicopters will not be used for transporting any contaminated patients due to off-gassing effects on the pilot and flight crew.\"",
+     "opts": [
+      "Off-gassing could affect the pilot and crew",
+      "Rotor wash would spread the contaminant",
+      "The aircraft can't be decontaminated",
+      "Receiving hospitals can't accept air transports"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "Per M.P. 204.01B, what happens to runoff from decontamination?",
+     "a": "It must be contained within the Hot Zone, with diking directed back to the Hot Zone, for proper disposal.",
+     "why": "M.P. 204.01B: run-off \"must be contained within the Hot Zone and retained for proper disposal ... Diking may be necessary and should be directed back to the Hot Zone.\"",
+     "opts": [
+      "Contained in the Hot Zone for disposal",
+      "Diluted and flushed to the storm drain",
+      "Diked in the Cold Zone for the contractor",
+      "Allowed to evaporate if under 50 gallons"
+     ],
+     "src": "M.P. 204.01B"
+    },
+    {
+     "q": "A tank is exposed to flame impingement. Per M.P. 204.01C, where do you apply your heavy streams?",
+     "a": "To the vapor space above the tank's liquid line, using unmanned streams.",
+     "why": "M.P. 204.01C: \"Apply heavy streams to the vapor space area above the tanks liquid line\" and \"Use unmanned streams.\"",
+     "opts": [
+      "Vapor space above the liquid line",
+      "Liquid space below the liquid line",
+      "The relief valve and its piping only",
+      "The base of the tank and its supports"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "You find a leaking chlorine container. Per M.P. 204.01C, why shouldn't you put water on it?",
+     "a": "Water applied to a chlorine container will make the leak worse.",
+     "why": "M.P. 204.01C: \"Do not apply water to chlorine containers - it will make the leak worse.\" (No water on CL2 tanks.)",
+     "opts": [
+      "It will make the leak worse",
+      "It creates an explosive gas",
+      "It freezes the relief valve shut",
+      "It hides the leak from monitors"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "Per M.P. 204.01C, why can DOT placards be unreliable at a transportation hazmat incident?",
+     "a": "Some hazmat in quantities up to 1,000 lbs. does not require a placard.",
+     "why": "M.P. 204.01C: DOT marking systems are inadequate \"because some hazardous materials in quantities up to 1,000 lbs., do not require a placard,\" and mixed loads may show only a \"dangerous\" label.",
+     "opts": [
+      "Loads up to 1,000 lbs. may need no placard",
+      "Loads up to 100 lbs. may need no placard",
+      "Placards are only required on rail tank cars",
+      "Placards are only required for Class 1"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "Per M.P. 204.01C, where should crews start when removing ignition sources at a release?",
+     "a": "Start downwind.",
+     "why": "M.P. 204.01C: Remove Ignition Sources: \"Start down wind. Eliminate all sources of heat, spark, friction.\"",
+     "opts": [
+      "Downwind of the release",
+      "Upwind of the release",
+      "At the source of the leak",
+      "At the outer perimeter tape"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "Per M.P. 204.01C, when should crews move uninvolved containers away from a hazmat fire?",
+     "a": "Only after Command and H.I.R.T. officers have a complete site safety plan, and after cooling the containers.",
+     "why": "M.P. 204.01C: removing uninvolved materials \"should only be done after a complete site safety plan has been established by Command and H.I.R.T. Officers\"; cool containers before moving.",
+     "opts": [
+      "After a full site safety plan is set",
+      "As soon as the first engine arrives",
+      "Only after the fire is fully extinguished",
+      "Once the RP gives verbal permission"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "Per M.P. 204.01C, what affects the outcome of a hazmat incident more than any other single factor?",
+     "a": "The actions taken by Command in the first few minutes, so call for resources early.",
+     "why": "M.P. 204.01C: \"Call for additional resources EARLY. The actions taken by command in the first few minutes of an incident affects the outcome more than any other single factor.\"",
+     "opts": [
+      "Command's actions in the first few minutes",
+      "The level of PPE worn by entry crews",
+      "How quickly the product is identified",
+      "Weather and wind during the first hour on scene"
+     ],
+     "src": "M.P. 204.01C"
+    },
+    {
+     "q": "You arrive at a mercury spill in a business. Per M.P. 204.02, what is the Fire Department's role in cleanup?",
+     "a": "None: at no time shall the Fire Department attempt to clean up a mercury release.",
+     "why": "M.P. 204.02: \"AT NO TIME SHALL THE FIRE DEPARTMENT ATTEMPT TO CLEAN UP A MERCURY RELEASE,\" not even the smallest amount.",
+     "opts": [
+      "None; FD never cleans up any mercury",
+      "Clean up spills smaller than a thermometer",
+      "Hazmat cleans it; engine crews don't",
+      "Clean it only if the RP can't pay"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "A resident walks into your station with a jar of mercury. Per M.P. 204.02, can you take it?",
+     "a": "Yes; personnel may take possession of mercury a resident brings to the station, but never mercury from a commercial business.",
+     "why": "M.P. 204.02: Exception: \"When a resident brings mercury to the fire station, personnel may take possession.\" Members shall not take possession of mercury generated from a commercial business.",
+     "opts": [
+      "Yes, from a resident, but not from a business",
+      "No; refer the resident to a cleanup contractor",
+      "Yes, from a resident or from a business",
+      "No, unless Special Operations approves"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "Per M.P. 204.02, at a commercial mercury release, whom does Command request through Dispatch?",
+     "a": "The Fire Prevention Haz Mat specialist and on-duty Special Operations personnel.",
+     "why": "M.P. 204.02: Command will evacuate, isolate, deny entry, and \"Request, through Dispatch, that the Fire Prevention Haz Mat specialist and the on-duty Special Operations personnel respond.\"",
+     "opts": [
+      "Fire Prevention Haz Mat specialist and Special Ops",
+      "A cleanup contractor and the ADEQ duty officer",
+      "The full Hazardous Materials first alarm",
+      "Poison Control and the health center Exposure Control Officer"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "Per M.P. 204.02, how do you bag clothing and jewelry removed from someone contaminated with mercury?",
+     "a": "Plastic bag, tied off, with the owner's name tag; never a biohazard bag.",
+     "why": "M.P. 204.02: place items in a plastic bag, tie it off, and tag it with the owner's name. \"DO NOT USE BIOHAZARD BAGS BECAUSE THE CONTRACTORS CANNOT ACCEPT IT.\"",
+     "opts": [
+      "Tied plastic bag with owner's name tag",
+      "Red biohazard bag sealed with tape",
+      "Double biohazard bag with triage tag",
+      "Leave items in place for the contractor"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "Per M.P. 204.02, who contacts and hires the cleanup contractor at a commercial mercury release?",
+     "a": "The responsible party; the Fire Department does not make the contact.",
+     "why": "M.P. 204.02: the responsible party shall contact and employ the contractor. \"The Fire Department shall not make the contact ... because the Fire Department does not want to incur the costs.\"",
+     "opts": [
+      "The responsible party",
+      "The Incident Commander",
+      "Fire Prevention",
+      "Dispatch, at Command's request"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "Mercury is spilled inside an apartment unit. Per M.P. 204.02, how does ADEQ classify it?",
+     "a": "As household hazardous waste, exempt from cleanup requirements, though the FD still responds and educates.",
+     "why": "M.P. 204.02: ADEQ has determined a release in a residence, including apartment interiors, is \"household hazardous waste\" and \"exempt from cleanup requirements.\" Common areas like pool-side follow the commercial section.",
+     "opts": [
+      "Household hazardous waste, exempt from cleanup",
+      "Commercial release; the landlord must clean up",
+      "Hazmat release; the FD Hazmat Team must clean it up",
+      "Biohazard waste; the county removes it"
+     ],
+     "src": "M.P. 204.02"
+    },
+    {
+     "q": "Mercury is spilled at the pool area of an apartment complex. Per M.P. 204.02, which procedure applies?",
+     "a": "The commercial facility section of the MP.",
+     "why": "M.P. 204.02: \"A mercury release in common public areas such as pool-side or exit corridors at apartment complexes ... would require compliance with the commercial facility section.\"",
+     "opts": [
+      "The commercial facility section",
+      "The residential section",
+      "The radiological section",
+      "No MP section; it is outdoors"
+     ],
+     "src": "M.P. 204.02"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Hazmat, Radiological & WMD (204, 207) (Part 2)",
+   "sub": "Radiological incidents and decon, atmospheric monitors, clandestine drug labs, and WMD/CBRN response, decon and agent treatment (M.P. 204.03–204.07, 207.01A–C).",
+   "concepts": [
+    "<b>204.03</b>: No life hazard, rescue or fire = secure a perimeter and wait for Hazmat; tape at 2 mR/hr; nuclear weapon on fire = evacuate 2,000 ft.",
+    "<b>204.03A</b>: Stay in full PPE with facepiece on through the three collection points; shower on site if still contaminated; impound runoff.",
+    "<b>204.06</b>: Span/calibrate before entering suspect atmospheres; a meter that won't span is not used; calibrate weekly, monthly at Special Ops.",
+    "<b>204.07</b>: Suspected lab = withdraw quietly and notify BC, PD and Special Ops; touch nothing, never shut off condenser water.",
+    "<b>207.01A</b>: WMD is a crime scene; entry control point at least 300 ft; minimum PPE turnouts, butyl gloves, SCBA; watch for secondary devices.",
+    "<b>207.01A</b>: Emergency decon for chemical agents, clothes on unless liquid splash; not needed for biological or radiological.",
+    "<b>207.01B</b>: Personnel line: belongings, undress, shower, monitor, redress; equipment: 5% bleach with 15-minute contact.",
+    "<b>207.01C</b>: Agent facts: chlorine ~2x heavier than air; mustard effects in 2–24 hrs but decon now; nerve agent adult atropine 2 mg."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 204.03, what does Dispatch send to an incident reported to involve radiological materials?",
+     "a": "A 2-1 assignment or a 1st Alarm assignment, with the Hazardous Materials Team.",
+     "why": "M.P. 204.03: \"The Dispatch Center will dispatch either a 2-1 assignment or a 1st Alarm assignment, with the Hazardous Materials Team,\" sized by location and type of situation. Dispatch also advises the prevailing wind direction.",
+     "opts": [
+      "A 2-1 or 1st Alarm, plus the Hazmat Team",
+      "A single engine to investigate first",
+      "A 2nd Alarm with the Hazmat Team",
+      "The Hazmat Team and a Battalion Chief only"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "You arrive first at a radiological transport incident with no fire, no rescue and no life hazard. Per M.P. 204.03, what do you do?",
+     "a": "Secure a perimeter, evaluate the situation, and wait for the Hazardous Materials Team.",
+     "why": "M.P. 204.03: \"If there is no life hazard, rescue situation or fire, there is no reason to risk exposure ... First arriving units should secure a perimeter, evaluate the situation and wait for the arrival of the Hazardous Materials Team.\"",
+     "opts": [
+      "Secure a perimeter and wait for Hazmat",
+      "Enter with SCBA to identify the source",
+      "Begin removing the packages from the area",
+      "Cover the source with salvage covers"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "Per M.P. 204.03, where is Hazard Zone tape stretched at a radiological incident?",
+     "a": "Where readings of 2 mR/hr are detectable, allowing for downwind spread.",
+     "why": "M.P. 204.03: \"Hazard Zone tape shall be stretched to define an area where readings of 2MR/hr are detectable,\" taking into account potential downwind spread.",
+     "opts": [
+      "Where 2 mR/hr is detectable",
+      "Where 20 mR/hr is detectable",
+      "Where 0.2 mR/hr is detectable",
+      "At 300 feet in all directions"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "Per M.P. 204.03, if personnel must be committed into the Limited Access Zone at a radiological incident, what monitoring is required?",
+     "a": "At least one survey instrument per team, and dosimeters for all personnel on scene.",
+     "why": "M.P. 204.03: any commitment \"shall include at least one survey instrument per team,\" and \"Dosimeters shall be issued to all personnel operating at the scene.\"",
+     "opts": [
+      "One survey meter per team; dosimeters for all",
+      "One survey meter per member; dosimeters not needed",
+      "Dosimeters for entry crews only",
+      "One survey meter per incident at Lobby"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "You're attacking a fire involving radioactive material. Per M.P. 204.03, which tactic is correct?",
+     "a": "Approach from upwind, do not ventilate, and minimize water use while impounding runoff.",
+     "why": "M.P. 204.03 Incidents With Fire: always approach from upwind, \"Do not ventilate,\" \"Minimize the use of water,\" and control water runoff for disposal.",
+     "opts": [
+      "Approach upwind, no ventilation, minimal water",
+      "Approach downwind, ventilate early, heavy water",
+      "Approach upwind, ventilate, use master streams",
+      "Approach from any side, flood the area with foam"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "Per M.P. 204.03, a nuclear weapon in transit is involved in fire. What evacuation is required?",
+     "a": "Immediately evacuate 2,000 feet in all directions and check downwind areas.",
+     "why": "M.P. 204.03: \"If a nuclear weapon involves fire, evacuate the area of 2,000 feet, in all directions, immediately. All down wind areas must be checked for contamination.\"",
+     "opts": [
+      "2,000 feet in all directions",
+      "1,000 feet in all directions",
+      "2,000 feet in the downwind direction only",
+      "Half a mile downwind only"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "A patient with a broken leg is contaminated with radioactive dust. Per M.P. 204.03, how do you handle treatment?",
+     "a": "Don't delay field treatment; radiological contamination itself is not a medical emergency.",
+     "why": "M.P. 204.03: \"Do not delay field treatment of injuries. Radiological contamination, itself, is not a medical emergency.\"",
+     "opts": [
+      "Treat now; contamination isn't an emergency",
+      "Delay all care until full decon is complete",
+      "Transport immediately with no field care",
+      "Treat only after a Hazmat survey clears them"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "Per M.P. 204.03, how are contaminated radiological patients wrapped and sent to hospitals?",
+     "a": "Wrapped in blankets or sheets with only the face exposed, sent to a single hospital or as few as possible.",
+     "why": "M.P. 204.03: patients \"must be wrapped in blankets or sheets ... Only the face should be left exposed,\" and \"should be sent to a single hospital or to as few as possible.\"",
+     "opts": [
+      "Face left exposed; one hospital or as few as possible",
+      "Fully covered; spread across many hospitals",
+      "Face left exposed; each one to the closest available hospital",
+      "Fully covered; trauma centers only"
+     ],
+     "src": "M.P. 204.03"
+    },
+    {
+     "q": "Per M.P. 204.03A, how are personnel dressed when they report to the radiological Decontamination Area?",
+     "a": "Fully dressed in protective gear, including gloves and SCBA with facepiece in place.",
+     "why": "M.P. 204.03A: \"All personnel reporting to the Decontamination Area will remain fully dressed in protective gear, including gloves and SCBA (facepiece in place).\"",
+     "opts": [
+      "Full gear, gloves on, facepiece in place",
+      "Turnouts on, facepiece off to save air",
+      "Gloves off, so hands can be surveyed",
+      "Stripped to station uniform at the hazard tape"
+     ],
+     "src": "M.P. 204.03A"
+    },
+    {
+     "q": "At the radiological decon line, you're still contaminated after the first survey point. Per M.P. 204.03A, what goes in the first container?",
+     "a": "Coat, boots and bunker pants, keeping the SCBA facepiece in place.",
+     "why": "M.P. 204.03A: contaminated personnel \"will place coat, boots and bunker pants in the first container, continuing to maintain SCBA facepiece in place.\" Harness and cylinder go to the second container.",
+     "opts": [
+      "Coat, boots and bunker pants",
+      "SCBA harness and cylinder",
+      "All clothing down to skin",
+      "Helmet, gloves and nomex hood only"
+     ],
+     "src": "M.P. 204.03A"
+    },
+    {
+     "q": "Per M.P. 204.03A, what happens if a member is still contaminated at the third collection point?",
+     "a": "They shower at the site with a portable shower and soap, and the runoff is impounded.",
+     "why": "M.P. 204.03A: if still contaminated, \"personnel must shower at the site, using a portable shower and soap,\" then are surveyed again; \"Shower runoff water must be impounded and collected.\"",
+     "opts": [
+      "Shower on site; impound the runoff",
+      "Bag them and send them to quarters",
+      "Transport them to the closest ER",
+      "Wipe down with moist cloth and release"
+     ],
+     "src": "M.P. 204.03A"
+    },
+    {
+     "q": "Per M.P. 204.03A, what can be used to hold radioactively contaminated clothing and equipment?",
+     "a": "Plastic bags or plastic trash containers, including City trash containers.",
+     "why": "M.P. 204.03A: plastic bags or plastic trash containers must be used; \"City plastic trash containers are excellent for this purpose\" and may be taken from nearby residential areas or Sanitation.",
+     "opts": [
+      "Plastic bags or City plastic trash bins",
+      "Red biohazard bags only",
+      "Lead-lined drums brought by the Hazmat Team only",
+      "Salvage covers rolled and taped"
+     ],
+     "src": "M.P. 204.03A"
+    },
+    {
+     "q": "Per M.P. 204.06, when must an atmospheric monitor be spanned and/or calibrated?",
+     "a": "Before entry into contaminated or suspected contaminated or oxygen-deficient atmospheres (except RMD instruments).",
+     "why": "M.P. 204.06: spanning/calibration \"shall be done on each instrument (except RMD instruments) prior to making entry into\" contaminated or suspected contaminated or oxygen-deficient atmospheres.",
+     "opts": [
+      "Before entering a suspect atmosphere",
+      "After each entry into a suspect space",
+      "Only at the monthly calibration",
+      "Only when the meter alarms on its own"
+     ],
+     "src": "M.P. 204.06"
+    },
+    {
+     "q": "Your gas monitor won't span correctly and you can't fix it. Per M.P. 204.06, what do you do?",
+     "a": "Don't use it; take it to the Special Operations Section and swap it for another.",
+     "why": "M.P. 204.06: if the instrument does not span or calibrate correctly and you can't resolve it, \"you will not use the instrument,\" and bring it to the Special Operations Section to change out.",
+     "opts": [
+      "Don't use it; swap it at Special Ops",
+      "Use it and add a 10% safety margin",
+      "Use it but note it on the control log",
+      "Let Hazmat decide on scene whether to use it"
+     ],
+     "src": "M.P. 204.06"
+    },
+    {
+     "q": "Per M.P. 204.06, how often are atmospheric monitors calibrated, and how often at the Special Operations Section?",
+     "a": "Weekly, with a monthly calibration at the Special Operations Section logged in the master file.",
+     "why": "M.P. 204.06: \"Calibration of instruments shall be on a weekly basis,\" and all instruments (except RMD) are calibrated at the Special Operations Section \"on a monthly basis\" and logged into the master control file.",
+     "opts": [
+      "Weekly; monthly at Special Operations",
+      "Daily; quarterly at Special Operations",
+      "Monthly; yearly at Special Operations",
+      "Before each use only; no Special Ops check"
+     ],
+     "src": "M.P. 204.06"
+    },
+    {
+     "q": "On an EMS call you see flasks, hot plates, tubing and unmarked chemical jugs. Per M.P. 204.07, what do you do first?",
+     "a": "Withdraw to a safe location, using discretion on radio, and notify the BC, police and Special Operations duty person.",
+     "why": "M.P. 204.07: personnel encountering a suspected lab \"should withdraw to a safe location as soon as it is possible, using discretion on actions and radio conversation,\" then notify the on-duty BC, PD and Special Operations duty person.",
+     "opts": [
+      "Withdraw quietly; notify BC, PD and Special Ops",
+      "Shut off the heat sources, then withdraw",
+      "Open windows to ventilate, then wait for the Hazmat Team",
+      "Bag the chemicals as evidence for police"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "Inside a suspected drug lab, water is flowing to a condensing tower. Per M.P. 204.07, should you shut it off?",
+     "a": "No; shutting off water to a cooking process can cause an explosion. Touch nothing.",
+     "why": "M.P. 204.07: \"Water sources, especially to reflux or condensing towers, should not be shut off. Shutting off the water supply to a cooking process can result in an explosion.\"",
+     "opts": [
+      "No; it can cause an explosion",
+      "Yes; it stops the reaction safely",
+      "Yes, but only after unplugging power",
+      "No; it will release phosphine only"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "Per M.P. 204.07, what toxic gas can a pressure-cooker meth setup generate without ventilation?",
+     "a": "Phosphine gas.",
+     "why": "M.P. 204.07: pressure cookers substituted for three-neck flasks \"can easily generate toxic levels of phosphine gas.\"",
+     "opts": [
+      "Phosphine",
+      "Chlorine",
+      "Hydrogen cyanide",
+      "Carbon monoxide"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "Per M.P. 204.07, a police agency wants H.I.R.T. support for a drug lab seizure. Whom do they contact?",
+     "a": "The Duty Deputy or Car 94, who schedules a pre-incident meeting.",
+     "why": "M.P. 204.07: the requesting agency \"shall contact the Duty Deputy or Car 94 for scheduling of the Hazardous Incident Response Team\"; a pre-incident meeting is held with Car 94.",
+     "opts": [
+      "The Duty Deputy or Car 94",
+      "The on-duty Battalion Chief",
+      "Dispatch, for a hazmat first alarm",
+      "C957 or the Hazmat captain"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "You're Command at a fire that turns out to be a drug lab. Per M.P. 204.07, what is an acceptable approach?",
+     "a": "View it pessimistically; protect exposures and let it burn if combustion products aren't worsening the problem.",
+     "why": "M.P. 204.07: a lab fire \"should be viewed pessimistically\"; a defensive mode may be appropriate, and \"An acceptable alternative is to protect any exposures and allow the fire to burn.\"",
+     "opts": [
+      "Protect exposures and let it burn",
+      "Go offensive with foam to save evidence",
+      "Ventilate aggressively to clear vapors",
+      "Fight it offensively in turnouts and SCBA"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "A firefighter has mild symptoms after exposure at a meth lab. Per M.P. 204.07, where are they transported?",
+     "a": "To Poison Control, unless it's a critical life-threatening emergency (then the closest hospital).",
+     "why": "M.P. 204.07: exposed personnel \"should be treated and transported to Poison Control, providing that the exposure is not a critical life threatening emergency. Critical life threatening injuries require transport to the closest hospital.\"",
+     "opts": [
+      "Poison Control, unless life-threatening",
+      "The closest hospital, in every case",
+      "The health center on the next business day",
+      "A burn center for decon and evaluation"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "Per M.P. 204.07, when may PFD crews join a law enforcement entry into a clandestine lab?",
+     "a": "Never into an unsecured lab; only a secured lab (bomb squad and S.A.U. cleared, suspects in custody) if a hazmat emergency develops.",
+     "why": "M.P. 204.07: PFD \"will not participate in a law enforcement agency entry operation into a suspected and unsecured\" lab. Secured means Bomb Squad and S.A.U. surveyed, suspects in custody, no explosives found.",
+     "opts": [
+      "Only into a secured lab, for a hazmat emergency",
+      "Any time police request a hazmat escort for entry",
+      "Only alongside the S.A.U. entry team",
+      "Only once DEQ is physically on scene"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "Per M.P. 204.07, who is responsible for disposing of the chemicals at a seized clandestine lab?",
+     "a": "The law enforcement agency making the seizure, using the proper contractor.",
+     "why": "M.P. 204.07: \"Proper disposal ... is the responsibility of the law enforcement agency that is making the seizure,\" which must arrange clean-up with the proper contractor.",
+     "opts": [
+      "The seizing law enforcement agency",
+      "The Phoenix Fire Hazmat Team",
+      "The property owner",
+      "ADEQ Emergency Response"
+     ],
+     "src": "M.P. 204.07"
+    },
+    {
+     "q": "You arrive at an office where a letter leaked an unknown powder. Per M.P. 207.01A, what do you do?",
+     "a": "Quarantine the exposed people, isolate the area, shut down HVAC, and hold for Hazmat to double bag it.",
+     "why": "M.P. 207.01A: quarantine persons in the immediate area in a safe refuge area, isolate the area and \"hold for Hazmat Team to double bag and secure,\" and shut down HVAC.",
+     "opts": [
+      "Quarantine, isolate, shut down HVAC",
+      "Bag the letter and send people home",
+      "Evacuate everyone and ventilate rooms",
+      "Open windows and await police"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "You suspect anthrax at a WMD call. Per M.P. 207.01A, how do you refer to the agent on the radio?",
+     "a": "Only as a \"biological agent\" or \"unknown agent\", never by name.",
+     "why": "M.P. 207.01A: \"DO NOT USE SPECIFIC NAME OF SUSPECTED AGENT OVER THE RADIO; USE ONLY 'BIOLOGICAL AGENT' OR 'UNKNOWN AGENT'.\"",
+     "opts": [
+      "\"Biological\" or \"unknown agent\" only",
+      "By its specific name, for accuracy and speed",
+      "By its DOT/UN number",
+      "By its military code letters"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, how far from the source should the Hot Zone entry control point be at a WMD incident?",
+     "a": "A minimum of 300 feet, whether chemical, biological or radiological.",
+     "why": "M.P. 207.01A: \"The entry control point should be a minimum of 300 feet from the source. This applies whether suspected agent is chemical, biological or radiological.\"",
+     "opts": [
+      "At least 300 feet",
+      "At least 150 feet",
+      "At least 1,000 feet",
+      "At least 2,000 feet"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, what is the minimum PPE for operational (non-hazmat) responders at a WMD incident?",
+     "a": "Turnouts, butyl rubber gloves and SCBA.",
+     "why": "M.P. 207.01A: \"Minimum PPE is turnouts, butyl rubber gloves and SCBA,\" and entry of first responders into the HOT ZONE should be minimized.",
+     "opts": [
+      "Turnouts, butyl rubber gloves and SCBA",
+      "Turnouts and SCBA only",
+      "Level B suit and SCBA",
+      "Turnouts, latex EMS gloves and an N95 mask"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, where are WMD decon lines set up and how wide should the area be?",
+     "a": "In the Warm Zone, minimally 15 feet wide and big enough for all waiting victims and equipment.",
+     "why": "M.P. 207.01A: \"Decon lines are established in the WARM ZONE. This area should be minimally 15 feet wide, but must encompass all victims awaiting decon and decon equipment.\"",
+     "opts": [
+      "Warm Zone, at least 15 feet wide",
+      "Cold Zone, at least 15 feet wide",
+      "Hot Zone, at least 30 feet wide",
+      "Cold Zone, at least 15 feet wide, upwind"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "While working a WMD scene you spot what looks like an operable secondary device. Per M.P. 207.01A, what do you do?",
+     "a": "Withdraw personnel and expand the Hot Zone until the police bomb squad renders it safe.",
+     "why": "M.P. 207.01A: \"Upon sighting a device that appears operable, withdraw personnel until Police Bomb Squad has inspected/rendered safe\" it. \"No PFD personnel should ever inspect or move a suspected secondary device.\"",
+     "opts": [
+      "Withdraw and wait for the bomb squad",
+      "Cover it with a salvage cover and mark it",
+      "Move it away from victims if it is small",
+      "Have Hazmat inspect it in Level A"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "You're doing emergency decon of ambulatory victims of a chemical agent. Per M.P. 207.01A, what are the instructions?",
+     "a": "Arms and legs spread, turn slowly, soaked head-down with a booster line; clothes stay on unless there was a liquid splash.",
+     "why": "M.P. 207.01A: victims spread arms and legs and turn slowly; \"clothing is NOT removed for emergency decon unless patient was exposed to a liquid splash\"; soak from top of head downward.",
+     "opts": [
+      "Clothes on unless liquid splash; soak head-down",
+      "Strip fully, then rinse feet upward",
+      "Strip fully, scrub with 5% bleach",
+      "Clothes on; mist lightly to limit the runoff volume"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, too many victims are overwhelming your booster-line emergency decon. What do you set up?",
+     "a": "A master stream (or streams) creating a dense shower flow.",
+     "why": "M.P. 207.01A: when multiple victims \"may inundate the booster line procedure,\" a master stream creating a dense shower flow is \"a more effective method of mass casualty emergency decontamination.\"",
+     "opts": [
+      "A master stream making a dense shower",
+      "A second booster line from the same rig",
+      "Portable showers from the Hazmat unit",
+      "Pre-connected 1 3/4\" lines on fog"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, which WMD agent types do NOT require emergency decontamination of victims?",
+     "a": "Biological and radiological (decon only those needing immediate medical care).",
+     "why": "M.P. 207.01A: \"Emergency decontamination is not necessary for biological and radiological contamination.\" Only victims with other injuries needing immediate care are prioritized.",
+     "opts": [
+      "Biological and radiological",
+      "Chemical and biological",
+      "Chemical and radiological",
+      "Nerve and blister agents"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01A, what must every Hazmat technician entering the Hot Zone at a chemical WMD incident carry?",
+     "a": "Three MARK I Nerve Agent Antidote Kits, while wearing Level A.",
+     "why": "M.P. 207.01A: for chemical agents \"level A protection is worn. All personnel entering the Hot Zone will carry THREE Nerve Agent Antidote Kits (MARK I).\"",
+     "opts": [
+      "Three MARK I kits, in Level A",
+      "One MARK I kit, in Level B",
+      "Two MARK I kits, in Level A",
+      "Three MARK I kits, in Level B or higher"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Victims die during sorting at a WMD scene. Per M.P. 207.01A, how are the bodies handled?",
+     "a": "Redefine the Hot Zone perimeter to include the bodies and don't move them unless absolutely necessary.",
+     "why": "M.P. 207.01A: \"If deaths occur during sorting, redefine HOT ZONE perimeter to include bodies,\" and \"Unless absolutely necessary do not move bodies.\"",
+     "opts": [
+      "Expand the Hot Zone to them; don't move them",
+      "Move them to the Cold Zone for the Medical Examiner",
+      "Decon them first, ahead of the living",
+      "Cover and carry them to a morgue sector"
+     ],
+     "src": "M.P. 207.01A"
+    },
+    {
+     "q": "Per M.P. 207.01B, what is the order of stations in the WMD technical decon line for personnel?",
+     "a": "Personal belongings drop, clothing removal, shower, monitoring, clothing issue/redress.",
+     "why": "M.P. 207.01B: Station 1 personal belongings/accountability, Station 2 clothing removal, Station 3 shower, Station 4 monitoring, Station 5 clothing issue/redress.",
+     "opts": [
+      "Belongings, undress, shower, monitor, redress",
+      "Undress, belongings, monitor, shower, redress",
+      "Monitor, belongings, undress, shower, redress",
+      "Belongings, shower, undress, monitor, redress"
+     ],
+     "src": "M.P. 207.01B"
+    },
+    {
+     "q": "At the monitoring station of the WMD personnel decon line, a victim still reads contaminated. Per M.P. 207.01B, what happens?",
+     "a": "They go back into the shower, rewash, and are retested.",
+     "why": "M.P. 207.01B Station 4: \"If any contamination is detected, the person will move back into the shower and rewash, then be retested.\"",
+     "opts": [
+      "Back to the shower, then retested",
+      "Sent to Treatment to be checked",
+      "Bagged and sent to the hospital",
+      "Wiped down at monitoring and released"
+     ],
+     "src": "M.P. 207.01B"
+    },
+    {
+     "q": "Per M.P. 207.01B, what solution and contact time are used at the WMD equipment decon line?",
+     "a": "5% chlorine bleach solution with a minimum 15-minute contact time.",
+     "why": "M.P. 207.01B: Station 2 applies a 5% chlorine bleach solution; at Station 3 the solution stays on \"for a minimum of fifteen minutes,\" re-spraying areas that dry.",
+     "opts": [
+      "5% bleach, at least 15 minutes",
+      "10% bleach, at least 5 minutes",
+      "5% bleach, at least 5 minutes",
+      "0.5% bleach, at least 30 minutes"
+     ],
+     "src": "M.P. 207.01B"
+    },
+    {
+     "q": "Per M.P. 207.01B, how long is the initial wash of a vehicle at the WMD equipment decon line?",
+     "a": "Two to three minutes with water, including the undersurfaces.",
+     "why": "M.P. 207.01B Station 1: spray \"for two to three minutes with water. Hot water, if available, is more effective,\" and undersurfaces must be sprayed.",
+     "opts": [
+      "Two to three minutes",
+      "Thirty seconds",
+      "Ten minutes",
+      "Fifteen minutes"
+     ],
+     "src": "M.P. 207.01B"
+    },
+    {
+     "q": "Per M.P. 207.01B, what do decontaminated victims put on at the redress station?",
+     "a": "Hospital scrubs and thongs.",
+     "why": "M.P. 207.01B Station 5: the attendant \"will issue the appropriate sized hospital scrubs and thongs to each person and have them redress.\"",
+     "opts": [
+      "Hospital scrubs and thongs",
+      "Their own bagged clothes",
+      "Tyvek suits and booties",
+      "Blankets only until hospital"
+     ],
+     "src": "M.P. 207.01B"
+    },
+    {
+     "q": "Per M.P. 207.01C, how does released chlorine gas behave compared with air?",
+     "a": "It's about two times heavier than air, so it stays low.",
+     "why": "M.P. 207.01C: chlorine is generally stored as a liquid; \"when released, the resulting gas is about two times heavier than air.\"",
+     "opts": [
+      "About two times heavier than air",
+      "About eight times heavier than air",
+      "Slightly lighter than air",
+      "About five times heavier than air"
+     ],
+     "src": "M.P. 207.01C"
+    },
+    {
+     "q": "A chlorine-exposed patient has no symptoms. Per M.P. 207.01C, how long is direct observation?",
+     "a": "At least 1 hour, then rechecks every hour for an additional 12 hours.",
+     "why": "M.P. 207.01C: \"If asymptomatic: Maintain direct observation for at least 1 hour,\" then \"recheck every hour for additional 12 hours since some bronchospasm may appear late.\"",
+     "opts": [
+      "At least 1 hour, then hourly for 12 hours",
+      "At least 15 minutes, then release",
+      "At least 4 hours, then release if still well",
+      "At least 1 hour, then release"
+     ],
+     "src": "M.P. 207.01C"
+    },
+    {
+     "q": "Per M.P. 207.01C, a patient exposed to cyanide vapor is conscious and breathing with mild effects. What's the treatment?",
+     "a": "Observe; no antidotes (oxygen may be given to the young, old or cardiac patients).",
+     "why": "M.P. 207.01C: \"For a mild exposure (conscious and breathing): observe; no antidotes; oxygen may be given to young or old or in presence of heart disease.\"",
+     "opts": [
+      "Observe; no antidotes",
+      "Full Cyanide Antidote Kit now",
+      "Amyl nitrite ampules by BVM",
+      "Sodium thiosulfate IV only"
+     ],
+     "src": "M.P. 207.01C"
+    },
+    {
+     "q": "Per M.P. 207.01C, when do the first effects of sulfur mustard usually appear, and when must decon happen?",
+     "a": "Effects appear 2 to 24 hours later (usually 4 to 8), but decon must be done immediately.",
+     "why": "M.P. 207.01C: initial effects \"appear 2 to 24 hours (usually 4 to 8 hours) after exposure,\" but mustard damages cells within minutes, \"so decontamination must be done immediately.\"",
+     "opts": [
+      "2–24 hours later; decon immediately",
+      "Within seconds; decon after symptoms",
+      "2–24 hours later; decon when effects start",
+      "Within 1 hour; decon at the hospital"
+     ],
+     "src": "M.P. 207.01C"
+    },
+    {
+     "q": "Per M.P. 207.01C, what is the recommended atropine dose for an adult nerve agent casualty?",
+     "a": "2 mg (repeated as needed).",
+     "why": "M.P. 207.01C: atropine \"Older child and adult: 2 mg\"; infant and young child 0.02 mg/kg; frail elderly may use 1 mg. Pralidoxime adult dose is 1 gram.",
+     "opts": [
+      "2 mg",
+      "1 mg",
+      "0.5 mg",
+      "5 mg"
+     ],
+     "src": "M.P. 207.01C"
+    },
+    {
+     "q": "Per M.P. 207.01C, a nerve agent VAPOR exposure produces effects how quickly?",
+     "a": "Within seconds to a minute or two (e.g., miosis, runny nose, dyspnea).",
+     "why": "M.P. 207.01C: \"Vapor: Effects start within seconds to a minute or two.\" Liquid exposure effects start in minutes up to 18 hours after an asymptomatic interval.",
+     "opts": [
+      "Seconds to a minute or two",
+      "Thirty minutes to 2 hours",
+      "Up to 18 hours later",
+      "2 to 24 hours later"
+     ],
+     "src": "M.P. 207.01C"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Technical Rescue (204.08–204.13)",
+   "sub": "Confined space, trench, mountain, water, structural collapse and tree rescue: first-in actions, distances, and the order of rescue options.",
+   "concepts": [
+    "<b>204.08</b>: First-in takes Command, isolates and denies entry; check for non-entry retrieval; air readings to Rescue Sector every 5 minutes (Hazmat unit).",
+    "<b>204.08</b>: SCBA entries keep line of sight and exit before low-air (75%-25%); retrieval system at least 2:1; no pure O2 in flammable spaces.",
+    "<b>204.09</b>: Apparatus 50 ft from the trench, Level 1 staging 150 ft, traffic and heavy equipment 300 ft; excavation = 4 ft or deeper.",
+    "<b>204.10</b>: Technical rope rescue = 40° to 90° (TRT); first officer takes Command and climbs with medical gear; PIC decides helicopter use.",
+    "<b>204.11</b>: Talk, Reach, Throw, Wade, Helo, Row, Go; wade as a team facing upstream, knee deep max; PFD, helmet, footwear minimum.",
+    "<b>204.12</b>: Spot outside the secondary collapse zone; after surface victims, pull everyone out for a PAR; Building Triage = TRT, engineer, Hazmat tech.",
+    "<b>204.13</b>: 50-ft hazard zone, civilians at 150 ft; self-rescue, aerial, ground ladders, then two TRT climbers."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 204.08, which three conditions define a confined space for emergency response?",
+     "a": "Large enough to enter, not designed for continuous occupancy, and limited entry and egress.",
+     "why": "M.P. 204.08 defines a confined space as \"large enough for personnel to physically enter,\" \"not designed for continuous employee occupancy,\" and having \"limited entry and egress.\"",
+     "opts": [
+      "Enterable, not for continuous occupancy, limited egress",
+      "Below grade, poorly ventilated, over 4 feet deep",
+      "Enterable, contains a hazard, has one opening only",
+      "Permit-posted, below grade, and containing a toxic atmosphere"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "You arrive first at a worker down in a utility vault. Per M.P. 204.08, what should you check early in size-up before anyone enters?",
+     "a": "Establish communication with the victim and determine if non-entry retrieval can be made.",
+     "why": "M.P. 204.08 size-up: isolate the hazard area and deny entry, then \"Establish communications with victim(s) and determine if non-entry retrieval can be made.\"",
+     "opts": [
+      "Whether non-entry retrieval is possible",
+      "Whether a crew in SCBA can grab the victim",
+      "Whether the space has a second exit",
+      "Whether the employer has a rescue team"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "Per M.P. 204.08, how often must atmospheric readings be communicated to Rescue Sector, and who does the monitoring?",
+     "a": "At least every 5 minutes, by a Hazardous Materials response unit.",
+     "why": "M.P. 204.08: monitoring is continuous, readings \"communicated to Rescue Sector at least every 5 minutes,\" and \"This function shall be assigned to a Hazardous Materials response unit.\"",
+     "opts": [
+      "Every 5 minutes; a Hazmat unit",
+      "Every 10 minutes; the TRT entry team",
+      "Every 15 minutes; the Safety Officer",
+      "Every 5 minutes; the first-in engine"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "Entry crews at a confined space must use SCBA because SABA isn't available. Per M.P. 204.08, what rule applies?",
+     "a": "Keep line of sight and exit before the low-air alarm, following the 75%-25% rule.",
+     "why": "M.P. 204.08: SABA is preferred, but if SCBA is used \"personnel shall maintain line of sight and exit the confined space prior to low air alarm activation, following the 75%-25% rule.\"",
+     "opts": [
+      "Line of sight; out before low-air alarm",
+      "Exit as soon as the low-air alarm activates",
+      "Limit each entry to 10 minutes",
+      "Buddy-breathe to extend working time"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "Per M.P. 204.08, what minimum mechanical advantage must the confined space retrieval system have?",
+     "a": "2:1, with a back-up system in place.",
+     "why": "M.P. 204.08: \"A retrieval system with a back-up system shall be readied and in place ... with a minimum of a 2:1 mechanical advantage.\"",
+     "opts": [
+      "2:1",
+      "3:1",
+      "4:1",
+      "1:1"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "A confined space has only one entry point. Per M.P. 204.08, what type of ventilation should be considered?",
+     "a": "Negative pressure ventilation.",
+     "why": "M.P. 204.08: consider positive and negative together in a push-pull configuration, and \"Consider negative pressure ventilation if there is only one entry point.\"",
+     "opts": [
+      "Negative pressure",
+      "Positive pressure",
+      "Natural ventilation",
+      "Hydraulic ventilation"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "You reach a victim in a confined space with a possibly flammable atmosphere. Per M.P. 204.08, which action is prohibited?",
+     "a": "Giving the victim pure oxygen, or giving the victim your own breathing apparatus.",
+     "why": "M.P. 204.08: \"Rescuers shall not administer pure oxygen to a victim(s) in a confined space that has a potentially flammable atmosphere and rescuers shall not remove their breathing apparatus and give it to the victim(s).\"",
+     "opts": [
+      "Pure O2 or giving the victim your SCBA",
+      "Applying a C-collar before removal",
+      "Treating serious injuries before removal",
+      "Packaging the victim in a KED"
+     ],
+     "src": "M.P. 204.08"
+    },
+    {
+     "q": "You're first in at a trench collapse. Per M.P. 204.09, how far from the trench do you keep your apparatus and Level 1 staging?",
+     "a": "Apparatus at least 50 feet away; Level 1 staging at least 150 feet away.",
+     "why": "M.P. 204.09: Command ensures \"apparatus remains at least 50 feet from the location of the trench failure\" and announces \"Level 1 staging should take place at least 150 feet from the trench failure.\"",
+     "opts": [
+      "Apparatus 50 ft; staging 150 ft",
+      "Apparatus 25 ft; staging 100 ft",
+      "Apparatus 100 ft; staging 300 ft",
+      "Apparatus 50 ft; staging 300 ft"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.09, how deep must a depression, hole or trench be to count as an excavation for emergency response?",
+     "a": "Four feet or greater.",
+     "why": "M.P. 204.09: an excavation is \"any depression, hole, trench, or earth wall, man made or natural, of four feet or greater.\"",
+     "opts": [
+      "Four feet or greater",
+      "Five feet or greater",
+      "Six feet or greater",
+      "Three feet or greater"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.09, how far from a trench collapse must non-essential traffic be re-routed and heavy equipment shut down?",
+     "a": "300 feet.",
+     "why": "M.P. 204.09: \"Re-route all non-essential traffic at least 300 feet\" and \"Shut down all heavy equipment operating within 300 feet of the collapse area.\"",
+     "opts": [
+      "300 feet",
+      "150 feet",
+      "500 feet",
+      "50 feet"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.09, from where should rescuers approach a collapsed trench if possible?",
+     "a": "From the ends of the trench.",
+     "why": "M.P. 204.09 Make the Rescue Area Safe: \"Approach the trench from the ends if possible,\" watching for fissures and an unstable spoil pile.",
+     "opts": [
+      "From the ends",
+      "From the spoil pile side",
+      "From the side opposite the spoil",
+      "From whichever side is closest"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.09, how many ladders go into the trench for ingress and egress, and how far apart?",
+     "a": "At least 2 ladders, no more than 50 feet apart.",
+     "why": "M.P. 204.09: \"There should be at least 2 ladders placed into the trench no more than 50 feet apart.\"",
+     "opts": [
+      "At least 2, no more than 50 feet apart",
+      "At least 2, no more than 25 feet apart",
+      "At least 1, at the victim's location",
+      "At least 3, no more than 100 feet apart"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Working from a safe zone, you reach a buried trench victim. Per M.P. 204.09, how far do you uncover them before assessing?",
+     "a": "To below the diaphragm, using small shovels, buckets or hands.",
+     "why": "M.P. 204.09: \"Uncover victim to below the diaphragm utilizing small shovels, buckets, or by hand, and assess the victim's condition,\" then completely uncover and package.",
+     "opts": [
+      "To below the diaphragm",
+      "Just enough to expose the face",
+      "Completely, before any assessment",
+      "To the waist using a backhoe"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.09, in what order is the trench shoring system removed at termination?",
+     "a": "Last-in, first-out.",
+     "why": "M.P. 204.09 Termination: \"Remove tools, equipment, and the trench shoring system (last-in / first-out) from the trench.\"",
+     "opts": [
+      "Last-in, first-out",
+      "First-in, first-out",
+      "Ends first, then the middle",
+      "Middle first, then the ends"
+     ],
+     "src": "M.P. 204.09"
+    },
+    {
+     "q": "Per M.P. 204.10, a mountain rescue on a 50-degree slope is classified as what?",
+     "a": "A Technical rescue (40° to 90°), performed by TRT-level rescuers.",
+     "why": "M.P. 204.10: Non-Technical rescues are angles \"less than 40º\"; Technical rescues are \"from 40º to 90º\" and \"shall be performed by rescuers trained to the level of Technical Rescue Technician.\"",
+     "opts": [
+      "Technical; TRT-level rescuers",
+      "Non-technical; any first responder",
+      "Technical; any rope-trained engine",
+      "Non-technical; TRT on standby"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "You're the first-arriving company officer at a hiker injury on a mountain. Per M.P. 204.10, what do you do?",
+     "a": "Assume Command and size up while ascending with medical equipment to treat the victim.",
+     "why": "M.P. 204.10: the first arriving company officer \"shall assume Command and begin an immediate size-up of the situation while ascending the mountain with medical equipment.\"",
+     "opts": [
+      "Take Command and climb with medical gear",
+      "Stage at the trailhead and wait for TRT",
+      "Request a helicopter before anything else",
+      "Pass Command to TRT and set up the LZ"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "Per M.P. 204.10, there are no witnesses to locate a lost hiker on the mountain. What should Command consider?",
+     "a": "Calling for a police helicopter (Firebird) to locate the victim.",
+     "why": "M.P. 204.10: if no witnesses or other information, \"Command should consider calling for a police helicopter (Firebird) to locate the victim(s).\"",
+     "opts": [
+      "Request Firebird, the police helicopter",
+      "Send engine crews up every trail to search",
+      "Wait for park rangers to search first",
+      "Launch a drone from the Base LZ"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "Per M.P. 204.10, who has the final say on whether and how a helicopter is used in a rescue?",
+     "a": "The Pilot In Command (PIC), once a rescue-qualified pilot is confirmed.",
+     "why": "M.P. 204.10: Command must determine if a rescue-qualified pilot is available; \"If so, the Pilot In Command (PIC) will have the final say on if and how the helicopter will be used.\"",
+     "opts": [
+      "The Pilot In Command",
+      "The Incident Commander",
+      "Rescue Sector",
+      "The Technical Advisor"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "Per M.P. 204.10, which unit can be assigned Treatment Sector at a mountain rescue?",
+     "a": "The first non-TRT unit that ascends the mountain.",
+     "why": "M.P. 204.10: \"Treatment Sector can be assigned to the first non-TRT unit that ascends the mountain.\"",
+     "opts": [
+      "The first non-TRT unit to ascend",
+      "The first TRT unit on scene",
+      "The ALS rescue at the trailhead",
+      "The Base LZ company"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "Per M.P. 204.10, what is required of rescuers working near an edge?",
+     "a": "They must be on-rope and tied-in.",
+     "why": "M.P. 204.10: \"Rescuers shall be 'on-rope' and 'tied-in' when operating near an edge.\"",
+     "opts": [
+      "On-rope and tied-in",
+      "Within reach of a partner",
+      "Wearing a Class I harness",
+      "Staying 6 feet from the edge"
+     ],
+     "src": "M.P. 204.10"
+    },
+    {
+     "q": "Per M.P. 204.11, what is the water rescue order from lowest to highest risk?",
+     "a": "Talk, Reach, Throw, Wade, Helo, Row, Go.",
+     "why": "M.P. 204.11 lists the order of rescue from low-risk to high-risk: Talk, Reach, Throw, Wade, Helo, Row, Go.",
+     "opts": [
+      "Talk, Reach, Throw, Wade, Helo, Row, Go",
+      "Reach, Throw, Talk, Row, Wade, Go, Helo",
+      "Talk, Throw, Reach, Row, Wade, Helo, Go",
+      "Talk, Reach, Wade, Throw, Row, Helo, Go"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "Per M.P. 204.11, when wading to a victim, how do rescuers enter the water?",
+     "a": "As a team, facing upstream, no further than knee deep, bringing a PFD and helmet for each victim.",
+     "why": "M.P. 204.11: WADE - \"enter the water as a team, facing upstream and no further than knee deep, taking a PFD and helmet for each victim.\"",
+     "opts": [
+      "As a team, facing upstream, knee deep max",
+      "Alone on a tether, facing downstream",
+      "As a team, facing downstream, waist deep max",
+      "In pairs, facing the bank, chest deep max"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "Per M.P. 204.11, what is the minimum PPE for anyone working at or near the water?",
+     "a": "A PFD, an approved water rescue helmet, and approved footwear.",
+     "why": "M.P. 204.11: all personnel at or near the water wear \"at a minimum: personal flotation device (PFD), approved water rescue helmet, and approved footwear.\"",
+     "opts": [
+      "PFD, water rescue helmet, footwear",
+      "Turnouts, structural helmet and boots",
+      "PFD only, within 10 feet of water",
+      "Wetsuit, fins and a mask"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "Per M.P. 204.11, what are personnel assigned downstream of a swiftwater rescue doing?",
+     "a": "Standing by with throw bags to catch rescuers or victims washed downstream.",
+     "why": "M.P. 204.11: downstream personnel are assigned \"with throw bags to capture rescue personnel or victim(s) that may be washed downstream.\" Upstream personnel watch for hazards.",
+     "opts": [
+      "Catching anyone washed downstream",
+      "Watching for debris coming down",
+      "Setting the boat anchor on the far bank",
+      "Keeping bystanders 150 feet back"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "Per M.P. 204.11, which practice is prohibited for rescuers in the water?",
+     "a": "Being attached to a lifeline without a quick-release, or doing a breath-hold surface dive to find a victim.",
+     "why": "M.P. 204.11: rescuers \"shall never be attached to a lifeline without ... a quick-release mechanism\" and \"shall never do a 'breath-hold' surface dive.\"",
+     "opts": [
+      "Lifeline with no quick-release",
+      "Wearing a PFD while swimming",
+      "Entering only after a briefing",
+      "Using a throw bag from the bank"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "A victim is in a Salt River Project canal. Per M.P. 204.11, whom do you call and what can they do?",
+     "a": "SRP's 24-hour Association Dispatch Center (ADC), giving cross streets; they can provide gate control.",
+     "why": "M.P. 204.11: for SRP canals and laterals, \"call their 24-hour emergency Association Dispatch Center (ADC)\" with the closest cross streets; \"They can provide gate control and other useful information.\"",
+     "opts": [
+      "SRP's ADC, for gate control",
+      "The Corps of Engineers, for dam control",
+      "City Water Services, to close mains",
+      "Police dispatch, for traffic control"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "Per M.P. 204.11, if a boat-based (ROW) operation is chosen, what does Rescue Sector assign?",
+     "a": "A company on the opposite bank to help set an anchor for an approved rope system.",
+     "why": "M.P. 204.11: ROW - \"Rescue Sector shall assign a company on the opposite bank to assist in establishing an anchor for an approved rope system.\"",
+     "opts": [
+      "A company on the far bank for an anchor",
+      "A swimmer to escort the boat",
+      "A helicopter to cover overhead",
+      "A second boat positioned directly downstream"
+     ],
+     "src": "M.P. 204.11"
+    },
+    {
+     "q": "You arrive first at a building collapse. Per M.P. 204.12, where do you spot your apparatus?",
+     "a": "Outside any potential secondary collapse zone.",
+     "why": "M.P. 204.12 size-up: \"Spot apparatus outside of any potential secondary collapse zone.\"",
+     "opts": [
+      "Outside any secondary collapse zone",
+      "At least 50 feet from the building",
+      "In front to use the aerial for access",
+      "Across the street, upwind of the dust"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "Per M.P. 204.12, what is AZ-TF1?",
+     "a": "One of 28 FEMA Urban Search & Rescue task forces, sponsored by the Phoenix Fire Department.",
+     "why": "M.P. 204.12: \"The Phoenix Fire Department is the sponsoring agency of AZ-TF1, which is one of 28 FEMA Urban Search & Rescue task forces in the nation.\"",
+     "opts": [
+      "One of 28 FEMA US&R task forces",
+      "One of 12 state collapse teams",
+      "The regional hazmat strike team",
+      "A DHS federal search team"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "Per M.P. 204.12, who makes up a Building Triage team at a structural collapse?",
+     "a": "A TRT technician trained in collapse shoring, a structural engineer, and a Hazmat technician.",
+     "why": "M.P. 204.12: the Building Triage team \"shall consist of a Technical Rescue Technician trained ... in structural collapse shoring techniques, a structural engineer, and a Hazardous Materials Technician.\"",
+     "opts": [
+      "Shoring TRT tech, engineer, Hazmat tech",
+      "Two TRT techs and a search canine",
+      "Building official, engineer, Safety Officer",
+      "Company officer, engineer, police officer"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "At a collapse, first responders have removed the surface victims and walking wounded. Per M.P. 204.12, what is next?",
+     "a": "Pull all rescuers out of the collapse area and get a PAR before the detailed search plan.",
+     "why": "M.P. 204.12: after removal of surface victims, \"all rescue personnel should be removed from the collapse area and a personnel accountability report (PAR) shall be obtained,\" then TRT begins technical operations.",
+     "opts": [
+      "Remove all rescuers and get a PAR",
+      "Start general debris removal",
+      "Begin void searches with engine crews",
+      "Begin breaching walls to reach voids"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "Per M.P. 204.12, during selected debris removal, what must be done periodically?",
+     "a": "Stop removal to conduct search operations for more victims.",
+     "why": "M.P. 204.12: \"The selected debris removal process should be stopped periodically to conduct search operations for additional victims.\"",
+     "opts": [
+      "Stop to search for more victims",
+      "Rotate crews every 15 minutes",
+      "Re-shore all voids already searched",
+      "Mark each load for the coroner"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "Rescuers at a collapse find a void that is a confined space. Per M.P. 204.12, what is required before entry?",
+     "a": "A qualified Hazmat technician must monitor the atmosphere; if unsafe it must be made safe first.",
+     "why": "M.P. 204.12: \"Prior to entering any space, the atmosphere ... must be monitored by a qualified Hazardous Materials Technician,\" and an unsafe atmosphere must be changed before entry or M.P. 204.08 followed.",
+     "opts": [
+      "Hazmat tech monitors the air first",
+      "TRT enters on SCBA with no reading",
+      "The engineer clears it structurally",
+      "Ventilate for 10 minutes and then enter"
+     ],
+     "src": "M.P. 204.12"
+    },
+    {
+     "q": "Per M.P. 204.13, what hazard zone and civilian distance are set up around a tree rescue?",
+     "a": "A 50-foot hazard zone around the tree; civilians at least 150 feet away.",
+     "why": "M.P. 204.13: \"Establish a hazard zone perimeter 50 feet around the tree\" and \"Remove all non-essential civilian personnel at least 150 feet away from the tree.\"",
+     "opts": [
+      "50-ft hazard zone; civilians 150 ft",
+      "25-ft hazard zone; civilians 100 ft",
+      "100-ft hazard zone; civilians 300 ft",
+      "50-ft hazard zone; civilians 300 ft"
+     ],
+     "src": "M.P. 204.13"
+    },
+    {
+     "q": "Per M.P. 204.13, what is the order of tree rescue options from lowest to highest risk?",
+     "a": "Self-rescue, aerial platform ladder truck, ground ladders, climb the tree.",
+     "why": "M.P. 204.13 lists: self-rescue, aerial platform ladder truck, ground ladders, then climbing the tree (high-risk, TRT only).",
+     "opts": [
+      "Self-rescue, aerial, ground ladders, climb",
+      "Ground ladders, self-rescue, aerial, climb",
+      "Aerial, self-rescue, climb, ground ladders",
+      "Self-rescue, ground ladders, climb, aerial"
+     ],
+     "src": "M.P. 204.13"
+    },
+    {
+     "q": "You're using ground ladders for a tree rescue. Per M.P. 204.13, where do they go?",
+     "a": "First ladder under the victim; second alongside and slightly above; both secured to the tree.",
+     "why": "M.P. 204.13: \"The first ladder should go under the victim; the second ladder should go along side and slightly above the victim. Both ladders should be secured to the tree.\"",
+     "opts": [
+      "First under; second beside, slightly above",
+      "First beside; second directly above",
+      "Both directly under the victim, side by side",
+      "First above; second under the victim"
+     ],
+     "src": "M.P. 204.13"
+    },
+    {
+     "q": "Per M.P. 204.13, if the victim must be reached by climbing the tree, who climbs?",
+     "a": "Two trained TRT members assigned by Rescue Sector, using approved equipment.",
+     "why": "M.P. 204.13: tree climbing \"shall only be performed by trained TRT members. Rescue Sector shall assign two rescuers the task of climbing the tree.\"",
+     "opts": [
+      "Two TRT members chosen by Rescue Sector",
+      "One TRT member on a belay line",
+      "Any two members wearing climbing harnesses",
+      "A tree service contractor and one TRT"
+     ],
+     "src": "M.P. 204.13"
+    },
+    {
+     "q": "Two TRT rescuers have climbed to a tree victim. Per M.P. 204.13, how do they split the work?",
+     "a": "One climbs above and to the side to set a lowering attachment point; the other captures the victim in a harness.",
+     "why": "M.P. 204.13: \"One rescuer should climb above and to the side of the victim and establish a point of attachment for a lowering system,\" while the other attaches or \"captures\" the victim onto a rescue harness.",
+     "opts": [
+      "One sets the anchor above; one harnesses",
+      "Both harness the victim, then both lower",
+      "One cuts the victim free; one belays below",
+      "One holds the victim; one rigs from the ground"
+     ],
+     "src": "M.P. 204.13"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "204.01 cites 'Command Procedures; MP 204.01' for the Strategic Decision-Making Model, a self-reference (likely should point to the Command Procedures MP).",
+  "204.08-204.13 are dated 07/11-R; 204.11 lists 'Car 957 South or North' as Safety Officer/Technical Advisor options in Phase I, but Additional Considerations lists 'Regional Special Operations qualified Safety Officers' instead; no card tests either list.",
+  "204.03 and 204.03A read as old (references Maricopa County Civil Defense, Arizona Radiation Regulatory Agency, 'MR/hr' units); cards use the numbers as written (2 mR/hr, 2,000 ft).",
+  "204.06 says the control log goes to the 'Special Operations Sector' but elsewhere 'Special Operations Section'.",
+  "207.01A references 'MP 204.14C?' (with a question mark) and M.P. 201.14D for decon/treatment protocols; those numbers don't match current MPs (decon lines are actually in 207.01B, treatment in 207.01C). It also says 'Amyl Nitrate' where 207.01C says amyl nitrite.",
+  "207.01B says the personnel decon setup is optimally run by six technicians, then the diagram note says five; 'Victorian instrument' is a typo for Victoreen. Not carded.",
+  "207.01C is a physician-level treatment protocol (it states some drugs/procedures are outside paramedic scope) and has apparent errors: nitrites 'produce orthostatic hypertension' (likely hypotension), child thiosulfate dose '0.4 mg/kg' conflicts with 1.65 ml/kg. Cards only test field-level facts (chlorine density/observation, mustard onset, cyanide mild exposure, adult atropine 2 mg, nerve vapor onset)."
+ ]
+}

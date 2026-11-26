@@ -1,0 +1,1315 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Special Operations & Hazards (206) (Part 1)",
+   "sub": "Violent incidents, civil unrest, power saws, PPE inspection, tank farms, and police bomb squad and SAU standbys.",
+   "concepts": [
+    "<b>206.01</b>: Violent incidents use the standard decision model; Fire/EMS never operate inside the inner perimeter (hot zone), only in the warm zone with a coordinated PD plan.",
+    "<b>206.01</b>: One strategy per incident: offensive (warm zone entry) or defensive (stay out, receive patients). Law enforcement does not dictate the fire IAP.",
+    "<b>206.01</b>: Unforeseen violence: run, hide, fight. Remove yourself, call PD on their tac channel, use the emergency traffic button, fight only as a last resort.",
+    "<b>206.01A</b>: Civil unrest: no single-company responses in the geo fence, law enforcement escort, avoid sirens/air horns, fast water/heavy streams, scoop and run.",
+    "<b>206.05</b>: Power saws: full PPE and face shield, saws carried with engine stopped, officer supervises cuts above chest height, at least two means of egress.",
+    "<b>206.06</b>: PPE inspected at least annually (New/Good/Fair/Exposed/Condemned); turnouts replaced after 10 years; liner wash water max 105 F; Nomex thread.",
+    "<b>206.08</b>: Tank Farm: Kinder Morgan shuts down the pipeline via Dispatch; control the spill fire first; never plain water on a floating roof; keep 50% foam in reserve.",
+    "<b>206.09 / 206.09A</b>: Bomb squad/SAU standby: nearest ALS company and rescue Code 2, C958 is initial IC and liaison, 1/4-mile premise alert, never inside the inner perimeter."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 206.01, PD has set an inner and outer perimeter at a shooting. Where may Fire/EMS crews operate to triage and treat?",
+     "a": "In the warm zone, between the inner and outer perimeters.",
+     "why": "M.P. 206.01: The area inside the inner perimeter is the Hot Zone and \"Fire/EMS resources shall never operate within the inner-perimeter.\" The warm zone is between the inner and outer perimeters.",
+     "opts": [
+      "In the warm zone, between the inner and outer perimeters",
+      "Inside the inner perimeter, as long as PD escorts the crew",
+      "Only outside the outer perimeter, in the cold zone",
+      "Anywhere inside the inner perimeter once C958 arrives"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "Using the standard risk management plan at a violent incident, how much will we risk for savable property?",
+     "a": "A little, in a calculated manner.",
+     "why": "M.P. 206.01: The fireground plan applies: risk a lot, in a calculated manner, for savable lives; \"risk a little, in a calculated manner, for savable property\"; risk nothing for what is already lost.",
+     "opts": [
+      "A little, in a calculated manner",
+      "A lot, in a calculated manner",
+      "Nothing at all",
+      "Whatever PD says is acceptable"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "At a prolonged violent incident where PD cannot ensure safe areas or corridors, what strategy does M.P. 206.01 call for?",
+     "a": "Defensive: stay outside the hazard zone and receive patients PD removes.",
+     "why": "M.P. 206.01: A defensive strategy is a posture outside the hazard zone, staging or setting up triage, treatment and transport for patients removed from the hot zone. It is used for prolonged or very volatile incidents.",
+     "opts": [
+      "Defensive: stay outside the hazard zone and receive patients PD removes",
+      "Offensive under marginal conditions, entering the hot zone for life safety",
+      "A mixed strategy: some crews enter while others stage outside",
+      "Offensive, entering the inner perimeter behind PD tactical units"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "At a violent incident, who determines the fire department's incident action plan?",
+     "a": "The fire IC, using information gained from PD.",
+     "why": "M.P. 206.01: \"Law enforcement will not dictate a plan of action to our Fire Companies.\" The IC uses information from PD to set the plan and coordinates it with the PD officers on scene.",
+     "opts": [
+      "The fire IC, using information gained from PD",
+      "The senior PD supervisor on scene",
+      "C958, who commands all fire units at police incidents",
+      "The PD TLO (C958PD) through Alarm"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "Per M.P. 206.01, when should Level II staging be used at a violent incident?",
+     "a": "For 1st Alarm incidents or greater, or when a defined hazard zone can't be set on arrival.",
+     "why": "M.P. 206.01: Level II staging is for 1st Alarm incidents or greater, or when it is impossible to establish a defined hazard zone when initial companies arrive. Level I is used for single-unit responses with PD.",
+     "opts": [
+      "For 1st Alarm or greater, or when no defined hazard zone can be set",
+      "For single-unit responses with PD, whenever the call nature code requires staging",
+      "Only after PD has declared the entire scene secure",
+      "Only when the incident is within a mile of quarters"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "You're treating a patient in a home when a bystander pulls a knife. Per M.P. 206.01 (run, hide, fight), what is your first priority?",
+     "a": "Remove yourselves to safety.",
+     "why": "M.P. 206.01: The most effective actions start with \"Removing themselves to safety,\" then calling PD, using cover, and engaging the aggressor \"only as an absolute last resort.\"",
+     "opts": [
+      "Remove yourselves to safety",
+      "Talk the person down using your public standing",
+      "Overpower the aggressor quickly as a crew",
+      "Finish packaging the patient, then leave"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "You're caught in an unpredicted violent situation and it isn't safe to speak. How does M.P. 206.01 say to call for help?",
+     "a": "Use the emergency traffic button on your portable radio.",
+     "why": "M.P. 206.01: The MP lists \"Utilizing the emergency traffic button on our portable radios when it is not safe to speak\" among the most effective actions.",
+     "opts": [
+      "Press the emergency traffic button on your portable",
+      "Key the fire tactical channel and whisper the location",
+      "Have a crew member call 911 on a cell phone to request PD",
+      "Send a status message to Alarm from the MCT"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "At a violent incident, what is C958's role?",
+     "a": "Terrorism Liaison Officer: a 24-hour law enforcement liaison for fire units.",
+     "why": "M.P. 206.01: C958 is the Terrorism Liaison Officer, providing \"an on duty, 24-hour law enforcement liaison for fire units\" and serving as a technical advisor to the IC, with access to encrypted PD channels.",
+     "opts": [
+      "Terrorism Liaison Officer: 24-hour law enforcement liaison for fire units",
+      "Shift Commander who assumes command of all violent incidents",
+      "Battalion-level Safety Officer who clears fire crews to enter the inner perimeter",
+      "PD tactical medic supervisor who leads warm-zone entries"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "As IC#1 in fast attack at a shooting, you can't get accurate, timely information about the hazard zone. What does M.P. 206.01 say?",
+     "a": "This may require a change in strategy and removal of all crews from the hazard zone.",
+     "why": "M.P. 206.01: \"Bottom-Line: If the incident commander is unable to get accurate, timely information... this may require a change in strategy and the removal of all fire crews from the hazard zone.\"",
+     "opts": [
+      "Change strategy and pull all crews from the hazard zone",
+      "Continue operations and let sector officers assess conditions",
+      "Transfer command to C958 and keep crews working in place",
+      "Move crews into the inner perimeter to reach patients faster"
+     ],
+     "src": "M.P. 206.01"
+    },
+    {
+     "q": "During civil unrest, Alarm sends a single engine to a dumpster fire inside the geo-fenced area. Per M.P. 206.01A, what's wrong?",
+     "a": "No single company responses are permitted in the predefined area (geo fence).",
+     "why": "M.P. 206.01A: \"No single company responses will be permitted in the predefined area (geo fence).\" All responses are coordinated with law enforcement and include force protection/escort.",
+     "opts": [
+      "No single company responses are permitted in the geo fence",
+      "Engines can't respond there without a ladder company",
+      "Dumpster fires must be left to burn during unrest",
+      "Only a Battalion Chief may respond as a single unit inside the geo fence"
+     ],
+     "src": "M.P. 206.01A"
+    },
+    {
+     "q": "Responding into an area of civil unrest, what does M.P. 206.01A say about warning devices?",
+     "a": "Avoid sirens and air horns in the immediate area; lights may be used.",
+     "why": "M.P. 206.01A: \"Use of sirens and air horns should be avoided within the immediate area, lights may be used.\"",
+     "opts": [
+      "Avoid sirens and air horns; lights may be used",
+      "Use sirens and air horns to move the crowd back",
+      "Lights off; sirens only at intersections",
+      "Run silent and dark the entire response"
+     ],
+     "src": "M.P. 206.01A"
+    },
+    {
+     "q": "When it is safe to fight a fire during civil unrest, what does M.P. 206.01A emphasize?",
+     "a": "Fast water with heavy streams, then get out of the area.",
+     "why": "M.P. 206.01A: Suppression emphasizes \"fast water, heavy streams to rapidly control and extinguish the fire and then to get out of the area.\" Salvage and overhaul may be dropped, handlines limited and roof operations avoided.",
+     "opts": [
+      "Fast water with heavy streams, then get out of the area",
+      "Full salvage and overhaul to prevent rekindles",
+      "Vertical roof ventilation before the interior attack",
+      "Multiple handlines for a coordinated interior attack"
+     ],
+     "src": "M.P. 206.01A"
+    },
+    {
+     "q": "Per M.P. 206.01A, how are patients best handled at a civil unrest incident?",
+     "a": "Removed to a treatment area (scoop and run), ideally with law enforcement bringing them to us.",
+     "why": "M.P. 206.01A: Patients are usually better treated \"if removed from the scene to a determined treatment area (scoop and run). A great practice is for law enforcement to bring patients to us.\"",
+     "opts": [
+      "Scoop and run to a treatment area; ideally PD brings them to us",
+      "Treated fully in place so crews don't have to move back through the crowd",
+      "Triaged in place by fire crews entering the crowd with escorts",
+      "Held until the crowd disperses, then treated where they lie"
+     ],
+     "src": "M.P. 206.01A"
+    },
+    {
+     "q": "Per M.P. 206.01A, what is added to all responses in known areas of civil unrest?",
+     "a": "Chief Officers, for additional member safety.",
+     "why": "M.P. 206.01A: \"Chief Officers will be added to all responses to provide for additional member safety in known areas of civil unrest.\"",
+     "opts": [
+      "Chief Officers, for added member safety",
+      "A second ALS rescue on every call",
+      "A Haz Mat unit for possible chemical irritants",
+      "A ladder company to provide roof lookouts"
+     ],
+     "src": "M.P. 206.01A"
+    },
+    {
+     "q": "How do you carry the chain saw per M.P. 206.05?",
+     "a": "Engine stopped, guide bar and chain to the rear, muffler away from your body.",
+     "why": "M.P. 206.05: \"Always carry the chain saw with the engine stopped, the guide bar and saw chain to the rear and the muffler away from your body.\"",
+     "opts": [
+      "Stopped; bar and chain to the rear; muffler away from body",
+      "Idling; bar and chain to the front; muffler away from body",
+      "Stopped; bar and chain to the front; muffler away from body",
+      "Stopped; bar and chain to the rear; muffler toward body"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "How do you carry the rescue saw per M.P. 206.05?",
+     "a": "Engine stopped, blade to the front, muffler away from your body.",
+     "why": "M.P. 206.05: \"Carry the rescue saw with the engine stopped, the blade frontward and muffler away from your body.\" Note the chain saw is the opposite: bar to the rear.",
+     "opts": [
+      "Engine stopped, blade to the front, muffler away from body",
+      "Engine stopped, blade to the rear, muffler away from body",
+      "Engine idling, blade to the front, muffler away from body",
+      "Engine stopped, blade to the front, muffler toward body"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "A power saw cut is needed above chest height. Per M.P. 206.05, this:",
+     "a": "Is done only under the direct order and/or supervision of an officer.",
+     "why": "M.P. 206.05: Cutting above chest height is \"extremely hazardous\" and \"shall be conducted only under the direct order and/or under the supervision of an officer,\" who weighs the value against the hazard.",
+     "opts": [
+      "Is done only under an officer's direct order or supervision",
+      "Is acceptable from a ladder if the guide uses the harness",
+      "Is prohibited under all circumstances",
+      "Is fine as long as the operator's face shield is down"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "Your plan of action before starting a power saw cut should provide for at least how many means of egress, if possible?",
+     "a": "At least two.",
+     "why": "M.P. 206.05: The plan should include location and sequence of cuts, wind direction, and \"at least two (2) means of egress if possible.\"",
+     "opts": [
+      "Two",
+      "One",
+      "Three",
+      "Four"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "You spill fuel while refueling a power saw. Per M.P. 206.05, what do you do before starting it?",
+     "a": "Wipe off the saw.",
+     "why": "M.P. 206.05: \"If fuel is spilled while refueling, wipe off saw before starting.\" Never refuel with the engine running, and don't restart in a small enclosed space after refueling.",
+     "opts": [
+      "Wipe off the saw",
+      "Let the fuel evaporate for 5 minutes",
+      "Start it right away to burn off the fuel",
+      "Send it in for servicing"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "Why must abrasive rescue saw blades be kept free of petroleum-based products?",
+     "a": "Petroleum can dissolve the bonding resin, causing the blade to shatter.",
+     "why": "M.P. 206.05: Contamination \"may dissolve the resin which is used to bond the blade, causing the blade to shatter when used.\" New blades are stored in plastic bags.",
+     "opts": [
+      "It can dissolve the bonding resin so the blade shatters",
+      "It dulls the carbide tips so the blade binds and kicks back",
+      "Vapors on the blade can ignite from cutting sparks",
+      "It makes the blade warp as it heats during cuts"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "When must the rescue saw cutting wheel be examined for nicks or defects?",
+     "a": "At the beginning of each shift and after each use.",
+     "why": "M.P. 206.05: \"Examine the rescue saw cutting wheel for nicks or defects at the beginning of each shift and after each use.\"",
+     "opts": [
+      "At the start of each shift and after each use",
+      "During the weekly apparatus check and after any blade change",
+      "Only after each use",
+      "Monthly, during the station equipment inspection"
+     ],
+     "src": "M.P. 206.05"
+    },
+    {
+     "q": "Which is one of the five rating categories used in the protective clothing inspection program?",
+     "a": "Exposed.",
+     "why": "M.P. 206.06: Items are rated New, Good, Fair, Exposed or Condemned.",
+     "opts": [
+      "Exposed",
+      "Serviceable",
+      "Retired",
+      "Damaged"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "How often are formal protective clothing inspections conducted under M.P. 206.06?",
+     "a": "At least once a year, during Battalion turnout cleaning.",
+     "why": "M.P. 206.06: Inspections are conducted \"at least one time annually, during Battalion turnout cleaning.\" Members also check their turnouts every morning.",
+     "opts": [
+      "At least once a year, during Battalion turnout cleaning",
+      "Every six months, by Resource Management during a scheduled gear exchange",
+      "Once a quarter, by the company officer",
+      "Every two years, at Resource Management"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "Per M.P. 206.06, turnout coats and pants are replaced when they are older than:",
+     "a": "10 years.",
+     "why": "M.P. 206.06: Coat and pants are replaced if they no longer fit, don't fit the repair cost matrix, or are \"Older than 10 years.\"",
+     "opts": [
+      "10 years",
+      "5 years",
+      "7 years",
+      "12 years"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "When washing turnout coat and pant liners, water temperature shall not exceed:",
+     "a": "105 degrees F.",
+     "why": "M.P. 206.06: \"Note: water temp shall not exceed 105 degrees F.\"",
+     "opts": [
+      "105 degrees F",
+      "140 degrees F",
+      "120 degrees F",
+      "90 degrees F"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "During inspection, a helmet has lost its surface gloss and the surface is flaking. Per M.P. 206.06:",
+     "a": "Chemical (UV) degradation has occurred; the shell is replaced immediately.",
+     "why": "M.P. 206.06: Thermoplastics degrade from UV and chemicals; when the helmet loses gloss and flakes, \"the shell will be replaced immediately.\"",
+     "opts": [
+      "It shows degradation; replace the shell immediately",
+      "It's cosmetic only; soak it 30 minutes and scrub with a light-duty pad",
+      "Rate it Fair and recheck at the next annual inspection",
+      "Sand and recoat the shell with approved sealant"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "Repairs to turnouts that require stitching must be made with:",
+     "a": "Nomex thread.",
+     "why": "M.P. 206.06: \"All repairs requiring stitching must be made with Nomex thread.\"",
+     "opts": [
+      "Nomex thread",
+      "Kevlar-blend thread",
+      "Heavy-duty nylon thread",
+      "Polyester thread"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "Per M.P. 206.06, what pH range should the mild detergent used on helmets and turnouts have?",
+     "a": "6.0 to 10.5.",
+     "why": "M.P. 206.06: Use \"a mild detergent with a pH level from 6.0 to 10.5\" that has been tested for PPE.",
+     "opts": [
+      "6.0 to 10.5",
+      "4.0 to 8.5",
+      "7.0 to 12.5",
+      "5.5 to 9.0"
+     ],
+     "src": "M.P. 206.06"
+    },
+    {
+     "q": "Major spill at the 51st Ave/Van Buren Tank Farm. How does M.P. 206.08 say the incoming pipeline gets shut down?",
+     "a": "Command directs Dispatch to contact Kinder Morgan's on-duty operator to shut it down.",
+     "why": "M.P. 206.08: Kinder Morgan has an operator on duty 24 hours who can shut down the flow. \"Command should direct the Dispatch Center to contact Kinder Morgan Pipelines.\" Full stop takes several minutes.",
+     "opts": [
+      "Command has Dispatch contact Kinder Morgan to shut it down",
+      "The first-in engine closes the main valve at the manifold",
+      "Command asks the facility's responsible party at the Operations Center",
+      "A Haz Mat crew closes the inlet valve on the involved tank"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "A tank overflow has ignited: fire in the dike and on the tank surface. Which do you control first?",
+     "a": "The spill fire, since it will keep re-igniting vapors from the tank.",
+     "why": "M.P. 206.08: \"It is always important to control the spill fire before attempting to control the tank surface fire, since a spill fire would continue to re-ignite vapors coming from the tank.\"",
+     "opts": [
+      "The spill fire, since it keeps re-igniting tank vapors",
+      "The tank surface fire, since it is the source",
+      "Both at once, with equal foam on each",
+      "Exposure tanks first, then let the spill burn off"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "Why does M.P. 206.08 say never to apply plain water onto a floating roof tank?",
+     "a": "It will probably cause the roof to sink.",
+     "why": "M.P. 206.08: \"NEVER apply plain water onto a floating roof--it will probably cause the roof to sink.\" If the floating roof is lost, the fire can intensify rapidly.",
+     "opts": [
+      "It will probably cause the roof to sink",
+      "It will flash to steam and cause a boilover",
+      "It will wash away the rubber rim seal",
+      "It will cool the tank shell too quickly"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "A floating roof that sits more than how far below the top of the tank shell is a confined space?",
+     "a": "5 feet.",
+     "why": "M.P. 206.08: \"A floating roof that is more than 5 feet below the top of the tank shell constitutes a confined space,\" so confined space procedures apply to any entry.",
+     "opts": [
+      "5 feet",
+      "3 feet",
+      "10 feet",
+      "8 feet"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "A large flammable liquid fire is beyond the foam supply you have on scene. What does M.P. 206.08 direct?",
+     "a": "Wait for enough foam before attacking; meanwhile hold, protecting exposures.",
+     "why": "M.P. 206.08: Wait until enough foam is on scene before the attack: \"If the attack runs out of foam before the fire is controlled, all of the foam will have been wasted.\" Consider a holding action to protect exposures.",
+     "opts": [
+      "Protect exposures and wait until enough foam is on scene",
+      "Start the foam attack now and add foam as it arrives",
+      "Apply plain water fog to cool the tank surface first",
+      "Use the available foam on the tank surface, then switch to water"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "Fire in an ethanol storage tank. Which is correct per M.P. 206.08?",
+     "a": "Set the proportioner at 6%; subsurface injection can't be used on polar solvents.",
+     "why": "M.P. 206.08: For ethanol or other polar solvents \"the foam proportioner must be set at 6%,\" and subsurface injection cannot be used because polar solvents absorb the water in the foam.",
+     "opts": [
+      "Set proportioner at 6%; subsurface injection can't be used",
+      "Set proportioner at 3%; subsurface injection is preferred",
+      "Set proportioner at 1%; use plain water on the floating roof",
+      "Set proportioner at 6%; use subsurface injection only"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "After foam solution is pumped into the subsurface injection manifold, how long may it take to reach the burning tank surface?",
+     "a": "30 to 60 minutes.",
+     "why": "M.P. 206.08: Depending on line length and tank height, \"it may take 30-60 minutes\" to reach the burning surface. Velocity over 10 feet/second separates the foam.",
+     "opts": [
+      "30-60 minutes",
+      "5-10 minutes",
+      "10-20 minutes",
+      "2-3 hours"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "How much of the foam required for extinguishment should the Foam Sector keep available after knockdown?",
+     "a": "At least 50%.",
+     "why": "M.P. 206.08: \"At least 50% of the amount of foam required for extinguishment should be maintained available, especially if tank overhaul is required.\"",
+     "opts": [
+      "At least 50%",
+      "At least 25%",
+      "At least 100%",
+      "At least 10%"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "Which belongs in the first-arriving unit's initial report at the Tank Farm?",
+     "a": "Name of the shipper involved and the tank number(s).",
+     "why": "M.P. 206.08: The initial report includes location/shipper name, type of incident, extent, operation of automatic systems, and tank number(s) and location(s).",
+     "opts": [
+      "Name of the shipper involved and the tank number(s)",
+      "Gallons of foam concentrate on hand",
+      "Wind speed and the nearest railroad crossing",
+      "Name of the Kinder Morgan duty operator"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "Why confirm with tank farm personnel before disconnecting electric power at the Tank Farm?",
+     "a": "It can close motor-operated valves (blocking subsurface injection), stop transfer pumps and disable controls.",
+     "why": "M.P. 206.08: Cutting power can shut down transfer pumps at loading racks, \"cause motor operated valves on storage tanks to close which prevents subsurface foam injection,\" and disable tank controls.",
+     "opts": [
+      "It can close tank valves and block subsurface foam injection",
+      "It will trip the AFFF deluge systems at every loading rack",
+      "It automatically shuts down the incoming pipeline flow",
+      "It disables the fixed monitor nozzles used for exposure cooling"
+     ],
+     "src": "M.P. 206.08"
+    },
+    {
+     "q": "Once C958 has the target address for a PD bomb squad operation, what premise alert is requested?",
+     "a": "A minimum 1/4-mile premise alert.",
+     "why": "M.P. 206.09: C958 requests \"a premise alert for a minimum of one/quarter (1/4) of a mile,\" covering PD evacuation routes and a buffer for secondary devices.",
+     "opts": [
+      "A minimum 1/4-mile radius",
+      "A minimum 1/2-mile radius",
+      "A minimum one-block radius",
+      "A minimum 1,000-foot radius"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "What is dispatched to a Phoenix PD EOD (bomb squad) standby, and how?",
+     "a": "The nearest ALS fire company and rescue, Code 2 unless C958 requests Code 3.",
+     "why": "M.P. 206.09: \"The nearest ALS fire company and rescue company will be dispatched... Response will be CODE 2 unless Code 3 is requested by C958.\"",
+     "opts": [
+      "Nearest ALS company and rescue, Code 2 unless C958 requests Code 3",
+      "Nearest ALS company and rescue, Code 3 unless C958 requests Code 2",
+      "A full first alarm assignment plus a Haz Mat unit, Code 3 to staging",
+      "A BLS company only, staged in quarters"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "PD asks your crew to help search a vehicle for a suspected explosive device. Per M.P. 206.09:",
+     "a": "Decline; fire personnel never search for, handle or remove explosive devices.",
+     "why": "M.P. 206.09: \"At NO time will fire department equipment or personnel become directly involved with a search, handling or removal of an explosive device or material.\"",
+     "opts": [
+      "Decline; fire crews never search, handle or remove devices",
+      "Assist if you are in full PPE and SCBA",
+      "Assist only if C958 is present",
+      "Assist only after the bomb squad briefing"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "How is fire department communication handled on a police EOD incident?",
+     "a": "Primarily through C958 on an encrypted channel; units avoid radio talk about the nature or address.",
+     "why": "M.P. 206.09: For stealth, communications go \"primarily through C958 on an encrypted radio channel,\" and \"Units shall avoid any radio traffic in regards to the nature of the incident, address, etc.\"",
+     "opts": [
+      "Through C958 on an encrypted channel; no radio talk of the address",
+      "On the fire tactical channel, using plain language and the address",
+      "On the PD tactical channel monitored by all fire units",
+      "Through Alarm on the main dispatch channel, using code words"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "If a medical standby at a bomb squad operation runs longer than how long should a company rotation be considered?",
+     "a": "2 hours.",
+     "why": "M.P. 206.09: \"If the medical standby is to be of a longer than 2 hours, a rotation of companies should be considered.\" C958 arranges relief with Dispatch & Deployment.",
+     "opts": [
+      "2 hours",
+      "1 hour",
+      "4 hours",
+      "6 hours"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "Who acts as the initial Incident Commander for fire resources at a police EOD standby?",
+     "a": "The C958 Captain (TLO), in unified command with the PD supervisor.",
+     "why": "M.P. 206.09: \"The C958 Captain will act as the initial Incident Commander on scene and will establish a unified command\" with PD. A Command Officer takes over fire command if complexity grows.",
+     "opts": [
+      "The C958 Captain (TLO)",
+      "The first-arriving company officer",
+      "The Deployment Battalion Chief",
+      "The PD bomb squad supervisor"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "The bomb squad confirms a mailed USPS package is NOT an explosive. What must C958 ensure next?",
+     "a": "That radiological/nuclear testing is done and a Field Safe Survey is completed.",
+     "why": "M.P. 206.09: C958 coordinates with Haz Mat, C957 and the Command Officer \"to assure that proper radiological and nuclear testing\" is done, ensures the \"Field Safe Survey\" is completed, and notifies the Public Health Coordinator.",
+     "opts": [
+      "Radiological/nuclear testing and a Field Safe Survey are done",
+      "The package is opened on scene by Haz Mat to identify contents",
+      "PD takes the package directly to the county crime lab for testing",
+      "Fire units clear and the incident is closed"
+     ],
+     "src": "M.P. 206.09"
+    },
+    {
+     "q": "Per M.P. 206.09A, what is a law enforcement 'inner perimeter'?",
+     "a": "A forward, isolated zone where officers in tactical positions engage a hostile or violent suspect.",
+     "why": "M.P. 206.09A: It is \"a forward and isolated zone where law enforcement officers are in tactical positions with protective gear and weapons engaged.\" No fire personnel, including C958, operate there.",
+     "opts": [
+      "A forward, isolated zone where officers in tactical positions engage the threat",
+      "The quarter-mile premise alert zone around the target address",
+      "The secured treatment area where SAU officers bring injured patients to fire crews",
+      "The area between the police tape and fire staging"
+     ],
+     "src": "M.P. 206.09A"
+    },
+    {
+     "q": "Responding to an SAU barricade standby, where do fire companies stage?",
+     "a": "In a safe location outside the police control perimeter and out of the line of possible gunfire.",
+     "why": "M.P. 206.09A: \"Responding companies will stage in a safe location from the scene, outside the Police control perimeter, and out of the line of any possible gun fire.\"",
+     "opts": [
+      "Outside the police perimeter, out of the line of possible gunfire",
+      "Inside the outer perimeter, next to the SAU command post for quick access",
+      "At the target address once SAU makes entry",
+      "At the nearest fire station, regardless of distance"
+     ],
+     "src": "M.P. 206.09A"
+    },
+    {
+     "q": "PD requests a CR van at an SAU scene to help families. Per M.P. 206.09A, who must know about it?",
+     "a": "C958, who is the CR van's point of contact to ensure the scene is secure.",
+     "why": "M.P. 206.09A: \"C958 will be their point of contact to ensure the scene is secure. At no time should CR Van personnel be dispatched to an SAU operation without C958 knowledge.\"",
+     "opts": [
+      "C958, as their point of contact for scene security",
+      "Only the PD SAU supervisor",
+      "The Shift Commander, who approves all CR responses",
+      "The Rehab unit officer at fire staging"
+     ],
+     "src": "M.P. 206.09A"
+    },
+    {
+     "q": "An officer is shot in an area at an SAU operation that isn't secure. Per M.P. 206.09A, what happens?",
+     "a": "Fire won't enter; PD may have to deliver the patient to fire crews at the perimeter.",
+     "why": "M.P. 206.09A: \"Fire personnel WILL NOT enter an area that is not secure... the police department may have to deliver the patients to Fire personnel at the perimeter.\"",
+     "opts": [
+      "PD may have to bring the patient to fire crews at the perimeter",
+      "The closest rescue crew enters behind the SAU shield team to reach the officer",
+      "C958 leads a rescue company in under armed escort",
+      "The nearest engine crew enters wearing ballistic vests"
+     ],
+     "src": "M.P. 206.09A"
+    },
+    {
+     "q": "SAU asks to borrow your ladders and TIC for an operation. Per M.P. 206.09A, how is this handled?",
+     "a": "Case by case; cooperate if appropriate after consulting C958 and the Battalion Chief.",
+     "why": "M.P. 206.09A: Equipment requests \"should be considered on a case by case basis and units will cooperate if the request is appropriate, after consulting with C958 and the Battalion Chief.\"",
+     "opts": [
+      "Case by case, after consulting C958 and the Battalion Chief",
+      "Never; fire equipment may not be loaned to PD",
+      "Always, without delay, to support the operation",
+      "Only with written approval from the on-duty Shift Commander and Deployment"
+     ],
+     "src": "M.P. 206.09A"
+    },
+    {
+     "q": "Phoenix PD SAU plans a warrant service outside the Valley-wide Automatic Aid region. Per M.P. 206.09A:",
+     "a": "PFD units aren't normally sent; local fire/EMS provides care and C958 acts as liaison.",
+     "why": "M.P. 206.09A: It is \"NOT the standard practice\" to deploy PFD units outside the Automatic Aid system. C958 contacts local fire/EMS and acts as liaison; initial care comes from the home agency.",
+     "opts": [
+      "Local fire/EMS handles medical; C958 acts as liaison",
+      "The nearest PFD ALS company and rescue respond Code 2",
+      "C958 responds alone and provides initial treatment",
+      "A PFD rescue is sent and stages at the city limits"
+     ],
+     "src": "M.P. 206.09A"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Special Operations & Hazards (206) (Part 2)",
+   "sub": "Youth firesetters, foster care, rescue tools, bee attacks, toxic and bio exposures, pre-plans, CR units, light rail, stalled elevators and MCIs.",
+   "concepts": [
+    "<b>206.10</b>: Youth firesetters: notify an investigator for intentional fires by ages 8-18; no station tours; counseling is at least seven sessions.",
+    "<b>206.11</b>: Emergency foster care: Dispatch contacts DES Protective Services; always advise Phoenix PD, who can usually transport.",
+    "<b>206.13</b>: Hydraulic rescue tool: everyone in the area has face shields down; charged 1-1/2\" foam line; power unit downwind and away from the injured.",
+    "<b>206.14</b>: Bee attacks: ALS engine, ladder and BC Code 3; stop about 150 ft from the colony; three members in full PPE/SCBA; 1 3/4\" line on fog; Class A foam only.",
+    "<b>206.16 / 206.16A</b>: Toxic exposures go to Dispatch & Deployment and your supervisor right away; asymptomatic bio-exposure victims fill out a card before leaving.",
+    "<b>206.18 / 206.20</b>: Pre-plan one tactically significant occupancy each quarter; CR teams auto-dispatch on codes, drownings, 2nd alarms, major assaults, hangings.",
+    "<b>206.21</b>: Light rail: OCS 750-950 V DC, 18 ft (14.5 ft at Washington/SR143), stay 10 ft away; derailed LRV, lower the pantograph or de-energize and confirm with a Hot Stick.",
+    "<b>206.22 / 206.23</b>: Elevators: Phase 1 recall, then a 30-second power reset; TRT for rooftop hatch. MCI 1 = 2nd alarm + MMRS; MCI 2 adds ALS units at the 3 closest hospitals."
+   ],
+   "cards": [
+    {
+     "q": "A fire was intentionally set by a youth. Per M.P. 206.10, an investigator must be notified if the child is:",
+     "a": "8 to 18 years old.",
+     "why": "M.P. 206.10: \"If the fire was set intentionally and the child is 8 to 18 years old an investigator needs to be notified.\"",
+     "opts": [
+      "8 to 18 years old",
+      "6 to 16 years old",
+      "10 to 18 years old",
+      "12 to 17 years old"
+     ],
+     "src": "M.P. 206.10"
+    },
+    {
+     "q": "A family walks into your station with a child who has been setting fires. What does M.P. 206.10 say NOT to do?",
+     "a": "Give the child a tour of the station.",
+     "why": "M.P. 206.10: \"TOURS OF THE FIRE STATION ARE INAPPROPRIATE AT THIS TIME,\" since children may see them as a reward for setting fires. Contact the program (or Alarm if it's a crisis).",
+     "opts": [
+      "Give the child a tour of the fire station",
+      "Refer the family to the program office",
+      "Contact Alarm if the situation is a crisis",
+      "Talk with the parents about fire safety"
+     ],
+     "src": "M.P. 206.10"
+    },
+    {
+     "q": "Which youth is NOT eligible for the Juvenile Court diversion program?",
+     "a": "A youth charged with felony arson (or a repeat offender).",
+     "why": "M.P. 206.10: Diversion is for first-time misdemeanor offenders. \"Youths charged with felony arson crimes and/or repeat offenders are not eligible\" and go to the Maricopa County Attorney's Office.",
+     "opts": [
+      "A youth charged with felony arson",
+      "A first-time misdemeanor offender age 9",
+      "A first-time misdemeanor offender age 16",
+      "A youth on a first misdemeanor for a grass fire"
+     ],
+     "src": "M.P. 206.10"
+    },
+    {
+     "q": "How many counseling sessions does the youth firesetter counseling component include at minimum?",
+     "a": "At least seven sessions.",
+     "why": "M.P. 206.10: The counseling component \"consists of at least seven sessions,\" for both family referrals and court-mandated diversion.",
+     "opts": [
+      "Seven",
+      "Three",
+      "Five",
+      "Ten"
+     ],
+     "src": "M.P. 206.10"
+    },
+    {
+     "q": "The investigator finds a child's fire was accidental curiosity play, not intentional. What typically happens?",
+     "a": "A referral to the Youth Firesetter Intervention Program; the family attends the Fire Safety Class voluntarily.",
+     "why": "M.P. 206.10: For accidental fires from curiosity, experimentation or negligence, the youth is typically not referred to court. \"The family will attend the Youth Fire Safety Class on a voluntary basis.\"",
+     "opts": [
+      "YFIP referral; the family attends the Fire Safety Class voluntarily",
+      "Mandatory referral to the Juvenile Court Center and diversion program",
+      "Referral to the Maricopa County Attorney's Office",
+      "No referral; the case is closed at the scene"
+     ],
+     "src": "M.P. 206.10"
+    },
+    {
+     "q": "After a house fire, no parent, relative or guardian can care for the children. Per M.P. 206.11, what do you do?",
+     "a": "Have Dispatch contact DES Protective Services, who designate where the children go.",
+     "why": "M.P. 206.11: Dispatch contacts the Arizona Department of Economic Security - Protective Services Division, which \"will designate the proper location to deliver the children.\"",
+     "opts": [
+      "Have Dispatch contact DES Protective Services for placement",
+      "Have the CR unit leave the children with a neighbor",
+      "Transport the children to the nearest hospital for holding",
+      "Keep the children at the fire station until family arrives"
+     ],
+     "src": "M.P. 206.11"
+    },
+    {
+     "q": "Who must be advised any time children are placed with Protective Services, and can usually transport them?",
+     "a": "The Phoenix Police Department.",
+     "why": "M.P. 206.11: \"The Phoenix Police Department must be advised any time that children are placed with Protective Services\" and can usually provide transportation.",
+     "opts": [
+      "Phoenix Police Department",
+      "The on-duty Battalion Chief",
+      "The CR unit supervisor",
+      "Maricopa County Sheriff's Office"
+     ],
+     "src": "M.P. 206.11"
+    },
+    {
+     "q": "Who must have face shields down during Hydraulic Rescue Tool operations, and why?",
+     "a": "All members in the area, because hydraulic fluid from a failed hose or coupling can damage eyes.",
+     "why": "M.P. 206.13: Fluid can damage the eyes if a hose or coupling fails, so \"all members in the area of operation\" place face shields down. Flush eyes with copious water and seek medical help if exposed.",
+     "opts": [
+      "Everyone in the area; fluid from a failed hose can harm eyes",
+      "Only the operator; flying glass from the vehicle",
+      "Everyone within 10 feet; sparks and glass when the tool cuts metal posts",
+      "Only the operator and helper; noise from the power unit"
+     ],
+     "src": "M.P. 206.13"
+    },
+    {
+     "q": "What hoseline protection does M.P. 206.13 require during Hydraulic Rescue Tool operations?",
+     "a": "A charged 1-1/2\" foam hoseline, manned by personnel in full protective clothing.",
+     "why": "M.P. 206.13: Precautions include \"a charged 1-1/2\" foam hoseline in place, manned by personnel in full protective clothing.\"",
+     "opts": [
+      "A charged 1-1/2\" foam line staffed by members in full PPE",
+      "A dry chemical extinguisher placed at the vehicle",
+      "A charged 2-1/2\" water line staffed at the apparatus by the engineer",
+      "A CO2 extinguisher held by the tool operator"
+     ],
+     "src": "M.P. 206.13"
+    },
+    {
+     "q": "Where should the Hydraulic Rescue Tool's engine (power unit) be placed?",
+     "a": "Away from the injured and downwind of the work area, not where it could ignite vapors.",
+     "why": "M.P. 206.13: The engine \"should be kept away from the injured and placed down wind of the work area\" and must not be an ignition source for flammable vapors.",
+     "opts": [
+      "Away from the injured and downwind of the work area",
+      "Upwind of the work area so the exhaust blows away from the crew",
+      "Right beside the vehicle to keep hoses short",
+      "On the apparatus tailboard, uphill of the scene"
+     ],
+     "src": "M.P. 206.13"
+    },
+    {
+     "q": "Dispatch receives a bee attack call. What is sent per M.P. 206.14?",
+     "a": "An ALS engine company, a ladder company and a Battalion Chief, Code 3.",
+     "why": "M.P. 206.14: Two units (\"one being an ALS engine company and one ladder company\") and a Battalion Chief are dispatched and proceed Code III.",
+     "opts": [
+      "An ALS engine, a ladder company and a Battalion Chief, Code 3",
+      "An ALS engine and a rescue, Code 2, with a beekeeper requested through Alarm",
+      "A ladder company and a Haz Mat unit, Code 3",
+      "A single engine company and a CR unit, Code 2"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "Arriving at an Africanized honey bee attack, about how far from the colony should units stop to avoid the bees' path?",
+     "a": "About 150 feet.",
+     "why": "M.P. 206.14: Units arrive \"careful not to commit themselves in the path of the source of bees, approximately 150 feet from the colony.\"",
+     "opts": [
+      "About 150 feet",
+      "About 50 feet",
+      "About 300 feet",
+      "About 500 feet"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "You arrive to a bee attack with a victim down in a yard. How many crew members don full structural PPE with SCBA?",
+     "a": "Three, with ankles and waist taped.",
+     "why": "M.P. 206.14: \"Three crew members shall don full structural firefighting [PPE] including SCBA,\" taping ankles and waist so bees can't crawl in. Bee PPE may be worn instead.",
+     "opts": [
+      "Three",
+      "Two",
+      "Four",
+      "The entire crew"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "What hoseline and pattern does M.P. 206.14 call for when rescuing a bee attack victim?",
+     "a": "A 1 3/4-inch quick attack line on fog, sweeping the air around firefighters and patient.",
+     "why": "M.P. 206.14: A quick attack 1 3/4\" line is pulled with \"a fog pattern on the nozzle... sweeping the air surrounding the firefighters and patient\" while picking up the patient and retreating.",
+     "opts": [
+      "A 1 3/4-inch line on fog, sweeping the air around everyone",
+      "A 2 1/2-inch line on straight stream aimed at the colony",
+      "A booster line on straight stream aimed at the bees",
+      "A 1 3/4-inch line on straight stream aimed at the hive"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "Which foam may be added to the hose stream at a bee attack?",
+     "a": "Class A foam at the highest concentration possible.",
+     "why": "M.P. 206.14: Class A foam \"at the highest concentration possible\" helps water adhere to the bees. Class B foams containing PFAS should not be used.",
+     "opts": [
+      "Class A foam at the highest concentration possible",
+      "Class B AFFF at 3 percent, since it clings better to bees",
+      "Class B AFFF at 6 percent",
+      "No foam of any kind"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "The bees are within 200 feet of a day care. Per M.P. 206.14, the day care owner is advised to:",
+     "a": "Keep all occupants indoors and close all external openings until the incident ends.",
+     "why": "M.P. 206.14: If within 200 feet of a school, day care or similar building, the person in charge is advised \"to keep all building occupants indoors and to close all external openings.\"",
+     "opts": [
+      "Keep everyone indoors and close all external openings",
+      "Evacuate all children to a site at least 300 feet upwind of the bees",
+      "Move the children to the far side of the playground",
+      "Shelter children in place only if bees enter"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "After a bee attack victim is rescued, the homeowner asks your crew to kill the hive. Per M.P. 206.14:",
+     "a": "The Fire Department does not exterminate bees.",
+     "why": "M.P. 206.14: Policy: \"The Fire Department does not exterminate bees.\" Units respond to rescue and/or treat victims of an AHB attack.",
+     "opts": [
+      "The Fire Department does not exterminate bees",
+      "Foam the hive with Class A foam until the bees stop",
+      "Spray the hive with a fog stream until it drops",
+      "Call for Haz Mat to apply a pesticide"
+     ],
+     "src": "M.P. 206.14"
+    },
+    {
+     "q": "Your crew is exposed to an unknown chemical at a fire. Who should be contacted immediately per M.P. 206.16?",
+     "a": "Dispatch and Deployment and your immediate supervisor.",
+     "why": "M.P. 206.16: \"Dispatch and Deployment, along with their Immediate Supervisor should be contacted immediately\" so the investigation starts at the time and place of exposure. Dispatch notifies the Toxic Exposure Officer.",
+     "opts": [
+      "Dispatch and Deployment and your immediate supervisor",
+      "Only the Fire Department Health Center, on the next business day",
+      "The Certified Industrial Hygienist directly",
+      "Car 959, who starts the investigation"
+     ],
+     "src": "M.P. 206.16"
+    },
+    {
+     "q": "Where are symptomatic exposed members transported under M.P. 206.16?",
+     "a": "To the Fire Department Health Center or Banner University Medical Center Phoenix, depending on severity.",
+     "why": "M.P. 206.16: Symptomatic members go to the Health Center or Banner University Medical Center Phoenix depending on severity; consider its hyperbaric chamber for smoke inhalation.",
+     "opts": [
+      "Fire Health Center or Banner University Medical Center Phoenix",
+      "The nearest Level I trauma center, by the closest available rescue",
+      "The member's personal physician the next day",
+      "Fire Health Center only, by private vehicle"
+     ],
+     "src": "M.P. 206.16"
+    },
+    {
+     "q": "When an exposed member is transported to a hospital, who should be notified to act as liaison with hospital staff?",
+     "a": "Car 959.",
+     "why": "M.P. 206.16: \"Notification should be made to Car 959 in instances where members are transported to a hospital,\" serving as liaison between the TEO and hospital staff.",
+     "opts": [
+      "Car 959",
+      "Car 957",
+      "Car 958",
+      "The Shift Commander"
+     ],
+     "src": "M.P. 206.16"
+    },
+    {
+     "q": "Who is responsible for collecting toxic exposure samples and getting them to a lab?",
+     "a": "The Certified Industrial Hygienist (Haz Mat may assist).",
+     "why": "M.P. 206.16: The Certified Industrial Hygienist \"will be responsible for the collection of all samples\" and decides what to collect; the Haz Mat team may assist if PPE is required.",
+     "opts": [
+      "The Certified Industrial Hygienist",
+      "The company officer of the exposed crew",
+      "The Toxic Exposure Officer only",
+      "The Car 957 Haz Mat officer"
+     ],
+     "src": "M.P. 206.16"
+    },
+    {
+     "q": "At a suspected biological incident, asymptomatic victims are being allowed to leave. Per M.P. 206.16A, what is done?",
+     "a": "A bio-exposure information card is completed for each before they leave.",
+     "why": "M.P. 206.16A: If victims are allowed or demand to leave, \"a bio-exposure card will be completed prior to their departure from the scene\" for epidemiological tracking.",
+     "opts": [
+      "Complete a bio-exposure card on each before they leave",
+      "Transport all of them to the hospital regardless",
+      "Let them go; notify county health afterward",
+      "Hold them on scene until symptoms develop"
+     ],
+     "src": "M.P. 206.16A"
+    },
+    {
+     "q": "Where are completed bio-exposure information cards forwarded?",
+     "a": "Via interoffice mail to the EMS/Public Health Programs Manager.",
+     "why": "M.P. 206.16A: Cards go to the EMS/Public Health Programs Manager; copies go to MCDPH and the AzDHS Epidemiology Section.",
+     "opts": [
+      "EMS/Public Health Programs Manager",
+      "The Toxic Exposure Officer at the Health Center",
+      "The district Battalion Chief",
+      "The Fire Department Health Center"
+     ],
+     "src": "M.P. 206.16A"
+    },
+    {
+     "q": "Why does M.P. 206.16A say most biological agent events won't produce a scene to respond to?",
+     "a": "Biological agents are slow acting, and public health surveillance may take days to detect patterns.",
+     "why": "M.P. 206.16A: \"Biological agents are slow acting and the public health surveillance systems may require days to detect patterns of causalities.\"",
+     "opts": [
+      "Agents act slowly and detection may take days",
+      "Agents dissipate within minutes of release",
+      "Victims always self-transport to hospitals before calling 911",
+      "Police handle all biological releases"
+     ],
+     "src": "M.P. 206.16A"
+    },
+    {
+     "q": "How often do company officers select a tactically significant occupancy in their first-due area to pre-plan?",
+     "a": "Each quarter.",
+     "why": "M.P. 206.18: \"Each quarter, company officers will select a tactically significant occupancy to pre-plan.\" Each shift pre-plans a different occupancy.",
+     "opts": [
+      "Each quarter",
+      "Each month",
+      "Each year",
+      "Each shift cycle"
+     ],
+     "src": "M.P. 206.18"
+    },
+    {
+     "q": "After scheduling a pre-plan, where does the company officer send a copy of the Tactical Premise Pre-plan Authorization Form?",
+     "a": "To his/her battalion chief.",
+     "why": "M.P. 206.18: The officer completes the form with the owner/occupant, forwards a copy to the battalion chief, and keeps one in the Station Tactical Premise log.",
+     "opts": [
+      "To their battalion chief",
+      "To the Fire Marshal's office",
+      "To Dispatch and Deployment",
+      "To the district fire prevention specialist"
+     ],
+     "src": "M.P. 206.18"
+    },
+    {
+     "q": "How many businesses per week is each Urban Survival for Business fire prevention specialist responsible for contacting?",
+     "a": "25.",
+     "why": "M.P. 206.18: Each specialist in the Self-Inspection Program \"is responsible for contacting 25 businesses per week\" and enters the information into Tactical Premise.",
+     "opts": [
+      "25",
+      "10",
+      "50",
+      "15"
+     ],
+     "src": "M.P. 206.18"
+    },
+    {
+     "q": "When a Tactical Premise pre-plan authorization form is complete, who gets the battalion chief's two copies?",
+     "a": "The engine and ladder company of the 2-1 first-due assignment.",
+     "why": "M.P. 206.18: The BC makes two copies and forwards them \"to the engine and ladder company that completes the 2-1 first due assignment for the pre-planned occupancy.\"",
+     "opts": [
+      "The engine and ladder of the 2-1 first-due assignment",
+      "All three shifts at the first-due station, for their walk-throughs",
+      "The District Tactical Premise Coordinator",
+      "The Dispatch and Deployment Captain"
+     ],
+     "src": "M.P. 206.18"
+    },
+    {
+     "q": "At a working fire, what does the Dispatch and Deployment Captain do with Tactical Premise information?",
+     "a": "Monitors the tactical channel and relays critical Tactical Premise info to Command.",
+     "why": "M.P. 206.18: The D&D Captain \"will immediately begin monitoring the tactical radio channel,\" pulls Tactical Premise data (TP, TPI, TPB) and relays critical information to Command.",
+     "opts": [
+      "Monitors the tactical channel and relays key TP info to Command",
+      "Waits until Command specifically requests building information",
+      "Sends the pre-plan printout to the first-due battalion chief's vehicle",
+      "Assigns the TRO to read the full pre-plan on the main channel"
+     ],
+     "src": "M.P. 206.18"
+    },
+    {
+     "q": "Which call automatically dispatches a CR team within Phoenix?",
+     "a": "A 2nd alarm fire.",
+     "why": "M.P. 206.20: Automatic dispatch: codes, drownings, 2nd alarm fires, major assaults and hangings. Working house fires are on the \"also respond to\" list.",
+     "opts": [
+      "A 2nd alarm fire",
+      "A working house fire",
+      "A lost elderly person",
+      "A simple assault"
+     ],
+     "src": "M.P. 206.20"
+    },
+    {
+     "q": "A CR team is asked to transport an intoxicated person who is not alert and oriented x4. Per M.P. 206.20:",
+     "a": "They don't transport; they wait with the person until another support system arrives.",
+     "why": "M.P. 206.20: No ETOH transport when the subject is not A&O x4, not in control of bodily functions, combative or suicidal. CR \"will wait with the customer\" until C.C., Comtrans, PD, a CRN unit or family arrives.",
+     "opts": [
+      "They don't transport; they wait with the person until support arrives",
+      "They transport, but only to the nearest hospital with a firefighter riding along",
+      "They transport to the nearest detox facility",
+      "They clear and refer the call to PD"
+     ],
+     "src": "M.P. 206.20"
+    },
+    {
+     "q": "How many child car seats does each CR van carry?",
+     "a": "3 per van.",
+     "why": "M.P. 206.20: \"CR teams carry child car seats (3 per van)\" and have access to a wheelchair van.",
+     "opts": [
+      "3",
+      "1",
+      "2",
+      "4"
+     ],
+     "src": "M.P. 206.20"
+    },
+    {
+     "q": "Mesa FD asks for a Phoenix CR team at a routine code in Mesa. Per M.P. 206.20, can CR respond?",
+     "a": "Not without prior approval from a CR Supervisor.",
+     "why": "M.P. 206.20: Phoenix CR goes outside the city on special requests (e.g., member services, severe injury) but not on routine calls like codes \"without prior approval from a CR Supervisor.\"",
+     "opts": [
+      "Not without prior approval from a CR Supervisor",
+      "Yes, CR responds automatically to all codes",
+      "Yes, if the on-duty Phoenix Battalion Chief approves the response",
+      "No; CR teams never leave the city"
+     ],
+     "src": "M.P. 206.20"
+    },
+    {
+     "q": "What voltage does the light rail overhead contact system (OCS) carry?",
+     "a": "750-950 volts DC.",
+     "why": "M.P. 206.21: The OCS carries \"750-950 Volts Direct Current (DC)\" at 2000-6000 amps.",
+     "opts": [
+      "750-950 volts DC",
+      "120-240 volts AC",
+      "12,000-21,000 volts AC",
+      "4,000-6,000 volts DC"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Crossing the light rail, what is the lowest OCS wire height and where is it?",
+     "a": "14.5 feet at the Washington and SR143 underpass.",
+     "why": "M.P. 206.21: Normal OCS height is 18 feet, but \"the underpass at Washington and the SR143 has a max height of only 14.5 feet.\" Lower lights and flags.",
+     "opts": [
+      "14.5 feet at Washington and the SR143 underpass",
+      "18 feet at every downtown intersection",
+      "12 feet at Central Ave and Camelback",
+      "16 feet at the 48th Street maintenance yard"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Per OSHA as cited in M.P. 206.21, how far must apparatus, ladders and equipment stay from the energized OCS?",
+     "a": "10 feet in every direction.",
+     "why": "M.P. 206.21: \"Must stay 10 feet away (in every direction) per OSHA.\" Also keep hose streams from contacting the OCS.",
+     "opts": [
+      "10 feet in every direction",
+      "6 feet in every direction",
+      "20 feet in every direction",
+      "3 feet in every direction"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "An LRV derailed after hitting a dump truck, and its pantograph is still on the wires. What do you do first?",
+     "a": "Don't touch the LRV; have the operator lower the pantograph.",
+     "why": "M.P. 206.21: If derailed with the pantograph in contact, crews \"should not make contact with the LRV and advise the LRV Operator to lower the pantograph.\" If they can't, de-energize the OCS (Option 1 or 2).",
+     "opts": [
+      "Don't touch the LRV; have the operator lower the pantograph",
+      "Have passengers jump clear of the car one at a time onto the ground",
+      "Cut the pantograph cable with insulated tools",
+      "Push the ETS, then begin extrication right away"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "You pushed the ETS at the nearest TPSS. What's still needed before crews touch the LRV?",
+     "a": "Hot Stick confirmation by a Transportation Supervisor, requested through Dispatch to the OCC.",
+     "why": "M.P. 206.21: Pushing the ETS gives \"no visible confirmation that power has actually been shut down,\" so request a Transportation Supervisor with a Hot Stick through Fire Dispatch and the OCC.",
+     "opts": [
+      "Hot Stick confirmation by a Transportation Supervisor",
+      "Nothing; the ETS panel shows a light when power is off",
+      "An APS or SRP crew to verify at the utility meter",
+      "Pushing the ETS at the next substation down the line too"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "EMS call on an LRV that is functioning normally on the track. Should power be shut down?",
+     "a": "No; an open door engages the brake, and keeping power keeps the AC and lights on.",
+     "why": "M.P. 206.21: \"Any open door on an LRV engages the brake and disables the throttle,\" and if it's functioning normally \"there is no need to shut down power.\"",
+     "opts": [
+      "No; an open door sets the brake, and power keeps AC and lights on",
+      "Yes; always de-energize the OCS before boarding any LRV",
+      "Yes; have the operator lower the pantograph before anyone boards the car",
+      "No, but a crew member must hold the dead man switch"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Fire in an LRV's undercarriage. Per M.P. 206.21, what must happen before you extinguish it?",
+     "a": "The pantograph must be lowered; shutting down the OCS isn't required.",
+     "why": "M.P. 206.21: Undercarriage fires \"should only be extinguished after the pantograph has been lowered but does not necessitate shutting down the OCS.\" Significant LRV fires need LRV and OCS de-energized.",
+     "opts": [
+      "Have the pantograph lowered; OCS shutdown isn't required",
+      "De-energize the OCS through the OCC and wait for a Hot Stick",
+      "Nothing; undercarriage fires are not electrical",
+      "Push the ETS at two adjacent substations"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "You need to lay a supply line across light rail tracks. Per M.P. 206.21:",
+     "a": "It's a water supply of last resort; the IC tells Alarm and has light rail shut down for that section.",
+     "why": "M.P. 206.21: Treat it \"as a water supply of last resort.\" If necessary, the IC must tell the Alarm Room and \"advise them to shut down light rail traffic for that section.\"",
+     "opts": [
+      "Last resort; IC has Alarm shut down light rail in that section",
+      "Acceptable anytime, as long as hose bridges are placed over each rail",
+      "Allowed only once Car Wash Mode is in effect",
+      "Prohibited; the OCC will not stop trains for hose"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Crews are working next to the tracks. What speed does an LRV's Car Wash Mode restrict it to?",
+     "a": "No greater than 2 mph.",
+     "why": "M.P. 206.21: LRVs have \"a Car Wash Mode feature which restricts speed to no greater than 2MPH,\" activated on request. Operators are also trained to go walking speed near crews.",
+     "opts": [
+      "2 mph",
+      "5 mph",
+      "10 mph",
+      "15 mph"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Fire at a light rail traction power substation (TPSS). Per M.P. 206.21, when can you enter or apply water?",
+     "a": "Only once it is absolutely confirmed de-energized by APS or SRP.",
+     "why": "M.P. 206.21: Treat it like an electrical substation: \"Do Not Enter or put water on it until absolutely confirmed de-energized by APS or SRP.\" Call Haz Mat if smoke comes from inside.",
+     "opts": [
+      "Once APS or SRP absolutely confirms it's de-energized",
+      "As soon as you push the ETS outside the door",
+      "Once the OCC confirms the OCS is shut down",
+      "Immediately, using a fog pattern only"
+     ],
+     "src": "M.P. 206.21"
+    },
+    {
+     "q": "Occupants are stalled in a glass exterior elevator on a hot summer day. What response does M.P. 206.22 call for?",
+     "a": "Code 3: the first-due engine or ladder with a TRT component.",
+     "why": "M.P. 206.22: For a medical emergency or elevated summer temperatures (parking garages, exterior glass cars), \"a Code 3 response involving the first due Engine or Ladder with a TRT component\" is sent.",
+     "opts": [
+      "Code 3: first-due engine or ladder with a TRT component",
+      "A single engine company, Code 2, until the elevator contractor arrives",
+      "A single ladder company and the elevator contractor",
+      "A full first alarm with Haz Mat"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "What does placing the emergency recall key switch to 'ON' (Phase 1) do?",
+     "a": "Recalls the elevator car to the main floor.",
+     "why": "M.P. 206.22: Using the firefighters service key, the recall switch placed \"ON\" (Phase 1) recalls the car to the main floor.",
+     "opts": [
+      "Recalls the elevator car to the main floor",
+      "Shuts off power to the elevator car",
+      "Unlocks the hoistway doors on every floor",
+      "Turns on the car's interior lights and fans"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "Doing a power reset on a stalled elevator, how long is the larger (208v-600v) switch left OFF before turning it back ON?",
+     "a": "30 seconds.",
+     "why": "M.P. 206.22: The larger switch is \"shut down to the 'OFF' position for 30 seconds then turned to the 'ON' position to reset the breaker.\"",
+     "opts": [
+      "30 seconds",
+      "10 seconds",
+      "2 minutes",
+      "5 minutes"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "In the elevator machine room, what does the smaller 120v switch control?",
+     "a": "The car's interior lights and fans.",
+     "why": "M.P. 206.22: \"The larger (208v-600v) switch controls power to the elevator car and the smaller 120v switch controls the interior lights and fans.\"",
+     "opts": [
+      "The car's interior lights and fans",
+      "Power to drive the elevator car",
+      "The hoistway door interlocks",
+      "The Phase 1 recall circuit"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "The stalled car is within 3 feet of the landing and the hoistway doors are locked. How do you open them?",
+     "a": "With the elevator interlock release key (drop key or crescent key), after main power is OFF.",
+     "why": "M.P. 206.22: Within 3 feet of the landing the doors are locked and \"will need to be accessed using the elevator interlock release key (drop key or crescent key).\"",
+     "opts": [
+      "Use the elevator interlock release (drop) key",
+      "Pry the doors open from the top where center-opening doors meet",
+      "Open them by hand; they're unlocked",
+      "Wait for TRT to do a roof-top extrication"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "You must force side-opening hoistway doors. Where do you apply your tools?",
+     "a": "From the side the door closes into.",
+     "why": "M.P. 206.22: \"Center opening doors should be forced with tools from the top of the doors where they meet. Side opening doors should be forced from the side the door closes into.\"",
+     "opts": [
+      "From the side the door closes into",
+      "From the top center of the door",
+      "From the bottom where the door meets the sill",
+      "From the side the door opens toward"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "Extricating passengers through an elevator's rooftop escape hatch requires what?",
+     "a": "A Technical Rescue Team response and lock-out/tag-out in place.",
+     "why": "M.P. 206.22: Insertion of personnel or extrication through the rooftop hatch \"will require a Technical Rescue Team response and lock-out/tag-out measures to be in place.\"",
+     "opts": [
+      "A TRT response and lock-out/tag-out in place",
+      "Phase 1 recall complete and the elevator contractor on scene to supervise",
+      "Approval from the building manager",
+      "A Battalion Chief on scene"
+     ],
+     "src": "M.P. 206.22"
+    },
+    {
+     "q": "A structure collapse with many patients. Which MCI alert fits, and what does it deploy?",
+     "a": "MCI 1: a second alarm and MMRS to the scene.",
+     "why": "M.P. 206.23: MCI 1 is for a large number of resources to a primary scene (e.g., structure collapse) and \"will deploy a second alarm and MMRS to the scene.\"",
+     "opts": [
+      "MCI 1: a second alarm and MMRS to the scene",
+      "MCI 2: a second alarm and MMRS to the scene and hospitals",
+      "MCI 1: a first alarm and one ALS unit to each hospital",
+      "MCI 2: a third alarm and a Haz Mat unit to the scene"
+     ],
+     "src": "M.P. 206.23"
+    },
+    {
+     "q": "At an active shooter, the IC declares MCI 2. Besides the scene resources, where do an ALS unit and command vehicle go?",
+     "a": "To each of the three closest hospitals to the incident.",
+     "why": "M.P. 206.23: MCI 2 deploys a second alarm and MMRS to the scene plus \"one [ALS] unit and command vehicle (if available) to the three closest hospitals.\"",
+     "opts": [
+      "The three closest hospitals",
+      "The two closest trauma centers",
+      "Every hospital in the county",
+      "The single closest hospital"
+     ],
+     "src": "M.P. 206.23"
+    },
+    {
+     "q": "Per M.P. 206.23, who decides what constitutes a 'mass casualty' incident?",
+     "a": "The initial Incident Commander, at their discretion.",
+     "why": "M.P. 206.23: \"It is at the discretion of the initial Incident Commander (IC) to determine what constitutes a 'mass casualty' incident.\"",
+     "opts": [
+      "The initial Incident Commander",
+      "The Lead Dispatcher",
+      "The Emergency Manager",
+      "The Shift Commander"
+     ],
+     "src": "M.P. 206.23"
+    },
+    {
+     "q": "Who is responsible for family reunification efforts after an MCI?",
+     "a": "The Emergency Manager, with support from MCTRAC partners.",
+     "why": "M.P. 206.23: \"All reunification efforts will be the responsibility of the EM with support from internal and external partners established through MCTRAC.\"",
+     "opts": [
+      "The Emergency Manager, supported by MCTRAC partners",
+      "The initial IC, through a Reunification Sector",
+      "The Lead Dispatcher, through the MCI group text",
+      "The CR units at the primary scene, working with the Office of the Medical Examiner"
+     ],
+     "src": "M.P. 206.23"
+    },
+    {
+     "q": "Who activates an MCI 'pre-alert', and based on what?",
+     "a": "The Dispatcher, based on preliminary law enforcement dispatch center information.",
+     "why": "M.P. 206.23: The Dispatcher activates the pre-alert \"based on preliminary law enforcement dispatch center information\"; it goes to the MCI group text (hospitals, emergency managers, OME).",
+     "opts": [
+      "The Dispatcher, from preliminary law enforcement dispatch info",
+      "The initial IC, after completing the scene size-up",
+      "The Emergency Manager, once the county EOC has been activated and staffed",
+      "The first-due BC, after triage is complete"
+     ],
+     "src": "M.P. 206.23"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "M.P. 206.05 (05/93) and 206.13 (05/93) are very old; 206.13 refers to the 'Hurst Tool' by brand name.",
+  "M.P. 206.08 (01/04) repeats the 'first unit arriving... initial report' heading twice with different bullet lists; cards treat both lists as one report. It also says Command should assign a company to 'assist Foam 44' in the Foam Sector though most foam ops reference Foam 34, and it cites confined space procedures as 'M.P. 204.8'.",
+  "M.P. 206.21: OCS is listed as 750-950 V DC while the TPSS output is listed as 650-950 V DC; cards use the OCS figure (750-950).",
+  "M.P. 206.06 cites NFPA 1851 2014 Edition; M.P. 206.16A (07/03) is old (bio-exposure card).",
+  "M.P. 206.09 and 206.09A are near-duplicates (C958 liaison, 1/4-mile premise alert, Code 2, 2-hour rotation); cards were split so no question repeats across them."
+ ]
+}
