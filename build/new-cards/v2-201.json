@@ -22,7 +22,7 @@
       "Anyone who receives our services and anyone our members deal with",
       "Only the person who called 9-1-1 and the patient involved",
       "The service recipient and their immediate family members only",
-      "Any resident or business owner inside a member jurisdiction"
+      "Any resident or business owner inside a CALSSRC member jurisdiction"
      ],
      "src": "M.P. 201.00"
     },
@@ -68,7 +68,7 @@
      "why": "M.P. 201.00: Added value occurs when we go beyond standard service \"to create a feeling that the customer was the most important person we served all day.\"",
      "opts": [
       "Going beyond standard service so the customer feels most important",
-      "Providing any service that the city later bills for separately",
+      "Providing any extra service that the city later bills the customer for",
       "Answering every customer question before leaving the scene",
       "Leaving written follow-up information at every residence"
      ],
@@ -82,7 +82,7 @@
       "A firefighter in a life-threatening spot who can't safely exit or fix it now",
       "Any firefighter whose low-air alarm activates inside the structure",
       "Any crew that has been in the hazard zone past its first work cycle",
-      "Any member who becomes separated from the hoseline for any reason"
+      "Any member who gets separated from the hoseline or their crew for any reason"
      ],
      "src": "M.P. 201.01E"
     },
@@ -116,7 +116,7 @@
      "why": "M.P. 201.01E: NFPA 1500 defines Mayday readiness as the ability to \"don, doff, and manipulate the SCBA in zero visibility while wearing firefighting gloves.\"",
      "opts": [
       "Able to don, doff and manipulate SCBA in zero visibility wearing gloves",
-      "Able to complete a full SCBA bottle change in under 60 seconds",
+      "Able to complete a full SCBA cylinder change in under 60 seconds while blindfolded",
       "Able to recite GRAB LIVES and the Help Order from memory on demand",
       "Able to pass the annual SCBA mask fit test and a daily SCBA check"
      ],
@@ -142,7 +142,7 @@
       "Put the fire out quickly and aggressively, in a safe, calculated way",
       "Assign a RIC crew before any crew is allowed to make entry",
       "Keep every interior crew to a single 15-minute work cycle",
-      "Switch to a defensive strategy on all commercial occupancies"
+      "Switch to a defensive strategy on all commercial and multifamily occupancies"
      ],
      "src": "M.P. 201.01E"
     },
@@ -152,7 +152,7 @@
      "why": "M.P. 201.01E: Hoseline contact is required during interior operations; operating off it in certain residential incidents is \"only acceptable when the Company Officer maintains full awareness of the position and function of all crew members.\"",
      "opts": [
       "Only when you keep full awareness of every member's position and function",
-      "Only after Command approves it over the tactical channel first",
+      "Only after Command approves the change in assignment over the tactical channel",
       "Only when the fire has been declared under control by Command",
       "Never; hoseline contact is required in all residential fires"
      ],
@@ -176,7 +176,7 @@
      "why": "M.P. 201.01E: \"Individual rovers and Constant Staffers are responsible for asking if expectations are not explicitly discussed at the beginning of a shift.\"",
      "opts": [
       "Yours; rovers must ask if expectations aren't discussed",
-      "The Battalion Chief's, during the morning roll call",
+      "The Battalion Chief's, during the morning roll call each shift",
       "The Engineer's, as the senior member on the rig",
       "Nobody's; rovers follow the home crew's routine"
      ],
@@ -189,7 +189,7 @@
      "opts": [
       "Tag hose lines and provide tools at ingress points",
       "Track crew air levels and announce elapsed time",
-      "Set up the RIC staging area and RIC bag at Alpha",
+      "Set up the RIC staging area and RIC bag at the Alpha side",
       "Activate the Safety Channel and report crew PARs"
      ],
      "src": "M.P. 201.01E"
@@ -213,7 +213,7 @@
      "opts": [
       "Self-rescue, own crew, same-sector crews, then other sectors",
       "RIC crew, own crew, same-sector crews, then self-rescue",
-      "Own crew, RIC crew, self-rescue, then crews from staging",
+      "Own crew, RIC crew, self-rescue, then crews brought up from staging",
       "Same-sector crews, own crew, RIC crew, then other sectors"
      ],
      "src": "M.P. 201.01F"
@@ -273,7 +273,7 @@
      "opts": [
       "Assure \"help is on the way\" and stay on with the member",
       "Hold all radio traffic until a Command Officer arrives",
-      "Direct the first-due engine to begin the RIC search",
+      "Direct the first-due engine company to begin the RIC search",
       "Move the Mayday member to a separate rescue channel"
      ],
      "src": "M.P. 201.01F"
@@ -310,7 +310,7 @@
       "After the TRO completes the initial Mayday traffic",
       "Immediately, before the TRO repeats the message",
       "Only after the Sector Officer has made contact",
-      "Only after the RIC crew has reached the member"
+      "Only after the RIC crew has physically reached the member"
      ],
      "src": "M.P. 201.01F"
     },
@@ -406,7 +406,7 @@
       "Anyone working in the field with a portable radio",
       "Only a member who is personally in trouble",
       "Only a Company Officer or Sector Officer",
-      "Only crews assigned inside the hazard zone"
+      "Only crews assigned to work inside the hazard zone itself"
      ],
      "src": "M.P. 201.01F"
     },
@@ -429,7 +429,7 @@
      "opts": [
       "A dedicated joint Labor/Management Recovery team",
       "A department-level critique within ten days",
-      "A Welfare Branch run by the Fire Chief's office",
+      "A Welfare Branch run directly by the Fire Chief's office",
       "An OSHA-led investigation of the hazard zone"
      ],
      "src": "M.P. 201.01G"
@@ -440,7 +440,7 @@
      "why": "M.P. 201.01G: \"Contact the Safety and Prevention Section as soon as possible after the scene has been stabilized to ensure a timely investigation.\"",
      "opts": [
       "As soon as possible after the scene is stabilized",
-      "Only after the Post Incident Review is complete",
+      "Only after the Post Incident Review has been completed",
       "Within 24 hours of the incident being terminated",
       "Once the injured member is released from care"
      ],
@@ -478,7 +478,7 @@
       "Two or more working incidents demanding resources at different sites",
       "Any working fire that goes beyond a 1st Alarm assignment",
       "Any incident lasting longer than four hours of operations",
-      "Any request from a Battalion Chief for additional companies"
+      "Any request from a Battalion Chief for two or more additional companies"
      ],
      "src": "M.P. 201.02"
     },
@@ -501,7 +501,7 @@
      "opts": [
       "The Emergency Response Staffing Office (ERSO)",
       "The Alarm Room Chief at Dispatch",
-      "Each Battalion Chief for their own battalion",
+      "Each Battalion Chief, for the members in their own battalion",
       "The Homeland/HR Division personnel staff"
      ],
      "src": "M.P. 201.02"
@@ -537,7 +537,7 @@
      "opts": [
       "On-duty Operations Deputy Chief with AHQ",
       "The Fire Chief from the TOC only",
-      "Any Battalion Chief working an incident",
+      "Any Battalion Chief who is working a large-scale incident",
       "The Alarm Room Supervisor acting alone"
      ],
      "src": "M.P. 201.02A"
@@ -608,7 +608,7 @@
      "why": "M.P. 201.02A: \"Responding units or a unit on-scene has the ability to balance a modified response to a full assignment if necessary.\"",
      "opts": [
       "Balance the modified response to a full assignment",
-      "Nothing; only AHQ can change a modified response",
+      "Nothing; only AHQ can change a modified response once dispatched",
       "Ask the Operations Deputy Chief to end deployment",
       "Request a TOC liaison to approve more companies"
      ],
@@ -658,7 +658,7 @@
       "The Deployment Battalion Chief or Supervisor",
       "The power company's operations supervisor",
       "The first-due Company Officer in the area",
-      "The City Emergency Management Coordinator"
+      "The City Emergency Management Coordinator at the EOC"
      ],
      "src": "M.P. 201.02B"
     },
@@ -680,7 +680,7 @@
      "why": "M.P. 201.05B: \"It is the responsibility of RM-50 to respond to all working first alarm incidents or greater, or any other incident where response is requested by Command.\"",
      "opts": [
       "All working first alarms or greater, or on request",
-      "All second alarms or greater, or on request",
+      "All second alarms or greater, or when Command requests it",
       "Every working fire and every haz mat call",
       "Only when the Logistics Section is opened"
      ],
@@ -792,7 +792,7 @@
      "why": "M.P. 201.05D: It covers multiple alarm fires, fires with haz mat, major spills and leaks that \"may result in environmental contamination or have a major impact on the operation of City services.\"",
      "opts": [
       "Large events that may cause environmental contamination",
-      "Any fire where runoff water reaches a storm drain",
+      "Any fire where the runoff water reaches a storm drain or canal",
       "Brush fires that threaten a protected natural area",
       "Small single-company fuel spills on city streets"
      ],
@@ -852,7 +852,7 @@
      "why": "M.P. 201.05E: Command may need to instruct the public about \"the need to stay indoors shutting down their evaporative cooling systems and closing all doors and windows.\"",
      "opts": [
       "Stay in, shut off evap coolers, close doors and windows",
-      "Stay in, run the A/C, and keep one window cracked",
+      "Stay in, run the A/C, and keep one window cracked for fresh air",
       "Go to the nearest school until told to return home",
       "Stay in a vehicle with windows up and engine off"
      ],
@@ -877,7 +877,7 @@
      "opts": [
       "Explain the risk, leave them, and report the address",
       "Have police remove them from the home by force",
-      "Stay with them until a Branch Officer arrives",
+      "Stay with them at the door until the Branch Officer arrives",
       "Skip the address and continue down the block"
      ],
      "src": "M.P. 201.05E"
@@ -900,7 +900,7 @@
      "why": "M.P. 201.05E: \"Shelter site selection cannot wait on the Red Cross. Site selection must be made by the Incident Commander at the time evacuation is ordered.\"",
      "opts": [
       "The IC, at the time evacuation is ordered",
-      "The Red Cross, once they have arrived",
+      "The Red Cross, once their staff have arrived on scene",
       "The EOC, after it has been activated",
       "Police, after the perimeter is secured"
      ],
@@ -960,7 +960,7 @@
      "why": "M.P. 201.05F: \"As soon as practical, after basic rescue and fire operations are extended, Command will establish an Information Sector.\"",
      "opts": [
       "As soon as practical after rescue and fire ops are extended",
-      "On arrival, before the first attack line goes in service",
+      "On arrival, before the first attack line is placed in service",
       "Only after the PIO arrives and requests the assignment",
       "Only once the incident reaches a 2nd Alarm or greater"
      ],
@@ -1010,7 +1010,7 @@
       "Certified Fire Journalists with green helmets and ID",
       "Any credentialed TV crew wearing full turnout gear",
       "Any reporter escorted by a firefighter with a radio",
-      "Only the PIO's camera crew from the department"
+      "Only the PIO's own camera crew from the fire department"
      ],
      "src": "M.P. 201.05F"
     },
@@ -1022,7 +1022,7 @@
       "Get a briefing at the sector and assist as needed",
       "Take over the sector immediately on arrival",
       "Report to Staging and wait for an assignment",
-      "Set up a separate media area at the Command Post"
+      "Set up a separate media staging area at the Command Post"
      ],
      "src": "M.P. 201.05F"
     },
@@ -1046,7 +1046,7 @@
       "The Assistant Chief of Operations or designee",
       "The Incident Commander before terminating",
       "The Training Academy officer at the scene",
-      "The company officer of the first-in unit"
+      "The company officer of the first-arriving engine company"
      ],
      "src": "M.P. 201.05G"
     },
@@ -1164,7 +1164,7 @@
      "why": "M.P. 201.05H: Members must not \"freelance,\" which has caused wrong information and families sent to the wrong hospital. \"Those members desiring to help should contact the Welfare Sector Officer.\"",
      "opts": [
       "Contact the Welfare Sector Officer to offer help",
-      "Drive to the home and offer the family a ride",
+      "Drive straight to the home and offer the family a ride",
       "Go to the hospital and wait with the crew",
       "Call the family directly to share updates"
      ],
@@ -1188,7 +1188,7 @@
      "why": "M.P. 201.05I: Routine police interactions are handled by the Company Officer; \"when incidents occur that require coordination... between law enforcement tactical units and fire companies, a request for the TLO... shall be made.\"",
      "opts": [
       "When police tactical units and fire need coordination",
-      "On every call where police are already on scene",
+      "On every call where police officers are already on scene",
       "Only when a firefighter is hurt by an assailant",
       "Only after police declare the scene is secure"
      ],
@@ -1418,7 +1418,7 @@
       "The BC or Company Officer, at the incident scene",
       "Only the BC, at the station the next shift",
       "Tactical Services, at the training academy",
-      "Only the Shift Commander, at the Command Post"
+      "Only the Shift Commander, back at the Command Post"
      ],
      "src": "M.P. 201.08"
     },
@@ -1440,7 +1440,7 @@
      "why": "M.P. 201.08: Reinforce safety behaviors, and \"remember that individual successes should not outweigh the safety of the overall operation or crews.\" End the review on a positive note.",
      "opts": [
       "They must not outweigh the safety of the operation",
-      "They should be the main focus of the review",
+      "They should be the main focus of the review discussion",
       "They are left out to keep the review neutral",
       "They are recorded separately for evaluations"
      ],
@@ -1449,5 +1449,10 @@
    ]
   }
  ],
- "notes": []
+ "notes": [
+  "No 201.01C (Risk Management and Safety) text file exists in build/mp-text; 201.01E cites it, but no cards were written for 201.01C.",
+  "201.05B file is titled 'Support Sector' but the body text calls it 'Resource Sector' throughout (RM-50 = Resource Officer); cards say 'Resource (Support) Sector'.",
+  "201.05G and 201.08 read as dated (slide film, transparencies, department mail, 'a new form has been developed'); cards avoid those details.",
+  "201.08 is mostly blank evaluation forms; only page 1 has procedure text. 201.07's final landing-zone diagram and hand-signal pages did not extract usefully and were not used."
+ ]
 }

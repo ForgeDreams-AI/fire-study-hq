@@ -1,0 +1,1373 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Fireground Support, Loss Control & Overhaul (202) (Part 1)",
+   "sub": "Fireground factors, Resource Sector, support activities, attack teams, loss control and salvage.",
+   "concepts": [
+    "<b>202.02</b>: Size-up sorts info into 7 Critical Fireground Factors (Building, Fire, Occupancy, Life Hazard, Arrangement, Resources, Other); gathered by visual, recon and preplan; keep revising the plan.",
+    "<b>202.07</b>: Resource Sector = equipment pool near the scene but outside the perimeter; high-rise: 5 floors below on-deck, radio name includes floor (\"Resource 25\").",
+    "<b>202.09</b>: Ventilate to prevent mushrooming and gain entry; interior sector decides vent; bowstring with attic fire = search then defensive; no roof on tile-roof SFR attic fires.",
+    "<b>202.10</b>: Standard Attack Team = 2 engines + 1 ladder (forward pumper fed by key pumper).",
+    "<b>202.12 / 202.12A</b>: Loss control in all 3 priorities (benchmark \"Loss stopped\"); attack from unburned side; salvage starts beside/below the fire; group, raise and cover contents."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 202.02, the Critical Fireground Factors help the IC simplify complex size-up information into how many distinct categories?",
+     "a": "Seven distinct categories.",
+     "why": "M.P. 202.02: The factors simplify complex information \"into 7 distinct categories\" (Building, Fire, Occupancy, Life Hazard, Arrangement, Resources, Other).",
+     "opts": [
+      "7",
+      "5",
+      "4",
+      "10"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "From the command post you can't see the rear of a strip mall, so you assign a company to do a 360 and report back. Per M.P. 202.02, which form of size-up is this?",
+     "a": "Reconnaissance.",
+     "why": "M.P. 202.02: Reconnaissance is information not visually available to Command from outside, gained by sending someone to \"check-out, go-see\", generally a 360-degree recon with a report back.",
+     "opts": [
+      "Reconnaissance",
+      "Visual",
+      "Preplanning and familiarity",
+      "Progress reporting"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "Per M.P. 202.02, when Command starts an attack on an incomplete initial size-up, the remaining questions about structure, conditions or occupancy are called what?",
+     "a": "Critical unknown information.",
+     "why": "M.P. 202.02: Unanswered questions after an initial size-up are \"defined as critical unknown information\", and efforts must continue to improve that information.",
+     "opts": [
+      "Critical unknown information",
+      "Deferred fireground factors",
+      "Incomplete size-up data",
+      "Secondary size-up factors"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "Per M.P. 202.02, \"number of occupants\" and \"characteristics of escape routes\" are listed under which fireground factor category?",
+     "a": "Life Hazard.",
+     "why": "M.P. 202.02: Life Hazard covers number, location and condition of occupants, search and rescue commitment, and avenues of escape.",
+     "opts": [
+      "Life Hazard",
+      "Occupancy",
+      "Arrangement",
+      "Building"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "Per M.P. 202.02, built-in sprinklers/standpipes and the adequacy of water supply fall under which fireground factor category?",
+     "a": "Resources.",
+     "why": "M.P. 202.02: Resources includes hydrants, supplemental water, adequacy of water supply and \"built-in private fire protection (sprinkler, standpipe, alarms)\".",
+     "opts": [
+      "Resources",
+      "Building",
+      "Occupancy",
+      "Other factors/conditions"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "Per M.P. 202.02, what's the right attitude toward the incident action plan you built in the first few minutes of a fire?",
+     "a": "Keep revising it as fireground factors change, based on information feedback.",
+     "why": "M.P. 202.02: \"Beware of developing an incident action plan and sticking to that same plan throughout the fire\"; effective operations require continual revisions.",
+     "opts": [
+      "Revise it as fireground factors change",
+      "Stick with it, since changing plans midstream confuses crews",
+      "Revise it only at each 10-minute elapsed-time notice",
+      "Change it only after Command has been transferred"
+     ],
+     "src": "M.P. 202.02"
+    },
+    {
+     "q": "At a high-rise fire, per M.P. 202.07 where is the Resource Sector normally established?",
+     "a": "Five floors below the on-deck floor (or another safe, uncontaminated area below the fire).",
+     "why": "M.P. 202.07: For high-rise operations Resource is \"normally established five floors below the on-deck floor\" or another safe, uncontaminated environment below the fire.",
+     "opts": [
+      "Five floors below the on-deck floor",
+      "Two floors below the fire floor",
+      "In the lobby, next to Lobby Sector",
+      "Three floors below the on-deck floor"
+     ],
+     "src": "M.P. 202.07"
+    },
+    {
+     "q": "Resource Sector at a high-rise fire is set up on the 25th floor. Per M.P. 202.07, what radio designation should it use?",
+     "a": "\"Resource 25.\"",
+     "why": "M.P. 202.07: The radio designation \"should include the floor number that Resource is located on (e.g., 'Resource 25')\" so crews can find it.",
+     "opts": [
+      "Resource 25",
+      "High-Rise Resource",
+      "Floor 25 Supply",
+      "Resource Sector North"
+     ],
+     "src": "M.P. 202.07"
+    },
+    {
+     "q": "Per M.P. 202.07, where should a Resource Sector be set up at a typical (non-high-rise) incident?",
+     "a": "Close to operations, but outside the fireground/medical perimeter in a safe location.",
+     "why": "M.P. 202.07: Resource \"should be established in close proximity to the scene of operations, but outside of the defined fireground/medical incident perimeter in a safe location.\"",
+     "opts": [
+      "Near operations but outside the incident perimeter",
+      "Inside the perimeter, beside the sector it supports",
+      "At Level II Staging, alongside uncommitted apparatus",
+      "Next to the command post so Command tracks inventory"
+     ],
+     "src": "M.P. 202.07"
+    },
+    {
+     "q": "Per M.P. 202.07, how should equipment in the Resource Sector pool be organized?",
+     "a": "Grouped by type, showing equipment that is ready for use and equipment that is depleted.",
+     "why": "M.P. 202.07: Resource maintains an inventory at all times, and equipment areas \"should be grouped by type, denoting equipment that is ready for use and equipment that is depleted.\"",
+     "opts": [
+      "By type, marking ready-for-use vs. depleted",
+      "By the company that brought it, for later return",
+      "In one central pile with an officer issuing items",
+      "By the operating sector expected to request it"
+     ],
+     "src": "M.P. 202.07"
+    },
+    {
+     "q": "Per M.P. 202.07, besides supplying operating sectors, what is Resource Sector responsible for at the end of the incident?",
+     "a": "Checking the immediate area for equipment left at the scene.",
+     "why": "M.P. 202.07: Resource Sector is \"also responsible for having the immediate area checked for equipment which may have been left at the scene upon termination.\"",
+     "opts": [
+      "Checking the area for equipment left behind",
+      "Completing the equipment damage reports",
+      "Restocking every apparatus from the supply truck",
+      "Returning spare air bottles to Resource Management"
+     ],
+     "src": "M.P. 202.07"
+    },
+    {
+     "q": "Per M.P. 202.09, what are the two principal reasons you ventilate a building?",
+     "a": "To prevent mushrooming and to gain (and maintain) entry.",
+     "why": "M.P. 202.09: \"You ventilate a building principally for two reasons: To prevent mushrooming; To gain (and maintain) entry.\"",
+     "opts": [
+      "Prevent mushrooming; gain and maintain entry",
+      "Cool the fire; improve visibility for search crews",
+      "Relieve heat on the roof; protect exposures",
+      "Reduce smoke damage; locate the seat of the fire"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "You arrive at a bowstring-truss building with fire in the attic/truss space. Per M.P. 202.09, what is the policy?",
+     "a": "If safe to do so, quickly search the building and implement a defensive strategy.",
+     "why": "M.P. 202.09: \"When fire is in the attic/truss space, and it is safe to do so, quickly search the building and implement a defensive strategy.\"",
+     "opts": [
+      "Quickly search if safe, then go defensive",
+      "Make a quick, aggressive offensive attack from below",
+      "Send a ladder crew to vertically vent over the trusses",
+      "Go offensive, but limit interior crews to one air bottle"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Bowstring-roof building: fire is in one room and contents, with no evidence of extension into the truss space. Per M.P. 202.09, which strategy?",
+     "a": "A quick, aggressive, offensive strategy.",
+     "why": "M.P. 202.09: \"When fire involves a room and contents with no evidence of extension to the attic/truss space—implement a quick, aggressive, offensive strategy.\"",
+     "opts": [
+      "Quick, aggressive offensive attack",
+      "Quick search, then a defensive strategy",
+      "Defensive from the start, with no interior search",
+      "Vertical ventilation before any interior entry"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Attic fire in a single-family home with a tile roof. Per M.P. 202.09, can firefighters go to the roof?",
+     "a": "No. Firefighters are prohibited from going to the roof.",
+     "why": "M.P. 202.09: For interior and/or attic fires in single family residences with tiled roofs \"fire fighters are prohibited from going to the roof.\"",
+     "opts": [
+      "No, firefighters are prohibited from the roof",
+      "Yes, after careful evaluation of the roof profile",
+      "Yes, but only working from an aerial platform",
+      "Only while the fire is confined to a single room"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Per M.P. 202.09, which operating position is best for deciding whether a building needs ventilation, and where and when?",
+     "a": "The interior sector.",
+     "why": "M.P. 202.09: \"The best operating position to determine if a building requires ventilation and the location and timing of that ventilation is the interior sector.\"",
+     "opts": [
+      "The interior sector",
+      "The roof sector",
+      "Command at the command post",
+      "The first-arriving ladder officer"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Per M.P. 202.09, when should crews operate hoselines on the roof?",
+     "a": "Only to protect personnel and external exposures, unless Command orders a coordinated roof attack.",
+     "why": "M.P. 202.09: Do not operate lines down vent holes; \"Operate roof lines only for the purpose of protecting personnel and external exposures unless Command orders a coordinated roof attack.\"",
+     "opts": [
+      "To protect personnel and exposures, unless a roof attack is ordered",
+      "Down the vent hole once it's cut, to knock down the attic fire",
+      "Whenever fire and smoke start venting out of the roof holes",
+      "With a ladder pipe aimed through the ventilation opening"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Fire is progressing and you must attack from the unburned side through a locked door. Per M.P. 202.09, what do you do?",
+     "a": "Don't waste time picking locks; bash the door.",
+     "why": "M.P. 202.09: \"The more critical the fire, the less important forcible entry damage becomes... don't waste time trying to pick the locks--bash the doors.\"",
+     "opts": [
+      "Force the door; don't waste time on the lock",
+      "Pick the lock to limit damage, since loss control matters",
+      "Wait for the ladder company to do through-the-lock entry",
+      "Find an unlocked opening, even one on the fire side"
+     ],
+     "src": "M.P. 202.09"
+    },
+    {
+     "q": "Per M.P. 202.10, a standard Attack Team consists of what?",
+     "a": "Two engine companies plus a ladder company.",
+     "why": "M.P. 202.10: \"A standard Attack Team consists of two engine companies plus a ladder company,\" giving adequate water supply and support capability.",
+     "opts": [
+      "Two engines plus a ladder",
+      "One engine, one ladder and a rescue",
+      "Three engines and a battalion chief",
+      "Two ladders plus an engine"
+     ],
+     "src": "M.P. 202.10"
+    },
+    {
+     "q": "Per M.P. 202.10, what is a common deployment for an Attack Team?",
+     "a": "A forward pumper supplied by one or two lines from a key pumper on a hydrant.",
+     "why": "M.P. 202.10: \"A common deployment for an Attack Team involves a 'forward' pumper supplied by one or two lines from a 'key' pumper on a hydrant.\"",
+     "opts": [
+      "Forward pumper fed by a key pumper on a hydrant",
+      "Both engines on separate hydrants, each with its own line",
+      "The ladder pumping while both engines stretch handlines",
+      "Two forward pumpers fed by a tender shuttle from the key"
+     ],
+     "src": "M.P. 202.10"
+    },
+    {
+     "q": "Per M.P. 202.10, once Command assigns an Attack Team, where does it fit in the organization?",
+     "a": "It reports to an existing Sector Officer or becomes an additional Sector.",
+     "why": "M.P. 202.10: \"The Attack Team will either report to an existing Sector Officer or will become an additional Sector,\" and Command designates which officer assumes Sector responsibilities.",
+     "opts": [
+      "Under an existing Sector, or as a new Sector",
+      "Always directly under Command as a separate team",
+      "In Staging until a Division is formed for it",
+      "Only under the Operations Section Chief"
+     ],
+     "src": "M.P. 202.10"
+    },
+    {
+     "q": "Per M.P. 202.12, what benchmark marks completion of the property conservation tactical priority?",
+     "a": "Loss stopped.",
+     "why": "M.P. 202.12: Search & Rescue = All clear; Fire Control = Fire under control; \"Property Conservation = Loss stopped.\"",
+     "opts": [
+      "Loss stopped",
+      "All clear",
+      "Fire under control",
+      "Overhaul complete"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "Per M.P. 202.12, which fire attack approach best supports loss control?",
+     "a": "Fighting the fire from the unburned portion of the building.",
+     "why": "M.P. 202.12: \"Fighting the fire from the unburned portion will effect loss control\"; attacks from the burning portion usually push heat and smoke through the building.",
+     "opts": [
+      "Attacking from the unburned portion",
+      "Attacking from the burning portion to push fire out",
+      "A defensive attack to keep crews out of the building",
+      "Flooding the attic first to stop all extension"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "After knockdown, water is pooling in the attic on top of the ceiling drywall. Per M.P. 202.12, what should you do?",
+     "a": "Use a drill or screwdriver to punch a small drainage hole so the water can escape.",
+     "why": "M.P. 202.12: Use \"a drill or a screwdriver as a hole punch to allow the water to escape\"; the small hole may save the ceiling and is easily patched.",
+     "opts": [
+      "Punch a small drain hole with a drill or screwdriver",
+      "Pull the ceiling down from the corners to drain it",
+      "Leave it; the drywall will dry once the fire is out",
+      "Squeegee it in the attic toward an exterior wall"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "You're checking the attic for extension. Per M.P. 202.12, what size inspection hole should you preferably cut?",
+     "a": "About 6\" x 6\" (and not at the corners).",
+     "why": "M.P. 202.12: \"Cut small inspection holes, preferably 6\\\" x 6,\\\" to check attics,\" and don't pull drywall from corners, which can require replacing both walls and ceiling.",
+     "opts": [
+      "6 in. x 6 in.",
+      "12 in. x 12 in.",
+      "2 ft. x 2 ft.",
+      "4 in. x 4 in."
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "Furniture is sitting in standing water and you have no blocks. Per M.P. 202.12, what can you use to raise it?",
+     "a": "Canned goods from the home.",
+     "why": "M.P. 202.12: Place blocks under furniture legs; \"If no blocks are available, canned goods from the home serve the same purpose.\"",
+     "opts": [
+      "Canned goods from the home",
+      "Folded salvage covers under each leg",
+      "Rolled hall runners under the furniture",
+      "Nothing; carry it out onto the lawn"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "Per M.P. 202.12, why should you turn off the building's ventilation/AC system when appropriate?",
+     "a": "It spreads smoke to the rest of the structure and may contaminate the air handling system.",
+     "why": "M.P. 202.12: \"The AC system will expose the remainder of the structure and might contaminate the air handling system (which could require its replacement).\"",
+     "opts": [
+      "It spreads smoke and can contaminate the air handler",
+      "It feeds oxygen to the fire and speeds flashover",
+      "It interferes with PPV fans set at the doorway",
+      "It creates a shock hazard for crews pulling ceiling"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "While packaging a home after the fire, you find wet photo albums in a closet. Per M.P. 202.12, what do you do?",
+     "a": "Don't bag or box them wet; they need time to dry before packaging.",
+     "why": "M.P. 202.12: Keepsakes should be wrapped and boxed with contents marked, but \"Do not bag or box wet items. They will need time to dry before packaging.\"",
+     "opts": [
+      "Leave them unboxed so they can dry first",
+      "Seal them in plastic bags to stop more damage",
+      "Box them and mark the contents on the outside",
+      "Carry them out to the covered debris pile"
+     ],
+     "src": "M.P. 202.12"
+    },
+    {
+     "q": "Per M.P. 202.12A, what are the two salvage objectives?",
+     "a": "To reasonably stop or reduce the sources of damage, and to reasonably protect or remove contents.",
+     "why": "M.P. 202.12A: Salvage objectives are \"To reasonably stop or reduce the sources of damage\" and \"To reasonably protect or remove contents.\"",
+     "opts": [
+      "Stop damage sources; protect or remove contents",
+      "Recover valuables; document losses for insurance",
+      "Remove all contents; secure the building from looting",
+      "Ventilate smoke; finish overhaul before investigators"
+     ],
+     "src": "M.P. 202.12A"
+    },
+    {
+     "q": "Per M.P. 202.12A, where should salvage efforts begin?",
+     "a": "In the areas most severely threatened, usually directly adjacent to or below the fire.",
+     "why": "M.P. 202.12A: Salvage should begin \"in areas most severely threatened by damage. In most cases that will be areas directly adjacent to or below the fire area.\"",
+     "opts": [
+      "Areas most threatened, usually beside or below the fire",
+      "The room of origin, then working outward from it",
+      "Floors above the fire, where smoke collects first",
+      "The rooms with the most expensive contents"
+     ],
+     "src": "M.P. 202.12A"
+    },
+    {
+     "q": "Contents can't practically be removed from a room near the fire. Per M.P. 202.12A, what should crews do?",
+     "a": "Group the contents in the center of the room, raise them off the floor and cover them.",
+     "why": "M.P. 202.12A: \"When removal is not practical, contents should be grouped in the center of rooms, raised off of the floor and covered.\"",
+     "opts": [
+      "Group in the center, raise off the floor, cover",
+      "Push against the walls and cover with plastic",
+      "Leave them where they sit and cover them in place",
+      "Stack them in a closet and close the door"
+     ],
+     "src": "M.P. 202.12A"
+    },
+    {
+     "q": "Per M.P. 202.12A, what should be the primary considerations when deciding what to salvage?",
+     "a": "Replacement price and value (worth to the owner).",
+     "why": "M.P. 202.12A: \"Replacement price and value should be the primary considerations\"; business records or family mementos may have high value even if their price is low.",
+     "opts": [
+      "Replacement price and value",
+      "Size and weight of the items",
+      "Distance to a safe location",
+      "Closeness to the room of origin"
+     ],
+     "src": "M.P. 202.12A"
+    },
+    {
+     "q": "Per M.P. 202.12A, who should meet the property owner to identify salvage priorities?",
+     "a": "Command and/or the Sector Officer.",
+     "why": "M.P. 202.12A: \"Command and/or the Sector Officer should meet with the property owner or responsible party when available to determine/identify the salvage priorities.\"",
+     "opts": [
+      "Command and/or the Sector Officer",
+      "The fire investigator",
+      "The Safety Officer",
+      "Any firefighter on the salvage crew"
+     ],
+     "src": "M.P. 202.12A"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Fireground Support, Loss Control & Overhaul (202) (Part 2)",
+   "sub": "Overhaul, occupant services, pets and animals, fire cause investigation and Field Incident Reports.",
+   "concepts": [
+    "<b>202.12B</b>: Overhaul: last company officer leaving owns extinguishment; post-incident inspection before last unit leaves; C99 for fire watch; no standard overhaul on defensive fires.",
+    "<b>202.12C</b>: Occupant Services at all working structure fires; reports to Command (or loss control officer); walk-through only after Investigations approves.",
+    "<b>202.12F</b>: Pet rescue = loss control priority; no IV fluids for animals; strays to Maricopa County Animal Control; dangerous animals = Animal Control plus PD.",
+    "<b>202.13 / 202.13A</b>: Investigate after control and immediate salvage, before overhaul; investigator holds jurisdiction until releasing it; FIR by first-in company officer within 24 hours."
+   ],
+   "cards": [
+    {
+     "q": "A building rekindles the day after a fire. Per M.P. 202.12B, is that automatically evidence the original fire returned to flaming combustion?",
+     "a": "No. A rekindle should not be considered per se evidence of a return to flaming combustion of the original fire.",
+     "why": "M.P. 202.12B: Even reasonable overhaul may not eliminate all risk, and \"A rekindle is not always and should not be considered per se evidence\" of the original fire returning.",
+     "opts": [
+      "No, it isn't per se evidence of that",
+      "Yes, it always means overhaul was incomplete",
+      "Yes, unless a fire investigator rules otherwise",
+      "Only if it occurs within 24 hours"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "Per M.P. 202.12B, who is responsible for fire extinguishment, when possible, as units clear the scene?",
+     "a": "The company officer last leaving the scene.",
+     "why": "M.P. 202.12B: The IC ensures reasonable overhaul; \"The company officer last leaving the scene is responsible for fire extinguishment, when possible.\"",
+     "opts": [
+      "The last company officer to leave",
+      "The IC who declared fire control",
+      "The fire investigator on scene",
+      "The first-arriving company officer"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "Per M.P. 202.12B, when must a post-incident inspection of the fire building be done?",
+     "a": "Before the last fire department unit leaves the scene.",
+     "why": "M.P. 202.12B: \"A post incident inspection will be performed prior to the last fire department unit leaving the scene\"; the IC decides if more are needed.",
+     "opts": [
+      "Before the last FD unit leaves the scene",
+      "Within 4 hours after the last unit leaves",
+      "The next morning, by the first-due engine",
+      "Only when cellulose insulation is present"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "The IC believes a burned building warrants a fire watch. Per M.P. 202.12B, who should be dispatched?",
+     "a": "C99.",
+     "why": "M.P. 202.12B: \"If The IC believes the circumstances warrant a fire watch, C99 should be dispatched,\" and C99 explains Fire Code fire watch requirements and cost to the owner.",
+     "opts": [
+      "C99",
+      "The on-duty Fire Investigator",
+      "The Battalion Chief",
+      "A ladder company to stand by"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "Per M.P. 202.12B, when may the IC waive post-incident inspections?",
+     "a": "When a fire watch is in place.",
+     "why": "M.P. 202.12B: \"The IC may waive post incident inspections if a fire watch is in place.\"",
+     "opts": [
+      "When a fire watch is in place",
+      "When the owner signs a release",
+      "When no cellulose insulation was found",
+      "When the TIC shows no hot spots"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "Structure fire with cellulose insulation in the attic. Per M.P. 202.12B, what should crews and the investigator advise the owner/occupant?",
+     "a": "That they should not occupy the structure.",
+     "why": "M.P. 202.12B: With cellulose insulation, crews should \"Meet with the owner/occupant and the fire investigator to advise the owner/occupant that they should not occupy the structure.\"",
+     "opts": [
+      "Not to occupy the structure",
+      "They may move back in once the meter is pulled",
+      "All of the insulation has now been removed",
+      "They must hire a fire watch for 24 hours"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "The fire was declared a Defensive Fire. Per M.P. 202.12B, how is overhaul handled?",
+     "a": "No standard overhaul; crews keep applying water from exterior positions until all fire is out.",
+     "why": "M.P. 202.12B: Overhaul \"will not be conducted on structures that have been declared Defensive Fires\"; crews apply water to hot spots from exterior positions until fully extinguished.",
+     "opts": [
+      "Exterior water only, until all fire is out",
+      "Standard overhaul after an engineer clears it",
+      "Interior overhaul once the main body is knocked down",
+      "Overhaul from the doorways using a TIC only"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "During overhaul you find possible evidence that can't stay where it is. Per M.P. 202.12B, how should it be removed?",
+     "a": "Under the direction of a fire investigator.",
+     "why": "M.P. 202.12B: When possible evidence stays untouched in its original location; \"Where circumstances prohibit this, evidence should be removed under the direction of a fire investigator.\"",
+     "opts": [
+      "Under a fire investigator's direction",
+      "Bagged by the crew and handed to the IC",
+      "Photographed, then moved outside by the crew",
+      "Moved by police officers on scene"
+     ],
+     "src": "M.P. 202.12B"
+    },
+    {
+     "q": "Per M.P. 202.12C, when shall the IC establish an Occupant Services Sector?",
+     "a": "At all working structure fires, as early in the incident as practical (and at other incidents as needed).",
+     "why": "M.P. 202.12C: Occupant Services \"shall be established by the Incident Commander at all working structure fires, and as early in the incident as is practical.\"",
+     "opts": [
+      "At all working structure fires, as early as practical",
+      "Only at second alarm or greater fires",
+      "When an occupant asks for assistance",
+      "After the fire is declared under control"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "Per M.P. 202.12C, which additional resources are acceptable to request for staffing Occupant Services?",
+     "a": "An additional engine, ladder or battalion chief (staff personnel at prolonged incidents).",
+     "why": "M.P. 202.12C: \"An additional engine, ladder, or battalion chief is acceptable\"; at prolonged incidents Command may assign staff personnel.",
+     "opts": [
+      "An engine, ladder or battalion chief",
+      "A rescue company only",
+      "A police officer already on scene",
+      "The Safety Officer"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "Per M.P. 202.12C, who does Occupant Services report to once a loss control Branch/Section is assigned?",
+     "a": "The loss control officer.",
+     "why": "M.P. 202.12C: Occupant Services \"shall report to Command unless a loss control Branch/Section is assigned, at which time he/she shall report to the loss control officer.\"",
+     "opts": [
+      "The loss control officer",
+      "Command",
+      "The Investigations Sector",
+      "The Safety Officer"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "Occupant Services wants to walk the owner through the burned structure. Per M.P. 202.12C, whose approval is needed first?",
+     "a": "The Investigations Sector (and only where safe).",
+     "why": "M.P. 202.12C: \"Where safe to do so, and after approval from Investigations Sector, coordinate a 'Walk-through' of the structure with the responsible party.\"",
+     "opts": [
+      "The Investigations Sector",
+      "The Safety Sector",
+      "The owner's insurance agent",
+      "The first-due company officer"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "Per M.P. 202.12C, when does Occupant Services stop providing service and support?",
+     "a": "When the customer indicates our services are no longer needed (it may go beyond incident termination).",
+     "why": "M.P. 202.12C: Provide \"on-going service and support until the customer indicates our services are no longer needed\"; responsibilities may extend beyond termination.",
+     "opts": [
+      "When the customer says it's no longer needed",
+      "When the incident is terminated",
+      "When the last company leaves the scene",
+      "When the Red Cross arrives on scene"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "A family lost their living quarters and clothing in a house fire. Per M.P. 202.12C, who can provide clothing, food, toiletries and temporary housing?",
+     "a": "The American Red Cross.",
+     "why": "M.P. 202.12C: For residential fires with loss of living quarters and clothing, \"The American Red Cross can provide some clothing, food, toiletries, and arrange for temporary shelter/housing.\"",
+     "opts": [
+      "The American Red Cross",
+      "The Critical Incident Debriefing Team",
+      "The Employee Assistance Program",
+      "The Fire Department Chaplain"
+     ],
+     "src": "M.P. 202.12C"
+    },
+    {
+     "q": "Per M.P. 202.12F, rescuing pets during an incident should take the same priority as what?",
+     "a": "Any loss control activity.",
+     "why": "M.P. 202.12F: \"Rescuing pets or animals during an incident should take the same priority as any loss control activity,\" weighing risk to crews against a positive outcome.",
+     "opts": [
+      "Any loss control activity",
+      "Search and rescue of occupants",
+      "Fire control",
+      "Exposure protection"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "You're treating an injured dog pulled from a house fire. Per M.P. 202.12F, which care is NOT allowed?",
+     "a": "Giving fluids intravenously.",
+     "why": "M.P. 202.12F: Animal injuries can be treated like human BLS injuries (pressure, cooling burns, oxygen, splints), but \"At no time... should any attempt be made to provide fluids intravenously.\"",
+     "opts": [
+      "IV fluids",
+      "Oxygen for breathing difficulty",
+      "Cooling burns with water",
+      "Splinting a broken limb"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "On a medical call you find a stray, uninjured dog. Per M.P. 202.12F, who is the call referred to?",
+     "a": "Maricopa County Animal Control.",
+     "why": "M.P. 202.12F: \"For stray, uninjured animals, the call should be referred to the Maricopa County Animal Control.\"",
+     "opts": [
+      "Maricopa County Animal Control",
+      "The Humane Society",
+      "Arizona Livestock",
+      "The Phoenix Police Department"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "An aggressive animal is a danger to people on scene. Per M.P. 202.12F, who responds?",
+     "a": "Animal Control, and PD should also be requested.",
+     "why": "M.P. 202.12F: \"When there is a danger to human safety, Animal Control will respond. (Also request that PD respond.)\"",
+     "opts": [
+      "Animal Control, and request PD as well",
+      "The Humane Society, and request PD as well",
+      "The AZ SPCA, with an engine standing by",
+      "Arizona Livestock with the ranking officer"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "A badly injured animal is taken to an emergency vet by the FD and the owner can't be identified. Per M.P. 202.12F, who pays?",
+     "a": "The ASPCA.",
+     "why": "M.P. 202.12F: Cost goes to the owner, \"or if the owner cannot be identified, then ASPCA will pay\"; no cost is incurred by the Department or the member.",
+     "opts": [
+      "The ASPCA",
+      "The Fire Department",
+      "The member who transported it",
+      "Maricopa County Animal Control"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "You transported a rider who fell from a horse. Per M.P. 202.12F, which is the proper agency for the horse?",
+     "a": "Arizona Livestock.",
+     "why": "M.P. 202.12F: In the horse example, \"The proper agency in this case is Arizona Livestock,\" though ASPCA may help secure the animal meanwhile.",
+     "opts": [
+      "Arizona Livestock",
+      "Maricopa County Animal Control",
+      "The Humane Society",
+      "Phoenix PD mounted unit"
+     ],
+     "src": "M.P. 202.12F"
+    },
+    {
+     "q": "Per M.P. 202.13, which of these fires requires a Fire Investigator to respond?",
+     "a": "A dumpster fire with an identified suspect in custody.",
+     "why": "M.P. 202.13: Investigators respond to \"Vehicle, field, or dumpster fires that have an identified suspect in custody\"; car fires from the engine area, no-suspect trash fires and known accidental fires do not need one.",
+     "opts": [
+      "Dumpster fire with a suspect in custody",
+      "Car fire that started in the engine area",
+      "Grass fire with no suspect in custody",
+      "Stove fire with food remains on the stove"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Per M.P. 202.13, at what point in operations should the fire investigation be performed?",
+     "a": "After fire control and immediate salvage, but before removing contents and overhaul.",
+     "why": "M.P. 202.13: Investigation \"should be performed after fire control activities, immediate salvage, but prior to removing contents and overhaul actions.\"",
+     "opts": [
+      "After control and immediate salvage, before overhaul",
+      "After overhaul is done and the scene is secured",
+      "Before fire control, while burn patterns are visible",
+      "After the contents are removed and the floor is clear"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "A Fire Investigator is responding to your fire. Per M.P. 202.13, what should companies on scene do?",
+     "a": "Delay non-essential overhaul and secure the fire scene until the investigator arrives.",
+     "why": "M.P. 202.13: Companies \"shall delay non-essential overhaul and secure the fire scene until the investigator arrives\"; activities that may alter the scene stop until authorized.",
+     "opts": [
+      "Hold non-essential overhaul and secure the scene",
+      "Finish overhaul so the investigator has a clean scene",
+      "Return to quarters and leave the scene unattended",
+      "Start removing contents to a safe outside location"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Per M.P. 202.13, once Command turns jurisdiction of the fire area over to the Investigator, when does it return to Command?",
+     "a": "When the Investigator releases it back to Command.",
+     "why": "M.P. 202.13: \"The Fire Investigator retains jurisdiction until the Investigator releases it back to Command.\"",
+     "opts": [
+      "When the Investigator releases it",
+      "When overhaul is complete",
+      "When the IC terminates the incident",
+      "After 24 hours"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Per M.P. 202.13, when should crews try to identify the responsible party and witnesses at a fire scene?",
+     "a": "As soon as possible; it shall not be delayed until the investigator is on scene.",
+     "why": "M.P. 202.13: Identifying the RP and witnesses \"must be made as soon as possible and shall not be delayed until the investigator is on the scene.\"",
+     "opts": [
+      "As soon as possible, without waiting",
+      "Only after the investigator arrives",
+      "Only when no police are on scene",
+      "After overhaul, once the scene is quiet"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Per M.P. 202.13, which fireground activity presents the greatest potential for damage to evidence?",
+     "a": "Overhaul.",
+     "why": "M.P. 202.13: \"Overhaul presents the greatest potential for damage to evidence\" used by investigators and police in later prosecution.",
+     "opts": [
+      "Overhaul",
+      "Salvage",
+      "Initial fire attack",
+      "Ventilation"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Fire fatality at a structure fire. Per M.P. 202.13, who is responsible for the death investigation?",
+     "a": "The Phoenix Police Department.",
+     "why": "M.P. 202.13: In joint investigations, Fire Investigators determine origin and cause, while \"Phoenix Police are responsible for conducting the death investigation.\"",
+     "opts": [
+      "Phoenix Police",
+      "PFD Fire Investigators",
+      "The Medical Examiner alone",
+      "The IC and company officer"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "A homeowner asks for information about the fire for an insurance claim; no investigator was needed. Per M.P. 202.13, what can the company officer give them?",
+     "a": "The fire department incident number.",
+     "why": "M.P. 202.13: \"the company officer can give the fire department incident number, which will enable the victim to access fire department information regarding the fire.\"",
+     "opts": [
+      "The FD incident number",
+      "A printed copy of the F.I.R.",
+      "The investigator's direct phone line",
+      "A signed statement of the cause"
+     ],
+     "src": "M.P. 202.13"
+    },
+    {
+     "q": "Per M.P. 202.13A, how soon after an incident must a Field Incident Report (FIR) be entered?",
+     "a": "Within 24 hours.",
+     "why": "M.P. 202.13A: \"FIRs must be entered within 24 hours of the incident.\"",
+     "opts": [
+      "Within 24 hours",
+      "Within 12 hours",
+      "Within 48 hours",
+      "Within 72 hours"
+     ],
+     "src": "M.P. 202.13A"
+    },
+    {
+     "q": "Per M.P. 202.13A, who completes the FIR for a fire response?",
+     "a": "The company officer of the first responding unit, unless a Fire Investigator responds.",
+     "why": "M.P. 202.13A: \"The company officer of the first responding unit is responsible for completing the FIR unless a Fire Investigator responds to investigate.\"",
+     "opts": [
+      "First-in company officer, unless an investigator responds",
+      "The IC, whether or not an investigator responds",
+      "The responding Fire Investigator, on every fire",
+      "The Battalion Chief who had command"
+     ],
+     "src": "M.P. 202.13A"
+    },
+    {
+     "q": "Per M.P. 202.13A, who may audit FIRs for quality assurance?",
+     "a": "Supervisors at the Battalion Chief level or higher.",
+     "why": "M.P. 202.13A: \"Supervisors at the Battalion Chief level or higher may audit FIRs for quality assurance.\"",
+     "opts": [
+      "Battalion Chief level or higher",
+      "Any captain on the shift",
+      "Fire Investigators only",
+      "The Fire Marshal only"
+     ],
+     "src": "M.P. 202.13A"
+    },
+    {
+     "q": "Per M.P. 202.13A, what role does the FIR play when a fire's origin and cause are clear and no investigator is needed?",
+     "a": "It serves as the official initial investigation record.",
+     "why": "M.P. 202.13A: For clear origin and cause, \"the company officer's FIR will serve as the official initial investigation record.\" FIRs are legal documents.",
+     "opts": [
+      "The official initial investigation record",
+      "An internal note not used as a legal record",
+      "A draft the investigator must rewrite",
+      "A statistics form only, not about cause"
+     ],
+     "src": "M.P. 202.13A"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: EMS Sectors & Multi-Casualty (203)",
+   "sub": "Multi-patient and mass casualty operations: EMS responsibilities, triage, extrication, treatment, transportation, medical supply and the Medical Safety Officer.",
+   "concepts": [
+    "<b>203.01</b>: Multi-patient procedures start at 2-1-Medical; MCI = 25-100 patients, disaster = 100+; EMS benchmarks: Triage Report and \"All IMMEDIATES Transported.\"",
+    "<b>203.01</b>: Triage tags at 3+ IMMEDIATES or 10+ patients; Level II Staging on all 1st Alarm Medical+; red/yellow/green salvage covers mark treatment areas.",
+    "<b>203.02</b>: RAMP = Rapid Assessment of Mental Status and Pulse; declare RAMP by radio; report Immediate, Delayed, Dead/Dying, INA; triage tape on right arm.",
+    "<b>203.03</b>: Extrication: 1 company per 5 victims; ladders for forcible extrication; heavy equipment through Command; face-to-face comms with messengers.",
+    "<b>203.04</b>: Treatment: 1 company per 4 patients; 1 salvage cover = 3 patients; fill from exit toward entrance; extended treatment only if no transport available.",
+    "<b>203.05 / 203.05A</b>: Transportation: hospital status via Dispatch on Med-9; rescues to loading area no more than 2 at a time; leap-frog MINORs; pull tracking slips; Branch gets its own channel.",
+    "<b>203.06 / 203.06A</b>: Medical Supply Sector on 3-Alarm Medical+ (MS19 + EMS supply truck), reports to Command under 20 patients; MSO is a licensed practitioner in Safety Section/Rehab."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 203.01, a \"mass casualty incident\" involves how many patients?",
+     "a": "25 to 100 patients.",
+     "why": "M.P. 203.01: \"A 'mass casualty incident' is defined as any incident involving 25 to 100 patients\"; more than 100 is a \"disaster.\"",
+     "opts": [
+      "25 to 100",
+      "10 to 25",
+      "50 to 150",
+      "More than 100"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, the first-arriving company officer implements multi-patient/MCI procedures on EMS incidents requiring what commitment?",
+     "a": "A two-and-one medical (2-1-M) or greater.",
+     "why": "M.P. 203.01: It is the first-arriving company officer's responsibility to implement these procedures \"on EMS incidents requiring the commitment of a two-and-one medical (2-1-M) or greater.\"",
+     "opts": [
+      "2-1-Medical or greater",
+      "1st Alarm Medical or greater",
+      "3rd Alarm Medical or greater",
+      "Any call with two or more patients"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, triage tags should be used any time there are how many patients?",
+     "a": "Three or more IMMEDIATE patients, or more than ten patients.",
+     "why": "M.P. 203.01: \"Triage tags should be used any time there are three (3) or more IMMEDIATE patients or more than ten (10) patients.\"",
+     "opts": [
+      "3+ IMMEDIATES or more than 10 patients",
+      "2+ IMMEDIATES or more than 5 patients",
+      "5+ IMMEDIATES or more than 20 patients",
+      "Any 2nd Alarm Medical, regardless of count"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, after IMMEDIATE patients, which group is next in the treat-and-transport priority order?",
+     "a": "DELAYED patients upgraded to IMMEDIATE.",
+     "why": "M.P. 203.01: Priority order is \"1. IMMEDIATE 2. DELAYED patients upgraded to IMMEDIATE 3. DELAYED 4. MINOR.\"",
+     "opts": [
+      "DELAYED patients upgraded to IMMEDIATE",
+      "DELAYED patients",
+      "MINOR patients with significant MOI",
+      "Pediatric patients of any category"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, what are the two EMS tactical objectives to complete on any multi-patient/MCI incident?",
+     "a": "Completion of a Triage Report and the declaration of \"All IMMEDIATES Transported.\"",
+     "why": "M.P. 203.01: The EMS tactical objectives are \"Completion of a 'Triage Report'\" and \"Declaration of 'All IMMEDIATES Transported'.\"",
+     "opts": [
+      "Triage Report; All IMMEDIATES Transported",
+      "Triage Report; All Patients Extricated",
+      "All Clear; All Patients Treated",
+      "Treatment Area Set Up; Triage Complete"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, which medical incidents require a Level II Staging area for all FD resources, including rescues?",
+     "a": "All First Alarm Medical incidents or greater.",
+     "why": "M.P. 203.01: \"All First-Alarm-Medical Incidents (or greater) require a Level II Staging Area for all fire department resources, including rescue companies.\"",
+     "opts": [
+      "First Alarm Medical or greater",
+      "Second Alarm Medical or greater",
+      "Third Alarm Medical or greater",
+      "Only incidents over 25 patients"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, colored salvage covers mark the treatment areas. Which color designates DELAYED patients?",
+     "a": "Yellow.",
+     "why": "M.P. 203.01: Colored salvage covers \"(red, yellow and green)\" designate treatment areas for IMMEDIATE, DELAYED or MINOR patients, respectively.",
+     "opts": [
+      "Yellow",
+      "Red",
+      "Green",
+      "Blue"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "A building collapse has victims in a hazardous area. Per M.P. 203.01, where is triage usually performed in this case?",
+     "a": "At the entrance to the treatment area, after victims are removed to a safe area.",
+     "why": "M.P. 203.01: With building collapse or hazmat release it may be better to remove victims to a safe area; \"In these cases, triage will be performed at the entrance to the treatment area.\"",
+     "opts": [
+      "At the treatment area entrance",
+      "In place, where each victim is found",
+      "At the Level II Staging area",
+      "At the hospital on arrival"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.01, at an initial multi-patient response, how long does the first company's triage function normally last?",
+     "a": "4 to 6 minutes.",
+     "why": "M.P. 203.01: \"The triage function should be performed by the first arriving company. Normally, it will last 4-6 minutes.\"",
+     "opts": [
+      "4-6 minutes",
+      "1-2 minutes",
+      "10-12 minutes",
+      "15-20 minutes"
+     ],
+     "src": "M.P. 203.01"
+    },
+    {
+     "q": "Per M.P. 203.02, what does RAMP triage stand for?",
+     "a": "Rapid Assessment of Mental Status and Pulse.",
+     "why": "M.P. 203.02: RAMP is \"Rapid Assessment of Mental Status and Pulse\" triage, and can be used on any incident to make it a conditioned response.",
+     "opts": [
+      "Rapid Assessment of Mental Status and Pulse",
+      "Rapid Assessment of Mobility and Perfusion",
+      "Respirations, Airway, Mental status, Pulse",
+      "Rapid Airway, Movement and Perfusion"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "Command or Triage decides RAMP triage is needed because patients exceed resources. Per M.P. 203.02, what must happen?",
+     "a": "Declare it on the radio to AHQ or Command so all responding and on-scene units know RAMP is in use.",
+     "why": "M.P. 203.02: \"a declaration on the radio to AHQ or Command should be transmitted so that all responding, and on-scene units know RAMP is being utilized.\"",
+     "opts": [
+      "Declare RAMP on the radio to AHQ or Command",
+      "Notify receiving hospitals through Med-9 first",
+      "Assign a Medical Branch Director before starting",
+      "Have Transportation begin pulling tracking slips"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "Per M.P. 203.02, a Triage Report includes the number of patients in which categories?",
+     "a": "Immediate, Delayed, Dead/Dying and Involved Needs Assessment (INA).",
+     "why": "M.P. 203.02: \"A Triage Report should include the number of Immediate, Delayed, Dead/Dying, and Involved Needs Assessment (INA) patients.\"",
+     "opts": [
+      "Immediate, Delayed, Dead/Dying, INA",
+      "Immediate, Delayed, Minor, Deceased",
+      "Critical, Serious, Stable, Expectant",
+      "Red, Yellow, Green, Black only"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "Per M.P. 203.02, where is triage tape placed on a patient?",
+     "a": "On the right arm.",
+     "why": "M.P. 203.02: Patients are \"accounted for with triage tape appropriately (right arm).\"",
+     "opts": [
+      "Right arm",
+      "Left arm",
+      "Either wrist",
+      "Left ankle"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "Under RAMP, a Dead/Dying patient still isn't breathing after lifesaving interventions. Per M.P. 203.02, what do you do?",
+     "a": "Consider the patient dead; they can be left in place.",
+     "why": "M.P. 203.02: Dead/Dying patients are reassessed as resources allow; \"If not breathing after lifesaving interventions, they are considered dead and can be left in place.\"",
+     "opts": [
+      "Consider them dead and leave them in place",
+      "Move them first so they can be re-triaged",
+      "Upgrade them to Immediate and transport",
+      "Tag them Delayed and recheck in 10 minutes"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "There's an immediate threat to patients and responders where victims lie. Per M.P. 203.02, how is triage handled?",
+     "a": "Move the patients to a safe area, then triage them.",
+     "why": "M.P. 203.02: \"If there is an immediate threat to the patients or responders, triage can be performed after the patients are moved to a safe area.\"",
+     "opts": [
+      "Move them to safety, then triage",
+      "Triage everyone in place before moving anyone",
+      "Hold off on triage until the hazard is mitigated",
+      "Triage only the patients able to walk out"
+     ],
+     "src": "M.P. 203.02"
+    },
+    {
+     "q": "Per M.P. 203.03, what is a reasonable initial commitment of companies to the Extrication Sector?",
+     "a": "One company per five victims.",
+     "why": "M.P. 203.03: \"A reasonable guideline is an initial commitment of one company per five (5) victims.\"",
+     "opts": [
+      "One company per 5 victims",
+      "One company per 4 victims",
+      "One company per 10 victims",
+      "One company per victim"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "In a bus crash, DELAYED patients are blocking access to an IMMEDIATE patient. Per M.P. 203.03, what may happen?",
+     "a": "The DELAYED patients may be removed to treatment ahead of the IMMEDIATE patient.",
+     "why": "M.P. 203.03: \"In some cases of confined entrapment, removing 'DELAYED' patients may occur before access can be gained to 'IMMEDIATE' patients.\"",
+     "opts": [
+      "Remove the DELAYED patients first",
+      "Leave them; IMMEDIATES must always go first",
+      "Re-tag the DELAYED patients as IMMEDIATE",
+      "Stop and wait for a heavy rescue company"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "Victims at an MCI require forcible extrication. Per M.P. 203.03, which companies should be assigned?",
+     "a": "Ladder companies.",
+     "why": "M.P. 203.03: \"When victims require forcible extrication, ladder companies should be assigned,\" and ladder apparatus is brought in close to the scene.",
+     "opts": [
+      "Ladder companies",
+      "Rescue companies",
+      "Paramedic engine companies",
+      "The Medical Supply company"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "Extrication needs wreckers, cranes or cutting torches. Per M.P. 203.03, how are they obtained?",
+     "a": "They must be requested through Command.",
+     "why": "M.P. 203.03: \"If the extrication requires specialized equipment (i.e., wreckers, cranes, cutting torches), these must be requested through Command.\"",
+     "opts": [
+      "Request them through Command",
+      "Extrication calls Dispatch directly",
+      "Request them from Resource Sector",
+      "Transportation arranges them"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "Per M.P. 203.03, how should communications within the Extrication Sector be handled?",
+     "a": "Face-to-face, with company officers using messengers to relay information to the sector officer.",
+     "why": "M.P. 203.03: \"Face-to-face communications should be used within the sector. Company officers should use messengers to relay information to the sector officer.\"",
+     "opts": [
+      "Face-to-face, with messengers to the sector officer",
+      "On the Transportation tactical channel",
+      "Over Med-9 through the Dispatch Center",
+      "Through Command on the main fireground channel"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "Per M.P. 203.03, where should most ALS personnel at an MCI be assigned?",
+     "a": "To the Treatment Sector (with some paramedics in Extrication for extended extrications).",
+     "why": "M.P. 203.03: \"Most ALS personnel should be assigned to the Treatment Sector,\" though some may go to Extrication for critical patients in extended extrication.",
+     "opts": [
+      "Treatment Sector",
+      "Extrication Sector",
+      "Triage Sector",
+      "Transportation Sector"
+     ],
+     "src": "M.P. 203.03"
+    },
+    {
+     "q": "Per M.P. 203.04, during major incidents what is the initial staffing objective for the Treatment Sector?",
+     "a": "One company per four patients (one rescuer per patient).",
+     "why": "M.P. 203.04: Treatment typically needs the heaviest commitment; \"one company per four (4) patients should be the initial objective (one rescuer per patient).\"",
+     "opts": [
+      "One company per 4 patients",
+      "One company per 5 patients",
+      "One company per 2 patients",
+      "One company per 10 patients"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "Per M.P. 203.04, one salvage cover provides working room for up to how many patients?",
+     "a": "Three patients.",
+     "why": "M.P. 203.04: \"One salvage cover provides ample working room for up to three patients.\"",
+     "opts": [
+      "Three",
+      "Two",
+      "Four",
+      "Five"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "You're setting up a treatment area. Per M.P. 203.04, where are the first-arriving patients placed?",
+     "a": "Near the exit point, filling from the exit toward the entrance.",
+     "why": "M.P. 203.04: \"First arriving patients should be placed near the exit point. Rescuers should first fill from exit towards the entrance\" so no one steps over patients.",
+     "opts": [
+      "Near the exit, filling toward the entrance",
+      "Near the entrance, filling toward the exit",
+      "In the center, filling outward to the edges",
+      "Along one side, in order of arrival"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "A patient who was never triaged walks up to the treatment area. Per M.P. 203.04, what happens?",
+     "a": "They are triaged and tagged at the entrance, and the Treatment officer sends Command a Triage Update.",
+     "why": "M.P. 203.04: \"Non-triaged patients arriving at the treatment area must be triaged and tagged at the entrance,\" and the Treatment officer forwards a \"Triage Update\" to Command.",
+     "opts": [
+      "Triage and tag at the entrance; send a Triage Update",
+      "Send them back out to the Triage Sector officer to be tagged",
+      "Place them in DELAYED until a paramedic can reassess them",
+      "Direct them to the MINOR Assembly Area without tagging"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "Per M.P. 203.04, where will ALS treatment primarily be given?",
+     "a": "In the IMMEDIATE treatment area.",
+     "why": "M.P. 203.04: \"ALS treatment will be given primarily in the 'IMMEDIATE' treatment area,\" with mostly BLS personnel in the DELAYED area.",
+     "opts": [
+      "IMMEDIATE treatment area",
+      "DELAYED treatment area",
+      "Ambulance loading area",
+      "MINOR Assembly Area"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "Per M.P. 203.04, when should extended on-scene treatment be considered?",
+     "a": "Only when immediate transportation is not available.",
+     "why": "M.P. 203.04: \"The only time extended treatment should be considered is when immediate transportation is not available\"; otherwise transport takes priority.",
+     "opts": [
+      "Only when transport isn't immediately available",
+      "For every IMMEDIATE patient before loading",
+      "When the receiving hospital requests stabilization",
+      "Whenever enough ALS personnel are on scene"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "Patients will be treated in place. Per M.P. 203.04, what's the goal resource assignment for each patient?",
+     "a": "One ALS or BLS company and one Rescue per patient, resources permitting.",
+     "why": "M.P. 203.04: For treatment in place, \"The goal will be to assign one ALS or BLS company and one Rescue to each patient, resources permitting.\"",
+     "opts": [
+      "One ALS or BLS company and one Rescue",
+      "One ALS company and two Rescues",
+      "Two companies and one Rescue",
+      "One Rescue with no company assigned"
+     ],
+     "src": "M.P. 203.04"
+    },
+    {
+     "q": "Per M.P. 203.05, rescues are brought from off-site staging into the patient loading area how many at a time?",
+     "a": "No more than two at a time.",
+     "why": "M.P. 203.05: \"Rescues should be staged off site and brought in to the loading area as needed, no more than two at a time.\"",
+     "opts": [
+      "No more than two",
+      "No more than three",
+      "One at a time",
+      "No more than four"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "Per M.P. 203.05, how does the Transportation Sector determine hospital availability?",
+     "a": "By contacting Dispatch on Med-9.",
+     "why": "M.P. 203.05: Transportation will \"Determine hospital availability status by contacting Dispatch on Med-9.\"",
+     "opts": [
+      "Through Dispatch on Med-9",
+      "By phoning each hospital directly",
+      "Through the Medical Branch Director",
+      "From rescue crews' courtesy calls"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "Per M.P. 203.05, where is it generally preferred to send MINOR patients?",
+     "a": "\"Leap-frog\" them to distant hospitals so DELAYED patients get shorter trips to closer facilities.",
+     "why": "M.P. 203.05: \"it is preferred to 'leap-frog' MINOR patients to distant hospitals to minimize transport times for DELAYED patients to closer facilities.\"",
+     "opts": [
+      "To distant hospitals, keeping closer ones for DELAYED",
+      "To the closest hospitals, since they load fastest",
+      "To urgent care centers only, never to hospitals",
+      "To the same hospital as the IMMEDIATE patients"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "Per M.P. 203.05, how should helicopters be used at a multi-patient incident?",
+     "a": "To take critical patients to more distant facilities, letting closer hospitals take ground patients.",
+     "why": "M.P. 203.05: \"Helicopters should be used to transport critical patients to more distance medical facilities, allowing closer hospitals to receive patients by ground ambulance.\"",
+     "opts": [
+      "Critical patients to more distant facilities",
+      "MINOR patients, to free up ground rescues",
+      "Any patient bound for a Level I trauma center",
+      "Only patients ground units cannot reach"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "A patient is about to be loaded into a rescue. Per M.P. 203.05, what does the Transportation Sector Officer do with the triage tag?",
+     "a": "Remove the transportation tracking slip and write the transport unit and hospital on it.",
+     "why": "M.P. 203.05: The officer \"will remove a transportation tracking slip from each triage tag and write in the transport unit and hospital destination,\" keeping the slips for accountability.",
+     "opts": [
+      "Pull the tracking slip; write unit and hospital on it",
+      "Remove the whole tag and hand it to Command",
+      "Leave it on and radio the tag number to Dispatch",
+      "Give the tracking slip to the transporting crew"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "Per M.P. 203.05, how should ALS crews transporting from an MCI handle medical direction?",
+     "a": "Operate under Standing Orders and not patch for Medical Direction unless necessary.",
+     "why": "M.P. 203.05: \"ALS personnel should operate under Standing Orders and not patch for Medical Direction unless necessary.\"",
+     "opts": [
+      "Standing Orders; patch only if necessary",
+      "Patch for Medical Direction on every IMMEDIATE",
+      "Get Medical Direction through Transportation",
+      "Patch to the hospital before leaving the scene"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "Helicopters will be used at a multi-patient incident. Per M.P. 203.05, what is the minimum assignment to the landing zone?",
+     "a": "At least one Engine Company, with an LZ Sector designated.",
+     "why": "M.P. 203.05: Transportation should establish an LZ a safe distance from the scene, \"assign at least one Engine Company to the LZ and designate an 'LZ Sector.'\"",
+     "opts": [
+      "At least one Engine Company",
+      "At least one Ladder Company",
+      "Two Rescue companies",
+      "A Battalion Chief alone"
+     ],
+     "src": "M.P. 203.05"
+    },
+    {
+     "q": "With multiple treatment areas, per M.P. 203.05A where is the Transportation Branch Director stationed?",
+     "a": "At a central location, preferably at or close to the Command Post.",
+     "why": "M.P. 203.05A: \"The Transportation Branch Director will be stationed at a central location, preferably at or close to the Command Post.\"",
+     "opts": [
+      "Centrally, at or near the Command Post",
+      "At the busiest treatment area",
+      "At the Level II Staging area",
+      "At the helicopter landing zone"
+     ],
+     "src": "M.P. 203.05A"
+    },
+    {
+     "q": "Per M.P. 203.05A, each sector under the Transportation Branch (East/West Transportation, Staging, LZ) requires at least what?",
+     "a": "At least one full company.",
+     "why": "M.P. 203.05A: Each Sector (e.g., \"East Transportation Sector,\" \"Staging,\" \"LZ\") \"will require at least one full company.\"",
+     "opts": [
+      "One full company",
+      "Two full companies",
+      "One officer and a messenger",
+      "One rescue unit"
+     ],
+     "src": "M.P. 203.05A"
+    },
+    {
+     "q": "Per M.P. 203.05A, what radio arrangement should the Transportation Branch use?",
+     "a": "A separate radio channel assigned exclusively to the Transportation Branch.",
+     "why": "M.P. 203.05A: \"a separate radio channel should be assigned exclusively to the Transportation Branch\"; the Branch Director handles all communications with Dispatch.",
+     "opts": [
+      "Its own exclusive channel",
+      "Med-9, shared with all sectors",
+      "The fireground command channel",
+      "Face-to-face only, no radio"
+     ],
+     "src": "M.P. 203.05A"
+    },
+    {
+     "q": "At a multi-site MCI, a rescue at East Transportation is ready to load. Per M.P. 203.05A, who decides the destination hospital?",
+     "a": "The Transportation Branch Director.",
+     "why": "M.P. 203.05A: The Sector officer reports patients and severity to the Branch, and \"The Branch Director will then advise the Transportation Sector officer of the destination hospital.\"",
+     "opts": [
+      "The Transportation Branch Director",
+      "The East Transportation Sector officer",
+      "The rescue crew",
+      "The Treatment Sector officer"
+     ],
+     "src": "M.P. 203.05A"
+    },
+    {
+     "q": "Per M.P. 203.06, a Medical Supply Sector shall be established on which incidents?",
+     "a": "All 3-Alarm Medical (or greater) incidents, using at least one fire company.",
+     "why": "M.P. 203.06: \"a Medical Supply Sector shall be established during all 3-Alarm Medical (or greater) major medical incidents using a minimum of one fire company.\"",
+     "opts": [
+      "3-Alarm Medical or greater",
+      "2-Alarm Medical or greater",
+      "1st Alarm Medical or greater",
+      "Any incident over 10 patients"
+     ],
+     "src": "M.P. 203.06"
+    },
+    {
+     "q": "Per M.P. 203.06, which units does Dispatch special call for the Medical Supply Sector?",
+     "a": "Medical Support 19 from the airport and an EMS supply truck from Resource Management.",
+     "why": "M.P. 203.06: \"Dispatch will special call Medical Support 19 from the airport and an EMS supply truck from Resource Management to the scene.\"",
+     "opts": [
+      "MS19 from the airport and an EMS supply truck",
+      "Two Rescues and a Battalion Chief",
+      "A ladder company and the Rehab unit",
+      "A Hazmat unit and an EMS supply truck"
+     ],
+     "src": "M.P. 203.06"
+    },
+    {
+     "q": "Per M.P. 203.06, at an incident with fewer than 20 patients, who does the Medical Supply Sector report to?",
+     "a": "Command.",
+     "why": "M.P. 203.06: \"At incidents with less than 20 patients, Medical Supply Sector will report to Command\"; at larger MCIs it reports to Medical Branch or Logistics.",
+     "opts": [
+      "Command",
+      "Medical Branch",
+      "Logistics Section",
+      "Treatment Sector"
+     ],
+     "src": "M.P. 203.06"
+    },
+    {
+     "q": "Per M.P. 203.06A, which section is the Medical Safety Officer assigned to, and in which sector does the MSO work?",
+     "a": "The Safety Section, working in the Rehab Sector.",
+     "why": "M.P. 203.06A: \"The MSO would be tasked through the Safety Section and work in the Rehab Sector,\" partnered with a Command Officer.",
+     "opts": [
+      "Safety Section; Rehab Sector",
+      "Operations Section; Treatment Sector",
+      "Logistics Section; Medical Supply",
+      "Planning Section; Command Post"
+     ],
+     "src": "M.P. 203.06A"
+    },
+    {
+     "q": "Per M.P. 203.06A, who fills the Medical Safety Officer position?",
+     "a": "A physician/licensed medical practitioner.",
+     "why": "M.P. 203.06A: The MSO places \"a licensed medical practitioner as part of the strategic level\"; requirements list physician/licensed medical professional with firefighter occupational medicine.",
+     "opts": [
+      "A licensed medical practitioner",
+      "A senior paramedic captain",
+      "The incident Safety Officer",
+      "A Fire Investigator with EMT"
+     ],
+     "src": "M.P. 203.06A"
+    },
+    {
+     "q": "At a multiple-casualty WMD incident, per M.P. 203.06A the MSO may function as what, assigned to Operations?",
+     "a": "Medical Triage Officer.",
+     "why": "M.P. 203.06A: If needed, the MSO would act as a medical triage officer at multiple-casualty WMD incidents, \"assigned to the Operations Section.\"",
+     "opts": [
+      "Medical Triage Officer",
+      "Medical Branch Director",
+      "Transportation Branch Director",
+      "Treatment Sector Officer"
+     ],
+     "src": "M.P. 203.06A"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "M.P. 202.12D (Positive Pressure Ventilation) has no usable text: the file only says \"This SOP is currently out for review.\" No cards written.",
+  "M.P. 203.01 (03/00-R) defines a multi-patient incident as \"fewer than twenty (25) patients\" (word and numeral conflict). No card tests that number; MCI (25-100) and disaster (100+) are tested.",
+  "M.P. 203.01, 203.03 and 203.04 (all 03/00) use IMMEDIATE/DELAYED/MINOR categories, S.T.A.R.T./Central Arizona triage and triage tags, while M.P. 203.02 (05/26-R) uses RAMP with Immediate/Delayed/Dead-Dying/INA categories and triage tape. The older MPs look outdated relative to 203.02; cards cite each MP as written.",
+  "M.P. 203.02 page 3 is titled \"RAMP Triage\" but has no extractable text (probably a flowchart image), so the RAMP algorithm itself isn't carded.",
+  "M.P. 203.01 says the Triage Report is radioed \"to Alarm\" in one place and to Command elsewhere; 203.02 says to Command.",
+  "M.P. 203.06A (10/04-N) is written as a proposal (\"would respond\", \"would be assigned\"); cards treat its stated assignments as policy.",
+  "M.P. 202.12 and 202.12B both cover securing the scene (plastic over vent holes/windows, remove glass shards); carded only once each on other points to avoid duplicates."
+ ]
+}
