@@ -1,0 +1,117 @@
+                                 PHOENIX FIRE DEPARTMENT
+                                   Volume 1 – Management Procedures
+
+         VOLUME 1 TEMPLATE AND UPDATE PROCEDURE
+
+ M.P. 100.01                                              Date Revised: 09/2024
+ This policy is for internal use only and does not expand an employee’s legal duty or civil liability in any way.
+ This policy should not be construed as creating a duty to act or a higher duty of care with respect to third-party
+ civil claims against employees, the Phoenix Fire Department (PFD) or the City of Phoenix. A violation of this
+ policy, if proven, can only form the basis for non-judicial administrative action by the employer in accordance
+ with the laws and rules governing employee discipline.
+
+ Related Policies: 105.16 Labor/Management Team Procedure
+
+
+PURPOSE
+This M.P. has two major purposes.
+    1. To serve as an example template to direct all members seeking to make revisions to
+       Volume One Management Procedures.
+    2. To explain the process in which a Volume One Management Procedure can be revised,
+       deleted, or created.
+
+(This section titled PURPOSE succinctly describes why this procedure exists and how it
+relates to the Phoenix Fire Department members that it affects.)
+This is a general template that you can use to create a new Volume 1 M.P. and revise old ones.
+Our goal is to have all M.P.s updated within 5 years.
+
+DEFINITIONS
+(Any terminology that is not ordinarily used or needs to be clarified due to the nature of this
+procedure will be clarified here.)
+M.P. – Management Procedure
+Volume 1 subcommittee – This RBO committee is tasked with notifying proper division heads
+that particular Volume 1 M.P.s are out-of-date, need revision or deletion.
+OneDrive – The Microsoft OneDrive is accessible to all City of Phoenix Employees through
+work computers and in most occasions the employee’s personal computer, through secure login.
+
+TEMPLATE
+In general, Times New Roman is the preferred Font, Bold/Underline size 14 for
+Headings and Bold/Underline size 12 for Subheadings and size 12 for Normal Body.
+PROCEDURE
+(This section is usually longer and can contain multiple smaller sections that help our members
+understand the procedure to its fullest.)
+During Revisions
+It is recommended that you utilize the Microsoft OneDrive to make revisions and build new
+Volume 1 procedures. This is most helpful to allow multiple people to access the working
+documents, make comments and track changes.
+OneDrive
+You can begin to share and make changes in this working document through the online
+OneDrive application accessible through Firepoint or https://cityofphoenix-my.sharepoint.com/.
+Please share with anyone you think needs to get eyes on this document, including the Volume
+One Subcommittee. During the sharing process you can choose to only allow persons to make
+comments or allow them to also make changes.
+Another preferred option is to open this live working document in your own Desktop App by
+clicking on the editing icon in the top ribbon and then clicking Open Desktop App. This will be a
+more accurate version of the format than the website version. See Picture Below.
+
+
+
+
+Track Changes
+The easiest way to track changes is to utilize the Review tab at the top of the Microsoft Word
+Ribbon. Then click ‘Track Changes’ and make sure ‘For Everyone’ is selected. You can also see
+the AutoSave feature in the top left corner is selected to ‘On’ already because you opened this
+through the online application. If this says ‘Off’ please be aware you not editing the appropriate
+file that others can see. See Picture Below.
+The Track changes options will allow active changes to automatically show in red ink and
+deletions to show as crossed out. After the changes have been made, it is also easy for Volume
+One committee to finalize the product by ‘accepting all changes’ once the HR Committee
+approves the MP.
+You can also make comments instead of making changes and assign these to others by
+mentioning the person in your comment using ‘@(their name)’ which should automatically pull
+up City of Phoenix employees as quick select options.
+
+
+
+
+Submit to Volume One Subcommittee
+After all appropriate divisions have had eyes on the final product and have approved the changes,
+a DRAFT copy needs to be shared with Volume One subcommittee. This can be done through
+the Microsoft OneDrive or Teams applications or shared directly with the Co-Chairs. Please keep
+the subcommittee chairs or subcommittee member updated with progress so that your M.P. can
+be added to the upcoming meeting agenda.
+At Volume One subcommittee
+The subcommittee will review the M.P. and the changes made. Anyone attending the meeting,
+which is publicly advertised, will be able to have a chance to ask questions and make sure the
+concerns are addressed and that all appropriate eyes have seen the M.P. revisions prior to final
+approval. The Chairs of the Volume One Subcommittee will forward the M.P. to the HR
+Committee for final approval.
+The Volume 1 Committee will obtain a legal review from the Assistant City Attorney
+assigned to PFD, who may also determine that review by the Assistant Attorney assigned to
+PFD for Human Resource matters for M.P.’s that are personnel or HR related is needed.
+HR Committee
+The HR Committee will review the final product, revisions made and/or new requests for
+addition or deletion of M.P.s for final approval. It will be imperative that the HR Committee can
+easily distinguish the old version from the new version with revisions highlighted. In some cases,
+the Volume One subcommittee will be requesting simple date revisions for the M.P.s in order to
+achieve the department’s goal of maintaining all M.P.s to be revised within the past 5 years. This
+is the last opportunity for both fire administration and Local 493 representatives to suggest
+changes and/or confirm with others before final approval.
+Once the M.P. is finalized and approved, the HR Committee will notify Volume One
+Subcommittee of official status, and the Volume One Subcommittee will manage the publishing
+process.
+Publication
+Once the Volume 1 MP is approved by the HR committee there are multiple steps to achieve
+final publication:
+   1. Update the FirePoint Publications Page, including the Volume 1 Index.
+      (https://cityofphoenix.sharepoint.com/sites/fire/Publications/Pages/Volume1.aspx)
+          a. This location is considered the master location in case of discrepancies
+   2. Update the public access City of Phoenix website
+      (https://www.phoenix.gov/fire/publications/fire-management-procedures-volume-i)
+   3. A hard copy should be printed and kept in the Official Volume 1 Manual in the HR
+      Division Chiefs Office.
+   4. Archive old MP with Public Affairs and Tech Services internal files.
+   5. Volume 1 Committees OneDrive folders and Excel sheets need to be updated to track
+      progress.
+   6. Memo will be sent to membership with link to updated MP and effective date.
+

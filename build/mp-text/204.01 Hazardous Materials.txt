@@ -1,0 +1,265 @@
+                              PHOENIX REGIONAL
+                        STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                        M.P. 204.01         05/25-R       Page 1 of 7
+
+PURPOSE
+The response to Hazardous Materials Incidents by the Phoenix Fire Department and the
+regional partners will continually adapt as hazardous materials are ever changing.
+Firefighters and hazardous materials technicians must follow our Standard Operating
+Procedures (SOPs) and utilize the Strategic Decision-Making Model. Each of these
+references assist in developing a response and guides decisions and actions for desired
+outcomes.
+
+The Strategic-Decision-Making Model or SDM (reference Command Procedures; MP
+204.01) must be applied on every type of incident, with Hazardous Materials incidents
+being no exception. The SDM begins with a size-up of the critical factors that are present
+on these types of incidents that may include:
+
+   •   Life safety
+   •   Duration of exposure
+   •   Physical State and properties of the chemical (s) involved
+   •   Size or potential size of the release
+   •   Containment systems already in place
+
+These factors, like any other incident, drive our Risk Management Plan (Risk Management
+and Safety; M.P. 201.0) and the strategy used to accomplish the tactical objectives.
+
+This procedure is specifically applicable to hazardous materials incidents, but it does not
+reduce the need for appropriate safety precautions at every incident. When responding to
+and operating at a hazmat incident, firefighters and hazmat technician’s actions and the
+level of their PPE must provide life safety and allow them to operate in the hazard zone to
+control the incident. Proper research and planning on the front end of these incidents is
+imperative to the safety of the crews and to mitigate the hazard present.
+
+OSHA defines a hazardous material as any "substance or chemical which is hazardous to
+people's health or is physically hazardous." Hazardous Materials incidents include
+explosives, gases, flammable liquids, flammable solids, oxidizers, poisons and toxins,
+radioactive material, corrosives, or any other miscellaneous hazards.
+
+RESPONSIBILITIES
+Dispatch
+The Dispatch Center will attempt to obtain any and all information from the person
+reporting a hazardous materials incident. The information should, if possible, include
+material name and/or type, placard information, amount and size of container(s),
+problem (leak, spill, fire, etc.) and dangerous properties of the materials AS WELL AS
+THE NUMBER OF PERSONS INJURED OR EXPOSED. The incident taker should remain
+on the telephone with the caller to gain additional information after entering the call for
+dispatch.
+                              PHOENIX REGIONAL
+                        STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                        M.P. 204.01         05/25-R       Page 2 of 7
+
+Any additional information shall be relayed to responding units after dispatch. THIS
+SHOULD INCLUDE PERTINENT INFORMATION THAT COULD AFFECT THE SAFETY
+OF THE RESPONDING CREWS.
+
+If the call comes from a person or a responsible party (RP) with particular knowledge of
+the hazardous material, that person SHOULD BE INSTRUCTED TO meet and direct the
+arriving units. Dispatch shall relay that person's location and level of knowledge to
+responding units.
+
+The Dispatch Center will dispatch the appropriate Hazardous Materials Assignment to all
+reported hazardous materials incidents.
+
+First Arriving Unit
+The first arriving unit will establish Command and begin a size-up. The first unit will take
+a pessimistic approach and ensure the safety of their crew members. Never spot the
+apparatus near a potential blast zone, over a storm drain, downwind, or downhill of a
+hazardous material incident.
+
+When approaching, slow down or stop to assess any visible activity taking place.
+Evaluate effects of wind, topography and location of the situation. Route any other
+responding companies away from any hazards.
+
+Command should consider establishing level II staging if necessary. Staged companies
+must be in a safe location, upwind, uphill, and outside of any potential blast zone.
+
+THE DEPARTMENT OF TRANSPORTATION EMERGENCY RESPONSE GUIDE (DOT ERG)
+SHALL BE USED BY THE FIRST ARRIVING COMPANIES AS A RESOURCE FOR
+SPOTTING APPARATUS SAFE DISTANCE FROM THE INCIDENT. Whenever possible,
+research and or observe local weather conditions and communicate with the first
+arriving hazmat crews or C957 to determine the safest approach to the scene.
+
+As the incident escalates, the RESEARCH TEAM within HAZARD SECTOR will provide
+recommendations for the incident response based on the information gathered.
+
+Size-Up
+Command must make a careful size-up before making a commitment. It may be
+necessary to take immediate action to make a rescue or evacuate an area. This action is
+based upon a critical factor (life hazard) that is determined in the size-up, which occurs on
+the front end of the Strategic Decision-Making Model (SDM). The SDM must be applied
+throughout the entire incident.
+
+Firefighters on scene must use the proper personal protective equipment (PPE) in these
+situations for protection from the hazardous material(s) involved. DEPENDING ON THE
+HAZARDOUS MATERIAL RELEASED, TURNOUTS AND AN SCBA MAY NOT PROTECT
+THE MEMBER.
+                              PHOENIX REGIONAL
+                        STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                       M.P. 204.01         05/25-R       Page 3 of 7
+
+Communication between the first arriving crews and the first arriving Hazmat crew, or
+C957, must be made prior to committing resources into the hot zone. This communication
+contributes to an accurate size-up that identifies the nature and severity of the immediate
+problem and gathers sufficient information to formulate an Incident Action Plan.
+Command must identify a hazardous area that is based on the potential danger of the
+incident that takes into account the materials involved, time of day, weather conditions,
+location of the incident and degree of risk to unprotected personnel. Again, immediate
+action should be taken to evacuate and/or rescue persons in critical danger, while also
+providing for safety of firefighters and hazmat personnel on scene.
+
+The primary objective is to identify the type of materials involved in a situation, and the
+hazards present, before formulating a plan of action. Look for any labels and placards that
+include the NFPA 704 placard, DOT placard and UN numbers, shipping papers, or any
+other information to help determine the type and quantity of the hazardous material
+released. If a Responsible Party (RP) is near the scene, keep them within reach. Any
+pertinent information shall be communicated over the radio to assist the hazardous
+response teams enroute.
+
+       Example: “Engine 1 has located a NFPA 704 marking with a blue 4, red 0, yellow 0,
+       and the letters “O” “X” in the white”.
+
+       Example: “Engine 1 has a liquid leaking from a hole in the side of a tanker. The
+       placard on the tanker is red, reads 1203, and has a 3 at the bottom of the placard.”
+
+       Example: “Engine 1 has met with the RP on scene and states this is an ammonia
+       leak, and the shut-off valve was closed prior to evacuating the building”
+                               PHOENIX REGIONAL
+                         STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                         M.P. 204.01         05/25-R     Page 4 of 7
+
+
+
+
+                              NFPA 704 MARKING PLACARD
+
+
+
+Blue = Health Hazard                              Yellow = Instability
+4 - Deadly                                        4. May detonate
+3 - Extreme Danger                                3. Shock and heat may detonate
+2 - Hazardous                                     2. Violent chemical change w/ high temp
+1 - Slightly Hazardous                            1. Unstable if heated
+0 - Normal Material                               0. Stable
+
+Red = Flammability Hazard                         White = Specific Hazard
+Flash Points                                      OX = oxidizer
+4. Below 73°F (boiling point below 100°F )        ACID = acid
+3. Below 100°F                                    ALK = alkali
+2. 100°F to 200°F                                 COR = corrosive
+1. Above 200°F                                    W = use no water
+0. Will Not Burn
+                              PHOENIX REGIONAL
+                        STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                       M.P. 204.01         05/25-R       Page 5 of 7
+
+
+                        DOT Placard Examples
+
+
+
+
+Action Plan
+
+Based on the initial size-up and any information available, Command will formulate an
+action plan to deal with the situation.
+
+The Action Plan Must Provide For:
+   1. Safety of all fire personnel
+   2. Evacuation of endangered area, if necessary
+   3. Control of the situation
+   4. Stabilization of hazardous materials, and/or
+   5. Disposal or removal of hazardous materials
+
+Most hazardous materials are intended to be maintained in a safe condition for handling
+and use through confinement in a container or protective system. The emergency is
+usually related to the material escaping from the container or system, creating a hazard -
+once released. The strategic plan must include a method to control the flow or release.
+This may involve getting the hazardous material back into a safe container, neutralizing
+it, allowing it to dissipate safely, or coordinating its proper disposal.
+
+The specific action plan must identify the method of hazard control and identify the
+necessary resources to accomplish this goal.
+                               PHOENIX REGIONAL
+                         STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                         M.P. 204.01      05/25-R       Page 6 of 7
+
+Avoid committing personnel and equipment prematurely or "experimenting" with
+techniques and tactics. Many times, it is necessary to evacuate and wait for special
+equipment or TECHNICAL help from the Hazardous Materials Teams responding to the
+scene.
+
+As a general policy, the Hazardous Materials Team will respond to any situation where
+a private contractor is required to clean up hazardous materials. In these situations,
+ensure Car 99 is responding and is used as a resource.
+
+
+Control of Hazardous Area
+A hazardous material incident has two INITIAL zones associated with the scene, similar to
+a Fire - the HOT ZONE and the LIMITED ACCESS ZONE.
+
+
+Hot Zone (HZ)
+The Hot Zone is the area in which personnel are potentially in immediate danger from the
+hazardous conditions. This is established by Command, continuously evaluated by
+Hazard Sector, and controlled by the Fire Department. Access to this area will be rigidly
+controlled and only personnel with proper protective equipment, radios, and an
+assignment will enter. All companies will remain intact outside the Hot Zone (HZ) until
+assigned. A Lobby Control Sector or Team will be assigned to monitor entry and exit of
+all personnel from the HZ. The HZ should be geographically described to all responding
+units, if possible and identified by white/red hazard zone tape.
+
+   1. Establish a safe perimeter around the hazardous area and identify with Hazard
+      Zone tape.
+   2. Request adequate assistance to maintain the perimeter.
+   3. Identify an entrance/exit point and inform Command of its location.
+   4. Coordinate with Hazard Sector to identify the required level of protection for
+      personnel operating in the Hot Zone.
+   5. Collect/return accountability PASSPORTS of all companies entering/leaving the
+
+      controlled area.
+
+Restriction of personnel access into the HZ includes not only Fire Department personnel,
+but any others who may wish to enter the area (Police, press, employees, tow truck
+drivers, ambulance personnel, etc.). Command is responsible for everyone's safety.
+                              PHOENIX REGIONAL
+                        STANDARD OPERATING PROCEDURES
+
+                             HAZARDOUS MATERIALS
+                        M.P. 204.01        05/25-R       Page 7 of 7
+
+Limited Access Zone (LAZ)
+The LAZ is the larger area surrounding the HZ in which a lesser degree of risk to
+personnel exists. All civilians should be removed from this area. The limits of this zone
+will be enforced by the Police Department based on distances and directions established
+in consultation with Command and Hazard Sector. The area to be evacuated depends on
+the nature and the amount of the material and type of risk it presents to unprotected
+personnel (toxic, explosive, etc.).
+
+In some cases, it is necessary to completely evacuate a radius around a site for a certain
+distance (i.e., potential explosion).
+
+In other cases, it may be advisable to evacuate a path downwind where toxic or
+flammable vapors may be carried (and control ignition sources in case of
+flammable vapors).
+
+       NOTE: When toxic or irritant vapors are being carried downwind, it may be most
+       effective to shelter in place, keeping everyone indoors with windows and doors
+       closed to prevent contact with the material instead of evacuating the area. In these
+       cases, companies will be assigned to patrol the area assisting citizens in shutting
+       down ventilation systems and evacuating persons with susceptibility to respiratory
+       problems.
+       Reference: M.P. 201.05E Evacuation Sector
+

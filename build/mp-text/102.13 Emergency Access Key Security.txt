@@ -1,0 +1,62 @@
+                               PHOENIX FIRE DEPARTMENT
+                               VOLUME 1 – Operations Manual
+                          EMERGENCY ACCESS KEY SECURITY
+                                        MP 102.13 10/20-R
+PURPOSE:
+The purpose of this procedure is to establish a standardized protocol for securing Knox keys; this
+includes the eKey, High Security, Low Security, Supra, and FDC Keys on emergency response
+apparatus.
+GENERAL:
+With the presence of Emergency Access Keys that provide access to businesses and multi-
+residency communities throughout the City of Phoenix, it is necessary to maintain the security of
+these keys.
+The Phoenix Fire Department Fire Prevention Division is the sole distributor of Emergency
+Access Business Keys. The Low Security Keys are managed by both the Phoenix Fire
+Department and the Phoenix Police Department. All keys must be secured while not in use.
+EMERGENCY ACCESS KEYS:
+   1. eKey – Provide access to businesses and/residents. Can only be used on an Electronic
+      Key Core.
+   2. High Security (Business) Keys – Provide access to businesses and/or residents.
+   3. Low Security (Gate) Keys – Are used to open and close gates.
+   4. Supra Keys – is an older key system that is used for gates and gaining access to
+      businesses and/or residents. This key system is being phased out and is usually located on
+      older buildings or gates.
+   5. Knox FDC Wrenches – Kept in location designated by the Company Officer. These keys
+      are used to unlock standpipes connected to the businesses and/or residents.
+Tethering – All Emergency Access Keys, with the exception of the FDC Wrenches, will be
+secured together with an Unit ID and Fire Prevention Contact Information tag via a cable tether
+with serial number.
+KEY SECURITY ON APPARATUS:
+Each emergency response apparatus has been equipped with a Knox KeySecure device used to
+secure the Emergency Access Keys. For the security of the customers who have an Emergency
+Access Box installed, it is necessary for the Key to be secured in this device at all times unless it
+is in use. A security access number (employee ID number) will be used to remove the KNOX
+Key from the KeySecure device. Once the Key is returned to the apparatus the Key will be
+immediately placed into the KeySecure device and moved into the locked position. The
+Company Officer must account for the Emergency Access Keys at all times.
+RESPONSIBILITES:
+Accountability of Emergency Access Keys is responsibility of the Company Officer in charge of
+the assigned emergency response apparatus (Engine, Ladder, Ladder Tender, Rescue, BC). This
+individual may be a Command Officer, Captain, “Out-of-Class” or “Move-up” Captain. The
+station Captain will also be responsible for the accountability of any Emergency Access Keys
+assigned to a Full or Part-Time Rescue or other single assignment apparatus (Utilities, Water
+Tanker/Tender, Brush Truck, Support vehicle, etc.) housed at the station. Verification that the
+Emergency Access Keys are secured in the KeySecure or Supra Device must be done at shift
+change and any other time in which the Captain or crew is relieved, including Full and Part-Time
+Rescue Crews.
+REPLACEMENT OF LOST, STOLEN, OR DAMAGED KEYS:
+   1. If a Key is noted to be missing at any point, (i.e. shift change) the BC must be notified
+      immediately.
+   2. A police report must be filed with the Phoenix Police Department and the subsequent PD
+      report number, Officer’s name, and badge number must be submitted with on the PFD
+      Equipment Replacement System Fulfillment Report (ERR).
+   3. An ERR must be submitted, ensuring all appropriate approvals have been obtained (First-
+      Level Supervisory, Second-Level Supervisory, District Commander, Homeland Security,
+      and Resource) prior to requesting a replacement key.
+   4. Once the ERR has been approved by the required personnel, Resource will notify Fire
+      Prevention of the request. Fire Prevention must have a completed ERR prior to the
+      distribution of a replacement key. Replacement keys will require notification of the Fire
+      Prevention Deputy Chief.
+If replacement keys are needed afterhours, please use the contact information on the Fire
+Prevention Contact Information tag located on the Knox Tether.
+

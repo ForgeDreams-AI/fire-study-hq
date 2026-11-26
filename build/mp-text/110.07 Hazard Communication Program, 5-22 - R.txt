@@ -1,0 +1,306 @@
+                              PHOENIX FIRE DEPARTMENT
+                                 Volume 1 – Management Procedures
+
+                  HAZARD COMMUNICATION PROGRAM
+ MP 110.07                                          Date Revised: 5/22
+ This policy is for internal use only and does not expand an employee’s legal duty or civil liability in any
+ way. This policy should not be construed as creating duty to act or a higher duty of care, with respect to
+ third party civil claims against employees or the Phoenix Fire Department (PFD). A violation of this
+ policy, if proven, can only form the basis of a complaint by the PFD for non-judicial administrative
+ action in accordance with the laws governing employee discipline.
+
+
+PURPOSE
+The Safety and Prevention Section is responsible for the oversight and management of the
+Phoenix Fire Department’s Hazard Communication Program. In compliance with the OSHA
+Hazard Communication Standard 29 CFR 1910.1200, the Phoenix Fire Department has
+established a standard minimum requirement for the control of hazardous substances and
+compliance with the Globally Harmonized System (GHS) of classification and labeling of
+chemicals adopted on March 26, 2012, by OSHA.
+
+SCOPE
+This program applies to all Phoenix Fire Stations and work sites where employees may be
+exposed to hazardous substances under normal working conditions or during emergency
+situations
+
+POLICY
+The City of Phoenix Fire Department will maintain an effective Hazard Communication Program
+in accordance with the Occupational Safety and Health Administration (OSHA) regulation 29
+CFR 1910.1200 and the City of Phoenix Administrative Regulation (A.R. 2.314).
+
+DEFINITIONS
+   •    Acute Effect: An adverse effect on a human body caused by exposure to a chemical or
+        physical agent, with symptoms developing rapidly.
+   •    Asphyxiant: A gas whose primary or most acute health affect is asphyxiation. There are
+        two classes of asphyxiants; simple asphyxiants, such as nitrogen or methane, which act
+        by replacing oxygen; and chemical asphyxiants, such as carbon monoxide, which cause
+        asphyxiation by preventing oxygen uptake at the cellular level.
+   •    Carcinogen: A substance or agent capable of producing cancer.
+   •    Ceiling Limit: An airborne concentration of a toxic substance in the work environment
+        that should never be exceeded.
+   •    Chemical: Any substance, or mixture of substance.
+
+
+
+                                                     1
+•   Chemical Manufacturer: an employer with a workplace where chemicals are produced for
+    use or distribution.
+•   Chronic effect: An adverse effect on a human or animal body, with symptoms, which
+    develop slowly over a long period of time of exposure to a chemical or physical agent.
+•   Container: Any bag, barrel, bottle, box, can cylinder, drum, reaction vessel, storage tank,
+    or the like that contains a hazardous chemical. Pipes or piping systems, and engines, fuel
+    tanks, or other operating system in a vehicle, or not considered to be containers.
+•   Corrosive: A substance that causes visible destruction or permanent changes in human
+    skin tissue at the site of contact.
+•   Decomposition: The breakdown of a chemical or substance into different parts or simpler
+    compounds. Decomposition can occur because of heat, chemical reaction, decay, etc.
+•   Employee: A worker who may be exposed to hazardous chemicals under normal
+    operating conditions or in foreseeable emergencies.
+•   Evaporation Rate: The ration of the time required to evaporate a measured volume of
+    liquid to the time required to evaporate the same volume of reference liquid under ideal
+    test conditions. The higher the ratio, the slower the evaporation rate.
+•   Exposure or exposed: That an employee is subjected in the course of employment to a
+    chemical that is a physical or health hazard and includes potential (e.g. accidental or
+    possible) exposure. "Subjected" in terms of health hazards includes any route of entry
+    (i.e. inhalation, ingestion, skin contact or absorption.)
+•   Flammable Liquid: Any liquid having a flash point below 100⁰F (37.8⁰C).
+•   Flash Point: The lowest temperature at which a liquid gives off enough vapor to form an
+    ignitable mixture with air and produce a flame when a source of ignition is present.
+•   Gas: A state of matter in which the material has a low density and viscosity, can expand
+    and contract greatly in response to changes in temperature and pressure, easily diffuses
+    into other gases, and readily and uniformly distributes itself throughout any container. A
+    gas can be changed into a liquid or solid state only by the combined effect of increased
+    pressure and decreased temperature.
+•   Hazard Statement: a statement assigned to a hazard class and category that describes the
+    nature of the hazard(s) of a chemical, including, where appropriate, the degree of hazard.
+•   Multi-employer workplaces: Employers who produce, use, or store hazardous chemicals
+    at a workplace in such a way that the employees of other employer(s) may be exposed
+    (for example, employees of a construction contractor working on-site).
+•   Oxidizer: A chemical that initiates or promotes combustion in other materials, thereby
+    causing fire either of itself or through the release of oxygen or other gases.
+•   Pictogram: a symbol used to convey specific information about the hazards of a chemical.
+    Each pictogram consists of a different symbol on a white background within a red square
+    frame set on a point (i.e. a red diamond).
+•   Precautionary Statement: a phrase that describes recommended measurers to be taken to
+    minimize or prevent adverse effects resulting from exposure to a hazardous chemical, or
+    improper storage or handling of a hazardous chemical.
+•   Product Identifier: the name of the number used for a hazardous chemical on a label or in
+    the Safety Data Sheet (SDS) that provides a unique means by which the user can identify
+    the chemical
+
+
+                                             2
+   •   Safety data sheet (SDS): Written or printed material concerning a hazardous chemical
+       that is prepared in accordance with paragraph (g) of 29 CFR 1910.1200.
+   •   Signal Words: a single word used to indicate the relative level of severity of hazard and
+       alert the reader to a potential hazard on the label. “Danger” is used for the more severe
+       hazards, while “warning” is used for the less severe hazards.
+
+RESPONSIBILITIES
+Safety and Prevention Section
+   •   Shall ensure all elements of this written program are in compliance with OSHA standard
+       29 CFR 1910.1200 and shall maintain, update and annually review this written program.
+   •   Shall ensure all employees receive training as required by this written program and in
+       compliance with 29 CFR 1910.1200.
+   •   Shall ensure appropriate PPE training is provided to all employees as required by this
+       written program and in compliance with 29 CFR 1910.1200.
+   •   Shall ensure the hazards of all chemicals used in the Fire Department are evaluated and
+       information concerning the hazards and safe handling procedures is provided to
+       employees.
+   •   Shall ensure an accurate Department wide chemical inventory is completed on an annual
+       basis.
+   •   Shall maintain all training records associated with the Hazard Communication Program.
+Management
+   •   Shall comply with all elements of this written program
+   •   Shall ensure that employees comply with all elements of this written program
+   •   Shall ensure all employees attend training as required by this written program and in
+       compliance with 29 CFR 1910.1200.
+Supervisor
+   •   Shall ensure workplace specific training is provided when employees are assigned to the
+       facility, precinct, or work site.
+   •   Shall ensure all containers of hazardous chemicals are labeled as required by this
+       standard and OSHA 1910.1200.
+   •   Shall ensure employees received and use appropriate Personal Protective Equipment
+       (PPE) based on the requirements of the Safety Data Sheet (SDS).
+   •   Shall ensure employees comply with this written program.
+   •   Shall review SDS for all chemicals with employees including safe work practices, PPE to
+       be used and locations for the SDSs.
+   •   Shall ensure labels and SDS are provided by the chemical manufacturer when the
+       chemical is delivered.
+   •   Shall ensure that SDSs are provided and readily available to all employees.
+   •   Shall ensure employees will not perform non-routine tasks until a Job Hazard Analysis
+       has been completed by the Fire Health and Safety Section and the employee has received
+       appropriate training.
+
+
+                                                3
+   •   Shall ensure contractors provide hazardous chemical inventories and SDSs for all
+       hazardous chemicals to be brought to the work site.
+   •   Shall notify affected Fire Department employees of any potential hazards which could
+       result from a contractor’s use of hazardous chemicals at the work site.
+   •   Shall become familiar with the safety handling procedures and emergency handling
+       procedures for chemicals prior to using the chemical.
+   •   Shall ensure an accurate chemical inventory is completed on an annual basis.
+   •   Shall ensure SDS are provided for any chemical brought to the work site.
+Employees
+   •   Shall attend all training as directed
+   •   Shall become familiar with the safe handling procedures and emergency handling
+       procedures for chemicals prior to using the chemical.
+   •   Shall follow safe handling procedures listed on labels and SDSs.
+   •   Shall use PPE recommended and/or required by the manufacturer of the chemical.
+   •   Shall not mix any chemicals unless specific procedures are outlined, and instructions or
+       labels provide specific methods to do so.
+   •   Shall not perform non-routine tasks involving hazardous chemicals without first receiving
+       training.
+
+HAZARD COMMUNICATION GLOBALLY HARMONIZED SYSTEM
+The Globally Harmonized System of Classification and Labelling of Chemicals is an
+internationally agreed upon standard managed by the United Nations that was set up to replace
+the assortment of hazardous material classifications and labelling schemes previously used
+around the world.
+Chemical Inventory
+   •   The City of Phoenix Fire Department has established and will maintain a list of all the
+       hazardous chemicals used on the various premises. Each location will determine one or
+       more individuals who will be made responsible for the maintenance of this list at their
+       direct work location. The master list is maintained by the Health and Safety Section.
+           o Location/Facility representatives are required to attend a training presented by the
+               Office of Environmental Programs (OEP). The Health and Safety Section will
+               coordinate this training as needed.
+   •   The master list is available to all employees in the City-wide chemical inventory
+       database, which can be found online using a City of Phoenix terminal at
+       https://phoenix.online-msds.com/index_phoenix.php.
+   •   A chemical inventory for all hazardous chemicals shall be performed on an annual basis
+       at each Fire Department facility.
+Non-Routine Tasks
+   •   Periodically, employees may be required to perform non-routine work or tasks which will
+       require the use of new hazardous chemicals or work in an area where hazardous
+       chemicals are used or stored.
+
+                                               4
+   •   Prior to starting work on hazardous non-routine tasks, every affected employee will be
+       given information by their supervisor or the Health and Safety Section about the
+       hazardous chemical(s) to which they may be exposed. Such information will include, but
+       not be limited to specific hazards associated with the chemical(s), protective measures
+       (i.e. personal protective equipment, work practices, engineering controls etc.) and
+       emergency procedures.
+   •   An employee shall not place himself or herself at risk while using any chemical or
+       performing any chemical related task.
+   •   A Job Hazard Analysis shall be conducted by the Health and Safety Section to identify
+       specific hazards associated with the non-routine tasks and hazardous chemicals;
+       protective and other safety measures to be taken; and measures to lessen or prevent the
+       hazard such as ventilation, respirators, and fire extinguishers.
+Multi-Employer Workplaces
+   •   When it is necessary for an outside contractor to perform work at any Fire Department
+       facility, it shall be the responsibility of the ordering agency, for example, Public Works
+       Department, Fire Facilities, and/or the management of each facility or their representative
+       (i.e. Deputy Chief, Supervisor, etc) to inform the contractor of the identity of any
+       hazardous chemicals to which the contractor may be exposed. The procedure for
+       informing the contractor will include the following:
+            o Making the hazardous chemicals inventory of any designated work area where
+                contract work is being performed available (or providing a contact with access to
+                a City computer terminal) to the contractor and advise the contractor of the
+                labeling system.
+            o Making the SDS's of the identified hazardous chemicals in a designated work area
+                available to the contractor (or providing a contact with access to a City computer
+                terminal).
+            o Making the contractor aware of the appropriate protective measures taken by Fire
+                Department employees in a designated work area.
+   •   It is also the responsibility of the ordering agency, for example, Public Works
+       Department, Fire Facilities, and/or the management of each facility or their representative
+       (i.e. Deputy Chief, Supervisor, etc) to determine if the contractor will be using any
+       hazardous chemicals and, if so, to take appropriate actions to assure the protection of the
+       City of Phoenix Fire Department employees.
+   •   Each contractor who brings chemicals on-site shall provide a hazardous chemical
+       inventory list and the associated Safety Data Sheets to the facility manager or his/her
+       designee before bringing the chemicals on site.
+   •   Each contractor who brings hazardous chemicals on-site shall ensure that all containers
+       are labeled, tagged, or marked with the following information:
+            o Identity of the hazardous chemical
+            o Appropriate hazard warnings
+            o Name and address of the manufacturer
+            o Contractor’s name for containers five gallons or larger.
+Labeling
+
+
+                                                5
+   •   Each container containing a hazardous chemical in the workplace will be labeled, tagged
+       or marked with the following:
+            o Product Identifier
+            o Signal Words
+            o Hazard Statement
+            o Pictogram
+            o Precautionary Statement
+            o Chemical Manufacturer
+   •   Labels on incoming containers of hazardous chemicals shall not be removed or defaced
+       unless the container is immediately marked with the required information.
+   •   Labels or other forms of warning shall be legible, in English, and prominently displayed
+       on the container.
+   •   It is the responsibility of all Fire Department Members to assure that the identity and the
+       hazard warnings are placed on all containers that have been transferred from the original
+       drum or container.
+Safety Data Sheets (SDS)
+   •   GHS requires chemical manufacturers to provide Safety Data Sheets (SDS) (formerly
+       known as Material Safety Data Sheets MSDSs) to communicate the hazards of hazardous
+       chemical products and provide information on handling, storage, and emergency
+       response. The information contained in the SDS is largely the same as the MSDS, except
+       now the SDSs are required to be presented in a consistent user-friendly, 16-section
+       format.
+           o Sections 1 through 8 contain general information about the chemical,
+                identification, hazards, composition, safe handling practices, and emergency
+                control measures (e.g. fire fighting).
+           o Sections 9 through 16 contain other technical and scientific information, such as
+                physical and chemical properties, stability and reactivity information,
+                toxicological information, and exposure control information.
+   •   The Safety Data System is available to all employees through the City-wide chemical
+       inventory database which can be found online using a City of Phoenix terminal at
+       https://phoenix.online-msds.com/index_phoenix.php.
+           o The information is sorted by Department, facility, and/or chemical.
+   •   If employees travel between workplaces during a work shift, the SDS may be kept at the
+       primary workplace facility provided the employees can immediately obtain the required
+       information in an emergency.
+   •   If access to a City of Phoenix terminal is not available, SDS information can be retrieved
+       by calling the SDS emergency hotline at 866-737-6747. This hotline is available 24/7.
+   •   SDSs shall be made readily available, upon request, to designated representatives.
+   •   When ordering a new hazardous chemical, it is the responsibility of Management of that
+       facility or their representative to assure that the SDS file is kept up to date.
+Employee Information & Training
+   •   Employees shall be provided information and training on the requirements of
+       1910.1200(h), any operations in their work area where hazardous chemicals are present,
+
+                                                6
+       and the location and availability of this written program, hazardous chemicals in their
+       work areas and Safety Data Sheets.
+   •   This information and training program will include:
+           o Requirements of 29 CFR 1910.1200.
+           o Methods and observations that may be used to detect the presence or release of
+                hazardous chemical in the work area.
+           o The physical and health hazards of hazardous chemicals.
+           o The measures employees can take to protect themselves from these hazards to
+                include the appropriate work practices, emergency procedures, and PPE.
+           o The details of this written program including an explanation of the labeling
+                system and the SDSs and how employees can obtain and use the appropriate
+                hazard information.
+           o Employees shall also receive additional training whenever a new hazardous
+                chemical is introduced into the work area.
+           o Any operation in employees' work areas where hazardous chemicals are present.
+   •   Employees shall be advised upon initial assignment of any operations in their work area
+       where hazardous chemicals are present and the location and availability of this written
+       program, the hazardous chemical inventory, and the SDSs.
+   •   It will be the responsibility of the Health and Safety Section to implement and maintain
+       the information and training program. Training is provided either in person in a
+       classroom presentation setting or online via the Fire Department’s online training
+       platform. This training is a requirement of Department personnel on an annual basis and
+       any additional review or training will be provided on an as needed basis.
+
+
+REFERENCES
+MP 110.07 Hazard Communication Program
+       OSHA Standard 1910.1200 Hazard Communication
+       Phoenix Police Safety Unit
+       City of Phoenix Human Resources - Safety.
+
+
+
+
+                                               7
+

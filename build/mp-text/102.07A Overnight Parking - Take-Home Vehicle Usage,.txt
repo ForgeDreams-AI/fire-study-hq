@@ -1,0 +1,248 @@
+                                 PHOENIX FIRE DEPARTMENT
+                                   Volume 1 – Management Procedures
+
+OVERNIGHT PARKING, TAKE-HOME VEHICLE USAGE, AND
+             PERMIT REQUIREMENTS
+
+ M.P. 102.07A                                             Date Revised: 11/2026
+ This policy is for internal use only and does not expand an employee’s legal duty or civil liability in any way.
+ This policy should not be construed as creating a duty to act or a higher duty of care with respect to third-party
+ civil claims against employees, the Phoenix Fire Department (PFD) or the City of Phoenix. A violation of this
+ policy, if proven, can only form the basis for non-judicial administrative action by the employer in accordance
+ with the laws and rules governing employee discipline.
+ Related Policies: AR 2.97, 2.95, 2.29, 2.96, 6.11
+
+POLICY HIERARCHY & PURPOSE
+This procedure implements City Administrative Regulations (ARs) governing overnight vehicle permits
+and operation, including:
+    • AR 2.97 — Annual and Temporary Overnight Vehicle Permits, Monthly Reporting, and Motor
+        Pools.
+    • AR 2.95 — Motor Vehicle Authorization and Operation.
+    • AR 2.29 — Communications and Transportation Expense Allowances.
+    • AR 2.96 — Driver Qualification.
+    • AR 6.11 — Fleet Standards and Utilization.
+
+In the event of any conflict, the ARs control. Where this MP sets standards that are more restrictive than
+the ARs, the stricter standard applies, provided it does not contradict the ARs. The purpose of this MP is
+to translate AR requirements into Fire-specific roles, workflows, and controls to ensure compliant,
+efficient, and safe use of City vehicles kept off-shift or at alternate locations.
+
+SCOPE
+Employees of the Fire Department who have a documented operational need for a City vehicle after
+normal business hours may be authorized to keep a City vehicle overnight at an employee’s residence or
+alternate location. Authorization must follow AR 2.97 and this MP. Overnight storage is intended to
+facilitate emergency response and other official City business — not personal convenience.
+
+DEFINITIONS
+    •   Annual Permit (AR 2.97): Continuing, Rotating, or Report-to-Work-Site.
+    •   Temporary Permit (AR 2.97): Valid for 1–30 days for specific business needs.
+    •   Sworn Public Safety Staff: Sworn Fire personnel; subject to AR 2.97 exemptions on monthly
+        reporting.
+    •   Professional Staff: Non-sworn Fire personnel.
+    •   Department Head/Designee: Fire Chief or authorized executive designee.
+    •   Fleet Services: Public Works Department Fleet Services Division.
+    •   Fire Fleet Unit: Fire’s internal fleet management unit.
+    •   Resource Management: Resource Management is responsible for centralized oversight.
+
+
+
+
+                                                     Page 1 of 5
+Permit Eligibility & Types
+
+All employees keeping City vehicles overnight must hold an approved AR 2.97 permit:
+    • Annual (Long-term): A. Continuing Permit. B. Rotating Permit. C. Report-to-Work-Site Permit.
+    • Temporary (Short-term) — for 1–30 days.
+
+Eligibility constraints:
+    • Employees receiving a transportation allowance are not eligible to apply for any overnight permit
+         (AR 2.97 referencing AR 2.29).
+    • Employees who receive a transportation allowance will not have a City vehicle assigned to
+         them, nor will they be allowed to use a City vehicle on a regular and ongoing basis. The vehicle
+         allowance compensates employees for using their personal cars on official City business.
+             o Battalion Chiefs and Shift Commanders (56-hour classifications) shall not have City
+                 vehicles assigned to them. They will use personal vehicles when necessary for required
+                 city business, when not on duty, and are therefore eligible for a transportation allowance.
+                 While on duty, they will use City vehicles as required to fulfill their duties.
+             o District Commanders (40-hour classifications) may choose to have a City vehicle
+                 assigned to them, will be eligible for an overnight permit, and will not receive a
+                 transportation allowance.
+             o District Commanders (40-hour classifications) may choose not to have a City vehicle
+                 assigned to them; in that case, they may only drive response vehicles to emergency
+                 incidents, with no exceptions. Response vehicles are not permitted to be used for
+                 transportation to meetings, training, or any other purpose other than responding from the
+                 district office to emergencies; no exceptions.
+    • Only employees qualified to drive per AR 2.96 may operate City vehicles.
+
+Form Requirements & Versions
+
+    •   Form 150-83D (Rev 5/23): Annual Permit to Keep Vehicle Off-Shift or in Alternate Location.
+    •   Form 150-21D (Rev 5/23): Temporary Permit to Keep Vehicle Off-Shift or in Alternate Location.
+    •   Form 150-84D (Rev 5/23): Employee’s Monthly Report of City Vehicle Under Annual or
+        Temporary Permit (Non-exempt qualified personal use vehicles only).
+    •   Employees must carry the approved paper or digital permit while operating the vehicle (AR 2.97).
+
+Electronic routing & records:
+    • Permit applications and approvals shall be routed and stored electronically using Fire’s designated
+        platform, PPE Software. The official permit must be accessible with the vehicle (physical or
+        electronic copy per City guidance).
+    • The Fire Department will maintain a central master list of active permits and vehicle
+        assignments (see Quarterly Review & Reporting).
+
+Employee and Supervisor Responsibilities
+
+    •   All employees in driving positions shall, once each calendar year, acknowledge their
+        understanding of AR 2.95, AR 2.97, and MP 102.07A via PHXYou. Completion is tracked and
+        retained in accordance with the City's record retention policy. Employees who have not
+        completed the annual policy review and acknowledgment are prohibited from driving city
+        vehicles.
+    •   Supervisors are responsible for monitoring vehicle assignments and detecting unallowable usage.
+        Section heads are responsible for the central tracking of all staff vehicle assignments, and
+        periodic inspections shall be conducted.
+
+
+
+
+                                                Page 2 of 5
+   •   Prior to using a pool vehicle, the vehicle will be signed in and out, with a log of the business
+       justification and supervisor pre-approval. These written reports shall be logged in PPE Software
+       for the section head's monthly review and certification.
+   •   Section heads must review and certify monthly compliance with permit use, locations, and city
+       business purposes.
+   •   Supervisors shall verify all mandatory permit fields (permit expiration, statement of need,
+       overnight parking location, estimated uses/mileage, off-street parking, and required signatures)
+       before approval. Any incomplete permit is invalid and must be resubmitted within five (5)
+       business days.
+
+Location & Security Requirements
+
+   •   Vehicles must be parked in a secure, off-street location whenever available and feasible.
+   •   Equipment and sensitive materials must be secured per Fire policy and AR 2.95.
+   •   Overnight parking outside City limits is permitted only with prior written approval by the Fire
+       Chief or designee and must be documented in the permit file. Extra justification is required when
+       the overnight location is outside city limits. A memo is required with the permit so that leadership
+       can evaluate whether it is in the City’s best interest (AR 2.97).
+
+Approval Chain
+
+   •   Assistant Chief approval is required on permit applications.
+   •   Fire Chief or designee grants final approval.
+   •   Approvals must be documented on the City forms (Rev 5/23) and in the electronic workflow PPE
+       Software.
+
+Quarterly Review & Reporting To Fire Fleet Unit/Fleet Services
+
+Department-level responsibility:
+   • Fire will maintain a list of authorized overnight permits and review usage quarterly for:
+       continuing need, compliance with AR 2.95/2.97, accident information in the M5 system, and
+       miles/trips (as applicable).
+   • After each quarterly review, Fire will email the updated list to Public Works Fleet Services
+       at pwd.fsdfleet.con@phoenix.gov (AR 2.97).
+   • The Fire Fleet Unit coordinates the quarterly review and preparation of the list; Resource
+       Management validates completeness; executive leadership approves transmission.
+   • Fire will notify Fleet Services via PPE Software with changes to overnight parking locations to
+       keep records current.
+
+Monthly Reporting
+
+   •   Sworn Fire personnel are exempt from the monthly mileage reporting requirement (AR 2.97)
+   •   All other permit holders must submit Form 150-84D to the Department Payroll
+       Representative by the first business day of the month for the prior month’s activity (AR 2.97).
+   •   Note: If City Finance/Payroll updates Form 150-84D or directs a different submission date (e.g.,
+       “second Monday”), Fire will follow that City directive and update this MP accordingly.
+   •   Section Heads must certify monthly that vehicle use under their span of control complies with
+       AR 2.95/2.97 and this MP; certifications are retained with payroll submissions.
+   •   Failure to submit timely reports may result in permit revocation (AR 2.97).
+
+Pool Vehicles
+
+   •   Motor pool use is intended for short-term City business (generally no more than one shift).
+
+
+                                               Page 3 of 5
+   •   Temporary overnight use of motor pool vehicles requires a Temporary Permit per AR 2.97, Sec.
+       3.B.
+
+Vehicle Operation Requirements
+
+   •   When operating City vehicles (including under permits), employees must comply with AR 2.95,
+       including—but not limited to—safe operation, distracted driving restrictions, seatbelt use,
+       parking, inspections, collision reporting, and no expectation of privacy.
+   •   Misuse may result in discipline up to and including dismissal (AR 2.95).
+
+Roles & Accountabilities
+
+   •   Fire Fleet Unit: Administers permit workflows; coordinates quarterly reviews; maintains master
+       list. Vehicles shall not be issued to employees without confirmed compliance with City ARs and
+       this procedure. Fire HR must be notified within two business days of any vehicle assignment
+       addition/change/removal.
+   •   Resource Management: Owns centralized oversight; ensures compliance tracking and reporting.
+   •   Section/Division Management: Ensures accurate permits; verifies completeness before approval;
+       reinforces compliance; escalates issues.
+   •   Fire HR: Coordinates transportation allowance checks (AR 2.29) and driver qualification (AR
+       2.96); ensures permit eligibility; manages payroll reporting intake.
+   •   Fire HR and OSI: Upon receipt of driver record issues from the employee, supervisor, and/or City
+       Safety through the PMG Driver’s License Report (e.g., criminal moving violations, DUI,
+       cancellation/suspension/revocation), Fire HR and OSI will triage within (2) business days. All
+       steps and timestamps shall be tracked in the Investigation/Discipline Tracker and routed per
+       jurisdiction (professional staff vs. sworn). Professional staff MVD violations will be tracked in an
+       investigation/discipline spreadsheet maintained by the Fire Human Resource Supervisor and
+       Resource Officer. All sworn MVD violations will be tracked in the current Image Trend RMS
+       Activity Log. The Deputy Chief, OSI, and the HR Supervisor will confirm that all reported and
+       flagged MVD reports are properly routed, logged, and managed within AR 2.96 Driver
+       Qualification.
+
+Systems & Data
+
+   •   PPE Software shall track permits, assignments, locations, quarterly reviews, and reporting
+       schedules.
+   •   PHXYou and PPE Software will track completions, generate reports, and retain records per City
+       retention schedules.
+   •   Integrate with M5 (via Public Works Fleet Services) for parking locations and vehicle data.
+   •   Retain records per City record retention policies.
+
+Central Vehicle-Assignment Monitoring
+
+   •   The Fire Fleet Unit will maintain a centralized, historical master file of all Fire vehicle
+       assignments and changes, separate from permits.
+   •   The file is reviewed monthly; exception reports (e.g., vehicles without permits, anomalous use)
+       are generated and escalated to division management.
+
+Training & Communication
+
+   •   Professional and 40-hour sworn staff in driving positions must complete the City Safe Driver
+       Training course via PHXYou every four (4) years (or per the current City Safety standard).
+       PHXYou will track completions, produce quarterly compliance reports, and retain records per
+
+
+                                               Page 4 of 5
+       City policy. Curriculum expectations for sworn staff assigned to a 56-hour week shall be managed
+       by Drivers Training.
+   •   Fire will publish a manager's quick guide outlining approvals, monthly deadlines, quarterly list
+       content, sworn exemption, and contact points.
+   •   All employees in driving positions shall, once each calendar year, acknowledge their
+       understanding of AR 2.95, AR 2.97, and MP 102.07A via PHXYou. Completion is tracked and
+       retained in accordance with the City's record retention policy. Employees who have not
+       completed the annual policy review and acknowledgment are prohibited from driving city
+       vehicles.
+
+Compliance, Enforcement & Exceptions
+
+   •   Permits may be revoked at any time at the discretion of the Fire Chief, designee, or City Manager
+       (AR 2.97).
+   •   Violations of ARs or this MP may result in discipline per City policy and Fire procedures.
+   •   Exceptions/waivers must be documented in writing by the Fire Chief or designee and retained
+       with the permit record.
+
+Questions / Contacts
+
+   •   Public Works — Fleet Services Division: (602) 262-4625; pwd.fsdfleet.con@phoenix.gov (AR
+       2.97).
+   •   Human Resources — Safety Division: (602) 262-7555 (AR 2.95).
+   •   Fire Fleet Unit/Resource Management: internal contacts per Fire directory.
+
+
+
+
+                                              Page 5 of 5
+

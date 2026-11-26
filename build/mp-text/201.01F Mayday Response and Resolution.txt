@@ -1,0 +1,445 @@
+                            PHOENIX REGIONAL
+                      STANDARD OPERATING PROCEDURES
+
+                  MAYDAY RESPONSE AND RESOLUTION
+                      M.P. 201.01F      08/26-N      Page 1 of 11
+
+PURPOSE
+To establish a clear and standardized procedure for declaring, responding to, and
+resolving a Mayday situation. This ensures firefighter safety through early
+identification, clear communication, and an organized response that mobilizes all
+levels of the Incident Command System.
+SCOPE
+This procedure applies to:
+   •   All Fire Department personnel operating in hazard zones, including
+       fireground, technical rescue, and other emergency environments.
+   •   All incidents where members are exposed to conditions that could
+       compromise their ability to exit or survive.
+   •   All levels of the Incident Command System, including:
+           o Task level (individual firefighters and crews)
+           o Tactical level (Sector Officers)
+           o Strategic level (Incident Command Team)
+           o Dispatch center personnel
+
+DEFINITIONS
+MAYDAY:
+A Mayday is defined as anytime a firefighter is in a life-threatening situation and
+requires assistance because they cannot safely exit the hazard zone or resolve the
+problem immediately.
+
+Mayday examples include but are not limited to:
+  • Lost or disoriented
+  • Trapped or entangled
+  • Fall through floor or roof
+  • SCBA emergency
+  • Injured and unable to self-extricate
+  • Separated from crew
+  • Rapidly deteriorating conditions preventing safe egress
+
+BOA (Breathe, Organize, Act):
+A mental checklist for firefighters in distress and those responding:
+   •   Breathe: Control panic, slow breathing.
+   •   Organize: Assess situation, resources, and options.
+   •   Act: Take deliberate steps toward self-rescue or resolution.
+                             PHOENIX REGIONAL
+                       STANDARD OPERATING PROCEDURES
+
+                   MAYDAY RESPONSE AND RESOLUTION
+                      M.P. 201.01F       08/26-N    Page 2 of 11
+
+Help Order (Inside-Out Response):
+The prioritized sequence for Mayday resolution:
+1. Self-rescue by the Mayday initiator
+2. Mayday firefighter’s crew
+3. Crews assigned in the same sector
+4. Crews from other sectors
+
+GRAB LIVES (Self-Rescue Priorities):
+   •   G = Check Air Gauge
+   •   R = Radio for Assistance
+   •   A = Activate PASS Device
+   •   B = Control Breathing, Conserve Air
+   •   L = Stay Low
+   •   I = Illuminate, Turn Flashlight On
+   •   V = Make Loud Noises (Volume)
+   •   E = Find an Exit
+   •   S = Shield Your Airway (last-ditch effort)
+
+PROCEDURES
+The procedures that follow a Mayday declaration are designed to mobilize every
+level of the Incident Command System. Strategic, tactical, and task-level operators
+must respond efficiently and effectively to ensure firefighter survival.
+Following the Bret Tarver line-of-duty death at the Southwest Supermarket fire,
+post-incident analysis demonstrated that the most effective Mayday resolution
+occurs when the response is coordinated from the inside out. This approach
+prioritizes crews closest to the firefighter in distress and emphasizes strict
+fireground discipline.
+The response must follow the previously defined “Help Order” and maintain
+accountability. Freelancing is never acceptable during a Mayday event.
+
+
+Declaring a Mayday:
+A Mayday declaration can come from any position in the incident organization
+when the need arises.
+   •   A Mayday is declared by transmitting, “Mayday, Mayday, Mayday” over the
+       radio followed by the necessary information:
+                  Who: Identify who you are and/or the firefighter in trouble (FF
+                    Smith, E1)
+                             PHOENIX REGIONAL
+                       STANDARD OPERATING PROCEDURES
+
+                     MAYDAY RESPONSE AND RESOLUTION
+                       M.P. 201.01F    08/26-N      Page 3 of 11
+
+                  What: State the nature of the problem (“Trapped under debris,”
+                   “Low air,” “Lost”)
+                 Where: Give your last known location or best estimate (“Entry
+                   through North door, I am still on my hose line, second floor”)
+                 Needs/Actions: Specify what Actions you are taking or Needs
+                   that will help resolve the situation (“Following handline out,”
+                   “Need manpower to help clear fallen debris,” “Need Air
+                   supply”)
+Task-level responsibilities during a Mayday situation:
+After declaring a Mayday, the task-level responsibilities for a Mayday situation
+include:
+          o Controlling the emotional response to the situation with B.O.A.
+               Breath – Slow breathing, reduces panic
+               Organize – Assess situation and options
+               Act – Begin self-rescue steps
+
+          o Utilize IAFF Fireground Survival training
+                SCBA familiarization
+                High/low profile wall breach
+                Disentanglement
+                Ladder bail
+                Window hang
+
+          o Apply GRAB LIVES
+                    • G = Check Air Gauge
+                    • R = Radio for Assistance
+                    • A = Activate PASS Device
+                    • B = Control Breathing, Conserve Air
+                    • L = Stay Low
+                    • I = Illuminate, Turn Flashlight On
+                    • V = Make Loud Noises (Volume)
+                    • E = Find an Exit
+                    • S = Shield Your Airway (last ditch effort)
+
+   •   Firefighters responding to the Mayday Situation:
+          o   Controlling the emotional response to the situation
+          o   B.O.A. = Breath, Organize and Act
+          o   Maintain fireground discipline - Never Freelance
+          o   Coordinate and communicate response actions with Sector Officer or
+              Command
+                            PHOENIX REGIONAL
+                      STANDARD OPERATING PROCEDURES
+
+                  MAYDAY RESPONSE AND RESOLUTION
+                     M.P. 201.01F     08/26-N      Page 4 of 11
+
+          o Follow the “Help Order” model
+          o Follow the “Rule of Air Management” (M.P 202.05C)
+          o Engineers should ensure members are entering on tagged hose lines
+            and have tools available.
+
+Tactical Level Mayday Response and Resolution
+Company and Command Officers operating at the tactical level are responsible for
+actively managing and coordinating the response to and resolution of the Mayday
+situation. Effective communication, coordination, and fireground discipline are
+critical actions for the Tactical Level Supervisors. Every effort should be made by
+Incident Command to prioritize and assign Command Officers to the most critical
+sectors.
+
+
+Tactical-level responsibilities for Mayday response and resolution:
+   •   Management of ongoing tactical objectives.
+   •   Management of current position and function of resources. Recognize and
+       support your ability to mitigate the Mayday within the “Help Order” (from
+       the inside out)
+   •   Participation in Mayday mitigation efforts are clearly communicated
+   •   Continually reassess the incident through the strategic decision-making
+       model
+          o Size up the hazard zone.
+                  Identify Critical fireground factors
+                  Consider elapsed time into the incident
+          o Evaluating the Risk Management position
+          o Operating in the correct Strategy
+          o Working within the Incident Action Plan
+   •   Provide effective communications, including C.A.N. Reports
+   •   Monitor and manage Air levels for the entire crew
+   •   Control the pace and emotions of the crew
+   •   Utilize RIC bag, Rescue Tool Bag and Cyanokit
+   •   Complete the objectives assigned by Command
+   •   Never Freelance. Do not change your assignment without confirmation from
+       your Sector Officer or Command. If you believe you can assist in mitigating
+       the Mayday situation, communicate your intentions clearly and obtain
+       approval before acting.
+                            PHOENIX REGIONAL
+                      STANDARD OPERATING PROCEDURES
+
+                  MAYDAY RESPONSE AND RESOLUTION
+                     M.P. 201.01F      08/26-N     Page 5 of 11
+
+Strategic Level Mayday Response and Resolution
+A Mayday can occur at any time during an incident. Establishing a strong Incident
+Command System (ICS) from the very beginning—starting with IC #1—creates the
+foundation for success. A well-organized incident structure ensures that if a
+Mayday occurs, the response is efficient, coordinated, and focused on firefighter
+survival. Company Officers, Sector Officers and the Incident Command Team must
+all maintain a strategic level of awareness throughout the incident.
+The Incident Command Team (Incident Commander, Support Officer, Senior
+Advisor) is responsible for actively and continually managing the Mayday
+response while maintaining overall incident organization. Additional positions
+(staging, logistics, safety) provide support from the Command Van.
+          •   Company Officers operating as IC #1 and as Sector Officers are
+              operating at both the strategic and tactical levels.
+Strategic-level responsibilities of a Mayday situation for Response and Resolution
+include:
+   •   Communicate with the Mayday initiator after the Tactical Radio Operator
+       (TRO) completes initial Mayday traffic:
+          o Assure the member: “Help is on the way.”
+          o Remind them to apply BOA and GRAB LIVES.
+          o Gather any additional pertinent information not yet communicated
+              (location updates, condition changes, needs).
+   •   Identify the Sector Officer to manage the Mayday
+          o Allow Sector Officer to maintain future contact with Mayday initiator
+   •   Continually reassess the incident through the strategic decision-making
+       model
+          o Size up Critical fireground factors
+                   Effective and thorough size-ups include a 360-degree report
+                   Consider elapsed time into the incident
+          o Evaluate the Risk Management position
+          o Confirm the correct Strategy
+          o Evaluate the Incident Action Plan (communicate any changes)
+   •   Work through the Functions of Command (M.P. 201.01)
+          o Strategic level communications
+                   Control incident communications
+                        • Once a Mayday is initiated, all sectors should manage
+                           their communications to critical messages only over the
+                           radio
+                          PHOENIX REGIONAL
+                    STANDARD OPERATING PROCEDURES
+
+               MAYDAY RESPONSE AND RESOLUTION
+                   M.P. 201.01F      08/26-N      Page 6 of 11
+
+                    •   Use Command presence to manage communications
+                        pace and tone
+                     • The Incident and the Mayday always remain on the same
+                        tactical channel
+                     • Plan and prepare for communications challenges
+                           o A Mayday was initiated on the wrong radio
+                               channel
+                           o Multiple, simultaneous Maydays
+                     • Request C.A.N. and P.A.R. reports from Sectors as
+                        needed
+                     • Initiate Safety channel when appropriate to track
+                        accountability and reduce fire channel traffic
+       o Maintain the overall incident organization through sectorization
+               Ensure Battalion Chiefs are assigned to all critical tactical level
+                 positions
+                     • Firefighting sectors (geographical and functional)
+                     • Extrication sector
+                     • Treatment sector
+                     • Transportation sector
+       o Maintain an adequate flow of resources
+               Manage resource deployment
+               Provide resources to provide for tactical-level considerations
+                           o Improve access to building
+                           o Support with ventilation, considering fire
+                               dynamics and fire behavior
+•   Strategic level considerations
+       o Continue to manage hazard mitigation
+               Ensure the overall incident actions match the overall incident
+                 conditions
+               Control access to the hazard zone through the Sector Officers
+       o Track and manage accountability
+       o Record and confirm Tactical benchmarks
+       o Consider on-scene firefighters' welfare
+       o Address organizational and external considerations
+               Communicate progress and critical updates to Executive Staff
+                 and other key stakeholders
+               Coordinate with PIO to manage media communication
+                 appropriately
+               Ensure timely notification and support for the family of the
+                 affected firefighter
+                             PHOENIX REGIONAL
+                       STANDARD OPERATING PROCEDURES
+
+                    MAYDAY RESPONSE AND RESOLUTION
+                      M.P. 201.01F      08/26-N      Page 7 of 11
+
+                   Monitor overall organizational impacts and anticipate
+                    additional support needs
+
+In a Mayday situation, the Sector Officer will take responsibility for resolving it.
+When a Mayday occurs, the Sector Officer takes charge of resolving the situation.
+The Incident Commander must ensure the Mayday Sector Officer has the
+necessary resources and simultaneously strengthen other sectors to sustain
+overall incident control. Anticipating maximum resource demands ensures rapid
+intervention and reduces the likelihood of secondary Maydays caused by
+uncontrolled response, unresolved hazards or insufficient support.
+Sector Officer responsibilities (M.P. 201.01 Command Procedures)
+   •   Responding to the Mayday from the inside out
+   •   Maintain awareness of sector Conditions, Actions, and Needs (CAN) and
+       communicate to Incident Command
+   •   Manage communications with the down firefighter
+   •   Manage the search and rescue efforts for the down firefighter if necessary
+   •   Increase and maintain resources assigned to the sector
+          o This includes active oversight of the sector’s access points into the
+             hazard zone.
+          o Managing accountability location utilizing tactical worksheets,
+             passports and hosetags
+          o Manage the logistical support
+   •   Manage the improvement of survivability and tenability
+          o Increase exterior access to the sector
+          o Utilize RIC bag
+                 Request additional, if necessary
+          o Addressing ventilation and visibility
+          o Address the fire if threatening the resolution of the Mayday
+          o Consider Fire Dynamics/Fire Behavior
+   •   Recognize and support the “Help Order” of a Mayday
+          o Self-rescue by the Mayday initiator
+          o Mayday firefighter’s crew
+          o Crews working in the same sector
+                 Crews with firefighting assignments
+                 Crews from an “on-deck” position or staged outside of the
+                   sector as a tactical reserve
+                 Additional resources requested from the Incident Commander
+          o Crews from other sectors
+          o Requesting additional staged resources
+          o Communications with surrounding geographical or functional sectors
+                            PHOENIX REGIONAL
+                      STANDARD OPERATING PROCEDURES
+
+                  MAYDAY RESPONSE AND RESOLUTION
+                     M.P. 201.01F      08/26-N      Page 8 of 11
+
+   •  Surrounding sectors not involved in the Mayday
+          o Continue the firefight in support of the Mayday; do not abandon
+              current assignments
+          o Never Freelance
+          o Actively account for all members assigned to a sector
+   • Report P.A.R.s to the Incident Commander as required Accountability
+      Responsibilities
+          o Respond to the designated accountability location and verify/confirm
+              that rosters, passports, and hosetags accurately reflect all personnel
+              operating in the sector.
+          o Report P.A.R.s to the Incident Commander as required
+          o Maintain accountability of crews working to resolve the Mayday
+                  Utilizing the Safety Channel may be the best route of
+                     communication to the Command Van regarding accountability
+   • Maintain awareness of fire and smoke conditions, as well as building
+      conditions, as rescue efforts are initiated
+          o There is no more significant time for a clear and concise utilization of
+              the Risk Management System than during a Mayday event
+          o It is not acceptable to create further Mayday situations when
+              resolving an existing Mayday
+These conditions must be communicated to the Incident Commander as they
+deteriorate, as they have an immediate impact on the rescue efforts.
+The Tactical Benchmark for the endpoint resolution of a Mayday is “Mayday
+resolved.” The critical points that must be confirmed before giving the benchmark
+of “Mayday resolved” are:
+   •   The individual(s) that are experiencing the Mayday situation are removed
+       from the hazard zone
+   •   All members involved in the rescue are accounted for and are out of the
+       hazard zone
+   •   All members working in all other sectors are accounted for
+   •   The Incident Commander can give a PAR for the entire hazard zone
+
+The Officer of the individual sector in which the Mayday occurred is responsible
+for notifying command of the completion of the rescue and that all members
+involved are out of the hazard zone. The Incident Commander must complete the
+accountability process for the entire incident to complete the benchmark “Mayday
+resolved.”
+                             PHOENIX REGIONAL
+                       STANDARD OPERATING PROCEDURES
+
+                   MAYDAY RESPONSE AND RESOLUTION
+                      M.P. 201.01F      08/26-N       Page 9 of 11
+
+Dispatch Center Role and Responsibilities
+It is critical to acknowledge the role the dispatch center and, most specifically, the
+tactical radio operators will have in the resolution of a Mayday. A significant
+component of the hazard zone management systems and firefighter safety involve
+communication between the incident command team and the dispatch center,
+regardless of the incident's size. The tactical radio operator's responsibilities for a
+Mayday response are as follows:
+     •   A Mayday is initiated by a member in the field communicating “Mayday,
+         Mayday, Mayday” on the radio
+     •   A Mayday can be initiated by anyone, at any time, who is working in the
+         field and has access to a portable radio
+     •   Mayday is not just a fireground term. It can be used in any hazard zone
+     •   Upon initiation of a Mayday, the tactical radio operator shall:
+            o Transmit the emergency traffic tone
+            o Voice on the tactical channel: “We have a Mayday on the scene. All
+              units hold your traffic.”
+            o Request the Mayday FF to go ahead with their Mayday traffic if not
+              completed
+            o Repeats the Mayday message using the standard radio order model
+            o Allows for the Incident Commander to speak to the Mayday initiator
+     •   If a Command Officer has not yet arrived on scene the TRO shall
+         communicate the following:
+            o Assures the member that “help is on the way”
+            o Maintains communications with the Mayday initiator until other
+              units arrive
+                     Ensure the communications are necessary and not to fill dead
+                      radio time
+            o Reminds the member to initiate their “GRAB LIVES” procedures
+            o Ensures all responding units are aware of the Mayday
+            o Upgrades the assignment to a Mayday nature code
+                               PHOENIX REGIONAL
+                         STANDARD OPERATING PROCEDURES
+
+                       MAYDAY RESPONSE AND RESOLUTION
+                        M.P. 201.01F      08/26-N       Page 10 of 11
+
+  •       The entire dispatch center provides redundant monitoring of the Mayday
+          radio traffic
+  •       The dispatch center upgrades the assignment to assist with a Mayday
+          incident.
+                      Upon the initiation of a Mayday, the incident is upgraded using
+                       the Mayday nature code
+                          •   If 3 – 1 incident, then balance to 1st Alarm Mayday
+                          •   If 1st Alarm incident, then to 2nd Alarm Mayday (up to 9
+                              Alarms)
+                          •   Provide additional medical or transport resources as
+                              appropriate
+                          •   Monitoring of all possible hazard zone channels
+
+Key Takeaways
+      •    It is every firefighter's responsibility to maintain their preparedness for a
+           Mayday situation
+      •    The only way to guarantee a successful outcome of a Mayday situation is
+           to PREVENT IT!
+      •    Mayday response and resolution requires action at all levels of an incident
+           command system
+      •    The Ultimate goal for any Mayday response is to resolve the Mayday
+           successfully and, at the same time, not create any further Mayday
+           situations
+      •    Any Mayday situation elevates emotional levels and tests a command
+           system.
+      •    B.O.A. - Breathe, Organize and Act!
+      •    Utilize The IAFF Fireground Survival training
+              o   SCBA familiarization
+              o   High/low profile wall breach
+              o   Disentanglement
+              o   Ladder bail
+              o   Window hang
+              o   GRAB LIVES
+           PHOENIX REGIONAL
+     STANDARD OPERATING PROCEDURES
+
+MAYDAY RESPONSE AND RESOLUTION
+    M.P. 201.01F      08/26-N      Page 11 of 11
+
+   G = Check Air Gauge
+   R = Radio for Assistance
+   A = Activate PASS Device
+   B = Control Breathing, Conserve Air
+   L = Stay Low
+   I = Illuminate, Turn Flashlight On
+   V = Make Loud Noises (Volume)
+   E = Find An Exit
+   S = Shield Your Airway (last ditch effort)
+

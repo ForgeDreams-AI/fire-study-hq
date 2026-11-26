@@ -1,0 +1,193 @@
+                                 PHOENIX FIRE DEPARTMENT
+                                    Volume 1 – Management Procedures
+
+                 PHXYOU TRAINING AND CERTIFICATION
+                      RECORDS MANAGEMENT
+
+ M.P. 111.04                                              Date Revised: 10/2026
+ This policy is for internal use only and does not expand an employee’s legal duty or civil liability in any way.
+ This policy should not be construed as creating a duty to act or a higher duty of care with respect to third-party
+ civil claims against employees, the Phoenix Fire Department (PFD) or the City of Phoenix. A violation of this
+ policy, if proven, can only form the basis for non-judicial administrative action by the employer in accordance
+ with the laws and rules governing employee discipline.
+ Related Policies: Applicable EMS, Fire Aviation/ARFF, Special Operations HMT/TRT,
+ training, certification, and records retention policies
+
+PURPOSE
+To establish a standardized, department-wide process for using the City of Phoenix PHXYou Learning
+Management System to document, maintain, monitor, and audit training, continuing education (CE),
+certifications, and other required training records for Phoenix Fire Department functional training
+programs.
+
+POLICY
+PHXYou shall serve as the primary Department system for maintaining applicable training,
+certification, and continuing education records. Functional sections shall continue to administer their
+respective training programs and are responsible for maintaining the accuracy and completeness of
+their program records within PHXYou.
+
+This policy applies to Emergency Medical Services (EMS), Aircraft Rescue and Firefighting (ARFF),
+Hazardous Materials Technician (HMT), Technical Rescue Technician (TRT), and other functional
+training programs designated by the Department.
+
+Use of PHXYou does not establish a single centralized section responsible for maintaining all
+Department training records. Each functional section remains responsible for its own program
+administration, record maintenance, compliance monitoring, and audits. As Phase 3 functionality and
+additional PHXYou capabilities are implemented, the Department will evaluate opportunities to
+improve coordination, standardization, reporting, and Department-wide visibility of training records.
+
+PHXYou Training Records
+To the extent supported by system functionality, functional sections shall use PHXYou to document
+and maintain applicable program records, including:
+ • Initial, recurrent, and required functional training.
+ • Continuing education courses, attendance, and accumulated CE hours.
+ • Member certifications, qualifications, and certification expiration dates.
+ • Required assessments, testing, competency, or proficiency evaluations when supported by the system.
+ • Approved outside training used to satisfy Department or program requirements.
+
+                                                     Page 1 of 4
+• Remedial or make-up training when appropriate.
+• Other training or compliance records required by the applicable functional program.
+
+Functional sections may use supplemental Department-approved systems or files when PHXYou does
+not support a specific program requirement. Supplemental systems shall not replace required PHXYou
+documentation when the applicable information can reasonably be maintained in PHXYou.
+
+
+Functional Section Responsibilities
+Each functional section shall designate appropriate program managers, training officers, instructors, or
+administrative personnel to maintain its training program and records within PHXYou. Each section is
+responsible for:
+ • Establishing and maintaining applicable courses, curricula, certifications, and training requirements in
+    PHXYou.
+ • Ensuring required training and CE completions are accurately documented.
+ • Maintaining certification and expiration information when supported by PHXYou.
+ • Monitoring members for completion of required training, CE, certifications, and proficiency
+    requirements.
+ • Reviewing records for accuracy and correcting identified discrepancies.
+ • Conducting periodic audits of member training and certification records.
+ • Identifying and notifying members of training, certification, or CE deficiencies.
+ • Coordinating make-up training, remediation, or other corrective action required by the applicable
+    program.
+ • Maintaining supplemental documentation when a record cannot be fully maintained within PHXYou.
+
+
+Emergency Medical Services
+The EMS Section shall use PHXYou to document applicable Department provided EMS training and
+continuing education and, where supported, maintain or track certification information for EMT and
+Paramedic members. The EMS Section remains responsible for monitoring certification requirements,
+CE completion, CORE training, and other applicable EMS training requirements.
+
+Members completing approved outside continuing education are responsible for submitting required
+documentation to the EMS Section. Records required to support Arizona Department of Health
+Services audits, recertification, medical direction, or other regulatory requirements may also be
+maintained in supplemental Department-approved systems or files when necessary.
+
+Aircraft Rescue and Firefighting
+The Fire Aviation Section shall use PHXYou to administer and document applicable ARFF training
+requirements, including assigned recurrent training and other training or certification requirements
+supported by the system.
+
+The ARFF Training Officer and Fire Aviation Section remain responsible for monitoring member
+compliance with initial and recurrent training, live-fire requirements, annual check rides, proficiency
+evaluations, Engineer Continuing Education, and other applicable ARFF program requirements.
+
+
+                                             Page 2 of 4
+Records that cannot be fully documented within PHXYou may be maintained through supplemental
+Department approved records.
+
+Hazardous Materials and Technical Rescue
+Special Operations shall use PHXYou to document and track applicable HMT and TRT training and
+continuing education. PHXYou shall be used to maintain applicable CE hours and training records and
+to provide members and program management access to accumulated training information.
+
+Special Operations may continue to use Power Apps, SharePoint, or other approved systems for
+program administration and documentation that cannot currently be maintained within PHXYou.
+Program Managers, Lead Instructors, and the Special Operations Labor/Management Team remain
+responsible for establishing annual CE requirements, evaluating technician competency, monitoring
+participation, conducting required audits, and addressing identified deficiencies.
+
+Member Responsibilities
+Members participating in functional training programs are responsible for:
+
+• Completing assigned training and CE by established deadlines.
+• Monitoring their PHXYou training record for accuracy and completeness.
+• Maintaining required certifications, qualifications, and program requirements.
+• Providing documentation for approved outside training or certifications when required.
+• Notifying the appropriate functional section of missing, inaccurate, or incomplete PHXYou records.
+• Promptly addressing identified training, certification, or CE deficiencies.
+
+Use of PHXYou does not relieve individual members of responsibility for maintaining the
+certifications, qualifications, CE requirements, or other conditions required for their assignment or
+position.
+
+Training Record Audits
+Each functional section shall establish a process for periodically auditing its PHXYou training and
+certification records. Audit frequency may vary based on program requirements, certification cycles,
+regulatory requirements, or operational need.
+
+Audits should verify, as applicable:
+
+• Required training and CE have been completed and accurately recorded.
+• Required certifications and qualifications are current.
+•   Certification expiration dates are accurate.
+•   Required assessments, competencies, or proficiency evaluations have been completed.
+•   Approved outside training has been appropriately reviewed and documented.
+•   Previously identified deficiencies have been corrected or are being addressed.
+
+Sections should conduct audits with sufficient frequency to identify and address deficiencies before a
+member reaches a training, CE, certification, or program compliance deadline.
+
+
+
+
+                                             Page 3 of 4
+Record Discrepancies and Deficiencies
+When a training or certification record is missing, incomplete, or inaccurate, the responsible functional
+section shall review available documentation and make the appropriate correction in PHXYou. When
+an audit identifies that a member has not completed a required training, CE, certification, assessment,
+or proficiency requirement, the functional section shall follow the notification and remediation process
+established by the applicable program.
+
+Supplemental Records
+PHXYou is the primary Department system for applicable training and certification records; however,
+specialized programs may maintain supplemental records when PHXYou does not support the required
+record type or when additional documentation is required for regulatory, certification, confidentiality,
+or program purposes.
+
+Supplemental records shall be maintained in an approved Department or City system and in
+accordance with applicable records retention requirements.
+
+Phase 3 And Future Phxyou Functionality
+The Department will continue coordinating with the PHXYou team as Phase 3 functionality and additional
+system capabilities are implemented. As new functionality becomes available, the Department will
+evaluate opportunities to expand certification and expiration tracking, improve automated compliance
+notifications, standardize reporting, reduce duplicate recordkeeping, improve Department-level visibility,
+and transition appropriate records from supplemental systems into PHXYou.
+
+Records Retention
+Training and certification records shall be retained in accordance with applicable City of Phoenix and
+Phoenix Fire Department records retention requirements and any regulatory or program specific
+requirements. Records requiring retention outside PHXYou shall be maintained by the responsible
+functional section in an approved Department or City repository.
+
+Responsibilities
+Functional Section Leadership and Program Managers are responsible for administering their respective
+training programs, maintaining accurate PHXYou records, monitoring compliance, conducting audits, and
+addressing identified deficiencies.
+
+Training Officers, Lead Instructors, and designated program staff are responsible for documenting
+applicable training, CE, assessments, and program requirements and ensuring records are entered into
+PHXYou in a timely and accurate manner.
+
+Members are responsible for completing required training, maintaining required certifications and
+qualifications, monitoring their PHXYou records, submitting required outside training documentation,
+and promptly addressing identified discrepancies or deficiencies.
+
+Department Leadership is responsible for establishing consistent expectations for PHXYou use across
+functional areas and coordinating future system functionality that supports Department-wide training
+record management, reporting, and oversight.
+
+
+                                             Page 4 of 4
+
