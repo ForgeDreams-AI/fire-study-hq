@@ -1,0 +1,1438 @@
+{
+ "topics": [
+  {
+   "title": "Vol I: Member Services, Wellness & Recognition (105) (Part 1)",
+   "sub": "Health & Wellness Center physicals and Tiers, Member Services and peer support, dispute resolution, member death and LODD, chaplain, ceremonies, and retirement.",
+   "concepts": [
+    "<b>105.01</b>: All sworn members get an annual physical (NFPA 1500/1582, OSHA SCBA). Miss twice, rescheduled + chain notified; miss again, may be not medically cleared.",
+    "<b>105.01</b>: Private clinician: book within 30 days, results within 60 days, member pays. Tier 4 = BP over 160/100; under 11.0 METs may mean immediate removal.",
+    "<b>105.01A</b>: Car 20 (602-262-PEER) is the entry point for Member Services. Peer Support: Listen, Refer, & Support. Up to 12 trauma sessions (Craig Tiger Act).",
+    "<b>105.01C</b>: ADR Option One = informal worksheet, anyone in the workgroup can start it; Option Two = confidential, voluntary mediation.",
+    "<b>105.02</b>: Four death categories: LODD I, LODD II, off-duty active, retiree. Honor Watch only for LODD I; flag flown at station no less than 2 days.",
+    "<b>105.02B</b>: Fire Chief assigns the LODD Investigation Team (Safety Officer + Performance Auditor); goal is causal factors and prevention.",
+    "<b>105.02E</b>: Full Class A or civilian clothes for LODD/active funerals; 3/8\" black shroud worn horizontally; ceremonial salute 3 seconds up and 3 down.",
+    "<b>105.03</b>: Notify Deputy Chief of Fire HR and HR Officer first; PSPRS is a state system; contact Fire HR 30 days out; records kept 35 years."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 105.01, all sworn members must have an annual physical under NFPA 1500/1582 and OSHA respirator standards. Those standards relate to what?",
+     "a": "The annual physical requirement is tied to the standards for wearing SCBA.",
+     "why": "M.P. 105.01: Per NFPA 1500, 1582 and OSHA 29 CFR 1910.134 \"pertaining to wearing SCBA, all sworn employees\" shall have an annual physical.",
+     "opts": [
+      "Wearing SCBA",
+      "Driving fire apparatus",
+      "Providing ALS patient care",
+      "Working in confined spaces"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, you missed your physical on vacation and then missed the rescheduled appointment too. What happens next?",
+     "a": "You are rescheduled again and your chain of command is notified.",
+     "why": "M.P. 105.01: If the member misses the second appointment, \"the member will be rescheduled, and their chain of command notified.\"",
+     "opts": [
+      "You're rescheduled and your chain of command is notified",
+      "You're immediately not medically cleared for duty",
+      "You must use a private clinician within 30 days",
+      "You're rescheduled with no other action taken"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, what can happen if a member also misses the second rescheduled physical appointment?",
+     "a": "The member may be considered not medically cleared for operational duty until a physical is completed.",
+     "why": "M.P. 105.01: After missing the second rescheduled appointment, the member \"may be considered not medically cleared for operational duty until a medical physical has been completed.\"",
+     "opts": [
+      "They may be considered not medically cleared for operational duty",
+      "They receive a written reprimand from the Health Center",
+      "They're rescheduled and the Fire Chief is notified",
+      "They lose their Tier status until the next annual cycle"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, a same-day cancellation of a member's scheduled annual physical must be made by whom?",
+     "a": "Same-day cancellations must be made by the member's Battalion Chief/Section Chief.",
+     "why": "M.P. 105.01: \"Same day cancellation of a scheduled physical must be made by the member's Battalion Chief/Section Chief.\"",
+     "opts": [
+      "The member's Battalion Chief/Section Chief",
+      "The member, by calling the Health Center",
+      "The member's Company Officer",
+      "The on-duty Shift Commander"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, you choose to have your annual physical done by your private clinician instead. Which timeline applies?",
+     "a": "The appointment must be made within 30 days of the scheduled physical, and results provided within 60 days of the exam.",
+     "why": "M.P. 105.01: The private appointment must be made \"within 30 days\" of the scheduled Health Center physical, and results provided \"within 60 days of the physical exam appointment.\" The employee pays for it.",
+     "opts": [
+      "Book within 30 days; results due within 60 days of the exam",
+      "Book within 60 days; results due within 30 days of the exam",
+      "Book within 90 days; results due within 90 days of the exam",
+      "Book within 30 days; results due within 30 days of the exam"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, how often is the chest X-ray done as part of the firefighter physical (unless clinically indicated)?",
+     "a": "A chest X-ray is given pre-employment and every 4 years thereafter unless clinically indicated.",
+     "why": "M.P. 105.01: Chest X-ray is \"administered on pre-employment and every 4 years thereafter, unless clinically indicated.\" The treadmill test is done at every physical.",
+     "opts": [
+      "Pre-employment, then every 4 years",
+      "Every year at the annual physical",
+      "Pre-employment, then every 2 years",
+      "Only after a reported exposure"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, which firefighters should get an annual low-dose CT lung cancer screening?",
+     "a": "Firefighters over 55 with a 30 pack-year history who smoke or quit in the last 15 years.",
+     "why": "M.P. 105.01: Low dose CT \"should be performed annually on firefighters over the age of 55 who have a 30-pack/year smoking history and currently smoke or have quit in the last 15 years.\"",
+     "opts": [
+      "Over 55, 30 pack-year history, smoking now or quit within 15 years",
+      "Over 45 with any smoking history in the past 10 years",
+      "All members over 50, regardless of smoking history",
+      "Over 40 with a 20 pack-year history who still smoke"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01 Tier guidelines, a firefighter's blood pressure is above 160/100. Which Tier is that?",
+     "a": "Blood pressure above 160/100 is Tier 4.",
+     "why": "M.P. 105.01: Tier 1 is under 120/80, Tier 2 is 120/80-139/89, Tier 3 is 140/90-159/99, and Tier 4 is \"> 160/100.\"",
+     "opts": [
+      "Tier 4",
+      "Tier 3",
+      "Tier 2",
+      "Tier 1"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, a firefighter's stress test comes back below 11.0 METs. What does the Tier program allow?",
+     "a": "The firefighter may be immediately removed from operational duty.",
+     "why": "M.P. 105.01: Firefighters \"may be immediately removed from operational duty for MET levels below 11.0, or if the member is a repeat Tier 4.\" 11.0-12.0 may stay on duty only if it's a first Tier 4 with no cardiac signs.",
+     "opts": [
+      "Immediate removal from operational duty",
+      "Staying on duty if it's a first Tier 4",
+      "A 90-day retest before any duty change",
+      "Placement in Tier 3 with 30-day follow-up"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, what does a Tier 3 designation mean?",
+     "a": "Tier 3 means a mandatory wellness/fitness referral without removal from operational duty.",
+     "why": "M.P. 105.01: Tier 3 is \"sufficient for mandatory referral for wellness/fitness intervention, but removal from operational duty is not yet required.\" Tier 3 and 4 get a department contact every 30 days up to 90 days.",
+     "opts": [
+      "Mandatory wellness referral, but removal from duty not yet required",
+      "Removal from duty plus mandatory wellness referral",
+      "Change is recommended and support is available if wanted",
+      "Minimum health level members should keep for the field"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, a Tier 4 member chooses transitional work instead of personal leave. How does wellness program participation work?",
+     "a": "Participation is mandatory on transitional work; the clinician and Health & Wellness Center Deputy Chief decide when they return.",
+     "why": "M.P. 105.01: On transitional work, fitness and wellness participation is \"mandatory\" (voluntary if on personal leave). Return is at \"the discretion of the clinician and Health & Wellness Center Deputy Chief.\"",
+     "opts": [
+      "It's mandatory, and the clinician and H&W Deputy Chief decide return",
+      "It's voluntary, and the member's BC decides when they return",
+      "It's mandatory, and the member returns after 90 days",
+      "It's voluntary, and the member returns at their next physical"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01, you have a bloodborne exposure on a call. Who do you contact first?",
+     "a": "Contact the alarm room and request the on-duty infection control officer immediately.",
+     "why": "M.P. 105.01: \"The exposed member should contact the alarm room and request the on-duty infection control officer immediately after an exposure.\" The ICO determines severity.",
+     "opts": [
+      "The alarm room, to request the on-duty infection control officer",
+      "The Health Center front desk the next business day",
+      "Your Battalion Chief, who calls the receiving hospital",
+      "Airport Concentra, for HIV prophylaxis evaluation"
+     ],
+     "src": "M.P. 105.01"
+    },
+    {
+     "q": "Per M.P. 105.01A, what is the point of entry for all Member Services needs?",
+     "a": "Car 20 is the point of entry, reached at 602-262-PEER.",
+     "why": "M.P. 105.01A: \"Car 20 is the point of entry for all Member Services needs. All members should be directed to the on-duty Car 20 ... by calling 602-262-PEER.\"",
+     "opts": [
+      "The on-duty Car 20, at 602-262-PEER",
+      "The Fire Support Line, at 602-845-FIRE",
+      "The Health Center case manager",
+      "Your Battalion Chief, via the chain of command"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, under the Craig Tiger Act how many trauma counseling sessions can a member receive?",
+     "a": "Members can receive up to 12 counseling sessions with a trauma-trained licensed counselor.",
+     "why": "M.P. 105.01A: \"Pursuant to the Craig Tiger Act, members are eligible to receive up to 12 counseling sessions by a licensed counselor\" trained in trauma.",
+     "opts": [
+      "Up to 12",
+      "Up to 6",
+      "Up to 10",
+      "Up to 20"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, what is the Peer Support Team's mission statement?",
+     "a": "The Peer Support Team mission is \"Listen, Refer, & Support.\"",
+     "why": "M.P. 105.01A: Mission Statement: \"Listen, Refer, & Support.\" Peers are not trained mental health professionals and refer to professional providers. (\"Our Family Helping Our Family\" is the Member Services mission.)",
+     "opts": [
+      "Listen, Refer, & Support",
+      "Assess, Treat, & Follow Up",
+      "Our Family Helping Our Family",
+      "Recognize, Respond, & Report"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, which member would appear on the quarterly Member Services leave report?",
+     "a": "A member with 4 or more sick leave occurrences in 90 days (or 100 hours or less of sick leave) appears on the report.",
+     "why": "M.P. 105.01A: Criteria are \"100 hours or less accumulated sick leave, or 4 or more sick leave occurrences in 90 days.\" The report is non-punitive.",
+     "opts": [
+      "One with 4 sick leave occurrences in the last 90 days",
+      "One with 150 hours of accumulated sick leave",
+      "One with 2 sick leave occurrences in the last 30 days",
+      "One who used vacation for 3 shifts in a row"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, how often does Member Services contact a member who is off on industrial leave?",
+     "a": "Member Services contacts members on industrial leave monthly.",
+     "why": "M.P. 105.01A: Members on industrial leave \"will be contacted by Member Services on a monthly basis,\" in addition to Health Center contact.",
+     "opts": [
+      "Monthly",
+      "Weekly",
+      "Quarterly",
+      "Only if the member asks"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, a supervisor recommends (not remands) an employee to counseling. What does the supervisor learn about it?",
+     "a": "On a recommendation, the supervisor is not told of attendance, course of treatment or discharge date.",
+     "why": "M.P. 105.01A: \"When recommendations are made, the supervisor is not informed of the employee's attendance, course of treatment, or discharge date.\" A remanded employee signs a release covering those items.",
+     "opts": [
+      "Nothing about attendance, treatment or discharge date",
+      "Attendance and progress on the treatment plan",
+      "Only the date counseling services are completed",
+      "Attendance, drug screens and cooperation level"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, which is true of the Fire Support Line (602-845-FIRE)?",
+     "a": "The Fire Support Line is completely confidential, separate from the department and union, and available 24 hours a day.",
+     "why": "M.P. 105.01A: It is \"completely confidential and separate from the department or union and available 24 hours a day,\" and can send a crisis team in unmarked vehicles.",
+     "opts": [
+      "It's confidential, separate from dept and union, and runs 24/7",
+      "It's run by Local 493 Member Services during business hours",
+      "It's staffed by the Peer Support Team from Car 20",
+      "It's a Health Center line for industrial injury questions"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01A, when may a Peer Support Team member break confidentiality?",
+     "a": "Peers break confidentiality only if the person is a danger to self or others.",
+     "why": "M.P. 105.01A: \"Peers will not break confidentiality unless the person is a danger to himself/herself or to others.\"",
+     "opts": [
+      "When the person is a danger to themselves or others",
+      "When the member's supervisor asks for an update",
+      "When the Peer Support Coordinator requests details",
+      "When the issue involves a policy violation"
+     ],
+     "src": "M.P. 105.01A"
+    },
+    {
+     "q": "Per M.P. 105.01C, what is the difference between the two Alternative Dispute Resolution options?",
+     "a": "Option One handles it informally at the level it occurs using a worksheet; Option Two is assisted mediation.",
+     "why": "M.P. 105.01C: Option One handles differences \"informally at the level at which they occur\" with a worksheet. Option Two \"makes assisted mediation available.\"",
+     "opts": [
+      "Option One is an informal worksheet; Option Two is mediation",
+      "Option One is mediation; Option Two is a formal complaint",
+      "Option One goes to the BC; Option Two goes to the Fire Chief",
+      "Option One is for crews; Option Two is for supervisors only"
+     ],
+     "src": "M.P. 105.01C"
+    },
+    {
+     "q": "Per M.P. 105.01C, who can start the Option One informal problem-solving process?",
+     "a": "Anyone in the workgroup affected by the problem can initiate Option One.",
+     "why": "M.P. 105.01C: Option One \"can be initiated by anyone in the workgroup affected by the problem.\" It is not necessary for the supervisor to start it.",
+     "opts": [
+      "Anyone in the affected workgroup",
+      "Only the workplace supervisor",
+      "Only the Personnel Section",
+      "Only a union representative"
+     ],
+     "src": "M.P. 105.01C"
+    },
+    {
+     "q": "Per M.P. 105.01C, who decides whether ADR mediation uses an internal or an outside professional mediator?",
+     "a": "The parties in the dispute decide on an internal or external mediator.",
+     "why": "M.P. 105.01C: \"The decision on whether to use an internal or external mediator is up to the parties involved in the dispute.\" The Personnel Section or union rep can arrange it.",
+     "opts": [
+      "The parties involved in the dispute",
+      "The Personnel Section",
+      "The Battalion Chief",
+      "The union representative"
+     ],
+     "src": "M.P. 105.01C"
+    },
+    {
+     "q": "Per M.P. 105.01C, a mediation doesn't resolve the dispute. What happens to what was said in it?",
+     "a": "It stays confidential; nothing said can be used against the parties and the mediator can't be compelled to testify.",
+     "why": "M.P. 105.01C: Mediation is confidential and \"nothing the parties say can be used against them should the matter not be resolved. The mediator cannot be compelled to testify.\"",
+     "opts": [
+      "It stays confidential and can't be used against the parties",
+      "It's forwarded to the Personnel Section for the complaint",
+      "The mediator may testify about it if a complaint is filed",
+      "It goes in each party's supervisor file for one year"
+     ],
+     "src": "M.P. 105.01C"
+    },
+    {
+     "q": "Per M.P. 105.02, what are the four categories of member death?",
+     "a": "LODD I, LODD II, Off-Duty Death of an Active Member, and Retiree Death.",
+     "why": "M.P. 105.02: \"There are currently four categories of member deaths ... LODD I, LODD II, Off Duty Death of Active Member, and Retiree Death.\"",
+     "opts": [
+      "LODD I, LODD II, off-duty death of active member, retiree death",
+      "LODD, on-duty natural death, off-duty death, retiree death",
+      "LODD I, LODD II, LODD III, retiree death",
+      "Fireground death, training death, off-duty death, retiree death"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, for which category of member death is an Honor Watch provided?",
+     "a": "Honor Watch is provided only for LODD I.",
+     "why": "M.P. 105.02: \"Honor Watch (only for LODD I) ensures the firefighter is never left alone from the time of death to interment.\" LODD II, off-duty and retiree deaths list \"No Honor Watch.\"",
+     "opts": [
+      "LODD I only",
+      "LODD I and LODD II",
+      "All active member deaths",
+      "Any death, if the family asks"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, a member is fatally hurt in a crash while commuting home within 2 hours of a shift. Which category is that?",
+     "a": "Commuting as defined under COP rules (2 hours to and from work) falls under LODD II.",
+     "why": "M.P. 105.02: LODD II includes \"Commuting as defined under COP rules (2 hours to and from work)\" as well as presumptive cardiacs and cancers.",
+     "opts": [
+      "LODD II",
+      "LODD I",
+      "Off-duty death of an active member",
+      "It depends only on the family's wishes"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, a line of duty death may need up to three IMT/ICS organizations under Unified Command. What are they?",
+     "a": "Resolving the original incident, the death investigation, and the memorial-related services.",
+     "why": "M.P. 105.02: A LODD may require three IMT/ICS organizations for \"1) Resolving the original incident ... 2) The death investigation. 3) The memorial-related services.\"",
+     "opts": [
+      "The original incident, the death investigation, memorial services",
+      "Fire operations, police operations, hospital operations",
+      "Notification, honor watch, the procession",
+      "Family liaison, honor guard, media relations"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, after a LODD, how long is the U.S. flag flown at the fallen member's fire station?",
+     "a": "It is flown no less than 2 days, then recovered and returned with the member.",
+     "why": "M.P. 105.02: \"The US Flag will be flown at the fallen members Fire Station or wherever appropriate for no less than 2 days.\"",
+     "opts": [
+      "No less than 2 days",
+      "Until sunset on the day of death",
+      "No less than 7 days",
+      "Until the day of the funeral"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, who contacts the Honor Guard on behalf of a deceased member's family to request services?",
+     "a": "L493 Member Services contacts the Honor Guard on the family's behalf.",
+     "why": "M.P. 105.02: \"L493 Member Services contacts the Honor Guard on behalf of the family to request general or specific services.\"",
+     "opts": [
+      "L493 Member Services",
+      "The Fire Chief's office",
+      "The family liaison",
+      "The Battalion Chief"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02, how does the LODD I procession differ from the LODD II procession?",
+     "a": "LODD I gets full road closure and PD escort; LODD II has no road closure and a small PD escort.",
+     "why": "M.P. 105.02: LODD I: \"Full road closure, P.D. escorts & motorcade.\" LODD II: \"No road/freeway closure, small PD escort for safety.\"",
+     "opts": [
+      "LODD I gets full road closure; LODD II has a small PD escort",
+      "LODD II gets full road closure; LODD I has a small PD escort",
+      "Both get full road closure with a PD motorcade",
+      "Neither gets a PD escort; both use Honor Guard only"
+     ],
+     "src": "M.P. 105.02"
+    },
+    {
+     "q": "Per M.P. 105.02A, after a member dies, who secures their personal effects on Fire Department property?",
+     "a": "The Performance Auditing Section secures the effects and delivers them to Fire Administration.",
+     "why": "M.P. 105.02A: \"The Performance Auditing Section will be assigned to secure the personal effects of the deceased member and deliver them to Fire Administration.\" Personnel inventories them.",
+     "opts": [
+      "The Performance Auditing Section",
+      "The member's Company Officer",
+      "The Personnel Section",
+      "Local 493 Member Services"
+     ],
+     "src": "M.P. 105.02A"
+    },
+    {
+     "q": "Per M.P. 105.02A, what must be documented when a deceased member's effects are handed over?",
+     "a": "The date, time and location of disposition plus the name and relationship of the person accepting it.",
+     "why": "M.P. 105.02A: Documentation must show \"date, time and location of disposition\" and \"the name and the relationship of the individual accepting the property,\" then goes in the personnel file.",
+     "opts": [
+      "Date, time, place, and the receiver's name and relationship",
+      "Only the receiver's signature and the item count",
+      "The Battalion Chief's approval and the inventory",
+      "The next of kin's address and the funeral date"
+     ],
+     "src": "M.P. 105.02A"
+    },
+    {
+     "q": "Per M.P. 105.02B, who assigns the Investigation Team after a line of duty death?",
+     "a": "The Fire Chief assigns the Investigation Team as soon as possible.",
+     "why": "M.P. 105.02B: \"As soon as possible after a line of duty death has occurred, the Fire Chief shall assign an Investigation Team.\"",
+     "opts": [
+      "The Fire Chief",
+      "The Safety Officer",
+      "The Shift Commander",
+      "The Arizona Industrial Commission"
+     ],
+     "src": "M.P. 105.02B"
+    },
+    {
+     "q": "Per M.P. 105.02B, what is the principal goal of the LODD Investigation Team?",
+     "a": "Identify causal factors and recommend actions to prevent or reduce the risk of a similar event.",
+     "why": "M.P. 105.02B: The principal goal is \"to identify the causal factors ... and to recommend actions that would prevent or reduce the risk of a similar event.\" Securing evidence is secondary.",
+     "opts": [
+      "Find causal factors and recommend ways to prevent a repeat",
+      "Determine fault and recommend discipline",
+      "Secure evidence for litigation and regulators",
+      "Determine the fire's cause and origin"
+     ],
+     "src": "M.P. 105.02B"
+    },
+    {
+     "q": "Per M.P. 105.02B, which members must be on the LODD Investigation Team?",
+     "a": "The Fire Department Safety Officer and a Performance Auditor, plus others as needed.",
+     "why": "M.P. 105.02B: The team \"shall include the Fire Department Safety Officer, a Performance Auditor and such additional personnel as may be required.\" The union is invited to appoint a member when represented employees are involved.",
+     "opts": [
+      "The FD Safety Officer and a Performance Auditor",
+      "The Fire Investigator and the Shift Commander",
+      "The Fire Chief and the Local 493 President",
+      "A City Attorney and a Risk Management analyst"
+     ],
+     "src": "M.P. 105.02B"
+    },
+    {
+     "q": "Per M.P. 105.02B, which state agency investigates incidents causing serious injury or death of PFD members?",
+     "a": "The Division of Occupational Safety and Health of the Arizona Industrial Commission.",
+     "why": "M.P. 105.02B: \"The Division of Occupational Safety and Health of the Arizona Industrial Commission will conduct an investigation.\" The team provides liaison with the OSHA investigators.",
+     "opts": [
+      "Arizona Industrial Commission's Div. of Occupational Safety & Health",
+      "Arizona Department of Public Safety",
+      "State Fire Marshal's Office",
+      "Arizona Department of Health Services"
+     ],
+     "src": "M.P. 105.02B"
+    },
+    {
+     "q": "Per M.P. 105.02B, what happens to an investigator's notes once they are put into report form?",
+     "a": "The notes are destroyed once reduced to report form.",
+     "why": "M.P. 105.02B: \"An investigator's notes should be used only to refresh the memory, and once they are reduced to report form, destroyed.\"",
+     "opts": [
+      "They're destroyed",
+      "They're attached to the final report",
+      "They go to the City Attorney",
+      "They're kept for 90 days"
+     ],
+     "src": "M.P. 105.02B"
+    },
+    {
+     "q": "Per M.P. 105.02C, who manages communicating a member's serious illness or on-duty injury?",
+     "a": "The Chief of Personnel Services or the Shift Commander manages it.",
+     "why": "M.P. 105.02C: \"This procedure will be managed by the Chief of Personnel Services or the Shift Commander.\"",
+     "opts": [
+      "The Chief of Personnel Services or the Shift Commander",
+      "The Battalion Chief or the Company Officer",
+      "The Health Center Deputy Chief or a clinician",
+      "The Public Affairs Section or the PIO"
+     ],
+     "src": "M.P. 105.02C"
+    },
+    {
+     "q": "Per M.P. 105.02C, how should the Good and Welfare Officer make the first contact with an injured member's family in town?",
+     "a": "In person, in Fire Department uniform and a marked vehicle whenever possible.",
+     "why": "M.P. 105.02C: Initial contacts \"will be made in Fire Department uniform and in a marked Fire Department vehicle whenever possible\" and in person. Out-of-town contacts are by phone.",
+     "opts": [
+      "In person, in uniform, in a marked FD vehicle when possible",
+      "By phone first, then in person if the family wants",
+      "By e-mail through the Fire/Help Desk",
+      "In person, in civilian clothes, in a personal vehicle"
+     ],
+     "src": "M.P. 105.02C"
+    },
+    {
+     "q": "Per M.P. 105.02C, how often should patient updates on an injured member go out through the Fire/Help Desk?",
+     "a": "Every shift the ill or injured member would have been on duty, more often if the condition changes significantly.",
+     "why": "M.P. 105.02C: Updates \"should be sent via E-mail through the Fire/Help Desk every shift that the ill or injured member would have been on duty.\"",
+     "opts": [
+      "Every shift the member would have been on duty",
+      "Once a day, every day",
+      "Once a week until discharge",
+      "Only when the condition changes"
+     ],
+     "src": "M.P. 105.02C"
+    },
+    {
+     "q": "Per M.P. 105.02C, which is a Shift Commander responsibility after a member's serious on-duty injury?",
+     "a": "Follow up with the Health Center Case Manager to estimate time off and begin leave coordination (and follow up at the hospital).",
+     "why": "M.P. 105.02C: The Shift Commander will \"follow-up with the Case Manager at the Department health Center to estimate time the member will be off.\" Family notification is the Good and Welfare Officer's job.",
+     "opts": [
+      "Follow up with the Health Center Case Manager on leave",
+      "Personally notify the member's family at home",
+      "Send the e-mail patient updates every shift",
+      "Get the emergency contact from personnel records"
+     ],
+     "src": "M.P. 105.02C"
+    },
+    {
+     "q": "Per M.P. 105.02D, who may NOT be considered for the Lead Chaplain (Chaplain 1) role?",
+     "a": "Sworn personnel shall not be considered for Lead Chaplain.",
+     "why": "M.P. 105.02D: The Lead Chaplain is the program manager; \"Sworn personnel shall not be considered for this role.\"",
+     "opts": [
+      "Sworn personnel",
+      "Civilian staff",
+      "City volunteers",
+      "Outside clergy"
+     ],
+     "src": "M.P. 105.02D"
+    },
+    {
+     "q": "Per M.P. 105.02D, how is the Fire Department Chaplain appointed, and who do they report to?",
+     "a": "Appointed by the Fire Chief after consulting the Union President; reports to the Chief of Member Services.",
+     "why": "M.P. 105.02D: The Chaplain is \"appointed by the Fire Chief after consultation with the Firefighters' Union President\" and \"will report to Chief of Member Services.\"",
+     "opts": [
+      "Fire Chief after consulting Union President; reports to Chief of Member Services",
+      "Union President after consulting Fire Chief; reports to the Fire Chief",
+      "Fire Chief alone; reports to the Health Center Deputy Chief",
+      "Executive Team vote; reports to the Local 493 VP of Member Services"
+     ],
+     "src": "M.P. 105.02D"
+    },
+    {
+     "q": "Per M.P. 105.02D, what is the employment status of PFD Chaplains?",
+     "a": "Chaplains serve as official City of Phoenix volunteers.",
+     "why": "M.P. 105.02D: \"Chaplains will serve as official City of Phoenix volunteers.\" The department provides a uniform, City email, ID card and a vehicle when available.",
+     "opts": [
+      "Official City of Phoenix volunteers",
+      "Part-time City employees",
+      "Local 493 contractors",
+      "Unpaid sworn reserves"
+     ],
+     "src": "M.P. 105.02D"
+    },
+    {
+     "q": "Per M.P. 105.02E, you're attending an active-duty member's funeral but don't have a complete Class A. What do you wear?",
+     "a": "Civilian clothes; full Class A is the only acceptable uniform for a LODD or active-duty funeral.",
+     "why": "M.P. 105.02E: For LODD or active duty funerals, \"Full Class A is the only acceptable uniform. If you do not have a complete Class A then civilian clothes.\"",
+     "opts": [
+      "Civilian clothes",
+      "Class B with a tie",
+      "Fatigues with collar",
+      "Partial Class A"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, which uniforms are acceptable for a retiree's funeral?",
+     "a": "Full Class A, Class B with tie, or the fatigue uniform with collar.",
+     "why": "M.P. 105.02E: Retiree funeral: \"Full class A, or Class B (with tie), or Fatigue uniform with collar.\"",
+     "opts": [
+      "Full Class A, Class B with tie, or fatigues with collar",
+      "Full Class A only, or civilian clothes",
+      "Class B with tie or station uniform only",
+      "Any clean uniform with a badge shroud"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, how is a badge mourning shroud worn?",
+     "a": "A 3/8-inch plain black elastic band worn horizontally across the breast badge or ID card.",
+     "why": "M.P. 105.02E: Shrouds \"are 3/8\" plain black elastic, worn horizontally across the breast badge or ID card.\"",
+     "opts": [
+      "3/8\" plain black elastic, horizontal across the badge",
+      "1/2\" black band, diagonal across the badge",
+      "3/8\" black band with a blue stripe, vertical",
+      "1\" black ribbon pinned below the badge"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, for a line of duty death, how long are badge shrouds worn?",
+     "a": "Until the end of the day of interment (burial).",
+     "why": "M.P. 105.02E: \"For Line of Duty Death, they are worn until end of day interment (burial).\" For memorial events they are worn for the duration of the event.",
+     "opts": [
+      "Until the end of the day of interment",
+      "From notification until the funeral starts",
+      "For 30 days after the death",
+      "Only during the memorial service"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, how are Honor Watch shifts set up after a line of duty death?",
+     "a": "Anyone may sign up for 1+ hour shifts from time of death until the start of the funeral.",
+     "why": "M.P. 105.02E: \"Any person may sign up for 'Honor Watch' from time of death until the start of the funeral, 1+ hour shifts\" so the remains are never left alone.",
+     "opts": [
+      "1+ hour shifts from death until the funeral starts",
+      "4-hour shifts by Honor Guard members only",
+      "12-hour shifts from death until burial",
+      "1+ hour shifts, but only during viewings"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, how is the ceremonial (slow) salute to the remains performed?",
+     "a": "Take 3 seconds to raise it, hold until \"order arms,\" and take 3 seconds to lower it.",
+     "why": "M.P. 105.02E: The ceremonial salute is \"performed to the remains. Take 3 seconds to reach your brow/brim, hold it until 'order arms' and take 3 seconds to lower.\" The snap salute is to the US Flag.",
+     "opts": [
+      "3 seconds up, hold until order arms, 3 seconds down",
+      "Snap up, hold for a count of 5, snap down",
+      "5 seconds up, hold until order arms, 5 seconds down",
+      "2 seconds up, hold until Taps ends, then snap down"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, you're indoors at a church service without your cover and hear \"Present, ARMS.\" What do you do?",
+     "a": "Present arms with the right hand over the heart.",
+     "why": "M.P. 105.02E: \"When indoors and/or the member does not have their cap on, they present arms with right hand over their heart.\"",
+     "opts": [
+      "Place your right hand over your heart",
+      "Give a hand salute to the eyebrow",
+      "Remain at attention without moving",
+      "Go to ceremonial rest, hands at belt line"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, a flag is mounted on the front of an apparatus. Where does the U.S. flag go?",
+     "a": "On the right (Captain's) side of the apparatus.",
+     "why": "M.P. 105.02E: The US flag \"shall be on the right (Captain's side) of the apparatus itself.\" The Arizona flag goes on the Engineer's side.",
+     "opts": [
+      "On the Captain's (right) side",
+      "On the Engineer's (left) side",
+      "In the center of the bumper",
+      "On either side if it's in front"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, after a member's line of duty death, how long do station flags stay at half-staff?",
+     "a": "Until sunset of the day of the funeral.",
+     "why": "M.P. 105.02E: For a LODD, \"Flags will remain at half-staff until sunset of the day of the funeral.\"",
+     "opts": [
+      "Until sunset on the day of the funeral",
+      "For 30 days after the death",
+      "Until noon on the day of the funeral",
+      "Until the Fire Chief orders them raised"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.02E, your station's flag floodlight is out and it's getting dark. What do you do with the U.S. flag?",
+     "a": "Lower and stow it until daylight.",
+     "why": "M.P. 105.02E: \"If there is no light shining on the US Flag in dark, it is expected to be lowered and stowed until daylight.\" Flags are raised briskly and lowered slowly.",
+     "opts": [
+      "Lower and stow it until daylight",
+      "Leave it up; storm flags can fly 24/7",
+      "Lower it to half-staff overnight",
+      "Leave it up and report the light out"
+     ],
+     "src": "M.P. 105.02E"
+    },
+    {
+     "q": "Per M.P. 105.03, sworn firefighters retire under PSPRS. Which statement about PSPRS is correct?",
+     "a": "PSPRS is a state retirement system and it's the sworn member's responsibility to contact PSPRS.",
+     "why": "M.P. 105.03: PSPRS \"is a state retirement system, NOT a city retirement system\" and \"it is the sworn members responsibility to contact PSPRS.\" Civilians are in COPERS.",
+     "opts": [
+      "It's a state system, and the member must contact PSPRS",
+      "It's a city system run by the City Retirement Office",
+      "It's run by Local 493, which files for the member",
+      "It's the same system as COPERS for civilians"
+     ],
+     "src": "M.P. 105.03"
+    },
+    {
+     "q": "Per M.P. 105.03, what is the first step a separating employee must take?",
+     "a": "Notify the Deputy Chief of Fire HR and the Human Resource Officer of their exit date.",
+     "why": "M.P. 105.03: Step 1 is \"Notify the Deputy Chief of Fire HR AND the Human Resource Officer of their exit date,\" then supervisors, PSPRS/COPERS and Local 493.",
+     "opts": [
+      "Notify the Deputy Chief of Fire HR and the HR Officer of the exit date",
+      "Schedule the Last Check Meeting with Local 493",
+      "Contact Nationwide to roll over personal leave",
+      "Turn in all City equipment to Resource Management"
+     ],
+     "src": "M.P. 105.03"
+    },
+    {
+     "q": "Per M.P. 105.03, how far before the retirement date should you contact Phoenix Fire Human Resources?",
+     "a": "30 days out from the retirement date.",
+     "why": "M.P. 105.03: \"Contact should be done 30 days out from retirement date\" to schedule the last check meeting, return equipment and request a retirement badge.",
+     "opts": [
+      "30 days",
+      "7 days",
+      "90 days",
+      "6 months"
+     ],
+     "src": "M.P. 105.03"
+    },
+    {
+     "q": "Per M.P. 105.03, when must the Nationwide Final Pay Form for payroll deferrals be submitted?",
+     "a": "At least 10 days before the retirement date.",
+     "why": "M.P. 105.03: \"Ensure submission 10 days BEFORE your retirement date.\" Contact Nationwide about two months prior in case a catch-up is needed.",
+     "opts": [
+      "10 days before the retirement date",
+      "On the retirement date",
+      "30 days after the retirement date",
+      "6 months before the retirement date"
+     ],
+     "src": "M.P. 105.03"
+    },
+    {
+     "q": "Per M.P. 105.03, how long does the Health Center keep a retiree's medical and industrial injury records?",
+     "a": "35 years post-retirement, per OSHA.",
+     "why": "M.P. 105.03: \"Per OSHA, the Health Center retains your medical and industrial injury records 35 years post-retirement.\"",
+     "opts": [
+      "35 years after retirement",
+      "7 years after retirement",
+      "10 years after retirement",
+      "For the retiree's lifetime"
+     ],
+     "src": "M.P. 105.03"
+    },
+    {
+     "q": "Per M.P. 105.03, how long can a retirement badge and wallet order take?",
+     "a": "Up to 9 months (the department plaque takes up to 9 weeks).",
+     "why": "M.P. 105.03: \"Retirement badge & wallet (Order takes up to 9 months)\"; the department plaque \"takes up to 9 weeks.\"",
+     "opts": [
+      "Up to 9 months",
+      "Up to 9 weeks",
+      "Up to 30 days",
+      "Up to 1 year"
+     ],
+     "src": "M.P. 105.03"
+    }
+   ]
+  },
+  {
+   "title": "Vol I: Member Services, Wellness & Recognition (105) (Part 2)",
+   "sub": "Pension Board elections, awards and Green Sheets, HR file access, cadets, reclassification, re-employment, removing file documents, labor/management, and social media.",
+   "concepts": [
+    "<b>105.04</b>: Pension Board has 5 members; 2 sworn elected by secret ballot to 4-year staggered terms; 50% + 1 wins, else top-two run-off.",
+    "<b>105.05</b>: Fire Chief appoints the Awards Committee (incl. L493 rep); nominations go in writing to Awards Committee, Public Affairs.",
+    "<b>105.05A</b>: Any supervisor may recommend a Green Sheet; the immediate supervisor presents it; the original stays in the personnel file.",
+    "<b>105.06</b>: Supervisors access only files of those they supervise; only full-access people may remove a file; every access is logged.",
+    "<b>105.07</b>: Cadets are 18+ with EMT-B, volunteer 32 hrs/quarter, ride max two 24-hr shifts/year. <b>105.07A</b>: crews of 3+ sworn, no hot zone.",
+    "<b>105.10</b>: Reinstatement list within 24 months; one-year probation; only one reinstatement for sworn members.",
+    "<b>105.11</b>: Usually 1 year before a petition; suspensions of 80 hrs or less kept 10 years; over 80 hrs, demotions and dismissals are permanent.",
+    "<b>105.16</b>: Fire Chief + L493 President chair the Correlating Team; meet quarterly (min twice a year); 7-day notice; minutes within 2 weeks.",
+    "<b>105.18</b>: Use the Headline Test; no emergency-scene posts without authorization; station accounts need Fire Chief and Public Affairs approval."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 105.04, how are the two sworn members of the five-member Phoenix Fire Pension Board chosen?",
+     "a": "They are elected by secret ballot to four-year staggered terms.",
+     "why": "M.P. 105.04: The board includes \"two sworn members elected by secret ballot to four-year staggard terms,\" plus the Mayor or designee, Civil Service Board chair and a citizen.",
+     "opts": [
+      "Elected by secret ballot to 4-year staggered terms",
+      "Appointed by the Fire Chief to 2-year terms",
+      "Elected by open vote to 4-year concurrent terms",
+      "Appointed by the Union President to 3-year terms"
+     ],
+     "src": "M.P. 105.04"
+    },
+    {
+     "q": "Per M.P. 105.04, what does the Phoenix Fire Pension Board determine?",
+     "a": "Line of Duty Death survivor benefits and disability benefits.",
+     "why": "M.P. 105.04: The board, an arm of PSPRS, \"is responsible for determining Line of Duty Death Survivor Benefits and Disability Benefits for members.\"",
+     "opts": [
+      "LODD survivor benefits and disability benefits",
+      "Retirement dates and DROP eligibility",
+      "Pension contribution rates for members",
+      "Promotional list rankings"
+     ],
+     "src": "M.P. 105.04"
+    },
+    {
+     "q": "Per M.P. 105.04, you've been nominated for the Pension Board and want to campaign at stations. When may you do it?",
+     "a": "Campaigning must be done during the campaigner's off-duty hours.",
+     "why": "M.P. 105.04: Nominees may contact stations to campaign, but \"this campaigning must be done during the campaigner's off-duty hours.\"",
+     "opts": [
+      "Only during your off-duty hours",
+      "On duty, with your BC's approval",
+      "Only at the published voting site",
+      "Any time, if a Union Officer is present"
+     ],
+     "src": "M.P. 105.04"
+    },
+    {
+     "q": "Per M.P. 105.04, no Pension Board candidate gets 50% plus one vote. What happens?",
+     "a": "A run-off is held between the two top candidates; a tie is decided by coin toss.",
+     "why": "M.P. 105.04: \"A run-off election will be held between the two candidates receiving the most votes. If tied, selection will be determined by a coin toss.\"",
+     "opts": [
+      "A run-off between the top two; a tie is settled by a coin toss",
+      "The top vote-getter wins; a tie is settled by a coin toss",
+      "A new nomination period opens and voting is repeated",
+      "The Fire Chief picks from the top two vote-getters"
+     ],
+     "src": "M.P. 105.04"
+    },
+    {
+     "q": "Per M.P. 105.04, a Pension Board ballot has a write-in name. What happens to it?",
+     "a": "No write-ins are counted; the ballot is discarded after the others are counted.",
+     "why": "M.P. 105.04: \"Absolutely No write-ins will be counted and the ballot listing the write-in will be discarded.\" Ballots are kept at least 90 days after certification.",
+     "opts": [
+      "It's discarded after the other ballots are counted",
+      "It counts if the person is a PSPRS member",
+      "It's counted only in a run-off election",
+      "It's set aside for the Fire Chief to review"
+     ],
+     "src": "M.P. 105.04"
+    },
+    {
+     "q": "Per M.P. 105.05, what is the Medal of Valor awarded for?",
+     "a": "A conspicuous act of valor and heroism under hazardous conditions, in a life-threatening position, to save another.",
+     "why": "M.P. 105.05: The Medal of Valor is for \"a conspicuous act of valor and heroism ... in which the person is placed in a life threatening position to save the life of another.\" The Medal of Honor is for outstanding service.",
+     "opts": [
+      "Heroism in a life-threatening position to save another's life",
+      "Outstanding service to the department or community safety",
+      "Outstanding performance of duties worthy of recognition",
+      "Considerable time donated to bettering the community"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05, who appoints the Awards Committee, and who sits on it?",
+     "a": "The Fire Chief appoints a cross section of members plus a Local 493 representative.",
+     "why": "M.P. 105.05: \"A selection board composed of a cross section of Fire Department members and a representative from Local 493 are appointed by the Fire Chief.\"",
+     "opts": [
+      "Fire Chief; a cross section of members and a Local 493 rep",
+      "Local 493 President; a panel of Captains and BCs",
+      "Public Affairs; Executive Staff and the Shift Commanders",
+      "Fire Chief; prior Medal of Valor recipients only"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05, you want to nominate a crew member for an award. Where does the written recommendation go?",
+     "a": "To the Awards Committee in the Public Affairs Section.",
+     "why": "M.P. 105.05: \"The award recommendation should be forwarded in writing to the Awards Committee, Public Affairs Section.\" Any employee may recommend.",
+     "opts": [
+      "The Awards Committee, Public Affairs Section",
+      "Your Battalion Chief, who forwards it on",
+      "The Personnel Section for the member's file",
+      "The Fire Chief's office directly"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05, a bystander did CPR on a patient before the first engine arrived. Which award fits?",
+     "a": "The Citizen Lifesaving Award.",
+     "why": "M.P. 105.05: The Citizen Lifesaving Award goes to \"a person outside the PFD who has been involved in a lifesaving effort at an emergency scene before the arrival of the fire department.\"",
+     "opts": [
+      "Citizen Lifesaving Award",
+      "Citizen Heroism Award",
+      "Award of Merit",
+      "Community Service Award"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05, where are award breast pins worn on the uniform?",
+     "a": "On the right breast pocket of the dress shirt, or directly under the name/rank tag of the jacket.",
+     "why": "M.P. 105.05: Pins \"will be worn on the right breast pocket on the dress shirt or directly under the name/rank tag of the Department jacket.\"",
+     "opts": [
+      "Right breast pocket of dress shirt, or under the jacket name tag",
+      "Left breast pocket of dress shirt, above the badge",
+      "Right collar of the dress shirt",
+      "Left sleeve of the jacket, below the patch"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05, which awards may be presented during the year instead of at the annual ceremony?",
+     "a": "Certificates of Commendation, Unit and Individual Citations, Safety Awards and Citizen Lifesaving Awards.",
+     "why": "M.P. 105.05: Awards are presented annually, except \"Certificates of Commendation; Unit Citation/Commendations; Individual Citation/Commendations; Safety Awards; and Citizen Lifesaving Awards.\"",
+     "opts": [
+      "Certificates of Commendation and Citizen Lifesaving Awards",
+      "The Medal of Valor and the Medal of Honor",
+      "Firefighter of the Year and the Award of Merit",
+      "Community Service Awards and the Medal of Honor"
+     ],
+     "src": "M.P. 105.05"
+    },
+    {
+     "q": "Per M.P. 105.05A, who may recommend a member for a Record of Exceptional Performance (Green Sheet)?",
+     "a": "Any supervisor of the Department.",
+     "why": "M.P. 105.05A: \"Any supervisor of the Department may recommend a member\" for a Green Sheet, to the member's immediate supervisor.",
+     "opts": [
+      "Any supervisor of the Department",
+      "Any member of the Department",
+      "Only the member's Battalion Chief",
+      "Only the Awards Committee"
+     ],
+     "src": "M.P. 105.05A"
+    },
+    {
+     "q": "Per M.P. 105.05A, who presents a Green Sheet to the member, and where does the original go?",
+     "a": "The immediate supervisor presents it; the original goes to the personnel file, with copies to the member and the Fire Chief.",
+     "why": "M.P. 105.05A: Green Sheets are \"presented to the member(s) by the immediate supervisor.\" The original goes to the personnel file; copies go to the member and the Fire Chief.",
+     "opts": [
+      "Immediate supervisor; original to the personnel file",
+      "Battalion Chief; original to the member",
+      "Fire Chief; original to Public Affairs",
+      "Immediate supervisor; original to the Fire Chief"
+     ],
+     "src": "M.P. 105.05A"
+    },
+    {
+     "q": "Per M.P. 105.05A, how is the original Green Sheet routed, and how long is it kept?",
+     "a": "Immediate supervisor to the BC/Section Head to Personnel Services, kept for the duration of employment.",
+     "why": "M.P. 105.05A: The BC or Section Head forwards the original to Personnel Services \"to be placed into the employee's personnel file for the duration of employment.\"",
+     "opts": [
+      "Supervisor > BC/Section Head > Personnel; kept for employment",
+      "Supervisor > Fire Chief > Personnel; kept for 3 years",
+      "Supervisor > Public Affairs > Personnel; kept for 5 years",
+      "Supervisor > BC > Awards Committee; kept for 1 year"
+     ],
+     "src": "M.P. 105.05A"
+    },
+    {
+     "q": "Per M.P. 105.06, a Captain wants to look at personnel files. Which files may they access?",
+     "a": "Their own file and the files of employees they supervise.",
+     "why": "M.P. 105.06: Supervisors \"shall have access only to the files of the employees that they supervise. Access to files of employees of equal or superior rank is prohibited.\" All have access to their own.",
+     "opts": [
+      "Their own and those of employees they supervise",
+      "Any member below the rank of Battalion Chief",
+      "Any file, if logged by the Records Clerk",
+      "Only their own file"
+     ],
+     "src": "M.P. 105.06"
+    },
+    {
+     "q": "Per M.P. 105.06, who may remove a personnel file from the Personnel Aide or Records Clerk's location?",
+     "a": "Only individuals with full access authorization.",
+     "why": "M.P. 105.06: \"Only individuals with full access authorization may remove a file from the Aide or Clerk's location,\" and removal is logged.",
+     "opts": [
+      "Only individuals with full access authorization",
+      "Any supervisor with a logged request",
+      "Any member taking their own file",
+      "Only the Fire Chief"
+     ],
+     "src": "M.P. 105.06"
+    },
+    {
+     "q": "Per M.P. 105.06, what must the log entry show before a personnel file is furnished?",
+     "a": "The date, the file name and rank, and the requestor's name and rank.",
+     "why": "M.P. 105.06: The log entry lists \"date, file name and rank, requestors name and rank.\"",
+     "opts": [
+      "Date, file name and rank, requestor's name and rank",
+      "Date, reason for review, and the BC's approval",
+      "Requestor's name, time in and time out",
+      "File name, documents copied, and a witness"
+     ],
+     "src": "M.P. 105.06"
+    },
+    {
+     "q": "Per M.P. 105.06, what is required before a document in a personnel file is copied or removed?",
+     "a": "Verbal authorization from the Fire Chief, Chief of Personnel Services, or another listed personnel officer.",
+     "why": "M.P. 105.06: \"Duplication or removal of document(s) from a file must verbally be authorized by the Fire Chief, Chief of Personnel Services\" or other listed officers. Unauthorized removal brings discipline.",
+     "opts": [
+      "Verbal authorization from the Fire Chief or a listed officer",
+      "Written approval from the member and the BC",
+      "A memo to the Office of Special Investigations",
+      "A log entry by any full-access member"
+     ],
+     "src": "M.P. 105.06"
+    },
+    {
+     "q": "Per M.P. 105.07, which is a requirement to join the PFD Cadet Program?",
+     "a": "A minimum age of 18 with a high school diploma/GED, and a valid EMT-B.",
+     "why": "M.P. 105.07: Applicants must be at least 18 with a diploma/GED, and \"Valid EMT-B required.\" FF 1 and 2 is strongly recommended and CPAT is preferred.",
+     "opts": [
+      "At least 18 with a diploma/GED and a valid EMT-B",
+      "At least 16 with a CPAT card",
+      "At least 18 with Firefighter 1 and 2",
+      "At least 21 with a valid driver license"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07, what is a cadet's minimum volunteer requirement?",
+     "a": "A minimum of 32 hours per quarter (every 3 months).",
+     "why": "M.P. 105.07: \"Cadets are required to volunteer a minimum of 32 hours per quarter (every 3 months).\"",
+     "opts": [
+      "32 hours per quarter",
+      "32 hours per month",
+      "16 hours per quarter",
+      "48 hours per year"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07, when are Cadet meetings held?",
+     "a": "From 1700 to 2100 hours on the 2nd and 4th Monday of each month.",
+     "why": "M.P. 105.07: \"Meetings are conducted from 1700 to 2100 hours on the 2nd and 4th Monday of each month.\"",
+     "opts": [
+      "1700-2100, 2nd and 4th Monday",
+      "1800-2100, 1st and 3rd Monday",
+      "0800-1700, every other Saturday",
+      "1700-2100, every Wednesday"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07, how many unexcused absences lead to removal from the Cadet Program?",
+     "a": "Two or more unexcused absences.",
+     "why": "M.P. 105.07: Cadets get up to four excused absences a year; \"Two (2) or more unexcused absences will result in removal.\"",
+     "opts": [
+      "Two or more",
+      "Four or more",
+      "Three or more",
+      "One"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07, how many 24-hour ride shifts may a cadet take per calendar year?",
+     "a": "A maximum of two 24-hour shifts per calendar year.",
+     "why": "M.P. 105.07: Cadets may ride \"a maximum of two (2) twenty-four (24) hour shifts per calendar year.\" If not riding 24 hours, they must leave the station by 2000.",
+     "opts": [
+      "Two",
+      "Four",
+      "One",
+      "Six"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07, a cadet wears the Cadet T-shirt to a non-cadet event. What can result?",
+     "a": "Dismissal from the Cadet Program.",
+     "why": "M.P. 105.07: The uniform is worn \"ONLY to Cadet functions.\" \"The wearing of the Cadet shirts at any other time will be cause for dismissal.\"",
+     "opts": [
+      "Dismissal from the program",
+      "A verbal warning from the PCO",
+      "Loss of one ride-along shift",
+      "An unexcused absence"
+     ],
+     "src": "M.P. 105.07"
+    },
+    {
+     "q": "Per M.P. 105.07A, what is the minimum crew size a cadet may ride with?",
+     "a": "Crews of at least three sworn members.",
+     "why": "M.P. 105.07A: \"The Cadet may ride only with crews of at least three (3) sworn members.\"",
+     "opts": [
+      "Three sworn members",
+      "Two sworn members",
+      "Four sworn members",
+      "Any staffed company"
+     ],
+     "src": "M.P. 105.07A"
+    },
+    {
+     "q": "Per M.P. 105.07A, a cadet is riding with your crew at a working fire. Where may the cadet NOT operate?",
+     "a": "In a hot zone where an SCBA would be required.",
+     "why": "M.P. 105.07A: \"The Cadet will not be permitted to operate in a 'hot-zone' where an SCBA would be required.\"",
+     "opts": [
+      "In a hot zone where SCBA would be required",
+      "Anywhere outside the apparatus cab",
+      "In the rehab sector",
+      "Within 100 feet of the structure"
+     ],
+     "src": "M.P. 105.07A"
+    },
+    {
+     "q": "Per M.P. 105.07A, what may appear on a cadet's helmet?",
+     "a": "Only the word \"CADET\" and their last name.",
+     "why": "M.P. 105.07A: Cadets may not use company helmet stickers, which are saved for sworn members entering a hot zone; they \"will only have the markings 'CADET' and their last name.\"",
+     "opts": [
+      "\"CADET\" and their last name only",
+      "The company sticker for the rig they ride",
+      "\"CADET\" and the station number",
+      "Their last name and helmet number"
+     ],
+     "src": "M.P. 105.07A"
+    },
+    {
+     "q": "Per M.P. 105.07A, who has the final say on whether a cadet rides on an apparatus that shift?",
+     "a": "The Company Officer.",
+     "why": "M.P. 105.07A: \"COMPANY OFFICERS HAVE THE FINAL SAY ON WHETHER A CADET WILL RIDE ON HER/HIS APPARATUS THAT SHIFT.\"",
+     "opts": [
+      "The Company Officer",
+      "The Cadet Program Manager",
+      "The Battalion Chief",
+      "The Personnel Control Officer"
+     ],
+     "src": "M.P. 105.07A"
+    },
+    {
+     "q": "Per M.P. 105.07A, does a cadet's station ride time count toward the 32-hour quarterly volunteer minimum?",
+     "a": "No; station ride time is not counted toward the 32-hour minimum.",
+     "why": "M.P. 105.07A: \"The station ride time will not be counted towards the 32-hour minimum volunteer hours required each quarter.\"",
+     "opts": [
+      "No, ride time doesn't count",
+      "Yes, all ride hours count",
+      "Only the first 12 hours count",
+      "Yes, if a 24-hour shift"
+     ],
+     "src": "M.P. 105.07A"
+    },
+    {
+     "q": "Per M.P. 105.09, how does a Fire Department position reclassification request start?",
+     "a": "The division head requests a reclassification study via memo to the Assistant Chief of Personnel.",
+     "why": "M.P. 105.09: Step 1: \"Division head requests reclassification study via memo to the Assistant Chief of Personnel.\"",
+     "opts": [
+      "Division head memo to the Assistant Chief of Personnel",
+      "Member memo to the City Personnel Department",
+      "Fire Chief memo to the Deputy City Manager",
+      "Supervisor memo to the Fire Department Personnel Officer"
+     ],
+     "src": "M.P. 105.09"
+    },
+    {
+     "q": "Per M.P. 105.09, who makes the final decision on a position reclassification?",
+     "a": "The City Council.",
+     "why": "M.P. 105.09: The Personnel Committee and City Manager make recommendations; \"City Council reviews recommendation and informs Personnel Department of decision.\"",
+     "opts": [
+      "The City Council",
+      "The City Manager",
+      "The Fire Chief",
+      "The Personnel Committee"
+     ],
+     "src": "M.P. 105.09"
+    },
+    {
+     "q": "Per M.P. 105.10, within what time of termination must a former member be placed on the reinstatement eligibility list?",
+     "a": "Within twenty-four (24) months of the date of termination.",
+     "why": "M.P. 105.10: \"Placement on the reinstatement eligibility list must occur within twenty-four (24) months of the date of termination.\"",
+     "opts": [
+      "24 months",
+      "12 months",
+      "6 months",
+      "36 months"
+     ],
+     "src": "M.P. 105.10"
+    },
+    {
+     "q": "Per M.P. 105.10, a member resigns and is rehired 60 days later. What about pension funds they withdrew?",
+     "a": "Repay all withdrawn funds plus interest within six months after returning.",
+     "why": "M.P. 105.10: An applicant \"rehired within 90 days of resignation must repay all funds withdrawn from the pension system, plus any interest due within six months.\"",
+     "opts": [
+      "Repay them with interest within 6 months of return",
+      "Repay them with interest before the rehire date",
+      "They're forfeited; no repayment is required",
+      "Repay them without interest within 1 year"
+     ],
+     "src": "M.P. 105.10"
+    },
+    {
+     "q": "Per M.P. 105.10, a sworn member who was reinstated once separates again. Can they be reinstated again?",
+     "a": "No; a sworn employee reinstated once won't be considered after a second separation.",
+     "why": "M.P. 105.10: \"Any sworn employee who has once been reinstated after separation of employment will not be considered for reinstatement after a second separation.\"",
+     "opts": [
+      "No, not after a second separation",
+      "Yes, within 24 months",
+      "Yes, with Fire Chief approval",
+      "Yes, if they meet standards"
+     ],
+     "src": "M.P. 105.10"
+    },
+    {
+     "q": "Per M.P. 105.10, what applies to a member who is reinstated?",
+     "a": "They serve a one-year probation from rehire and lose prior seniority credits (but return to unexpired promotional lists).",
+     "why": "M.P. 105.10: Separation \"cancels all previous seniority credits\" and a reinstated member \"must also serve a one-year probation.\" They are reinstated to promotional lists that have not expired.",
+     "opts": [
+      "One-year probation and loss of prior seniority credits",
+      "Six-month probation; prior seniority is restored",
+      "No probation; prior seniority is restored",
+      "One-year probation; promotional lists are cancelled"
+     ],
+     "src": "M.P. 105.10"
+    },
+    {
+     "q": "Per M.P. 105.11, where is a Letter of Counseling kept?",
+     "a": "In the supervisor's employee file (it is non-disciplinary).",
+     "why": "M.P. 105.11: \"Letters of Counseling are to be kept in Supervisor's employee file.\" Written reprimands go in the Personnel File at Fire Administration.",
+     "opts": [
+      "In the supervisor's employee file",
+      "In the personnel file at Fire Admin",
+      "In the City HR Department file",
+      "In the member's district file only"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.11, in most cases, what is the minimum time before a written reprimand can be petitioned for removal?",
+     "a": "One year in most cases.",
+     "why": "M.P. 105.11: \"In most cases, the minimum length of time before a document can be petitioned for review is one year.\" The member petitions by memo to the supervisor.",
+     "opts": [
+      "One year",
+      "Six months",
+      "Three years",
+      "Ten years"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.11, how long must a suspension of 80 hours or less stay in the Fire Department file?",
+     "a": "A minimum of 10 years.",
+     "why": "M.P. 105.11: Suspensions of 80 hours or less remain \"for a minimum of 10 years,\" then may be petitioned to the Personnel Officer.",
+     "opts": [
+      "At least 10 years",
+      "At least 3 years",
+      "At least 5 years",
+      "Permanently"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.11, which disciplinary record is permanent and can never be petitioned for removal?",
+     "a": "Suspensions over 80 hours, demotions and dismissals are permanent.",
+     "why": "M.P. 105.11: \"Suspensions of more than 80 hours along with demotions and dismissals are a permanent record.\"",
+     "opts": [
+      "A suspension of more than 80 hours",
+      "A suspension of 80 hours or less",
+      "A written reprimand with no date",
+      "A Letter of Counseling"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.11, a document in your file has no removal date. When can you petition to have it removed?",
+     "a": "After a minimum of three years since the occurrence.",
+     "why": "M.P. 105.11: Documentation without a removal date \"may be petitioned ... providing a minimum of three years has passed since the occurrence.\"",
+     "opts": [
+      "After at least three years",
+      "After at least one year",
+      "After at least ten years",
+      "It can never be removed"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.11, which makes documentation a permanent part of the personnel file?",
+     "a": "A repeat of any offense within a three-year period (among others).",
+     "why": "M.P. 105.11: Permanent items include \"A repeat of any offense within a three year period,\" numerous unrelated offenses in three years, and any felony conviction.",
+     "opts": [
+      "A repeat of any offense within a three-year period",
+      "Any offense that happened while off duty",
+      "A Letter of Counseling for being late",
+      "A first written reprimand for a minor issue"
+     ],
+     "src": "M.P. 105.11"
+    },
+    {
+     "q": "Per M.P. 105.16, who chairs the labor/management Correlating Team?",
+     "a": "The Fire Chief and the Local 493 Union President.",
+     "why": "M.P. 105.16: \"The Fire Chief and the Local 493 Union President chair the Correlating Team.\"",
+     "opts": [
+      "The Fire Chief and the Local 493 President",
+      "The Executive Assistant Chief and the L493 VP",
+      "The Fire Chief and the City Manager",
+      "Two co-chairs elected by the committees"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, how are labor/management committee co-chairs appointed?",
+     "a": "The management co-chair by the Fire Chief or designee; the labor co-chair by the Union President or designee.",
+     "why": "M.P. 105.16: \"The management co-chair shall be appointed by the Fire Chief or designee and the labor co-chair shall be appointed by the Union President or designee.\"",
+     "opts": [
+      "Mgmt by the Fire Chief; labor by the Union President",
+      "Both by the Fire Chief, with union consent",
+      "Both elected by committee members",
+      "Both by the Correlating Team"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, how often must labor/management committees meet?",
+     "a": "They should attempt to meet quarterly and meet no less than two times a year.",
+     "why": "M.P. 105.16: \"Committees and subcommittees shall attempt to meet quarterly but shall meet not less than two times a year.\" Subcommittees meet as needed.",
+     "opts": [
+      "Try for quarterly, but at least twice a year",
+      "At least monthly",
+      "At least once a year",
+      "Only as needed"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, how early must the first notice of a scheduled committee meeting go out?",
+     "a": "At least 7 calendar days before the meeting.",
+     "why": "M.P. 105.16: Notices go out multiple times \"with first notification being at a minimum 7 calendar days prior to scheduled meeting.\"",
+     "opts": [
+      "At least 7 calendar days before",
+      "At least 14 calendar days before",
+      "At least 3 business days before",
+      "At least 30 days before"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, what is the rule for committee meeting minutes?",
+     "a": "Summary minutes are published within two weeks and watermarked as draft until approved by both co-chairs.",
+     "why": "M.P. 105.16: Minutes are published \"within two weeks\" and \"should be watermarked as a draft until approved by the labor and management Co-Chairs.\"",
+     "opts": [
+      "Published within 2 weeks; draft until both co-chairs approve",
+      "Published within 7 days; final when the secretary signs",
+      "Published within 30 days; draft until the XO/VP approves",
+      "Published at the next meeting; final when members vote"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, a subcommittee can't reach agreement and its committee co-chairs can't settle it either. Where does it go next?",
+     "a": "It goes to XO/VP, and then to the Correlating Team if still unresolved.",
+     "why": "M.P. 105.16: Subcommittee co-chairs go to the Committee co-chairs; \"If disagreement still exists the issue should be brought to XO/VP,\" then to the Correlating Team.",
+     "opts": [
+      "To XO/VP",
+      "To the Fire Chief",
+      "To the Correlating Team",
+      "To a member vote"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.16, when is each committee's annual report due to XO/VP?",
+     "a": "No later than the first Friday of the new calendar year.",
+     "why": "M.P. 105.16: \"Every committee is required to submit an annual report ... to XO/VP no later than the first Friday of the new Calendar Year.\"",
+     "opts": [
+      "The first Friday of the new calendar year",
+      "The last Friday of December",
+      "January 31 of the new year",
+      "The end of the fiscal year"
+     ],
+     "src": "M.P. 105.16"
+    },
+    {
+     "q": "Per M.P. 105.18, what is the \"Headline Test\"?",
+     "a": "Before posting, ask if you'd be comfortable seeing it on the news, with your supervisor, or in a department meeting; if not, don't post.",
+     "why": "M.P. 105.18: Ask: \"Would I be comfortable seeing this on the news, in a municipal council meeting, shared with my supervisor, or posted in a department meeting?\" If no, do not post it.",
+     "opts": [
+      "Ask if you'd be fine seeing the post on the news or in a meeting",
+      "Run the post's headline past Public Affairs before posting",
+      "Make sure every post has a clear and accurate headline",
+      "Check that the post doesn't name the Department"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, which personal post is protected and NOT considered prohibited disparagement?",
+     "a": "Honest criticism of Department policies, procedures or management decisions.",
+     "why": "M.P. 105.18: Disparagement \"does NOT include honest criticism of policies, procedures, management decisions, or factual statements regarding working conditions.\"",
+     "opts": [
+      "Honest criticism of a Department policy",
+      "A meme mocking a group by religion",
+      "A joke stereotyping a neighborhood",
+      "A post calling a group untrustworthy"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, after a working fire you want to post a video you shot on scene to your personal account. Is that allowed?",
+     "a": "No; posting emergency scene content without authorization is prohibited.",
+     "why": "M.P. 105.18: Prohibited content includes \"Videos or photos while responding to, during, or after emergency scenes.\" There is no truly \"private\" post.",
+     "opts": [
+      "No, emergency scene content needs authorization",
+      "Yes, if you blur the patients' faces",
+      "Yes, if you don't name the station",
+      "Yes, if the account is set to private"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, a production company wants to film a \"day in the life\" at your station. How is that handled?",
+     "a": "The request must go through the City of Phoenix Film Office and the PFD Public Affairs Section.",
+     "why": "M.P. 105.18: Commercial filming requests \"must be routed through the City of Phoenix Film Office and the PFD Public Affairs Section.\" Members may not negotiate such access themselves.",
+     "opts": [
+      "Route it through the City Film Office and PFD Public Affairs",
+      "The Captain can approve it with the BC's OK",
+      "Members may negotiate it if filmed off duty",
+      "Local 493 approves it for its members"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, a member earns money from a social media account that identifies them as PFD. What is required?",
+     "a": "It must be approved through the \"Notice of Outside Employment\" process (A.R. 2.62).",
+     "why": "M.P. 105.18: Monetized activity while identifying as PFD is subject to Outside Employment policies \"and thus should be approved through the 'Notice of Outside Employment' process in A.R. 2.62.\"",
+     "opts": [
+      "Approval through the Notice of Outside Employment process",
+      "Nothing, as long as it's done off duty",
+      "A Film Office permit for each video",
+      "Written approval from Local 493"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, your crew wants to start an Instagram account for your fire station. What is required?",
+     "a": "It is an affiliated account that must be approved by the Fire Chief and the Public Affairs Section/PIOs.",
+     "why": "M.P. 105.18: Accounts for fire stations are affiliated accounts that \"must be approved by the Fire Chief and the Public Affairs Section,\" and Public Affairs must be kept as an added user.",
+     "opts": [
+      "Approval by the Fire Chief and Public Affairs",
+      "Approval by your Battalion Chief",
+      "Nothing if it's run off duty",
+      "Approval by the Union President"
+     ],
+     "src": "M.P. 105.18"
+    },
+    {
+     "q": "Per M.P. 105.18, when may an authorized spokesperson delete a post on a PFD-affiliated account?",
+     "a": "Only if it clearly violates the City's Social Media Terms of Use, documenting the reason.",
+     "why": "M.P. 105.18: \"Do not delete any posts unless they clearly violate the City's Social Media Terms of Use. If deletion is necessary, document the reason.\"",
+     "opts": [
+      "Only if it clearly violates City Terms of Use",
+      "Any time it draws negative comments",
+      "Only with the Fire Chief's written OK",
+      "Within 24 hours of posting, for any reason"
+     ],
+     "src": "M.P. 105.18"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "105.01: The Tier table text is incomplete in the PDF extraction. The Tier 1/Tier 2 blood sugar and HbA1c values and the Body Fat % row are missing, so no cards were written on those values.",
+  "105.01A: A '*8 Function of Crisis Care Flow Chart' is referenced but is an image and did not extract.",
+  "105.02 vs 105.02E: 105.02 says the LODD I Honor Watch runs 'from death to burial/interment', but 105.02E says Honor Watch sign-up runs 'from time of death until the start of the funeral'. The cards use each MP's own wording, and no card asks for the end point in a way that conflicts.",
+  "105.03: The Local 493 'Last Check Meeting' timing conflicts: section 6 says 6-12 months before retirement, and Addendum A says within 3 months. The City Retirement Office address also differs (200 vs 201 W. Washington). No cards were written on these points.",
+  "105.02C (04/06) uses old titles (South Deputy, Good and Welfare Officer, Assistant Chief of Personnel). 105.01C, 105.02A, 105.02B and 105.10 are dated 11/08; 105.09 is dated 04/06. These may be outdated.",
+  "105.11: The decision-maker for petitions differs within the MP: the Deputy Chief of HR for non-disciplinary documents, and the Personnel Officer/Chief of Personnel Services for reprimands. Cards avoid this point.",
+  "105.06 lists an old phone number (495-7802) and position titles that may no longer exist (Personnel Control Officer, Management Services Administrator)."
+ ]
+}

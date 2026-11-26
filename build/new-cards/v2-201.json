@@ -1,0 +1,1453 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Command, Mayday & Sectors (201) (Part 1)",
+   "sub": "Customer service, Mayday prevention/response/recovery, the Emergency Operations Plan, Emergency Deployment, power outages and Support Sector.",
+   "concepts": [
+    "<b>201.00</b>: The customer is anyone we serve or deal with, including each other; if the empowerment questions are all yes, don't ask permission.",
+    "<b>201.01E</b>: Mayday = life-threatening and can't safely exit or fix it now. Prevention is the first line of defense; GRAB LIVES for self-survival.",
+    "<b>201.01F</b>: \"Mayday x3\" + Who, What, Where, Needs/Actions. Help Order: self, own crew, same sector, other sectors. Never freelance.",
+    "<b>201.01F</b>: TRO sends the emergency tone and holds traffic; the Sector Officer resolves the Mayday; incident and Mayday stay on the same channel.",
+    "<b>201.01G</b>: Joint Labor/Management Recovery team; contact Safety ASAP once the scene is stable; Executive Management approves formal reviews.",
+    "<b>201.02</b>: The EOP opens the TOC; TOC Command Staff decide recalls, and the ERSO contacts recalled members.",
+    "<b>201.02A</b>: Type 1 changes 3-1 to 2-1-1 and 1st Alarm to 3-1-1; one big incident may use 60% of resources (40% stays in service).",
+    "<b>201.02B</b>: Power outage plan when heat stress is over 105 or temps are below 34; over 3 hours consider evacuation. <b>201.05B</b>: RM-50 goes to working 1st alarms."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 201.00 (Customer Service), how does CALSSRC define \"the customer\"?",
+     "a": "Any person who receives our services and anyone with whom our members have dealings.",
+     "why": "M.P. 201.00: The customer is \"any person who receives our services and anyone with who our members have dealings,\" including family, bystanders, business contacts and our own members.",
+     "opts": [
+      "Anyone who receives our services and anyone our members deal with",
+      "Only the person who called 9-1-1 and the patient involved",
+      "The service recipient and their immediate family members only",
+      "Any resident or business owner inside a member jurisdiction"
+     ],
+     "src": "M.P. 201.00"
+    },
+    {
+     "q": "Per M.P. 201.00, where does our customer service begin?",
+     "a": "Customer service begins with how members treat each other.",
+     "why": "M.P. 201.00: Members of our organization, including support staff, are customers: \"our customer services begin with how we treat each other.\"",
+     "opts": [
+      "With how we treat each other inside the organization",
+      "With the first contact the dispatcher has with the caller",
+      "When the first company arrives and makes contact on scene",
+      "With the follow-up after the incident has been terminated"
+     ],
+     "src": "M.P. 201.00"
+    },
+    {
+     "q": "You want to do something extra for a family after a fire. Per M.P. 201.00, if every empowerment question is answered \"yes,\" what do you do?",
+     "a": "Don't ask permission; you are empowered to provide exceptional customer service.",
+     "why": "M.P. 201.00: \"If the answer to these questions is yes, then don't ask permission. You are empowered to provide exceptional customer service.\"",
+     "opts": [
+      "Don't ask permission; you are empowered to do it",
+      "Get approval from your Battalion Chief before acting",
+      "Ask Command for approval over the tactical channel",
+      "Document the request and wait for next-day approval"
+     ],
+     "src": "M.P. 201.00"
+    },
+    {
+     "q": "Which of these is one of the empowerment questions listed in M.P. 201.00 for providing exceptional customer service?",
+     "a": "\"Is it on your organizational level?\" is one of the empowerment questions.",
+     "why": "M.P. 201.00: The questions are: right for the customer, right for the department, legal/ethical/nice, safe, on your organizational level, willing to be accountable, and consistent with values and policies.",
+     "opts": [
+      "Is it on your organizational level?",
+      "Has your captain approved it ahead of time?",
+      "Is it written into a specific SOP already?",
+      "Will it be finished before the next call?"
+     ],
+     "src": "M.P. 201.00"
+    },
+    {
+     "q": "Per M.P. 201.00, what is \"added value\" in customer service?",
+     "a": "Going beyond standard quick, professional service to make the customer feel they were the most important person served all day.",
+     "why": "M.P. 201.00: Added value occurs when we go beyond standard service \"to create a feeling that the customer was the most important person we served all day.\"",
+     "opts": [
+      "Going beyond standard service so the customer feels most important",
+      "Providing any service that the city later bills for separately",
+      "Answering every customer question before leaving the scene",
+      "Leaving written follow-up information at every residence"
+     ],
+     "src": "M.P. 201.00"
+    },
+    {
+     "q": "Per M.P. 201.01E, which situation meets the definition of a Mayday?",
+     "a": "Anytime a firefighter is in a life-threatening situation and needs assistance because they cannot safely exit the hazard zone or resolve the problem immediately.",
+     "why": "M.P. 201.01E: A Mayday is \"anytime a firefighter is in a life-threatening situation and requires assistance because they cannot safely exit the hazard zone or resolve the problem immediately.\"",
+     "opts": [
+      "A firefighter in a life-threatening spot who can't safely exit or fix it now",
+      "Any firefighter whose low-air alarm activates inside the structure",
+      "Any crew that has been in the hazard zone past its first work cycle",
+      "Any member who becomes separated from the hoseline for any reason"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "In the GRAB LIVES self-survival mnemonic (M.P. 201.01E), what does the \"A\" stand for?",
+     "a": "A = Activate PASS Device.",
+     "why": "M.P. 201.01E: GRAB LIVES: Gauge, Radio, Activate PASS, Breathing, Low, Illuminate, Volume, Exit, Shield your airway.",
+     "opts": [
+      "Activate PASS device",
+      "Announce your location",
+      "Assess your exit options",
+      "Air check with your crew"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "In GRAB LIVES (M.P. 201.01E), which step is identified as a \"last ditch effort\"?",
+     "a": "S = Shield Your Airway is the last-ditch effort.",
+     "why": "M.P. 201.01E: The final letter is \"S = Shield Your Airway (last ditch effort).\"",
+     "opts": [
+      "S - Shield your airway",
+      "E - Find an exit",
+      "V - Make loud noises",
+      "B - Control breathing"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01E, how does NFPA 1500 define Mayday readiness?",
+     "a": "The ability to \"don, doff, and manipulate the SCBA in zero visibility while wearing firefighting gloves.\"",
+     "why": "M.P. 201.01E: NFPA 1500 defines Mayday readiness as the ability to \"don, doff, and manipulate the SCBA in zero visibility while wearing firefighting gloves.\"",
+     "opts": [
+      "Able to don, doff and manipulate SCBA in zero visibility wearing gloves",
+      "Able to complete a full SCBA bottle change in under 60 seconds",
+      "Able to recite GRAB LIVES and the Help Order from memory on demand",
+      "Able to pass the annual SCBA mask fit test and a daily SCBA check"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Under the Risk Management Plan cited in M.P. 201.01E, how much will we risk to save savable property?",
+     "a": "We will risk our lives a little, in a calculated manner, to save savable property.",
+     "why": "M.P. 201.01E: We risk \"a lot\" for savable lives, \"a Little\" for savable property, and nothing for lives or property already lost.",
+     "opts": [
+      "A little, in a calculated manner",
+      "A lot, in a calculated manner",
+      "Nothing at all, ever",
+      "Only what Command approves"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01E, what is described as one of the most effective ways to prevent a Mayday?",
+     "a": "Extinguishing the fire quickly and aggressively while operating in a safe and calculated manner.",
+     "why": "M.P. 201.01E: \"One of the most effective ways to prevent a Mayday is to extinguish the fire quickly and aggressively, while operating in a safe and calculated manner.\"",
+     "opts": [
+      "Put the fire out quickly and aggressively, in a safe, calculated way",
+      "Assign a RIC crew before any crew is allowed to make entry",
+      "Keep every interior crew to a single 15-minute work cycle",
+      "Switch to a defensive strategy on all commercial occupancies"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "You're a Company Officer at a residential fire and want part of your crew to work off the hoseline. Per M.P. 201.01E, when is that acceptable?",
+     "a": "Only when the Company Officer maintains full awareness of the position and function of all crew members.",
+     "why": "M.P. 201.01E: Hoseline contact is required during interior operations; operating off it in certain residential incidents is \"only acceptable when the Company Officer maintains full awareness of the position and function of all crew members.\"",
+     "opts": [
+      "Only when you keep full awareness of every member's position and function",
+      "Only after Command approves it over the tactical channel first",
+      "Only when the fire has been declared under control by Command",
+      "Never; hoseline contact is required in all residential fires"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01E, when must the Company Officer ensure members perform an SCBA operational check?",
+     "a": "Daily, at the beginning of each shift.",
+     "why": "M.P. 201.01E: Company Officers \"ensure all members perform a daily SCBA operational check at the beginning of their shift.\"",
+     "opts": [
+      "Daily, at the beginning of the shift",
+      "Weekly, during the apparatus check",
+      "Before each working fire assignment",
+      "Monthly, with the SCBA flow test"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "You're a rover on a new crew and the captain never covered expectations at shift start. Per M.P. 201.01E, whose job is it to raise it?",
+     "a": "The rover's; individual rovers and constant staffers must ask if expectations are not explicitly discussed.",
+     "why": "M.P. 201.01E: \"Individual rovers and Constant Staffers are responsible for asking if expectations are not explicitly discussed at the beginning of a shift.\"",
+     "opts": [
+      "Yours; rovers must ask if expectations aren't discussed",
+      "The Battalion Chief's, during the morning roll call",
+      "The Engineer's, as the senior member on the rig",
+      "Nobody's; rovers follow the home crew's routine"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01E, what Mayday prevention duty is specifically assigned to Engineers?",
+     "a": "Engineers shall tag hose lines and provide tools at ingress points.",
+     "why": "M.P. 201.01E: \"Engineers shall Tag hose lines and provide tools at ingress points.\"",
+     "opts": [
+      "Tag hose lines and provide tools at ingress points",
+      "Track crew air levels and announce elapsed time",
+      "Set up the RIC staging area and RIC bag at Alpha",
+      "Activate the Safety Channel and report crew PARs"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01E, which is listed as a Mayday communication clue or \"red flag\" Company Officers must recognize?",
+     "a": "Elapsed time notifications (along with communication issues, deteriorating conditions, and air/SCBA issues).",
+     "why": "M.P. 201.01E: Red flags are communication issues, deteriorating conditions, air management and SCBA issues, and elapsed time notifications.",
+     "opts": [
+      "Elapsed time notifications",
+      "Unit going to channel 2",
+      "A second-alarm request",
+      "A change of Command"
+     ],
+     "src": "M.P. 201.01E"
+    },
+    {
+     "q": "Per M.P. 201.01F, what is the \"Help Order\" (inside-out response) for resolving a Mayday?",
+     "a": "Self-rescue by the initiator, then the Mayday firefighter's crew, then crews in the same sector, then crews from other sectors.",
+     "why": "M.P. 201.01F: The Help Order is: 1) self-rescue by the Mayday initiator, 2) the Mayday firefighter's crew, 3) crews in the same sector, 4) crews from other sectors.",
+     "opts": [
+      "Self-rescue, own crew, same-sector crews, then other sectors",
+      "RIC crew, own crew, same-sector crews, then self-rescue",
+      "Own crew, RIC crew, self-rescue, then crews from staging",
+      "Same-sector crews, own crew, RIC crew, then other sectors"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, the inside-out Mayday response came from post-incident analysis of which event?",
+     "a": "The Bret Tarver line-of-duty death at the Southwest Supermarket fire.",
+     "why": "M.P. 201.01F: \"Following the Bret Tarver line-of-duty death at the Southwest Supermarket fire,\" analysis showed resolution works best coordinated from the inside out.",
+     "opts": [
+      "Bret Tarver LODD, Southwest Supermarket fire",
+      "A Mayday drill at the regional training academy",
+      "A multi-alarm warehouse fire with two Maydays",
+      "An NFPA 1500 committee study of urban fires"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "You're trapped under debris. Per M.P. 201.01F, after \"Mayday, Mayday, Mayday,\" what information do you give?",
+     "a": "Who, What, Where, and Needs/Actions.",
+     "why": "M.P. 201.01F: The declaration is followed by Who (you or the FF in trouble), What (the problem), Where (last known location), and Needs/Actions.",
+     "opts": [
+      "Who, What, Where, and Needs/Actions",
+      "Unit, air left, PASS status, and exit",
+      "Name, rank, sector, and crew size",
+      "Location, unit, air, and assignment"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, what does B.O.A. stand for?",
+     "a": "Breathe, Organize, Act.",
+     "why": "M.P. 201.01F: BOA is a mental checklist: Breathe (control panic), Organize (assess situation and options), Act (deliberate steps toward self-rescue).",
+     "opts": [
+      "Breathe, Organize, Act",
+      "Brace, Orient, Alert",
+      "Breathe, Observe, Activate",
+      "Bail out, Orient, Air check"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "A member calls Mayday on the tactical channel. Per M.P. 201.01F, what does the Tactical Radio Operator do first?",
+     "a": "Transmit the emergency traffic tone, then announce the Mayday and have all units hold traffic.",
+     "why": "M.P. 201.01F: Upon a Mayday the TRO shall transmit the emergency traffic tone and voice \"We have a Mayday on the scene. All units hold your traffic.\"",
+     "opts": [
+      "Transmit the emergency traffic tone",
+      "Upgrade the incident to a 2nd Alarm",
+      "Switch all units to the Safety Channel",
+      "Hand the radio traffic to Command"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "A Mayday is called before any Command Officer has arrived. Per M.P. 201.01F, what does the TRO do?",
+     "a": "The TRO assures the member that help is on the way and maintains communications until other units arrive.",
+     "why": "M.P. 201.01F: The TRO assures \"help is on the way,\" maintains contact with the initiator, reminds them of GRAB LIVES, ensures responding units know, and upgrades to a Mayday nature code.",
+     "opts": [
+      "Assure \"help is on the way\" and stay on with the member",
+      "Hold all radio traffic until a Command Officer arrives",
+      "Direct the first-due engine to begin the RIC search",
+      "Move the Mayday member to a separate rescue channel"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "A Mayday is declared on a 3-1 assignment. Per M.P. 201.01F, how does dispatch upgrade it?",
+     "a": "A 3-1 incident is balanced to a 1st Alarm Mayday.",
+     "why": "M.P. 201.01F: \"If 3-1 incident, then balance to 1st Alarm Mayday. If 1st Alarm incident, then to 2nd Alarm Mayday (up to 9 Alarms).\"",
+     "opts": [
+      "Balance to a 1st Alarm Mayday",
+      "Upgrade to a 2nd Alarm Mayday",
+      "Add one RIC engine and a BC",
+      "Upgrade to a 3rd Alarm Mayday"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "You're Command and a Mayday is called on the fire channel. Per M.P. 201.01F, where does the Mayday traffic belong?",
+     "a": "The incident and the Mayday always remain on the same tactical channel.",
+     "why": "M.P. 201.01F: \"The Incident and the Mayday always remain on the same tactical channel.\" The Safety Channel is used for accountability and to reduce fire channel traffic.",
+     "opts": [
+      "Same tactical channel as the incident",
+      "A separate channel only for the Mayday",
+      "The Safety Channel, once it is opened",
+      "A command channel with the Alarm Room"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, when does Command first talk to the Mayday initiator?",
+     "a": "After the Tactical Radio Operator completes initial Mayday traffic.",
+     "why": "M.P. 201.01F: Command communicates with the initiator \"after the Tactical Radio Operator (TRO) completes initial Mayday traffic,\" assures help is on the way, and reminds them of BOA and GRAB LIVES.",
+     "opts": [
+      "After the TRO completes the initial Mayday traffic",
+      "Immediately, before the TRO repeats the message",
+      "Only after the Sector Officer has made contact",
+      "Only after the RIC crew has reached the member"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, who takes charge of resolving the Mayday and keeps future contact with the down member?",
+     "a": "The Sector Officer takes charge of resolving the Mayday.",
+     "why": "M.P. 201.01F: \"When a Mayday occurs, the Sector Officer takes charge of resolving the situation.\" Command identifies that Sector Officer and lets them keep contact with the initiator.",
+     "opts": [
+      "The Sector Officer where it occurred",
+      "The Incident Commander personally",
+      "The RIC company officer on scene",
+      "The Safety Officer from the van"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "You're a Company Officer in a nearby sector and think your crew can help with the Mayday. Per M.P. 201.01F, what do you do?",
+     "a": "Communicate your intentions clearly and obtain approval before acting.",
+     "why": "M.P. 201.01F: \"Never Freelance. Do not change your assignment without confirmation... communicate your intentions clearly and obtain approval before acting.\"",
+     "opts": [
+      "State your intentions and get approval before acting",
+      "Move in immediately and notify Command once inside",
+      "Wait at the door until the RIC crew asks for help",
+      "Head to the Mayday sector and report to the IC there"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Your crew is working in Sector Bravo when a Mayday is called in Sector Alpha. Per M.P. 201.01F, what is your role?",
+     "a": "Continue the firefight in support of the Mayday and do not abandon your assignment.",
+     "why": "M.P. 201.01F: Surrounding sectors \"continue the firefight in support of the Mayday; do not abandon current assignments\" and never freelance.",
+     "opts": [
+      "Keep fighting fire in support; don't leave your assignment",
+      "Withdraw to the exterior and report a PAR to Command",
+      "Move toward Alpha to assist with the search for the member",
+      "Go to the Safety Channel and wait for a new assignment"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, once a Mayday is initiated, how should all sectors manage radio traffic?",
+     "a": "Sectors limit their radio communications to critical messages only.",
+     "why": "M.P. 201.01F: \"Once a Mayday is initiated, all sectors should manage their communications to critical messages only over the radio.\"",
+     "opts": [
+      "Critical messages only",
+      "Switch to a new channel",
+      "Hold all traffic for 5 min",
+      "PAR reports only"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, which must be confirmed before the benchmark \"Mayday resolved\" can be given?",
+     "a": "The Incident Commander can give a PAR for the entire hazard zone (plus the member out, rescuers out, all sectors accounted for).",
+     "why": "M.P. 201.01F: Before \"Mayday resolved\": the member is out of the hazard zone, rescuers are out and accounted for, all other sectors are accounted for, and the IC can give a PAR for the entire hazard zone.",
+     "opts": [
+      "The IC can give a PAR for the entire hazard zone",
+      "The member is in the back of a transporting rescue",
+      "The fire in the Mayday sector is under control",
+      "The RIC crew has reported a PAR to its Sector Officer"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, who notifies Command that the Mayday rescue is complete and all involved members are out of the hazard zone?",
+     "a": "The officer of the sector in which the Mayday occurred.",
+     "why": "M.P. 201.01F: \"The Officer of the individual sector in which the Mayday occurred is responsible for notifying command of the completion of the rescue.\" The IC then completes accountability for the whole incident.",
+     "opts": [
+      "Officer of the sector where the Mayday occurred",
+      "The Tactical Radio Operator in the Alarm Room",
+      "The company officer of the Mayday firefighter",
+      "The Safety Officer working from the Command Van"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, who makes up the Incident Command Team that manages the Mayday response?",
+     "a": "The Incident Commander, Support Officer, and Senior Advisor.",
+     "why": "M.P. 201.01F: \"The Incident Command Team (Incident Commander, Support Officer, Senior Advisor)\" manages the Mayday; staging, logistics and safety support from the Command Van.",
+     "opts": [
+      "Incident Commander, Support Officer, Senior Advisor",
+      "Incident Commander, Safety Officer, Staging Officer",
+      "Incident Commander, Sector Officer, RIC Officer",
+      "Incident Commander, TRO, Logistics Officer"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01F, who may initiate a Mayday?",
+     "a": "Anyone, at any time, working in the field with access to a portable radio.",
+     "why": "M.P. 201.01F: \"A Mayday can be initiated by anyone, at any time, who is working in the field and has access to a portable radio,\" and it is not just a fireground term.",
+     "opts": [
+      "Anyone working in the field with a portable radio",
+      "Only a member who is personally in trouble",
+      "Only a Company Officer or Sector Officer",
+      "Only crews assigned inside the hazard zone"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "You're Command during a Mayday. Per M.P. 201.01F, who should fill critical tactical-level positions like firefighting, extrication and treatment sectors?",
+     "a": "Battalion Chiefs should be assigned to all critical tactical-level positions.",
+     "why": "M.P. 201.01F: Command maintains organization through sectorization: \"Ensure Battalion Chiefs are assigned to all critical tactical level positions.\"",
+     "opts": [
+      "Battalion Chiefs",
+      "Senior captains",
+      "Safety Officers",
+      "RIC officers"
+     ],
+     "src": "M.P. 201.01F"
+    },
+    {
+     "q": "Per M.P. 201.01G, what is initiated for incidents resulting in significant injury to PFD members after a Mayday?",
+     "a": "A dedicated joint Labor/Management Recovery team.",
+     "why": "M.P. 201.01G: Recovery includes \"initiation of a dedicated joint Labor / Management Recovery team for incidents resulting in significant injury to PFD members.\"",
+     "opts": [
+      "A dedicated joint Labor/Management Recovery team",
+      "A department-level critique within ten days",
+      "A Welfare Branch run by the Fire Chief's office",
+      "An OSHA-led investigation of the hazard zone"
+     ],
+     "src": "M.P. 201.01G"
+    },
+    {
+     "q": "Per M.P. 201.01G, when should the Safety and Prevention Section be contacted after a Mayday?",
+     "a": "As soon as possible after the scene has been stabilized, to ensure a timely investigation.",
+     "why": "M.P. 201.01G: \"Contact the Safety and Prevention Section as soon as possible after the scene has been stabilized to ensure a timely investigation.\"",
+     "opts": [
+      "As soon as possible after the scene is stabilized",
+      "Only after the Post Incident Review is complete",
+      "Within 24 hours of the incident being terminated",
+      "Once the injured member is released from care"
+     ],
+     "src": "M.P. 201.01G"
+    },
+    {
+     "q": "Per M.P. 201.01G, who approves all formal reviews of significant incidents?",
+     "a": "Members of Executive Management.",
+     "why": "M.P. 201.01G: \"Members of Executive Management approve all formal reviews of significant incidents.\" The Safety section advises on elevating to the Post Incident Recovery Process (PIRP).",
+     "opts": [
+      "Members of Executive Management",
+      "The Safety Section Chief alone",
+      "The Incident Commander of record",
+      "The Local 493 Recovery team lead"
+     ],
+     "src": "M.P. 201.01G"
+    },
+    {
+     "q": "Per M.P. 201.01G, what does \"resilience\" mean after a Mayday?",
+     "a": "The department's ability to recover from a Mayday, grow stronger, learn, and improve readiness.",
+     "why": "M.P. 201.01G: Resilience is \"the department's ability to recover from a Mayday incident and grow stronger, learn from the experience, and improve overall readiness.\"",
+     "opts": [
+      "Recovering and growing stronger by learning from it",
+      "Returning the crew to service as quickly as possible",
+      "Completing the investigation and closing the file",
+      "Replacing damaged equipment and restoring staffing"
+     ],
+     "src": "M.P. 201.01G"
+    },
+    {
+     "q": "Per M.P. 201.02, which situation would cause activation of the Tactical Operations Center (TOC)?",
+     "a": "Two or more working incidents causing a high demand for resources at different locations (among others).",
+     "why": "M.P. 201.02: TOC triggers: one major incident, two or more working incidents with high demand, numerous simultaneous incidents, or when the Fire Chief or Executive Staff decide.",
+     "opts": [
+      "Two or more working incidents demanding resources at different sites",
+      "Any working fire that goes beyond a 1st Alarm assignment",
+      "Any incident lasting longer than four hours of operations",
+      "Any request from a Battalion Chief for additional companies"
+     ],
+     "src": "M.P. 201.02"
+    },
+    {
+     "q": "Per M.P. 201.02, who decides to recall off-duty personnel under the Emergency Operations Plan?",
+     "a": "Command Staff at the TOC.",
+     "why": "M.P. 201.02: \"Command Staff at the TOC are responsible for making the decision to initiate recall of off-duty personnel.\" The ERSO contacts them and tells them where to report.",
+     "opts": [
+      "Command Staff at the TOC",
+      "The on-scene Incident Commander",
+      "The Alarm Room Supervisor",
+      "Each station's Captain"
+     ],
+     "src": "M.P. 201.02"
+    },
+    {
+     "q": "Per M.P. 201.02, who contacts recalled personnel and keeps the list of employees by rank and shift?",
+     "a": "The ERSO.",
+     "why": "M.P. 201.02: \"The ERSO will contact recalled personnel and advise them where to report... A list of employees by rank and shift shall be maintained by the ERSO.\"",
+     "opts": [
+      "The Emergency Response Staffing Office (ERSO)",
+      "The Alarm Room Chief at Dispatch",
+      "Each Battalion Chief for their own battalion",
+      "The Homeland/HR Division personnel staff"
+     ],
+     "src": "M.P. 201.02"
+    },
+    {
+     "q": "Per M.P. 201.02, what reserve apparatus does the Medical/Support Services Division start preparing on activation?",
+     "a": "Three engines, three rescues, and one ladder company.",
+     "why": "M.P. 201.02: \"Efforts to prepare three engines, three rescues, and one ladder company should start upon activation of this plan unless otherwise directed.\"",
+     "opts": [
+      "Three engines, three rescues, one ladder",
+      "Two engines, two rescues, one ladder",
+      "Four engines, two rescues, two ladders",
+      "Three engines, one rescue, two ladders"
+     ],
+     "src": "M.P. 201.02"
+    },
+    {
+     "q": "Per M.P. 201.02, when the Operations Division places additional companies in service, which go first?",
+     "a": "Peak-time rescue companies first.",
+     "why": "M.P. 201.02: Operations will \"direct the placement of additional fire companies and rescue companies in service as necessary (peak-time rescue companies first).\"",
+     "opts": [
+      "Peak-time rescue companies",
+      "Reserve ladder companies",
+      "Recruit training engines",
+      "Brush trucks and tenders"
+     ],
+     "src": "M.P. 201.02"
+    },
+    {
+     "q": "Per M.P. 201.02A, who activates Emergency Deployment?",
+     "a": "The on-duty Operations Deputy Chief, in conjunction with Alarm Room Headquarters (AHQ).",
+     "why": "M.P. 201.02A: Emergency Deployment is activated \"at the direction of the on-duty Operations Deputy Chief... in conjunction with Alarm Room Headquarters (AHQ).\"",
+     "opts": [
+      "On-duty Operations Deputy Chief with AHQ",
+      "The Fire Chief from the TOC only",
+      "Any Battalion Chief working an incident",
+      "The Alarm Room Supervisor acting alone"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Type 1 Emergency Deployment is active. Per M.P. 201.02A, what does a normal 3-1 assignment become?",
+     "a": "A 2-1-1 (engine/ladder/BC) assignment.",
+     "why": "M.P. 201.02A: Under Type 1, \"All 3-1 response assignments will be modified to 2-1-1 (ENG/LAD/BC)\" and First Alarms to 3-1-1.",
+     "opts": [
+      "2-1-1 (ENG/LAD/BC)",
+      "3-1-1 (ENG/LAD/BC)",
+      "2-1 (ENG/LAD)",
+      "1-1-1 (ENG/LAD/BC)"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Type 1 Emergency Deployment is active. Per M.P. 201.02A, what does a First Alarm assignment become?",
+     "a": "A 3-1-1 (engine/ladder/BC) assignment.",
+     "why": "M.P. 201.02A: \"All First Alarm response assignments will be modified to 3-1-1 (ENG/LAD/BC) response assignments.\"",
+     "opts": [
+      "3-1-1 (ENG/LAD/BC)",
+      "2-1-1 (ENG/LAD/BC)",
+      "4-2-1 (ENG/LAD/BC)",
+      "3-2-1 (ENG/LAD/BC)"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Per M.P. 201.02A, which Emergency Deployment type calls in off-duty personnel to staff reserve apparatus?",
+     "a": "Type 3 Emergency Deployment.",
+     "why": "M.P. 201.02A: Type 2 brings in off-duty personnel for brush trucks or other adjunct apparatus; Type 3 staffs reserve apparatus through a manual process with Fleet and AHQ.",
+     "opts": [
+      "Type 3",
+      "Type 2",
+      "Type 1",
+      "Type 4"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Per M.P. 201.02A, one large-scale incident is working. What share of Automatic Aid resources may it use?",
+     "a": "Up to 60%, with 40% remaining in service for routine activity.",
+     "why": "M.P. 201.02A: \"Any one (1) large scale incident may use sixty percent (60%)... Forty percent (40%)... must remain in service.\"",
+     "opts": [
+      "60%, leaving 40% in service",
+      "50%, leaving 50% in service",
+      "70%, leaving 30% in service",
+      "35%, leaving 65% in service"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Per M.P. 201.02A, two large-scale incidents are working at once. How much may each use?",
+     "a": "Each may use 35%, and 30% must remain in service.",
+     "why": "M.P. 201.02A: With two incidents each may use 35% and 30% stays in service; with three, each may use 25% and 25% stays in service.",
+     "opts": [
+      "35% each, with 30% kept in service",
+      "30% each, with 40% kept in service",
+      "25% each, with 50% kept in service",
+      "40% each, with 20% kept in service"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "You're first-due during Emergency Deployment and the modified response isn't enough. Per M.P. 201.02A, what can you do?",
+     "a": "Responding or on-scene units can balance a modified response to a full assignment.",
+     "why": "M.P. 201.02A: \"Responding units or a unit on-scene has the ability to balance a modified response to a full assignment if necessary.\"",
+     "opts": [
+      "Balance the modified response to a full assignment",
+      "Nothing; only AHQ can change a modified response",
+      "Ask the Operations Deputy Chief to end deployment",
+      "Request a TOC liaison to approve more companies"
+     ],
+     "src": "M.P. 201.02A"
+    },
+    {
+     "q": "Per M.P. 201.02B, when can the Emergency Power Outage Plan be implemented?",
+     "a": "When the heat stress factor exceeds 105 or temperatures drop below 34 degrees.",
+     "why": "M.P. 201.02B: It \"can be implemented when the heat stress factor (temperature and humidity) exceeds 105 or extremely cold temperatures below 34 degrees.\"",
+     "opts": [
+      "Heat stress factor over 105 or temperatures below 34",
+      "Heat stress factor over 110 or temperatures below 32",
+      "Any outage expected to last longer than three hours",
+      "Any outage affecting more than 2,000 customers"
+     ],
+     "src": "M.P. 201.02B"
+    },
+    {
+     "q": "Per M.P. 201.02B, a power outage is expected to last more than three hours in extreme heat. What should be considered?",
+     "a": "Evacuation (under three hours, shelter in place).",
+     "why": "M.P. 201.02B: Consider \"duration of the outage (greater than three hours consider evacuation, less than three hours shelter in-place).\"",
+     "opts": [
+      "Evacuation",
+      "Shelter in place",
+      "Rolling blackouts",
+      "Feeder rerouting"
+     ],
+     "src": "M.P. 201.02B"
+    },
+    {
+     "q": "Per M.P. 201.02B, how long does a rolling blackout usually last?",
+     "a": "Usually 20 to 30 minutes.",
+     "why": "M.P. 201.02B: Rolling blackouts are a last resort and \"should only last 20 - 30 minutes\"; most \"may not require evacuations.\"",
+     "opts": [
+      "20 to 30 minutes",
+      "1 to 2 hours",
+      "5 to 10 minutes",
+      "About 3 hours"
+     ],
+     "src": "M.P. 201.02B"
+    },
+    {
+     "q": "Per M.P. 201.02B, who may initiate the Emergency Power Outage Plan?",
+     "a": "The North or South Shift Commander, the Deployment BC or Supervisor, or any Executive Staff Chief Officer or Command Officer.",
+     "why": "M.P. 201.02B: Activation is at the discretion of the North/South Shift Commander, the Deployment Battalion Chief or Supervisor, or any Executive Staff Chief Officer or Command Officer.",
+     "opts": [
+      "The Deployment Battalion Chief or Supervisor",
+      "The power company's operations supervisor",
+      "The first-due Company Officer in the area",
+      "The City Emergency Management Coordinator"
+     ],
+     "src": "M.P. 201.02B"
+    },
+    {
+     "q": "Per M.P. 201.02B, who is dispatched to meet the power company's customer service representative?",
+     "a": "The Battalion Chief of the affected area.",
+     "why": "M.P. 201.02B: \"The Battalion Chief of the affected area should be dispatched to meet with the power company 'customer service representative'\" to coordinate needs.",
+     "opts": [
+      "The Battalion Chief of the affected area",
+      "The North or South Shift Commander",
+      "The Deployment Supervisor from AHQ",
+      "The first-due engine Company Officer"
+     ],
+     "src": "M.P. 201.02B"
+    },
+    {
+     "q": "Per M.P. 201.05B (Support Sector), which incidents does the on-duty Resource Officer (RM-50) respond to?",
+     "a": "All working first alarm incidents or greater, or any incident where Command requests it.",
+     "why": "M.P. 201.05B: \"It is the responsibility of RM-50 to respond to all working first alarm incidents or greater, or any other incident where response is requested by Command.\"",
+     "opts": [
+      "All working first alarms or greater, or on request",
+      "All second alarms or greater, or on request",
+      "Every working fire and every haz mat call",
+      "Only when the Logistics Section is opened"
+     ],
+     "src": "M.P. 201.05B"
+    },
+    {
+     "q": "Per M.P. 201.05B, where does RM-50 report on arrival and work from?",
+     "a": "RM-50 reports to and remains at the Command Post.",
+     "why": "M.P. 201.05B: RM-50 \"will report to the Command Post on arrival and verify establishment of the Resource Sector\" and \"will remain at the Command Post.\"",
+     "opts": [
+      "The Command Post",
+      "The Staging area",
+      "The Rehab sector",
+      "The Lobby sector"
+     ],
+     "src": "M.P. 201.05B"
+    },
+    {
+     "q": "Per M.P. 201.05B, which is a responsibility of the Resource (Support) Sector?",
+     "a": "Providing expendable supplies (air, oxygen, medical supplies, foam, etc.) and coordinating field refueling.",
+     "why": "M.P. 201.05B: Duties include re-supply of expendables \"such as air, oxygen, medical supplies, foam, Gatorade, food\" and \"field refueling of apparatus.\"",
+     "opts": [
+      "Field refueling and resupply of air, oxygen and foam",
+      "Tracking crew accountability at building entry points",
+      "Assigning Rehab rotations to crews leaving the interior",
+      "Conducting the post-incident critique of operations"
+     ],
+     "src": "M.P. 201.05B"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Command, Mayday & Sectors (201) (Part 2)",
+   "sub": "Lobby, Environmental, Evacuation, Information, Critique and Welfare sectors, the Threat Liaison Officer, air operations and post incident reviews.",
+   "concepts": [
+    "<b>201.05C</b>: Lobby controls entry/exit and accountability; high-rise Lobby is the ground floor; everyone reports to Lobby first.",
+    "<b>201.05E</b>: Consider shelter in place; Red Cross needs up to 3 hours; siren is 3 five-second YELP blasts; fire takes hazardous areas, police take safe areas.",
+    "<b>201.05F</b>: \"Public Information Sector\"; confirm next of kin before releasing names; never speculate on cause.",
+    "<b>201.05G</b>: Training Academy officer sets up Critique Sector; five critique levels; Company Level is on scene, informal and brief.",
+    "<b>201.05H</b>: Welfare Sector for a member's serious injury or death; one Hospital Liaison per hospital and one Family Liaison per family; no freelancing.",
+    "<b>201.05I</b>: TLO coordinates fire and police tactical ops; tactical EMS can't manage a TLO-Operation.",
+    "<b>201.07</b>: LZ is 100' x 100' with a 60' x 60' touchdown area, people kept 200' back; tail guard 50-100'; approach from the front within 45 degrees.",
+    "<b>201.08</b>: A BC or Company Officer can review any incident, ideally on scene; the BC sends the form to Tactical Services."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 201.05C, at a high-rise fire, where is Lobby Sector normally located?",
+     "a": "Normally the ground floor lobby area.",
+     "why": "M.P. 201.05C: \"In the case of a high-rise building this is normally the ground floor lobby area.\"",
+     "opts": [
+      "The ground floor lobby area",
+      "Two floors below the fire",
+      "The stairwell on the fire floor",
+      "At the Command Post outside"
+     ],
+     "src": "M.P. 201.05C"
+    },
+    {
+     "q": "You arrive at a high-rise where Lobby Sector is established. Per M.P. 201.05C, where do you report first?",
+     "a": "Report to Lobby Sector before reporting to any other sector or assignment.",
+     "why": "M.P. 201.05C: \"When Lobby Sector is established all personnel entering the building or area must report to Lobby Sector before reporting to any other sector or assignment.\"",
+     "opts": [
+      "Lobby Sector, before any other assignment",
+      "Directly to the sector you were assigned",
+      "Staging, and wait for Lobby to call you up",
+      "The Command Post for a face-to-face briefing"
+     ],
+     "src": "M.P. 201.05C"
+    },
+    {
+     "q": "Per M.P. 201.05C, how must civilians entering a Lobby-controlled building be handled?",
+     "a": "Civilians must be accompanied by a firefighter with a portable radio.",
+     "why": "M.P. 201.05C: \"Civilian personnel entering the building area shall be accompanied by a firefighter with a portable radio.\"",
+     "opts": [
+      "Escorted by a firefighter with a portable radio",
+      "Signed in and given a visitor accountability tag",
+      "Kept out; civilians may never enter the building",
+      "Escorted by police and logged at the Command Post"
+     ],
+     "src": "M.P. 201.05C"
+    },
+    {
+     "q": "Per M.P. 201.05C, what does Lobby Sector do with accountability tags?",
+     "a": "Collects accountability tags from all personnel entering; they are retrieved on departure.",
+     "why": "M.P. 201.05C: \"Accountability tags will be collected from all personnel entering and should be retrieved on departure.\"",
+     "opts": [
+      "Collect from all entering and return them on exit",
+      "Send all tags to the Command Post every 10 minutes",
+      "Hang them on the hoseline at the point of entry",
+      "Collect them only from crews going above the fire"
+     ],
+     "src": "M.P. 201.05C"
+    },
+    {
+     "q": "At a trench rescue, per M.P. 201.05C, how is the Lobby-controlled perimeter defined?",
+     "a": "With HAZARD ZONE tape and an identified entrance/exit point.",
+     "why": "M.P. 201.05C: For technical operations like haz mat, trench or confined space, \"the perimeter shall be defined by HAZARD ZONE tape with an entrance/exit point identified.\"",
+     "opts": [
+      "With HAZARD ZONE tape and one entry/exit point",
+      "With cones placed 200 feet from the trench lip",
+      "By apparatus parked around the work area",
+      "By the police perimeter set up for traffic"
+     ],
+     "src": "M.P. 201.05C"
+    },
+    {
+     "q": "Per M.P. 201.05D, what types of incidents is the Environmental Sector intended for?",
+     "a": "Large-scale events that may result in environmental contamination or major impact on City services.",
+     "why": "M.P. 201.05D: It covers multiple alarm fires, fires with haz mat, major spills and leaks that \"may result in environmental contamination or have a major impact on the operation of City services.\"",
+     "opts": [
+      "Large events that may cause environmental contamination",
+      "Any fire where runoff water reaches a storm drain",
+      "Brush fires that threaten a protected natural area",
+      "Small single-company fuel spills on city streets"
+     ],
+     "src": "M.P. 201.05D"
+    },
+    {
+     "q": "Per M.P. 201.05D, whose designee coordinates the outside agencies and keeps the IC and Executive Staff informed?",
+     "a": "The Phoenix Fire Department Special Operations Section designee.",
+     "why": "M.P. 201.05D: The Special Operations Section designee \"will coordinate the activities of the following agencies and assure communications regarding the event to the Incident Commander & Executive Staff.\"",
+     "opts": [
+      "PFD Special Operations Section",
+      "State Department of Health",
+      "City Office of Environmental Programs",
+      "County Emergency Planning Committee"
+     ],
+     "src": "M.P. 201.05D"
+    },
+    {
+     "q": "Per M.P. 201.05D, which agency's designee determines air, water or soil contamination?",
+     "a": "The State of Arizona Department of Environmental Quality (ADEQ) designee.",
+     "why": "M.P. 201.05D: The ADEQ designee \"will coordinate the activities to determine air, water or soil contamination and to assure that all environmental issues are identified.\"",
+     "opts": [
+      "Arizona Dept. of Environmental Quality",
+      "City of Phoenix Safety",
+      "Maricopa County LEPC",
+      "City Emergency Management"
+     ],
+     "src": "M.P. 201.05D"
+    },
+    {
+     "q": "Per M.P. 201.05D, what happens at the conclusion of an Environmental Sector incident?",
+     "a": "The members reassemble and generate a joint report on all activity.",
+     "why": "M.P. 201.05D: \"At the conclusion of the incident, the members will reassemble and a joint report will be generated regarding all activity.\"",
+     "opts": [
+      "Members reassemble and generate a joint report",
+      "Each agency files its own report with ADEQ",
+      "The IC sends a summary to the City Manager",
+      "Special Operations holds a department critique"
+     ],
+     "src": "M.P. 201.05D"
+    },
+    {
+     "q": "A haz mat leak can be controlled before an evacuation could be completed. Per M.P. 201.05E, what may Command consider?",
+     "a": "In-place sheltering.",
+     "why": "M.P. 201.05E: In-place sheltering can be considered when \"leaks can be controlled rapidly and before evacuation can be completed,\" among other conditions.",
+     "opts": [
+      "In-place sheltering instead of evacuating",
+      "A site evacuation upwind of the perimeter",
+      "A large-scale evacuation with EOC support",
+      "Waiting for the Red Cross to open a shelter"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, what instructions may Command give the public for sheltering in place?",
+     "a": "Stay indoors, shut down evaporative cooling systems, and close all doors and windows.",
+     "why": "M.P. 201.05E: Command may need to instruct the public about \"the need to stay indoors shutting down their evaporative cooling systems and closing all doors and windows.\"",
+     "opts": [
+      "Stay in, shut off evap coolers, close doors and windows",
+      "Stay in, run the A/C, and keep one window cracked",
+      "Go to the nearest school until told to return home",
+      "Stay in a vehicle with windows up and engine off"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, which evacuation level normally affects fewer than 100 people for two to four hours or more?",
+     "a": "Intermediate level evacuation.",
+     "why": "M.P. 201.05E: The Intermediate Level \"normally affects fewer than 100 people. People may remain out of the area for two to four hours or more.\" Site evacuations are generally under an hour or two.",
+     "opts": [
+      "Intermediate level",
+      "Site evacuation",
+      "Large-scale level",
+      "Shelter-in-place"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Door-to-door, a resident refuses to evacuate. Per M.P. 201.05E, what do you do?",
+     "a": "Specifically inform them of the risk; if they still refuse, leave them, and document/report the address.",
+     "why": "M.P. 201.05E: If a resident refuses, \"they should be specifically informed of the risk and, if they still refuse, left to stay.\" The address is noted and reported to the Evacuation Branch.",
+     "opts": [
+      "Explain the risk, leave them, and report the address",
+      "Have police remove them from the home by force",
+      "Stay with them until a Branch Officer arrives",
+      "Skip the address and continue down the block"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, how much lead time does the Red Cross need to staff shelter sites?",
+     "a": "Up to three hours.",
+     "why": "M.P. 201.05E: \"The Red Cross will need up to three hours to get adequate personnel, equipment and supplies to the shelter sites,\" so shelter selection can't wait on them.",
+     "opts": [
+      "Up to three hours",
+      "Up to one hour",
+      "Up to six hours",
+      "Up to 30 minutes"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, who selects evacuation shelter sites, and when?",
+     "a": "The Incident Commander, at the time the evacuation is ordered.",
+     "why": "M.P. 201.05E: \"Shelter site selection cannot wait on the Red Cross. Site selection must be made by the Incident Commander at the time evacuation is ordered.\"",
+     "opts": [
+      "The IC, at the time evacuation is ordered",
+      "The Red Cross, once they have arrived",
+      "The EOC, after it has been activated",
+      "Police, after the perimeter is secured"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "There is no time for door-to-door notice. Per M.P. 201.05E, how do you start the mobile siren/PA notification?",
+     "a": "Three five-second siren blasts on the YELP setting, then the PA instructions.",
+     "why": "M.P. 201.05E: \"Use three (3) five-second blasts of the siren while on the 'YELP' setting,\" then the evacuation instructions over PA at maximum volume.",
+     "opts": [
+      "Three 5-second blasts of the siren on YELP",
+      "Two 10-second blasts of the air horn",
+      "One long 15-second blast on WAIL",
+      "Continuous HI-LO siren for 30 seconds"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "During a mobile PA evacuation notice, per M.P. 201.05E, how often do you repeat the notification?",
+     "a": "At the beginning of each block and every 50 yards after that.",
+     "why": "M.P. 201.05E: \"Initiate notification at the beginning of each block and each 50 yards after that,\" proceeding slowly at maximum PA volume.",
+     "opts": [
+      "Start of each block and every 50 yards",
+      "Start of each block and every 100 yards",
+      "Every 25 yards along the whole route",
+      "Once at each intersection only"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, how are fire companies and police divided during walk-through or drive-through notification?",
+     "a": "Fire companies take the hazardous areas; police take the safe areas.",
+     "why": "M.P. 201.05E: \"Fire companies should be assigned to hazardous areas with police assigned to safe areas.\"",
+     "opts": [
+      "Fire to hazardous areas, police to safe areas",
+      "Police to hazardous areas, fire to safe areas",
+      "Fire and police paired together in each grid",
+      "Fire to shelters, police to the whole zone"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05E, who decides when evacuees may return home if the EOC is not operating?",
+     "a": "The fire department Incident Commander (the EOC staff decide if the EOC is operating).",
+     "why": "M.P. 201.05E: The return decision is \"the sole responsibility of the fire department Incident Commander. If the EOC is operating, the decision... will be made by the EOC staff.\"",
+     "opts": [
+      "The fire department Incident Commander",
+      "The Police Incident Commander on scene",
+      "The Evacuation Branch Officer",
+      "The Red Cross shelter manager"
+     ],
+     "src": "M.P. 201.05E"
+    },
+    {
+     "q": "Per M.P. 201.05F, when should Command establish an Information Sector?",
+     "a": "As soon as practical after basic rescue and fire operations are extended.",
+     "why": "M.P. 201.05F: \"As soon as practical, after basic rescue and fire operations are extended, Command will establish an Information Sector.\"",
+     "opts": [
+      "As soon as practical after rescue and fire ops are extended",
+      "On arrival, before the first attack line goes in service",
+      "Only after the PIO arrives and requests the assignment",
+      "Only once the incident reaches a 2nd Alarm or greater"
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "Per M.P. 201.05F, what is the radio designation for the Information Sector?",
+     "a": "\"Public Information Sector.\"",
+     "why": "M.P. 201.05F: \"Radio designation will be 'Public Information Sector.'\"",
+     "opts": [
+      "\"Public Information Sector\"",
+      "\"Media Sector\"",
+      "\"PIO Sector\"",
+      "\"Information Officer\""
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "You're assigned Information Sector and a reporter asks the name of a seriously injured victim. Per M.P. 201.05F, what must happen first?",
+     "a": "Confirm that next of kin has been notified before releasing the name.",
+     "why": "M.P. 201.05F: \"BEFORE RELEASING NAMES OF PERSONS SERIOUSLY INJURED OR DECEASED CONFIRM THAT NEXT OF KIN HAS BEEN NOTIFIED.\" Ask the Dispatch supervisor to check with PD or the hospital.",
+     "opts": [
+      "Confirm next of kin has been notified",
+      "Get approval from the Incident Commander",
+      "Confirm the patient arrived at the hospital",
+      "Have the victim's family sign a release"
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "Per M.P. 201.05F, a reporter asks what caused the fire. What should the Information Sector do?",
+     "a": "Do not speculate as to the cause.",
+     "why": "M.P. 201.05F: \"Do not speculate as to the cause of a fire or car accident.\"",
+     "opts": [
+      "Don't speculate about the cause",
+      "Give the most likely cause so far",
+      "Refer them to the first-in captain",
+      "Read them the investigator's notes"
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "Per M.P. 201.05F, which journalists may be assigned to sectors inside the incident perimeter?",
+     "a": "Certified Fire Journalists (CFJ), identified by green helmets and fire journalist ID.",
+     "why": "M.P. 201.05F: \"Certified Fire Journalists (CFJ), identified by their green helmets and fire journalist identification, may be assigned to sectors.\" Others remain outside the perimeter.",
+     "opts": [
+      "Certified Fire Journalists with green helmets and ID",
+      "Any credentialed TV crew wearing full turnout gear",
+      "Any reporter escorted by a firefighter with a radio",
+      "Only the PIO's camera crew from the department"
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "The PIO arrives and a company is already running the Information Sector. Per M.P. 201.05F, what does the PIO do?",
+     "a": "Report to the sector location, receive a briefing, and assist as needed; the PIO may assume the sector at their discretion.",
+     "why": "M.P. 201.05F: \"The PIO will report to the sector location, receive a briefing from the sector officer, and assist as needed. The PIO may assume sector responsibilities at his/her discretion.\"",
+     "opts": [
+      "Get a briefing at the sector and assist as needed",
+      "Take over the sector immediately on arrival",
+      "Report to Staging and wait for an assignment",
+      "Set up a separate media area at the Command Post"
+     ],
+     "src": "M.P. 201.05F"
+    },
+    {
+     "q": "Per M.P. 201.05G, who automatically implements the Critique Sector at a major incident?",
+     "a": "The responding Training Academy officer; Command must be notified.",
+     "why": "M.P. 201.05G: The sector \"will be implemented automatically by the Training Academy officer responding to the incident. Command must be notified.\"",
+     "opts": [
+      "The Training Academy officer responding",
+      "The Incident Commander on arrival",
+      "The Shift Commander of the district",
+      "The Field Incident Technician"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Per M.P. 201.05G, who determines the level at which an incident will be critiqued?",
+     "a": "The Assistant Chief of Operations, or designee.",
+     "why": "M.P. 201.05G: \"The incident may qualify for one of five levels of critique. The Assistant Chief of Operations, or designee, will determine the level.\"",
+     "opts": [
+      "The Assistant Chief of Operations or designee",
+      "The Incident Commander before terminating",
+      "The Training Academy officer at the scene",
+      "The company officer of the first-in unit"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Per M.P. 201.05G, which critique level is held on site before leaving the scene, informal and brief?",
+     "a": "Company Level critique.",
+     "why": "M.P. 201.05G: Company Level is a \"post-incident critique conducted on site, prior to departing the scene. Initiated by Command or battalion chief. Informal and brief.\"",
+     "opts": [
+      "Company Level",
+      "Individual Level",
+      "Battalion Level",
+      "Operations Level"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Per M.P. 201.05G, which critique level is usually self-initiated by the company officer with no documentation required?",
+     "a": "The Individual level.",
+     "why": "M.P. 201.05G: Individual critiques are \"conducted within the individual company by the company officer... Usually self initiated... No documentation of the critique required.\"",
+     "opts": [
+      "Individual",
+      "Company",
+      "Battalion",
+      "Department"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Per M.P. 201.05G, what is the target length for a critique presentation?",
+     "a": "A maximum of 1 to 1-1/2 hours, if possible.",
+     "why": "M.P. 201.05G: \"Critique should be limited to a maximum of 1 to 1-1/2 hours in duration if possible.\"",
+     "opts": [
+      "1 to 1-1/2 hours maximum",
+      "30 to 45 minutes maximum",
+      "2 to 3 hours maximum",
+      "No more than 20 minutes"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Your company got CAD critique questions after a fire. Per M.P. 201.05G, when are responses due?",
+     "a": "By the end of today's shift.",
+     "why": "M.P. 201.05G: The CAD questionnaire says: \"Respond by the end of today's shift.\" (Divisions have ten calendar days for critique packet materials.)",
+     "opts": [
+      "By the end of today's shift",
+      "Within 10 calendar days",
+      "Before the next working fire",
+      "By the next Monday morning"
+     ],
+     "src": "M.P. 201.05G"
+    },
+    {
+     "q": "Per M.P. 201.05H, when is a Welfare Sector established?",
+     "a": "For any incident involving the serious injury or fatality of a member, on-duty or off-duty.",
+     "why": "M.P. 201.05H: A Welfare Sector Officer \"will be established for any incident involving the serious injury or fatality of a member... This procedure will apply to both on-duty and off-duty incidents.\"",
+     "opts": [
+      "Serious injury or death of a member, on or off duty",
+      "Any member injury that requires transport to a hospital",
+      "Any Mayday, even if no member ends up injured",
+      "Serious injury or death of a member while on duty only"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "A member is seriously hurt off duty. Per M.P. 201.05H, who establishes the Welfare Sector?",
+     "a": "The Appropriate Deputy Chief (on duty, the Incident Commander).",
+     "why": "M.P. 201.05H: \"For on-duty incidents, the Incident Commander will be responsible... For off-duty incidents, the Appropriate Deputy Chief will establish the Sector.\"",
+     "opts": [
+      "The Appropriate Deputy Chief",
+      "The member's Battalion Chief",
+      "The Fire Chief personally",
+      "The Local 493 president"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "Per M.P. 201.05H, what may the station notification about injured firefighters leave out until the families are notified?",
+     "a": "Names are not included until families are notified.",
+     "why": "M.P. 201.05H: \"Notification will not include names until the families are notified.\" It includes a brief description, number and priority of injuries, and receiving hospitals.",
+     "opts": [
+      "The names",
+      "The hospitals",
+      "The injury count",
+      "The incident type"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "Per M.P. 201.05H, how many Hospital Liaison Officers are assigned?",
+     "a": "One Hospital Liaison Officer for each receiving hospital.",
+     "why": "M.P. 201.05H: \"The Welfare Sector will assign a Hospital Liaison Officer to each receiving hospital.\" Family Liaison Officers are assigned one to each family.",
+     "opts": [
+      "One to each receiving hospital",
+      "One for the whole incident",
+      "One for each injured member",
+      "Two at the trauma center only"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "Per M.P. 201.05H, when should the Family Liaison Officer's notification to the family happen?",
+     "a": "As soon as possible, after all patients have arrived at hospitals.",
+     "why": "M.P. 201.05H: Contact the family \"as soon as possible. This notification should occur after all patients have arrived at hospitals.\"",
+     "opts": [
+      "After all patients have arrived at hospitals",
+      "Before the patient leaves the incident scene",
+      "Once the press release has been approved",
+      "After the Fire Chief has called the family"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "A fellow firefighter is hurt and you want to go to the family to help. Per M.P. 201.05H, what should you do?",
+     "a": "Contact the Welfare Sector Officer; don't freelance.",
+     "why": "M.P. 201.05H: Members must not \"freelance,\" which has caused wrong information and families sent to the wrong hospital. \"Those members desiring to help should contact the Welfare Sector Officer.\"",
+     "opts": [
+      "Contact the Welfare Sector Officer to offer help",
+      "Drive to the home and offer the family a ride",
+      "Go to the hospital and wait with the crew",
+      "Call the family directly to share updates"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "Per M.P. 201.05H, who may Dispatch release names or identifying details of injured members to?",
+     "a": "Only persons approved by the Welfare Sector.",
+     "why": "M.P. 201.05H: \"The Dispatch Center staff will not release any names or identifying details to anyone not approved by the Welfare Sector.\"",
+     "opts": [
+      "Only people approved by the Welfare Sector",
+      "Any Chief Officer who calls the Alarm Room",
+      "Any fire station that requests an update",
+      "The news media, once the PIO is on scene"
+     ],
+     "src": "M.P. 201.05H"
+    },
+    {
+     "q": "Per M.P. 201.05I, when should the jurisdiction's Threat Liaison Officer (TLO) be requested?",
+     "a": "When incidents require coordination and communication between law enforcement tactical units and fire companies.",
+     "why": "M.P. 201.05I: Routine police interactions are handled by the Company Officer; \"when incidents occur that require coordination... between law enforcement tactical units and fire companies, a request for the TLO... shall be made.\"",
+     "opts": [
+      "When police tactical units and fire need coordination",
+      "On every call where police are already on scene",
+      "Only when a firefighter is hurt by an assailant",
+      "Only after police declare the scene is secure"
+     ],
+     "src": "M.P. 201.05I"
+    },
+    {
+     "q": "Per M.P. 201.05I, how is a TLO requested?",
+     "a": "On an incident-assigned tactical channel or by contacting the regional dispatch center.",
+     "why": "M.P. 201.05I: \"The request for the TLO is made using an incident assigned tactical channel or by contacting the appropriate regional dispatch center.\"",
+     "opts": [
+      "Tactical channel or the regional dispatch center",
+      "Directly by phone to the police SWAT commander",
+      "Through the Battalion Chief's MCT messaging",
+      "Only by the on-scene police supervisor"
+     ],
+     "src": "M.P. 201.05I"
+    },
+    {
+     "q": "Per M.P. 201.05I, can a SWAT Medic manage a TLO-Operation?",
+     "a": "No; fire-based tactical EMS resources cannot manage TLO-Operations, even if trained as TLOs.",
+     "why": "M.P. 201.05I: \"TLO-Operations cannot be managed by any fire-based tactical EMS resource... regardless of whether they are a trained TLO or not,\" including SWAT Medics and TEMS.",
+     "opts": [
+      "No, not even if they are a trained TLO",
+      "Yes, if they are a trained TLO",
+      "Yes, with police supervisor approval",
+      "Only until a Battalion Chief arrives"
+     ],
+     "src": "M.P. 201.05I"
+    },
+    {
+     "q": "Per M.P. 201.05I, at an incident led by law enforcement, where should the Fire TLO report?",
+     "a": "The Police Command Post.",
+     "why": "M.P. 201.05I: \"In these situations, the Fire TLO should report to the Police Command Post to coordinate requests for assistance.\"",
+     "opts": [
+      "The Police Command Post",
+      "The fire Staging area",
+      "The fire Command Post",
+      "The Alarm Room in person"
+     ],
+     "src": "M.P. 201.05I"
+    },
+    {
+     "q": "Per M.P. 201.05I, before a Fire TLO opens a TLO-Operation in another city, what must happen?",
+     "a": "They must first notify the TLO in the municipality of the operation.",
+     "why": "M.P. 201.05I: \"At no time should a Fire TLO from any jurisdiction open a TLO-Operation incident and request resources without first notifying the TLO in the municipality of the operation.\"",
+     "opts": [
+      "Notify the TLO in that municipality first",
+      "Get approval from their own Fire Chief",
+      "Get a mutual aid request from that city",
+      "Notify the state Department of Public Safety"
+     ],
+     "src": "M.P. 201.05I"
+    },
+    {
+     "q": "Per M.P. 201.07, what is the minimum landing zone size for each helicopter?",
+     "a": "At least 100 feet by 100 feet, relatively flat and free of obstructions.",
+     "why": "M.P. 201.07: \"The landing zone must be relatively flat and free of obstructions for an area of at least 100' x 100' for each helicopter,\" with a 60' x 60' touchdown area in the center.",
+     "opts": [
+      "100' x 100'",
+      "60' x 60'",
+      "150' x 150'",
+      "200' x 200'"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "You're assigned the landing zone. Per M.P. 201.07, how far back must spectators, vehicles and animals be kept?",
+     "a": "A minimum of 200 feet from the landing zone.",
+     "why": "M.P. 201.07: \"All spectators, vehicle traffic (including emergency vehicles) and animals must be kept a minimum of 200' away from the landing zone.\"",
+     "opts": [
+      "At least 200 feet",
+      "At least 100 feet",
+      "At least 150 feet",
+      "At least 300 feet"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, where does the person communicating with the pilot stand?",
+     "a": "At the front right corner of the touchdown area, as seen by the pilot.",
+     "why": "M.P. 201.07: \"The individual communicating with the pilot shall stand at the front right corner (as seen by the pilot) of the touch down area.\"",
+     "opts": [
+      "Front right corner of the touchdown area, as the pilot sees it",
+      "Front left corner of the touchdown area, as the pilot sees it",
+      "Center of the touchdown area, facing directly into the wind",
+      "Behind the touchdown area, in line with the departure path"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "A helicopter is on the ground in your landing zone. Per M.P. 201.07, where is the tail guard stationed?",
+     "a": "50 to 100 feet from the tail rotor, whether the aircraft is running or not.",
+     "why": "M.P. 201.07: \"A 'tail guard' shall be stationed 50 to 100 feet from the tail rotor... At no time shall personnel pass behind the body of the helicopter and the tail rotor.\"",
+     "opts": [
+      "50 to 100 feet from the tail rotor",
+      "20 to 30 feet from the tail rotor",
+      "150 to 200 feet from the tail rotor",
+      "Directly beside the tail boom"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, how long are radio contact and the landing zone kept after a helicopter departs?",
+     "a": "Two to three minutes, in case of an in-flight emergency.",
+     "why": "M.P. 201.07: \"Radio contact and the landing zone shall be maintained for two to three minutes after departure... in case an in-flight emergency is experienced.\"",
+     "opts": [
+      "Two to three minutes",
+      "Thirty seconds",
+      "Ten to fifteen minutes",
+      "Until it reaches the hospital"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "A helicopter is approaching your LZ and something becomes unsafe. Per M.P. 201.07, what do you tell the pilot?",
+     "a": "Instruct the pilot to \"GO AROUND\" three times.",
+     "why": "M.P. 201.07: \"Should anything become unsafe during the approach of any helicopter during landing operations instruct the pilot to GO AROUND three times.\"",
+     "opts": [
+      "\"GO AROUND\" three times",
+      "\"ABORT\" one time",
+      "\"WAVE OFF\" twice",
+      "\"HOLD\" three times"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, how do you approach a helicopter whose rotors are turning?",
+     "a": "From the front or within 45 degrees of the front, crouching, after making eye contact and getting the pilot's approval.",
+     "why": "M.P. 201.07: Approach and depart \"from the front or 45 degrees from the front, in a crouching position; remain in view of the pilot,\" after eye contact and the pilot's signal.",
+     "opts": [
+      "From the front or 45 degrees, crouched, after eye contact",
+      "From the side or rear, upright, once the pilot waves you",
+      "From any direction, crouched, once the skids are down",
+      "From the rear, crouched, to stay clear of the pilot's view"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, how many Immediate patients can a Med-Evac helicopter carry?",
+     "a": "Only one Immediate patient.",
+     "why": "M.P. 201.07: \"Med-Evac helicopters are capable of carrying; only one Immediate patient. Additional helicopters should be requested for incidents involving multiple Immediate patients.\"",
+     "opts": [
+      "Only one",
+      "Up to two",
+      "Up to three",
+      "Two if one is a child"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, who may perform \"Special Use\" helicopter operations such as hoists, rappels or short-hauls?",
+     "a": "Only certified City of Phoenix Police Department pilots and Phoenix Fire Technical Rescue Technicians.",
+     "why": "M.P. 201.07: \"'Special Use' helicopter operations shall only be performed by certified City of Phoenix Police Department pilots and Phoenix Fire Department Technical Rescue Technicians.\"",
+     "opts": [
+      "Certified Phoenix PD pilots and PFD TRT Technicians",
+      "Any carded pilot with a Phoenix Fire paramedic aboard",
+      "Med-Evac crews with a Technical Rescue Sector set up",
+      "DPS Ranger 41 crews with a PFD paramedic on board"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, a flight below what altitude counts as a \"Special Use\" helicopter operation?",
+     "a": "Below 500 feet above ground level.",
+     "why": "M.P. 201.07: \"Flights conducted below 500 feet above ground level (AGL)\" are listed as Special Use operations.",
+     "opts": [
+      "500 feet AGL",
+      "1,000 feet AGL",
+      "250 feet AGL",
+      "200 feet AGL"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, what are helicopters with full water buckets prohibited from doing?",
+     "a": "Flying over occupied structures or traffic; roads must be closed or structures evacuated if no other path exists.",
+     "why": "M.P. 201.07: \"Helicopters with full buckets are prohibited from flying over occupied structures or traffic. Roadways must be closed or structures evacuated if no other flight path can be used.\"",
+     "opts": [
+      "Flying over occupied structures or traffic",
+      "Dropping water within 150 feet of a crew",
+      "Flying within 100 yards of the Command Post",
+      "Refilling from a canal or open water source"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, how far to the side of the flight path must apparatus stay when helicopters are dipping a buoy wall tank?",
+     "a": "At least 150 feet to the side of the flight path.",
+     "why": "M.P. 201.07: \"Apparatus must be kept at least 150' to the side of the flight path of helicopters dipping the tank.\"",
+     "opts": [
+      "At least 150 feet",
+      "At least 50 feet",
+      "At least 100 feet",
+      "At least 300 feet"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, how far should the landing zone be from other activity areas?",
+     "a": "At least 100 yards.",
+     "why": "M.P. 201.07: \"The landing zone should be located at least 100 yards from other activity areas,\" and paths should not pass over treatment areas or the Command Post.",
+     "opts": [
+      "At least 100 yards",
+      "At least 100 feet",
+      "At least 50 yards",
+      "At least 300 yards"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.07, what is the radio designation for a helicopter operating under the direction of the Phoenix Fire Department?",
+     "a": "Firebird (Firebird 1, 2, 3, etc.).",
+     "why": "M.P. 201.07: \"Firebird is the designation for a helicopter operating under the direction of the Phoenix Fire Department.\" Mesa PD is Falcon; DPS is Ranger 41.",
+     "opts": [
+      "Firebird",
+      "Falcon",
+      "Ranger",
+      "Air Rescue"
+     ],
+     "src": "M.P. 201.07"
+    },
+    {
+     "q": "Per M.P. 201.08, who can conduct a post incident review, and where do participants benefit most?",
+     "a": "A Battalion Chief or Company Officer can conduct one after any incident; it is most beneficial at the scene.",
+     "why": "M.P. 201.08: \"Participants will benefit most when a post incident review is conducted at the incident scene... The Battalion Chief or Company Officer can conduct a review after any incident.\"",
+     "opts": [
+      "The BC or Company Officer, at the incident scene",
+      "Only the BC, at the station the next shift",
+      "Tactical Services, at the training academy",
+      "Only the Shift Commander, at the Command Post"
+     ],
+     "src": "M.P. 201.08"
+    },
+    {
+     "q": "Per M.P. 201.08, the BC completes the post incident review form and sends it to whom?",
+     "a": "The Tactical Services Section, for review, reporting, and training.",
+     "why": "M.P. 201.08: \"The form should be completed by the Battalion Chief and forwarded to the Tactical Services Section for review, reporting, and training.\"",
+     "opts": [
+      "The Tactical Services Section",
+      "The Safety Section Chief",
+      "The Shift Commander's office",
+      "The Training Academy"
+     ],
+     "src": "M.P. 201.08"
+    },
+    {
+     "q": "Per M.P. 201.08, how should a post incident review handle individual successes versus overall safety?",
+     "a": "Individual successes should not outweigh the safety of the overall operation or crews.",
+     "why": "M.P. 201.08: Reinforce safety behaviors, and \"remember that individual successes should not outweigh the safety of the overall operation or crews.\" End the review on a positive note.",
+     "opts": [
+      "They must not outweigh the safety of the operation",
+      "They should be the main focus of the review",
+      "They are left out to keep the review neutral",
+      "They are recorded separately for evaluations"
+     ],
+     "src": "M.P. 201.08"
+    }
+   ]
+  }
+ ],
+ "notes": []
+}
