@@ -4,7 +4,7 @@ While writing study cards from every Volume I and II M.P. (Nov 2026), these issu
 
 ## Vol I: Conduct, Uniforms & General Policy (100–102)
 
-- M.P. 102.01 (Rules of Conduct) is referenced by 102.02 and 102.05 but has no file in mp-text, so it is not covered. M.P. 102.02A (detailed Class A wear standards) is also referenced but absent.
+- M.P. 102.01 (Rules of Conduct) is referenced by 102.02 and 102.05 but is not on the city's policies page, so the app can't cover it yet. M.P. 102.02A (detailed Class A wear standards) is also referenced but absent.
 - M.P. 102.05C has overlapping thresholds: one section says 'UNDER $200' / '$200 or less' and the next says '$200 AND OVER'. Cards use '$200 or less' vs 'over $200' as the staff-work section states. The MP (04/06) also references Performance Auditing and Form 90-68D, which may be outdated given 102.05B's OSI process.
 - M.P. 102.05B defines NOI as 'Notice of Inquiry' but Addendum A calls it 'Notice of Investigation'. Personnel Rule '2lBl6' appears garbled in the text (likely 21B16); not used on cards.
 - M.P. 102.12 (06/19) references the Domino/Lotus Notes email system and AOL/Yahoo/MSN/KaZaA examples; likely outdated. Its PRIVACY AND MONITORING section is duplicated in the text.
@@ -46,7 +46,6 @@ While writing study cards from every Volume I and II M.P. (Nov 2026), these issu
 
 ## Vol II: Command, Mayday & Sectors (201)
 
-- No 201.01C (Risk Management and Safety) text file exists in build/mp-text; 201.01E cites it, but no cards were written for 201.01C.
 - 201.05B file is titled 'Support Sector' but the body text calls it 'Resource Sector' throughout (RM-50 = Resource Officer); cards say 'Resource (Support) Sector'.
 - 201.05G and 201.08 read as dated (slide film, transparencies, department mail, 'a new form has been developed'); cards avoid those details.
 - 201.08 is mostly blank evaluation forms; only page 1 has procedure text. 201.07's final landing-zone diagram and hand-signal pages did not extract usefully and were not used.
@@ -73,7 +72,6 @@ While writing study cards from every Volume I and II M.P. (Nov 2026), these issu
 
 ## Vol II: Dispatch, Staging & Driving (205.02–205.11)
 
-- No 205.06 (Level I/Level II Staging) text file exists in build/mp-text; only 205.06A Staging Sector was available, so Level I/II staging is covered only as 205.06A and 205.07 describe it.
 - 205.02 (10/97) numbers two different list items '22' (auto accidents and 'any other medical emergency'); the second is presumably 24.
 - 205.03 and 205.05A (10/97), 205.04 (03/03), 205.04A (07/99), 205.05B (05/95), 205.07 and 205.11 (01/95) are old revisions; dispatch names (Channel 1, DS2, TRO) and the 205.04 list of contract cities may be out of date.
 - 205.03 gives 2-1 Medical as 'Level 1 and 2 hospitals' but 1st Alarm Medical as 'Level 1 hospitals'; carded as written.
