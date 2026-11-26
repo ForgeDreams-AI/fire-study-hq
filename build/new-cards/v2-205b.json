@@ -1,0 +1,1261 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Special Responses — Airports, Freeway, Power & Solar (205.13–205.24) (Part 1)",
+   "sub": "Aircraft alerts and staging at Sky Harbor, Goodyear, Deer Valley and Glendale; foam units; freeway and Papago Tunnel response; District Van; mutual aid.",
+   "concepts": [
+    "<b>205.13</b>: Alert 1 = minor trouble, Alert 2 = major trouble (smoke, gear, hydraulics), Alert 3 = actual crash or gear-up landing over 12,500 lbs. The Station 19 captain sets the alert level.",
+    "<b>205.13</b>: Cut a foam path from the exit to safety. A fuselage can burn through in 60 seconds. Most deaths come from smoke inhalation. No overhaul until investigators are done.",
+    "<b>205.13A/B/C</b>: Alert 1 = one engine. Stage at the Goodyear tower base, inside Deer Valley gate #2, or at the Glendale tower gate #9. Stay off runways until they're closed.",
+    "<b>205.14</b>: Foam 34/54 respond automatically to flammable liquid calls. Sky Harbor ARFF goes off airport within 5 miles. Dry chem works best on pressurized or flowing fuel fires.",
+    "<b>205.15</b>: Respond Code 2 on the mainline. Go against traffic only at DPS request with traffic stopped. Later units stage Level I near an on-ramp. Form Unified Command with DPS/ADOT.",
+    "<b>205.15A</b>: Hydrants every 300 ft, alternating sides. Humats won't fit. Say your unit ID twice on the radio. Stage Level II on Culver St west of Central. Second-due may use the Bus Transit Tunnel.",
+    "<b>205.16</b>: The District Van is staffed by cadets or volunteers, requested by on-scene FD only, and responds Code 2. It's not a substitute for an ambulance.",
+    "<b>205.17</b>: Mutual aid needs a formal request and the AHJ stays responsible. Minimum 3&1 for structure fires. No hot zone work without a direct dispatch tactical radio link. Over 12 hrs = Statewide plan."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 205.13, a pilot reports smoke visible on board and requests emergency equipment at Sky Harbor. What alert category is this?",
+     "a": "An Alert 2 (major difficulties, positive indication of fire).",
+     "why": "M.P. 205.13: Alert 2 indicates major difficulties such as a \"positive indication of fire (smoke visible) on board the aircraft,\" faulty landing gear or no hydraulic pressure.",
+     "opts": [
+      "Alert 2",
+      "Alert 1",
+      "Alert 3",
+      "ARFF1A"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, a pilot of an aircraft over 12,500 lbs says the landing gear will not extend and they must land gear-up at Sky Harbor. What alert is it?",
+     "a": "An Alert 3.",
+     "why": "M.P. 205.13: Alert 3 covers an actual accident and also a pilot of an aircraft over 12,500 pounds indicating the gear will not extend and the aircraft will land gear-up.",
+     "opts": [
+      "Alert 3",
+      "Alert 2",
+      "Alert 1",
+      "ARFF2-1"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, who decides the alert category and ARFF response for an aircraft emergency at Sky Harbor?",
+     "a": "A fire captain at Sky Harbor Airport Fire Station 19.",
+     "why": "M.P. 205.13: The response \"will be dictated by a fire captain at Sky Harbor Airport Fire Station #19,\" who takes a pessimistic view and selects the most appropriate alert level.",
+     "opts": [
+      "The fire captain at Sky Harbor Fire Station 19",
+      "The FAA Control Tower supervisor on duty",
+      "The on-duty Phoenix shift commander",
+      "The first-arriving battalion chief"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, how far from the runway must each ARFF standby position at Sky Harbor be?",
+     "a": "At least 500 feet away from the runway.",
+     "why": "M.P. 205.13: Foam 1 stages near the west end, Foam 2 near the east end, Foam 3 near the midpoint, and \"each position will be at least 500 feet away from the runway.\"",
+     "opts": [
+      "At least 500 feet",
+      "At least 300 feet",
+      "At least 1,000 feet",
+      "At least 250 feet"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "You're first in at an aircraft crash where passengers are evacuating through burning fuel. Per M.P. 205.13, how do you create their path of egress?",
+     "a": "Discharge Class B foam to create a path through the burning liquid from the exit door to a safe area.",
+     "why": "M.P. 205.13: Assist evacuation \"by discharging Class B foam only\" to create a path from the escape door to a safe area; if foam is unavailable, use large volumes of water.",
+     "opts": [
+      "Discharge Class B foam to cut a path from the exit door to a safe area",
+      "Use straight streams of water to push the fire away from the fuselage",
+      "Apply dry chemical only, holding foam back for the fuselage",
+      "Wait for all foam units to arrive before applying any agent"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, how quickly can fire burn through an aircraft fuselage with direct flame impingement?",
+     "a": "Within 60 seconds.",
+     "why": "M.P. 205.13: Protect the fuselage from direct flame impingement \"since fire can burn through fuselage within 60 seconds.\"",
+     "opts": [
+      "Within 60 seconds",
+      "Within 3 minutes",
+      "Within 5 minutes",
+      "Within 30 seconds"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13 tactical benchmarks, what is the usual cause of fatalities in survivable aircraft crashes?",
+     "a": "Smoke inhalation, so interior ventilation is started as soon as possible.",
+     "why": "M.P. 205.13: \"Fatalities in survivable aircraft crashes are usually due to smoke inhalation,\" so provide interior ventilation as soon as possible.",
+     "opts": [
+      "Smoke inhalation",
+      "Impact trauma",
+      "Burns from fuel fires",
+      "Exploding oxygen cylinders"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, when can overhaul begin at an aircraft accident?",
+     "a": "Not until all investigative agencies are finished, unless needed to suppress fire.",
+     "why": "M.P. 205.13: \"Do not allow any overhaul operations to take place until all investigative agencies are finished or unless needed to suppress fire.\"",
+     "opts": [
+      "Once investigative agencies are finished, unless needed to suppress fire",
+      "As soon as the fire is knocked down and all clears are given",
+      "After the airline representative approves it at the Command Post",
+      "Once the foam blanket has been maintained for 30 minutes"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13, who is asked to notify the NTSB after an aircraft accident?",
+     "a": "Command requests the Alarm Room notify the NTSB.",
+     "why": "M.P. 205.13: \"Request the Alarm Room notify the National Transportation Safety Board (NTSB),\" via the FAA tower or Sky Harbor Communications.",
+     "opts": [
+      "The Alarm Room, at Command's request",
+      "The first-arriving company officer",
+      "The airline representative at the Command Post",
+      "The Police Department liaison"
+     ],
+     "src": "M.P. 205.13"
+    },
+    {
+     "q": "Per M.P. 205.13A, what does an Alert 1 response to Goodyear Airport consist of?",
+     "a": "One engine company.",
+     "why": "M.P. 205.13A: \"An Alert 1 response consists of one (1) Engine Company.\"",
+     "opts": [
+      "One engine company",
+      "Two engine companies and Foam 34",
+      "One engine company and one chief",
+      "One engine company and one ladder company"
+     ],
+     "src": "M.P. 205.13A"
+    },
+    {
+     "q": "You're dispatched to an Alert 2 at Goodyear Airport. Per M.P. 205.13A, where do you stage?",
+     "a": "At the base of the Goodyear Control Tower until the aircraft has landed.",
+     "why": "M.P. 205.13A: On Alert 1s and 2s, \"all fire department units shall respond to the base of the Goodyear Control Tower and stage until the aircraft has landed.\"",
+     "opts": [
+      "At the base of the Goodyear Control Tower until the aircraft lands",
+      "At the airport main entrance gate",
+      "At the end of the active runway",
+      "At Gate #9 next to the fuel farm"
+     ],
+     "src": "M.P. 205.13A"
+    },
+    {
+     "q": "Per M.P. 205.13A, which outside agency also responds to an Goodyear Airport Alert 2, and with what?",
+     "a": "The Goodyear Fire Department, with one engine company and one chief.",
+     "why": "M.P. 205.13A: On an Alert 2, \"the Goodyear Fire Department will respond with one (1) engine company and one (1) chief.\"",
+     "opts": [
+      "Goodyear Fire, with one engine company and one chief",
+      "Avondale Fire, with one engine and one ladder",
+      "Luke AFB Fire, with one crash truck",
+      "Goodyear Fire, with Foam 34 and a utility truck"
+     ],
+     "src": "M.P. 205.13A"
+    },
+    {
+     "q": "Per M.P. 205.13B, where do companies stage on an Alert 1 or 2 at Deer Valley Airport?",
+     "a": "At the main entrance (7th Ave and Deer Valley Rd), just inside gate #2.",
+     "why": "M.P. 205.13B: Companies respond to the main entrance at 7th Ave. and Deer Valley Rd. and stage \"just inside gate #2.\"",
+     "opts": [
+      "Just inside gate #2 at the main entrance, 7th Ave and Deer Valley Rd",
+      "At the base of the Deer Valley Control Tower",
+      "At gate #9, which has a Knox box lock",
+      "Midfield, at least 500 feet off the runway"
+     ],
+     "src": "M.P. 205.13B"
+    },
+    {
+     "q": "Per M.P. 205.13B, a Deer Valley Airport Alert 3 response includes two engines, a ladder, a rescue, a utility truck, a BC, and what else if available?",
+     "a": "T36, if available.",
+     "why": "M.P. 205.13B: Alert 2 and Alert 3 responses at Deer Valley include \"T36 if available.\"",
+     "opts": [
+      "T36",
+      "Foam 34",
+      "Foam 54",
+      "A brush truck"
+     ],
+     "src": "M.P. 205.13B"
+    },
+    {
+     "q": "At any of the smaller airports (e.g., Deer Valley), when may you drive on a runway per M.P. 205.13B?",
+     "a": "Only after a determination that the runway has been closed to all aircraft.",
+     "why": "M.P. 205.13B: \"If traveling on a runway is necessary, do so only after a determination has been made that the runway has been closed to all aircraft.\"",
+     "opts": [
+      "Only after it's determined the runway is closed to all aircraft",
+      "Once the aircraft has come to a complete stop",
+      "Any time with lights and siren operating",
+      "Only when escorted by an airport operations vehicle"
+     ],
+     "src": "M.P. 205.13B"
+    },
+    {
+     "q": "Per M.P. 205.13C, where do companies stage on an Alert 1 or 2 at Glendale Airport?",
+     "a": "At the Glendale Control Tower at gate #9.",
+     "why": "M.P. 205.13C: All companies \"respond to the Glendale Control Tower at gate #9 and stage until the aircraft has landed.\"",
+     "opts": [
+      "At the Glendale Control Tower at gate #9",
+      "Just inside gate #2 at the main entrance",
+      "At the base of the runway threshold",
+      "At the nearest Glendale fire station"
+     ],
+     "src": "M.P. 205.13C"
+    },
+    {
+     "q": "Per M.P. 205.13C, where do companies go on a Glendale Airport Alert 3?",
+     "a": "Directly to the crash site.",
+     "why": "M.P. 205.13C: \"For Alert 3 incidents, all companies shall respond directly to the crash site.\"",
+     "opts": [
+      "Directly to the crash site",
+      "To gate #9 to stage until directed",
+      "To the base of the control tower",
+      "To a Level II staging area off airport"
+     ],
+     "src": "M.P. 205.13C"
+    },
+    {
+     "q": "Per M.P. 205.13C, what should responding companies request through dispatch on a Glendale Airport aircraft emergency?",
+     "a": "The number of passengers on board, the amount of fuel on board, and the aircraft type.",
+     "why": "M.P. 205.13C: Companies should request \"the number of passengers on board, the amount of fuel on board the aircraft, and aircraft type if possible.\"",
+     "opts": [
+      "Passengers on board, fuel on board, and aircraft type",
+      "Pilot's name, flight number, and origin airport",
+      "Runway in use, wind speed, and visibility",
+      "Cargo manifest, airline contact, and tail number"
+     ],
+     "src": "M.P. 205.13C"
+    },
+    {
+     "q": "Per M.P. 205.14, which units respond automatically to flammable liquid incidents anywhere in the city?",
+     "a": "Foam 34 and Foam 54.",
+     "why": "M.P. 205.14: \"Foam 34 and/or 54 will be dispatched automatically to all flammable liquid incidents\"; they are automatic response anywhere in the City.",
+     "opts": [
+      "Foam 34 and Foam 54",
+      "Attack 19 and Foam 1",
+      "Foam 1, Foam 2 and Foam 3",
+      "Support 4 and Foam 34"
+     ],
+     "src": "M.P. 205.14"
+    },
+    {
+     "q": "Per M.P. 205.14, Sky Harbor ARFF equipment is dispatched off the airport for an aircraft incident within what radius?",
+     "a": "Within a 5 mile radius.",
+     "why": "M.P. 205.14: \"Sky Harbor ARFF equipment will be dispatched off the airport within a 5 mile radius for an aircraft incident.\"",
+     "opts": [
+      "5 miles",
+      "3 miles",
+      "10 miles",
+      "2 miles"
+     ],
+     "src": "M.P. 205.14"
+    },
+    {
+     "q": "A tanker is leaking burning fuel under pressure. Per M.P. 205.14, which agent works best on it?",
+     "a": "Dry chemical agent.",
+     "why": "M.P. 205.14: \"AFFF will not work well on free-flowing burning fuels or fuel burning under pressure. However, dry chemical agent is very effective.\"",
+     "opts": [
+      "Dry chemical",
+      "AFFF foam",
+      "Plain water fog",
+      "Polar solvent AFFF"
+     ],
+     "src": "M.P. 205.14"
+    },
+    {
+     "q": "Command wants Sky Harbor ARFF units for a non-aircraft incident. Per M.P. 205.14, what is required?",
+     "a": "Coordination with Sky 1 (or designee) to assure FAA Index D is maintained.",
+     "why": "M.P. 205.14: ARFF requested for any other incident \"will require coordination with Sky 1 (or her/his designee) to assure that FAA Index D is maintained.\"",
+     "opts": [
+      "Coordination with Sky 1 so FAA Index D is kept with the remaining foam units",
+      "Approval from the Phoenix shift commander and the FAA tower",
+      "Nothing extra; ARFF units respond on any special call",
+      "A request through the Airport Duty Manager's office"
+     ],
+     "src": "M.P. 205.14"
+    },
+    {
+     "q": "Per M.P. 205.14, how is Foam 34 staffed when it responds?",
+     "a": "As a 2-piece company with an assigned engine company (normally Engine 34).",
+     "why": "M.P. 205.14: \"Foam 34 will respond as a 2-piece company with an assigned engine company,\" which assumes the identity of Foam 34; Dispatch assigns another engine if E34 isn't available.",
+     "opts": [
+      "As a 2-piece company with an assigned engine company",
+      "By its own dedicated 2-person ARFF crew",
+      "By a crew from Station 19 with BC19",
+      "By the first-due ladder company's crew"
+     ],
+     "src": "M.P. 205.14"
+    },
+    {
+     "q": "Per M.P. 205.15, how do units respond while on the freeway mainline?",
+     "a": "Code 2, although alternating headlights and rear flashers may be used.",
+     "why": "M.P. 205.15: \"Units responding to calls on the Freeway will respond Code 2 while on the Freeway mainline. However, alternating headlights and rear flashers may be used.\"",
+     "opts": [
+      "Code 2, though alternating headlights and rear flashers may be used",
+      "Code 3 with full lights and siren the whole way",
+      "Code 3 until within one mile, then Code 2",
+      "Code 2 with no warning lights of any kind"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "DPS advises your best access is to drive against normal freeway traffic. Per M.P. 205.15, when may you do this?",
+     "a": "Only at the specific request of DPS when it is assured all traffic has been stopped, and you confirm it.",
+     "why": "M.P. 205.15: Proceed against normal flow \"only at the specific request of D.P.S. when it is assured that all traffic has been stopped.\" Fire units should confirm traffic is stopped.",
+     "opts": [
+      "Only at DPS's specific request, after confirming all traffic is stopped",
+      "Any time the officer judges it faster than the frontage road",
+      "Only when Command approves it over the radio",
+      "Only with a ladder company blocking for you"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "On a multi-unit freeway response, the first unit reports within a mile of the scene. Per M.P. 205.15, what do other units do?",
+     "a": "Stage Level I, preferably near an on-ramp, to avoid premature commitment.",
+     "why": "M.P. 205.15: Other approaching units \"will then stage Level I, preferably near an on-ramp to avoid premature commitment to the mainline or access frontage.\"",
+     "opts": [
+      "Stage Level I, preferably near an on-ramp",
+      "Proceed directly onto the mainline to the scene",
+      "Stage Level II at the nearest fire station",
+      "Take the opposite direction and wait at the median"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "You're cancelled en route to a freeway crash by DPS. Per M.P. 205.15, what do you do?",
+     "a": "Do not proceed into the scene unless re-dispatched.",
+     "why": "M.P. 205.15: Units canceled en route \"should not proceed into the scene unless re-dispatched,\" since it creates unnecessary congestion.",
+     "opts": [
+      "Don't proceed into the scene unless re-dispatched",
+      "Continue in Code 2 to confirm no patients",
+      "Proceed to the scene but stay on the shoulder",
+      "Stage on the nearest on-ramp for 10 minutes"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "Per M.P. 205.15, who is usually left to watch traffic and set warning devices until DPS arrives?",
+     "a": "One crew member, usually the Engineer.",
+     "why": "M.P. 205.15: \"Leave one crew member (usually the Engineer) to watch the traffic and set up warning devices until the D.P.S. arrives.\"",
+     "opts": [
+      "One crew member, usually the Engineer",
+      "The company officer",
+      "The two firefighters together",
+      "The first-arriving DPS cadet"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "Per M.P. 205.15, which agencies are key in a freeway Unified Command post?",
+     "a": "Fire, DPS, ADOT, and city police if freeway traffic is diverted onto city streets.",
+     "why": "M.P. 205.15: Key agencies are the fire department, DPS, ADOT, \"and if freeway traffic is being diverted to city streets, the appropriate city police.\"",
+     "opts": [
+      "Fire, DPS, ADOT, plus city police if traffic is diverted to streets",
+      "Fire, DPS and the county sheriff only",
+      "Fire, ADOT and the tow company dispatcher",
+      "Fire, city police, and the Water Department"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "Per M.P. 205.15's glossary, how are freeway traffic lanes numbered?",
+     "a": "Lane No. 1 is nearest the median or center, excluding the H.O.V. lane.",
+     "why": "M.P. 205.15: \"No. 1 is the traffic lane nearest the median or center, excluding the H.O.V. lane.\"",
+     "opts": [
+      "No. 1 is nearest the median, excluding the HOV lane",
+      "No. 1 is nearest the right shoulder",
+      "No. 1 is the HOV lane, then count right",
+      "No. 1 is the lane nearest the access road"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "Per M.P. 205.15, which freeway term refers to the Papago (I-10)/Black Canyon (I-17) interchange between 19th and 27th Avenues?",
+     "a": "\"The Stack.\"",
+     "why": "M.P. 205.15: \"The Stack\" is the Papago (I-10)/Black Canyon (I-17) interchange; \"The Split\" is the Maricopa Interchange west of the airport.",
+     "opts": [
+      "The Stack",
+      "The Split",
+      "The Mini-Stack",
+      "The Curve"
+     ],
+     "src": "M.P. 205.15"
+    },
+    {
+     "q": "Per M.P. 205.15A, how often are hydrant cabinets located in the Papago vehicle tunnels?",
+     "a": "Approximately every 300 feet on alternating sides (600 feet apart on the same side).",
+     "why": "M.P. 205.15A: Hydrant cabinets are \"approximately every 300 feet on alternating sides of the tunnel (600 feet separation on the same side).\" Emergency phone cabinets are every 150 feet.",
+     "opts": [
+      "About every 300 feet on alternating sides (600 ft same side)",
+      "About every 150 feet on both sides",
+      "About every 500 feet on the north wall only",
+      "About every 1/4 mile, one per vent room"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "You bring a Humat valve to a tunnel hydrant cabinet. Per M.P. 205.15A, what's the problem?",
+     "a": "Humat valves will not fit into the hydrant boxes; a direct hose connection is required.",
+     "why": "M.P. 205.15A: \"HUMAT VALVES WILL NOT FIT INTO THE HYDRANT BOXES IN THE VEHICLE TUNNELS. A DIRECT HOSE CONNECTION WILL BE REQUIRED.\"",
+     "opts": [
+      "Humat valves won't fit; a direct hose connection is required",
+      "The cabinets are dry and must be charged first",
+      "Humats are only allowed on the 2 1/2\" fitting",
+      "The hydrants are fed by 4\" mains and won't supply it"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Per M.P. 205.15A, how should you start a radio transmission inside the Papago Tunnel?",
+     "a": "Repeat your company identity twice at the front of the message.",
+     "why": "M.P. 205.15A: The repeater needs about a half-second to capture, so \"companies should repeat their company identity twice\" (e.g., \"Engine Four, Engine Four to Alarm\").",
+     "opts": [
+      "Say your company identity twice",
+      "Wait three seconds after keying the mic",
+      "Switch to channel 8 before every message",
+      "Say \"emergency traffic\" first"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Per M.P. 205.15A, where do other companies Level II stage for a significant Papago Tunnel incident?",
+     "a": "On Culver Street, just west of Central (at the standpipe connection).",
+     "why": "M.P. 205.15A: \"Other companies should Level II Stage on Culver Street, just west of Central,\" where the tunnel's hydrant standpipe connection is located.",
+     "opts": [
+      "Culver Street, just west of Central",
+      "Seventh Avenue at the tunnel entrance",
+      "Margaret T. Hance Park above the tunnel",
+      "16th Street at the on-ramp"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Traffic is jammed for a 2-1 in the Papago Tunnel. Per M.P. 205.15A, what should the second-due company consider?",
+     "a": "Entering the Bus Transit Tunnel, getting on the freeway with traffic from the opposite direction.",
+     "why": "M.P. 205.15A: If congestion is severe, \"the second due company should consider entering the Bus Transit Tunnel,\" entering the freeway from the opposite direction at 16th St or 19th Ave.",
+     "opts": [
+      "Enter the Bus Transit Tunnel from the opposite direction",
+      "Enter against traffic from Seventh Street",
+      "Stage at Culver Street and wait for DPS",
+      "Access the tunnel through Hance Park vent rooms"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Per M.P. 205.15A, how many Battalion Chiefs are assigned to a 2-1 or larger in the Papago Tunnel?",
+     "a": "Two Battalion Chiefs.",
+     "why": "M.P. 205.15A: \"A 2-1 or larger will have two Battalion Chiefs assigned.\"",
+     "opts": [
+      "Two",
+      "One",
+      "Three",
+      "Two, plus a shift commander"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Fire is in a below-ground tunnel vent room and the survival profile says no rescue. Per M.P. 205.15A, what may be the best approach?",
+     "a": "Seal the facility, secure all power, and let the fire burn itself out.",
+     "why": "M.P. 205.15A: If no one is trapped, \"the best approach may be to seal the facility, secure all power, and let the fire burn itself out.\" Inert gas may be considered.",
+     "opts": [
+      "Seal it, secure all power, and let it burn out",
+      "Make an aggressive interior attack via the stairwell",
+      "Flood the room through the standpipe system",
+      "Use PPV down the stairwell and attack from below"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Your assigned tunnel repeater channel (5) fails. Per M.P. 205.15A, what do you do?",
+     "a": "Switch on-site communications to the other tactical channel (e.g., channel 5 fails, go to 8).",
+     "why": "M.P. 205.15A: \"Should the assigned channel repeater fail, on-site radio communications should be switched to the other tactical radio channel.\" If all fail, set up a relay company.",
+     "opts": [
+      "Switch to the other tactical channel, e.g., channel 8",
+      "Move everyone to channel 1 dispatch",
+      "Use the emergency phone cabinets only",
+      "Withdraw all crews from the tunnel"
+     ],
+     "src": "M.P. 205.15A"
+    },
+    {
+     "q": "Per M.P. 205.16, how can the District Van be dispatched?",
+     "a": "Only following the request of a fire department member who is on the scene.",
+     "why": "M.P. 205.16: \"The District Van can only be dispatched following the request of a fire department member, who is on the scene.\" It responds Code 2.",
+     "opts": [
+      "Only at the request of an on-scene fire department member",
+      "By any citizen calling the Dispatch Center",
+      "Automatically on every injury accident",
+      "By the hospital charge nurse"
+     ],
+     "src": "M.P. 205.16"
+    },
+    {
+     "q": "At a car accident, which person is eligible for a District Van ride per M.P. 205.16?",
+     "a": "An uninjured family member wanting a ride to the hospital to be with an injured relative.",
+     "why": "M.P. 205.16: Eligible riders include people with no apparent injuries and \"family members of patients desiring transport to hospitals.\" Drunk, disorderly or hostile people aren't transported.",
+     "opts": [
+      "A family member with no injuries who needs a ride to the hospital",
+      "An intoxicated driver refusing ambulance transport",
+      "A patient with minor neck pain who declines an ambulance",
+      "A disorderly passenger who wants to go home"
+     ],
+     "src": "M.P. 205.16"
+    },
+    {
+     "q": "Per M.P. 205.16, who staffs the District Van?",
+     "a": "Fire cadets or trained volunteers.",
+     "why": "M.P. 205.16: \"The District Van will be staffed by fire cadets or trained volunteers.\"",
+     "opts": [
+      "Fire cadets or trained volunteers",
+      "A two-person LA unit crew",
+      "Off-duty firefighters on overtime",
+      "Community Assistance Program crisis staff"
+     ],
+     "src": "M.P. 205.16"
+    },
+    {
+     "q": "Per M.P. 205.16, can the District Van substitute for an ambulance for an injured customer?",
+     "a": "No. District Van transport is not an alternate to an ambulance and shall not be used as such.",
+     "why": "M.P. 205.16: \"District Van transportation is not an alternate to an ambulance transport and shall not be used as such.\"",
+     "opts": [
+      "No, it is not an alternate to ambulance transport",
+      "Yes, if the captain signs the transport form",
+      "Yes, for minor injuries when ambulances are delayed",
+      "Only with on-line medical control approval"
+     ],
+     "src": "M.P. 205.16"
+    },
+    {
+     "q": "Per M.P. 205.17, what is mutual aid?",
+     "a": "Assistance from one jurisdiction to another, on formal request, when no formal Automatic Aid agreement exists.",
+     "why": "M.P. 205.17: Mutual aid is assistance provided \"when no formal Automatic Aid agreement has been instituted,\" resulting from a formal request. It can be refused.",
+     "opts": [
+      "Help given on formal request where no automatic aid agreement exists",
+      "Automatic dispatch of the closest unit regardless of city lines",
+      "Help sent to a set area without prior approval",
+      "Statewide deployment under the Rapid Response Task Force"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Per M.P. 205.17, who remains ultimately responsible for an incident when mutual aid is provided?",
+     "a": "The Authority Having Jurisdiction (AHJ).",
+     "why": "M.P. 205.17: \"The Authority Having Jurisdiction (AHJ) remains ultimately responsible for the incident and must provide incident support.\"",
+     "opts": [
+      "The Authority Having Jurisdiction (AHJ)",
+      "The first-arriving assisting company officer",
+      "The regional dispatch center",
+      "The assisting jurisdiction's shift commander"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Per M.P. 205.17, what is the minimum mutual aid deployment for a structure fire or any fire with people trapped?",
+     "a": "A 3&1 assignment.",
+     "why": "M.P. 205.17: \"A 3&1 assignment will be the minimum deployment for a Structure fire or any fire with a report of people trapped.\"",
+     "opts": [
+      "A 3&1 assignment",
+      "A 2&1 assignment",
+      "A single engine company",
+      "A 1st alarm plus a ladder"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "A county island calls in a reported child choking. Per M.P. 205.17, how is it handled?",
+     "a": "Dispatched without approval, with the closest most appropriate unit(s), as an imminent threat to life.",
+     "why": "M.P. 205.17: In unincorporated areas, calls with a presumed imminent threat to life, including choking, \"will be dispatched without approval.\"",
+     "opts": [
+      "Dispatched without approval; closest appropriate unit sent",
+      "Held until the county's on-duty contact approves",
+      "Referred to Rural Metro as the subscription provider",
+      "Sent only if the shift commander approves"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Rural Metro requests help on a defensive vegetation fire with no threat to life. Per M.P. 205.17, how is it handled?",
+     "a": "It is deferred to the shift commander of the requested agency for approval.",
+     "why": "M.P. 205.17: Requests not involving imminent threat to life \"(defensive structure or vegetation fire for example) will be deferred to the shift commander of the requested agency.\"",
+     "opts": [
+      "Deferred to the requested agency's shift commander for approval",
+      "Dispatched automatically as an imminent threat",
+      "Refused, since RMFD is not an AHJ",
+      "Sent as a full 3&1 without approval"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Your mutual aid crew has no direct tactical radio link to Phoenix or Mesa Dispatch. Per M.P. 205.17, what can you do?",
+     "a": "Do not work in the hot zone; support AHJ resources from outside the hazard zone.",
+     "why": "M.P. 205.17: Without direct tactical radio communication, mutual aid resources \"shall not work in the hot zone,\" so a TRO can monitor and run Mayday procedures.",
+     "opts": [
+      "Support the AHJ from outside the hazard zone only",
+      "Work in the hot zone using the AHJ's radios",
+      "Work in the hot zone with a two-in/two-out team",
+      "Enter the hot zone after Command approves it"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Per M.P. 205.17, requests for mutual aid lasting longer than how long fall under the Arizona Statewide Mutual Aid Plan?",
+     "a": "More than 12 hours.",
+     "why": "M.P. 205.17: \"Any requests for assistance greater than 12 hours will be governed by the Arizona Statewide Mutual Aid Plan.\"",
+     "opts": [
+      "12 hours",
+      "24 hours",
+      "8 hours",
+      "72 hours"
+     ],
+     "src": "M.P. 205.17"
+    },
+    {
+     "q": "Per M.P. 205.17, who completes overhaul at a mutual aid incident?",
+     "a": "The requesting jurisdiction.",
+     "why": "M.P. 205.17: Assisting resources are released as soon as conditions warrant; \"All overhaul operations will be completed by the requesting jurisdiction.\"",
+     "opts": [
+      "The requesting jurisdiction",
+      "The first assisting company on scene",
+      "Whichever unit has the most personnel",
+      "The assisting jurisdiction's ladder company"
+     ],
+     "src": "M.P. 205.17"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Special Responses — Airports, Freeway, Power & Solar (205.13–205.24) (Part 2)",
+   "sub": "Assisting other agencies, Water Department hazmat notices, power lines, battery storage, solar PV, surgical team response, MR/LA units and drones.",
+   "concepts": [
+    "<b>205.18</b>: Agencies request Special Ops through the Dispatch Supervisor. Don't enter a warrant site until police declare it safe. Canine teams never search for violent or criminal subjects.",
+    "<b>205.19</b>: A Fire Prevention Specialist calls the Water Department about clean-ups using hydrants or hose bibs, so backflow devices are installed.",
+    "<b>205.20</b>: Treat every downed line as energized. Tingling feet means step potential, so back away. Occupants stay in the car. No attack on a pole fire until the utility confirms it's de-energized.",
+    "<b>205.20A</b>: For a BESS: utility plus a 3&1+ hazmat response, isolate 150 ft (residential: 40 ft), don't open it, fight defensively and let it burn out. Stranded energy remains after disconnects.",
+    "<b>205.20B</b>: PV runs up to 600/1000/1500 V DC (residential/commercial/utility). Fog at 10°+ from 20 ft+ after disconnects. Announce PV on the tactical channel. No roof ops on BIPV.",
+    "<b>205.22</b>: SERT is ready within 30 minutes. The closest BC picks up the team (2 seats max). A second Command Officer is added. The charting paramedic documents.",
+    "<b>205.23</b>: MR = 4-person crew that can't replace an engine. LA = 2-person crew that supports 4-person companies and supplements, not replaces, units on imminent-threat calls.",
+    "<b>205.24</b>: The drone PIC's authority is absolute. Max 400 ft AGL. Ground the drone when manned aircraft arrive. VO required at night. No flying within 8 hrs of alcohol. Max 10 consecutive hrs as PIC."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 205.18, how does an outside agency request Special Operations/TRT help at a search warrant site?",
+     "a": "By contacting the Dispatch Supervisor.",
+     "why": "M.P. 205.18: Any agency requesting on-duty Special Operations personnel or TRT units \"shall contact the Dispatch Supervisor.\" A pre-incident meeting with the Special Operations Duty Officer follows.",
+     "opts": [
+      "Contact the Dispatch Supervisor",
+      "Call the nearest fire station captain",
+      "Email the Special Operations Chief",
+      "Call 911 and request Assist Agency"
+     ],
+     "src": "M.P. 205.18"
+    },
+    {
+     "q": "At a search warrant site, when may PFD personnel enter per M.P. 205.18?",
+     "a": "Only after the appropriate law enforcement agency has deemed the site secured and \"safe.\"",
+     "why": "M.P. 205.18: \"Phoenix Fire Department personnel shall not make entry into the search warrant site until the appropriate law enforcement agency has deemed the site secured and 'safe'.\"",
+     "opts": [
+      "After law enforcement deems the site secured and safe",
+      "As soon as the hazmat team is on scene",
+      "Once the Fire Prevention Specialist arrives",
+      "After the suspects have left the property"
+     ],
+     "src": "M.P. 205.18"
+    },
+    {
+     "q": "A firefighter shows non-critical exposure symptoms after a search warrant. Per M.P. 205.18, where are they transported?",
+     "a": "Banner Good Samaritan (unless it is a critical life-threatening emergency).",
+     "why": "M.P. 205.18: Exposed personnel are transported to Banner Good Samaritan if not critical; \"critical life threatening injuries require transport to the closest appropriate hospital.\"",
+     "opts": [
+      "Banner Good Samaritan",
+      "The closest hospital, always",
+      "The city occupational health clinic",
+      "Any trauma center the crew chooses"
+     ],
+     "src": "M.P. 205.18"
+    },
+    {
+     "q": "Per M.P. 205.18, PFD canine search teams may NOT be used for which search?",
+     "a": "Searches involving criminal or violent subjects.",
+     "why": "M.P. 205.18: \"At no time will any Phoenix Fire Department canine search specialist teams and support personnel be used to conduct search operations involving criminal or violent subjects.\"",
+     "opts": [
+      "Searches for criminal or violent subjects",
+      "Lost non-violent adults in a rural area",
+      "Missing children in an urban setting",
+      "Live victims at a disaster site"
+     ],
+     "src": "M.P. 205.18"
+    },
+    {
+     "q": "Per M.P. 205.19, why does the Water Department want notice of hazmat clean-ups?",
+     "a": "So backflow devices can be installed on hydrants or hose bibs to prevent water main contamination.",
+     "why": "M.P. 205.19: The Water Department asked to be notified \"to ensure that, when required, backflow devices are installed... to prevent water main contamination.\"",
+     "opts": [
+      "To install backflow devices so water mains aren't contaminated",
+      "To shut down all hydrants within one mile",
+      "To bill the business for water used",
+      "To send a crew to perform decontamination"
+     ],
+     "src": "M.P. 205.19"
+    },
+    {
+     "q": "Per M.P. 205.19, who calls the Water Department when a hazmat clean-up may use a hydrant or hose bib?",
+     "a": "A Fire Prevention Specialist.",
+     "why": "M.P. 205.19: When clean-up may involve a hydrant or hose bib, \"a Fire Prevention Specialist shall call the Water Department's 24-hour number.\"",
+     "opts": [
+      "A Fire Prevention Specialist",
+      "The Incident Commander",
+      "The hazmat team captain",
+      "The business responsible party"
+     ],
+     "src": "M.P. 205.19"
+    },
+    {
+     "q": "Per M.P. 205.19, which activity does the Water Department notification NOT apply to?",
+     "a": "Fire Department emergency mitigation, overhaul, and FD-conducted decontamination.",
+     "why": "M.P. 205.19: The procedure \"shall not apply to Fire Department activities conducted to mitigate an emergency, overhaul operations, or decontamination activities conducted by Fire Department personnel.\"",
+     "opts": [
+      "Decon done by Fire Department personnel during the emergency",
+      "Clean-up by a hazardous waste contractor",
+      "Rinsing of containers after an incident",
+      "Decon by the business's own employees"
+     ],
+     "src": "M.P. 205.19"
+    },
+    {
+     "q": "You arrive to a downed power line in a yard. Per M.P. 205.20, how do you treat it?",
+     "a": "Consider it energized with potentially lethal current.",
+     "why": "M.P. 205.20: \"Downed lines must always be considered energized with potentially lethal current.\"",
+     "opts": [
+      "As energized with potentially lethal current",
+      "As dead if no sparking is seen",
+      "As de-energized if the lights are out nearby",
+      "As safe once the utility is called"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "Approaching a downed line, you feel tingling in your feet. Per M.P. 205.20, what is happening?",
+     "a": "Step potential from gradient voltage; it's a warning to back away.",
+     "why": "M.P. 205.20: A voltage difference between your feet is \"step potential.\" A tingling sensation in the feet is a warning to back away. It is worse on wet ground.",
+     "opts": [
+      "Step potential; back away from the area",
+      "Touch potential; keep moving to the line",
+      "Induction from overhead lines; it's harmless",
+      "Reel memory; the line is about to curl"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "Per M.P. 205.20, what classification means a line has been confirmed safe by the utility after grounding?",
+     "a": "\"Dead\" — confirmed by utility representatives after grounding the line(s).",
+     "why": "M.P. 205.20: Equipment is energized, de-energized (\"cannot be 100% guaranteed\"), or dead (confirmed by utility representatives after grounding).",
+     "opts": [
+      "Dead",
+      "De-energized",
+      "Isolated",
+      "Locked out"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "A power line is down across a car with occupants and no fire. Per M.P. 205.20, what do you tell them?",
+     "a": "Have the occupants remain inside the vehicle.",
+     "why": "M.P. 205.20: Do not touch the vehicle and \"have occupants remain inside the vehicle\" while the utility is requested.",
+     "opts": [
+      "Stay inside the vehicle",
+      "Get out and walk away quickly",
+      "Step out carefully onto dry ground",
+      "Climb out the window and run"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "Fire forces occupants out of a car with a line down on it. Per M.P. 205.20, how should they exit?",
+     "a": "Open the door, jump free without touching the vehicle and ground at once, and walk away in very small steps.",
+     "why": "M.P. 205.20: They \"should jump free of the vehicle without touching vehicle and ground at the same time; they should walk away from the vehicle with very small steps.\"",
+     "opts": [
+      "Jump clear without touching car and ground, then shuffle in small steps",
+      "Step out holding the door frame, then run",
+      "Have firefighters pull them out with a dry rope",
+      "Slide out slowly, keeping one hand on the car"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "A power pole is on fire. Per M.P. 205.20, when can you begin a fire attack?",
+     "a": "Only after the utility representative verifies the equipment is de-energized.",
+     "why": "M.P. 205.20: \"Do not make any fire attack until the utility representative has verified that the electrical equipment has been de-energized.\"",
+     "opts": [
+      "After the utility rep verifies it's de-energized",
+      "Right away, using a fog at the base of the pole",
+      "Once the pole has burned through and fallen",
+      "After breaker trips are confirmed by Dispatch"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "Per M.P. 205.20, if you must apply water near energized equipment, how should it be done?",
+     "a": "Use a fog spray at the base of the pole, in short bursts; never spray into the lines.",
+     "why": "M.P. 205.20: \"Never spray directly into the power lines. Use a fog spray at the base of the pole.\" Short bursts are preferred to avoid being grounded.",
+     "opts": [
+      "Fog spray at the base of the pole in short bursts",
+      "A straight stream directly at the lines",
+      "A solid stream from at least 20 feet",
+      "Continuous fog aimed at the transformer"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "Per M.P. 205.20, during periods of high activity, what may the company officer do at a lines-down call?",
+     "a": "Leave one crewmember on scene with a radio to wait for the utility company.",
+     "why": "M.P. 205.20: In periods of high activity, \"company officer may choose to leave one (1) crewmember on-scene with a radio to wait for utility company.\"",
+     "opts": [
+      "Leave one crew member with a radio to wait for the utility",
+      "Leave the scene once the area is taped off",
+      "Ask a neighbor to watch the line until the utility arrives",
+      "Request police to stand by and clear the company"
+     ],
+     "src": "M.P. 205.20"
+    },
+    {
+     "q": "You arrive at a commercial BESS that is smoking. Per M.P. 205.20A, what is the recommended initial evacuation distance?",
+     "a": "150 feet.",
+     "why": "M.P. 205.20A: \"Isolate the area. Recommended initial evacuation distance is 150 feet. Do not enter the fenced area,\" except for a savable life/known rescue.",
+     "opts": [
+      "150 feet",
+      "40 feet",
+      "300 feet",
+      "75 feet"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20A, why must you NOT open a BESS building or compartment door?",
+     "a": "Introducing fresh air may result in a deflagration.",
+     "why": "M.P. 205.20A: \"Do not make entry or approach BESS building or compartment. Introducing fresh air may result in a deflagration.\"",
+     "opts": [
+      "Introducing fresh air may cause a deflagration",
+      "It may trip the fire suppression system",
+      "The doors are energized with DC current",
+      "It voids the vendor's warranty"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20A, what response should be requested for a BESS incident?",
+     "a": "A 3&1 or greater hazardous materials response (plus the utility company).",
+     "why": "M.P. 205.20A: \"Request utility company to respond. Request a 3&1 or greater hazardous materials response.\"",
+     "opts": [
+      "A 3&1 or greater hazardous materials response",
+      "A 2&1 structure fire assignment",
+      "A single engine and the utility company",
+      "A technical rescue team response"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "A lithium-ion BESS is burning. Per M.P. 205.20A, what is the preferred tactic?",
+     "a": "Defensive firefighting: allow the battery to burn out while applying water to adjacent enclosures and exposures.",
+     "why": "M.P. 205.20A: \"Response crews should allow the battery to burn out. Water should be applied to adjacent battery enclosures and exposures.\" Lithium-ion is not water reactive.",
+     "opts": [
+      "Defensive: let it burn out and cool adjacent units and exposures",
+      "Offensive: flood the burning unit with foam",
+      "Smother it with dry chemical from 20 feet",
+      "Open the enclosure and cool the cells directly"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20A, what color smoke from a BESS is a good indication of hazardous off-gassing?",
+     "a": "White colored smoke.",
+     "why": "M.P. 205.20A: \"White colored smoke is a good indication of hazardous off-gassing.\"",
+     "opts": [
+      "White",
+      "Black",
+      "Yellow-brown",
+      "Blue-gray"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "You operate the disconnect on a residential BESS. Per M.P. 205.20A, is the battery now safe?",
+     "a": "No. The batteries still pose an electrical hazard from stranded energy.",
+     "why": "M.P. 205.20A: \"Shutting off the disconnect does not remove the energy from the battery\"; the batteries \"still pose an electrical hazard due to the stranded energy.\"",
+     "opts": [
+      "No, it still holds stranded energy",
+      "Yes, the disconnect drains the battery",
+      "Yes, once the inverter display goes dark",
+      "Only if the PV panels are also covered"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20A, how often should temperature readings be taken on a residential battery during the monitoring period?",
+     "a": "At regular 10-minute intervals to identify trends.",
+     "why": "M.P. 205.20A: Readings \"should be taken as early as possible and repeated at regular intervals (10 minutes) to identify trends.\" A 12-hour monitoring/cooling period is considered.",
+     "opts": [
+      "Every 10 minutes",
+      "Every 30 minutes",
+      "Every hour",
+      "Every 5 minutes"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20A, how far should you isolate the area around a residential BESS at minimum?",
+     "a": "A minimum of 40 feet; hazmat crews set the hot zone.",
+     "why": "M.P. 205.20A: \"Isolate the area surrounding the residential BESS a minimum of 40 feet. Hazardous Materials crews will set a hot zone.\"",
+     "opts": [
+      "40 feet",
+      "150 feet",
+      "20 feet",
+      "100 feet"
+     ],
+     "src": "M.P. 205.20A"
+    },
+    {
+     "q": "Per M.P. 205.20B, what is the expected maximum voltage from a residential PV system?",
+     "a": "Up to 600 volts DC.",
+     "why": "M.P. 205.20B: Residential up to 600 V DC, commercial up to 1000 V DC, utility up to 1500 V DC.",
+     "opts": [
+      "Up to 600 volts DC",
+      "Up to 1,000 volts DC",
+      "Up to 1,500 volts DC",
+      "Up to 240 volts AC"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "A residential PV array is on fire and disconnects are operated. Per M.P. 205.20B, how do you apply water?",
+     "a": "A fog pattern of at least 10 degrees from at least 20 feet away.",
+     "why": "M.P. 205.20B: \"A fog pattern delivered at a minimum of a 10-degree pattern from a minimum distance of 20 feet\" is safe on PV installations up to 1000 volts.",
+     "opts": [
+      "Fog at least a 10-degree pattern from at least 20 feet",
+      "Straight stream from at least 40 feet",
+      "Fog at least a 30-degree pattern from 10 feet",
+      "Solid stream from an aerial only"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "Per M.P. 205.20B, what must you do before water is applied to a PV carport over a car fire?",
+     "a": "Operate the electrical disconnects that feed the system — it's mandatory.",
+     "why": "M.P. 205.20B: \"It is mandatory to operate the disconnects prior to the application of water\" on parking-lot PV installations.",
+     "opts": [
+      "Operate the electrical disconnects that feed the system",
+      "Cover the panels with opaque tarps",
+      "Get approval from the utility representative",
+      "Confirm the voltage is under 600 volts"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "The roof is covered with building-integrated PV shingles. Per M.P. 205.20B, can you conduct roof operations?",
+     "a": "No. Roof operations shall not be conducted on a building integrated PV tile or shingle roof.",
+     "why": "M.P. 205.20B: BIPV tiles are an electrical hazard and \"extremely slippery.\" \"Roof operations shall not be conducted\" on them.",
+     "opts": [
+      "No, roof operations shall not be done on BIPV roofs",
+      "Yes, after the rapid shutdown switch is operated",
+      "Yes, if crews stay on the ridge line",
+      "Only with a roof ladder and fall protection"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "Per M.P. 205.20B, what must happen once a PV installation is identified on the fireground?",
+     "a": "Announce it on the tactical radio channel and have it acknowledged by Command.",
+     "why": "M.P. 205.20B: \"The presence of a PV installation shall be announced on the tactical radio channel and acknowledged by Command.\"",
+     "opts": [
+      "Announce it on the tactical channel; Command acknowledges",
+      "Notify Dispatch by phone only",
+      "Tell the first-in company officer face-to-face",
+      "Mark it on the tactical worksheet only"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "Per M.P. 205.20B, what does operating the rapid shutdown switch do?",
+     "a": "It isolates the DC power for the PV system and confines the power to the array.",
+     "why": "M.P. 205.20B: Operate the rapid shut down switch \"to isolate the DC power for the PV system and confine the power to the array.\" Older systems may lack it.",
+     "opts": [
+      "Isolates DC power and confines it to the array",
+      "Drains all energy from the panels",
+      "Disconnects the house from the utility grid",
+      "Shuts off the battery storage system"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "At a large PV utility generating station fire, per M.P. 205.20B, what do crews do?",
+     "a": "Remain outside the fence line, isolate the area, and protect exposures as needed.",
+     "why": "M.P. 205.20B: \"We will not engage in any activities related to fire suppression inside the facility... All fire department personnel will remain outside the fence line.\"",
+     "opts": [
+      "Stay outside the fence, isolate, and protect exposures",
+      "Attack from 20 feet with a 10-degree fog",
+      "Enter once the utility opens the main breaker",
+      "Apply foam to the inverters from an aerial"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "Per M.P. 205.20B, what hose line size is required at a residential BESS?",
+     "a": "A charged 1 3/4\" or larger line.",
+     "why": "M.P. 205.20B: \"A charged hose line will be in place (1 3/4\" or larger shall be used).\"",
+     "opts": [
+      "1 3/4\" or larger, charged",
+      "1 1/2\" or larger, charged",
+      "2 1/2\" only",
+      "A booster line is acceptable"
+     ],
+     "src": "M.P. 205.20B"
+    },
+    {
+     "q": "Per M.P. 205.22, when is the Surgical Emergency Response Team (SERT) used?",
+     "a": "When a patient needs a life- or limb-saving procedure beyond EMS capability or can't be extricated and transported in a reasonable time.",
+     "why": "M.P. 205.22: SERT is for procedures such as amputation due to inability to extricate. \"Life before limb\" is a life-saving measure, \"not as a time saving measure.\"",
+     "opts": [
+      "A patient needs life/limb-saving procedures and can't be extricated in time",
+      "Any multi-patient incident with more than 10 patients",
+      "Whenever a trauma patient's transport exceeds 30 minutes",
+      "Any amputation, to save scene time"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.22, how soon should SERT be assembled and ready to respond after a request?",
+     "a": "Within thirty (30) minutes.",
+     "why": "M.P. 205.22: \"SERT should be assembled and ready to respond within thirty (30) minutes of a request.\"",
+     "opts": [
+      "Within 30 minutes",
+      "Within 15 minutes",
+      "Within 60 minutes",
+      "Within 45 minutes"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.22, who transports the SERT from the trauma center to the scene?",
+     "a": "The closest available Battalion Chief, who also escorts them and gives a safety brief.",
+     "why": "M.P. 205.22: \"The TRO will then send the closest available Battalion Chief to the trauma center closest to the incident to pick up the team.\"",
+     "opts": [
+      "The closest available Battalion Chief",
+      "The closest ALS rescue",
+      "A police escort vehicle",
+      "The trauma center's own transport"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.22, how many SERT personnel can a Battalion Chief vehicle carry?",
+     "a": "Two SERT personnel.",
+     "why": "M.P. 205.22: \"Battalion Chief Vehicles can only provide transportation for two SERT personnel.\"",
+     "opts": [
+      "Two",
+      "Three",
+      "Four",
+      "One"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.22, what extra resource is added to every incident where SERT is requested?",
+     "a": "A second Command Officer (the next closest).",
+     "why": "M.P. 205.22: \"A second Command Officer will be added to all incidents where the SERT is requested.\"",
+     "opts": [
+      "A second Command Officer",
+      "A second ALS rescue",
+      "A heavy rescue company",
+      "A hazmat team"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.22, who documents patient care at the scene of a SERT incident?",
+     "a": "The charting paramedic.",
+     "why": "M.P. 205.22: \"The charting paramedic will be responsible for documentation related to patient care at the scene,\" including surgical care in the field.",
+     "opts": [
+      "The charting paramedic",
+      "The SERT trauma surgeon only",
+      "The Battalion Chief escort",
+      "The treatment sector officer"
+     ],
+     "src": "M.P. 205.22"
+    },
+    {
+     "q": "Per M.P. 205.23, how is a Medical Response (MR) unit staffed?",
+     "a": "A 4-person crew: two firefighters, one engineer and one captain.",
+     "why": "M.P. 205.23: MR staffing is a \"4-person crew including two firefighters, one engineer and one captain.\"",
+     "opts": [
+      "4: two firefighters, an engineer, and a captain",
+      "2 trained firefighters of any rank",
+      "3: a captain, an engineer, and a paramedic",
+      "4 paramedics with no company officer"
+     ],
+     "src": "M.P. 205.23"
+    },
+    {
+     "q": "Per M.P. 205.23, can an MR replace an engine company at a structure fire?",
+     "a": "No. MRs supplement firefighting duties but cannot replace an engine, ladder or squad.",
+     "why": "M.P. 205.23: \"MRs cannot replace an engine, ladder, or squad company for fire suppression, rescue, and special operations type incidents.\" They carry no hose, water or ladders.",
+     "opts": [
+      "No, it can only supplement firefighting as assigned",
+      "Yes, if it is staffed ALS",
+      "Yes, when no engine is within 4 minutes",
+      "Only for the first-due assignment"
+     ],
+     "src": "M.P. 205.23"
+    },
+    {
+     "q": "Per M.P. 205.23, an MR may respond without another unit's support only on which nature code categories?",
+     "a": "BLS, ALS, SERV and MISC SERVICE.",
+     "why": "M.P. 205.23: \"MR Units may only respond to incidents without the support of another unit on the following nature code categories: BLS, ALS, SERV and MISC SERVICE.\"",
+     "opts": [
+      "BLS, ALS, SERV and MISC SERVICE",
+      "BLS and low acuity codes only",
+      "ALS, structure fires, and SERV",
+      "Any code if staffed with four"
+     ],
+     "src": "M.P. 205.23"
+    },
+    {
+     "q": "An LA unit is closest to a cardiac arrest across a city line. Per M.P. 205.23, what happens?",
+     "a": "It is deployed across the boundary to supplement the response, not in replacement of other units.",
+     "why": "M.P. 205.23: LA units are deployed across municipal boundaries on imminent-threat calls when closest; \"they shall not be deployed in replacement of other units.\"",
+     "opts": [
+      "It responds to supplement, not replace, other units",
+      "It is not sent, since LA units are BLS-only",
+      "It replaces the engine as the assigned unit",
+      "It responds only if the other city approves"
+     ],
+     "src": "M.P. 205.23"
+    },
+    {
+     "q": "Per M.P. 205.23, how should an LA unit be used at a working fire?",
+     "a": "Only assigned by command to support an appropriately staffed, NFPA 1710 compliant, 4-person company.",
+     "why": "M.P. 205.23: LA units \"should only be assigned by command to support an appropriately staffed, NFPA 1710 compliant, 4-person fire company,\" like a 2-person rescue.",
+     "opts": [
+      "Only to support a 4-person NFPA 1710 compliant company",
+      "As the first-due fire attack company",
+      "As the RIC team on any fire",
+      "Never; LA units cannot be at fires"
+     ],
+     "src": "M.P. 205.23"
+    },
+    {
+     "q": "Per M.P. 205.24, who has final authority to accept or decline a UAS mission?",
+     "a": "The Pilot in Command; no one, regardless of rank, may order a pilot to accept a mission.",
+     "why": "M.P. 205.24: \"The pilot is ultimately responsible for the UAS operation, and their authority is absolute.\" No member \"regardless of rank\" may order a pilot to accept a mission.",
+     "opts": [
+      "The pilot in command (PIC)",
+      "The Incident Commander",
+      "The UAS Program Manager",
+      "The on-duty Shift Commander"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, what is the maximum altitude for PFD drone operations without a waiver?",
+     "a": "400 feet AGL, or if higher, within 400 feet of a structure.",
+     "why": "M.P. 205.24: \"Operations may occur up to a maximum altitude of 400 feet AGL or, if higher than 400 AGL, remain within 400 feet of a structure.\"",
+     "opts": [
+      "400 ft AGL, or within 400 ft of a structure if higher",
+      "200 ft AGL anywhere in the city",
+      "500 ft AGL, or 100 ft above any structure",
+      "400 ft above mean sea level"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "You're flying a drone at a brush fire when a DPS helicopter arrives with no deconfliction training. Per M.P. 205.24, what do you do?",
+     "a": "Ground the UAS; manned aircraft have priority.",
+     "why": "M.P. 205.24: \"All UAS flights shall be grounded upon arrival of approved government manned aircraft... unless coordinated flight training has occurred with that agency.\"",
+     "opts": [
+      "Ground the drone",
+      "Drop below 200 feet and continue",
+      "Move to the opposite flank and continue",
+      "Continue but stay within line of sight"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, when is a Visual Observer required?",
+     "a": "A Visual Observer is required for night flights.",
+     "why": "M.P. 205.24: \"A visual observer is required for night flights\"; teams otherwise use a pilot and VO when possible.",
+     "opts": [
+      "For all night flights",
+      "Only beyond visual line of sight",
+      "Only within 5 miles of an airport",
+      "Only for flights over 200 feet"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, how soon after drinking alcohol may a member act as a PIC or VO?",
+     "a": "Not within eight (8) hours after consuming any alcoholic beverage.",
+     "why": "M.P. 205.24: \"No member shall act as a PIC or a VO within eight hours (8) after consumption of any alcoholic beverage.\"",
+     "opts": [
+      "Not within 8 hours",
+      "Not within 12 hours",
+      "Not within 24 hours",
+      "Not within 4 hours"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, what is the maximum time a pilot may act as PIC?",
+     "a": "No more than 10 consecutive hours in any 24-hour period.",
+     "why": "M.P. 205.24: \"No pilot may act as a PIC for more than 10 consecutive hours in any 24-hour period.\"",
+     "opts": [
+      "10 consecutive hours in any 24-hour period",
+      "8 consecutive hours in any 24-hour period",
+      "12 consecutive hours per shift",
+      "14 hours in any 24-hour period"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Your VO loses sight of the drone. Per M.P. 205.24, what does the RPIC do first?",
+     "a": "Place the aircraft into hover mode while the RPIC and VO try to reestablish visual contact.",
+     "why": "M.P. 205.24: The RPIC places it in hover; if not reacquired within a reasonable time, the RPIC initiates the Return to Home sequence.",
+     "opts": [
+      "Put the drone in hover while both try to regain sight",
+      "Immediately start Return to Home",
+      "Land the drone at its current position",
+      "Climb to 400 feet to get it in view"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, to stay current, how many takeoffs and landings must a PFD pilot log, and over what period?",
+     "a": "At least three takeoffs and landings in the preceding 90 days in each type of aircraft.",
+     "why": "M.P. 205.24: Pilots \"must record at least three (3) takeoffs and landings in the preceding 90-days in each type aircraft.\"",
+     "opts": [
+      "3 in the preceding 90 days",
+      "3 in the preceding 30 days",
+      "5 in the preceding 90 days",
+      "10 in the preceding 180 days"
+     ],
+     "src": "M.P. 205.24"
+    },
+    {
+     "q": "Per M.P. 205.24, which use of the PFD drone is prohibited?",
+     "a": "Use of facial recognition technology of any kind is prohibited.",
+     "why": "M.P. 205.24: UAS information may not be collected or used to \"utilize facial recognition surveillance technologies or software of any kind.\"",
+     "opts": [
+      "Facial recognition of people in a crowd",
+      "Mapping hot spots at a brush fire",
+      "Locating a lost hiker on a preserve",
+      "Checking a fire roof for structural collapse"
+     ],
+     "src": "M.P. 205.24"
+    }
+   ]
+  }
+ ],
+ "notes": []
+}

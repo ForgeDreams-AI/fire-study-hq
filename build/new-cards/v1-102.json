@@ -1,0 +1,1088 @@
+{
+ "topics": [
+  {
+   "title": "Vol I: Conduct, Uniforms & General Policy (100–102) (Part 1)",
+   "sub": "M.P. revision process, contact with elected officials, uniforms and grooming, hiring standards, employee data, discipline, complaints and property claims.",
+   "concepts": [
+    "<b>100.01</b>: Vol. 1 M.P.s are revised through the Volume One Subcommittee; the HR Committee gives final approval; goal is all M.P.s updated within 5 years.",
+    "<b>102.01A</b>: Immediately notify the Public Information Deputy Chief of any City-business contact with an elected official.",
+    "<b>102.02</b>: Sworn: no beards/goatees/stubble, sideburns not below earlobes, stud earrings (ears/nose) only; only cotton, wool or FR under structural PPE.",
+    "<b>102.03</b>: Disqualifiers include DUI, misdemeanor or 8+ points within 36 months and drug use within 24 months; drug test within 30 days of start.",
+    "<b>102.04</b>: Report employee data changes to your Battalion/Section Office within 3 working days.",
+    "<b>102.05</b>: Discipline is corrective, progressive and lawful; Fire Chief decides suspensions, demotions and dismissals; appeal within 14 days.",
+    "<b>102.05B</b>: OSI contacts complainant within 72 hours; investigations within 90 days; findings use preponderance of evidence.",
+    "<b>102.05C</b>: Claims of $200 or less need three estimates; the BC never promises payment or admits City liability."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 100.01, what are the two purposes of that M.P.?",
+     "a": "It serves as a template for Volume 1 M.P.s and explains how a Volume 1 M.P. is revised, deleted or created.",
+     "why": "M.P. 100.01: The M.P. serves \"as an example template\" and explains \"the process in which a Volume One Management Procedure can be revised, deleted, or created.\"",
+     "opts": [
+      "A template for Vol. 1 M.P.s and the process to revise, delete or create one",
+      "A list of all Vol. 1 M.P.s and the dates each one was last revised",
+      "Rules for writing Vol. 2 SOPs and getting each one approved by Local 493 first",
+      "A guide to filing grievances over M.P. changes with the HR Committee"
+     ],
+     "src": "M.P. 100.01"
+    },
+    {
+     "q": "Per M.P. 100.01, which body gives final approval to a revised Volume 1 M.P.?",
+     "a": "The HR Committee gives final approval; the Volume One Subcommittee then manages publishing.",
+     "why": "M.P. 100.01: The subcommittee chairs forward the M.P. \"to the HR Committee for final approval.\" The goal is every M.P. revised within 5 years.",
+     "opts": [
+      "The HR Committee",
+      "The Volume One Subcommittee",
+      "The Assistant City Attorney",
+      "The Fire Chief's executive staff"
+     ],
+     "src": "M.P. 100.01"
+    },
+    {
+     "q": "Per M.P. 102.01A, a City Council member calls you about a Fire Department policy. Who must you immediately notify of the contact?",
+     "a": "The Public Information Deputy Chief must be notified immediately.",
+     "why": "M.P. 102.01A: Members \"are to immediately notify the Public Information Deputy Chief\" of inquiries about City business, regardless of who started the contact.",
+     "opts": [
+      "The Public Information Deputy Chief",
+      "Your Battalion Chief",
+      "The Fire Chief's Executive Assistant",
+      "The Local 493 President"
+     ],
+     "src": "M.P. 102.01A"
+    },
+    {
+     "q": "Per M.P. 102.01A, if you cannot fully or accurately answer a District Council Representative's inquiry, who do you refer them to?",
+     "a": "Refer them to the Shift Commander, Section Supervisor or Fire Administration.",
+     "why": "M.P. 102.01A: If the initial employee cannot answer, the person \"shall be referred to the Shift Commander, Section Supervisor or Fire Administration.\"",
+     "opts": [
+      "Shift Commander, Section Supervisor or Fire Administration",
+      "The City Manager's Office or the City Clerk",
+      "Your Captain, or the most senior engineer on duty at the station",
+      "The Public Affairs office of the Police Department"
+     ],
+     "src": "M.P. 102.01A"
+    },
+    {
+     "q": "Per M.P. 102.01A, which contact with an elected official is NOT covered by the reporting requirement?",
+     "a": "Correspondence between Union officials and elected officials about legitimate Union concerns is exempt.",
+     "why": "M.P. 102.01A: Reporting does not apply to personal communications with your representative, matters of no reasonable concern to the Department, or Union correspondence on \"legitimate Union concerns.\"",
+     "opts": [
+      "Union officials writing about legitimate Union concerns",
+      "A Council aide asking about station staffing",
+      "A contact you started yourself about a Department program or event",
+      "A Council member asking about response times"
+     ],
+     "src": "M.P. 102.01A"
+    },
+    {
+     "q": "Per M.P. 102.02, which facial hair is allowed for sworn members (including 40-hr support)?",
+     "a": "A mustache not extending below the middle of the chin; beards, goatees, chin curtains, mutton chops and stubble are prohibited.",
+     "why": "M.P. 102.02: \"Beards, goatees, chin curtains, mutton chops, stubble, and mustaches extending below the middle of the chin are prohibited.\"",
+     "opts": [
+      "A mustache that does not extend below the middle of the chin",
+      "A short goatee kept clear of the facepiece seal and exhalation valve",
+      "Stubble, as long as it is trimmed daily",
+      "A chin curtain trimmed close to the jawline"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, how far may a sworn member's sideburns extend?",
+     "a": "Sideburns must not extend below the earlobes.",
+     "why": "M.P. 102.02: Sideburns \"shall be neat, not extend below the earlobes, and must not interfere with respiratory protection.\"",
+     "opts": [
+      "Not below the earlobes",
+      "Not below the middle of the ear",
+      "Not below the jawline",
+      "Not below the bottom of the nose"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, what visible piercings may sworn personnel wear?",
+     "a": "Only stud earrings on the ears and nose; hoop, dangling or suspended earrings are prohibited.",
+     "why": "M.P. 102.02: \"Visible piercings shall be limited to stud earrings on the ears and nose only.\"",
+     "opts": [
+      "Stud earrings on the ears and nose only",
+      "Small hoop earrings on the ears only",
+      "Studs anywhere if covered on fire calls",
+      "No visible piercings of any kind"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, which tattoos must be covered while on duty?",
+     "a": "Tattoos/brands on the face or neck, or any that are inappropriate, offensive or excessively distracting, must be covered.",
+     "why": "M.P. 102.02: Tattoos may be visible if professional, but those \"on the face or neck\" or that are offensive or excessively distracting must be covered. The Fire Chief or designee makes final calls.",
+     "opts": [
+      "Face or neck tattoos and any offensive or distracting ones",
+      "All tattoos visible below the shirt sleeve",
+      "Only tattoos larger than the palm of the hand",
+      "All arm tattoos whenever wearing the Class A or Class B dress shirt"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, what can you wear under structural fire PPE, including PT clothes?",
+     "a": "Only natural-fiber layers (e.g., 100% cotton or wool) or manufacturer-labeled FR garments.",
+     "why": "M.P. 102.02: Thermoplastic fibers \"that can melt or drip\" (polyester, nylon, polypropylene, spandex blends) may not be worn under structural PPE unless labeled FR.",
+     "opts": [
+      "100% cotton or wool, or garments labeled FR",
+      "Moisture-wicking polyester or nylon athletic blends",
+      "Any athletic wear without spandex",
+      "Cotton-poly blends of at least 50% cotton"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, what does each Maltese cross on the sleeve of a sworn member's Class A uniform represent?",
+     "a": "Each Maltese cross represents five years of service.",
+     "why": "M.P. 102.02: \"Firefighter Maltese cross on sleeves, with each cross representing five years of service (sworn members only).\"",
+     "opts": [
+      "Five years of service",
+      "Ten years of service",
+      "One promotion in rank",
+      "Three years of service"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, what color is the Class A/Class B dress shirt for Unit 5 members?",
+     "a": "Unit 5 wears light blue; Command Officers/Managers wear white.",
+     "why": "M.P. 102.02: Shirt color by assignment: \"Unit 5 – Light Blue,\" \"Command Officers/Managers – White,\" non-sworn uniformed personnel – light blue.",
+     "opts": [
+      "Light blue",
+      "White",
+      "Navy blue",
+      "Royal blue"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, what color Class C shirt do recruit and redshirt firefighters wear?",
+     "a": "Recruit and redshirt firefighters wear red.",
+     "why": "M.P. 102.02: Class C colors: sworn navy blue, non-sworn royal blue, Alarm Room black, recruits/redshirts red, cadets grey, CAP green.",
+     "opts": [
+      "Red",
+      "Grey",
+      "Navy blue",
+      "Green"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, which name format is allowed on the front of a Class C shirt for John Doe?",
+     "a": "Allowed formats are John Doe, J. Doe or John D.",
+     "why": "M.P. 102.02: Name printed on the front left: \"John Doe, J. Doe, John D. (no other variations).\"",
+     "opts": [
+      "J. Doe",
+      "Doe, John",
+      "JD Doe",
+      "FF Doe"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, which patches may be printed on a Class C fatigue shirt?",
+     "a": "The paramedic patch (required for paramedics) on the right sleeve and an optional American flag on the left.",
+     "why": "M.P. 102.02: \"Paramedic Patch – required for paramedics on the right sleeve. American Flag – permitted (optional) on the left sleeve.\"",
+     "opts": [
+      "Paramedic patch on the right sleeve; American flag on the left",
+      "American flag on the right sleeve; the paramedic patch on the left",
+      "Station number on the right; labor group on the left",
+      "Any approved morale patch, on either sleeve"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.02, a member's uniform issue creates a safety risk and they refuse to fix it. What happens?",
+     "a": "Safety-risk non-compliance is corrected immediately; failure to comply means being relieved of duty and charged leave.",
+     "why": "M.P. 102.02: Safety-risk non-compliance \"will be corrected immediately and without exception. Failure to comply will result in the member being relieved of duty and charged against their leave bank.\"",
+     "opts": [
+      "Relieved of duty and charged against their leave bank",
+      "Written up and allowed to finish the shift",
+      "Sent to Resource Management for a new uniform",
+      "Given 24 hours to correct it before any discipline is started"
+     ],
+     "src": "M.P. 102.02"
+    },
+    {
+     "q": "Per M.P. 102.03, what is the minimum age to be hired as a sworn applicant?",
+     "a": "Applicants must be at least 18 years old.",
+     "why": "M.P. 102.03: Minimum qualifications include being \"at least 18 years old\" and holding an Arizona Class D license.",
+     "opts": [
+      "18 years old",
+      "21 years old",
+      "19 years old",
+      "20 years old"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, a DUI conviction disqualifies an applicant if it occurred within the last how many months?",
+     "a": "A DUI conviction within the last 36 months disqualifies.",
+     "why": "M.P. 102.03: Disqualifications include \"DUI conviction within the last 36 months.\"",
+     "opts": [
+      "36 months",
+      "24 months",
+      "48 months",
+      "60 months"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, illegal drug use or possession disqualifies an applicant if within the last how many months?",
+     "a": "Illegal drug use or possession within the last 24 months disqualifies.",
+     "why": "M.P. 102.03: \"Illegal drug use or possession within the last 24 months\" is a disqualifier, while DUI and misdemeanor convictions use 36 months.",
+     "opts": [
+      "24 months",
+      "36 months",
+      "12 months",
+      "18 months"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, how many driving violation points within 36 months disqualify an applicant?",
+     "a": "Eight or more points within the last 36 months disqualify.",
+     "why": "M.P. 102.03: \"Eight or more driving violation points within the last 36 months.\"",
+     "opts": [
+      "Eight or more",
+      "Six or more",
+      "Ten or more",
+      "Four or more"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, what happens if an applicant fails to disclose a past arrest or being detained as a suspect?",
+     "a": "Failure to disclose results in immediate disqualification.",
+     "why": "M.P. 102.03: Applicants must disclose all arrests, convictions and suspect detentions; \"Failure to provide this information will result in immediate disqualification.\"",
+     "opts": [
+      "Immediate disqualification",
+      "A follow-up interview and a second chance",
+      "Review by the HR Chief under the discretion factors",
+      "A note in the file but no effect if minor"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, within what time before the start date must the pre-employment drug test be completed?",
+     "a": "Within 30 days before the start date; delays may require additional tests.",
+     "why": "M.P. 102.03: The test includes cannabinoids and \"must be completed within 30 days before the start date.\"",
+     "opts": [
+      "30 days",
+      "60 days",
+      "14 days",
+      "90 days"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.03, which felony convictions (including attempts) automatically disqualify an applicant?",
+     "a": "Violent felonies as defined in A.R.S. 13-706; other felonies are left to the HR Chief's discretion.",
+     "why": "M.P. 102.03: Listed disqualifier: \"Felonies classified as Violent as defined in A.R.S. § 13-706\"; the HR Chief may weigh other felonies and misdemeanors.",
+     "opts": [
+      "Felonies classified as violent under A.R.S. 13-706",
+      "Any felony within the last 10 years",
+      "Only felonies involving drugs or theft",
+      "Any felony conviction not disclosed on the applicant disclosure form"
+     ],
+     "src": "M.P. 102.03"
+    },
+    {
+     "q": "Per M.P. 102.04, you move to a new address. Within how long must you give the change to your Battalion or Section Office?",
+     "a": "No more than three working days after the change.",
+     "why": "M.P. 102.04: \"No more than three (3) working days after a change in Employee Data occurs, the member shall provide such information to his/her Battalion or Section Office.\"",
+     "opts": [
+      "3 working days",
+      "5 working days",
+      "7 calendar days",
+      "Your next shift"
+     ],
+     "src": "M.P. 102.04"
+    },
+    {
+     "q": "Per M.P. 102.04, when are emergency notification and beneficiary information reviewed with each member?",
+     "a": "During the member's annual performance evaluation (PMG).",
+     "why": "M.P. 102.04: Emergency notification and beneficiary changes \"will be reviewed with each member during his/her annual performance evaluation (PMG).\"",
+     "opts": [
+      "At the annual performance evaluation (PMG)",
+      "At every shift bid",
+      "At each annual physical",
+      "Whenever the member is promoted"
+     ],
+     "src": "M.P. 102.04"
+    },
+    {
+     "q": "Per M.P. 102.04, who enters employee data changes into CAD for Operations members?",
+     "a": "Battalion Offices enter the changes into CAD for Operations members; Fire Personnel updates CAD for all others.",
+     "why": "M.P. 102.04: \"Battalion Offices will enter the changes into C.A.D. for Operations members. The Fire Personnel Section will update C.A.D. for all others.\"",
+     "opts": [
+      "The Battalion Office",
+      "The Fire Personnel Section",
+      "The member at the station MCT",
+      "The Alarm Room supervisor"
+     ],
+     "src": "M.P. 102.04"
+    },
+    {
+     "q": "Per M.P. 102.05, which three words describe how supervisors must administer discipline?",
+     "a": "Discipline must be corrective, progressive and lawful.",
+     "why": "M.P. 102.05: Supervisors must \"administer discipline in a corrective, progressive, and lawful manner.\"",
+     "opts": [
+      "Corrective, progressive and lawful",
+      "Fair, firm and consistent",
+      "Prompt, private and documented",
+      "Corrective, punitive and final"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, a reporter asks you about a member's ongoing discipline case. Who must media inquiries go to?",
+     "a": "Media inquiries about discipline go to the Fire Chief or the Chief of Human Resources.",
+     "why": "M.P. 102.05: Investigations are confidential in process, and \"Media inquiries regarding disciplinary matters must be directed to the Fire Chief or the Chief of Human Resources.\"",
+     "opts": [
+      "The Fire Chief or the Chief of Human Resources",
+      "The on-duty Public Information Officer through the Alarm Room",
+      "The member's Battalion Chief",
+      "The Union President"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, who must be notified of any disciplinary action involving a probationary Firefighter or Firefighter Trainee?",
+     "a": "The Deputy Chief of Training must be notified.",
+     "why": "M.P. 102.05: \"The Deputy Chief of Training must be notified of any disciplinary action involving a probationary Firefighter or Firefighter Trainee.\"",
+     "opts": [
+      "The Deputy Chief of Training",
+      "The Shift Commander",
+      "The Deputy Chief of Operations",
+      "The Local 493 Vice President"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, what is the least severe form of corrective action?",
+     "a": "Coaching (with Supervisory Counseling) is the least severe; coaching notes stay in the supervisory file.",
+     "why": "M.P. 102.05: Coaching and Supervisory Counseling are \"the least severe form of corrective action\"; Supervisory Counseling is more formal and done in memo form.",
+     "opts": [
+      "Coaching",
+      "Supervisory Counseling",
+      "Written reprimand",
+      "Verbal warning on the employee's file"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, why can't a Supervisory Counseling memo cite specific policy numbers?",
+     "a": "Because Supervisory Counseling is not subject to a grievance.",
+     "why": "M.P. 102.05: Policy violations may be referenced, \"however, since a Supervisory Counseling is not subject to a grievance, no direct mention of specific policy numbers can be cited.\"",
+     "opts": [
+      "It is not subject to a grievance",
+      "It is kept in the city personnel file",
+      "It must be approved by the Fire Chief",
+      "It is reviewed by the Civil Service Board"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, an employee refuses to sign a written reprimand. What does the supervisor do?",
+     "a": "Obtain a witness signature verifying the refusal and still forward the document; refusal is not grounds for more discipline.",
+     "why": "M.P. 102.05: The supervisor \"must obtain a witness signature verifying the refusal\"; the document is still forwarded, and refusal \"is not grounds for additional disciplinary action.\"",
+     "opts": [
+      "Get a witness signature verifying the refusal and forward it",
+      "Add a charge of insubordination to the reprimand",
+      "Hold the document until the employee agrees to sign it at a later date",
+      "Return it to Fire HR to be voided and reissued"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, who makes the final decision on suspensions, demotions and dismissals?",
+     "a": "The Fire Chief makes the final decision.",
+     "why": "M.P. 102.05: \"The Fire Chief makes the final decision on suspensions, demotions, or dismissals\" to ensure consistency.",
+     "opts": [
+      "The Fire Chief",
+      "The Chief of Human Resources",
+      "The member's Division Head",
+      "The Civil Service Board"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, how long does a member have to appeal a suspension to the Civil Service Board after receiving the notice?",
+     "a": "14 days from receiving the notice (or 21 days from the date of certified mailing).",
+     "why": "M.P. 102.05: Appeals go to the Civil Service Board within \"14 days of receiving the notice\" or \"21 days from the date of certified mailing.\"",
+     "opts": [
+      "14 days",
+      "10 days",
+      "21 days",
+      "30 days"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05, what role may legal counsel play in an administrative interview about alleged criminal activity?",
+     "a": "Counsel is strictly advisory and cannot speak or answer on the employee's behalf.",
+     "why": "M.P. 102.05: Counsel's role \"is strictly advisory\"; the Department can compel answers despite the 5th Amendment because of Garrity rights.",
+     "opts": [
+      "Advise the employee only; may not answer for them",
+      "Answer questions on the employee's behalf",
+      "Stop the interview under the 5th Amendment",
+      "Act as the employee's Union representative"
+     ],
+     "src": "M.P. 102.05"
+    },
+    {
+     "q": "Per M.P. 102.05B, a citizen complains to you after hours. What do you do?",
+     "a": "Document after-hours complaints and forward them the next business day.",
+     "why": "M.P. 102.05B: Business-hours complaints go to OSI; \"after-hours complaints shall be documented and forwarded the next business day.\" Never discourage or delay a complainant.",
+     "opts": [
+      "Document it and forward it to OSI the next business day",
+      "Tell them to call OSI back during the next business day's hours",
+      "Investigate it yourself before end of shift",
+      "Forward it to the Police Department's SID"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, within how many hours must OSI or the investigator contact the complainant?",
+     "a": "Within 72 hours of receiving the complaint.",
+     "why": "M.P. 102.05B: OSI or the assigned Investigator \"shall initiate contact with the complainant within 72 hours of receiving the complaint.\"",
+     "opts": [
+      "72 hours",
+      "24 hours",
+      "48 hours",
+      "5 business days"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, within how many days should complaint investigations normally be completed?",
+     "a": "Within 90 days, with extensions only for complex cases with documented reasons.",
+     "why": "M.P. 102.05B: \"Investigations should be completed within 90 days with extensions granted only in complex cases.\"",
+     "opts": [
+      "90 days",
+      "60 days",
+      "30 days",
+      "120 days"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, what standard of proof is used to find an allegation substantiated?",
+     "a": "Preponderance of evidence, meaning the allegation is more likely than not to have occurred.",
+     "why": "M.P. 102.05B: \"Substantiated: A preponderance of evidence supports the allegation\"; preponderance means \"more likely than not.\"",
+     "opts": [
+      "Preponderance of evidence: more likely than not",
+      "Clear and convincing evidence that the misconduct occurred",
+      "Beyond a reasonable doubt",
+      "Probable cause that it occurred"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, what is the finding when there is evidence but not enough to meet the preponderance standard?",
+     "a": "Inconclusive.",
+     "why": "M.P. 102.05B: \"Inconclusive: Insufficient evidence to meet the preponderance standard\"; Unsubstantiated means \"No evidence supports the allegation.\"",
+     "opts": [
+      "Inconclusive",
+      "Unsubstantiated",
+      "Partially Substantiated",
+      "Exonerated"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, OSI finds a criminal element during fact-finding. What must OSI do?",
+     "a": "Immediately refer the case to the Special Investigations Division (SID) of the Police Department.",
+     "why": "M.P. 102.05B: \"If a criminal element is identified, OSI must immediately refer the case to the Special Investigations Division (SID) of the Police Department.\"",
+     "opts": [
+      "Immediately refer it to the Police Department's SID",
+      "Finish the administrative case first, then call the police",
+      "Notify the Union before any further steps",
+      "Close the case and send it to the City Attorney"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, you are called as a witness member in an OSI investigation. Which is true?",
+     "a": "Witnesses cannot refuse an interview and must fully and truthfully answer all questions; failure to cooperate is separate grounds for discipline.",
+     "why": "M.P. 102.05B: Witnesses \"are obligated to fully and truthfully answer ALL of your questions\" and \"cannot refuse an interview.\" They may have union representation if requested.",
+     "opts": [
+      "You cannot refuse the interview and must answer truthfully",
+      "You may decline the interview if you are not the accused member",
+      "You may have an attorney answer for you",
+      "You may only be interviewed in writing"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, what is the Weingarten Rule?",
+     "a": "The right to request union representation during investigatory interviews that may lead to discipline.",
+     "why": "M.P. 102.05B: Weingarten is \"the right of employees to request union representation during investigatory interviews where discipline may result.\" Garrity covers compelled statements.",
+     "opts": [
+      "The right to request union representation in investigatory interviews",
+      "Protection of compelled statements from criminal use",
+      "The requirement to admonish employees not to discuss an open case with anyone",
+      "The rule that interviews must be held during duty hours"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, who must approve an At-Home Work Assignment that exceeds 30 days?",
+     "a": "The Human Resource Chief.",
+     "why": "M.P. 102.05B: \"The Human Resource Chief must approve At-Home Work Assignments exceeding 30 days.\" Alternative work assignments are considered before leave.",
+     "opts": [
+      "The Human Resource Chief",
+      "The Fire Chief",
+      "The OSI Lead",
+      "The member's Deputy Chief"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05B, OSI case numbers ending in \"CS\" indicate which complaint type?",
+     "a": "Customer Service complaints end in \"CS\"; Formal end in \"C\", Investigations in \"I\", Information Only/Projects in \"IF\" or \"P\".",
+     "why": "M.P. 102.05B: The Course of Action chart lists case suffixes: Formal \"C\", Customer Service \"CS\", Information Only/Projects \"IF\" or \"P\", Investigations \"I\".",
+     "opts": [
+      "Customer Service",
+      "Formal Complaint",
+      "Criminal Special investigation",
+      "Closed/Settled complaint"
+     ],
+     "src": "M.P. 102.05B"
+    },
+    {
+     "q": "Per M.P. 102.05C, which claims does the property liability claims process exclude?",
+     "a": "Bodily injury and vehicular accident claims, which Risk Management handles.",
+     "why": "M.P. 102.05C: The process \"excludes bodily injury or vehicular accident claims which are handled by Risk Management.\"",
+     "opts": [
+      "Bodily injury and vehicle accident claims",
+      "Damage caused during forcible entry",
+      "Claims from homeowners with insurance",
+      "Damage to fences or landscaping"
+     ],
+     "src": "M.P. 102.05C"
+    },
+    {
+     "q": "Per M.P. 102.05C, for a property claim of $200 or less, what must the claimant provide?",
+     "a": "Three repair estimates from businesses that repair that kind of damage.",
+     "why": "M.P. 102.05C: If the claim is $200 or less, the claimant secures \"estimates for repair from three business concerns.\" Over $200, the City's adjuster investigates.",
+     "opts": [
+      "Repair estimates from three businesses",
+      "Two estimates and a photo of the damage",
+      "A signed police report of the incident",
+      "One estimate and a homeowner's policy copy"
+     ],
+     "src": "M.P. 102.05C"
+    },
+    {
+     "q": "Per M.P. 102.05C, a Battalion Chief visits a claimant to verify damage. Which is prohibited?",
+     "a": "The BC makes no commitment that the City will pay and does not acknowledge City liability.",
+     "why": "M.P. 102.05C: \"THE BATTALION CHIEF WILL MAKE NO COMMITMENT TO THE CITIZEN THAT THE CITY WILL PAY FOR DAMAGES NOR ACKNOWLEDGE THE CITY'S LIABILITY.\"",
+     "opts": [
+      "Saying the City will pay or admitting liability",
+      "Photographing the damage at the site",
+      "Interviewing the claimant about how the damage happened",
+      "Asking the claimant for repair estimates"
+     ],
+     "src": "M.P. 102.05C"
+    },
+    {
+     "q": "Per M.P. 102.05C, when a claimant's homeowner's insurance pays for the damage, what does the Department reimburse?",
+     "a": "Only the claimant's deductible.",
+     "why": "M.P. 102.05C: \"If the homeowner's insurance policy pays for the damages, Fiscal Management will reimburse the claimant solely for the deductible amount.\"",
+     "opts": [
+      "Only the deductible amount",
+      "The full repair cost",
+      "Half of the repair cost",
+      "Nothing; the claim is closed"
+     ],
+     "src": "M.P. 102.05C"
+    },
+    {
+     "q": "Per M.P. 102.05C, a property damage claim arrives as a lawsuit. What do you do?",
+     "a": "Hand carry it directly to the Assistant Chief of Personnel Services, who coordinates with the City Attorney's Office.",
+     "why": "M.P. 102.05C: A lawsuit claim \"should be hand carried directly to the Assistant Chief of Personnel Services.\"",
+     "opts": [
+      "Hand carry it to the Assistant Chief of Personnel Services",
+      "Send it to Performance Auditing by interoffice mail the same day",
+      "Forward it to Risk Management's claims adjuster",
+      "Give it to the Battalion Chief for staff work"
+     ],
+     "src": "M.P. 102.05C"
+    }
+   ]
+  },
+  {
+   "title": "Vol I: Conduct, Uniforms & General Policy (100–102) (Part 2)",
+   "sub": "Private and take-home vehicles, archives, outside agencies, electronic communications, Knox keys, incident P-cards and HIPAA.",
+   "concepts": [
+    "<b>102.06</b>: Home-to-work mileage is not reimbursed; your own insurance is primary in a crash on City business.",
+    "<b>102.07A</b>: Temporary overnight permits run 1–30 days; transportation-allowance holders can't get a permit; sworn are exempt from monthly mileage reports.",
+    "<b>102.09A</b>: Archive items must relate to PFD history, research or members; wear archival gloves for original photos.",
+    "<b>102.10</b>: Copy outside-agency commendations to the Fire Chief's office; critiques need Shift Commander/Section Head approval.",
+    "<b>102.12</b>: No expectation of privacy on City systems; don't empty email trash (30-day retention).",
+    "<b>102.13</b>: Knox keys stay in the KeySecure unless in use; verify at shift change; missing key: notify BC, PD report, then ERR.",
+    "<b>102.14</b>: Local Incident P-cards (North Shift Command, RM50) buy food only; receipts to Fiscal within 3 business days.",
+    "<b>102.15</b>: PFD is a HIPAA Covered Entity; use minimum necessary PHI; breach notice within 60 days."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 102.06, is mileage from home to your first point of duty reimbursable when using your own car?",
+     "a": "No. Mileage from home to the first point of duty and from the last point of duty home is not reimbursed.",
+     "why": "M.P. 102.06: That mileage \"will not be considered as Fire Department/City business and will not be considered for reimbursement.\"",
+     "opts": [
+      "No, home to first duty point is not City business",
+      "Yes, if your Division Head approves it in advance on the form",
+      "Yes, but only on overtime shifts",
+      "Only if no City vehicle is available"
+     ],
+     "src": "M.P. 102.06"
+    },
+    {
+     "q": "Per M.P. 102.06, by when must your authority to use a private vehicle on City business be renewed?",
+     "a": "Before January 1st for each calendar year.",
+     "why": "M.P. 102.06: Authority \"must be renewed before January 1st for each calendar year\"; it is recommended by the Division Head and approved by the Finance Director.",
+     "opts": [
+      "Before January 1st each calendar year",
+      "Before July 1st each fiscal year",
+      "Every two years on your hire date",
+      "At each annual performance evaluation"
+     ],
+     "src": "M.P. 102.06"
+    },
+    {
+     "q": "Per M.P. 102.06, you crash your personal car while on City business. Whose insurance is primary?",
+     "a": "The employee's insurance is primary; the City covers only after the private carrier reaches its policy maximum.",
+     "why": "M.P. 102.06: \"The employee's insurance company is the primary carrier in the event of an accident.\"",
+     "opts": [
+      "Your own insurance company",
+      "The City's self-insurance fund",
+      "Industrial Insurance",
+      "Split evenly with the City"
+     ],
+     "src": "M.P. 102.06"
+    },
+    {
+     "q": "Per M.P. 102.06, you are sent from your station to another site in your own car. What keeps Industrial Insurance coverage in effect?",
+     "a": "Taking the most direct, uninterrupted route; any deviation could negate coverage.",
+     "why": "M.P. 102.06: Coverage applies \"provided the employee takes the most direct, uninterrupted route to the work destination. Any deviation could negate\" it.",
+     "opts": [
+      "Taking the most direct, uninterrupted route",
+      "Logging the trip on the MCT before leaving",
+      "Having your Captain ride with you",
+      "Staying under the posted speed limit"
+     ],
+     "src": "M.P. 102.06"
+    },
+    {
+     "q": "Per M.P. 102.07A, how long is a Temporary overnight vehicle permit valid?",
+     "a": "1 to 30 days for specific business needs.",
+     "why": "M.P. 102.07A: \"Temporary Permit (AR 2.97): Valid for 1–30 days for specific business needs.\"",
+     "opts": [
+      "1 to 30 days",
+      "1 to 14 days",
+      "Up to 90 days",
+      "One shift only"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, who is NOT eligible to apply for any overnight vehicle permit?",
+     "a": "Employees receiving a transportation allowance.",
+     "why": "M.P. 102.07A: \"Employees receiving a transportation allowance are not eligible to apply for any overnight permit.\"",
+     "opts": [
+      "Employees receiving a transportation allowance",
+      "Sworn members assigned to a 40-hour staff schedule",
+      "District Commanders with an assigned vehicle",
+      "Professional (non-sworn) staff"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, how do Battalion Chiefs and Shift Commanders (56-hour) handle City vehicles?",
+     "a": "They have no assigned City vehicle, use personal vehicles off duty, and are eligible for a transportation allowance.",
+     "why": "M.P. 102.07A: 56-hour BCs and Shift Commanders \"shall not have City vehicles assigned to them\"; on duty they use City vehicles as required.",
+     "opts": [
+      "No assigned vehicle; they get a transportation allowance",
+      "Assigned a vehicle with an annual permit",
+      "Assigned a vehicle with a rotating permit",
+      "May choose either an assigned vehicle or a monthly allowance"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, how often must employees in driving positions acknowledge AR 2.95, AR 2.97 and this M.P. in PHXYou?",
+     "a": "Once each calendar year; those who haven't are prohibited from driving City vehicles.",
+     "why": "M.P. 102.07A: Acknowledgment is \"once each calendar year\"; the City Safe Driver Training course is every four years for professional and 40-hour sworn staff.",
+     "opts": [
+      "Once each calendar year",
+      "Every four years",
+      "Every two years",
+      "Only when first hired"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, an overnight permit is incomplete. What happens?",
+     "a": "It is invalid and must be resubmitted within five business days.",
+     "why": "M.P. 102.07A: \"Any incomplete permit is invalid and must be resubmitted within five (5) business days.\"",
+     "opts": [
+      "It is invalid and must be resubmitted within 5 business days",
+      "It is approved and fixed at the quarterly review",
+      "It stays valid for up to 30 days while the errors are corrected",
+      "It is returned to Fleet Services for completion"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, what is required to park a City vehicle overnight outside City limits?",
+     "a": "Prior written approval by the Fire Chief or designee, documented in the permit file with a justification memo.",
+     "why": "M.P. 102.07A: Parking outside City limits \"is permitted only with prior written approval by the Fire Chief or designee\"; a memo is required with the permit.",
+     "opts": [
+      "Prior written approval of the Fire Chief or designee, with a memo",
+      "Verbal approval from your Battalion Chief",
+      "Written approval from Public Works Fleet Services and Risk Management",
+      "Nothing extra if the vehicle is off-street"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.07A, which permit holders are exempt from monthly mileage reporting on Form 150-84D?",
+     "a": "Sworn Fire personnel are exempt; others submit by the first business day of the month.",
+     "why": "M.P. 102.07A: \"Sworn Fire personnel are exempt from the monthly mileage reporting requirement\"; others submit Form 150-84D by the first business day for the prior month.",
+     "opts": [
+      "Sworn Fire personnel",
+      "Professional staff with annual permits",
+      "Holders of temporary permits",
+      "Section Heads"
+     ],
+     "src": "M.P. 102.07A"
+    },
+    {
+     "q": "Per M.P. 102.09A, an item is offered to the PFD Archives. Which makes it eligible for conservation?",
+     "a": "It must be relevant to PFD's historic progress, possible research material, or pertain to past or present PFD members.",
+     "why": "M.P. 102.09A: Items must fit at least one category: relevant to PFD history, \"possible research material,\" or pertaining to PFD members. Otherwise it may be returned to the donor.",
+     "opts": [
+      "It relates to PFD history, research or PFD members",
+      "It is more than 50 years old",
+      "It came from any Arizona fire department",
+      "It has a market value over $100"
+     ],
+     "src": "M.P. 102.09A"
+    },
+    {
+     "q": "Per M.P. 102.09A, what must you wear when handling original archival photos?",
+     "a": "Approved archival gloves.",
+     "why": "M.P. 102.09A: \"Any time original photos are handled, approved archival gloves shall be worn.\"",
+     "opts": [
+      "Approved archival gloves",
+      "Clean, dry bare hands",
+      "Nitrile EMS gloves",
+      "A dust mask and gloves"
+     ],
+     "src": "M.P. 102.09A"
+    },
+    {
+     "q": "Per M.P. 102.09A, what is the ideal storage environment for archival books, paper and clothing?",
+     "a": "68 degrees Fahrenheit with 34 percent humidity, free of light and dust.",
+     "why": "M.P. 102.09A: Books, paper and clothing are kept at \"68 degrees Fahrenheit with a humidity of 34 percent\"; metal items at no more than 10 percent humidity.",
+     "opts": [
+      "68 F, 34% humidity, free of light and dust",
+      "72 F, 50% humidity, low UV light",
+      "65 F, 10% humidity, sealed in plastic storage bins",
+      "68 F, 10% humidity, lightly oiled"
+     ],
+     "src": "M.P. 102.09A"
+    },
+    {
+     "q": "Per M.P. 102.10, you write a commendation for an outside agency member. Where must a copy go?",
+     "a": "A copy goes to the office of the Fire Chief.",
+     "why": "M.P. 102.10: \"A copy of the commendation shall be forwarded to the office of the Fire Chief.\"",
+     "opts": [
+      "The office of the Fire Chief",
+      "The outside agency's chief only",
+      "Your Battalion Chief's file",
+      "The Public Information Office"
+     ],
+     "src": "M.P. 102.10"
+    },
+    {
+     "q": "Per M.P. 102.10, you want to officially critique an outside agency's operations. What is required first?",
+     "a": "The knowledge and approval of the Shift Commander/Section Head, coordinated through your Battalion Chief/Section Head.",
+     "why": "M.P. 102.10: Members \"shall not, in any official capacity, critique\" an outside agency \"without the knowledge and approval of the Shift Commander/ Section Head.\"",
+     "opts": [
+      "Knowledge and approval of the Shift Commander/Section Head",
+      "Approval of the outside agency's chief",
+      "A written request routed to the Fire Chief's office for approval",
+      "Nothing, if the critique is positive"
+     ],
+     "src": "M.P. 102.10"
+    },
+    {
+     "q": "Per M.P. 102.12, what expectation of privacy do you have on City email and computers?",
+     "a": "None. The City may monitor use without notification.",
+     "why": "M.P. 102.12: The user \"has no expectation of privacy\"; the City does not routinely monitor but \"reserves the right to do so without notification.\"",
+     "opts": [
+      "None; the City may monitor without notice",
+      "Full privacy for messages marked personal",
+      "Privacy unless a crime is suspected",
+      "Privacy on City email accessed from home"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.12, someone uses your logged-in workstation while you're away. Who is presumed responsible?",
+     "a": "Use under your login is presumed to be performed by you.",
+     "why": "M.P. 102.12: \"Any use that occurs on an employee's workstation under that employee's login is presumed to be performed by that employee.\" Lock or log off.",
+     "opts": [
+      "You, as the logged-in employee",
+      "The person who used it",
+      "The station Captain",
+      "No one until IT investigates"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.12, why must you not empty your City email trash?",
+     "a": "Records retention requires email, including trash, to be kept for one month (30 days).",
+     "why": "M.P. 102.12: \"Email in the trash basket falls under the one-month retention policy. Employees must not empty their electronic mail trash.\"",
+     "opts": [
+      "Email must be kept 30 days under records retention",
+      "Deleted email can't be recovered by IT once the trash is emptied",
+      "Trash is scanned for viruses each week",
+      "Emptying trash disables the mailbox"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.12, who may request access to and monitoring of an employee's City electronic communications?",
+     "a": "Only Department/Function Heads or higher, for employees under their supervision.",
+     "why": "M.P. 102.12: \"Only Department/Function Heads or higher may request access and monitoring\" per A.R. 1.63.",
+     "opts": [
+      "Department/Function Heads or higher",
+      "Any supervisor in the chain of command",
+      "The City Clerk Department",
+      "The information security liaison"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.12, which personal-device use needs approval from your department's information security liaison?",
+     "a": "Connecting a personal device to the City's network.",
+     "why": "M.P. 102.12: Using personal devices for calls, texts, email or offline work needs no extra approval, but connecting to the City network requires the \"information security liaison\" approval.",
+     "opts": [
+      "Connecting the device to the City's network",
+      "Texting coworkers about City business",
+      "Reading City email in a web browser",
+      "Calling the station on your cell phone"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.12, when judging whether a message is harassment, whose view prevails?",
+     "a": "The perception of the recipient prevails.",
+     "why": "M.P. 102.12: \"It is the perception of the recipient that prevails, not the intention of the sender.\"",
+     "opts": [
+      "The recipient's perception",
+      "The sender's intention",
+      "The supervisor's judgment",
+      "The City Attorney's review"
+     ],
+     "src": "M.P. 102.12"
+    },
+    {
+     "q": "Per M.P. 102.13, who is the sole distributor of Emergency Access Business Keys?",
+     "a": "The Fire Prevention Division.",
+     "why": "M.P. 102.13: \"Fire Prevention Division is the sole distributor of Emergency Access Business Keys.\" Low Security keys are managed by both PFD and PD.",
+     "opts": [
+      "The Fire Prevention Division",
+      "Resource Management",
+      "The Phoenix Police Department",
+      "Each Battalion Office"
+     ],
+     "src": "M.P. 102.13"
+    },
+    {
+     "q": "Per M.P. 102.13, which Emergency Access Keys are NOT tethered with the Unit ID and Fire Prevention tag?",
+     "a": "The Knox FDC wrenches, which are kept where the Company Officer designates.",
+     "why": "M.P. 102.13: All keys, \"with the exception of the FDC Wrenches,\" are secured together on a serial-numbered cable tether.",
+     "opts": [
+      "Knox FDC wrenches",
+      "Low Security (gate) keys",
+      "Supra keys",
+      "eKeys"
+     ],
+     "src": "M.P. 102.13"
+    },
+    {
+     "q": "Per M.P. 102.13, what number is used to remove the Knox key from the apparatus KeySecure device?",
+     "a": "The employee ID number serves as the security access number.",
+     "why": "M.P. 102.13: \"A security access number (employee ID number) will be used to remove the KNOX Key from the KeySecure device.\"",
+     "opts": [
+      "Your employee ID number",
+      "The apparatus unit number",
+      "The station's door code",
+      "The tether's serial number"
+     ],
+     "src": "M.P. 102.13"
+    },
+    {
+     "q": "Per M.P. 102.13, when must crews verify Emergency Access Keys are secured in the KeySecure?",
+     "a": "At shift change and any other time the Captain or crew is relieved, including Rescue crews.",
+     "why": "M.P. 102.13: Verification \"must be done at shift change and any other time in which the Captain or crew is relieved.\"",
+     "opts": [
+      "At shift change and whenever a Captain or crew is relieved",
+      "At the start of each month during the station equipment inventory",
+      "Only after each use on an incident",
+      "At shift change on A shift only"
+     ],
+     "src": "M.P. 102.13"
+    },
+    {
+     "q": "Per M.P. 102.13, you find the Knox key missing at shift change. What is the first step?",
+     "a": "Notify the Battalion Chief immediately; then file a police report and an ERR.",
+     "why": "M.P. 102.13: \"If a Key is noted to be missing... the BC must be notified immediately,\" then a PD report is filed and included on the ERR.",
+     "opts": [
+      "Notify the BC immediately",
+      "File an ERR for a replacement key",
+      "Call Fire Prevention after hours",
+      "Search the apparatus and report next shift"
+     ],
+     "src": "M.P. 102.13"
+    },
+    {
+     "q": "Per M.P. 102.14, what may the Fire Department Local Incident P-Card be used to buy?",
+     "a": "Food only, for on-scene resources at large-scale, extended incidents.",
+     "why": "M.P. 102.14: The purpose is \"emergency purchase of food only for on-scene resources assigned to large-scale, extended\" incidents.",
+     "opts": [
+      "Food only for on-scene resources at extended incidents",
+      "Fuel and food for apparatus at extended incidents",
+      "Emergency supplies and equipment at any incident",
+      "Station meals when a crew is held over past the end of shift"
+     ],
+     "src": "M.P. 102.14"
+    },
+    {
+     "q": "Per M.P. 102.14, which units carry the Local Incident P-Cards?",
+     "a": "North Shift Command (Local Incident #1) and RM50 (Local Incident #2).",
+     "why": "M.P. 102.14: Cards are assigned to North Shift Command and RM50, A, B and C shifts; fill-ins must also sign a Cardholder Agreement.",
+     "opts": [
+      "North Shift Command and RM50",
+      "Each Battalion Chief",
+      "South Shift Command and Rehab units",
+      "The Fire Fiscal Section only"
+     ],
+     "src": "M.P. 102.14"
+    },
+    {
+     "q": "Per M.P. 102.14, after buying food at an incident, by when must receipts and the CAD incident printout reach the Fire Fiscal Section?",
+     "a": "Within three business days following the incident.",
+     "why": "M.P. 102.14: The receipts, CAD incident history and (if needed) Cardholder Agreement go to Fiscal \"within three business days\"; Fiscal delivers to the City Controller within one business day.",
+     "opts": [
+      "Within three business days",
+      "Within one business day",
+      "By the end of the month",
+      "Within five business days"
+     ],
+     "src": "M.P. 102.14"
+    },
+    {
+     "q": "Per M.P. 102.14, what must the RM50 or North Shift Command member do at the start of each shift?",
+     "a": "Verify the card is present and complete an MCT entry acknowledging possession.",
+     "why": "M.P. 102.14: The member must \"verify the card is present and complete an entry on the mobile computer terminal (MCT)\"; the MCT keeps prompting until done.",
+     "opts": [
+      "Verify the P-card is present and log it on the MCT",
+      "Sign the card out from the Battalion Office log at shift start",
+      "Call Fiscal to confirm the card's balance",
+      "Check the card into the KeySecure device"
+     ],
+     "src": "M.P. 102.14"
+    },
+    {
+     "q": "Per M.P. 102.15, what does HIPAA's minimum necessary standard require?",
+     "a": "Limit use, disclosure and requests for PHI to the least amount required for the purpose.",
+     "why": "M.P. 102.15: Minimum necessary means \"limiting the use, disclosure, and requests for PHI to the least amount required to fulfill the intended purpose.\"",
+     "opts": [
+      "Use or disclose only the least PHI needed for the purpose",
+      "Keep only the minimum records required by law",
+      "Train only crews who handle billing data",
+      "Report only breaches that involve 500 or more patients at once"
+     ],
+     "src": "M.P. 102.15"
+    },
+    {
+     "q": "Per M.P. 102.15, why is PFD a HIPAA Covered Entity?",
+     "a": "Because it provides emergency medical services and bills for them.",
+     "why": "M.P. 102.15: \"As a provider of emergency medical services that bills for such services, PFD is a Covered Entity.\"",
+     "opts": [
+      "It provides EMS and bills for those services",
+      "It is part of a city government",
+      "It stores records on City computers",
+      "It transports patients to hospitals"
+     ],
+     "src": "M.P. 102.15"
+    },
+    {
+     "q": "Per M.P. 102.15, what makes up PFD's Designated Record Set?",
+     "a": "The Electronic Patient Care Report (ePCR) and the Billing Statement.",
+     "why": "M.P. 102.15: \"The Designated Record Set for the Department is the Electronic Patient Care Report (ePCR), and the Billing Statement.\"",
+     "opts": [
+      "The ePCR and the Billing Statement",
+      "The CAD incident history and the ePCR",
+      "The run report and the hospital chart",
+      "The ePCR and the crew's training file"
+     ],
+     "src": "M.P. 102.15"
+    },
+    {
+     "q": "Per M.P. 102.15, if a PHI breach has occurred, within how many days must PFD notify affected individuals and HHS?",
+     "a": "Within sixty days; the media is also notified if more than 500 individuals are involved.",
+     "why": "M.P. 102.15: PFD will, \"within sixty days, notify affected individuals, the Secretary of Health and Human Services,\" and the media if over 500 people.",
+     "opts": [
+      "60 days",
+      "30 days",
+      "72 hours",
+      "90 days"
+     ],
+     "src": "M.P. 102.15"
+    },
+    {
+     "q": "Per M.P. 102.15, how long must HIPAA awareness training records be kept?",
+     "a": "Six years.",
+     "why": "M.P. 102.15: \"Records of this training shall be maintained for a period of six years,\" matching the six-year retention for HIPAA privacy documentation.",
+     "opts": [
+      "Six years",
+      "Three years",
+      "Five years",
+      "Ten years"
+     ],
+     "src": "M.P. 102.15"
+    },
+    {
+     "q": "Per M.P. 102.15, you suspect a coworker improperly shared patient information. How may you report it?",
+     "a": "It may be reported anonymously to the Privacy or Security Officer or your supervisor.",
+     "why": "M.P. 102.15: \"Any suspected violations may be reported anonymously to the Privacy or Security Officer or the employee's supervisor.\"",
+     "opts": [
+      "Anonymously to the Privacy or Security Officer or your supervisor",
+      "Only in writing to the Assistant City Attorney",
+      "Only to HHS through its online complaint form",
+      "Only by naming yourself to OSI"
+     ],
+     "src": "M.P. 102.15"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "M.P. 102.01 (Rules of Conduct) is referenced by 102.02 and 102.05 but has no file in mp-text, so it is not covered. M.P. 102.02A (detailed Class A wear standards) is also referenced but absent.",
+  "M.P. 102.05C has overlapping thresholds: one section says 'UNDER $200' / '$200 or less' and the next says '$200 AND OVER'. Cards use '$200 or less' vs 'over $200' as the staff-work section states. The MP (04/06) also references Performance Auditing and Form 90-68D, which may be outdated given 102.05B's OSI process.",
+  "M.P. 102.05B defines NOI as 'Notice of Inquiry' but Addendum A calls it 'Notice of Investigation'. Personnel Rule '2lBl6' appears garbled in the text (likely 21B16); not used on cards.",
+  "M.P. 102.12 (06/19) references the Domino/Lotus Notes email system and AOL/Yahoo/MSN/KaZaA examples; likely outdated. Its PRIVACY AND MONITORING section is duplicated in the text.",
+  "M.P. 102.14 has a review date of 05/2021 and lists named individual contacts (phone numbers) that may be stale; not used on cards.",
+  "M.P. 102.05 and 102.07A show Date Revised 11/2026."
+ ]
+}

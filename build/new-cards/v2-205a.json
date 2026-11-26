@@ -1,0 +1,1218 @@
+{
+ "topics": [
+  {
+   "title": "Vol II: Dispatch, Staging & Driving (205.02–205.11) (Part 1)",
+   "sub": "EMS dispatch, medical and rescue communications, hospital diversion, MCSO jail response, Deployment Sector, and overhaul rotation.",
+   "concepts": [
+    "<b>205.02</b>: Listed emergencies get the closest suppression unit plus a paramedic unit; all others get the nearest suppression unit only.",
+    "<b>205.03</b>: 1st Alarm Medical puts private helicopters and DPS Ranger on stand-by; disasters call Level 1 and specialty hospitals first.",
+    "<b>205.04</b>: Rescue Status 3 = fewer than 3 Rescues citywide; Channel 1 checks a Rescue at 20 minutes at the hospital; go available within 10 minutes of quarters.",
+    "<b>205.04A</b>: Uncontrollable airway/ventilation or no pulse goes to the closest appropriate facility regardless of diversion; Dispatch reconfirms in 3 hours.",
+    "<b>205.05</b>: Jail Assignment = ALS company, Rescue and BC; High-Risk benchmarks: entering, patient contact, extricated, PAR.",
+    "<b>205.05A</b>: The Dispatch Center Captain is Deployment Sector Officer and talks to Planning by telephone.",
+    "<b>205.05B</b>: Overhaul rotation uses the least active companies; companies that worked the fire stay off the list."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 205.02, what is the basic philosophy behind the Phoenix EMS dispatch policy?",
+     "a": "An adequate, early and pessimistic response of the closest units required.",
+     "why": "M.P. 205.02: The policy \"continues to revolve around an adequate, early and pessimistic response of the closest units required\" to handle the emergency.",
+     "opts": [
+      "Adequate, early and pessimistic response of the closest units",
+      "Minimum response first, upgraded only after patient contact",
+      "Closest paramedic unit only, with suppression units on request",
+      "Response based on the caller's own estimate of severity"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "Dispatch receives a call for chest pain. Per M.P. 205.02, what is the standard dispatch?",
+     "a": "The closest fire suppression unit backed up by a paramedic unit.",
+     "why": "M.P. 205.02: Chest pain is on the list of emergencies that get \"the closest fire suppression unit backed up by a paramedic unit.\"",
+     "opts": [
+      "Closest suppression unit backed up by a paramedic unit",
+      "Nearest fire suppression unit only, to assess the patient",
+      "A Rescue only, with an engine added if requested",
+      "Two suppression units and a Battalion Chief"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "Per M.P. 205.02, a call for a minor medical complaint not on the defined list receives what dispatch?",
+     "a": "The nearest fire suppression unit only, to assess, treat and decide on the need for ALS, Rescue or both.",
+     "why": "M.P. 205.02: Medical emergencies not defined in the list \"will receive a dispatch of the nearest fire suppression unit only\" to assess and determine the need for an ALS unit, Rescue or both.",
+     "opts": [
+      "Nearest suppression unit only; it decides on ALS or Rescue",
+      "Closest suppression unit backed up by a paramedic unit, every time",
+      "A private ambulance only, with no fire unit assigned",
+      "Closest Rescue only, with an engine added if delayed"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "Per M.P. 205.02, when a four-person paramedic unit is the closest unit to a listed emergency, who decides whether another company is sent?",
+     "a": "Dispatch personnel, based on their judgment and experience.",
+     "why": "M.P. 205.02: When a four-person paramedic unit is closest, \"the dispatch of an additional company will be determined by the judgment/experience of the dispatch personnel.\"",
+     "opts": [
+      "Dispatch personnel, using judgment and experience",
+      "The paramedic unit's Company Officer once on scene",
+      "The on-duty Battalion Chief for that area",
+      "No additional company is ever sent in that case"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "A caller reports a 1-year-old who is failing to feed and has poor muscle tone. Per M.P. 205.02, how is this dispatched?",
+     "a": "As a listed emergency: closest suppression unit backed up by a paramedic unit (child under 18 months).",
+     "why": "M.P. 205.02: \"Any child under 18 months\" with dehydration, hypo/hyperthermia, poor muscle tone or failure to feed is on the list for suppression plus paramedic unit.",
+     "opts": [
+      "Suppression unit plus paramedic unit, since the child is under 18 months",
+      "Nearest suppression unit only, since no trauma is reported",
+      "Suppression plus paramedic unit only if the child is under 6 months old",
+      "Rescue only, since pediatric calls go straight to transport"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "Which of these auto accidents is specifically listed in M.P. 205.02 for a suppression unit plus paramedic dispatch?",
+     "a": "A car/bicycle accident.",
+     "why": "M.P. 205.02: Listed auto accidents include car/pedestrian, car/bicycle, motorcycle, and serious ones (rollover, person trapped).",
+     "opts": [
+      "Car/bicycle collision",
+      "Two-car fender bender with no complaints",
+      "Single car into a parked car, driver walking",
+      "Minor parking lot collision at low speed"
+     ],
+     "src": "M.P. 205.02"
+    },
+    {
+     "q": "Per M.P. 205.03, who upgrades the dispatched assignment on a medical incident when the actual situation requires it?",
+     "a": "Command.",
+     "why": "M.P. 205.03: Dispatch sends an assignment based on reported scale; \"the assignment will be upgraded by Command, as necessary, based on the actual situation encountered.\"",
+     "opts": [
+      "Command",
+      "The Dispatch Center supervisor",
+      "The first arriving Rescue",
+      "The EMS Duty Officer"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "On a 1st Alarm Medical, per M.P. 205.03, which resources does Dispatch place on stand-by?",
+     "a": "Private medical helicopters and the DPS Ranger.",
+     "why": "M.P. 205.03: On a 1st Alarm Medical, Dispatch will \"place private medical helicopters and DPS Ranger on stand-by.\"",
+     "opts": [
+      "Private medical helicopters and DPS Ranger",
+      "All reserve Fire Department Rescues",
+      "Phoenix Transit buses at the Level 2 staging area",
+      "Level 2 hospitals by geographic proximity"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "On a 2-1 Medical Assignment, per M.P. 205.03, which hospitals does Dispatch contact, and when?",
+     "a": "Level 1 and 2 hospitals, when requested by Command.",
+     "why": "M.P. 205.03: For a 2-1 Medical, Dispatch will \"contact Level 1 and 2 hospitals when requested by Command.\" (A 1st Alarm Medical lists Level 1 hospitals.)",
+     "opts": [
+      "Level 1 and 2 hospitals, when requested by Command",
+      "Level 1 hospitals only, automatically at dispatch",
+      "Only the closest hospital, once patients are loaded",
+      "All hospitals in the valley, automatically at dispatch"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "During a medical disaster notification per M.P. 205.03, which hospitals does Dispatch call first?",
+     "a": "All Level 1 hospitals and specialty hospitals; then Level 2 by proximity to the scene.",
+     "why": "M.P. 205.03: \"Call all Level 1 hospitals and specialty hospitals first. Call Level 2 facilities according to geographic proximity to scene.\"",
+     "opts": [
+      "Level 1 and specialty hospitals, then Level 2 by proximity",
+      "The closest hospitals first, regardless of level",
+      "Level 2 hospitals first, to save Level 1 for critical patients",
+      "Only the hospitals that Transportation Sector names"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "In a mass casualty notification per M.P. 205.03, what are hospitals told about calling the Dispatch Center?",
+     "a": "Not to call the Dispatch Center; stand by for a call back.",
+     "why": "M.P. 205.03: Dispatch asks hospitals how many patients they can handle, to \"stand-by for call back,\" and advises \"them not to call the Dispatch Center.\"",
+     "opts": [
+      "Not to call Dispatch; stand by for a call back",
+      "Call Dispatch every 15 minutes with bed counts",
+      "Call Transportation Sector directly on the tactical channel",
+      "Call Dispatch only when they reach capacity"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "Command requests city buses at a medical disaster. Per M.P. 205.03, where does Dispatch send the Phoenix Transit buses?",
+     "a": "To the Level 2 staging area.",
+     "why": "M.P. 205.03: \"Dispatch Phoenix Transit buses to the Level 2 staging area.\" The buses are radio dispatched.",
+     "opts": [
+      "The Level 2 staging area",
+      "Directly to the Treatment Sector",
+      "The closest Level 1 hospital",
+      "The Command Post"
+     ],
+     "src": "M.P. 205.03"
+    },
+    {
+     "q": "Per M.P. 205.04, what is the minimum staffing of a fire department Rescue?",
+     "a": "Two fire fighters, each at least EMT certified or paramedic.",
+     "why": "M.P. 205.04: \"All fire department Rescues are staffed with a minimum of two fire fighters, which are at least EMT certified or EMT-P.\"",
+     "opts": [
+      "Two fire fighters, at least EMT certified",
+      "Two paramedics, one of them a Captain",
+      "Three fire fighters, one of them a paramedic",
+      "One paramedic and one private EMT"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "In the City of Phoenix, per M.P. 205.04, which call does NOT get a Rescue dispatched initially?",
+     "a": "A non-serious illness call (Rescues go initially only on GSW, stabbing, serious auto accident, car/ped, code and drowning).",
+     "why": "M.P. 205.04: In Phoenix a Rescue is sent initially on \"gunshot wound, stabbing, auto accident that appears serious, car/pedestrian accident, code and drowning,\" or when a field unit requests one.",
+     "opts": [
+      "A sick person with a minor illness",
+      "A car/pedestrian accident with minor injuries",
+      "A drowning",
+      "A stabbing"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "A Phoenix Rescue is responding to an emergency with a response time over how many minutes before Dispatch checks for a closer private ambulance (M.P. 205.04)?",
+     "a": "20 minutes.",
+     "why": "M.P. 205.04: If a fire department Rescue's response time will exceed \"20 minutes,\" the Dispatcher contacts private companies; if a closer private unit accepts, the FD Rescue is canceled.",
+     "opts": [
+      "20 minutes",
+      "10 minutes",
+      "15 minutes",
+      "30 minutes"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Your Rescue has been at the hospital about 20 minutes. Per M.P. 205.04, what happens?",
+     "a": "The Channel 1 operator contacts you to confirm status and when you expect to go available.",
+     "why": "M.P. 205.04: \"When a Rescue has been at the hospital for approximately 20 minutes, the Channel 1 operator will make contact with them to confirm their status.\"",
+     "opts": [
+      "Channel 1 contacts you to confirm status and expected availability",
+      "You are automatically placed unavailable in CAD",
+      "The Dispatch Captain notifies your Battalion Chief of the delay at the ED",
+      "Nothing; status checks start at 45 minutes"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "You're returning to your first due area after a transport. Per M.P. 205.04, when should your Rescue go available?",
+     "a": "When within 10 minutes driving time to quarters, monitoring Channel 1 en route.",
+     "why": "M.P. 205.04: \"Rescues should go available when within 10 minutes driving time to quarters\" and monitor Channel 1 en route.",
+     "opts": [
+      "Within 10 minutes driving time to quarters",
+      "Only once back in quarters (AIQ)",
+      "Within 20 minutes driving time to quarters",
+      "As soon as the patient is turned over"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Per M.P. 205.04, what does Rescue Status 3 mean?",
+     "a": "An urgent call for ALL Rescues to return to service; fewer than three Rescues available citywide.",
+     "why": "M.P. 205.04: Status 3 \"is an urgent message for ALL Rescues to return to service\" and is reserved for when \"there are less than three Rescues available in the entire city.\"",
+     "opts": [
+      "All Rescues return to service ASAP; fewer than 3 available citywide",
+      "A Rescue shortage in one area of the city, such as North or West",
+      "Fewer than five Rescues available; expedite turnarounds only",
+      "Private ambulances now handle all BLS transports"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Per M.P. 205.04, Rescue Status 2 means a shortage in a particular area. Which area is defined as 'Central'?",
+     "a": "I-17 to 24th St, Bethany to I-10.",
+     "why": "M.P. 205.04: Central is \"I-17 to 24th St, Bethany to I-10\"; North is north of Bethany, South is south of I-10, West is west of I-17, East is east of 24th St.",
+     "opts": [
+      "I-17 to 24th St, Bethany to I-10",
+      "I-17 to 16th St, Northern to I-10",
+      "7th Ave to 24th St, Bethany to Buckeye",
+      "I-10 to 24th St, Camelback to I-17"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Per M.P. 205.04, how many Rescues may be out of service at one time for scheduled activities like P.M., training or physicals?",
+     "a": "Two.",
+     "why": "M.P. 205.04: \"Only two Rescues will be allowed out-of-service at one time for scheduled activities.\" P.M.s should avoid 0700–0900 and 1500–1800.",
+     "opts": [
+      "Two",
+      "One",
+      "Three",
+      "Four"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Your Rescue is leaving a hospital and Channel 1 tells you to take a new call. Per M.P. 205.04, what do you do first?",
+     "a": "Go available (AOR) from the previous call, then add unit (AU) to the new call once actually responding.",
+     "why": "M.P. 205.04: The Rescue \"must first go available (AOR) from any previous call and add unit (AU) to the new call... DO NOT ADD YOURSELF TO THE CALL UNTIL ACTUALLY RESPONDING.\"",
+     "opts": [
+      "Go AOR from the prior call, then AU when actually responding",
+      "AU to the new call right away, then clear the old call later",
+      "Ask the TRO to transfer your unit; no MCT entry is needed",
+      "Go AIQ, then wait for Dispatch to re-dispatch you"
+     ],
+     "src": "M.P. 205.04"
+    },
+    {
+     "q": "Per M.P. 205.04A, a patient has an uncontrollable airway problem. The closest appropriate ED is on diversion. Where does the patient go?",
+     "a": "To the closest appropriate facility regardless of hospital status.",
+     "why": "M.P. 205.04A: Patients with \"uncontrollable medical problems shall be accepted by the closest appropriate facility regardless of hospital status.\"",
+     "opts": [
+      "Closest appropriate facility, regardless of diversion",
+      "The nearest hospital that is open",
+      "Whichever open hospital on-line medical control directs",
+      "The nearest Level 1 trauma center"
+     ],
+     "src": "M.P. 205.04A"
+    },
+    {
+     "q": "Per M.P. 205.04A, which is NOT an acceptable reason for a hospital to go on pre-hospital diversion?",
+     "a": "Saturation of critical care or medical beds alone.",
+     "why": "M.P. 205.04A: \"At no time will saturation of critical care or medical beds alone be used as a reason to initiate pre-hospital diversion.\"",
+     "opts": [
+      "Critical care or medical beds full, by itself",
+      "Emergency department saturation",
+      "Trauma service saturation",
+      "Internal disaster such as a power outage"
+     ],
+     "src": "M.P. 205.04A"
+    },
+    {
+     "q": "Per M.P. 205.04A, what defines an 'uncontrollable medical problem' in a non-traumatic patient?",
+     "a": "Inability to provide an adequate airway or ventilation, or no palpable pulse.",
+     "why": "M.P. 205.04A: Uncontrollable medical problems are \"the inability to provide an adequate airway or ventilation, lack of a palpable pulse, in the non-traumatic patient.\"",
+     "opts": [
+      "No adequate airway or ventilation, or no palpable pulse",
+      "Systolic pressure under 90 with altered mentation",
+      "Any patient a paramedic rates as critical",
+      "Uncontrolled bleeding with signs of shock"
+     ],
+     "src": "M.P. 205.04A"
+    },
+    {
+     "q": "Per M.P. 205.04A, after a hospital notifies Dispatch of diversion, when does Dispatch follow up to reconfirm status?",
+     "a": "In three hours.",
+     "why": "M.P. 205.04A: The dispatcher will \"follow-up with the affected hospital in three hours to reconfirm the status.\"",
+     "opts": [
+      "Three hours",
+      "One hour",
+      "Six hours",
+      "At shift change"
+     ],
+     "src": "M.P. 205.04A"
+    },
+    {
+     "q": "Many valley hospitals are on diversion at once (system overload). Per M.P. 205.04A, what happens?",
+     "a": "All facilities must open; the EMS system may then be operating in a disaster mode.",
+     "why": "M.P. 205.04A: \"When the entire system is overloaded (many facilities on diversion), all facilities must open.\"",
+     "opts": [
+      "All facilities must open; system may be in disaster mode",
+      "Patients go to the least busy hospital in the region by rotation",
+      "Dispatch assigns hospitals by rotation",
+      "Only Level 1 trauma centers stay closed"
+     ],
+     "src": "M.P. 205.04A"
+    },
+    {
+     "q": "Per M.P. 205.05, what is the difference between a 'prisoner' and an 'inmate'?",
+     "a": "An inmate has been accepted into an MCSO jail and is in MCSO custody; a prisoner is still in the arresting agency's custody.",
+     "why": "M.P. 205.05: A prisoner remains \"in the custody of the arresting agency until accepted for confinement\"; once accepted, the inmate \"is now in the custody of MCSO.\"",
+     "opts": [
+      "Inmate: accepted by MCSO; prisoner: still with arresting agency",
+      "Prisoner: accepted by MCSO; inmate: still with arresting agency",
+      "Inmate: sentenced by a court; prisoner: awaiting trial",
+      "No difference; the terms are used the same way"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05, what makes up a Jail Assignment?",
+     "a": "An ALS fire company, a Rescue, and a Battalion Chief.",
+     "why": "M.P. 205.05: \"A Jail Assignment is an ALS fire company, Rescue, and a Battalion Chief.\"",
+     "opts": [
+      "ALS fire company, Rescue and a Battalion Chief",
+      "Two ALS engines and a Rescue",
+      "ALS engine, ladder and a Rescue",
+      "BLS engine, Rescue and a Safety Officer"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "You're dispatched to an MCSO jail. Per M.P. 205.05, when is the call upgraded to a Jail Assignment?",
+     "a": "When information consistently indicates the patient is in the High-Risk area.",
+     "why": "M.P. 205.05: \"If information on patient location consistently indicates patient is located in the High-Risk area, incident will be upgraded to a Jail Assignment.\"",
+     "opts": [
+      "When the patient is consistently reported in the High-Risk area",
+      "Whenever the patient is an inmate rather than a prisoner of the arresting agency",
+      "When the patient is in the Medium-Risk medical area",
+      "Whenever CHS nurses have already started treatment"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05, how is the Medium-Risk area defined at an MCSO jail?",
+     "a": "Inside any secured area, up to and including the predetermined medical evaluation areas.",
+     "why": "M.P. 205.05: Medium-Risk is \"the area inside any secured area, up to and including predetermined medical evaluation areas\" agreed on by MCSO and PFD.",
+     "opts": [
+      "Inside secured areas, up to the predetermined medical areas",
+      "Outside secured areas with reliable radio communication",
+      "Any area beyond the medical areas or with lost comms",
+      "Only the ITR booking area and the Sally Port"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Your crew is working inside a jail and loses radio communication. Per M.P. 205.05, what must the Company Officer do?",
+     "a": "Re-evaluate using the PFD risk management plan; a change of strategy and removal of crews may be required.",
+     "why": "M.P. 205.05: \"When communications are lost, the Company Officer must re-evaluate the incident utilizing the PFD risk management plan\"; removal from the hazard area may be required.",
+     "opts": [
+      "Re-evaluate with the risk plan; may change strategy and withdraw",
+      "Continue patient care and rely on the MCSO escort's radio",
+      "Request a second alarm and hold your position until communications return",
+      "Send one firefighter out to relay messages to FAHQ"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05, before entering the High-Risk area, which benchmarks must be announced?",
+     "a": "Entering High-Risk area, patient contact, patient extricated, and PAR on crews.",
+     "why": "M.P. 205.05: Benchmarks are \"Entering High-Risk area,\" \"Patient contact,\" \"Patient extricated\" and \"PAR on crews.\"",
+     "opts": [
+      "Entering High-Risk, patient contact, patient extricated, PAR",
+      "At sally port, at medical unit, patient loaded, leaving jail",
+      "Escort assigned, doors secured, patient contact, PAR",
+      "On scene, patient contact, transport started, available"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05, which hospital should generally get first consideration for a patient in MCSO or law enforcement custody?",
+     "a": "Valleywise Health Medical Center (County Hospital).",
+     "why": "M.P. 205.05: \"In most cases, Valleywise Health Medical Center (County Hospital/CH) should get first consideration\" for patients in MCSO or other law enforcement custody.",
+     "opts": [
+      "Valleywise Health Medical Center (County Hospital)",
+      "The closest Level 1 trauma center",
+      "The hospital CHS's Provider selects",
+      "The nearest open emergency department not on diversion"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "An arresting agency declines to ride with a prisoner who now needs transport and you feel the person is a safety threat. Per M.P. 205.05, what do you do?",
+     "a": "Explain the concern and ask the arresting officer, as a professional courtesy, to ride along; if unwilling, request appropriate law enforcement.",
+     "why": "M.P. 205.05: Medical personnel \"should explain this to the arresting agency and request, as a professional courtesy, for the arresting officer to accompany them\"; if unwilling, request appropriate law enforcement.",
+     "opts": [
+      "Ask the officer to ride along; if refused, request law enforcement",
+      "Refuse transport until MCSO formally accepts custody of the prisoner",
+      "Transport anyway with the patient restrained by fire crews",
+      "Have CHS nurses accompany the patient in the Rescue"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05, after a jail response where a matter of concern arises, what does the crew complete?",
+     "a": "An Issue Tracker form, used by the Problem Resolution Team for quality review.",
+     "why": "M.P. 205.05: \"An Issue Tracker form shall be completed by the responding crew\" and used for quality review by the Problem Resolution Team.",
+     "opts": [
+      "An Issue Tracker form for the Problem Resolution Team",
+      "An MCSO incident report through the jail Sergeant",
+      "A Safety Sector report to the Battalion Chief only",
+      "An exposure form sent to Correctional Health Services"
+     ],
+     "src": "M.P. 205.05"
+    },
+    {
+     "q": "Per M.P. 205.05A, who normally assumes the role of Deployment Sector Officer?",
+     "a": "The Captain in the Dispatch Center (the Dispatch and Deployment Supervisor in the Captain's absence).",
+     "why": "M.P. 205.05A: \"The Captain in the Dispatch Center will assume the role of Deployment Sector Officer. In the Captain's absence, the Dispatch and Deployment Supervisor will assume this role.\"",
+     "opts": [
+      "The Captain in the Dispatch Center",
+      "The Planning Section Chief at the scene",
+      "The on-duty Shift Commander",
+      "The first-due Battalion Chief"
+     ],
+     "src": "M.P. 205.05A"
+    },
+    {
+     "q": "Per M.P. 205.05A, how does the Deployment Sector communicate with the Planning Section?",
+     "a": "By telephone, not a tactical radio channel.",
+     "why": "M.P. 205.05A: \"Unlike most sectors, this sector will communicate directly with Planning via telephone rather than a tactical radio channel.\"",
+     "opts": [
+      "By telephone instead of a tactical channel",
+      "On a dedicated tactical radio channel",
+      "Through the Command Post by MCT message on the incident",
+      "Through the Staging Sector Officer"
+     ],
+     "src": "M.P. 205.05A"
+    },
+    {
+     "q": "Per M.P. 205.05A, which is a responsibility of the Deployment Sector?",
+     "a": "Maintaining adequate Regional coverage throughout the incident.",
+     "why": "M.P. 205.05A: Responsibilities include \"Maintain adequate Regional coverage throughout the incident,\" assuring enough tactical channels, and re-evaluating emergency callback.",
+     "opts": [
+      "Maintaining adequate Regional coverage during the incident",
+      "Assigning staged companies to sectors on scene for Command",
+      "Approving the Incident Action Plan for the IC",
+      "Tracking crew PARs on the fireground"
+     ],
+     "src": "M.P. 205.05A"
+    },
+    {
+     "q": "Dispatch is building an overhaul rotation list after a large fire. Per M.P. 205.05B, which companies should be chosen?",
+     "a": "Those with the least activity that day, after checking unit histories.",
+     "why": "M.P. 205.05B: \"Unit histories should be checked for the day and companies that have had the least amount of activity should be selected.\"",
+     "opts": [
+      "Least active companies of the day, per unit histories",
+      "Companies that worked the fire and know the building",
+      "Companies closest to the incident, regardless of activity",
+      "Multiple units from the same area to keep crews together"
+     ],
+     "src": "M.P. 205.05B"
+    },
+    {
+     "q": "Per M.P. 205.05B, should a company that worked a substantial time at the fire be put on the overhaul rotation list?",
+     "a": "No, it should not be placed on the rotation list.",
+     "why": "M.P. 205.05B: \"Any company that participated for a substantial period of time at the incident should not be placed on the rotation list.\"",
+     "opts": [
+      "No, it should not be on the rotation list",
+      "Yes, it should take the first rotation",
+      "Yes, but only if the IC requests it by name",
+      "Only if it has been out of service less than 4 hours"
+     ],
+     "src": "M.P. 205.05B"
+    },
+    {
+     "q": "An outlying company is selected for overhaul rotation. Per M.P. 205.05B, who should cover its area?",
+     "a": "An adaptive response unit not used on the incident.",
+     "why": "M.P. 205.05B: \"When an outlying company is selected for rotation, an adaptive response unit not used on the incident should cover for that company.\"",
+     "opts": [
+      "An adaptive response unit not used on the incident",
+      "The company being relieved from the fire, once it is back in service",
+      "A reserve engine staffed on callback",
+      "The neighboring first-due company"
+     ],
+     "src": "M.P. 205.05B"
+    },
+    {
+     "q": "Per M.P. 205.05B, what must advance notice to rotation companies include, when possible?",
+     "a": "Time to respond, duration of the assignment, and who their relief will be.",
+     "why": "M.P. 205.05B: \"Notification will include the time to respond, the duration of their assignment and who their relief will be.\"",
+     "opts": [
+      "Time to respond, assignment length, and their relief",
+      "The IC's name, tactical channel, and staging location",
+      "Equipment list, fire cause, and the overhaul sector",
+      "Only the time to respond; details come on scene"
+     ],
+     "src": "M.P. 205.05B"
+    }
+   ]
+  },
+  {
+   "title": "Vol II: Dispatch, Staging & Driving (205.02–205.11) (Part 2)",
+   "sub": "Staging Sector, apparatus placement, safe parking in traffic, Code 3 driving, spotting, escorts, adaptive response, ladder and water tenders.",
+   "concepts": [
+    "<b>205.06A</b>: No designated Staging Officer: the first company to staging takes it (a ladder hands off to an engine officer).",
+    "<b>205.07</b>: Later companies stage at least one block short; apparatus at least 30 ft from involved buildings.",
+    "<b>205.07A</b>: Angle 45 degrees, pump panel downstream; nighttime headlights off; cones 65/105/160 ft at 25/40/60 mph.",
+    "<b>205.08</b>: Code 3 max 10 mph over posted, 20 mph in center/oncoming lanes with a full stop at every controlled intersection.",
+    "<b>205.08A</b>: Primary spotter at left rear, 10–15 ft back; lose sight of the spotter and you stop.",
+    "<b>205.08B</b>: The on-scene Company Officer makes the final escort decision; escorts wear seat belts.",
+    "<b>205.09</b>: ARU move-ups are normally Code 2, out of service responding, monitoring Channel One.",
+    "<b>205.10/205.11</b>: Full crew on the Ladder Truck for 3-1 or greater; water tenders go with the engine, never Code 3."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 205.06A, which incidents should use Level II staging?",
+     "a": "All greater alarm incidents, first alarm medical or hazmat incidents, or whenever Command wants to centralize resources.",
+     "why": "M.P. 205.06A: Level II \"should be utilized for all greater alarm incidents, first alarm medical or hazardous materials incidents,\" or when Command wants to centralize resources.",
+     "opts": [
+      "Greater alarms, 1st alarm medical or hazmat, or as Command wants",
+      "Only greater alarm structure fires of 3 alarms or more",
+      "Every first alarm assignment, including routine single-family fires",
+      "Only incidents where a Logistics Section is in place"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Level II staging is set up but Command didn't name a Staging Officer. Per M.P. 205.06A, who becomes the Staging Officer?",
+     "a": "The first company to arrive at the designated staging location.",
+     "why": "M.P. 205.06A: \"Where an officer is not designated, the first company to arrive at the designated staging location will automatically become the staging officer.\"",
+     "opts": [
+      "The first company to arrive at the staging location",
+      "The last-due engine company on the assignment",
+      "The first Battalion Chief to arrive on scene",
+      "The company closest to the Command Post"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Your ladder company is first into Level II staging. Per M.P. 205.06A, what happens to the Staging Sector job?",
+     "a": "You take it, then transfer it to an engine company officer when one arrives.",
+     "why": "M.P. 205.06A: \"Where the first company to staging is a ladder company, Staging Sector responsibilities should be transferred to an engine company officer upon his arrival.\"",
+     "opts": [
+      "Transfer it to an engine company officer when one arrives",
+      "Keep it for the rest of the incident",
+      "Transfer it to the first Rescue or Battalion Chief that arrives",
+      "Decline it; ladders cannot be Staging Sector"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Per M.P. 205.06A, how does the Staging Officer make the position visible to incoming companies?",
+     "a": "Leaves the red lights on their apparatus operating and wears a sector vest.",
+     "why": "M.P. 205.06A: Visibility is accomplished \"by leaving the red lights operating on the staging officers apparatus and by wearing a sector vest.\"",
+     "opts": [
+      "Red lights left on the apparatus and a sector vest",
+      "Amber lights only and a reflective traffic vest",
+      "A cone and flare marker at the staging entrance",
+      "Headlights off and the scene lights aimed at the lot"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Per M.P. 205.06A, how should apparatus be organized in the staging area?",
+     "a": "Ladders in one area, engines in another, and rescues in another, with adequate space between them.",
+     "why": "M.P. 205.06A: \"Ladders companies should be placed in one area, engines in another, and rescues in another area,\" with adequate space for movement.",
+     "opts": [
+      "Ladders, engines and rescues each grouped in their own area",
+      "In order of arrival, in a single line for quick exit",
+      "By home battalion, so crews stay together",
+      "Rescues closest to the scene exit, all other apparatus mixed in behind"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Command needs only extra staff and some special equipment at the scene. Per M.P. 205.06A, what should Staging do?",
+     "a": "Set up a 'taxi' service, using a single company to deliver multiple crews or equipment.",
+     "why": "M.P. 205.06A: Staging \"should arrange a 'taxi' service using a single company to deliver multiple crews or specialized equipment to the scene\" to minimize congestion.",
+     "opts": [
+      "Use one company as a 'taxi' for crews and equipment",
+      "Send each staff member's own vehicle to the scene",
+      "Send the equipment's home company with its apparatus",
+      "Ask Logistics to set up a second staging area"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "During a major incident with a Logistics Section in place, per M.P. 205.06A, who does the Staging Sector work under?",
+     "a": "The Logistics Officer.",
+     "why": "M.P. 205.06A: \"During major incidents where a 'Logistics' Section is implemented, the Staging Sector will be working under the direction of the Logistics Officer.\"",
+     "opts": [
+      "The Logistics Officer",
+      "The Planning Section Chief",
+      "The Deployment Sector Officer",
+      "The Safety Officer"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "Staging assigns your company to a sector. Per M.P. 205.06A, what do you do with the MCT?",
+     "a": "Activate the MCT \"on-scene\" button.",
+     "why": "M.P. 205.06A: \"When assigned to incident site duties, companies will activate their MCT 'on-scene' button.\"",
+     "opts": [
+      "Press the MCT on-scene button",
+      "Press the MCT available button",
+      "Leave the MCT in staged status",
+      "Press the MCT responding button"
+     ],
+     "src": "M.P. 205.06A"
+    },
+    {
+     "q": "You're the third engine arriving at a working house fire. Per M.P. 205.07, where should you go if not given an assignment?",
+     "a": "Stage at least one block short of the fire area, uncommitted until Command orders you in.",
+     "why": "M.P. 205.07: \"Later arriving companies should stage a minimum of one block short of the immediate fire area, and remain uncommitted until ordered into action by Command.\"",
+     "opts": [
+      "At least one block short, uncommitted, until Command assigns you",
+      "Pull in right behind the first engine to back up its attack lines",
+      "Go to the nearest hydrant and lay a supply line in",
+      "Report to Level II staging two blocks away"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Per M.P. 205.07, how far from an involved building should apparatus generally be positioned, even with nothing showing?",
+     "a": "At least 30 feet, with greater distances indicated in many situations.",
+     "why": "M.P. 205.07: \"Apparatus should generally be positioned at least 30 ft. away from involved buildings, even with nothing showing.\"",
+     "opts": [
+      "At least 30 feet",
+      "At least 15 feet",
+      "At least 50 feet",
+      "At least 100 feet"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Fire is threatening your parked engine. Per M.P. 205.07, what do you do while you reposition it?",
+     "a": "Activate the engine sprinkler system and operate hoselines between it and the fire.",
+     "why": "M.P. 205.07: \"Activate engine sprinkler system and operate hoselines between it and the fire while you reposition it,\" then move it to a safe position.",
+     "opts": [
+      "Activate the engine sprinkler and put hoselines between it and fire",
+      "Shut down the pump and move it before charging any lines",
+      "Leave it in place; moving apparatus mid-fire is dysfunctional",
+      "Wrap the cab in a salvage cover and request a new engine"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Per M.P. 205.07, what is the minimum water supply for an engine in a key tactical position?",
+     "a": "At least one pumped line from an engine on a hydrant (two when high volume is indicated).",
+     "why": "M.P. 205.07: \"The water supply should be at least one pumped line from an engine on a hydrant. When high volume is indicated, two pumped supply lines should be provided.\"",
+     "opts": [
+      "One pumped line from an engine on a hydrant",
+      "Its own tank water until a second alarm arrives",
+      "Two unpumped lines from the closest hydrant",
+      "One forward lay from a hydrant, no pumper needed"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "You need more handlines at a fire. Per M.P. 205.07, what should you do instead of 'daisy chain' supply connections?",
+     "a": "Connect the extra lines to pumpers that already have a good supply line.",
+     "why": "M.P. 205.07: \"Connect extra lines to pumpers which already have a good supply line instead of making 'daisy chain' supply line connections.\"",
+     "opts": [
+      "Connect to pumpers already on a good supply line",
+      "Bring in another engine to a distant hydrant",
+      "Have each new engine lay its own supply line",
+      "Relay pump through two engines in series"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Per M.P. 205.07, when the aerial is not needed for upper access or rescue, how should the ladder be spotted?",
+     "a": "In a position for effective elevated stream operation if the fire goes defensive.",
+     "why": "M.P. 205.07: Spot the ladder \"in a position that would provide an effective position for elevated stream operation if the fire goes to a defensive mode.\"",
+     "opts": [
+      "Where it can run an elevated stream if the fire goes defensive",
+      "Out of the way at least one block from the fire",
+      "Next to the Command vehicle for visibility",
+      "Directly behind the first engine so it can share that engine's water supply"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Per M.P. 205.07, where do staff vehicles go on the fireground?",
+     "a": "To Level II staging, unless the staff person has a pre-designated job such as Safety Sector.",
+     "why": "M.P. 205.07: \"Staff vehicle placement should go to Level II staging unless that staff person has a pre-designated responsibility (i.e., Safety Sector).\"",
+     "opts": [
+      "Level II staging, unless pre-assigned such as Safety Sector",
+      "Next to the Command vehicle at the Command Post",
+      "Anywhere close to the fire that does not block the center access lane",
+      "Level I staging one block short of the fire"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "Per M.P. 205.07, which positions should you beware of for fire apparatus?",
+     "a": "Places with only one way in and out, such as yards, alleys and driveways.",
+     "why": "M.P. 205.07: \"Beware of putting fire apparatus in places where it cannot be repositioned easily and quickly--particularly operating positions with only one way in and out.\"",
+     "opts": [
+      "Spots with one way in and out, like yards and alleys",
+      "Positions on the same side of the street as the hydrant",
+      "Spots with clear views of two sides of the building",
+      "Positions at corners that cover two sides of the fire"
+     ],
+     "src": "M.P. 205.07"
+    },
+    {
+     "q": "You pull up to a car crash on a city street. Per M.P. 205.07A, how should the engine be angled where possible?",
+     "a": "At 45 degrees away from the curbside, to direct motorists around the scene.",
+     "why": "M.P. 205.07A: \"Where possible, angle apparatus at 45 degrees away from curbside. This will direct motorist around the scene.\"",
+     "opts": [
+      "45 degrees away from the curbside",
+      "90 degrees across all lanes of traffic",
+      "Parallel to the curb, in front of the scene",
+      "30 degrees toward the curbside"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "Per M.P. 205.07A, when a first-arriving engine may need a charged line at a roadway scene, where should the pump panel be?",
+     "a": "Downstream, on the side opposite oncoming traffic.",
+     "why": "M.P. 205.07A: \"Angle the engine so that the pump panel is 'downstream,' on the opposite side of on-coming traffic. This will protect the pump operator.\"",
+     "opts": [
+      "Downstream, away from oncoming traffic",
+      "Upstream, facing oncoming traffic",
+      "Toward the curb, whatever the traffic flow",
+      "Toward the center median"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "It's 0200 and you're blocking at a roadway crash. Per M.P. 205.07A, what lighting should the apparatus use?",
+     "a": "Headlights OFF; reduce other emergency lighting to yellow lights and flashers where possible.",
+     "why": "M.P. 205.07A: \"For NIGHTTIME operations, turn OFF fire apparatus headlights.\" Other lighting \"should be reduced to yellow lights and emergency flashers where possible.\"",
+     "opts": [
+      "Headlights off; reduce to yellow lights and flashers",
+      "All emergency lights and headlights on full",
+      "Headlights on high beam aimed at oncoming traffic",
+      "All lights off except the scene floodlights"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "On a 40 mph street, per M.P. 205.07A, where should traffic cones and flares start?",
+     "a": "About 105 feet.",
+     "why": "M.P. 205.07A: Recommended starting distances are 25 mph – 65 ft, 40 mph – 105 ft, 60 mph – 160 ft.",
+     "opts": [
+      "105 feet",
+      "65 feet",
+      "160 feet",
+      "200 feet"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "You're on a freeway crash. Per M.P. 205.07A, about how far upstream should the last traffic cone be?",
+     "a": "About 160 feet upstream.",
+     "why": "M.P. 205.07A: On freeways cones are placed farther apart, \"with the last cone approximately 160 feet 'upstream.'\"",
+     "opts": [
+      "About 160 feet",
+      "About 105 feet",
+      "About 65 feet",
+      "About 300 feet"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "Per M.P. 205.07A, how should you place and retrieve traffic cones?",
+     "a": "While facing oncoming traffic.",
+     "why": "M.P. 205.07A: \"Always place and retrieve cones while facing on-coming traffic.\"",
+     "opts": [
+      "Facing oncoming traffic",
+      "With your back to oncoming traffic",
+      "Only from inside the blocked lane",
+      "Only after police have stopped traffic"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "At a freeway incident, per M.P. 205.07A, how are Rescues brought into the scene?",
+     "a": "One or two at a time, possibly staged off the freeway, into a safe loading area.",
+     "why": "M.P. 205.07A: \"Staging of Rescue companies off the freeway may be required. Rescues should be brought into the scene one or two at a time.\"",
+     "opts": [
+      "One or two at a time to a safe loading area",
+      "All at once so patients can be loaded quickly",
+      "Only after DPS shuts down the freeway",
+      "Directly behind the blocking engine, upstream"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "Per M.P. 205.07A, who must direct the parking of later-arriving apparatus at a roadway scene?",
+     "a": "The initial company officer (or Command), acting as initial safety officer.",
+     "why": "M.P. 205.07A: \"The initial company officer (or Command) must assess the parking needs of later-arriving fire apparatus and specifically direct the parking.\"",
+     "opts": [
+      "The initial company officer or Command",
+      "Each later-arriving company officer for themselves",
+      "The first police officer on scene",
+      "The first-arriving Rescue's crew"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "At a residential medical call, per M.P. 205.07A, where should the Rescue park for loading when possible?",
+     "a": "In the driveway.",
+     "why": "M.P. 205.07A: \"At residential medical emergencies, park Rescue in driveways for safe loading where possible.\"",
+     "opts": [
+      "In the driveway",
+      "In the street behind the engine",
+      "Across the street, facing out",
+      "Upstream of the engine as a blocker"
+     ],
+     "src": "M.P. 205.07A"
+    },
+    {
+     "q": "You're driving E1 Code 3 with traffic on a 40 mph road. Per M.P. 205.08, what is your maximum speed?",
+     "a": "50 mph (10 mph over the posted limit).",
+     "why": "M.P. 205.08: Code 3 standards allow a \"maximum of 10 mph over the posted speed limit.\"",
+     "opts": [
+      "50 mph",
+      "45 mph",
+      "55 mph",
+      "60 mph"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "You're driving Code 3 in the oncoming lane to get around stopped traffic. Per M.P. 205.08, what is the maximum speed?",
+     "a": "20 mph.",
+     "why": "M.P. 205.08: \"A maximum of 20 mph when traveling in center or oncoming traffic lanes,\" recognizing a brief deceleration period.",
+     "opts": [
+      "20 mph",
+      "15 mph",
+      "25 mph",
+      "10 mph over posted"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Code 3 in the center lane, you approach an intersection with a green light. Per M.P. 205.08, what do you do?",
+     "a": "Come to a complete stop before proceeding, even on a green light.",
+     "why": "M.P. 205.08: In center or oncoming lanes, \"complete a stop at all stop signs and traffic lights regardless of the color of the light.\"",
+     "opts": [
+      "Complete stop, even with the green light",
+      "Slow to 20 mph and proceed on the green",
+      "Proceed at the posted limit on the green",
+      "Slow down and proceed if the co-driver says clear"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "You're Code 3 and use a left-turn lane to get past traffic. Per M.P. 205.08, when may you go without stopping?",
+     "a": "Only when turning left under a protected green arrow.",
+     "why": "M.P. 205.08: A left-turn lane is treated as an oncoming lane; \"the only exception is when the left-hand turn lane is being used to execute a left turn under a protected green arrow.\"",
+     "opts": [
+      "Only when turning left on a protected green arrow",
+      "Whenever the main signal ahead is green",
+      "Whenever no vehicles are already in the turn lane",
+      "Never; you must always stop in a left-turn lane"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Code 3, you come up on a school bus with its stop sign out. Per M.P. 205.08, what do you do?",
+     "a": "Stop completely and wait until the sign is retracted and the driver and co-driver confirm pedestrians are clear.",
+     "why": "M.P. 205.08: Stop and \"not proceed until the stop sign is fully retracted or removed and all pedestrian traffic is confirmed clear by both the Driver and Co-driver.\"",
+     "opts": [
+      "Stop; wait for sign retracted and both confirm peds clear",
+      "Slow to 10 mph and pass with lights and siren on",
+      "Stop, then pass once the bus driver waves you on",
+      "Pass at or below the posted speed if no children are visible near the bus"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Per M.P. 205.08, at a Code 3 stop, who announces 'clear' and who makes the final decision to proceed?",
+     "a": "The co-driver announces clear or not clear; the driver makes the final decision.",
+     "why": "M.P. 205.08: \"The Co-driver shall announce if it is clear or not clear to proceed. The Driver makes the final decision of when it is clear to proceed.\"",
+     "opts": [
+      "Co-driver announces clear; driver makes the final call",
+      "Driver announces clear; Company Officer gives the go",
+      "Co-driver announces clear and makes the final call",
+      "Driver decides alone; co-driver watches the MCT"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Per M.P. 205.08, if no response code is designated on the MCT, how do you respond?",
+     "a": "Code 2, unless directed otherwise by a Company Officer.",
+     "why": "M.P. 205.08: \"If no response code is designated, the response will be Code 2 unless directed by a Company Officer.\"",
+     "opts": [
+      "Code 2 unless a Company Officer directs otherwise",
+      "Code 3 until the Alarm Room says otherwise",
+      "Code 3 for ALS calls and Code 2 for BLS calls",
+      "Hold in quarters until the Alarm Room assigns one"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Per M.P. 205.08, which apparatus is not permitted to respond Code 3 at all?",
+     "a": "Water Tenders.",
+     "why": "M.P. 205.08: \"Water Tenders are not permitted to respond Code 3.\"",
+     "opts": [
+      "Water Tenders",
+      "Ladder Tenders",
+      "Rescues on BLS calls",
+      "Utility units"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "Per M.P. 205.08, which is an example of a MAJOR policy deviation that goes through the disciplinary process?",
+     "a": "Going through a controlled intersection without stopping when required, or exceeding allowed speed by 10 mph or more.",
+     "why": "M.P. 205.08: Momentarily exceeding max speed by \"5 mph or less\" is minor; going through a controlled intersection without stopping or exceeding \"by 10 mph or more\" is major.",
+     "opts": [
+      "Running a required stop, or 10+ mph over the allowed speed",
+      "Momentarily exceeding the allowed speed by 5 mph or less",
+      "Not pressing the MCT response code button",
+      "Using Code 3 in an active school zone"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "During a transport, your patient's condition requires you to unbuckle for critical treatment. Per M.P. 205.08, what's the first choice?",
+     "a": "Tell the driver, who pulls over when possible so you can treat, then re-buckle before continuing.",
+     "why": "M.P. 205.08: \"The Driver will be notified of the needed treatment and will pull over when possible.\" Treating unbelted while moving is for life-threatening needs.",
+     "opts": [
+      "Tell the driver to pull over when possible, then treat",
+      "Unbuckle and treat right away; the driver does not need to be told",
+      "Wait until arrival at the hospital to treat",
+      "Have the driver go Code 3 so you arrive sooner"
+     ],
+     "src": "M.P. 205.08"
+    },
+    {
+     "q": "You need to back the engine into quarters. Per M.P. 205.08A, where is the primary spotter usually located?",
+     "a": "At the left rear corner of the apparatus.",
+     "why": "M.P. 205.08A: \"The primary spotter is usually located at the left rear corner of the apparatus,\" though position follows the agreed backing plan.",
+     "opts": [
+      "Left rear corner",
+      "Right rear corner",
+      "Directly behind the center of the rig",
+      "Beside the driver's door"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "Per M.P. 205.08A, how far behind the apparatus should rear spotters stay?",
+     "a": "About 10–15 feet, where they can see the driver's eyes in the side mirror.",
+     "why": "M.P. 205.08A: \"Rear spotters will remain a reasonably safe distance (10-15 feet) behind the apparatus and be in position to visualize the driver's eyes in the side mirror.\"",
+     "opts": [
+      "10–15 feet",
+      "3–5 feet",
+      "20–25 feet",
+      "30 feet or more"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "You're the only person on the apparatus and must back up. Per M.P. 205.08A, what do you do if no one is available to spot?",
+     "a": "Get out and make a complete 360-degree survey around the apparatus first.",
+     "why": "M.P. 205.08A: Where no personnel are available, \"the driver shall get out of the apparatus and make a complete 360-degree survey of the area around the apparatus.\"",
+     "opts": [
+      "Get out and do a full 360-degree walk-around",
+      "Back slowly using mirrors and the backup camera",
+      "Ask a bystander to spot and use hand signals",
+      "Back only with emergency lights and horn on"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "While backing, the driver loses sight of the primary spotter. Per M.P. 205.08A, what must happen?",
+     "a": "Stop immediately until the spotter is visible again and the go-ahead is given.",
+     "why": "M.P. 205.08A: \"Anytime the driver loses sight of the primary spotter, the apparatus shall be stopped immediately until the spotter is visible.\"",
+     "opts": [
+      "Stop at once until the spotter is visible and gives the go",
+      "Keep backing slowly while watching the other mirror for the spotter",
+      "Sound the horn and continue if the radio is quiet",
+      "Watch the second spotter and keep going"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "Per M.P. 205.08A, what is the STOP signal for a spotter?",
+     "a": "Both arms crossed with hands making a fist, while yelling the stop order loud enough to hear.",
+     "why": "M.P. 205.08A: STOP is \"both arms crossed with hands making a fist. Be sure to yell the stop order loud enough that the engineer/driver can hear.\"",
+     "opts": [
+      "Arms crossed with fists, and yell stop",
+      "Both palms facing the driver, held still",
+      "One fist raised straight overhead",
+      "Arms out wide, then brought together"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "Backing at night, per M.P. 205.08A, how should spotters signal the driver?",
+     "a": "With hand signals lit by the apparatus floodlights; never with flashlights.",
+     "why": "M.P. 205.08A: Floodlights should light objects and the spotter's location; \"the spotters should never use flashlights to signal the driver.\"",
+     "opts": [
+      "Hand signals lit by the floodlights; no flashlights",
+      "With flashlights aimed at the driver's mirror",
+      "By portable radio only, with lights off",
+      "With light sticks waved in the agreed direction"
+     ],
+     "src": "M.P. 205.08A"
+    },
+    {
+     "q": "Per M.P. 205.08B, who makes the final decision on whether an escort rides with the patient in the Rescue?",
+     "a": "The Company Officer on scene.",
+     "why": "M.P. 205.08B: Rescue crews discuss the considerations with the on-scene officer, and \"the Company Officer on scene will make the final decision.\"",
+     "opts": [
+      "The Company Officer on scene",
+      "The Rescue's lead paramedic attendant",
+      "The Rescue's driver",
+      "On-line medical control"
+     ],
+     "src": "M.P. 205.08B"
+    },
+    {
+     "q": "A family member wants to ride along but smells strongly of alcohol and is agitated. Per M.P. 205.08B, what's the right call?",
+     "a": "Escort is not advised (possible physical danger); offer other transportation options.",
+     "why": "M.P. 205.08B: Signs of \"behavioral stress, or possible alcohol or drug intoxication\" are reasons to refuse; provide info on taxis, private cars, buses, etc.",
+     "opts": [
+      "Refuse the escort and offer other transportation options",
+      "Allow it if they sit in the front cab with the driver",
+      "Allow it only if a police officer rides along too",
+      "Allow it; family escorts can't be refused"
+     ],
+     "src": "M.P. 205.08B"
+    },
+    {
+     "q": "Per M.P. 205.08B, who should NOT ride in a Rescue cab with airbags installed?",
+     "a": "Small adults or young children.",
+     "why": "M.P. 205.08B: \"Small adults or young children should not ride in any rescue cab with airbags installed.\" Seat belts are mandatory for escorts.",
+     "opts": [
+      "Small adults or young children",
+      "Pregnant escorts",
+      "Escorts over 65 years old",
+      "Anyone not related to the patient"
+     ],
+     "src": "M.P. 205.08B"
+    },
+    {
+     "q": "Per M.P. 205.08B, which is listed as a good reason to allow an escort?",
+     "a": "The escort can translate a second language (e.g., Spanish or ASL) to help patient care.",
+     "why": "M.P. 205.08B: Patient care examples include \"an escort who has the knowledge of a second language, i.e., Spanish, American Sign Language.\"",
+     "opts": [
+      "They can translate a second language for patient care",
+      "They want to save the cost of a taxi",
+      "They need a ride to the same hospital area",
+      "They want to watch and supervise the crew's treatment of the patient"
+     ],
+     "src": "M.P. 205.08B"
+    },
+    {
+     "q": "Per M.P. 205.09, how do Adaptive Response Units normally respond to a move-up assignment?",
+     "a": "Code 2, in an 'out of service' responding status while monitoring Channel One.",
+     "why": "M.P. 205.09: \"Move-ups will normally be under a non-emergency Code 2 status,\" in an \"out of service\" responding status while monitoring Channel One.",
+     "opts": [
+      "Code 2, out-of-service responding, monitoring Channel One",
+      "Code 3, in service and available for any call",
+      "Code 2, in service and available for all calls",
+      "Code 3 whenever the first-due unit is committed on a working fire"
+     ],
+     "src": "M.P. 205.09"
+    },
+    {
+     "q": "Per M.P. 205.09, who is responsible for managing adaptive response move-ups?",
+     "a": "The AHQ Chief, Alarm Room Supervisors and Lead Dispatchers.",
+     "why": "M.P. 205.09: \"The AHQ Chief, Alarm Room Supervisors, and Lead Dispatchers are responsible for management of adaptive response move-ups.\"",
+     "opts": [
+      "AHQ Chief, Alarm Room Supervisors and Lead Dispatchers",
+      "The field Battalion Chiefs in each affected area",
+      "The Shift Commander alone",
+      "The company officers of the covering units"
+     ],
+     "src": "M.P. 205.09"
+    },
+    {
+     "q": "Your ARU is covering another station and the covered company's activity has ended. Per M.P. 205.09, when do you leave?",
+     "a": "Stay in the move-up location (in service) until dispatched by alarm to return or move.",
+     "why": "M.P. 205.09: ARUs \"shall stay in their move-up location (in service) until assigned dispatched by alarm to return to their first due or another location.\"",
+     "opts": [
+      "Stay until alarm dispatches you back or elsewhere",
+      "Return to quarters once the covered company is back",
+      "Return after the 2-hour move-up time limit",
+      "Leave when your Company Officer decides coverage is done"
+     ],
+     "src": "M.P. 205.09"
+    },
+    {
+     "q": "Your ARU has a problem with a move-up. Per M.P. 205.09, who does the Company Officer take it to?",
+     "a": "Their BC (not AHQ); an Issue Tracker in EPCR is also an option.",
+     "why": "M.P. 205.09: Company Officers \"shall communicate any issues associated with BC and not AHQ\" and may submit an issue tracker in EPCR.",
+     "opts": [
+      "Their BC, not AHQ",
+      "The AHQ Supervisor directly",
+      "The Shift Commander directly",
+      "The Lead Dispatcher on Channel One"
+     ],
+     "src": "M.P. 205.09"
+    },
+    {
+     "q": "A move-up will send your company out of its city (e.g., into Glendale). Per M.P. 205.09, who should be notified?",
+     "a": "The appropriate Shift Commander.",
+     "why": "M.P. 205.09: \"When a move-up requires a company to leave their city (i.e.: Glendale), the appropriate Shift Commander should be notified.\"",
+     "opts": [
+      "The appropriate Shift Commander",
+      "The receiving city's Fire Chief",
+      "The Deployment Sector Officer",
+      "The Operations Chief"
+     ],
+     "src": "M.P. 205.09"
+    },
+    {
+     "q": "Your crew is in quarters when a 3-1 structure fire comes in. Per M.P. 205.10, which apparatus does the crew take?",
+     "a": "The Ladder Truck with a complete crew; the officer may also bring the Ladder Tender.",
+     "why": "M.P. 205.10: From quarters, \"a complete crew will respond on the Ladder Truck to all structural assignments of 3-1 or greater magnitude.\"",
+     "opts": [
+      "The Ladder Truck; the Ladder Tender may come too",
+      "The Ladder Tender, since it's faster to deploy",
+      "Whichever unit the driver is most familiar with",
+      "The Ladder Tender, with the truck special-called"
+     ],
+     "src": "M.P. 205.10"
+    },
+    {
+     "q": "You're out of quarters in the Ladder Tender and get a structure fire. Per M.P. 205.10, what do you do?",
+     "a": "Respond in the Ladder Tender and advise Dispatch; request a backup Ladder Truck if any indicator suggests it isn't adequate.",
+     "why": "M.P. 205.10: Respond in the LT, \"Dispatch must be advised,\" and \"if any indicators suggest that the apparatus may not be adequate... a backup Ladder Truck should be requested.\"",
+     "opts": [
+      "Respond in the LT, advise Dispatch, request a truck if in doubt",
+      "Return to quarters to switch to the Ladder Truck",
+      "Go out of service and let Dispatch send another ladder company instead",
+      "Respond in the LT; no notification is needed"
+     ],
+     "src": "M.P. 205.10"
+    },
+    {
+     "q": "Per M.P. 205.10, what minimum crew may a two-piece truck company put on the Ladder Tender for a BLS dispatch?",
+     "a": "Four members.",
+     "why": "M.P. 205.10: The officer \"may choose to respond to a B.L.S. dispatch with a minimum four-member crew on the Ladder Tender.\"",
+     "opts": [
+      "Four",
+      "Two",
+      "Three",
+      "Five"
+     ],
+     "src": "M.P. 205.10"
+    },
+    {
+     "q": "Per M.P. 205.11, can a company with a water tender take the tender in place of its engine?",
+     "a": "No; it may take the tender with its engine (not in lieu of) when water supply is limited.",
+     "why": "M.P. 205.11: Officers \"can take the water tender with their engine (but not in lieu of) when the water tender is needed due to limited water supply.\"",
+     "opts": [
+      "No; only with the engine, when water supply is limited",
+      "Yes, whenever the officer thinks it's appropriate",
+      "Yes, but only on brush fires",
+      "Yes, if Dispatch approves the swap"
+     ],
+     "src": "M.P. 205.11"
+    },
+    {
+     "q": "Command special-calls a water tender 'driver only.' Per M.P. 205.11, who assigns the driver?",
+     "a": "The Company Officer assigns a qualified driver/pump operator.",
+     "why": "M.P. 205.11: \"When a water tender is requested with a driver only, the Company officer is responsible to assign a qualified driver/pump operator.\"",
+     "opts": [
+      "The Company Officer, choosing a qualified driver/pump operator",
+      "The Alarm Room, choosing an engineer from the constant manning list",
+      "Command, by naming a specific engineer",
+      "The Battalion Chief of the tender's station"
+     ],
+     "src": "M.P. 205.11"
+    },
+    {
+     "q": "Engine 30's crew picks up a water tender housed at another station. Per M.P. 205.11, how is the tender identified?",
+     "a": "It keeps its home station identification (e.g., 'Engine 30 responding with water tender ( )').",
+     "why": "M.P. 205.11: \"The water tender will always retain its home station identification regardless of the assigned crews.\"",
+     "opts": [
+      "It keeps its home station's identification",
+      "It takes Engine 30's number",
+      "It is renamed by the Alarm Room",
+      "It goes by the Command-assigned sector name"
+     ],
+     "src": "M.P. 205.11"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "No 205.06 (Level I/Level II Staging) text file exists in build/mp-text; only 205.06A Staging Sector was available, so Level I/II staging is covered only as 205.06A and 205.07 describe it.",
+  "205.02 (10/97) numbers two different list items '22' (auto accidents and 'any other medical emergency'); the second is presumably 24.",
+  "205.03 and 205.05A (10/97), 205.04 (03/03), 205.04A (07/99), 205.05B (05/95), 205.07 and 205.11 (01/95) are old revisions; dispatch names (Channel 1, DS2, TRO) and the 205.04 list of contract cities may be out of date.",
+  "205.03 gives 2-1 Medical as 'Level 1 and 2 hospitals' but 1st Alarm Medical as 'Level 1 hospitals'; carded as written.",
+  "205.05 location illustrations, 205.05A org chart and 205.07A figures 1–8 are images and did not extract; cards use the text only."
+ ]
+}
