@@ -1,0 +1,1401 @@
+{
+ "topics": [
+  {
+   "title": "Vol I: Leave, Shift Trades & Hours (103)",
+   "sub": "Vacation, sick and emergency sick leave, bereavement, LTD, shift trades (AWRs), industrial leave, maximum hours and L493 Days.",
+   "concepts": [
+    "<b>103.01</b>: Each six-month auction: bid up to 15 vacation shifts, awarded max 5 (10/year). Cancel full-shift vacation 72 hrs ahead; partial leave max 7.5 hrs.",
+    "<b>103.02</b>: 56-hr members call 262-SICK by 0530 (no voicemail). Doctor's proof for leave over 2 shifts (48 hrs); 6 occurrences in 12 months may bring counseling.",
+    "<b>103.02A/B</b>: Minor family emergency = up to 10 hrs sick leave; major = 3 shifts +1 out-of-state. Bereavement (56-hr) = 2 shifts +1 out-of-state.",
+    "<b>103.02C/D</b>: 30 calendar days of sick leave may trigger an HWC exam, repeated every 30 days. 40-hr staff notify Section Head by 0800; proof after 3 working days.",
+    "<b>103.04</b>: LTD starts 90 days after disability; all leave credits used first; ends at 80th birthday for sworn.",
+    "<b>103.05</b>: Max 45 AWRs per contract year, repaid within 12 months. The reliever enters it in Telestaff before 10pm the day prior and owns the shift.",
+    "<b>103.06</b>: Industrial leave pays net take-home up to one year per injury (2,912 hrs for 56-hr). After-hours injury: Alarm Room/on-call HWC; report to HWC next business day.",
+    "<b>103.07/103.10</b>: No more than 3 consecutive 24-hr shifts, then 24 hrs off; a 16+ hr partial counts as a shift. Four L493 Days a year (one per quarter), no trading."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 103.01, in each six-month Semi-Annual Vacation Auction, how many shifts may a 56-hour member bid on and be awarded?",
+     "a": "Bid on up to 15 shifts and be awarded a maximum of 5.",
+     "why": "M.P. 103.01: Each member \"may bid on a maximum of fifteen (15) shifts\" and be awarded a maximum of five (5). The two auctions together keep the yearly maximum at 10 awarded shifts.",
+     "opts": [
+      "Bid on up to 15; awarded a maximum of 5",
+      "Bid on up to 10; awarded a maximum of 5",
+      "Bid on up to 15; awarded a maximum of 10",
+      "Bid on up to 20; awarded a maximum of 6"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, how far ahead must you contact the Time Management Coordinator to cancel a full shift of awarded vacation?",
+     "a": "No later than 72 hours before the shift.",
+     "why": "M.P. 103.01: To cancel full shift vacation, the member must contact the Time Management Coordinator \"no later than 72 hrs prior to the shift.\" After hours, weekends and holidays, call South Shift Command.",
+     "opts": [
+      "No later than 72 hours before the shift",
+      "No later than 24 hours before the shift",
+      "No later than 48 hours before the shift",
+      "No later than 7 days before the shift"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, what is the most partial-shift leave you can take, and what happens if you need more?",
+     "a": "7.5 hours; anything more requires taking the entire shift off, if available.",
+     "why": "M.P. 103.01: Partial leave requests can be for a maximum of 7.5 hours; more than that \"will require the employee to take an entire shift off if available.\"",
+     "opts": [
+      "7.5 hours; more means taking the whole shift off if available",
+      "8 hours; more needs Battalion Chief approval for the extra time",
+      "10 hours; more means taking the whole shift off if available",
+      "7.5 hours; any extra is charged as comp time automatically"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "You're a rover with a partial-shift leave scheduled today. Per M.P. 103.01, when must you tell your Company Officer?",
+     "a": "At the start of the shift.",
+     "why": "M.P. 103.01: Rovers \"must notify their Company Officer of any partial shift leave at the start of their shift\" so staffing conflicts can be planned for.",
+     "opts": [
+      "At the start of your shift",
+      "At least one shift before",
+      "By 0530 on the day of leave",
+      "When you leave the station"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, you're awarded vacation shifts at auction but don't have enough vacation credits. What happens to that time?",
+     "a": "It defaults to Leave Without Pay unless you call Time Management in advance to change it to comp time.",
+     "why": "M.P. 103.01: Awards are not authorization to take leave without credits; the member \"will default to Leave Without Pay (LWOP).\" It does NOT automatically switch to Comp Time; you must call Time Management in advance.",
+     "opts": [
+      "It's LWOP unless you ask Time Management to make it comp time",
+      "It automatically draws from your comp time bank instead",
+      "The award is cancelled and goes back to the waiting list",
+      "It is borrowed against next year's vacation accrual"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, who decides whether to grant emergency vacation when a critical need for leave arises that fits no other leave type?",
+     "a": "SSC/ERSO.",
+     "why": "M.P. 103.01: Emergency vacation is unscheduled vacation for a critical need; \"The determination to grant emergency vacation will be made by the SSC/ERSO.\"",
+     "opts": [
+      "SSC/ERSO",
+      "Your Battalion Chief",
+      "The Time Management Coordinator",
+      "Your Company Officer"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, Semi-Annual Vacation Sign-Up awards are based on what?",
+     "a": "Seniority in classification (FF, Engineer, Captain), with shifts allocated by rank and ALS/BLS classification.",
+     "why": "M.P. 103.01: Awards are \"based on length of time in classification\" seniority, and shifts are allocated by rank and ALS/BLS classification in proportion to Operations staffing.",
+     "opts": [
+      "Time in classification, allocated by rank and ALS/BLS",
+      "City hire date, allocated evenly across all ranks",
+      "The order bids were entered in the TeleStaff auction",
+      "Academy class rank, allocated by station and shift"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, when can a new member first use vacation credits?",
+     "a": "Only after six months of City employment.",
+     "why": "M.P. 103.01: \"Eligibility to use vacation credits shall begin only after six (6) months of City employment.\"",
+     "opts": [
+      "After six months of City employment",
+      "After three months of City employment",
+      "After the 12-month probation ends",
+      "After one full year of paid service"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.01, you change shifts at your own convenience after the vacation auctions. What happens to your awarded vacation?",
+     "a": "You forfeit the awards and must request waitlist vacation on your new shift.",
+     "why": "M.P. 103.01: \"Members changing shifts at their own convenience will forfeit current vacation awards and must request through waitlist vacation on their new shift.\" Like leave may be given only for Department-requested moves.",
+     "opts": [
+      "You forfeit it and must request waitlist vacation on the new shift",
+      "It moves with you to the same dates on your new shift",
+      "ERSO grants you like leave on the new shift automatically",
+      "It is converted to comp time to use later in the year"
+     ],
+     "src": "M.P. 103.01"
+    },
+    {
+     "q": "Per M.P. 103.02, a 56-hour member too ill to work must call in no later than what time on the day sick leave begins?",
+     "a": "0530 hours.",
+     "why": "M.P. 103.02: Notification shall be made \"NO LATER THAN 0530 HOURS ON THE DAY THE SICK LEAVE IS TO BEGIN.\" Day-of call-ins should be made between 0430 and 0530.",
+     "opts": [
+      "0530 hours",
+      "0600 hours",
+      "0700 hours",
+      "0800 hours"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, you call the sick line (262-SICK) and no one answers. Can you leave a voicemail?",
+     "a": "No. You must talk to a South Shift Command or ERSO staff member.",
+     "why": "M.P. 103.02: \"A member calling in sick must talk to a South Shift Command or ERSO staff member, there will be No Voicemail Option.\"",
+     "opts": [
+      "No; you must talk to South Shift Command or ERSO staff",
+      "Yes; a voicemail on the sick line counts as notice",
+      "Yes, as long as you also text your Company Officer",
+      "No; you must call your Battalion Chief directly"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, a 56-hour member needs proof of medical treatment for sick leave lasting longer than what?",
+     "a": "More than 2 shifts (48 hours).",
+     "why": "M.P. 103.02: \"Proof of medical treatment shall be required for any leave extending over (2) shifts (48 hours)\" and must come from the member's own physician, not the Health Center.",
+     "opts": [
+      "2 shifts (48 hours)",
+      "1 shift (24 hours)",
+      "3 shifts (72 hours)",
+      "4 shifts (96 hours)"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, you go home sick in the middle of a shift and then take the next two shifts off. How many sick leave occurrences is that?",
+     "a": "One occurrence (and it requires a doctor's slip).",
+     "why": "M.P. 103.02: An occurrence is sick leave over 4 hours used consecutively before returning to work. The MP's own example (home mid-shift, then two shifts off) \"would be one (1) occurrence and would require a doctor slip.\"",
+     "opts": [
+      "One occurrence",
+      "Two occurrences",
+      "Three occurrences",
+      "None; it was under 72 hours"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, after how many sick leave occurrences in the previous 12 months may a 56-hour member be counseled and required to bring proof for future illnesses?",
+     "a": "Six occurrences.",
+     "why": "M.P. 103.02: \"After (6) sick leave occurrences in the previous 12-month period, the member may be counseled\" and, at the Battalion Chief's discretion, proof may be required for future illnesses.",
+     "opts": [
+      "6",
+      "4",
+      "5",
+      "8"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, while on sick leave, which of these is allowed without prior Battalion Chief approval?",
+     "a": "Documented therapy treatments prescribed by a physician.",
+     "why": "M.P. 103.02: Members must stay home in a recuperative manner and may not do other work or recreation; seeing a physician, getting medicine and \"documented therapy treatments prescribed by a physician\" are allowed.",
+     "opts": [
+      "Physician-prescribed, documented therapy treatments",
+      "Coaching your child's weekend league game",
+      "Working a short shift at your side job",
+      "Light workouts at the gym to speed recovery"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "Per M.P. 103.02, if you must provide medical treatment slips, when must you sign the sick leave documents at your Battalion Office?",
+     "a": "No more than 2 shifts after returning to duty.",
+     "why": "M.P. 103.02: Members required to provide slips must sign the documents \"AT THEIR BATTALION OFFICE NO MORE THAN 2 SHIFTS AFTER THEIR RETURN TO DUTY.\"",
+     "opts": [
+      "Within 2 shifts after you return",
+      "Before your first shift back",
+      "Within 5 shifts after you return",
+      "Within 30 days after you return"
+     ],
+     "src": "M.P. 103.02"
+    },
+    {
+     "q": "A school calls to say your sick child must be picked up. Per M.P. 103.02A, how much emergency sick leave may you use?",
+     "a": "Up to 10 hours, with vacation or comp time for the rest of the time needed.",
+     "why": "M.P. 103.02A: A school sending a sick child home is an example of a minor emergency that qualifies for \"a maximum of ten (10) hours.\" Vacation, comp time or unpaid leave may cover the remainder.",
+     "opts": [
+      "Up to 10 hours; vacation or comp covers the rest",
+      "Up to 24 hours; the rest of the shift is covered",
+      "Up to 4 hours; the rest is unpaid leave",
+      "Up to 12 hours; vacation covers the remainder"
+     ],
+     "src": "M.P. 103.02A"
+    },
+    {
+     "q": "Per M.P. 103.02A, what is the maximum major emergency sick leave for a 56-hour member?",
+     "a": "Three shifts plus one shift for out-of-state travel.",
+     "why": "M.P. 103.02A: Major emergency sick leave shall not exceed \"Three (3) shifts plus one (1) shift for out-of-state travel for 56-hour members\" (5 days plus 2 for 40-hour members).",
+     "opts": [
+      "3 shifts, plus 1 shift for out-of-state travel",
+      "2 shifts, plus 1 shift for out-of-state travel",
+      "5 shifts, plus 2 shifts for out-of-state travel",
+      "3 shifts, plus 2 shifts for out-of-state travel"
+     ],
+     "src": "M.P. 103.02A"
+    },
+    {
+     "q": "Per M.P. 103.02A, which situation may qualify for the maximum use of emergency sick leave (a major emergency)?",
+     "a": "Being present for an immediate family member's major surgery.",
+     "why": "M.P. 103.02A: Major emergencies include being present during major surgery of an immediate family member, a family member in intensive care, or a physician requesting your presence. A normal delivery or a sick child sent home from school are 10-hour examples.",
+     "opts": [
+      "Being present for a family member's major surgery",
+      "Taking a pregnant spouse in for a normal delivery",
+      "Picking up a sick child the school is sending home",
+      "Arranging home care for a family member's minor illness"
+     ],
+     "src": "M.P. 103.02A"
+    },
+    {
+     "q": "Per M.P. 103.02A, which relative is included in \"immediate family\" for emergency sick leave?",
+     "a": "A stepchild.",
+     "why": "M.P. 103.02A: Immediate family for 103.02A is Mother, Father, Husband, Wife, Child, Stepfather, Stepmother, Stepchild, Brother or Sister. Grandparents are not on this list (they are for bereavement).",
+     "opts": [
+      "A stepchild",
+      "A grandparent",
+      "A niece or nephew",
+      "A first cousin"
+     ],
+     "src": "M.P. 103.02A"
+    },
+    {
+     "q": "Per M.P. 103.02B, how much bereavement leave is a 56-hour member allowed?",
+     "a": "Two shifts, plus one shift for out-of-state travel.",
+     "why": "M.P. 103.02B: \"Two (2) shifts, plus one (1) shift for out-of-state travel will be allowed for 56-hour employees.\" 40-hour employees get 3 working days plus 2 for out-of-state travel.",
+     "opts": [
+      "2 shifts, plus 1 shift for out-of-state travel",
+      "3 shifts, plus 1 shift for out-of-state travel",
+      "2 shifts, plus 2 shifts for out-of-state travel",
+      "1 shift, plus 1 shift for out-of-state travel"
+     ],
+     "src": "M.P. 103.02B"
+    },
+    {
+     "q": "Your aunt dies, and she is not immediate family under M.P. 103.02B. What leave can you request?",
+     "a": "Emergency vacation through the on-duty South Shift Commander (or scheduled vacation/comp time).",
+     "why": "M.P. 103.02B: \"For family members who are not considered immediate family, Emergency Vacation time may be requested through the On Duty South Shift Commander.\"",
+     "opts": [
+      "Emergency vacation through the on-duty South Shift Commander",
+      "Bereavement leave approved by your Battalion Chief",
+      "Emergency sick leave through the Health Center",
+      "Unpaid general leave through Fire Personnel"
+     ],
+     "src": "M.P. 103.02B"
+    },
+    {
+     "q": "Per M.P. 103.02B, which of these counts as immediate family for bereavement leave?",
+     "a": "Your spouse's mother.",
+     "why": "M.P. 103.02B: Immediate family includes \"the mother and father of the employee's spouse,\" grandparents, grandchildren, step-siblings, a domestic partner and others listed. A spouse's siblings are not listed.",
+     "opts": [
+      "Your spouse's mother",
+      "Your spouse's sister",
+      "Your spouse's grandparent",
+      "Your brother's wife"
+     ],
+     "src": "M.P. 103.02B"
+    },
+    {
+     "q": "Per M.P. 103.02C, after how much sick leave may a member be required to take a medical exam by the Health and Wellness Center clinician?",
+     "a": "30 calendar days.",
+     "why": "M.P. 103.02C: A member off on extended sick leave \"(30 calendar days) may be required to submit to a medical examination by the Fire Department Health and Wellness Center Clinician.\"",
+     "opts": [
+      "30 calendar days",
+      "14 calendar days",
+      "60 calendar days",
+      "10 working days"
+     ],
+     "src": "M.P. 103.02C"
+    },
+    {
+     "q": "Per M.P. 103.02C, while a member remains on extended sick leave, how often are additional medical exams done?",
+     "a": "At 30-day intervals, unless the HWC clinician directs otherwise.",
+     "why": "M.P. 103.02C: \"Additional medical examinations shall be made at thirty (30) day intervals as long as the member is on sick leave, unless otherwise directed by the Health and Wellness Center Clinician.\"",
+     "opts": [
+      "Every 30 days",
+      "Every 14 days",
+      "Every 60 days",
+      "Every 90 days"
+     ],
+     "src": "M.P. 103.02C"
+    },
+    {
+     "q": "You're on extended sick leave after surgery. Per M.P. 103.02C, what must happen before you return to regular or light duty?",
+     "a": "A medical evaluation by the HWC clinician, bringing a release from your treating physician.",
+     "why": "M.P. 103.02C: A member on extended sick leave due to injury or surgery \"will be required to submit to a medical evaluation by the Health and Wellness Center Clinician\" and must bring the treating physician's release.",
+     "opts": [
+      "HWC clinician evaluation, with your doctor's release",
+      "Send your doctor's release to your Battalion Chief",
+      "Pass a fitness evaluation at the Training Academy",
+      "Have the Personnel Officer approve your release"
+     ],
+     "src": "M.P. 103.02C"
+    },
+    {
+     "q": "Per M.P. 103.02D, a 40-hour staff member too sick to work must notify whom, and by when?",
+     "a": "Their Section Head (or designee), no later than 0800 that day.",
+     "why": "M.P. 103.02D: Notify \"the Section Head (or designee)\" as soon as it is known, \"but no later than 0800 the day the sick leave is to begin.\"",
+     "opts": [
+      "Their Section Head (or designee), by 0800",
+      "South Shift Command on the sick line, by 0530",
+      "Their Section Head (or designee), by 0730",
+      "The Health Center front desk, by 0800"
+     ],
+     "src": "M.P. 103.02D"
+    },
+    {
+     "q": "Per M.P. 103.02D, a 40-hour member must provide proof of medical treatment for illnesses lasting longer than what?",
+     "a": "Three working days.",
+     "why": "M.P. 103.02D: \"Proof of medical treatment is required for all illnesses extending over a period of three (3) working days\" and may be requested for any illness.",
+     "opts": [
+      "3 working days",
+      "2 working days",
+      "5 working days",
+      "1 working day"
+     ],
+     "src": "M.P. 103.02D"
+    },
+    {
+     "q": "Per M.P. 103.02D, after how many sick leave occurrences in the previous 12 months may a 40-hour member be counseled?",
+     "a": "Five occurrences.",
+     "why": "M.P. 103.02D: \"After (5) sick leave occurrences in the previous 12 month period, the member may be counseled\" and the Section Head may require proof for future illnesses. (For 56-hour members it is 6.)",
+     "opts": [
+      "5",
+      "6",
+      "3",
+      "4"
+     ],
+     "src": "M.P. 103.02D"
+    },
+    {
+     "q": "Per M.P. 103.02D, when does a 40-hour member returning from sick leave sign the required sick leave documents?",
+     "a": "On or before 0830 the day they return to work.",
+     "why": "M.P. 103.02D: \"On or before 0830 hours the day the member returns to work, s/he will report to the Section Head (or designee) and sign the required sick leave documents.\" They must sign before taking any other leave.",
+     "opts": [
+      "By 0830 on the day they return",
+      "Within 2 shifts of returning",
+      "By the end of their first week back",
+      "Before 0800 on the day before return"
+     ],
+     "src": "M.P. 103.02D"
+    },
+    {
+     "q": "Per M.P. 103.02E, a pregnant member who needs a Transitional Work Assignment should contact whom?",
+     "a": "The Fire Department Health and Wellness Center.",
+     "why": "M.P. 103.02E: \"The member should contact the Fire Department Health and Wellness Center if they need a Transitional Work Assignment due to pregnancy,\" and notify their supervisor they are reporting to the HWC.",
+     "opts": [
+      "The Health and Wellness Center",
+      "The Emergency Response Staffing Office",
+      "Fire Human Resources",
+      "Their Battalion Chief"
+     ],
+     "src": "M.P. 103.02E"
+    },
+    {
+     "q": "Per M.P. 103.02E, how often must a member on a pregnancy Transitional Work Assignment check in at the HWC?",
+     "a": "Every 30 days.",
+     "why": "M.P. 103.02E: Once assigned, the member \"may remain on transitional work for the duration of their pregnancy and check in at the HWC every 30 days.\"",
+     "opts": [
+      "Every 30 days",
+      "Every 14 days",
+      "Every 60 days",
+      "Every 90 days"
+     ],
+     "src": "M.P. 103.02E"
+    },
+    {
+     "q": "Per M.P. 103.02E, after postpartum personal leave ends, how long may the member again be eligible for a Transitional Work Assignment?",
+     "a": "Up to one year (longer only with Review Committee approval).",
+     "why": "M.P. 103.02E: After personal leave the member \"will again be eligible for a Transitional Work Assignment for up to one year.\" Extensions beyond one year go to the Review Committee.",
+     "opts": [
+      "Up to one year",
+      "Up to six months",
+      "Up to 90 days",
+      "Up to two years"
+     ],
+     "src": "M.P. 103.02E"
+    },
+    {
+     "q": "Per M.P. 103.02F, the Alternate Assignment/Industrial Review Committee makes its recommendations to whom?",
+     "a": "The Assistant Chief of Human Resources.",
+     "why": "M.P. 103.02F: \"Based on the review of the facts in each case, the committee will make recommendations to the Assistant Chief of Human Resources.\"",
+     "opts": [
+      "The Assistant Chief of Human Resources",
+      "The Fire Chief",
+      "The Local 493 President",
+      "The Deputy Chief of the Health Center"
+     ],
+     "src": "M.P. 103.02F"
+    },
+    {
+     "q": "Per M.P. 103.02F, how often does the Alternate Assignment/Industrial Review Committee meet?",
+     "a": "Monthly or as needed.",
+     "why": "M.P. 103.02F: The committee \"will meet monthly or as needed, as determined by the Assistant Chief or Deputy Chief of Personnel.\"",
+     "opts": [
+      "Monthly or as needed",
+      "Quarterly or as needed",
+      "Weekly",
+      "Twice a year"
+     ],
+     "src": "M.P. 103.02F"
+    },
+    {
+     "q": "Per M.P. 103.04, when does long-term disability eligibility begin?",
+     "a": "Ninety days after the disability commenced.",
+     "why": "M.P. 103.04: Eligibility: \"Ninety (90) days after disability commenced.\"",
+     "opts": [
+      "90 days after the disability began",
+      "30 days after the disability began",
+      "60 days after the disability began",
+      "180 days after the disability began"
+     ],
+     "src": "M.P. 103.04"
+    },
+    {
+     "q": "Per M.P. 103.04, what must happen to your sick leave, vacation, and comp time before you're eligible for long-term disability?",
+     "a": "All accumulated leave credits must be used first.",
+     "why": "M.P. 103.04: The MP notes that \"all accumulated leave credits must be used prior to eligibility for long-term disability (sick leave, vacation, compensatory time, personal leave, etc.).\"",
+     "opts": [
+      "They must all be used up first",
+      "They are paid out at 50 percent",
+      "They are frozen until you return",
+      "They are converted into LTD credit"
+     ],
+     "src": "M.P. 103.04"
+    },
+    {
+     "q": "Per M.P. 103.04, long-term disability benefits end for a sworn member at what birthday?",
+     "a": "The 80th birthday.",
+     "why": "M.P. 103.04: Benefit termination includes the \"Eightieth (80) birthday for sworn members\" (75th for civilian members).",
+     "opts": [
+      "80th",
+      "75th",
+      "65th",
+      "70th"
+     ],
+     "src": "M.P. 103.04"
+    },
+    {
+     "q": "Per M.P. 103.04, a member with a pre-existing condition becomes eligible for LTD benefits after what total waiting period?",
+     "a": "24 months (an additional 12 months beyond the first 12).",
+     "why": "M.P. 103.04: An applicant with a pre-existing condition \"will be eligible for LTD benefits when an additional 12-month period (total 24 month waiting period) is met.\"",
+     "opts": [
+      "24 months",
+      "12 months",
+      "18 months",
+      "36 months"
+     ],
+     "src": "M.P. 103.04"
+    },
+    {
+     "q": "Per M.P. 103.05, what is the maximum number of shift exchanges (AWRs) per employee in a contract year?",
+     "a": "Forty-five.",
+     "why": "M.P. 103.05: \"Members may be granted the opportunity to exchange shifts up to a maximum of forty-five (45) per employee in a contract year.\"",
+     "opts": [
+      "45",
+      "24",
+      "30",
+      "52"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "Per M.P. 103.05, within what time frame must AWRs be repaid?",
+     "a": "Within 12 months.",
+     "why": "M.P. 103.05: \"It is the employee's responsibility to insure all AWRs are repaid within a 12-month time frame.\"",
+     "opts": [
+      "Within 12 months",
+      "Within 6 months",
+      "Within 90 days",
+      "Within 24 months"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "Per M.P. 103.05, who is responsible for the Telestaff AWR entry, and by when?",
+     "a": "The member providing relief, before 10pm the day before the AWR.",
+     "why": "M.P. 103.05: \"It is the responsibility of the employee providing relief\" to ensure the Telestaff entry is completed \"prior to 10pm the day prior to the AWR occurring.\"",
+     "opts": [
+      "The member providing relief, before 10pm the day prior",
+      "The member requesting relief, before 10pm the day prior",
+      "The member providing relief, before 0700 the same day",
+      "The Battalion Chief, at the start of the AWR shift"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "You enter an AWR in Telestaff at 2300 the night before the shift. Per M.P. 103.05, what must you do?",
+     "a": "Contact SSC staff between 0500 and 0600 that day about the late entry; approval is at their discretion.",
+     "why": "M.P. 103.05: Late entries after 10pm \"must communicate with SSC staff between 0500 and 0600 hours on the day of the shift.\" Approval is at the discretion of the on-duty South Shift Commander or SSC staff.",
+     "opts": [
+      "Call SSC staff between 0500 and 0600 that day",
+      "Email ERSO before midnight to get it approved",
+      "Call your Battalion Chief before 0700 for approval",
+      "Nothing more; the late entry auto-approves"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "You entered an AWR to work another member's shift but now can't make it. Per M.P. 103.05, who must find coverage?",
+     "a": "You, the member who agreed to work it.",
+     "why": "M.P. 103.05: Once the reliever completes the Telestaff entry, \"FULL RESPONSIBILITY FOR THAT SHIFT\" is theirs; if they can't work it, \"it is his or her responsibility to find someone qualified to work it.\"",
+     "opts": [
+      "You, the member who agreed to work it",
+      "The member who originally asked for relief",
+      "South Shift Command through constant staffing",
+      "Your Battalion Chief, using an available rover"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "Per M.P. 103.05, what is the penalty for failing to provide relief on an AWR you agreed to work?",
+     "a": "Loss of vacation time equal to the cost of filling the position, and possible loss of AWR privileges.",
+     "why": "M.P. 103.05: \"FAILURE TO PROVIDE RELIEF WILL RESULT IN A LOSS OF VACATION TIME EQUAL TO THE COST OF FILLING THAT POSITION, AND MAY RESULT IN THE LOSS OF THE EMPLOYEE'S AWR PRIVILEGE.\"",
+     "opts": [
+      "Vacation time equal to the cost of filling the spot",
+      "Two shifts of comp time are taken from your bank",
+      "A written reprimand on the first offense",
+      "Repaying the shift at time-and-a-half"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "You need a 3-hour partial shift trade. Per M.P. 103.05, what is required?",
+     "a": "Prior supervisor approval; no Telestaff entry is required under 4 hours.",
+     "why": "M.P. 103.05: \"No Telestaff entry is required for less than four (4) hours, however, any relief time must have prior supervisor's approval.\" Partials of 4 hours or more follow the full AWR procedure.",
+     "opts": [
+      "Prior supervisor approval; no Telestaff entry needed",
+      "A full Telestaff entry before 10pm the day prior",
+      "Nothing; trades under 4 hours need no approval",
+      "Battalion Chief approval plus a Telestaff entry"
+     ],
+     "src": "M.P. 103.05"
+    },
+    {
+     "q": "Per M.P. 103.06, how long can a 56-hour member on industrial leave stay on payroll at net take-home pay?",
+     "a": "Up to one year per injury (2,912 hours for 56-hour members).",
+     "why": "M.P. 103.06: Members are paid up to their regular net take-home pay \"for up to one year total per injury.\" Leave beyond one year per injury (2,912 hours for 56-hour; 2,080 for 40-hour) is not paid leave.",
+     "opts": [
+      "Up to one year (2,912 hours) per injury",
+      "Up to six months (1,456 hours) per injury",
+      "Up to one year (2,080 hours) per injury",
+      "Up to two years (5,824 hours) per injury"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "It's 2200 and you have a minor on-duty injury you feel should take you off duty for the rest of the shift. Per M.P. 103.06, what do you do?",
+     "a": "Contact the after-hours on-call HWC clinician through the Alarm Room.",
+     "why": "M.P. 103.06: For a minor after-hours injury, \"the after-hours on call Health and Wellness Center clinician may be contacted through the Alarm Room.\" If this step is skipped, the member is charged their own time.",
+     "opts": [
+      "Reach the on-call HWC clinician through the Alarm Room",
+      "Call your Battalion Chief for approval to go home",
+      "Go home and report to the HWC within 72 hours",
+      "Call South Shift Command to send you a relief"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "You're treated in an emergency room for an after-hours industrial injury. Per M.P. 103.06, when must you report to the HWC?",
+     "a": "On the next business day.",
+     "why": "M.P. 103.06: \"The member must report to the Health and Wellness Center on the next business day for evaluation\" to continue or change their off-duty work status.",
+     "opts": [
+      "The next business day",
+      "Within 72 hours",
+      "At the start of your next shift",
+      "Within 5 working days"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "Per M.P. 103.06, which on-duty injuries must be reported to the Alarm Room?",
+     "a": "All injuries requiring any level of treatment.",
+     "why": "M.P. 103.06: \"THE ALARM ROOM SHALL BE NOTIFIED OF ALL INJURIES REQUIRING ANY LEVEL OF TREATMENT SO THAT PROPER NOTIFICATIONS CAN BE MADE.\"",
+     "opts": [
+      "All injuries requiring any level of treatment",
+      "Only injuries that need hospital transport",
+      "Only injuries that happen after business hours",
+      "Only injuries that cause lost time from duty"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "Per M.P. 103.06, a member on industrial leave needs Industrial Commission of Arizona permission to travel out of state for more than how many days?",
+     "a": "14 days.",
+     "why": "M.P. 103.06: \"Members who are on Industrial Leave and need to travel out of state for more than 14 days require permission from the Industrial Commission of Arizona.\"",
+     "opts": [
+      "14 days",
+      "7 days",
+      "30 days",
+      "3 days"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "Per M.P. 103.06, which industrial injuries require an additional Third-Party Agreement form?",
+     "a": "Injuries from a motor vehicle accident, animal bite, or assault.",
+     "why": "M.P. 103.06: \"If the injury is sustained due to a motor vehicle accident, animal bite or assault, an additional form: the Third-Party Agreement\" shall also be completed.",
+     "opts": [
+      "Vehicle accidents, animal bites, and assaults",
+      "Burns, falls, and smoke inhalation injuries",
+      "Exposures, needle sticks, and lifting strains",
+      "Any injury that results in lost time"
+     ],
+     "src": "M.P. 103.06"
+    },
+    {
+     "q": "You've just worked three consecutive 24-hour shifts. Per M.P. 103.07, what's the rule now?",
+     "a": "You must be off duty a full 24 hours before working again.",
+     "why": "M.P. 103.07: Members shall not work more than three consecutive 24-hour shifts; \"members must be off-duty a full 24 hours before working again.\"",
+     "opts": [
+      "Be off a full 24 hours before working again",
+      "Be off a full 12 hours before working again",
+      "You may work a fourth if it's constant staffing",
+      "Be off a full 48 hours before working again"
+     ],
+     "src": "M.P. 103.07"
+    },
+    {
+     "q": "Per M.P. 103.07, a partial shift of how many hours or more counts as a full 24-hour shift toward the maximum hours rule?",
+     "a": "16 hours or more.",
+     "why": "M.P. 103.07: \"If a member is called to work a partial of any kind greater than or equal to 16 hours, the shift will be considered a full 24-hour shift.\"",
+     "opts": [
+      "16 hours",
+      "12 hours",
+      "8 hours",
+      "20 hours"
+     ],
+     "src": "M.P. 103.07"
+    },
+    {
+     "q": "You're called to constant staff, but working it would break the 3-shift limit. Per M.P. 103.07, what happens when you pass?",
+     "a": "No refusal or pass is charged, but you must tell the Shift Commander about the conflict.",
+     "why": "M.P. 103.07: The member \"will not be charged with a 'refusal' or a 'pass'\" but must make the Shift Commander aware of the conflict when called.",
+     "opts": [
+      "No refusal or pass, but you must tell the Shift Commander",
+      "You're charged a pass, but not a refusal",
+      "You're charged a refusal worth 1.5 opportunities",
+      "Nothing; TeleStaff already screened you out"
+     ],
+     "src": "M.P. 103.07"
+    },
+    {
+     "q": "Per M.P. 103.07, how is working both an AM and a PM overtime opportunity on the same day counted?",
+     "a": "As a full 24-hour shift.",
+     "why": "M.P. 103.07: \"Working both an AM and PM overtime opportunity on the same day will also be considered a 24-hour shift.\"",
+     "opts": [
+      "As a full 24-hour shift",
+      "As two separate partial shifts",
+      "As one 12-hour shift",
+      "It doesn't count toward the limit"
+     ],
+     "src": "M.P. 103.07"
+    },
+    {
+     "q": "Per M.P. 103.10, how many Local 493 Days does a 56-hour member receive?",
+     "a": "Four per year, one per quarter.",
+     "why": "M.P. 103.10: \"Each fifty-six (56) hour member will receive four (4) L493 Days per year. One L493 Day per quarter will be awarded.\"",
+     "opts": [
+      "Four per year, one per quarter",
+      "Two per year, one per half",
+      "Four per year, taken any time",
+      "Six per year, one every two months"
+     ],
+     "src": "M.P. 103.10"
+    },
+    {
+     "q": "Per M.P. 103.10, can you trade your L493 Day with another member?",
+     "a": "No. Trading L493 Days is not permitted.",
+     "why": "M.P. 103.10: \"No trading of L493 Days will be permitted.\" If it conflicts with mandatory training, you may ask the ERSO Staffing Captain to change it.",
+     "opts": [
+      "No; trading L493 Days isn't permitted",
+      "Yes, with the Staffing Captain's approval",
+      "Yes, if both members hold the same rank",
+      "Yes, once per quarter, like ERP days"
+     ],
+     "src": "M.P. 103.10"
+    },
+    {
+     "q": "You're retiring this quarter. Per M.P. 103.10, can your L493 Day be your last day of work?",
+     "a": "No. City policy requires you to actually work your last day.",
+     "why": "M.P. 103.10: Retiring members receive an L493 Day in their last quarter, but \"City policy requires members to actually work their last day,\" so it can't be used as the last day.",
+     "opts": [
+      "No; you must actually work your last day",
+      "Yes; L493 Days supersede all other leave",
+      "Yes, if the Staffing Captain approves it",
+      "No; retirees get no L493 Day that quarter"
+     ],
+     "src": "M.P. 103.10"
+    },
+    {
+     "q": "Per M.P. 103.10, what do sworn members in permanent 40-hour staff positions get instead of L493 Days?",
+     "a": "Two Professional Development Days per calendar year.",
+     "why": "M.P. 103.10: \"Sworn members in a permanent forty (40) hour staff position will be granted two (2) Professional Development Days per calendar year in lieu of L493 Days.\"",
+     "opts": [
+      "2 Professional Development Days a year",
+      "4 Professional Development Days a year",
+      "1 Professional Development Day a year",
+      "Nothing; 40-hour members get no days"
+     ],
+     "src": "M.P. 103.10"
+    }
+   ]
+  },
+  {
+   "title": "Vol I: Overtime, Assignments & Staffing (104)",
+   "sub": "Overtime and court standby, transfers and assignments, staff and specialty positions, transitional work, seniority, constant staffing and the Emergency Reserve Program.",
+   "concepts": [
+    "<b>104.01</b>: Overtime must be authorized by your supervisor before you work it; submit at the end of that workweek. Two 24-hr comp slots per shift.",
+    "<b>104.01A</b>: Court standby pays $1.50/hr, self-cancels at 1700; request due to Pay and Benefits within 5 calendar days.",
+    "<b>104.02</b>: Transfer ads open at least 12 days; occupy within 30 days and stay 6 months. Absent 12 straight months (or 12 in 18) = assignment revoked.",
+    "<b>104.02</b>: Max 200 shifts on a rescue; rovers call SSC 0615-0645; out-of-class rovers commit to 90 days.",
+    "<b>104.02B</b>: HWC assigns transitional work up to 3 months (+3 by HWC head); beyond 6 months goes to the TW Review Committee. Contact HWC within 1 business day of release.",
+    "<b>104.02E/G</b>: FIT offered in rank order on the BC promotional list, not seniority. C957 vacancies filled from back-ups by seniority in rank.",
+    "<b>104.03</b>: Sign up for constant staffing before 0500; answer within 10 minutes; a refusal = 1.5 opportunities. Fill order: rovers, promo lists, out-of-class, constant staff.",
+    "<b>104.03B</b>: Everyone gets 2 Emergency Reserve days per quarter; be available 0800-1100; leave doesn't excuse it; one like-for-like trade per quarter."
+   ],
+   "cards": [
+    {
+     "q": "Per M.P. 104.01, who must authorize overtime work, and when?",
+     "a": "The member's supervisor, before the overtime is worked.",
+     "why": "M.P. 104.01: \"Overtime work must be authorized by the member's supervisor prior to working.\" The Shift Commander/Section Head is the approving authority on the overtime form.",
+     "opts": [
+      "Your supervisor, before you work it",
+      "The Shift Commander, after you work it",
+      "ERSO, by the end of the pay period",
+      "Payroll, when the form is entered"
+     ],
+     "src": "M.P. 104.01"
+    },
+    {
+     "q": "Per M.P. 104.01, when must overtime payment requests be submitted?",
+     "a": "At the end of the workweek in which the overtime was earned.",
+     "why": "M.P. 104.01: Employee and supervisor must submit requests \"at the end of the workweek in which it was earned\"; holding records beyond the workweek makes FLSA-required auditing difficult.",
+     "opts": [
+      "At the end of the workweek it was earned",
+      "At the end of the 14-day pay period",
+      "Within 30 days of working it",
+      "At the end of the calendar month"
+     ],
+     "src": "M.P. 104.01"
+    },
+    {
+     "q": "Per M.P. 104.01, how many compensatory time slots are available per shift in the Operations Division?",
+     "a": "Two 24-hour slots per shift.",
+     "why": "M.P. 104.01: \"Two (2) twenty-four (24) hour time slots per shift will be available for compensatory time use,\" scheduled like unscheduled vacation.",
+     "opts": [
+      "Two 24-hour slots",
+      "One 24-hour slot",
+      "Three 24-hour slots",
+      "Four 24-hour slots"
+     ],
+     "src": "M.P. 104.01"
+    },
+    {
+     "q": "A medic completes an Overtime Training Roster for CE but doesn't choose pay or comp credit. Per M.P. 104.01, what happens?",
+     "a": "The overtime is processed for payment.",
+     "why": "M.P. 104.01: \"The member may choose pay or compensatory credits when completing the Overtime Training Roster. If no selection is indicated, overtime will be processed for payment.\"",
+     "opts": [
+      "It is processed for payment",
+      "It is credited as comp time",
+      "It is returned unprocessed",
+      "It is split between pay and comp"
+     ],
+     "src": "M.P. 104.01"
+    },
+    {
+     "q": "Per M.P. 104.01A, what is the court standby pay rate?",
+     "a": "$1.50 per hour while subject to call.",
+     "why": "M.P. 104.01A: \"The member shall be entitled to court standby pay at the rate of $1.50 per hour for hours s/he is subject to call.\"",
+     "opts": [
+      "$1.50 per hour",
+      "$2.50 per hour",
+      "$1.00 per hour",
+      "$5.00 per hour"
+     ],
+     "src": "M.P. 104.01A"
+    },
+    {
+     "q": "Per M.P. 104.01A, when does court standby end if the prosecutor or court doesn't request another time?",
+     "a": "It self-cancels at 1700 hours on the day it was invoked.",
+     "why": "M.P. 104.01A: \"Court standby is self-canceling on 1700 hours on the day it is invoked, unless another time is requested by the prosecutor or court.\"",
+     "opts": [
+      "At 1700 on the day it was invoked",
+      "At midnight on the day it was invoked",
+      "At 0800 the next morning",
+      "Only when the court calls to release you"
+     ],
+     "src": "M.P. 104.01A"
+    },
+    {
+     "q": "Per M.P. 104.01A, Pay and Benefits must receive your court standby overtime request within how long?",
+     "a": "Five calendar days of the date standby was required.",
+     "why": "M.P. 104.01A: Pay and Benefits \"must receive the 'Overtime/Constant Manning Request' within FIVE (5) CALENDAR DAYS of the date standby was required,\" with the subpoena attached.",
+     "opts": [
+      "5 calendar days",
+      "10 calendar days",
+      "5 working days",
+      "14 calendar days"
+     ],
+     "src": "M.P. 104.01A"
+    },
+    {
+     "q": "Per M.P. 104.02, an Operations vacancy advertisement stays open for at least how long?",
+     "a": "No less than 12 days.",
+     "why": "M.P. 104.02: Known vacancies are advertised bi-weekly, and \"the advertising period will be open for no less than 12 days.\"",
+     "opts": [
+      "12 days",
+      "7 days",
+      "14 days",
+      "30 days"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Your Request for Transfer is honored and no training is needed. Per M.P. 104.02, what's expected?",
+     "a": "Physically occupy the position within 30 days and stay continuously for at least 6 months.",
+     "why": "M.P. 104.02: The member \"shall physically occupy the position within 30 days\"; a single shift or temp fill doesn't count, and \"The expectation is full, continuous occupancy for a minimum of 6 months.\"",
+     "opts": [
+      "Occupy it within 30 days and stay at least 6 months",
+      "Occupy it within 14 days and stay at least 12 months",
+      "Occupy it within 30 days; one shift there satisfies it",
+      "Occupy it within 60 days and stay at least 6 months"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "ERSO calls about your transfer request on closing Tuesday; you're off shift and miss it. Per M.P. 104.02, how long do you have to call back?",
+     "a": "15 minutes, or you're passed and the position goes to the next most senior member.",
+     "why": "M.P. 104.02: A member not available by phone and not on shift \"will have 15 minutes to return the phone call from ERSO otherwise they will be passed.\"",
+     "opts": [
+      "15 minutes",
+      "10 minutes",
+      "30 minutes",
+      "1 hour"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Per M.P. 104.02, how long an absence from your assigned position causes your assignment rights to be revoked?",
+     "a": "More than 12 consecutive months, or a total of 12 months in any 18-month period.",
+     "why": "M.P. 104.02: \"Any member who is absent from his/her assigned position for more than 12 consecutive months, or a total of 12 months in any 18-month period will have their assignment rights to that assignment revoked\" (with listed exceptions such as FMLA and military).",
+     "opts": [
+      "12 straight months, or 12 total in any 18 months",
+      "6 straight months, or 9 total in any 12 months",
+      "12 straight months, or 18 total in any 24 months",
+      "18 straight months, or 12 total in any 24 months"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Per M.P. 104.02, firefighters are required to serve a maximum of how many shifts on a rescue?",
+     "a": "200 shifts.",
+     "why": "M.P. 104.02: \"All members will be required to serve a maximum of 200 shifts on a rescue.\" Firefighters go on the Rescue Assignment List automatically after their 12-month probation.",
+     "opts": [
+      "200",
+      "100",
+      "150",
+      "250"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "You're a rover. Per M.P. 104.02, when do you call South Shift Command for your station assignment?",
+     "a": "Between 0615 and 0645 on the morning of your shift.",
+     "why": "M.P. 104.02: \"Roving personnel are required to call the South Shift Command between 0615 to 0645 hours on the morning of their shift to receive their station assignment.\"",
+     "opts": [
+      "Between 0615 and 0645 that morning",
+      "Between 0530 and 0600 that morning",
+      "Between 0700 and 0730 that morning",
+      "By 2000 the night before the shift"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Per M.P. 104.02, members who request out-of-class assignments may keep their permanent assignment but must agree to rove out-of-class for at least how long?",
+     "a": "At least 90 days.",
+     "why": "M.P. 104.02: Members requesting out-of-class \"may maintain a vested interest in their permanent assignment but must agree to rove in an out-of-class position for at least 90 days.\"",
+     "opts": [
+      "90 days",
+      "30 days",
+      "6 months",
+      "1 year"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Two eligible members request a station assignment trade. Per M.P. 104.02, what can stop the trade during the advertising period?",
+     "a": "A properly filed Request for Transfer from anyone with more seniority than either party.",
+     "why": "M.P. 104.02: Both positions are advertised; any member who files a Request for Transfer \"who has more seniority than EITHER party requesting the trade will effectively veto the trade.\"",
+     "opts": [
+      "A transfer request from anyone senior to either party",
+      "An objection from either member's Battalion Chief",
+      "A transfer request from anyone senior to both parties",
+      "A shift count showing a shift is out of balance"
+     ],
+     "src": "M.P. 104.02"
+    },
+    {
+     "q": "Per M.P. 104.02A, what formula is used for time off when changing shifts?",
+     "a": "Two hours off for each hour on duty.",
+     "why": "M.P. 104.02A: The changing-shifts table examples \"allow an employee to have two hours off for each hour on duty,\" and the formula is also a guideline for staff-to-line transfers.",
+     "opts": [
+      "Two hours off for each hour on duty",
+      "One hour off for each hour on duty",
+      "Three hours off for each hour on duty",
+      "A flat 24 hours off before the new shift"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "You're moving from A shift to B shift. Per M.P. 104.02A, how does the changeover work?",
+     "a": "Work A shift until 1600 (8 hours), take 16 hours off, and report to B shift at 0800.",
+     "why": "M.P. 104.02A: Per the table, A to B: \"A Shift until 1600 Hours (8 Hours),\" 16 hours off, report to \"B Shift at 0800 Hours.\" A to C works until 2400 with 32 hours off.",
+     "opts": [
+      "Work A until 1600, then report to B shift at 0800",
+      "Work A until 2400, then report to B shift at 0800",
+      "Work A until 1200, then report to B shift at 0800",
+      "Work all of A shift, then start B shift at 0800"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "Per M.P. 104.02A, for staff positions filled by interview (e.g., PIO, DTO, Car 957 Captains), how is a tie in interview scores broken?",
+     "a": "By seniority.",
+     "why": "M.P. 104.02A: Candidates are ranked by interview score; \"In the event of a tie, seniority will be used as the tiebreaker to establish the final eligibility list.\"",
+     "opts": [
+      "By seniority",
+      "By a second interview",
+      "By the Fire Chief's choice",
+      "By promotional list rank"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "Per M.P. 104.02A, which is a requirement for the Department Training Officer (DTO) position?",
+     "a": "Having completed one class as a temporary RTO (and being a senior Fire Captain).",
+     "why": "M.P. 104.02A: DTO requirements: \"Senior Fire Captain\" and \"Must have completed one class as a temporary RTO.\"",
+     "opts": [
+      "Completed one class as a temporary RTO",
+      "At least five years as a Fire Captain",
+      "NFPA 1041 Instructor II certification",
+      "Two years as a Recruit Training Officer"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "Per M.P. 104.02A, how much paramedic experience does the EMS Staff Captain position require?",
+     "a": "Three years as a paramedic.",
+     "why": "M.P. 104.02A: EMS Staff Captain requirements: \"Three years' experience as a paramedic\" and seniority as a Fire Captain.",
+     "opts": [
+      "3 years",
+      "2 years",
+      "5 years",
+      "1 year"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "Per M.P. 104.02A, how long must an Aviation Training Captain have been ARFF certified?",
+     "a": "At least one year (two years preferred), with a 2-year commitment to the position.",
+     "why": "M.P. 104.02A: Requirements include \"ARFF certified for minimum one year (2 years is preferred)\" and a \"2-year commitment to the position.\"",
+     "opts": [
+      "At least 1 year (2 preferred)",
+      "At least 2 years (3 preferred)",
+      "At least 6 months (1 year preferred)",
+      "At least 3 years (5 preferred)"
+     ],
+     "src": "M.P. 104.02A"
+    },
+    {
+     "q": "Per M.P. 104.02B, how much transitional work can the HWC initially assign?",
+     "a": "Up to three months.",
+     "why": "M.P. 104.02B: \"The HWC can initially assign up to three months of transitional work\"; the HWC section head may approve another three months.",
+     "opts": [
+      "Up to 3 months",
+      "Up to 30 days",
+      "Up to 6 months",
+      "Up to 1 year"
+     ],
+     "src": "M.P. 104.02B"
+    },
+    {
+     "q": "Per M.P. 104.02B, who reviews requests to extend transitional work beyond six months?",
+     "a": "The TW Review Committee (coordinated through the HWC and Fire HR).",
+     "why": "M.P. 104.02B: \"In some circumstances, transitional work may exceed six months. Extension requests must be reviewed by the TW Review Committee.\"",
+     "opts": [
+      "The TW Review Committee",
+      "The HWC section head alone",
+      "The Operations Assistant Chief",
+      "Your treating provider"
+     ],
+     "src": "M.P. 104.02B"
+    },
+    {
+     "q": "Your doctor releases you from \"no work\" to transitional work. Per M.P. 104.02B, when must you contact the HWC?",
+     "a": "No later than 1 business day after the release.",
+     "why": "M.P. 104.02B: The member must contact the HWC \"no later than 1 business day after the release\"; otherwise hours after that day are charged to personal leave.",
+     "opts": [
+      "Within 1 business day",
+      "Within 3 business days",
+      "At your next shift",
+      "Within 5 calendar days"
+     ],
+     "src": "M.P. 104.02B"
+    },
+    {
+     "q": "Per M.P. 104.02B, what happens if a member declines a Transitional Work Assignment?",
+     "a": "They must use personal leave.",
+     "why": "M.P. 104.02B: \"If a member declines a TWA, the member will be required to use personal leave.\"",
+     "opts": [
+      "They must use personal leave",
+      "They stay on industrial leave",
+      "They're placed on unpaid leave",
+      "They return to full duty"
+     ],
+     "src": "M.P. 104.02B"
+    },
+    {
+     "q": "Per M.P. 104.02B, after how long out of the field must a member complete the PFD Re-Entry Program before returning to their truck?",
+     "a": "Six months or more.",
+     "why": "M.P. 104.02B: \"If the member has been out of the field/assignment for six months or more, they must complete the PFD Re-Entry Program.\"",
+     "opts": [
+      "6 months or more",
+      "90 days or more",
+      "12 months or more",
+      "30 days or more"
+     ],
+     "src": "M.P. 104.02B"
+    },
+    {
+     "q": "Per M.P. 104.02C, a special assignment request goes to whom, and how far ahead?",
+     "a": "In writing to ERSO, at least two weeks before the assignment is needed.",
+     "why": "M.P. 104.02C: Requests are submitted in writing to the ERSO for approval and \"should be made at least two weeks prior to the needed assignment.\"",
+     "opts": [
+      "To ERSO, at least two weeks ahead",
+      "To the Fire Chief, at least 30 days ahead",
+      "To ERSO, at least one week ahead",
+      "To Fire HR, at least two weeks ahead"
+     ],
+     "src": "M.P. 104.02C"
+    },
+    {
+     "q": "Per M.P. 104.02C, whose approval does a special assignment request need before the position is filled?",
+     "a": "The Operations Division Head's and the Fire Chief's.",
+     "why": "M.P. 104.02C: Requests go to ERSO \"for the Operations Division Head's and Fire Chief's approval,\" and final approval \"MUST BE OBTAINED PRIOR TO FILLING THE POSITION.\"",
+     "opts": [
+      "The Operations Division Head and Fire Chief",
+      "The ERSO Deputy Chief and Local 493",
+      "The Personnel Officer and the Fire Chief",
+      "Only the requesting Division Head"
+     ],
+     "src": "M.P. 104.02C"
+    },
+    {
+     "q": "After a promotion, you'd directly supervise your spouse's brother. Per M.P. 104.02D, what applies?",
+     "a": "It isn't permitted; supervisors will try to reassign or transfer one of you.",
+     "why": "M.P. 104.02D: A spouse's brother is a \"relative,\" and members \"shall not be permitted to directly supervise a relative.\" Supervisors will try to reassign or transfer members in that situation.",
+     "opts": [
+      "Not allowed; one of you will be reassigned",
+      "Allowed if you disclose it to your BC",
+      "Allowed; in-laws are not covered relatives",
+      "Allowed if someone else does his evaluations"
+     ],
+     "src": "M.P. 104.02D"
+    },
+    {
+     "q": "You're on a promotional interview panel and your sister is a candidate. Per M.P. 104.02D, what must you do?",
+     "a": "Disqualify yourself and notify the Personnel Control Officer in writing.",
+     "why": "M.P. 104.02D: Members who interview or promote \"must disqualify themselves if a relative is a candidate\" and notify the Personnel Control Officer in writing, disclosing the relationship.",
+     "opts": [
+      "Step off and notify the Personnel Control Officer in writing",
+      "Stay on the panel but don't score that candidate",
+      "Tell the panel chair verbally and keep going",
+      "Step off and tell the Fire Chief verbally"
+     ],
+     "src": "M.P. 104.02D"
+    },
+    {
+     "q": "Per M.P. 104.02E, how are Field Incident Technician (FIT) openings first offered?",
+     "a": "In ranking order on the current Battalion Chief promotional list (not by seniority).",
+     "why": "M.P. 104.02E: FIT is a management-development position; openings are \"offered in ranking order on the current Battalion Chief's promotional list.\" Assignments \"will NOT be based on seniority.\"",
+     "opts": [
+      "By rank order on the current BC promotional list",
+      "By seniority in rank among interested Captains",
+      "By Captain seniority, then interview scores",
+      "By order on the out-of-class BC list"
+     ],
+     "src": "M.P. 104.02E"
+    },
+    {
+     "q": "Per M.P. 104.02E, a Captain who didn't take the current BC process may be considered for FIT if committed to the next one and has how much Operations crew experience?",
+     "a": "Four years of experience working and managing crews in Operations.",
+     "why": "M.P. 104.02E: Such candidates \"must have 4 years of experience working and managing crews in Operations.\"",
+     "opts": [
+      "4 years",
+      "2 years",
+      "5 years",
+      "3 years"
+     ],
+     "src": "M.P. 104.02E"
+    },
+    {
+     "q": "You were recently awarded a TRT position. Per M.P. 104.02E, when can you be considered for a FIT position?",
+     "a": "After satisfying your 2-year obligation to that Special Operations position.",
+     "why": "M.P. 104.02E: Members awarded a Special Operations certification \"will not be eligible for a FIT position until they have satisfied their 2-year obligation\" per their Letter of Commitment.",
+     "opts": [
+      "After your 2-year Special Ops obligation",
+      "After your 6-month assignment obligation",
+      "After your 1-year Special Ops obligation",
+      "After your 3-year Special Ops obligation"
+     ],
+     "src": "M.P. 104.02E"
+    },
+    {
+     "q": "Per M.P. 104.02F, what is the first factor in recruit class seniority?",
+     "a": "Fire Recruit Classification date.",
+     "why": "M.P. 104.02F: The recruit class seniority formula starts with \"1. Fire Recruit Classification date,\" then City employment date, Firefighter classification date, and test/evaluation scores.",
+     "opts": [
+      "Fire Recruit Classification date",
+      "City of Phoenix date of hire (DOH)",
+      "Recruit entrance exam score",
+      "Recruit interview score"
+     ],
+     "src": "M.P. 104.02F"
+    },
+    {
+     "q": "Per M.P. 104.02F, how is seniority determined for Engineer and Captain station assignments?",
+     "a": "By placement on the promotional list.",
+     "why": "M.P. 104.02F: For both \"Engineer (Station Assignments)\" and \"Captain (Station Assignments)\" the formula is \"1. Placement on Promotional list.\" Vacation uses promoted classification date first.",
+     "opts": [
+      "Placement on the promotional list",
+      "Promoted classification date",
+      "City of Phoenix date of hire (DOH)",
+      "Recruit class seniority"
+     ],
+     "src": "M.P. 104.02F"
+    },
+    {
+     "q": "Per M.P. 104.02G, a full-time C957 must hold which certifications?",
+     "a": "Haz Mat Technician, Technical Rescue Technician, and Air Rescue Operations Crew Chief.",
+     "why": "M.P. 104.02G: Full-time C957 personnel \"will be certified and maintain their certifications as a Hazardous Materials Technician (Haz Mat), Technical Rescue Technician (TRT), and Air Rescue Operations Crew Chief.\"",
+     "opts": [
+      "Haz Mat Tech, TRT, and Air Rescue Crew Chief",
+      "Haz Mat Tech, TRT, and ARFF",
+      "Haz Mat Tech, Paramedic, and TRT",
+      "TRT, ARFF, and Air Rescue Technician"
+     ],
+     "src": "M.P. 104.02G"
+    },
+    {
+     "q": "Per M.P. 104.02G, how is a full-time C957 vacancy filled?",
+     "a": "From the back-up C957 personnel, by seniority in rank (Captain).",
+     "why": "M.P. 104.02G: \"Any vacancy of a C957 position will be filled from the 'back up' C957 personnel,\" selected \"via Seniority in rank (Captain).\"",
+     "opts": [
+      "From back-up C957 members by seniority in rank",
+      "From any Captain by interview score",
+      "From the current BC promotional list",
+      "From back-up C957 members by interview score"
+     ],
+     "src": "M.P. 104.02G"
+    },
+    {
+     "q": "Per M.P. 104.02G, what certification must a candidate hold to apply for a back-up C957 position?",
+     "a": "A current Haz Mat or TRT certification (with CE requirements met).",
+     "why": "M.P. 104.02G: Candidates \"must possess either a current Haz Mat or TRT certification and have met the continuing education (CE) requirements.\" Back-ups are not trained as Crew Chiefs.",
+     "opts": [
+      "A current Haz Mat or TRT certification",
+      "Both Haz Mat and TRT certifications",
+      "An Air Rescue Crew Chief certification",
+      "Paramedic plus a TRT certification"
+     ],
+     "src": "M.P. 104.02G"
+    },
+    {
+     "q": "Per M.P. 104.03, by when must you sign up for (or remove yourself from) constant staffing in TeleStaff/WebStaff?",
+     "a": "Before 0500 hours on the day you would be hired.",
+     "why": "M.P. 104.03: Members must \"Sign up/remove their name for Constant Staffing utilizing TeleStaff/WebStaff prior to 0500 hours the day they would be hired.\"",
+     "opts": [
+      "Before 0500 the day you'd be hired",
+      "Before 0600 the day you'd be hired",
+      "Before 2000 the night before",
+      "Before 0730 the day you'd be hired"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03, how is a constant staffing refusal counted?",
+     "a": "As 1.5 opportunities, effective immediately.",
+     "why": "M.P. 104.03: \"Each refusal counts as 1.5 opportunities (on the 24-hr Constant Staffing list and the PEAK-TIME Rescue Constant Staffing list) and that penalty is immediate.\"",
+     "opts": [
+      "As 1.5 opportunities, effective at once",
+      "As 2 opportunities, at the next reset",
+      "As 1 opportunity, effective at once",
+      "As 1.5 opportunities, at the next reversal"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03, how quickly must you respond to a South Shift Command page or call about constant staffing?",
+     "a": "Within 10 minutes.",
+     "why": "M.P. 104.03: Members must \"Respond as quickly as possible (within 10 minutes) to pages or phone calls from South Shift Command personnel involving Constant Staffing.\"",
+     "opts": [
+      "Within 10 minutes",
+      "Within 5 minutes",
+      "Within 15 minutes",
+      "Within 30 minutes"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03, a new member becomes eligible to constant staff how long after entering the academy?",
+     "a": "Six months after their date of entry into the academy.",
+     "why": "M.P. 104.03: Members are eligible provided \"It has been six months since their date of entry into the academy,\" among other conditions.",
+     "opts": [
+      "6 months",
+      "3 months",
+      "12 months",
+      "18 months"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03, in what order are daily vacant positions normally filled?",
+     "a": "Rovers, current promotional lists, out-of-class requests, then constant staff.",
+     "why": "M.P. 104.03: Vacancies are filled \"1. Rovers. 2. Current promotional lists. 3. Requests to act out-of-class (if qualified). 4. Constant Staff.\" Specialty positions may be filled out of order.",
+     "opts": [
+      "Rovers, promo lists, out-of-class, constant staff",
+      "Constant staff, rovers, promo lists, out-of-class",
+      "Promo lists, rovers, constant staff, out-of-class",
+      "Rovers, out-of-class, constant staff, promo lists"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "You're off duty and signed up for constant staffing. Per M.P. 104.03, when are you released from your obligation to stay reachable?",
+     "a": "At 0730 hours.",
+     "why": "M.P. 104.03: Off-duty members \"are released of their obligation at 0730 hours,\" and no refusal is given to off-duty members after 0730. On-duty members may be held until 0800.",
+     "opts": [
+      "0730 hours",
+      "0800 hours",
+      "0700 hours",
+      "0600 hours"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03, how are Holiday Constant Staffing Lists (July 4th, Thanksgiving, Christmas, etc.) handled?",
+     "a": "They are separate lists with separate counts and run for three years.",
+     "why": "M.P. 104.03: Holiday lists \"are separate from the regular Constant Staffing lists and the counts will be separate,\" they \"will run for three years,\" and refusals still apply.",
+     "opts": [
+      "Separate lists and counts that run three years",
+      "Same lists and counts as regular staffing",
+      "Separate lists that reset every year",
+      "Separate lists with no refusals charged"
+     ],
+     "src": "M.P. 104.03"
+    },
+    {
+     "q": "Per M.P. 104.03A, how long is a Command Officer Emergency Services shift?",
+     "a": "12 or 24 hours.",
+     "why": "M.P. 104.03A: \"An Emergency Services shift for Command Officers shall be 12 or 24 hours.\"",
+     "opts": [
+      "12 or 24 hours",
+      "8 or 12 hours",
+      "24 hours only",
+      "10 or 14 hours"
+     ],
+     "src": "M.P. 104.03A"
+    },
+    {
+     "q": "Per M.P. 104.03A, in the annual May survey, Command Officers choose to work how many ES shifts for the next fiscal year?",
+     "a": "9 or 13 shifts.",
+     "why": "M.P. 104.03A: The survey asks \"how many shifts they will work (9 or 13).\" Shifts left by 9-shift officers are offered by seniority, creating a 14-shift group.",
+     "opts": [
+      "9 or 13",
+      "6 or 12",
+      "10 or 14",
+      "12 or 24"
+     ],
+     "src": "M.P. 104.03A"
+    },
+    {
+     "q": "Per M.P. 104.03A, a Command Officer vacancy is still unfilled after text notifications. By what time does the normal staffing process take over?",
+     "a": "0630.",
+     "why": "M.P. 104.03A: \"If no command officers are available to work by 0630, the normal staffing process will be used to fill the shift.\"",
+     "opts": [
+      "0630",
+      "0600",
+      "0700",
+      "0800"
+     ],
+     "src": "M.P. 104.03A"
+    },
+    {
+     "q": "Per M.P. 104.03B, how many Emergency Reserve days is each member awarded per quarter?",
+     "a": "Two days per quarter.",
+     "why": "M.P. 104.03B: \"Every member, regardless of assignment and rank, will bid on, and then be awarded, 2-days within a given quarter\" for Emergency Reserve staffing.",
+     "opts": [
+      "2",
+      "1",
+      "3",
+      "4"
+     ],
+     "src": "M.P. 104.03B"
+    },
+    {
+     "q": "Per M.P. 104.03B, during what hours must you be available for staffing on your Emergency Reserve day?",
+     "a": "0800 to 1100.",
+     "why": "M.P. 104.03B: \"Members must be available for staffing emergency apparatus from 0800 to 1100 on the day of their scheduled Emergency Reserve Program Day.\"",
+     "opts": [
+      "0800 to 1100",
+      "0600 to 0800",
+      "0800 to 1700",
+      "0500 to 0730"
+     ],
+     "src": "M.P. 104.03B"
+    },
+    {
+     "q": "An emergency comes up and you can't make your Emergency Reserve day. Per M.P. 104.03B, what can you do?",
+     "a": "Trade like-for-like with another member (once per quarter), telling SSC 1 shift before.",
+     "why": "M.P. 104.03B: Members may \"trade days with another member in a like-for-like manner one time per quarter,\" made and communicated to SSC \"1 shift prior.\"",
+     "opts": [
+      "Trade like-for-like once a quarter; tell SSC 1 shift ahead",
+      "Trade with anyone as often as needed; tell ERSO by 0500",
+      "Call SSC by 0800 that day and you're excused",
+      "Get your BC's approval and ERSO reassigns it"
+     ],
+     "src": "M.P. 104.03B"
+    },
+    {
+     "q": "You have vacation scheduled on your awarded Emergency Reserve day. Per M.P. 104.03B, are you excused?",
+     "a": "No. Vacation and other leave do not excuse the commitment.",
+     "why": "M.P. 104.03B: The program is mandatory; \"Vacations, partial leave, Local 493 Days, or any other leave type does not excuse a member from their Emergency Reserve commitment.\"",
+     "opts": [
+      "No; leave doesn't excuse the commitment",
+      "Yes; vacation excuses it automatically",
+      "Yes, if the vacation was won at auction",
+      "Only if ERSO approves it in advance"
+     ],
+     "src": "M.P. 104.03B"
+    },
+    {
+     "q": "You choose to constant staff on your Emergency Reserve day. Per M.P. 104.03B, what happens?",
+     "a": "It fulfills your commitment and you get an opportunity factor of 1.",
+     "why": "M.P. 104.03B: Members can constant staff on their ER day; a member who \"chose to constant staff that day\" fulfills the commitment \"and will be awarded an opportunity factor of 1.\"",
+     "opts": [
+      "It counts, and you get an opportunity factor of 1",
+      "Not allowed; you must stay free for ER staffing",
+      "It counts, with no opportunity factor added",
+      "You get an opportunity factor of 2 for both"
+     ],
+     "src": "M.P. 104.03B"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "103.01: vacation accrual table row for 20+ years is garbled in the PDF text ('20 yrs. 1 mo. To 15 21 ...'); no card uses the accrual table.",
+  "103.04: internal conflict - Definition says LTD is 66-2/3 percent of basic monthly salary, but Amount says 50 percent. No card tests the percentage.",
+  "103.07 vs 104.03B: 103.07 says being unable to work an ERP day because of the max-hours rule 'will result in an ERP refusal', while 104.03B says such a day 'will be reassigned based on organizational needs'. No card tests this point.",
+  "103.02C: text contains leftover parenthetical/strikethrough fragments (e.g., '(within five (5) days after receipt of a letter from the) before returning'); cards use only the clear 30-day rules.",
+  "103.02F: MP title is 'Alternate Assignment/Industrial Review Committee', but 103.02E and 104.02B call it the 'Transitional Work (Assignment) Review Committee'. 103.02B revision date reads '0/24'.",
+  "104.03 (rev. 09/09) and 104.01/104.01A/104.02D (2008-2014) are old revisions; 104.02C and 104.02G cite details 'as described in M.P. 104.02' (form 90-81D, CE requirements) that 104.02 does not contain.",
+  "104.02A is mostly staff job descriptions; cards cover the shift-change formula, interview tiebreak, and a few position requirements only."
+ ]
+}
