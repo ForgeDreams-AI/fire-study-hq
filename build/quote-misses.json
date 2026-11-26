@@ -1,0 +1,272 @@
+[
+ {
+  "file": "v1-102.json",
+  "src": "M.P. 102.02",
+  "q": "Per M.P. 102.02, which patches may be printed on a Class C fatigue shirt?",
+  "quote": "\"Paramedic Patch – required for paramedics on the right sleeve. American Flag – permitted (optional) on the left sleeve.\"",
+  "missing": [
+   "paramedic patch - required for paramedics on the right sleeve. american flag - permitted (optional) on the left sleeve"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 103.02A",
+  "q": "Per M.P. 103.02A, what is the maximum major emergency sick leave for a 56-hour member?",
+  "quote": "\"Three (3) shifts plus one (1) shift for out-of-state travel for 56-hour members\"",
+  "missing": [
+   "three (3) shifts plus one (1) shift for out-of-state travel for 56-hour members"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 103.02B",
+  "q": "Per M.P. 103.02B, how much bereavement leave is a 56-hour member allowed?",
+  "quote": "\"Two (2) shifts, plus one (1) shift for out-of-state travel will be allowed for 56-hour employees.\"",
+  "missing": [
+   "two (2) shifts, plus one (1) shift for out-of-state travel will be allowed for 56-hour employees"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 103.02B",
+  "q": "Your aunt dies, and she is not immediate family under M.P. 103.02B. What leave can you request?",
+  "quote": "\"For family members who are not considered immediate family, Emergency Vacation time may be requested through the On Duty South Shift Commander.\"",
+  "missing": [
+   "for family members who are not considered immediate family, emergency vacation time may be requested through the on duty south shift commander"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 103.06",
+  "q": "You're treated in an emergency room for an after-hours industrial injury. Per M.P. 103.06, when must you report to the HWC?",
+  "quote": "\"The member must report to the Health and Wellness Center on the next business day for evaluation\"",
+  "missing": [
+   "the member must report to the health and wellness center on the next business day for evaluation"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 104.02A",
+  "q": "You're moving from A shift to B shift. Per M.P. 104.02A, how does the changeover work?",
+  "quote": "\"A Shift until 1600 Hours (8 Hours),\"",
+  "missing": [
+   "a shift until 1600 hours (8 hours)"
+  ]
+ },
+ {
+  "file": "v1-103-104.json",
+  "src": "M.P. 104.02A",
+  "q": "You're moving from A shift to B shift. Per M.P. 104.02A, how does the changeover work?",
+  "quote": "\"B Shift at 0800 Hours.\"",
+  "missing": [
+   "b shift at 0800 hours"
+  ]
+ },
+ {
+  "file": "v1-105.json",
+  "src": "M.P. 105.01A",
+  "q": "Per M.P. 105.01A, when may a Peer Support Team member break confidentiality?",
+  "quote": "\"Peers will not break confidentiality unless the person is a danger to himself/herself or to others.\"",
+  "missing": [
+   "peers will not break confidentiality unless the person is a danger to himself/herself or to others"
+  ]
+ },
+ {
+  "file": "v1-105.json",
+  "src": "M.P. 105.02C",
+  "q": "Per M.P. 105.02C, how often should patient updates on an injured member go out through the Fire/Help Desk?",
+  "quote": "\"should be sent via E-mail through the Fire/Help Desk every shift that the ill or injured member would have been on duty.\"",
+  "missing": [
+   "should be sent via e-mail through the fire/help desk every shift that the ill or injured member would have been on duty"
+  ]
+ },
+ {
+  "file": "v1-105.json",
+  "src": "M.P. 105.04",
+  "q": "Per M.P. 105.04, no Pension Board candidate gets 50% plus one vote. What happens?",
+  "quote": "\"A run-off election will be held between the two candidates receiving the most votes. If tied, selection will be determined by a coin toss.\"",
+  "missing": [
+   "a run-off election will be held between the two candidates receiving the most votes. if tied, selection will be determined by a coin toss"
+  ]
+ },
+ {
+  "file": "v1-105.json",
+  "src": "M.P. 105.06",
+  "q": "Per M.P. 105.06, what must the log entry show before a personnel file is furnished?",
+  "quote": "\"date, file name and rank, requestors name and rank.\"",
+  "missing": [
+   "date, file name and rank, requestors name and rank"
+  ]
+ },
+ {
+  "file": "v1-106-111.json",
+  "src": "M.P. 107.03",
+  "q": "Per M.P. 107.03, you want to solicit about $75 in food from a local store for a neighborhood event. What notification is required first?",
+  "quote": "\"Employees will notify their first-line supervisor of the need for donations prior to contacting citizens and/or businesses.\"",
+  "missing": [
+   "employees will notify their first-line supervisor of the need for donations prior to contacting citizens and/or businesses"
+  ]
+ },
+ {
+  "file": "v1-106-111.json",
+  "src": "M.P. 107.03",
+  "q": "Per M.P. 107.03, who must approve soliciting goods or services valued at $101 to $499, before contact with the donor?",
+  "quote": "\"The Deputy Chief / Section Administrator will be notified and must approve the solicitation\"",
+  "missing": [
+   "the deputy chief / section administrator will be notified and must approve the solicitation"
+  ]
+ },
+ {
+  "file": "v1-106-111.json",
+  "src": "M.P. 107.03",
+  "q": "Per M.P. 107.03, what approval is needed to solicit goods or services valued at $500 or higher?",
+  "quote": "\"Any solicitation for goods or services valued at $500 or higher requires prior review by the Contribution/Solicitation Review Committee and approval from the Fire Chief or designee.\"",
+  "missing": [
+   "any solicitation for goods or services valued at $500 or higher requires prior review by the contribution/solicitation review committee and approval from the fire chief or designee"
+  ]
+ },
+ {
+  "file": "v1-106-111.json",
+  "src": "M.P. 107.03",
+  "q": "Per M.P. 107.03, a citizen at a station offers your crew a cash donation. What do you do?",
+  "quote": "\"Donations of cash or any form of money will not be accepted; employees will refer individuals who desire to do this to the Committee Chair.\"",
+  "missing": [
+   "donations of cash or any form of money will not be accepted employees will refer individuals who desire to do this to the committee chair"
+  ]
+ },
+ {
+  "file": "v1-106-111.json",
+  "src": "M.P. 110.15",
+  "q": "Per M.P. 110.15, a significant on-duty accident occurs. Who ensures a fact-finding effort is made to collect information about it?",
+  "quote": "\"When significant on-duty accident, injury or exposure happens, the on-duty Safety Officer will ensure that a fact-finding effort is made to collect pertinent information.\"",
+  "missing": [
+   "when significant on-duty accident, injury or exposure happens, the on-duty safety officer will ensure that a fact-finding effort is made to collect pertinent information"
+  ]
+ },
+ {
+  "file": "v2-201.json",
+  "src": "M.P. 201.01F",
+  "q": "A Mayday is declared on a 3-1 assignment. Per M.P. 201.01F, how does dispatch upgrade it?",
+  "quote": "\"If 3-1 incident, then balance to 1st Alarm Mayday. If 1st Alarm incident, then to 2nd Alarm Mayday (up to 9 Alarms).\"",
+  "missing": [
+   "if 3-1 incident, then balance to 1st alarm mayday. if 1st alarm incident, then to 2nd alarm mayday (up to 9 alarms)"
+  ]
+ },
+ {
+  "file": "v2-204-207.json",
+  "src": "M.P. 204.01",
+  "q": "Per M.P. 204.01, what reference SHALL first-arriving companies use to spot apparatus a safe distance from a hazmat incident?",
+  "quote": "\"The DOT ERG shall be used by the first arriving companies as a resource for spotting apparatus safe distance from the incident.\"",
+  "missing": [
+   "the dot erg shall be used by the first arriving companies as a resource for spotting apparatus safe distance from the incident"
+  ]
+ },
+ {
+  "file": "v2-204-207.json",
+  "src": "M.P. 204.01C",
+  "q": "Per M.P. 204.01C, where should crews start when removing ignition sources at a release?",
+  "quote": "\"Start down wind. Eliminate all sources of heat, spark, friction.\"",
+  "missing": [
+   "start down wind. eliminate all sources of heat, spark, friction"
+  ]
+ },
+ {
+  "file": "v2-204-207.json",
+  "src": "M.P. 207.01A",
+  "q": "You suspect anthrax at a WMD call. Per M.P. 207.01A, how do you refer to the agent on the radio?",
+  "quote": "\"DO NOT USE SPECIFIC NAME OF SUSPECTED AGENT OVER THE RADIO; USE ONLY 'BIOLOGICAL AGENT' OR 'UNKNOWN AGENT'.\"",
+  "missing": [
+   "do not use specific name of suspected agent over the radio use only biological agent or unknown agent"
+  ]
+ },
+ {
+  "file": "v2-205a.json",
+  "src": "M.P. 205.04",
+  "q": "In the City of Phoenix, per M.P. 205.04, which call does NOT get a Rescue dispatched initially?",
+  "quote": "\"gunshot wound, stabbing, auto accident that appears serious, car/pedestrian accident, code and drowning,\"",
+  "missing": [
+   "gunshot wound, stabbing, auto accident that appears serious, car/pedestrian accident, code and drowning"
+  ]
+ },
+ {
+  "file": "v2-205a.json",
+  "src": "M.P. 205.07",
+  "q": "Per M.P. 205.07, how far from an involved building should apparatus generally be positioned, even with nothing showing?",
+  "quote": "\"Apparatus should generally be positioned at least 30 ft. away from involved buildings, even with nothing showing.\"",
+  "missing": [
+   "apparatus should generally be positioned at least 30 ft. away from involved buildings, even with nothing showing"
+  ]
+ },
+ {
+  "file": "v2-205a.json",
+  "src": "M.P. 205.08",
+  "q": "Code 3, you come up on a school bus with its stop sign out. Per M.P. 205.08, what do you do?",
+  "quote": "\"not proceed until the stop sign is fully retracted or removed and all pedestrian traffic is confirmed clear by both the Driver and Co-driver.\"",
+  "missing": [
+   "not proceed until the stop sign is fully retracted or removed and all pedestrian traffic is confirmed clear by both the driver and co-driver"
+  ]
+ },
+ {
+  "file": "v2-205b.json",
+  "src": "M.P. 205.14",
+  "q": "Per M.P. 205.14, which units respond automatically to flammable liquid incidents anywhere in the city?",
+  "quote": "\"Foam 34 and/or 54 will be dispatched automatically to all flammable liquid incidents\"",
+  "missing": [
+   "foam 34 and/or 54 will be dispatched automatically to all flammable liquid incidents"
+  ]
+ },
+ {
+  "file": "v2-205b.json",
+  "src": "M.P. 205.20B",
+  "q": "Per M.P. 205.20B, what hose line size is required at a residential BESS?",
+  "quote": "\"A charged hose line will be in place (1 3/4\"",
+  "missing": [
+   "a charged hose line will be in place (1 3/4"
+  ]
+ },
+ {
+  "file": "v2-206.json",
+  "src": "M.P. 206.01",
+  "q": "You're treating a patient in a home when a bystander pulls a knife. Per M.P. 206.01 (run, hide, fight), what is your first priority?",
+  "quote": "\"only as an absolute last resort.\"",
+  "missing": [
+   "only as an absolute last resort"
+  ]
+ },
+ {
+  "file": "v2-206.json",
+  "src": "M.P. 206.14",
+  "q": "You arrive to a bee attack with a victim down in a yard. How many crew members don full structural PPE with SCBA?",
+  "quote": "\"Three crew members shall don full structural firefighting [PPE] including SCBA,\"",
+  "missing": [
+   "three crew members shall don full structural firefighting ppe including scba"
+  ]
+ },
+ {
+  "file": "v2-206.json",
+  "src": "M.P. 206.14",
+  "q": "What hoseline and pattern does M.P. 206.14 call for when rescuing a bee attack victim?",
+  "quote": "\" line is pulled with \"",
+  "missing": [
+   "line is pulled with"
+  ]
+ },
+ {
+  "file": "v2-206.json",
+  "src": "M.P. 206.14",
+  "q": "What hoseline and pattern does M.P. 206.14 call for when rescuing a bee attack victim?",
+  "quote": "\" while picking up the patient and retreating.\"",
+  "missing": [
+   "while picking up the patient and retreating"
+  ]
+ },
+ {
+  "file": "v2-206.json",
+  "src": "M.P. 206.23",
+  "q": "At an active shooter, the IC declares MCI 2. Besides the scene resources, where do an ALS unit and command vehicle go?",
+  "quote": "\"one [ALS] unit and command vehicle (if available) to the three closest hospitals.\"",
+  "missing": [
+   "one als unit and command vehicle (if available) to the three closest hospitals"
+  ]
+ }
+]

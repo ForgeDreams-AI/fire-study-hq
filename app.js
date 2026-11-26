@@ -354,7 +354,7 @@ var SUBTAB_PARENT = { nfpa1700: 'study', ulfsri: 'study' };
 /* Hubs: drill-down groups over SECTIONS (data.js untouched). Fire merges Academy + Probation Year. */
 var HUBS = [
   { title: 'Academy', sub: 'Fire foundations & PFD culture', icon: 'flame', sections: [0] },
-  { title: 'Probation', sub: 'MPs, radio, rotations', icon: 'layers', sections: [1] },
+  { title: 'Probation', sub: 'Volume I & II MPs, radio, rotations', icon: 'layers', sections: [1, 4] },
   { title: 'Medical', sub: 'EMT patient care', icon: 'cross', sections: [2] },
   { title: 'Paramedic', sub: 'Candidate exam', icon: 'book', sections: [3] }
 ];

@@ -38,6 +38,7 @@ Live: https://forgedreams-ai.github.io/fire-study-hq/
 | `tools/check.js` | Pre-deploy checks (also run by GitHub Actions on every push). |
 | `assets/scenarios/inside/` | CC0 interior photos with smoke and fire added (see CREDITS.md; rebuild with `tools/bake-inside.js`). |
 | `scenes.js` | Drawn interior views for scenarios (door, hallway, fire room, bedroom, stairs) — SVG, no image files. |
+| `tools/mp-coverage.js`, `tools/merge-cards.js`, `tools/verify-quotes.js` | M.P. coverage report; merge card batches from `build/new-cards/` into data.js; check every quoted phrase against its M.P. text. |
 | `tools/mp-watch.js`, `build/mp-index.json` | Weekly M.P. watcher: compares Phoenix's policies page with the saved revision dates and lists the cards that cite any revised M.P. |
 
 ## Editing content

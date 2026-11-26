@@ -303,3 +303,12 @@ The 13 fire scenarios keep going after the first-due calls. Radio traffic from t
 When your attack takes you interior, Ocotillo, House, Gilbert, Ranch and Tile roof now put you inside with drawn views and tap targets: door control, the stairs (two-story), the hallway with fire rolling at the ceiling, the fire room, isolating the bedroom on the search, and taking the victim out. Each is checked against M.P. 202.02B, 202.02C or 202.04. The probie nozzle and search scenarios show the same drawings on their interior beats.
 
 The hallway, fire room and bedroom views are real CC0 interior photos (Wikimedia Commons / Unsplash) with smoke, fire and a victim added for training — credits in assets/scenarios/inside/CREDITS.md, recipe in tools/bake-inside.js. The front door and stairs are still drawings (scenes.js). None of them are the real buildings in the scenarios. **Instructor review wanted** on the interior calls before PFD use.
+
+## Every Volume I and II M.P. (Nov 2026)
+
+1,061 new cards in 23 new topics cover every M.P. on the city's policies page that wasn't in the app yet: Volume I (82 of 82) in a new **PFD Volume I** section under Probation, and Volume II (155 of 156) in Probation Year. The one gap is 202.12D (Positive Pressure Ventilation), which the city lists as "Out For Review" with no text.
+
+- Written only from the M.P. text (build/mp-text, downloaded from phoenix.gov). Every phrase a card quotes was checked against its M.P. word for word (tools/verify-quotes.js); the few that differ only differ by the PDFs' own typos and line breaks.
+- The correct option is the longest on 15% of the new cards (no length giveaway).
+- `node tools/mp-coverage.js` shows coverage by volume; `tools/mp-watch.js` (weekly) flags any of these that get revised.
+- Problems found in the M.P.s themselves (conflicting numbers, outdated references, unreadable pages) are listed in **MP-ISSUES.md**. **Instructor review wanted** before PFD use, especially Volume I policy details that may have changed since the PDFs were posted.
