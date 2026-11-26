@@ -8751,36 +8751,42 @@ var SCENARIOS = [
   }
   function hall() {
     return { label: 'Inside: the hallway', cat: 'sizeup', hotspots: true, best: 0, mp: MP_HALL,
-      q: 'You’re 10 feet down the hall on the line, on your knees. Smoke is down to about 3 feet, fire is rolling across the ceiling out of the doorway on the right, and a bedroom door on the left is closed. Where does your first water go?',
-      view: { kind: 'hall', smoke: 0.5, fire: 3, alt: 'Drawn view: a smoky hallway. On the right an open doorway with fire and flame rolling across the ceiling; on the left a closed bedroom door; a door at the end of the hall; hose line on the floor.', hotspots: [
-        { kind: 'spray', x: 72, y: 13, w: 34, h: 16, label: 'Ceiling at the fire-room doorway', note: 'Short straight-stream bursts at the fire rolling across the ceiling' },
-        { kind: 'spray', x: 50, y: 46, w: 14, h: 20, label: 'Down the hallway', note: 'Wide fog down the hall to push the smoke out ahead of you' },
-        { kind: 'move', x: 19, y: 62, label: 'Closed bedroom door', note: 'Open it and look for victims before any water' },
-        { kind: 'move', x: 22, y: 85, label: 'Front door behind you', note: 'Back out and hit it through the window instead' }] } };
+      q: 'You\u2019re 10 feet down the hall on the line, on your knees. The fire room is at the end of the hall \u2014 fire is rolling out of it across the ceiling toward you. There\u2019s a dark doorway on your left. Where does your first water go?',
+      view: { photo: 'assets/scenarios/inside/hall.jpg', alt: 'Photo of a hallway with smoke added: heavy smoke down from the ceiling, fire glowing in the room at the end of the hall and rolling across the ceiling toward you, a dark doorway on the left.', hotspots: [
+        { kind: 'spray', x: 50, y: 8, w: 56, h: 14, label: 'Ceiling \u2014 the fire rolling toward you', note: 'Short straight-stream bursts at the ceiling, then advance' },
+        { kind: 'spray', x: 51, y: 34, w: 12, h: 16, label: 'Fire room at the end of the hall', note: 'Wide fog down the hall at the fire room from here' },
+        { kind: 'move', x: 26, y: 42, label: 'Doorway on your left', note: 'Duck into that room and look for victims before any water' },
+        { kind: 'move', x: 22, y: 85, label: 'Back out the front door', note: 'Back out and hit it through a window instead' }] } };
   }
   function room(what) {
     return { label: 'Inside: the fire room', cat: 'sizeup', hotspots: true, best: 0, mp: MP_ROOM,
       q: 'At the fire-room doorway. ' + what + ' is burning and fire is rolling across the ceiling toward you. Where do you hit it first?',
-      view: { kind: 'fireroom', smoke: 0.42, fire: 3, alt: 'Drawn view: a living room seen from the doorway. A couch on fire on the right, flame rolling across the ceiling, a window on the back wall, a coffee table, the nozzle in the foreground.', hotspots: [
-        { kind: 'spray', x: 50, y: 13, w: 62, h: 16, label: 'Ceiling and upper walls', note: 'Cool the ceiling and walls first' },
-        { kind: 'spray', x: 66, y: 62, w: 20, h: 18, label: 'Burning couch', note: 'Go straight for the burning couch first' },
-        { kind: 'spray', x: 43, y: 40, w: 16, h: 18, label: 'Window', note: 'Knock the window out with the stream to vent' },
-        { kind: 'move', x: 40, y: 84, label: 'Into the room', note: 'Crawl to the couch before you open the nozzle' }] } };
+      view: { photo: 'assets/scenarios/inside/fireroom.jpg', alt: 'Photo of a living room with fire added: the couch burning, flame climbing the wall, fire rolling across the top of the room under heavy smoke.', hotspots: [
+        { kind: 'spray', x: 50, y: 8, w: 80, h: 14, label: 'Ceiling and upper walls', note: 'Cool the ceiling and walls first' },
+        { kind: 'spray', x: 50, y: 68, w: 44, h: 20, label: 'Burning couch', note: 'Go straight for the burning couch first' },
+        { kind: 'spray', x: 50, y: 86, w: 40, h: 9, label: 'Floor in front of you', note: 'Sweep the floor in front of you first' },
+        { kind: 'move', x: 86, y: 80, label: 'Into the room', note: 'Crawl to the couch before you open the nozzle' }] } };
   }
   function search(who) {
     return { label: 'Inside: search', cat: 'sizeup', hotspots: true, best: 0, mp: MP_ISOLATE,
-      q: 'You’re with ' + who + ' on the search. You crawl into the bedroom next to the fire room; the hall behind you is getting hotter. Tap your first move.',
-      view: { kind: 'bedroom', smoke: 0.5, fire: 1, alt: 'Drawn view: a smoky bedroom. The open bedroom door on the left with orange glow from the hall, a bed, a window on the back wall, a closet on the right.', hotspots: [
-        { kind: 'move', x: 18, y: 58, label: 'Bedroom door (behind you)', note: 'Close it — isolate the room while you search' },
-        { kind: 'move', x: 52, y: 35, label: 'Window', note: 'Break it out to let the smoke go' },
-        { kind: 'move', x: 34, y: 70, label: 'Bed', note: 'Start the search on the bed' },
-        { kind: 'move', x: 81, y: 60, label: 'Closet', note: 'Check the closet first' }] } };
+      q: 'You\u2019re with ' + who + ' on the search. You crawl into the bedroom next to the fire room; the hall behind you is getting hotter. Tap your first move.',
+      view: { photo: 'assets/scenarios/inside/bedroom.jpg', alt: 'Photo of a bedroom with smoke added: smoke banked down from the ceiling, a window with curtains on the left, a lamp, a bed on the right, orange glow from the open door behind you at the lower left.', hotspots: [
+        { kind: 'move', x: 7, y: 86, label: 'Bedroom door (behind you)', note: 'Close it \u2014 isolate the room while you search' },
+        { kind: 'move', x: 17, y: 52, label: 'Window', note: 'Break it out to let the smoke go' },
+        { kind: 'move', x: 70, y: 88, label: 'Bed', note: 'Start the search on the bed' },
+        { kind: 'move', x: 40, y: 72, label: 'Corner by the lamp', note: 'Check the corner by the lamp first' }] } };
   }
   function victim(where, found) {
+    var photo = where === 'window';
     return { label: 'Inside: victim', cat: 'sizeup', hotspots: true, best: 0, mp: MP_VICTIM,
       q: found + ' E1 has knocked the fire down in the hall. Which way do you take them out?',
-      view: { kind: 'bedroom', smoke: 0.35, fire: 1, victim: where, alt: 'Drawn view: a smoky bedroom with a victim lying on the floor' + (where === 'door' ? ' just inside the door' : ' under the window') + '; the bedroom door on the left, window on the back wall, closet on the right.', hotspots: [
-        { kind: 'move', x: 18, y: 50, label: 'Bedroom door → hallway', note: 'Out the way you came — the hall is knocked down' },
+      view: photo ? { photo: 'assets/scenarios/inside/bedroom-victim.jpg', alt: 'Photo of a bedroom with smoke added and a victim lying on the floor under the window.', hotspots: [
+        { kind: 'move', x: 7, y: 70, label: 'Bedroom door \u2192 hallway', note: 'Out the way you came \u2014 the hall is knocked down' },
+        { kind: 'move', x: 17, y: 45, label: 'Window', note: 'Out the window to a ground ladder' },
+        { kind: 'move', x: 36, y: 74, label: 'Stay with them', note: 'Stay in the room and wait for R3 to come in' },
+        { kind: 'move', x: 70, y: 88, label: 'Bed', note: 'Finish searching the room before you move them' }] }
+      : { kind: 'bedroom', smoke: 0.35, fire: 1, victim: where, alt: 'Drawn view: a smoky bedroom with a victim lying on the floor just inside the door; the bedroom door on the left, window on the back wall, closet on the right.', hotspots: [
+        { kind: 'move', x: 18, y: 50, label: 'Bedroom door \u2192 hallway', note: 'Out the way you came \u2014 the hall is knocked down' },
         { kind: 'move', x: 52, y: 35, label: 'Window', note: 'Out the window to a ground ladder' },
         { kind: 'move', x: 76, y: 76, label: 'Stay with them', note: 'Stay in the room and wait for R3 to come in' },
         { kind: 'move', x: 81, y: 60, label: 'Closet', note: 'Finish searching the room before you move them' }] } };
@@ -8804,14 +8810,14 @@ var SCENARIOS = [
 
   // Pictures for the probie seat's interior beats (no tap targets — the question stays a pick).
   var PICS = {
-    'probie-nozzle': { 'Door control': { kind: 'door' }, 'Reading smoke': { kind: 'door' }, 'Fire attack': { kind: 'fireroom', smoke: 0.45, fire: 3 },
-      'Stay on the line': { kind: 'hall', smoke: 0.72, fire: 1 }, 'Exit plan': { kind: 'hall', smoke: 0.35, fire: 0 } },
-    'probie-search': { 'Isolate': { kind: 'bedroom', smoke: 0.5, fire: 1 }, 'Search pattern': { kind: 'bedroom', smoke: 0.62, fire: 1 },
-      'Where kids are': { kind: 'bedroom', smoke: 0.4, fire: 1 }, 'Victim found': { kind: 'bedroom', smoke: 0.5, fire: 1, victim: 'window' } }
+    'probie-nozzle': { 'Door control': { kind: 'door' }, 'Reading smoke': { kind: 'door' }, 'Fire attack': { photo: 'assets/scenarios/inside/fireroom.jpg' },
+      'Stay on the line': { photo: 'assets/scenarios/inside/hall-dense.jpg' }, 'Exit plan': { photo: 'assets/scenarios/inside/hall-clear.jpg' } },
+    'probie-search': { 'Isolate': { photo: 'assets/scenarios/inside/bedroom.jpg' }, 'Search pattern': { photo: 'assets/scenarios/inside/bedroom-dense.jpg' },
+      'Where kids are': { photo: 'assets/scenarios/inside/bedroom.jpg' }, 'Victim found': { photo: 'assets/scenarios/inside/bedroom-victim.jpg' } }
   };
   SCENARIOS.forEach(function (sc) {
     var p = PICS[sc.id];
     if (!p) return;
-    sc.steps.forEach(function (st) { if (p[st.label] && !st.view) { st.view = p[st.label]; st.view.alt = 'Drawn interior view for this beat.'; } });
+    sc.steps.forEach(function (st) { if (p[st.label] && !st.view) { st.view = Object.assign({}, p[st.label]); st.view.alt = st.view.photo ? 'Interior photo with smoke and fire added for this beat.' : 'Drawn interior view for this beat.'; } });
   });
 })();

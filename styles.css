@@ -740,4 +740,4 @@ html { -webkit-tap-highlight-color: transparent; }
 .radio-log .radio-line { margin: 0 0 6px; font-size: 14px; }
 .radio-log .radio-line.emer { color: var(--th-danger); }
 .call-opt.opt-radio { box-shadow: inset 6px 0 0 #2E86C1; }
-.scen-inside-tag { display: block; margin-top: 6px; background: none; color: var(--th-ink-2); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; pointer-events: none; }
+.scen-inside-tag { display: block; margin: -8px 0 10px; background: none; color: var(--th-ink-2); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; pointer-events: none; }

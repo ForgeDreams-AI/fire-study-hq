@@ -1702,6 +1702,7 @@ function scenFeedbackCard(run, step) {
 /* A beat with `view` shows a drawn interior (scenes.js) with its own tap targets. */
 function scenHotspots(step, sc) { return (step.view && step.view.hotspots) || sc.hotspots; }
 function scenViewImage(step, sc) {
+  if (step.view && step.view.photo) return { src: step.view.photo, alt: step.view.alt || 'Interior photo', inside: 'photo' };
   if (step.view && typeof sceneDataURI === 'function') return { src: sceneDataURI(step.view), alt: step.view.alt || 'Drawn interior view', inside: true };
   return { src: sc.image, alt: sc.imageAlt, inside: false };
 }
@@ -1834,7 +1835,7 @@ function renderScenarioRun(root) {
   img.src = vi.src;
   img.alt = vi.alt;
   stage.appendChild(img);
-  if (vi.inside) stage.appendChild(el('span', 'scen-inside-tag', 'Inside \u00b7 training drawing'));
+
   var choiceList = null;
   if (step.hotspots) {
     // Numbered pins on the picture + full-width labeled choices below.
@@ -1873,6 +1874,7 @@ function renderScenarioRun(root) {
     });
   }
   root.appendChild(stage);
+  if (vi.inside) root.appendChild(el('p', 'scen-inside-tag', vi.inside === 'photo' ? 'Inside \u00b7 photo with fire and smoke added for training' : 'Inside \u00b7 training drawing'));
 
   if (run.pos === 0) {
     var nar = el('div', 'card call-narr');

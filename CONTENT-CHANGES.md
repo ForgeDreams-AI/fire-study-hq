@@ -302,4 +302,4 @@ The 13 fire scenarios keep going after the first-due calls. Radio traffic from t
 
 When your attack takes you interior, Ocotillo, House, Gilbert, Ranch and Tile roof now put you inside with drawn views and tap targets: door control, the stairs (two-story), the hallway with fire rolling at the ceiling, the fire room, isolating the bedroom on the search, and taking the victim out. Each is checked against M.P. 202.02B, 202.02C or 202.04. The probie nozzle and search scenarios show the same drawings on their interior beats.
 
-The drawings are generic training illustrations (scenes.js), not the real buildings. **Instructor review wanted** on the interior calls before PFD use.
+The hallway, fire room and bedroom views are real CC0 interior photos (Wikimedia Commons / Unsplash) with smoke, fire and a victim added for training — credits in assets/scenarios/inside/CREDITS.md, recipe in tools/bake-inside.js. The front door and stairs are still drawings (scenes.js). None of them are the real buildings in the scenarios. **Instructor review wanted** on the interior calls before PFD use.
